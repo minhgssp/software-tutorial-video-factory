@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<style>
+/*__FONTS__*/
+:root {
+  --ink: #0b0a09; --ink2: #12100f; --paper: #f3efe6; --paper2: #e8dfcf; --mute: #d9d2c8;
+  --lacquer: #b3231b; --bright: #e04b43; --pen: #d23a30;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--ink); }
+#stage { position: absolute; inset: 0; overflow: hidden;
+  background: radial-gradient(120% 80% at 50% 38%, #1a1714 0%, var(--ink) 62%, #050504 100%); }
+#grain { position: absolute; inset: -40px; opacity: .07; pointer-events: none; mix-blend-mode: screen;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"); }
+
+/* dải tiêu đề */
+#top { position: absolute; left: 80px; top: 178px; width: 920px; height: 270px; }
+#kicker { font: 500 25px/1 'IBM Plex Mono', monospace; letter-spacing: .2em; text-transform: uppercase; color: var(--mute);
+  display: flex; align-items: center; gap: 18px; white-space: nowrap; }
+#kicker .tick { display: inline-flex; gap: 6px; }
+#kicker .tick i { width: 22px; height: 4px; background: #3a3531; display: block; }
+#kicker .tick i.on { background: var(--bright); }
+#title { margin-top: 26px; font: 600 94px/1.0 'Cormorant Garamond', serif; color: var(--paper); letter-spacing: -.012em; }
+#title .w { display: inline-block; white-space: pre; }
+#title em { font-style: italic; font-weight: 500; color: var(--bright); }
+#note { margin-top: 18px; font: 400 30px/1.35 'Be Vietnam Pro', sans-serif; color: var(--mute); max-width: 900px; }
+
+/* khung trình duyệt */
+#card { position: absolute; left: 40px; top: 470px; width: 1000px; height: 860px; border-radius: 24px; overflow: hidden;
+  background: var(--paper); box-shadow: 0 40px 90px rgba(0,0,0,.55), 0 0 0 1px rgba(243,239,230,.08); transform-origin: 50% 50%; }
+#chrome { position: absolute; left: 0; top: 0; right: 0; height: 52px; background: var(--paper2); display: flex; align-items: center;
+  padding: 0 20px; gap: 16px; border-bottom: 1px solid rgba(18,16,15,.12); }
+#dots { display: flex; gap: 9px; }
+#dots i { width: 13px; height: 13px; border-radius: 50%; background: rgba(18,16,15,.22); display: block; }
+#url { flex: 1; height: 34px; border-radius: 17px; background: var(--paper); display: flex; align-items: center; padding: 0 18px; gap: 10px;
+  font: 500 20px/1 'IBM Plex Mono', monospace; color: rgba(18,16,15,.78); overflow: hidden; white-space: nowrap; }
+#url b { color: var(--lacquer); font-weight: 500; }
+#chip { font: 500 18px/1 'IBM Plex Mono', monospace; letter-spacing: .14em; color: var(--paper); background: var(--lacquer);
+  padding: 8px 12px; border-radius: 8px; text-transform: uppercase; display: none; }
+#content { position: absolute; left: 0; top: 52px; width: 1000px; height: 808px; overflow: hidden; background: #fff; }
+#content img.page { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+#content img.frame { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+#content.demo { background: var(--ink2); }
+#content.term { background: #141210; }
+#content .term { position: absolute; left: 0; top: 0; width: 1000px; height: 808px; transform-origin: 0 0; overflow: hidden;
+  background: radial-gradient(120% 90% at 20% 0%, #23201c 0%, #141210 70%); }
+#content .tin { position: absolute; left: 30px; top: 30px; right: 30px; font: 500 26px/38px 'IBM Plex Mono', monospace; color: #e9e2d6; }
+#content .ln { height: 38px; white-space: pre; overflow: hidden; }
+#content .ln span { display: inline; }
+#content .pr { color: #8fd18a; } #content .dl { color: #f0b35a; } #content .cm { color: #fff8ec; font-weight: 600; }
+#content .ot { color: #cfc7b9; } #content .el { color: #7d766c; font-style: italic; }
+#content .ln.cur.blink::after { content: ''; display: inline-block; width: 14px; height: 28px; margin-left: 3px; vertical-align: -5px; background: #ff6a4d; }
+#keys { position: absolute; left: 50%; bottom: 34px; transform: translateX(-50%); display: flex; align-items: center; gap: 14px;
+  padding: 14px 26px; border-radius: 999px; background: rgba(18,16,15,.88); border: 1.5px solid rgba(255,106,77,.75);
+  box-shadow: 0 0 0 6px rgba(255,90,60,.14), 0 14px 40px rgba(0,0,0,.45); opacity: 0; max-width: 900px; z-index: 5;
+  font: 600 30px/1 'IBM Plex Mono', monospace; color: #fff6ea; white-space: nowrap; }
+#keys .kb { color: #ff6a4d; flex: none; }
+#keys .kt { overflow: hidden; text-overflow: clip; direction: rtl; unicode-bidi: plaintext; max-width: 780px; }
+#keys .kc { width: 3px; height: 32px; background: #ff6a4d; opacity: 0; }
+#keys.caret .kc { opacity: 1; }
+#over { position: absolute; left: 0; top: 52px; width: 1000px; height: 808px; overflow: visible; pointer-events: none; }
+#cursor { position: absolute; left: 0; top: 0; width: 0; height: 0; pointer-events: none; }
+#cursor svg { position: absolute; left: -6px; top: -4px; filter: drop-shadow(0 4px 6px rgba(0,0,0,.35)); transform-origin: 6px 4px; }
+#ripple { position: absolute; border: 4px solid var(--bright); border-radius: 50%; opacity: 0; }
+#label { position: absolute; left: 30px; top: 34px; font: 500 22px/1 'IBM Plex Mono', monospace; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--paper); background: var(--lacquer); padding: 9px 14px 8px; border-radius: 999px; white-space: nowrap; transform-origin: 0 0; opacity: 0;
+  box-shadow: 0 6px 16px rgba(0,0,0,.3); }
+
+/* thẻ chữ lớn (mở/kết) */
+#cardshot { position: absolute; inset: 0; opacity: 0; }
+#hero { position: absolute; left: 80px; top: 300px; width: 920px; }
+#hkicker { font: 500 26px/1 'IBM Plex Mono', monospace; letter-spacing: .22em; text-transform: uppercase; color: var(--mute); }
+#htitle { margin-top: 34px; font: 600 132px/.96 'Cormorant Garamond', serif; color: var(--paper); letter-spacing: -.015em; }
+#htitle .w { display: inline-block; white-space: pre; }
+#htitle em { font-style: italic; font-weight: 500; color: var(--bright); }
+#hnote { margin-top: 34px; font: 400 34px/1.4 'Be Vietnam Pro', sans-serif; color: var(--mute); max-width: 860px; }
+#collage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+#collage .th { position: absolute; width: 330px; height: 230px; border-radius: 14px; overflow: hidden; background: #fff;
+  box-shadow: 0 24px 50px rgba(0,0,0,.55), 0 0 0 1px rgba(243,239,230,.1); }
+#collage .th img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 0; display: block; }
+#items { position: absolute; left: 80px; top: 880px; width: 920px; }
+#items .it { display: flex; gap: 22px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid rgba(217,210,200,.16); }
+#items .it span { font: 500 24px/1 'IBM Plex Mono', monospace; color: var(--bright); letter-spacing: .1em; }
+#items .it b { font: 600 38px/1.15 'Be Vietnam Pro', sans-serif; color: var(--paper); font-weight: 600; }
+#items .it i { font: 400 26px/1.2 'Be Vietnam Pro', sans-serif; color: var(--mute); font-style: normal; margin-left: auto; white-space: nowrap; }
+
+/* phụ đề */
+#cap { position: absolute; left: 70px; top: 1366px; width: 940px; height: 110px; display: flex; align-items: center; justify-content: center;
+  text-align: center; font: 700 46px/1.18 'Be Vietnam Pro', sans-serif; color: var(--paper); letter-spacing: -.005em; }
+#cap span.f { color: rgba(243,239,230,.42); }
+#cap span.n { color: var(--bright); }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="top"><div id="kicker"></div><div id="title"></div><div id="note"></div></div>
+  <div id="card">
+    <div id="chrome"><div id="dots"><i></i><i></i><i></i></div><div id="url"></div><div id="chip"></div></div>
+    <div id="content"></div>
+    <svg id="over" viewBox="0 0 1000 808"></svg>
+  </div>
+  <div id="cardshot"><div id="collage"></div><div id="hero"><div id="hkicker"></div><div id="htitle"></div><div id="hnote"></div></div><div id="items"></div></div>
+  <div id="cap"></div>
+  <div id="grain"></div>
+</div>
+<script>window.DEMO = /*__DEMO__*/null;</script>
+<script src="stage.js"></script>
+</body>
+</html>

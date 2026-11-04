@@ -1,0 +1,1754 @@
+{
+ "video_id": "B02_BaCapDoLamViecAI",
+ "lesson_no": 2,
+ "lesson_title": "Ba cấp độ làm việc với AI",
+ "out_name": "B02_BaCapDoLamViecAI.mp4",
+ "shots": [
+  {
+   "id": "s1_open",
+   "kind": "screen",
+   "kicker": "BA CẤP ĐỘ LÀM VIỆC VỚI AI",
+   "title": "Cùng một công cụ, <em>kết quả rất khác</em>",
+   "note": "Khác ở cách tổ chức công việc với AI.",
+   "chip": "NỘI DUNG",
+   "page": {
+    "type": "concept",
+    "bare": true,
+    "blocks": [
+     {
+      "type": "html",
+      "html": "<style>.hero .hh{font-size:58px}.hcols.tight .hc{min-height:300px}.hcols.tight .ht{font-size:31px}.hcols.tight .hs{font-size:25px;line-height:1.35}.hc .ht{font-size:36px}.hc .hs{font-size:27px;line-height:1.35}.hc{min-height:340px}.big .f{font-size:32px}</style>"
+     },
+     {
+      "type": "hero",
+      "id": "hero",
+      "kicker": "BA CẤP ĐỘ LÀM VIỆC VỚI AI",
+      "title": "Cùng một công cụ AI: vì sao kết quả khác nhau?",
+      "items": [
+       {
+        "id": "h1",
+        "num": "1",
+        "tone": "amber",
+        "title": "Người hỏi, AI đáp",
+        "sub": "AI trả lời trong khung chat"
+       },
+       {
+        "id": "h2",
+        "num": "2",
+        "tone": "blue",
+        "title": "AI làm, người hướng dẫn",
+        "sub": "AI làm trên tệp, bạn ra lệnh từng bước"
+       },
+       {
+        "id": "h3",
+        "num": "3",
+        "tone": "green",
+        "title": "AI làm, người giám sát",
+        "sub": "AI theo kỹ năng, bạn duyệt ở trạm gác"
+       },
+       {
+        "id": "h4",
+        "num": "↑",
+        "tone": "plum",
+        "title": "Đi lên cấp độ ba",
+        "sub": "Làm chuẩn trước, đóng gói sau"
+       }
+      ]
+     }
+    ]
+   },
+   "beats": [
+    {
+     "at": "người hỏi, AI đáp",
+     "target": "h1",
+     "label": "",
+     "zoom": 1.0
+    },
+    {
+     "at": "AI làm, người hướng dẫn",
+     "target": "h2",
+     "label": "",
+     "zoom": 1.0
+    },
+    {
+     "at": "AI làm, người giám sát",
+     "target": "h3",
+     "label": "",
+     "zoom": 1.0
+    },
+    {
+     "at": "cách đi lên cấp độ ba",
+     "target": "h4",
+     "label": "",
+     "zoom": 1.0
+    }
+   ],
+   "say": [
+    "Cùng một công cụ AI, có người chỉ tiết kiệm được một chút thời gian, có người lại bớt được nhiều việc lặp lại mỗi tuần. Vì sao lại khác nhau như vậy?",
+    "Khác biệt thường không nằm ở công cụ, mà ở cách bạn tổ chức công việc với AI. Trong video này, chúng ta sẽ nói về ba cấp độ làm việc với AI. Cấp độ một là người hỏi, AI đáp. Cấp độ hai là AI làm, người hướng dẫn. Cấp độ ba là AI làm, người giám sát kết quả. Cuối cùng là cách đi lên cấp độ ba mà không đốt cháy giai đoạn."
+   ],
+   "holds": [
+    {
+     "after": "không đốt cháy giai đoạn.",
+     "sec": 1.0
+    }
+   ]
+  },
+  {
+   "id": "s2a_c1_mo",
+   "kind": "card",
+   "kicker": "CẤP ĐỘ 1",
+   "title": "Người hỏi, <em>AI đáp</em>",
+   "note": "",
+   "opener": {
+    "label": "CẤP ĐỘ",
+    "num": "1",
+    "tone": "amber",
+    "kicker": "BA CẤP ĐỘ LÀM VIỆC VỚI AI",
+    "title": "Người hỏi,",
+    "accent": "AI đáp",
+    "text": "AI chỉ trả lời trong khung chat. Phần còn lại do bạn làm.",
+    "marks": [
+     {
+      "text": "trả lời trong khung chat",
+      "at": "trả lời trong khung chat"
+     },
+     {
+      "text": "Phần còn lại do bạn làm",
+      "at": "mọi việc còn lại"
+     }
+    ]
+   },
+   "say": [
+    "Chúng ta bắt đầu từ cách mà nhiều người dùng AI lần đầu: người hỏi, AI đáp. Ở cấp độ này, AI chỉ trả lời trong khung chat, còn mọi việc còn lại đều do bạn làm."
+   ]
+  },
+  {
+   "id": "s2_c1_demo",
+   "kind": "live",
+   "kicker": "CẤP ĐỘ 1",
+   "title": "Người hỏi, <em>AI đáp</em>",
+   "note": "Tình huống giả lập. Tên, tệp và số liệu chỉ để minh họa.",
+   "chip": "TÌNH HUỐNG GIẢ LẬP",
+   "page": {
+    "type": "webchat",
+    "tab": "Trò chuyện với AI",
+    "address": "trang-chat-ai.vi/tro-chuyen-moi",
+    "chat": [],
+    "stream": [
+     {
+      "role": "paste",
+      "id": "w_paste",
+      "text": "[Dán] Quy định: thu nhập ròng từ 1,5 lần số phải trả hằng tháng…\n[Dán] Bảng doanh thu, chi phí của hồ sơ HKD_MinhHoa_01"
+     },
+     {
+      "role": "raw",
+      "id": "w_raw",
+      "text": "Kết quả kiểm tra hồ sơ HKD_MinhHoa_01:\n| Chỉ tiêu       | Giá trị  | Đánh giá |\n| Thu nhập ròng  | 53 triệu | Đạt      |\n| Số phải trả    | 30 triệu | 1,8 lần  |"
+     },
+     {
+      "role": "agent",
+      "id": "w_ans",
+      "text": "Tôi chưa thấy quy định nào trong cuộc trò chuyện này. Bạn vui lòng dán lại nhé."
+     },
+     {
+      "role": "problem",
+      "id": "w_prob",
+      "text": "Mỗi cuộc trò chuyện mới: bạn dán lại quy định từ đầu."
+     }
+    ],
+    "overlays": [
+     {
+      "id": "word_win",
+      "app": "Word",
+      "file": "to-trinh-HKD_MinhHoa_01.docx",
+      "blocks": [
+       {
+        "type": "dhtml",
+        "html": "<style>.wb .stream{width:1120px;gap:16px}.wb .inp{width:1120px}.wb .m{font-size:23px;line-height:1.45}.wb .m.paste{font-size:20px}.wb .m.raw{font-size:21px;line-height:1.5}.wb .m.problem{font-size:23px;padding:14px 18px}.wb .inp textarea{font-size:21px}.wb .m.sel{background:#CFE0FF !important}.wb .m.hl{background:#FFF0A3 !important;box-shadow:0 0 0 2px #E2B93B}.ovl{width:760px;height:640px;top:100px}.otb{height:44px;font-size:17px}.orb{font-size:15px}.opg{margin:22px 30px;gap:16px}.opg h2{font-size:27px}.opg p{font-size:22px}.opg .raw{font-size:20px;line-height:1.55;word-break:break-word}.opg .flag{font-size:23px;line-height:1.4;padding:14px 16px}.opg .flag.hl{background:#FFF0A3;box-shadow:0 0 0 2px #E2B93B;color:#6B3D05}#toast{font-size:21px;top:auto;bottom:112px;z-index:40}</style>"
+       },
+       {
+        "type": "h",
+        "text": "Tờ trình thẩm định"
+       },
+       {
+        "type": "p",
+        "text": "Đánh giá khả năng trả nợ"
+       },
+       {
+        "type": "raw",
+        "text": "| Chỉ tiêu | Giá trị | Đánh giá | | Thu nhập ròng | 53 triệu | Đạt | | Số phải trả | 30 triệu | 1,8 lần |"
+       },
+       {
+        "type": "red",
+        "id": "w_flag",
+        "reveal": true,
+        "text": "Bảng thành một dòng chữ thô: phải kẻ lại bằng tay."
+       }
+      ]
+     }
+    ]
+   },
+   "steps": [
+    {
+     "at": "bạn gõ câu hỏi trên",
+     "do": "type",
+     "text": "Kiểm tra hồ sơ vay này theo quy định tôi dán kèm.",
+     "delay": 24
+    },
+    {
+     "at": "dán kèm quy định",
+     "do": "send"
+    },
+    {
+     "at": "dán kèm quy định",
+     "do": "reveal",
+     "n": 1,
+     "wait": 0.4
+    },
+    {
+     "at": "AI trả lời ngay",
+     "do": "reveal",
+     "n": 1
+    },
+    {
+     "at": "tự bôi đen",
+     "do": "copy",
+     "target": "w_raw"
+    },
+    {
+     "at": "dán sang Word",
+     "do": "doc",
+     "target": "word_win"
+    },
+    {
+     "at": "thường bị vỡ định dạng",
+     "do": "show",
+     "target": "w_flag"
+    },
+    {
+     "at": "thường bị vỡ định dạng",
+     "do": "hl",
+     "target": "w_flag"
+    },
+    {
+     "at": "Sang hôm sau",
+     "do": "newchat",
+     "arg": "Cuộc trò chuyện mới · hôm sau"
+    },
+    {
+     "at": "nhờ áp dụng quy định",
+     "do": "type",
+     "text": "Áp dụng quy định hôm qua cho hồ sơ HKD_MinhHoa_02.",
+     "delay": 22
+    },
+    {
+     "at": "Thường thì AI không",
+     "do": "send"
+    },
+    {
+     "at": "Thường thì AI không",
+     "do": "reveal",
+     "n": 1,
+     "wait": 0.4
+    },
+    {
+     "at": "dán lại từ đầu",
+     "do": "reveal",
+     "n": 1
+    },
+    {
+     "at": "dán lại từ đầu",
+     "do": "hl",
+     "target": "w_prob"
+    }
+   ],
+   "say": [
+    "Ví dụ, trong tình huống thẩm định một hồ sơ vay giả định, bạn gõ câu hỏi trên trang chat, dán kèm quy định và bảng số liệu. AI trả lời ngay trong khung chat.",
+    "Muốn đưa kết quả vào tờ trình, bạn phải tự bôi đen, sao chép, rồi dán sang Word. Bảng biểu dán sang thường bị vỡ định dạng, và bạn lại phải kẻ lại bằng tay.",
+    "Sang hôm sau, bạn mở một cuộc trò chuyện mới và nhờ áp dụng quy định hôm qua cho hồ sơ khác. Thường thì AI không còn nhớ quy định đó, nên bạn phải dán lại từ đầu."
+   ]
+  },
+  {
+   "id": "s3_c1_fit",
+   "kind": "live",
+   "kicker": "CẤP ĐỘ 1",
+   "title": "Hợp với việc <em>dễ kiểm tra</em>",
+   "note": "Không sai, chỉ có giới hạn.",
+   "chip": "GIỚI HẠN",
+   "page": {
+    "type": "board",
+    "corner": "CẤP ĐỘ 1",
+    "heading": "Cấp độ một hợp với việc gì?",
+    "blocks": [
+     {
+      "type": "html",
+      "html": "<style>.fit{flex:none;display:grid;grid-template-columns:1fr 1fr;gap:26px;margin:auto 0}.fc{min-height:520px;background:#fff;border:2px solid var(--line);border-top:14px solid var(--tc);border-radius:22px;padding:30px 34px;display:flex;flex-direction:column;gap:24px}.fh{font-size:46px;font-weight:700;line-height:1.15;color:var(--tc)}.ft2{font-size:44px;font-weight:600;line-height:1.3;padding:4px 8px}.fs2{font-size:36px;font-weight:500;line-height:1.35;color:var(--ink2);padding:4px 8px}.big0{font-size:60px;line-height:1}</style><div class=\"fit\"><div class=\"fc\" style=\"--tc:#0F6E56\"><div class=\"fh\">Hợp với</div><div class=\"ft2 rv\" id=\"a1\">Hỏi nhanh việc dễ kiểm tra</div><div class=\"fs2 rv\" id=\"a2\">Ví dụ: viết một email ngắn. Đọc lại là biết có ổn hay không.</div></div><div class=\"fc\" style=\"--tc:#B42318\"><div class=\"fh\">Cần cẩn thận</div><div class=\"ft2 rv\" id=\"b1\">Tra quy định: đối chiếu với văn bản gốc</div><div class=\"fs2 rv\" id=\"b2\">AI có thể trả lời rất trôi chảy, ngay cả khi thiếu thông tin.</div></div></div>"
+     }
+    ]
+   },
+   "steps": [
+    {
+     "at": "Cấp độ một không",
+     "do": "point",
+     "target": "bk",
+     "label": "GIỚI HẠN CỦA CẤP ĐỘ MỘT",
+     "zoom": 1.0,
+     "mark": "none"
+    },
+    {
+     "at": "hỏi nhanh những việc",
+     "do": "show",
+     "target": "a1"
+    },
+    {
+     "at": "hỏi nhanh những việc",
+     "do": "hl",
+     "target": "a1"
+    },
+    {
+     "at": "viết một email ngắn",
+     "do": "show",
+     "target": "a2"
+    },
+    {
+     "at": "viết một email ngắn",
+     "do": "hl",
+     "target": "a2"
+    },
+    {
+     "at": "khi tra quy định",
+     "do": "show",
+     "target": "b1"
+    },
+    {
+     "at": "khi tra quy định",
+     "do": "hl",
+     "target": "b1"
+    },
+    {
+     "at": "trả lời rất trôi chảy",
+     "do": "show",
+     "target": "b2"
+    },
+    {
+     "at": "trả lời rất trôi chảy",
+     "do": "hl",
+     "target": "b2"
+    }
+   ],
+   "say": [
+    "Cấp độ một không phải là cách làm sai, chỉ là nó có giới hạn. Nó hợp để hỏi nhanh những việc dễ kiểm tra. Ví dụ, trong tình huống cần viết một email ngắn, bạn đọc lại là biết ngay có ổn hay không. Còn khi tra quy định, bạn phải đối chiếu với văn bản gốc, vì AI có thể trả lời rất trôi chảy ngay cả khi thiếu thông tin."
+   ]
+  },
+  {
+   "id": "s4a_c2_mo",
+   "kind": "card",
+   "kicker": "CẤP ĐỘ 2",
+   "title": "AI làm, <em>người hướng dẫn</em>",
+   "note": "",
+   "opener": {
+    "label": "CẤP ĐỘ",
+    "num": "2",
+    "tone": "blue",
+    "kicker": "BA CẤP ĐỘ LÀM VIỆC VỚI AI",
+    "title": "AI làm,",
+    "accent": "người hướng dẫn",
+    "text": "AI làm trực tiếp trên tệp. Bạn ra lệnh và duyệt từng bước.",
+    "marks": [
+     {
+      "text": "trực tiếp trên tệp",
+      "at": "trực tiếp trên tệp"
+     },
+     {
+      "text": "ra lệnh và duyệt từng bước",
+      "at": "người hướng dẫn"
+     }
+    ]
+   },
+   "say": [
+    "Giới hạn của cấp độ một là phần sao chép và dán lại vẫn nằm ở bạn. Muốn bớt phần đó, AI phải làm việc trực tiếp trên tệp, và đó là cấp độ hai: AI làm, người hướng dẫn."
+   ]
+  },
+  {
+   "id": "s4_c2_what",
+   "kind": "live",
+   "kicker": "CẤP ĐỘ 2",
+   "title": "AI làm, <em>người hướng dẫn</em>",
+   "note": "AI làm thật trên tệp, không chỉ trả lời.",
+   "chip": "CẤP ĐỘ 2",
+   "page": {
+    "type": "board",
+    "corner": "CẤP ĐỘ 2",
+    "heading": "AI làm được gì ở cấp độ này?",
+    "blocks": [
+     {
+      "type": "html",
+      "html": "<style>.wd{flex:1;display:grid;grid-template-columns:330px 150px 1fr;gap:18px;align-items:center;margin-top:18px;min-height:0}.wy{background:#EAF0FE;border:3px solid #1D4ED8;border-radius:24px;padding:30px 26px;display:flex;flex-direction:column;gap:22px;min-height:420px}.wy .h{font-size:50px;font-weight:700;color:#1D4ED8}.wy .l{font-size:33px;font-weight:600;line-height:1.28;padding:4px 6px}.wa{display:flex;flex-direction:column;align-items:center;gap:10px}.wa .ai{width:128px;height:128px;border-radius:50%;background:#23211E;color:#fff;font-size:52px;font-weight:700;display:flex;align-items:center;justify-content:center}.wa .ar2{font-size:54px;font-weight:700;color:#57524A;line-height:1}.wr{display:flex;flex-direction:column;gap:22px}.wi{background:#fff;border:2px solid var(--line);border-left:14px solid #1D4ED8;border-radius:18px;padding:24px 28px;font-size:36px;font-weight:600;line-height:1.25}.wi small{display:block;font-size:27px;font-weight:500;color:var(--ink2);margin-top:8px}</style><div class=\"wd\"><div class=\"wy\"><div class=\"h\">Bạn</div><div class=\"l rv\" id=\"y1\">Ra lệnh từng bước</div><div class=\"l rv\" id=\"y2\">Duyệt kết quả của từng bước</div></div><div class=\"wa\"><div class=\"ar2\">→</div><div class=\"ai\">AI</div><div class=\"ar2\">→</div></div><div class=\"wr\"><div class=\"wi rv\" id=\"w1\">Đọc tệp trong thư mục</div><div class=\"wi rv\" id=\"w2\">Tạo và sửa tệp</div><div class=\"wi rv\" id=\"w3\">Dùng công cụ<small>Email, ứng dụng nhắn tin, Word, Excel. Khi được cấp quyền.</small></div></div></div>"
+     }
+    ]
+   },
+   "steps": [
+    {
+     "at": "Ở cấp độ này",
+     "do": "point",
+     "target": "bk",
+     "label": "AI LÀM TRÊN TỆP",
+     "zoom": 1.0,
+     "mark": "none"
+    },
+    {
+     "at": "đọc tệp trong thư mục",
+     "do": "show",
+     "target": "w1"
+    },
+    {
+     "at": "đọc tệp trong thư mục",
+     "do": "hl",
+     "target": "w1"
+    },
+    {
+     "at": "tạo và sửa tệp",
+     "do": "show",
+     "target": "w2"
+    },
+    {
+     "at": "tạo và sửa tệp",
+     "do": "hl",
+     "target": "w2"
+    },
+    {
+     "at": "khi được cấp quyền",
+     "do": "show",
+     "target": "w3"
+    },
+    {
+     "at": "khi được cấp quyền",
+     "do": "hl",
+     "target": "w3"
+    },
+    {
+     "at": "ra lệnh từng bước",
+     "do": "show",
+     "target": "y1"
+    },
+    {
+     "at": "ra lệnh từng bước",
+     "do": "hl",
+     "target": "y1"
+    },
+    {
+     "at": "duyệt kết quả của",
+     "do": "show",
+     "target": "y2"
+    },
+    {
+     "at": "duyệt kết quả của",
+     "do": "hl",
+     "target": "y2"
+    }
+   ],
+   "say": [
+    "Ở cấp độ này, AI không chỉ trả về câu trả lời, mà trực tiếp làm việc. AI đọc tệp trong thư mục của bạn, tạo và sửa tệp, và khi được cấp quyền, nó dùng các công cụ như email, ứng dụng nhắn tin, hay bộ công cụ văn phòng. Còn bạn đóng vai người hướng dẫn: ra lệnh từng bước, và duyệt kết quả của từng bước."
+   ]
+  },
+  {
+   "id": "s5_c2_demo",
+   "kind": "live",
+   "kicker": "CẤP ĐỘ 2",
+   "title": "Ra lệnh ở giữa, <em>kết quả hiện bên phải</em>",
+   "note": "Tình huống giả lập. Tên, tệp và số liệu chỉ để minh họa.",
+   "chip": "TÌNH HUỐNG GIẢ LẬP",
+   "page": {
+    "type": "workspace",
+    "project": "Thẩm định hộ kinh doanh",
+    "cols": "322px 400px 1fr",
+    "tree": [
+     {
+      "name": "Thẩm định hộ kinh doanh/",
+      "root": true,
+      "id": "t0"
+     },
+     {
+      "name": "ca-HKD_MinhHoa_01/",
+      "id": "tc",
+      "depth": 0
+     },
+     {
+      "name": "dau-vao/",
+      "id": "tv",
+      "depth": 1
+     },
+     {
+      "name": "phuong_an_vay.pdf",
+      "id": "f1",
+      "depth": 2
+     },
+     {
+      "name": "bang_doanh_thu.xlsx",
+      "id": "f2",
+      "depth": 2
+     },
+     {
+      "name": "trung-gian/",
+      "id": "tg",
+      "depth": 1
+     },
+     {
+      "name": "so-nhap.md",
+      "id": "f3",
+      "depth": 2,
+      "reveal": true
+     },
+     {
+      "name": "du-thao-to-trinh.docx",
+      "id": "f4",
+      "depth": 2,
+      "reveal": true
+     },
+     {
+      "name": "ket-qua/",
+      "id": "tk",
+      "depth": 1
+     },
+     {
+      "name": "to-trinh.docx",
+      "id": "f5",
+      "depth": 2,
+      "reveal": true
+     }
+    ],
+    "cards": [
+     {
+      "id": "c_ok",
+      "text": "Không sao chép bằng tay. Bước nào cũng có bạn kiểm tra."
+     },
+     {
+      "id": "c_lap",
+      "text": "Hồ sơ sau: bạn lại ra lệnh từ đầu."
+     }
+    ],
+    "stream": [
+     {
+      "role": "status",
+      "text": "Đã đọc 2 tệp trong dau-vao/"
+     },
+     {
+      "role": "status",
+      "text": "Đã tạo trung-gian/so-nhap.md"
+     },
+     {
+      "role": "gate",
+      "text": "Chờ bạn duyệt số liệu"
+     },
+     {
+      "role": "status",
+      "text": "Đã tạo tờ trình theo mẫu"
+     },
+     {
+      "role": "status",
+      "text": "Đã gửi email cho trưởng phòng"
+     }
+    ],
+    "previews": [
+     {
+      "id": "pv_ket",
+      "file": "Kết quả",
+      "visible": true,
+      "blocks": [
+       {
+        "type": "dhtml",
+        "html": "<style>#prompt-box.on,#preview.on{outline:4px solid #E2B93B;outline-offset:-4px}#stream.on{outline:4px solid #E2B93B;outline-offset:-4px}#stream.on .m.user{background:#FFF0A3;box-shadow:0 0 0 2px #E2B93B}.win .doc table{font-size:21px}.win .doc th{font-size:17px}.win .doc .kv{font-size:21px;grid-template-columns:130px 1fr}.doc .ph{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;font-size:30px;font-weight:600;color:var(--mute);line-height:1.35}#pv_so.on td:nth-child(3){background:#FFF0A3 !important}#pv_tt.on table{outline:3px solid #0F6E56;outline-offset:2px}.wc{font-size:23px}</style>"
+       },
+       {
+        "type": "dhtml",
+        "html": "<div class=\"ph\">Kết quả AI làm ra sẽ hiện ở đây</div>"
+       }
+      ]
+     },
+     {
+      "id": "pv_so",
+      "file": "trung-gian/so-nhap.md",
+      "blocks": [
+       {
+        "type": "h",
+        "text": "Sổ nháp số liệu"
+       },
+       {
+        "type": "table",
+        "cols": [
+         "Chỉ tiêu",
+         "Giá trị",
+         "Nguồn"
+        ],
+        "reveal": true,
+        "ids": [
+         "s_1",
+         "s_2",
+         "s_3",
+         "s_4",
+         "s_5"
+        ],
+        "rows": [
+         [
+          "Doanh thu tháng",
+          "184 triệu",
+          "Bảng doanh thu"
+         ],
+         [
+          "Chi phí tháng",
+          "131 triệu",
+          "Bảng doanh thu"
+         ],
+         [
+          "Thu nhập ròng",
+          "53 triệu",
+          "184 − 131"
+         ],
+         [
+          "Số phải trả",
+          "30 triệu",
+          "Phương án vay"
+         ],
+         [
+          "Hệ số trả nợ",
+          "1,8 lần",
+          "53 ÷ 30"
+         ]
+        ]
+       },
+       {
+        "type": "amber",
+        "id": "s_stop",
+        "reveal": true,
+        "text": "Dừng ở đây, chờ bạn duyệt số liệu."
+       }
+      ]
+     },
+     {
+      "id": "pv_tt",
+      "file": "trung-gian/du-thao-to-trinh.docx",
+      "blocks": [
+       {
+        "type": "h",
+        "text": "Tờ trình thẩm định (dự thảo)"
+       },
+       {
+        "type": "kv",
+        "items": [
+         [
+          "Khách hàng",
+          "HKD_MinhHoa_01"
+         ],
+         [
+          "Đề nghị vay",
+          "300 triệu, 12 tháng"
+         ],
+         [
+          "Mục đích",
+          "Bổ sung vốn lưu động"
+         ]
+        ]
+       },
+       {
+        "type": "h3",
+        "text": "Đánh giá khả năng trả nợ"
+       },
+       {
+        "type": "table",
+        "cols": [
+         "Chỉ tiêu",
+         "Giá trị",
+         "Đánh giá"
+        ],
+        "ids": [
+         "tt1",
+         "tt2"
+        ],
+        "rows": [
+         [
+          "Thu nhập ròng",
+          "53 triệu",
+          "[ok] Đạt"
+         ],
+         [
+          "Hệ số trả nợ",
+          "1,8 lần",
+          "[ok] Từ 1,5"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "id": "pv_mail",
+      "file": "Email đã gửi",
+      "blocks": [
+       {
+        "type": "h",
+        "text": "Email gửi trưởng phòng"
+       },
+       {
+        "type": "kv",
+        "items": [
+         [
+          "Đến",
+          "Trưởng phòng"
+         ],
+         [
+          "Tiêu đề",
+          "Tờ trình HKD_MinhHoa_01"
+         ],
+         [
+          "Đính kèm",
+          "to-trinh.docx"
+         ]
+        ]
+       },
+       {
+        "type": "p",
+        "text": "Em gửi tờ trình hồ sơ HKD_MinhHoa_01, xin ý kiến trưởng phòng."
+       },
+       {
+        "type": "green",
+        "text": "Gửi sau khi bạn đã đọc tờ trình và ra lệnh."
+       }
+      ]
+     }
+    ]
+   },
+   "steps": [
+    {
+     "at": "Ví dụ, trong tình huống vẫn",
+     "do": "point",
+     "target": "wbad",
+     "label": "VÍ DỤ GIẢ LẬP",
+     "zoom": 1.0,
+     "mark": "none"
+    },
+    {
+     "at": "ra lệnh ở ô giữa",
+     "do": "on",
+     "target": "prompt-box"
+    },
+    {
+     "at": "Khung giữa chỉ hiện",
+     "do": "off",
+     "target": "prompt-box"
+    },
+    {
+     "at": "Khung giữa chỉ hiện",
+     "do": "on",
+     "target": "stream"
+    },
+    {
+     "at": "còn kết quả AI",
+     "do": "off",
+     "target": "stream"
+    },
+    {
+     "at": "còn kết quả AI",
+     "do": "on",
+     "target": "preview"
+    },
+    {
+     "at": "Lệnh thứ nhất",
+     "do": "off",
+     "target": "preview"
+    },
+    {
+     "at": "Lệnh thứ nhất",
+     "do": "type",
+     "text": "Bóc tách số liệu ra sổ nháp, rồi dừng chờ tôi duyệt.",
+     "delay": 22
+    },
+    {
+     "at": "AI tự đọc các tệp",
+     "do": "send"
+    },
+    {
+     "at": "AI tự đọc các tệp",
+     "do": "reveal",
+     "n": 1,
+     "wait": 0.3
+    },
+    {
+     "at": "AI tự đọc các tệp",
+     "do": "on",
+     "target": "f1",
+     "wait": 0.3
+    },
+    {
+     "at": "AI tự đọc các tệp",
+     "do": "on",
+     "target": "f2",
+     "wait": 0.3
+    },
+    {
+     "at": "tạo ra một sổ nháp",
+     "do": "off",
+     "target": "f1"
+    },
+    {
+     "at": "tạo ra một sổ nháp",
+     "do": "off",
+     "target": "f2"
+    },
+    {
+     "at": "tạo ra một sổ nháp",
+     "do": "show",
+     "target": "f3"
+    },
+    {
+     "at": "tạo ra một sổ nháp",
+     "do": "reveal",
+     "n": 1
+    },
+    {
+     "at": "tạo ra một sổ nháp",
+     "do": "doc",
+     "target": "pv_so"
+    },
+    {
+     "at": "tạo ra một sổ nháp",
+     "do": "show",
+     "target": "s_1"
+    },
+    {
+     "at": "tạo ra một sổ nháp",
+     "do": "show",
+     "target": "s_2",
+     "wait": 0.22
+    },
+    {
+     "at": "tạo ra một sổ nháp",
+     "do": "show",
+     "target": "s_3",
+     "wait": 0.44
+    },
+    {
+     "at": "tạo ra một sổ nháp",
+     "do": "show",
+     "target": "s_4",
+     "wait": 0.66
+    },
+    {
+     "at": "tạo ra một sổ nháp",
+     "do": "show",
+     "target": "s_5",
+     "wait": 0.88
+    },
+    {
+     "at": "đều ghi nguồn",
+     "do": "on",
+     "target": "pv_so"
+    },
+    {
+     "at": "AI dừng ở đó",
+     "do": "off",
+     "target": "pv_so"
+    },
+    {
+     "at": "AI dừng ở đó",
+     "do": "reveal",
+     "n": 1
+    },
+    {
+     "at": "AI dừng ở đó",
+     "do": "show",
+     "target": "s_stop"
+    },
+    {
+     "at": "AI dừng ở đó",
+     "do": "hl",
+     "target": "s_stop"
+    },
+    {
+     "at": "Số liệu đã đúng",
+     "do": "type",
+     "text": "Số liệu đúng. Soạn tờ trình theo mẫu, xuất Word.",
+     "delay": 22
+    },
+    {
+     "at": "AI tạo tệp Word",
+     "do": "send"
+    },
+    {
+     "at": "AI tạo tệp Word",
+     "do": "reveal",
+     "n": 1,
+     "wait": 0.3
+    },
+    {
+     "at": "AI tạo tệp Word",
+     "do": "show",
+     "target": "f4",
+     "wait": 0.3
+    },
+    {
+     "at": "AI tạo tệp Word",
+     "do": "doc",
+     "target": "pv_tt",
+     "wait": 0.3
+    },
+    {
+     "at": "bảng biểu giữ nguyên",
+     "do": "on",
+     "target": "pv_tt"
+    },
+    {
+     "at": "số liệu lấy từ",
+     "do": "off",
+     "target": "pv_tt"
+    },
+    {
+     "at": "số liệu lấy từ",
+     "do": "hl",
+     "target": "tt2"
+    },
+    {
+     "at": "số liệu lấy từ",
+     "do": "on",
+     "target": "f3"
+    },
+    {
+     "at": "Bạn đọc lại tờ trình",
+     "do": "off",
+     "target": "f3"
+    },
+    {
+     "at": "Bạn đọc lại tờ trình",
+     "do": "on",
+     "target": "pv_tt"
+    },
+    {
+     "at": "thấy đạt,",
+     "do": "off",
+     "target": "pv_tt"
+    },
+    {
+     "at": "thấy đạt,",
+     "do": "hide",
+     "target": "f4"
+    },
+    {
+     "at": "thấy đạt,",
+     "do": "show",
+     "target": "f5"
+    },
+    {
+     "at": "thấy đạt,",
+     "do": "on",
+     "target": "f5"
+    },
+    {
+     "at": "rồi mới ra lệnh cuối",
+     "do": "type",
+     "text": "Gửi email cho trưởng phòng, kèm tờ trình.",
+     "delay": 22
+    },
+    {
+     "at": "AI soạn thư",
+     "do": "send"
+    },
+    {
+     "at": "AI soạn thư",
+     "do": "off",
+     "target": "f5"
+    },
+    {
+     "at": "AI soạn thư",
+     "do": "reveal",
+     "n": 1,
+     "wait": 0.3
+    },
+    {
+     "at": "AI soạn thư",
+     "do": "doc",
+     "target": "pv_mail",
+     "wait": 0.3
+    },
+    {
+     "at": "không còn phải sao chép",
+     "do": "show",
+     "target": "c_ok"
+    },
+    {
+     "at": "Nhưng bạn vẫn phải",
+     "do": "hide",
+     "target": "c_ok"
+    },
+    {
+     "at": "Nhưng bạn vẫn phải",
+     "do": "on",
+     "target": "stream"
+    },
+    {
+     "at": "sang hồ sơ sau",
+     "do": "show",
+     "target": "c_lap"
+    }
+   ],
+   "say": [
+    "Ví dụ, trong tình huống vẫn là hồ sơ giả định đó, bạn ra lệnh ở ô giữa. Khung giữa chỉ hiện tiến trình, còn kết quả AI làm ra hiện ngay bên phải.",
+    "Lệnh thứ nhất là bóc tách số liệu. AI tự đọc các tệp trong hồ sơ, rồi tạo ra một sổ nháp, mỗi con số đều ghi nguồn. AI dừng ở đó, để bạn đối chiếu với hồ sơ gốc.",
+    "Số liệu đã đúng, bạn ra lệnh tiếp để có tờ trình. AI tạo tệp Word theo mẫu, bảng biểu giữ nguyên định dạng, và số liệu lấy từ sổ nháp đã duyệt.",
+    "Bạn đọc lại tờ trình, thấy đạt, rồi mới ra lệnh cuối là gửi cho trưởng phòng. AI soạn thư, đính kèm tờ trình, và gửi đi.",
+    "Cách làm này đã khác hẳn cấp độ một, vì không còn phải sao chép bằng tay, và bước nào cũng có bạn kiểm tra. Nhưng bạn vẫn phải hướng dẫn, hết lệnh này đến lệnh khác, và sang hồ sơ sau, bạn lại ra lệnh từ đầu."
+   ]
+  },
+  {
+   "id": "s6a_c3_mo",
+   "kind": "card",
+   "kicker": "CẤP ĐỘ 3",
+   "title": "AI làm, <em>người giám sát</em>",
+   "note": "",
+   "opener": {
+    "label": "CẤP ĐỘ",
+    "num": "3",
+    "tone": "green",
+    "kicker": "BA CẤP ĐỘ LÀM VIỆC VỚI AI",
+    "title": "AI làm,",
+    "accent": "người giám sát",
+    "text": "Quy trình đã kiểm chứng, đóng gói thành kỹ năng. Bạn giám sát kết quả.",
+    "marks": [
+     {
+      "text": "Quy trình đã kiểm chứng",
+      "at": "quy trình đã kiểm chứng"
+     },
+     {
+      "text": "giám sát kết quả",
+      "at": "giám sát kết quả"
+     }
+    ]
+   },
+   "say": [
+    "Khi một cách làm ở cấp độ hai đã chạy đúng, bạn không cần ra lệnh lại từng bước cho mỗi hồ sơ. Đó là lý do có cấp độ ba: AI làm theo quy trình đã kiểm chứng, còn bạn giám sát kết quả."
+   ]
+  },
+  {
+   "id": "s7_c3_demo",
+   "kind": "live",
+   "kicker": "CẤP ĐỘ 3",
+   "title": "Gọi tên kỹ năng, <em>dừng ở ba trạm gác</em>",
+   "note": "Tình huống giả lập. Tên, tệp và số liệu chỉ để minh họa.",
+   "chip": "TÌNH HUỐNG GIẢ LẬP",
+   "page": {
+    "type": "workspace",
+    "project": "Thẩm định hộ kinh doanh",
+    "cols": "322px 400px 1fr",
+    "tree": [
+     {
+      "name": "Thẩm định hộ kinh doanh/",
+      "root": true,
+      "id": "t0"
+     },
+     {
+      "name": "skills/",
+      "id": "ts",
+      "depth": 0
+     },
+     {
+      "name": "tham-dinh-vay/skill.md",
+      "id": "tS",
+      "depth": 1
+     },
+     {
+      "name": "ca-HKD_MinhHoa_01/ ✓",
+      "id": "tc1",
+      "depth": 0
+     },
+     {
+      "name": "ca-HKD_MinhHoa_02/",
+      "id": "tc2",
+      "depth": 0,
+      "reveal": true,
+      "tag": "MỚI",
+      "tag_tone": "green"
+     },
+     {
+      "name": "dau-vao/",
+      "id": "tv",
+      "depth": 1,
+      "reveal": true
+     },
+     {
+      "name": "trung-gian/",
+      "id": "tg",
+      "depth": 1,
+      "reveal": true
+     },
+     {
+      "name": "so-nhap.md",
+      "id": "f3",
+      "depth": 2,
+      "reveal": true
+     },
+     {
+      "name": "du-thao-to-trinh.docx",
+      "id": "f4",
+      "depth": 2,
+      "reveal": true
+     },
+     {
+      "name": "ket-qua/",
+      "id": "tk",
+      "depth": 1,
+      "reveal": true
+     },
+     {
+      "name": "to-trinh.docx",
+      "id": "f5",
+      "depth": 2,
+      "reveal": true
+     }
+    ],
+    "cards": [
+     {
+      "id": "c_ok",
+      "text": "Bạn không ra lệnh từng việc. Bạn quyết định ở ba trạm gác."
+     }
+    ],
+    "stream": [
+     {
+      "role": "status",
+      "text": "Đã mở kỹ năng tham-dinh-vay"
+     },
+     {
+      "role": "status",
+      "text": "Đã ghi quy chuẩn"
+     },
+     {
+      "role": "gate",
+      "text": "Trạm gác 1: chờ bạn duyệt"
+     },
+     {
+      "role": "user",
+      "text": "Đã duyệt quy chuẩn."
+     },
+     {
+      "role": "status",
+      "text": "Đã tính số liệu"
+     },
+     {
+      "role": "gate",
+      "text": "Trạm gác 2: chờ bạn duyệt"
+     },
+     {
+      "role": "user",
+      "text": "Đã duyệt số liệu."
+     },
+     {
+      "role": "status",
+      "text": "Đã soạn dự thảo"
+     },
+     {
+      "role": "gate",
+      "text": "Trạm gác 3: chờ nghiệm thu"
+     },
+     {
+      "role": "user",
+      "text": "Đạt. Gửi cho trưởng phòng."
+     },
+     {
+      "role": "status",
+      "text": "Đã gửi email"
+     }
+    ],
+    "previews": [
+     {
+      "id": "pv_wf",
+      "file": "skills/tham-dinh-vay/skill.md",
+      "visible": true,
+      "blocks": [
+       {
+        "type": "dhtml",
+        "html": "<style>.win .doc{gap:10px;padding:16px 20px}#wfs{display:flex;flex-direction:column;gap:6px;border-radius:12px;transition:box-shadow .25s}#wfs.on{box-shadow:0 0 0 3px #E2B93B}.doc .wf{padding:6px 12px;opacity:.82;align-items:center;gap:12px}.doc .wf>div:last-child{display:flex;align-items:center}.doc .wf b{font-size:21px;line-height:1.25;font-weight:600}.doc .wf p{display:none}.doc .wf .c{width:30px;height:30px}.doc .wf.gate b{color:#7A1A12}#pv_wf.on .wf.gate{opacity:1;border-color:#B42318;border-width:3px;background:#FDECEA}.doc .wf.on{opacity:1;border-color:#A15C07;background:#FDF3E1}.doc .wf.done.on{border-color:#0F6E56;background:#E7F5F0}.dt{border:2px solid var(--line);border-radius:12px;padding:12px 16px;display:flex;flex-direction:column;gap:7px;background:#FBFAF6}.dt .k{font-size:17px;font-weight:700;letter-spacing:.06em;color:#B42318}.dt .v{font-size:22px;line-height:1.32;font-weight:600;padding:1px 5px;border-radius:5px}.dt .v.hl,.dt.hl{background:#FFF0A3;box-shadow:0 0 0 2px #E2B93B}.dt.hide{display:none}.wc{font-size:23px}</style>"
+       },
+       {
+        "type": "amber",
+        "id": "so",
+        "text": "Đầu ra: tờ trình theo mẫu"
+       },
+       {
+        "type": "dhtml",
+        "html": "<div id=\"wfs\">"
+       },
+       {
+        "type": "workflow",
+        "items": [
+         {
+          "id": "wf1",
+          "title": "Đọc quy định, ghi quy chuẩn"
+         },
+         {
+          "id": "wf2",
+          "title": "Trạm gác 1: bạn duyệt quy chuẩn",
+          "gate": true
+         },
+         {
+          "id": "wf3",
+          "title": "Bóc tách, tính số liệu"
+         },
+         {
+          "id": "wf4",
+          "title": "Trạm gác 2: bạn duyệt số liệu",
+          "gate": true
+         },
+         {
+          "id": "wf5",
+          "title": "Soạn dự thảo tờ trình"
+         },
+         {
+          "id": "wf6",
+          "title": "Trạm gác 3: bạn nghiệm thu",
+          "gate": true
+         },
+         {
+          "id": "wf7",
+          "title": "Gửi email cho trưởng phòng"
+         }
+        ]
+       },
+       {
+        "type": "dhtml",
+        "html": "</div><div class=\"dt rv\" id=\"d1\"><div class=\"k\">TRẠM GÁC 1 · QUY CHUẨN</div><div class=\"v\" id=\"d1a\">Hệ số trả nợ = Thu nhập ròng ÷ Số phải trả. Ngưỡng giả định: từ 1,5 lần.</div><div class=\"v rv\" id=\"d1b\">Nguồn: quy định cho vay, mục 4</div></div><div class=\"dt rv\" id=\"d2\"><div class=\"k\">TRẠM GÁC 2 · SỐ LIỆU</div><div class=\"v\" id=\"d2a\">Thu nhập ròng = 205 − 148 = 57 triệu</div><div class=\"v rv\" id=\"d2b\">Hệ số trả nợ = 57 ÷ 34 ≈ 1,7 lần</div></div><div class=\"dt rv\" id=\"d3\"><div class=\"k\">TRẠM GÁC 3 · NGHIỆM THU</div><div class=\"v\" id=\"d3a\">Đủ mục chưa?</div><div class=\"v rv\" id=\"d3b\">Số có khớp sổ nháp không?</div><div class=\"v rv\" id=\"d3c\">Nhận định có đúng không?</div></div><div class=\"dt rv\" id=\"d4\"><div class=\"k\" style=\"color:#0F6E56\">SAU NGHIỆM THU</div><div class=\"v\">Đạt rồi, email mới được gửi đi.</div></div>"
+       }
+      ]
+     }
+    ]
+   },
+   "steps": [
+    {
+     "at": "Bên phải là kỹ năng",
+     "do": "point",
+     "target": "wbad",
+     "label": "KỸ NĂNG ĐÃ ĐÓNG GÓI",
+     "zoom": 1.0,
+     "mark": "none"
+    },
+    {
+     "at": "Bên phải là kỹ năng",
+     "do": "on",
+     "target": "tS"
+    },
+    {
+     "at": "đầu ra cần có",
+     "do": "hl",
+     "target": "so"
+    },
+    {
+     "at": "các bước,",
+     "do": "on",
+     "target": "wfs"
+    },
+    {
+     "at": "các bước,",
+     "do": "hl",
+     "target": "wfs"
+    },
+    {
+     "at": "những chỗ phải dừng",
+     "do": "off",
+     "target": "wfs"
+    },
+    {
+     "at": "những chỗ phải dừng",
+     "do": "on",
+     "target": "pv_wf"
+    },
+    {
+     "at": "Ví dụ, trong tình huống",
+     "do": "off",
+     "target": "tS"
+    },
+    {
+     "at": "Ví dụ, trong tình huống",
+     "do": "off",
+     "target": "pv_wf"
+    },
+    {
+     "at": "bạn chỉ gõ một câu",
+     "do": "type",
+     "text": "Thẩm định hồ sơ HKD_MinhHoa_02 bằng kỹ năng.",
+     "delay": 22
+    },
+    {
+     "at": "AI đọc quy định",
+     "do": "send"
+    },
+    {
+     "at": "AI đọc quy định",
+     "do": "reveal",
+     "n": 1,
+     "wait": 0.3
+    },
+    {
+     "at": "AI đọc quy định",
+     "do": "show",
+     "target": "tc2",
+     "wait": 0.3
+    },
+    {
+     "at": "AI đọc quy định",
+     "do": "show",
+     "target": "tv",
+     "wait": 0.3
+    },
+    {
+     "at": "AI đọc quy định",
+     "do": "show",
+     "target": "tg",
+     "wait": 0.3
+    },
+    {
+     "at": "AI đọc quy định",
+     "do": "on",
+     "target": "wf1",
+     "wait": 0.3
+    },
+    {
+     "at": "ghi ra quy chuẩn",
+     "do": "reveal",
+     "n": 1
+    },
+    {
+     "at": "ghi ra quy chuẩn",
+     "do": "show",
+     "target": "d1"
+    },
+    {
+     "at": "dừng ở trạm gác một",
+     "do": "tick",
+     "target": "wf1"
+    },
+    {
+     "at": "dừng ở trạm gác một",
+     "do": "reveal",
+     "n": 1
+    },
+    {
+     "at": "đối chiếu với văn bản gốc",
+     "do": "show",
+     "target": "d1b"
+    },
+    {
+     "at": "đối chiếu với văn bản gốc",
+     "do": "hl",
+     "target": "d1b"
+    },
+    {
+     "at": "Bạn duyệt xong",
+     "do": "reveal",
+     "n": 1
+    },
+    {
+     "at": "Bạn duyệt xong",
+     "do": "tick",
+     "target": "wf2"
+    },
+    {
+     "at": "Bạn duyệt xong",
+     "do": "hide",
+     "target": "d1"
+    },
+    {
+     "at": "AI bóc tách và tính",
+     "do": "reveal",
+     "n": 1
+    },
+    {
+     "at": "AI bóc tách và tính",
+     "do": "show",
+     "target": "f3"
+    },
+    {
+     "at": "AI bóc tách và tính",
+     "do": "show",
+     "target": "d2"
+    },
+    {
+     "at": "dừng ở trạm gác hai",
+     "do": "tick",
+     "target": "wf3"
+    },
+    {
+     "at": "dừng ở trạm gác hai",
+     "do": "reveal",
+     "n": 1
+    },
+    {
+     "at": "soi từng phép tính",
+     "do": "show",
+     "target": "d2b"
+    },
+    {
+     "at": "soi từng phép tính",
+     "do": "hl",
+     "target": "d2b"
+    },
+    {
+     "at": "Số liệu đúng",
+     "do": "reveal",
+     "n": 1
+    },
+    {
+     "at": "Số liệu đúng",
+     "do": "tick",
+     "target": "wf4"
+    },
+    {
+     "at": "Số liệu đúng",
+     "do": "hide",
+     "target": "d2"
+    },
+    {
+     "at": "AI soạn dự thảo",
+     "do": "reveal",
+     "n": 1
+    },
+    {
+     "at": "AI soạn dự thảo",
+     "do": "show",
+     "target": "f4"
+    },
+    {
+     "at": "dừng ở trạm gác ba",
+     "do": "tick",
+     "target": "wf5"
+    },
+    {
+     "at": "dừng ở trạm gác ba",
+     "do": "reveal",
+     "n": 1
+    },
+    {
+     "at": "dừng ở trạm gác ba",
+     "do": "show",
+     "target": "d3"
+    },
+    {
+     "at": "đủ mục chưa",
+     "do": "hl",
+     "target": "d3a"
+    },
+    {
+     "at": "số có khớp không",
+     "do": "show",
+     "target": "d3b"
+    },
+    {
+     "at": "số có khớp không",
+     "do": "hl",
+     "target": "d3b"
+    },
+    {
+     "at": "nhận định có đúng không",
+     "do": "show",
+     "target": "d3c"
+    },
+    {
+     "at": "nhận định có đúng không",
+     "do": "hl",
+     "target": "d3c"
+    },
+    {
+     "at": "Chỉ khi đạt",
+     "do": "tick",
+     "target": "wf6"
+    },
+    {
+     "at": "Chỉ khi đạt",
+     "do": "reveal",
+     "n": 1
+    },
+    {
+     "at": "Chỉ khi đạt",
+     "do": "hide",
+     "target": "d3"
+    },
+    {
+     "at": "Chỉ khi đạt",
+     "do": "show",
+     "target": "d4"
+    },
+    {
+     "at": "Chỉ khi đạt",
+     "do": "hide",
+     "target": "f4"
+    },
+    {
+     "at": "Chỉ khi đạt",
+     "do": "show",
+     "target": "tk"
+    },
+    {
+     "at": "Chỉ khi đạt",
+     "do": "show",
+     "target": "f5"
+    },
+    {
+     "at": "gửi email cho trưởng phòng",
+     "do": "tick",
+     "target": "wf7"
+    },
+    {
+     "at": "gửi email cho trưởng phòng",
+     "do": "reveal",
+     "n": 1
+    },
+    {
+     "at": "không còn ra lệnh",
+     "do": "show",
+     "target": "c_ok"
+    }
+   ],
+   "say": [
+    "Bên phải là kỹ năng, tức là một bản hướng dẫn cho AI, ghi lại cách làm đã chạy đúng ở cấp độ hai. Bản hướng dẫn này ghi đầu ra cần có, các bước, và những chỗ phải dừng. Đóng gói không có nghĩa là bỏ người duyệt, nên kỹ năng vẫn có ba trạm gác, tức là ba chỗ AI phải dừng hẳn để chờ bạn.",
+    "Ví dụ, trong tình huống có một hồ sơ mới, bạn chỉ gõ một câu ngắn. AI đọc quy định và mẫu tờ trình, ghi ra quy chuẩn, rồi dừng ở trạm gác một để bạn đối chiếu với văn bản gốc.",
+    "Bạn duyệt xong, AI bóc tách và tính số liệu, rồi dừng ở trạm gác hai để bạn soi từng phép tính. Số liệu đúng, AI soạn dự thảo tờ trình, rồi dừng ở trạm gác ba.",
+    "Tại đây, bạn nghiệm thu dự thảo: đủ mục chưa, số có khớp không, nhận định có đúng không. Chỉ khi đạt, bạn mới cho AI gửi email cho trưởng phòng.",
+    "So với cấp độ hai, bạn không còn ra lệnh cho từng việc, mà quyết định ở những chỗ quan trọng. Trách nhiệm với kết quả vẫn là của bạn."
+   ]
+  },
+  {
+   "id": "s8a_up_mo",
+   "kind": "card",
+   "kicker": "ĐI LÊN CẤP ĐỘ BA",
+   "title": "Đừng đóng gói <em>khi chưa làm đúng</em>",
+   "note": "",
+   "opener": {
+    "label": "LỘ TRÌNH",
+    "num": "↑",
+    "tone": "plum",
+    "kicker": "BA CẤP ĐỘ LÀM VIỆC VỚI AI",
+    "title": "Đừng đóng gói",
+    "accent": "khi chưa làm đúng",
+    "text": "Kỹ năng là cách làm đúng được ghi lại.",
+    "marks": [
+     {
+      "text": "cách làm đúng được ghi lại",
+      "at": "cách làm đúng được ghi lại"
+     }
+    ]
+   },
+   "say": [
+    "Nhìn vào cấp độ ba, nhiều người muốn đi thẳng lên đó ngay. Nhưng không nên, vì kỹ năng là cách làm đúng được ghi lại, nên nếu chưa từng làm đúng, thì chưa có gì để ghi."
+   ]
+  },
+  {
+   "id": "s8_up",
+   "kind": "live",
+   "kicker": "ĐI LÊN CẤP ĐỘ BA",
+   "title": "Làm chuẩn trước, <em>đóng gói sau</em>",
+   "note": "Đi theo thứ tự, không bỏ bước thử.",
+   "chip": "LỘ TRÌNH",
+   "page": {
+    "type": "board",
+    "corner": "LỘ TRÌNH",
+    "heading": "Đi lên cấp độ ba theo thứ tự nào?",
+    "blocks": [
+     {
+      "type": "html",
+      "html": "<style>.rdw{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:22px}.rd{position:relative;background:#fff;border:2px solid var(--line);border-top:12px solid var(--tc);border-radius:20px;padding:20px 20px 24px;min-height:340px;display:flex;flex-direction:column;gap:14px}.rd .n{font-size:64px;font-weight:700;line-height:1;color:var(--tc)}.rd .t{font-size:32px;font-weight:700;line-height:1.22}.rd .s{font-size:25px;font-weight:500;line-height:1.3;color:var(--ink2)}.um{margin-top:20px;background:#FDF3E1;border:2.5px solid #A15C07;border-radius:18px;padding:18px 26px;font-size:34px;font-weight:700;line-height:1.28;color:#6B3D05}.ul{margin-top:14px;background:#E7F5F0;border:2.5px solid #0F6E56;border-radius:18px;padding:18px 26px;font-size:34px;font-weight:700;line-height:1.28;color:#0B4F3E}</style><div class=\"rdw\"><div class=\"rd rv\" id=\"r1\" style=\"--tc:#1D4ED8\"><div class=\"n\">1</div><div class=\"t\">Làm chuẩn ở cấp độ hai</div><div class=\"s\">Ít nhất một bộ hồ sơ mẫu, bước nào cũng kiểm tra</div></div><div class=\"rd rv\" id=\"r2\" style=\"--tc:#0F6E56\"><div class=\"n\">2</div><div class=\"t\">Đóng gói thành kỹ năng</div><div class=\"s\">Ghi lại cách làm vừa kiểm chứng</div></div><div class=\"rd rv\" id=\"r3\" style=\"--tc:#A15C07\"><div class=\"n\">3</div><div class=\"t\">Thử trên hồ sơ khác</div><div class=\"s\">Có cả hồ sơ khó, trước khi dùng thật</div></div><div class=\"rd rv\" id=\"r4\" style=\"--tc:#7A2E5C\"><div class=\"n\">4</div><div class=\"t\">Dùng thật, có giám sát</div><div class=\"s\">Gặp lỗi mới thì sửa kỹ năng</div></div></div><div class=\"um rv\" id=\"um\">Một bộ hồ sơ mẫu: tối thiểu để đóng gói, chưa đủ để tin.</div><div class=\"ul rv\" id=\"ul\">Đầu ra đồng đều hơn, nhưng kỹ năng vẫn phải rèn tiếp.</div>"
+     }
+    ]
+   },
+   "steps": [
+    {
+     "at": "Vậy nên đi",
+     "do": "point",
+     "target": "bk",
+     "label": "ĐI THEO THỨ TỰ",
+     "zoom": 1.0,
+     "mark": "none"
+    },
+    {
+     "at": "làm chuẩn ít nhất",
+     "do": "show",
+     "target": "r1"
+    },
+    {
+     "at": "làm chuẩn ít nhất",
+     "do": "hl",
+     "target": "r1"
+    },
+    {
+     "at": "đóng gói cách làm đó",
+     "do": "show",
+     "target": "r2"
+    },
+    {
+     "at": "đóng gói cách làm đó",
+     "do": "hl",
+     "target": "r2"
+    },
+    {
+     "at": "chỉ là mức tối thiểu",
+     "do": "show",
+     "target": "um"
+    },
+    {
+     "at": "chỉ là mức tối thiểu",
+     "do": "hl",
+     "target": "um"
+    },
+    {
+     "at": "thử tiếp trên hồ sơ khác",
+     "do": "show",
+     "target": "r3"
+    },
+    {
+     "at": "thử tiếp trên hồ sơ khác",
+     "do": "hl",
+     "target": "r3"
+    },
+    {
+     "at": "vẫn cần người giám sát",
+     "do": "show",
+     "target": "r4"
+    },
+    {
+     "at": "vẫn cần người giám sát",
+     "do": "hl",
+     "target": "r4"
+    },
+    {
+     "at": "đầu ra đồng đều hơn",
+     "do": "show",
+     "target": "ul"
+    },
+    {
+     "at": "đầu ra đồng đều hơn",
+     "do": "hl",
+     "target": "ul"
+    }
+   ],
+   "say": [
+    "Vậy nên đi theo thứ tự nào? Trước hết, ở cấp độ hai, bạn cùng AI làm chuẩn ít nhất một bộ hồ sơ mẫu, bước nào cũng có bạn kiểm tra. Sau đó, bạn mới đóng gói cách làm đó thành kỹ năng.",
+    "Một bộ hồ sơ mẫu chỉ là mức tối thiểu để đóng gói, chưa đủ để tin vào kỹ năng. Vì vậy, bạn phải thử tiếp trên hồ sơ khác, nhất là hồ sơ khó, trước khi dùng thật.",
+    "Khi dùng thật, kỹ năng vẫn cần người giám sát, và mỗi lỗi mới gặp lại được dùng để sửa kỹ năng. Nhờ vậy, đầu ra đồng đều hơn, nhưng đây không phải là việc làm một lần là xong."
+   ]
+  },
+  {
+   "id": "s9_close",
+   "kind": "screen",
+   "kicker": "TỔNG KẾT",
+   "title": "Từ người hỏi, <em>đến người giám sát</em>",
+   "note": "Bạn vẫn là người giữ quyền quyết định.",
+   "chip": "TỔNG KẾT",
+   "page": {
+    "type": "concept",
+    "bare": true,
+    "blocks": [
+     {
+      "type": "html",
+      "html": "<style>.hero .hh{font-size:58px}.hcols.tight .hc{min-height:300px}.hcols.tight .ht{font-size:31px}.hcols.tight .hs{font-size:25px;line-height:1.35}.hc .ht{font-size:36px}.hc .hs{font-size:27px;line-height:1.35}.hc{min-height:340px}.big .f{font-size:32px}</style>"
+     },
+     {
+      "type": "hero",
+      "id": "recap",
+      "kicker": "TỔNG KẾT",
+      "title": "Từ người hỏi, đến người giám sát",
+      "items": [
+       {
+        "id": "e1",
+        "num": "1",
+        "tone": "amber",
+        "title": "Người hỏi, AI đáp",
+        "sub": "Hỏi nhanh việc dễ kiểm tra. Tra quy định: đối chiếu văn bản gốc."
+       },
+       {
+        "id": "e2",
+        "num": "2",
+        "tone": "blue",
+        "title": "AI làm, người hướng dẫn",
+        "sub": "Làm chuẩn cách làm lần đầu, duyệt từng bước."
+       },
+       {
+        "id": "e3",
+        "num": "3",
+        "tone": "green",
+        "title": "AI làm, người giám sát",
+        "sub": "Kỹ năng đã kiểm chứng, bạn duyệt ở ba trạm gác."
+       }
+      ]
+     },
+     {
+      "type": "html",
+      "html": "<style>#er .big{padding:16px 18px}#er .big .f{font-size:27px;line-height:1.25}#er .big .c{display:none}.hc{min-height:300px}</style>"
+     },
+     {
+      "type": "row",
+      "id": "er",
+      "blocks": [
+       {
+        "type": "big",
+        "id": "e5",
+        "tone": "coral",
+        "text": "Việc lặp lại nhiều lần mới đáng đóng gói",
+        "caption": ""
+       },
+       {
+        "type": "big",
+        "id": "e4",
+        "tone": "plum",
+        "text": "Một bộ hồ sơ mẫu để đóng gói, rồi thử tiếp trên hồ sơ khác",
+        "caption": ""
+       },
+       {
+        "type": "big",
+        "id": "e6",
+        "tone": "ink",
+        "text": "Bạn vẫn giữ quyền quyết định",
+        "caption": ""
+       }
+      ]
+     }
+    ]
+   },
+   "beats": [
+    {
+     "at": "Cấp độ một, người hỏi",
+     "target": "e1",
+     "label": "",
+     "zoom": 1.0
+    },
+    {
+     "at": "Cấp độ hai, AI làm",
+     "target": "e2",
+     "label": "",
+     "zoom": 1.0
+    },
+    {
+     "at": "Cấp độ ba, AI làm",
+     "target": "e3",
+     "label": "",
+     "zoom": 1.0
+    },
+    {
+     "at": "chỉ việc lặp lại",
+     "target": "e5",
+     "label": "",
+     "zoom": 1.0
+    },
+    {
+     "at": "Muốn đi lên cấp độ ba",
+     "target": "e4",
+     "label": "",
+     "zoom": 1.0
+    },
+    {
+     "at": "Dù ở cấp độ nào",
+     "target": "e6",
+     "label": "",
+     "zoom": 1.0
+    }
+   ],
+   "say": [
+    "Tóm lại, có ba cấp độ. Cấp độ một, người hỏi, AI đáp, hợp để hỏi nhanh việc dễ kiểm tra. Cấp độ hai, AI làm, người hướng dẫn từng bước, là chỗ để làm chuẩn cách làm lần đầu. Cấp độ ba, AI làm theo kỹ năng đã kiểm chứng, còn bạn duyệt ở ba trạm gác và giám sát kết quả.",
+    "Không phải việc nào cũng cần lên cấp độ ba, vì chỉ việc lặp lại nhiều lần mới đáng để đóng gói. Muốn đi lên cấp độ ba, hãy làm chuẩn ít nhất một bộ hồ sơ mẫu ở cấp độ hai, rồi thử tiếp trên hồ sơ khác trước khi dùng thật. Dù ở cấp độ nào, bạn vẫn là người giữ quyền quyết định."
+   ]
+  }
+ ]
+}

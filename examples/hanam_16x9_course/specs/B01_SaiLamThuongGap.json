@@ -1,0 +1,1503 @@
+{
+  "video_id": "B01_SaiLamThuongGap",
+  "lesson_no": 1,
+  "lesson_title": "Năm sai lầm thường gặp khi làm việc với AI",
+  "out_name": "B01_SaiLamThuongGap.mp4",
+  "shots": [
+    {
+      "id": "s1_open",
+      "kind": "screen",
+      "kicker": "LÀM VIỆC HIỆU QUẢ VỚI AI",
+      "title": "Năm sai lầm <em>thường gặp</em>",
+      "note": "Mỗi sai lầm đều đi kèm cách tránh.",
+      "chip": "NĂM SAI LẦM",
+      "page": {
+        "type": "concept",
+        "bare": true,
+        "blocks": [
+          {
+            "type": "hero",
+            "id": "hero",
+            "kicker": "LÀM VIỆC HIỆU QUẢ VỚI AI",
+            "title": "Năm sai lầm thường gặp",
+            "items": [
+              {
+                "id": "h1",
+                "num": "1",
+                "tone": "amber",
+                "title": "Hỏi đáp rời rạc",
+                "sub": "Không đầu, không cuối, không bối cảnh"
+              },
+              {
+                "id": "h2",
+                "num": "2",
+                "tone": "red",
+                "title": "Một chat, quá nhiều việc",
+                "sub": "Việc này chen việc kia"
+              },
+              {
+                "id": "h3",
+                "num": "3",
+                "tone": "blue",
+                "title": "Giao việc quá lớn",
+                "sub": "Không chia nhỏ các bước"
+              },
+              {
+                "id": "h4",
+                "num": "4",
+                "tone": "coral",
+                "title": "Tin ngay kết quả",
+                "sub": "Đẹp nên bỏ qua kiểm tra"
+              },
+              {
+                "id": "h5",
+                "num": "5",
+                "tone": "plum",
+                "title": "Làm xong rồi bỏ",
+                "sub": "Cách làm tốt không được lưu lại"
+              }
+            ]
+          }
+        ]
+      },
+      "beats": [],
+      "say": [
+        "Năm sai lầm thường gặp khiến bạn chưa tận dụng hết được sức mạnh của AI."
+      ],
+      "holds": [
+        {
+          "after": "sức mạnh của AI.",
+          "sec": 0.8
+        }
+      ]
+    },
+    {
+      "id": "s2a_m1_mo",
+      "kind": "card",
+      "kicker": "SAI LẦM 1",
+      "title": "Hỏi đáp <em>rời rạc</em>",
+      "note": "",
+      "opener": {
+        "label": "SAI LẦM",
+        "kicker": "NĂM SAI LẦM THƯỜNG GẶP",
+        "num": "1",
+        "tone": "amber",
+        "title": "Hỏi đáp",
+        "accent": "rời rạc",
+        "text": "Không đầu, không cuối, không có bối cảnh.",
+        "marks": [
+          {
+            "text": "Không đầu",
+            "at": "không đầu"
+          },
+          {
+            "text": "không cuối",
+            "at": "không cuối"
+          },
+          {
+            "text": "không có bối cảnh",
+            "at": "không có bối cảnh"
+          }
+        ]
+      },
+      "say": [
+        "Sai lầm thứ nhất là hỏi đáp rời rạc. Rời rạc nghĩa là không đầu, không cuối, không có bối cảnh."
+      ]
+    },
+    {
+      "id": "s2_m1",
+      "kind": "live",
+      "kicker": "SAI LẦM 1",
+      "title": "Hỏi đáp <em>rời rạc</em>",
+      "note": "Tình huống giả lập. Tên và số liệu chỉ để minh họa.",
+      "chip": "TÌNH HUỐNG GIẢ LẬP",
+      "page": {
+        "type": "app",
+        "project": "Báo cáo tháng",
+        "sessions": [
+          {
+            "group": "Hôm nay"
+          },
+          {
+            "title": "Đoạn chat mới",
+            "active": true
+          }
+        ],
+        "chat": [],
+        "stream": [
+          {
+            "role": "agent",
+            "text": "Bạn muốn sửa bảng nào? Trong đoạn chat này mình chưa thấy bảng nào."
+          },
+          {
+            "role": "status",
+            "text": "Đã mở Báo cáo tháng 10/bao_cao.xlsx"
+          },
+          {
+            "role": "status",
+            "text": "Đã sửa cột Tổng, cộng đủ tháng 9"
+          }
+        ],
+        "previews": [
+          {
+            "id": "pv_q",
+            "file": "AI đang thiếu gì?",
+            "blocks": [
+              {
+                "type": "h",
+                "text": "AI không biết"
+              },
+              {
+                "type": "list",
+                "reveal": true,
+                "ids": [
+                  "q1",
+                  "q2",
+                  "q3"
+                ],
+                "items": [
+                  "Bảng nào?",
+                  "Nằm ở đâu?",
+                  "Hôm qua đã bàn gì?"
+                ]
+              },
+              {
+                "type": "amber",
+                "id": "q4",
+                "reveal": true,
+                "text": "Hãy coi như AI bị mất trí nhớ."
+              }
+            ]
+          },
+          {
+            "id": "pv_fix",
+            "file": "bao_cao.xlsx",
+            "blocks": [
+              {
+                "type": "h",
+                "text": "Câu giao việc đủ ý"
+              },
+              {
+                "type": "kv",
+                "reveal": true,
+                "ids": [
+                  "f1",
+                  "f2",
+                  "f3"
+                ],
+                "items": [
+                  [
+                    "Cần làm gì",
+                    "Sửa cột Tổng"
+                  ],
+                  [
+                    "Thư mục nào",
+                    "Báo cáo tháng 10"
+                  ],
+                  [
+                    "Đang diễn ra",
+                    "Cộng thiếu tháng 9"
+                  ]
+                ]
+              },
+              {
+                "type": "table",
+                "reveal": true,
+                "ids": [
+                  "f4"
+                ],
+                "cols": [
+                  "Khoản mục",
+                  "Tháng 8",
+                  "Tháng 9",
+                  "Tổng"
+                ],
+                "rows": [
+                  [
+                    "Doanh thu",
+                    "120",
+                    "135",
+                    "[ok] 255"
+                  ]
+                ]
+              },
+              {
+                "type": "green",
+                "id": "f5",
+                "reveal": true,
+                "text": "AI bớt công đoán, làm đúng việc ngay."
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "at": "Ví dụ, bạn gõ",
+          "do": "type",
+          "text": "Sửa giúp tôi cái bảng hôm qua.",
+          "delay": 30
+        },
+        {
+          "at": "cái bảng hôm qua",
+          "do": "send",
+          "wait": 0.6
+        },
+        {
+          "at": "cái bảng hôm qua",
+          "do": "reveal",
+          "n": 1,
+          "wait": 0.7
+        },
+        {
+          "at": "cái bảng hôm qua",
+          "do": "doc",
+          "target": "pv_q",
+          "wait": 0.8
+        },
+        {
+          "at": "Bảng nào",
+          "do": "show",
+          "target": "q1"
+        },
+        {
+          "at": "Bảng nào",
+          "do": "hl",
+          "target": "q1"
+        },
+        {
+          "at": "nằm ở đâu",
+          "do": "show",
+          "target": "q2"
+        },
+        {
+          "at": "nằm ở đâu",
+          "do": "hl",
+          "target": "q2"
+        },
+        {
+          "at": "hôm qua đã bàn gì",
+          "do": "show",
+          "target": "q3"
+        },
+        {
+          "at": "hôm qua đã bàn gì",
+          "do": "hl",
+          "target": "q3"
+        },
+        {
+          "at": "Hãy coi như AI",
+          "do": "show",
+          "target": "q4"
+        },
+        {
+          "at": "Hãy coi như AI",
+          "do": "hl",
+          "target": "q4"
+        },
+        {
+          "at": "Hãy coi như AI",
+          "do": "point",
+          "target": "q4",
+          "label": "COI NHƯ AI MẤT TRÍ NHỚ",
+          "zoom": 1.0,
+          "mark": "none"
+        },
+        {
+          "at": "Hãy chỉ rõ cần làm gì",
+          "do": "type",
+          "text": "Trong thư mục Báo cáo tháng 10, tệp bao_cao.xlsx: sửa cột Tổng đang cộng thiếu tháng 9.",
+          "delay": 30
+        },
+        {
+          "at": "Hãy chỉ rõ cần làm gì",
+          "do": "doc",
+          "target": "pv_fix"
+        },
+        {
+          "at": "cần làm gì",
+          "do": "show",
+          "target": "f1"
+        },
+        {
+          "at": "cần làm gì",
+          "do": "hl",
+          "target": "f1"
+        },
+        {
+          "at": "tìm ở thư mục nào",
+          "do": "show",
+          "target": "f2"
+        },
+        {
+          "at": "tìm ở thư mục nào",
+          "do": "hl",
+          "target": "f2"
+        },
+        {
+          "at": "chuyện gì đang diễn ra",
+          "do": "show",
+          "target": "f3"
+        },
+        {
+          "at": "chuyện gì đang diễn ra",
+          "do": "hl",
+          "target": "f3"
+        },
+        {
+          "at": "Nhận câu đó",
+          "do": "send"
+        },
+        {
+          "at": "AI mở đúng tệp",
+          "do": "reveal",
+          "n": 1
+        },
+        {
+          "at": "sửa ngay cột Tổng",
+          "do": "reveal",
+          "n": 1
+        },
+        {
+          "at": "sửa ngay cột Tổng",
+          "do": "show",
+          "target": "f4"
+        },
+        {
+          "at": "sửa ngay cột Tổng",
+          "do": "hl",
+          "target": "f4"
+        },
+        {
+          "at": "AI bớt công tìm hiểu",
+          "do": "show",
+          "target": "f5"
+        },
+        {
+          "at": "AI bớt công tìm hiểu",
+          "do": "hl",
+          "target": "f5"
+        },
+        {
+          "at": "AI bớt công tìm hiểu",
+          "do": "point",
+          "target": "f5",
+          "label": "ĐỦ BA Ý · AI LÀM ĐÚNG",
+          "zoom": 1.0,
+          "mark": "none"
+        }
+      ],
+      "say": [
+        "Ví dụ, bạn gõ: sửa giúp tôi cái bảng hôm qua. Bảng nào, nằm ở đâu, hôm qua đã bàn gì, AI đều không biết.",
+        "Hãy coi như AI bị mất trí nhớ. Hãy chỉ rõ cần làm gì, tìm ở thư mục nào, chuyện gì đang diễn ra, thay vì kỳ vọng nó tự nhớ những lần nói chuyện trước. Nhận câu đó, AI mở đúng tệp và sửa ngay cột Tổng. Nhờ vậy, AI bớt công tìm hiểu xem bạn đang muốn làm gì."
+      ],
+      "holds": [
+        {
+          "after": "cái bảng hôm qua.",
+          "sec": 0.9
+        }
+      ]
+    },
+    {
+      "id": "s3a_m2_mo",
+      "kind": "card",
+      "kicker": "SAI LẦM 2",
+      "title": "Một đoạn chat <em>làm quá nhiều việc</em>",
+      "note": "",
+      "opener": {
+        "label": "SAI LẦM",
+        "kicker": "NĂM SAI LẦM THƯỜNG GẶP",
+        "num": "2",
+        "tone": "red",
+        "title": "Một đoạn chat",
+        "accent": "làm quá nhiều việc",
+        "text": "Trong một đoạn chat, giao hết việc này đến việc khác.",
+        "marks": [
+          {
+            "text": "giao hết việc này",
+            "at": "giao hết việc này"
+          },
+          {
+            "text": "đến việc khác",
+            "at": "đến việc khác"
+          }
+        ]
+      },
+      "say": [
+        "Sai lầm thứ hai thì ngược lại: trong một đoạn chat, giao hết việc này đến việc khác."
+      ],
+      "holds": []
+    },
+    {
+      "id": "s3_m2",
+      "kind": "live",
+      "kicker": "SAI LẦM 2",
+      "title": "Một đoạn chat <em>làm quá nhiều việc</em>",
+      "note": "Tình huống giả lập. Tên và số liệu chỉ để minh họa.",
+      "chip": "TÌNH HUỐNG GIẢ LẬP",
+      "page": {
+        "type": "app",
+        "project": "Việc trong tuần",
+        "sessions": [
+          {
+            "group": "Hôm nay"
+          },
+          {
+            "title": "Đoạn chat chung · 48 lượt",
+            "active": true
+          }
+        ],
+        "chat": [
+          {
+            "role": "user",
+            "id": "c1",
+            "text": "Tóm tắt quy định mới."
+          },
+          {
+            "role": "agent",
+            "text": "Đã tóm tắt."
+          },
+          {
+            "role": "user",
+            "id": "c2",
+            "text": "Viết thư mời họp, 45 người."
+          },
+          {
+            "role": "agent",
+            "text": "Đã viết thư mời."
+          },
+          {
+            "role": "user",
+            "id": "c3",
+            "text": "Làm báo cáo khách hàng trong tuần."
+          }
+        ],
+        "stream": [
+          {
+            "role": "agent",
+            "text": "Báo cáo: tuần này có 45 khách hàng mới.",
+            "id": "c4"
+          },
+          {
+            "role": "status",
+            "text": "Đã tóm tắt 48 lượt trò chuyện thành một bản ngắn"
+          }
+        ],
+        "previews": [
+          {
+            "id": "pv_mix",
+            "file": "Đoạn chat đang dồn những gì?",
+            "visible": true,
+            "blocks": [
+              {
+                "type": "h",
+                "text": "Một đoạn chat, ba việc"
+              },
+              {
+                "type": "table",
+                "reveal": true,
+                "ids": [
+                  "x1",
+                  "x2",
+                  "x3"
+                ],
+                "cols": [
+                  "Hậu quả",
+                  "Biểu hiện"
+                ],
+                "rows": [
+                  [
+                    "Lẫn lộn",
+                    "[bad] Số 45 của thư mời họp chạy sang báo cáo"
+                  ],
+                  [
+                    "Tràn bộ nhớ",
+                    "[bad] Đã dùng 92%, phần đầu dễ rơi mất"
+                  ],
+                  [
+                    "Tốn token",
+                    "[warn] Mỗi lượt xử lý lại cả đoạn dài"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "pv_split",
+            "file": "Mỗi việc một đoạn chat",
+            "blocks": [
+              {
+                "type": "h",
+                "text": "Tách việc, nối bằng tệp"
+              },
+              {
+                "type": "workflow",
+                "items": [
+                  {
+                    "id": "m2a",
+                    "title": "Đoạn chat 1: Tóm tắt quy định",
+                    "desc": "Kết quả ghi thành tệp tom_tat.md"
+                  },
+                  {
+                    "id": "m2b",
+                    "title": "Đoạn chat 2: Soạn hướng dẫn",
+                    "desc": "Chỉ nạp tệp tom_tat.md, không cần cả đoạn cũ"
+                  },
+                  {
+                    "id": "m2c",
+                    "title": "Đoạn chat 3: Thư mời họp",
+                    "desc": "Việc độc lập, không nạp gì thêm"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "pv_compact",
+            "file": "Sau lệnh compact",
+            "blocks": [
+              {
+                "type": "h",
+                "text": "Thu gọn bối cảnh"
+              },
+              {
+                "type": "table",
+                "cols": [
+                  "",
+                  "Trước",
+                  "Sau"
+                ],
+                "rows": [
+                  [
+                    "Trò chuyện",
+                    "48 lượt",
+                    "[ok] 1 bản tóm tắt"
+                  ],
+                  [
+                    "Bộ nhớ đã dùng",
+                    "[bad] 92%",
+                    "[ok] 18%"
+                  ]
+                ],
+                "ids": [
+                  "p1",
+                  "p2"
+                ]
+              },
+              {
+                "type": "amber",
+                "text": "Nên đọc lại bản tóm tắt, vì chi tiết nhỏ có thể bị rút gọn.",
+                "id": "p3"
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "at": "AI vừa bị lẫn lộn",
+          "do": "reveal",
+          "n": 1
+        },
+        {
+          "at": "AI vừa bị lẫn lộn",
+          "do": "hl",
+          "target": "c4"
+        },
+        {
+          "at": "AI vừa bị lẫn lộn",
+          "do": "show",
+          "target": "x1"
+        },
+        {
+          "at": "vừa bị tràn bộ nhớ",
+          "do": "show",
+          "target": "x2"
+        },
+        {
+          "at": "vừa bị tràn bộ nhớ",
+          "do": "hl",
+          "target": "x2"
+        },
+        {
+          "at": "lại tốn nhiều token",
+          "do": "show",
+          "target": "x3"
+        },
+        {
+          "at": "lại tốn nhiều token",
+          "do": "hl",
+          "target": "x3"
+        },
+        {
+          "at": "Hãy tách mỗi việc",
+          "do": "doc",
+          "target": "pv_split"
+        },
+        {
+          "at": "Hãy tách mỗi việc",
+          "do": "hl",
+          "target": "m2a"
+        },
+        {
+          "at": "ghi kết quả thành tệp",
+          "do": "tick",
+          "target": "m2a"
+        },
+        {
+          "at": "chuyển tệp đó sang",
+          "do": "hl",
+          "target": "m2b"
+        },
+        {
+          "at": "nếu việc sau cần",
+          "do": "tick",
+          "target": "m2b"
+        },
+        {
+          "at": "Khi cuộc trò chuyện quá dài",
+          "do": "type",
+          "text": "/compact",
+          "delay": 90
+        },
+        {
+          "at": "tóm tắt bối cảnh",
+          "do": "send"
+        },
+        {
+          "at": "Lệnh này gộp",
+          "do": "reveal",
+          "n": 1
+        },
+        {
+          "at": "cả đoạn dài",
+          "do": "doc",
+          "target": "pv_compact"
+        },
+        {
+          "at": "một bản ngắn",
+          "do": "hl",
+          "target": "p1"
+        },
+        {
+          "at": "Không bị nhiễu",
+          "do": "hl",
+          "target": "p2"
+        }
+      ],
+      "say": [
+        "AI vừa bị lẫn lộn, vừa bị tràn bộ nhớ, lại tốn nhiều token.",
+        "Hãy tách mỗi việc ra một đoạn chat riêng. Xong một việc, hãy ghi kết quả thành tệp, rồi chuyển tệp đó sang đoạn chat mới nếu việc sau cần nối tiếp. Khi cuộc trò chuyện quá dài, nhiều ứng dụng có lệnh compact để tóm tắt bối cảnh. Lệnh này gộp cả đoạn dài thành một bản ngắn. Không bị nhiễu, AI sẽ xử lý nhanh và hiệu quả hơn."
+      ],
+      "holds": [
+        {
+          "after": "tốn nhiều token.",
+          "sec": 0.9
+        }
+      ]
+    },
+    {
+      "id": "s4a_m3_mo",
+      "kind": "card",
+      "kicker": "SAI LẦM 3",
+      "title": "Giao việc <em>quá lớn trong một lần</em>",
+      "note": "",
+      "opener": {
+        "label": "SAI LẦM",
+        "kicker": "NĂM SAI LẦM THƯỜNG GẶP",
+        "num": "3",
+        "tone": "blue",
+        "title": "Giao việc",
+        "accent": "quá lớn trong một lần",
+        "text": "Không yêu cầu AI chia nhỏ các bước.",
+        "marks": [
+          {
+            "text": "chia nhỏ các bước",
+            "at": "chia nhỏ các bước"
+          }
+        ]
+      },
+      "say": [
+        "Sai lầm thứ ba là giao một việc quá lớn trong một lần, mà không yêu cầu AI chia nhỏ các bước."
+      ]
+    },
+    {
+      "id": "s4_m3",
+      "kind": "live",
+      "kicker": "SAI LẦM 3",
+      "title": "Giao việc <em>quá lớn trong một lần</em>",
+      "note": "Tình huống giả lập. Tên và số liệu chỉ để minh họa.",
+      "chip": "TÌNH HUỐNG GIẢ LẬP",
+      "page": {
+        "type": "app",
+        "project": "Hồ sơ KH_CN_01",
+        "sessions": [
+          {
+            "group": "Dự án"
+          },
+          {
+            "title": "Hồ sơ KH_CN_01",
+            "active": true
+          }
+        ],
+        "chat": [],
+        "stream": [
+          {
+            "role": "status",
+            "text": "Đã tạo bao_cao_tham_dinh.docx"
+          },
+          {
+            "role": "agent",
+            "text": "Mình chia thành ba bước và làm bước 1 trước."
+          },
+          {
+            "role": "gate",
+            "id": "g3",
+            "text": "Xong bước 1. Dừng lại chờ bạn kiểm tra."
+          }
+        ],
+        "previews": [
+          {
+            "id": "pv_report",
+            "file": "bao_cao_tham_dinh.docx",
+            "blocks": [
+              {
+                "type": "h",
+                "text": "Báo cáo thẩm định · KH_CN_01"
+              },
+              {
+                "type": "p",
+                "text": "Khách hàng có tình hình tài chính lành mạnh, đủ khả năng trả nợ."
+              },
+              {
+                "type": "table",
+                "cols": [
+                  "Chỉ tiêu",
+                  "Giá trị",
+                  "Nguồn"
+                ],
+                "rows": [
+                  [
+                    "Doanh thu năm",
+                    "2,1 tỷ",
+                    "bảng doanh thu"
+                  ],
+                  [
+                    "Biên lợi nhuận",
+                    "[bad] 18%",
+                    "[bad] không rõ"
+                  ],
+                  [
+                    "Dòng tiền trả nợ",
+                    "[bad] 62 triệu/tháng",
+                    "[bad] không rõ"
+                  ]
+                ],
+                "ids": [
+                  "",
+                  "r2",
+                  "r3"
+                ]
+              },
+              {
+                "type": "red",
+                "text": "Các bước giữa bị bỏ qua. Sai ở đâu cũng không biết.",
+                "id": "r4",
+                "reveal": true
+              }
+            ]
+          },
+          {
+            "id": "pv_steps",
+            "file": "Chia thành từng bước",
+            "blocks": [
+              {
+                "type": "h",
+                "text": "Xong bước nào, kiểm tra bước đó"
+              },
+              {
+                "type": "workflow",
+                "items": [
+                  {
+                    "id": "st1",
+                    "title": "Bóc tách số liệu ra sổ nháp",
+                    "desc": "Mỗi con số ghi rõ nguồn"
+                  },
+                  {
+                    "id": "st2",
+                    "title": "Bạn kiểm tra",
+                    "desc": "Đúng rồi mới đi tiếp",
+                    "gate": true
+                  },
+                  {
+                    "id": "st3",
+                    "title": "Soạn báo cáo",
+                    "desc": "Chỉ dùng số liệu đã kiểm tra"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "at": "Ví dụ, đưa cả tập",
+          "do": "type",
+          "text": "Viết báo cáo thẩm định đi."
+        },
+        {
+          "at": "báo cáo thẩm định đi",
+          "do": "send",
+          "wait": 0.6
+        },
+        {
+          "at": "báo cáo thẩm định đi",
+          "do": "reveal",
+          "n": 1,
+          "wait": 1.1
+        },
+        {
+          "at": "báo cáo thẩm định đi",
+          "do": "doc",
+          "target": "pv_report",
+          "wait": 1.2
+        },
+        {
+          "at": "làm tắt, làm ẩu",
+          "do": "hl",
+          "target": "r2"
+        },
+        {
+          "at": "không có kết quả trung gian",
+          "do": "hl",
+          "target": "r3"
+        },
+        {
+          "at": "khi sai cũng không biết",
+          "do": "show",
+          "target": "r4"
+        },
+        {
+          "at": "khi sai cũng không biết",
+          "do": "hl",
+          "target": "r4"
+        },
+        {
+          "at": "khi sai cũng không biết",
+          "do": "point",
+          "target": "r4",
+          "label": "KHÔNG CÓ KẾT QUẢ TRUNG GIAN",
+          "zoom": 1.0,
+          "mark": "none"
+        },
+        {
+          "at": "Hãy yêu cầu AI",
+          "do": "type",
+          "text": "Chia việc này thành từng bước, xong mỗi bước dừng lại cho tôi kiểm tra.",
+          "delay": 25
+        },
+        {
+          "at": "chia việc thành từng bước",
+          "do": "send"
+        },
+        {
+          "at": "chia việc thành từng bước",
+          "do": "reveal",
+          "n": 1
+        },
+        {
+          "at": "chia việc thành từng bước",
+          "do": "doc",
+          "target": "pv_steps"
+        },
+        {
+          "at": "xong bước nào",
+          "do": "tick",
+          "target": "st1"
+        },
+        {
+          "at": "dừng lại cho bạn kiểm tra",
+          "do": "reveal",
+          "n": 1
+        },
+        {
+          "at": "dừng lại cho bạn kiểm tra",
+          "do": "hl",
+          "target": "st2"
+        },
+        {
+          "at": "dừng lại cho bạn kiểm tra",
+          "do": "point",
+          "target": "g3",
+          "label": "ĐIỂM DỪNG ĐỂ BẠN KIỂM TRA",
+          "zoom": 1.0,
+          "mark": "none"
+        }
+      ],
+      "say": [
+        "Ví dụ, đưa cả tập tài liệu rồi bảo: viết báo cáo thẩm định đi. Điều này thường dẫn đến việc AI làm tắt, làm ẩu để cho xong. Bạn lại không có kết quả trung gian để kiểm tra, nên khi sai cũng không biết sai ở đâu.",
+        "Hãy yêu cầu AI chia việc thành từng bước, xong bước nào thì dừng lại cho bạn kiểm tra, rồi mới làm bước sau."
+      ],
+      "holds": [
+        {
+          "after": "báo cáo thẩm định đi.",
+          "sec": 0.9
+        }
+      ]
+    },
+    {
+      "id": "s5a_m4_mo",
+      "kind": "card",
+      "kicker": "SAI LẦM 4",
+      "title": "Tin ngay kết quả, <em>không kiểm tra</em>",
+      "note": "",
+      "opener": {
+        "label": "SAI LẦM",
+        "kicker": "NĂM SAI LẦM THƯỜNG GẶP",
+        "num": "4",
+        "tone": "coral",
+        "title": "Tin ngay kết quả,",
+        "accent": "không kiểm tra",
+        "style": "quote",
+        "text": "Văn bản càng trôi chảy, bạn càng dễ bỏ qua khâu kiểm tra.",
+        "marks": [
+          {
+            "text": "càng trôi chảy",
+            "at": "càng trôi chảy"
+          },
+          {
+            "text": "bỏ qua khâu kiểm tra",
+            "at": "bỏ qua khâu kiểm tra"
+          }
+        ]
+      },
+      "say": [
+        "Sai lầm thứ tư là thấy kết quả trình bày đẹp thì tin ngay. Văn bản càng trôi chảy, bạn càng dễ bỏ qua khâu kiểm tra."
+      ]
+    },
+    {
+      "id": "s5_m4",
+      "kind": "live",
+      "kicker": "SAI LẦM 4",
+      "title": "Tin ngay kết quả, <em>không kiểm tra</em>",
+      "note": "Tình huống giả lập. Tên và số liệu chỉ để minh họa.",
+      "chip": "TÌNH HUỐNG GIẢ LẬP",
+      "page": {
+        "type": "app",
+        "project": "Hồ sơ KH_CN_01",
+        "sessions": [
+          {
+            "group": "Dự án"
+          },
+          {
+            "title": "Hồ sơ KH_CN_01",
+            "active": true
+          }
+        ],
+        "chat": [],
+        "stream": [
+          {
+            "role": "status",
+            "text": "Đã ghi sổ nháp research.md · số nào cũng có nguồn"
+          },
+          {
+            "role": "gate",
+            "text": "Chờ bạn duyệt sổ nháp: thu nhập ròng 53 triệu, không phải 83 triệu."
+          }
+        ],
+        "previews": [
+          {
+            "id": "pv_tt",
+            "file": "to_trinh_KH_CN_01.docx",
+            "visible": true,
+            "blocks": [
+              {
+                "type": "h",
+                "text": "Tờ trình thẩm định · KH_CN_01"
+              },
+              {
+                "type": "kv",
+                "items": [
+                  [
+                    "Khách hàng",
+                    "Hộ kinh doanh giả định"
+                  ],
+                  [
+                    "Đề nghị vay",
+                    "300 triệu · 12 tháng"
+                  ]
+                ]
+              },
+              {
+                "type": "p",
+                "text": "Kết luận: khách hàng đủ khả năng trả nợ."
+              },
+              {
+                "type": "table",
+                "cols": [
+                  "Chỉ tiêu",
+                  "Giá trị"
+                ],
+                "rows": [
+                  [
+                    "Doanh thu tháng",
+                    "184 triệu"
+                  ],
+                  [
+                    "Chi phí tháng",
+                    "131 triệu"
+                  ],
+                  [
+                    "Thu nhập ròng tháng",
+                    "[bad] 83 triệu"
+                  ]
+                ],
+                "ids": [
+                  "",
+                  "",
+                  "t3"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "pv_nhap",
+            "file": "research.md · sổ nháp",
+            "blocks": [
+              {
+                "type": "h",
+                "text": "Sổ nháp số liệu · KH_CN_01"
+              },
+              {
+                "type": "table",
+                "cols": [
+                  "Chỉ tiêu",
+                  "Giá trị",
+                  "Nguồn"
+                ],
+                "rows": [
+                  [
+                    "Doanh thu tháng",
+                    "184 triệu",
+                    "bảng doanh thu"
+                  ],
+                  [
+                    "Chi phí tháng",
+                    "131 triệu",
+                    "phương án vay"
+                  ],
+                  [
+                    "Thu nhập ròng tháng",
+                    "[ok] 53 triệu",
+                    "= 184 − 131"
+                  ],
+                  [
+                    "Khoản trả nợ tháng",
+                    "[warn] Chưa có",
+                    "[warn] AI hỏi lại bạn"
+                  ]
+                ],
+                "reveal": true,
+                "ids": [
+                  "n1",
+                  "n2",
+                  "n3",
+                  "n4"
+                ]
+              },
+              {
+                "type": "red",
+                "text": "Tờ trình ghi 83 triệu, nhưng sổ nháp tính ra 53 triệu.",
+                "id": "n5",
+                "reveal": true
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "at": "có một con số sai",
+          "do": "hl",
+          "target": "t3"
+        },
+        {
+          "at": "có một con số sai",
+          "do": "point",
+          "target": "t3",
+          "label": "TRÔNG CHỈN CHU, NHƯNG CÓ SỐ SAI",
+          "zoom": 1.0,
+          "mark": "none"
+        },
+        {
+          "at": "Hãy buộc AI ghi",
+          "do": "reveal",
+          "n": 1
+        },
+        {
+          "at": "Hãy buộc AI ghi",
+          "do": "doc",
+          "target": "pv_nhap"
+        },
+        {
+          "at": "số nào cũng có nguồn",
+          "do": "show",
+          "target": "n1"
+        },
+        {
+          "at": "số nào cũng có nguồn",
+          "do": "show",
+          "target": "n2"
+        },
+        {
+          "at": "số nào cũng có nguồn",
+          "do": "show",
+          "target": "n3"
+        },
+        {
+          "at": "số nào cũng có nguồn",
+          "do": "hl",
+          "target": "n3"
+        },
+        {
+          "at": "thiếu số thì phải hỏi lại",
+          "do": "show",
+          "target": "n4"
+        },
+        {
+          "at": "thiếu số thì phải hỏi lại",
+          "do": "hl",
+          "target": "n4"
+        },
+        {
+          "at": "thiếu số thì phải hỏi lại",
+          "do": "point",
+          "target": "n4",
+          "label": "THIẾU SỐ THÌ HỎI LẠI",
+          "zoom": 1.0,
+          "mark": "none"
+        },
+        {
+          "at": "Bạn duyệt xong sổ nháp",
+          "do": "reveal",
+          "n": 1
+        },
+        {
+          "at": "Tờ trình ghi",
+          "do": "show",
+          "target": "n5"
+        },
+        {
+          "at": "Tờ trình ghi",
+          "do": "hl",
+          "target": "n5"
+        }
+      ],
+      "say": [
+        "Ví dụ, một tờ trình trông rất chỉn chu nhưng có một con số sai. Nếu không đối chiếu, số sai đó đi thẳng vào hồ sơ.",
+        "Hãy buộc AI ghi số liệu ra sổ nháp, số nào cũng có nguồn, thiếu số thì phải hỏi lại. Bạn duyệt xong sổ nháp, AI mới được viết tiếp. Tờ trình ghi tám mươi ba triệu, nhưng sổ nháp tính ra năm mươi ba triệu. Đẹp chưa chắc đã đúng."
+      ],
+      "holds": [
+        {
+          "after": "đi thẳng vào hồ sơ.",
+          "sec": 0.9
+        }
+      ]
+    },
+    {
+      "id": "s6a_m5_mo",
+      "kind": "card",
+      "kicker": "SAI LẦM 5",
+      "title": "Làm xong rồi bỏ, <em>không lưu lại cách làm</em>",
+      "note": "",
+      "opener": {
+        "label": "SAI LẦM",
+        "kicker": "NĂM SAI LẦM THƯỜNG GẶP",
+        "num": "5",
+        "tone": "plum",
+        "title": "Làm xong rồi bỏ,",
+        "accent": "không lưu lại cách làm",
+        "text": "Cách làm tốt không được lưu lại.",
+        "marks": [
+          {
+            "text": "không được lưu lại",
+            "at": "làm xong rồi bỏ"
+          }
+        ]
+      },
+      "say": [
+        "Sai lầm thứ năm là làm xong rồi bỏ."
+      ],
+      "holds": []
+    },
+    {
+      "id": "s6_m5",
+      "kind": "live",
+      "kicker": "SAI LẦM 5",
+      "title": "Làm xong rồi bỏ, <em>không lưu lại cách làm</em>",
+      "note": "Tình huống giả lập. Tên và số liệu chỉ để minh họa.",
+      "chip": "TÌNH HUỐNG GIẢ LẬP",
+      "page": {
+        "type": "app",
+        "project": "Báo cáo tháng",
+        "sessions": [
+          {
+            "group": "Gần đây"
+          },
+          {
+            "title": "Báo cáo tháng 10 · 14 lượt chỉnh sửa",
+            "active": true
+          },
+          {
+            "title": "Báo cáo tháng 9"
+          },
+          {
+            "title": "Báo cáo tháng 8"
+          }
+        ],
+        "chat": [],
+        "stream": [
+          {
+            "role": "status",
+            "text": "Đã lưu Kỹ năng lam-bao-cao-thang thành tệp riêng"
+          }
+        ],
+        "previews": [
+          {
+            "id": "pv_old",
+            "file": "Cuộc trò chuyện cũ",
+            "visible": true,
+            "blocks": [
+              {
+                "type": "h",
+                "text": "Quy trình đang nằm trong cuộc trò chuyện cũ"
+              },
+              {
+                "type": "list",
+                "items": [
+                  "[x] Đã chỉnh 14 lượt để ra kết quả chuẩn",
+                  "[x] Đã thống nhất mẫu và cách tính",
+                  "[ ] Chưa lưu lại thành cách làm dùng chung"
+                ],
+                "ids": [
+                  "o1",
+                  "o2",
+                  "o3"
+                ]
+              },
+              {
+                "type": "amber",
+                "text": "Tuần sau gặp việc tương tự: lại làm từ đầu.",
+                "id": "o4",
+                "reveal": true
+              }
+            ]
+          },
+          {
+            "id": "pv_skill",
+            "file": "Kỹ năng · lam-bao-cao-thang",
+            "blocks": [
+              {
+                "type": "h",
+                "text": "Kỹ năng: làm báo cáo tháng"
+              },
+              {
+                "type": "list",
+                "items": [
+                  "[x] Các bước đã kiểm chứng",
+                  "[x] Mẫu và cách tính",
+                  "[x] Điểm dừng để bạn duyệt"
+                ]
+              },
+              {
+                "type": "green",
+                "text": "Lần sau chỉ cần gọi tên, không dặn lại từ đầu.",
+                "id": "k3"
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "at": "Sau nhiều lần chỉnh sửa",
+          "do": "hl",
+          "target": "o1"
+        },
+        {
+          "at": "nhưng nó lại nằm",
+          "do": "hl",
+          "target": "o3"
+        },
+        {
+          "at": "Tuần sau gặp việc",
+          "do": "show",
+          "target": "o4"
+        },
+        {
+          "at": "Tuần sau gặp việc",
+          "do": "hl",
+          "target": "o4"
+        },
+        {
+          "at": "Tuần sau gặp việc",
+          "do": "point",
+          "target": "o4",
+          "label": "CÁCH LÀM TỐT BỊ BỎ LẠI",
+          "zoom": 1.0,
+          "mark": "none"
+        },
+        {
+          "at": "Hãy đóng gói cách làm",
+          "do": "type",
+          "text": "Đóng gói cách làm đã chuẩn thành Kỹ năng, lưu thành tệp riêng.",
+          "delay": 30
+        },
+        {
+          "at": "lưu thành tệp riêng",
+          "do": "send",
+          "wait": 0.4
+        },
+        {
+          "at": "lưu thành tệp riêng",
+          "do": "reveal",
+          "n": 1,
+          "wait": 0.9
+        },
+        {
+          "at": "lưu thành tệp riêng",
+          "do": "doc",
+          "target": "pv_skill",
+          "wait": 1.0
+        },
+        {
+          "at": "Lần sau chỉ cần",
+          "do": "hl",
+          "target": "k3"
+        },
+        {
+          "at": "không cần dặn lại",
+          "do": "point",
+          "target": "k3",
+          "label": "GỌI TÊN LÀ CHẠY",
+          "zoom": 1.0,
+          "mark": "none"
+        }
+      ],
+      "say": [
+        "Sau nhiều lần chỉnh sửa, bạn đã có một quy trình rất tốt, nhưng nó lại nằm trong một cuộc trò chuyện cũ. Tuần sau gặp việc tương tự, bạn lại làm từ đầu, lại chỉnh sửa từng ấy lần.",
+        "Hãy đóng gói cách làm đã chuẩn thành một Kỹ năng, lưu thành tệp riêng. Lần sau chỉ cần gọi tên, AI sẽ làm đúng theo cách đó, không cần dặn lại từ đầu."
+      ],
+      "holds": [
+        {
+          "after": "chỉnh sửa từng ấy lần.",
+          "sec": 0.9
+        },
+        {
+          "after": "lưu thành tệp riêng.",
+          "sec": 0.9
+        }
+      ]
+    },
+    {
+      "id": "s7_close",
+      "kind": "screen",
+      "kicker": "TỔNG KẾT",
+      "title": "Năm điều <em>cần tránh</em>",
+      "note": "Cùng một công cụ, cách làm khác thì kết quả khác.",
+      "chip": "TỔNG KẾT",
+      "page": {
+        "type": "concept",
+        "bare": true,
+        "blocks": [
+          {
+            "type": "hero",
+            "id": "recap",
+            "kicker": "TỔNG KẾT",
+            "title": "Năm điều cần tránh",
+            "items": [
+              {
+                "id": "e1",
+                "num": "1",
+                "tone": "amber",
+                "title": "Hỏi đáp rời rạc",
+                "sub": "Nói rõ việc, thư mục, bối cảnh"
+              },
+              {
+                "id": "e2",
+                "num": "2",
+                "tone": "red",
+                "title": "Một chat, quá nhiều việc",
+                "sub": "Mỗi việc một đoạn chat, nối bằng tệp"
+              },
+              {
+                "id": "e3",
+                "num": "3",
+                "tone": "blue",
+                "title": "Giao việc quá lớn",
+                "sub": "Chia bước, dừng lại kiểm tra"
+              },
+              {
+                "id": "e4",
+                "num": "4",
+                "tone": "coral",
+                "title": "Tin ngay",
+                "sub": "Sổ nháp có nguồn, bạn duyệt"
+              },
+              {
+                "id": "e5",
+                "num": "5",
+                "tone": "plum",
+                "title": "Không lưu lại",
+                "sub": "Đóng gói thành Kỹ năng"
+              }
+            ]
+          }
+        ]
+      },
+      "beats": [
+        {
+          "at": "hỏi đáp rời rạc",
+          "target": "e1",
+          "label": "",
+          "zoom": 1.0
+        },
+        {
+          "at": "một đoạn chat làm",
+          "target": "e2",
+          "label": "",
+          "zoom": 1.0
+        },
+        {
+          "at": "giao việc quá lớn",
+          "target": "e3",
+          "label": "",
+          "zoom": 1.0
+        },
+        {
+          "at": "tin ngay không kiểm tra",
+          "target": "e4",
+          "label": "",
+          "zoom": 1.0
+        },
+        {
+          "at": "làm xong không lưu lại",
+          "target": "e5",
+          "label": "",
+          "zoom": 1.0
+        },
+        {
+          "at": "Tránh được năm sai lầm",
+          "target": "recap",
+          "label": "",
+          "zoom": 1.0
+        }
+      ],
+      "say": [
+        "Tóm lại, có năm điều cần tránh: hỏi đáp rời rạc, một đoạn chat làm quá nhiều việc, giao việc quá lớn trong một lần, tin ngay không kiểm tra, và làm xong không lưu lại.",
+        "Tránh được năm sai lầm này, cùng một công cụ AI sẽ cho kết quả khác hẳn."
+      ]
+    }
+  ]
+}
