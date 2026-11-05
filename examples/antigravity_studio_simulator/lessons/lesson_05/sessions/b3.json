@@ -1,0 +1,19 @@
+{
+  "id": "b3",
+  "label": "3. Mở tệp 1.1_Welcome.md",
+  "duration": 11.13,
+  "mode": "sim",
+  "pose": 5,
+  "surface": "ide",
+  "focus_selectors": [
+    "#ide-left-sidebar",
+    "#editor-canvas"
+  ],
+  "focus_pad": 6,
+  "cursor_selector": "[data-file='1.1_Welcome.md']",
+  "cursor_label": "Mở 1.1_Welcome.md trong Module_1_Fundamentals",
+  "caption": "Trên Antigravity IDE, khi mở thư mục học liệu <code>antigravity_course_vn</code>, bạn bấm vào tệp <code>1.1_Welcome.md</code> ở cột trái để đọc hướng dẫn mở đầu của bài thực hành TaskFlow.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); currentWorkspaceTreeMode='antigravity_course_vn'; renderFileTree(); setEditorMode('wysiwyg'); openFileInEditor('1.1_Welcome.md');",
+  "audio_src": "audio/lesson_05/b3.mp3",
+  "audio_duration": 10.48
+}

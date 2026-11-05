@@ -1,0 +1,17 @@
+{
+  "id": "b2",
+  "label": "2. Skills: Công thức nước chấm",
+  "duration": 8.89,
+  "mode": "theory",
+  "pose": 2,
+  "slide": "s1",
+  "hl": [
+    "sl-c2"
+  ],
+  "focus_selectors": [
+    "#sl-c2"
+  ],
+  "caption": "Thứ hai là Skills, giống như công thức pha bát nước chấm chuẩn vị. Đây là một kỹ năng chuyên môn đóng gói sẵn, có thể lấy ra dùng chung cho nhiều công việc khác nhau.",
+  "audio_src": "audio/lesson_03/b2.mp3",
+  "audio_duration": 8.24
+}

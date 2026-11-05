@@ -1,0 +1,19 @@
+{
+  "id": "b7",
+  "label": "7. Bảng chọn 5 mô hình",
+  "duration": 12.81,
+  "mode": "sim",
+  "pose": 2,
+  "surface": "mgr",
+  "focus_selectors": [
+    "#agy2-model-pill",
+    "#kudo-model-popover"
+  ],
+  "focus_pad": 10,
+  "cursor_selector": "#kmp-flash",
+  "cursor_label": "Chọn mô hình phù hợp với độ khó công việc",
+  "caption": "Trên cửa sổ phần mềm Antigravity 2.0, bạn bấm vào nút chọn mô hình ở góc dưới khung nhập lệnh để chuyển đổi linh hoạt giữa <code>Gemini 4 Argon Medium</code>, <code>Gemini 3.8 Flash Medium</code> hoặc <code>Claude Sonnet 5.5</code>.",
+  "onEnter": "switchToSurface('mgr'); closeSettingsModal(); loadAgy2Thread('main'); openAgy2RightPane('0.1_Introduction.md'); kudoOpenModelPopover();",
+  "audio_src": "audio/lesson_01/b7.mp3",
+  "audio_duration": 12.16
+}

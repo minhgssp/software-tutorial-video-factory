@@ -1,0 +1,18 @@
+{
+  "id": "b4",
+  "label": "4. Bật/tắt cột trái bằng Ctrl + B",
+  "duration": 10.89,
+  "mode": "sim",
+  "pose": 5,
+  "surface": "ide",
+  "focus_selectors": [
+    "#ide-left-sidebar"
+  ],
+  "focus_pad": 6,
+  "cursor_selector": "#act-btn-explorer",
+  "cursor_label": "Nhấn Ctrl + B hoặc bấm biểu tượng Explorer",
+  "caption": "Khi bạn lỡ tay bấm ẩn mất cột cây thư mục bên trái, chỉ cần nhấn tổ hợp phím <kbd>Ctrl + B</kbd> hoặc bấm vào biểu tượng hai tệp giấy trên thanh công cụ ngoài cùng bên trái là cây thư mục hiện lại ngay.",
+  "onEnter": "kudoShowKeyHud('🗂️ Bật/tắt cây thư mục: <kbd>Ctrl + B</kbd>'); switchToSurface('ide'); switchIdeSidebarMode('explorer'); document.getElementById('ide-left-sidebar').style.display='flex';",
+  "audio_src": "audio/lesson_04/b4.mp3",
+  "audio_duration": 10.24
+}

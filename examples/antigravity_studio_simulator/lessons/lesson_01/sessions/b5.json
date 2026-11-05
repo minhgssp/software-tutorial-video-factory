@@ -1,0 +1,17 @@
+{
+  "id": "b5",
+  "label": "5. Vì sao dân văn phòng dùng IDE",
+  "duration": 11.85,
+  "mode": "theory",
+  "pose": 5,
+  "slide": "s2",
+  "hl": [
+    "s2-c2"
+  ],
+  "focus_selectors": [
+    "#s2-c2"
+  ],
+  "caption": "Nhiều anh chị thắc mắc vì sao không lập trình vẫn dùng Antigravity IDE: thực chất đây là bàn làm việc 3 cột giúp bạn vừa quản lý cây thư mục bên trái, vừa xem tài liệu ở giữa và giao việc cho AI ở cột phải.",
+  "audio_src": "audio/lesson_01/b5.mp3",
+  "audio_duration": 11.2
+}

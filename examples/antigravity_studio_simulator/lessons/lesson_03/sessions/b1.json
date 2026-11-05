@@ -1,0 +1,17 @@
+{
+  "id": "b1",
+  "label": "1. Rules: Nội quy nhà bếp",
+  "duration": 11.77,
+  "mode": "theory",
+  "pose": 1,
+  "slide": "s1",
+  "hl": [
+    "sl-c1"
+  ],
+  "focus_selectors": [
+    "#sl-c1"
+  ],
+  "caption": "Làm sao để trợ lý AI hiểu rõ quy chuẩn của công ty bạn? Hãy hình dung thư mục <code>.agent</code> giống như một căn bếp. Trong đó, Rules là tấm biển nội quy treo trên tường, luôn được nạp tự động trong mọi cuộc trò chuyện.",
+  "audio_src": "audio/lesson_03/b1.mp3",
+  "audio_duration": 11.12
+}

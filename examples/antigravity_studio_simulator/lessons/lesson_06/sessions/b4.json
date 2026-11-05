@@ -1,0 +1,18 @@
+{
+  "id": "b4",
+  "label": "4. Cảnh báo kéo thả nhầm thư mục",
+  "duration": 10.09,
+  "mode": "sim",
+  "pose": 4,
+  "surface": "ide",
+  "focus_selectors": [
+    "#ide-move-warn-modal .warn-dialog"
+  ],
+  "focus_pad": 8,
+  "cursor_selector": "#ide-move-warn-modal .win-dlg-btn",
+  "cursor_label": "Bấm Cancel nếu lỡ tay kéo thả nhầm thư mục",
+  "caption": "Trong lúc dùng chuột ở cột cây thư mục bên trái, nếu lỡ tay kéo một thư mục thả vào trong thư mục khác, phần mềm sẽ hiện hộp thoại cảnh báo di chuyển. Bạn hãy bấm ngay nút <code>Cancel</code> để giữ nguyên cấu trúc.",
+  "onEnter": "kudoHidePopovers(); closeWinFolderDialog(); switchToSurface('ide'); currentWorkspaceTreeMode='antigravity_course_vn'; renderFileTree(); openMoveWarnModal();",
+  "audio_src": "audio/lesson_06/b4.mp3",
+  "audio_duration": 9.44
+}

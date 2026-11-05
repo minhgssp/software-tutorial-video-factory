@@ -1,0 +1,19 @@
+{
+  "id": "b2",
+  "label": "2. Phím tắt khôi phục giao diện",
+  "duration": 10.09,
+  "mode": "theory",
+  "pose": 2,
+  "slide": "s1",
+  "hl": [
+    "sl-c2",
+    "sl-c3"
+  ],
+  "focus_selectors": [
+    "#sl-c2",
+    "#sl-c3"
+  ],
+  "caption": "Nếu lỡ tay làm ẩn cột cây thư mục, bạn chỉ cần nhấn <kbd>Ctrl + B</kbd> để mở lại. Và bất cứ khi nào quên thao tác, hãy gõ câu hỏi bằng tiếng Việt tự nhiên ngay tại khung chat bên phải.",
+  "audio_src": "audio/lesson_04/b2.mp3",
+  "audio_duration": 9.44
+}

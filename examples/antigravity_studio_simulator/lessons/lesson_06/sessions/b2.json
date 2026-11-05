@@ -1,0 +1,19 @@
+{
+  "id": "b2",
+  "label": "2. Đồng bộ 1-1 và tránh kéo nhầm",
+  "duration": 12.25,
+  "mode": "theory",
+  "pose": 2,
+  "slide": "s1",
+  "hl": [
+    "sl-c2",
+    "sl-c3"
+  ],
+  "focus_selectors": [
+    "#sl-c2",
+    "#sl-c3"
+  ],
+  "caption": "Mọi tệp tin ở cột bên trái của Antigravity IDE đều đồng bộ 1-1 với thư mục thật trên ổ cứng. Bạn có thể kiểm chứng bằng lệnh Reveal in File Explorer và nhớ bấm Cancel nếu lỡ tay kéo nhầm thư mục.",
+  "audio_src": "audio/lesson_06/b2.mp3",
+  "audio_duration": 11.6
+}

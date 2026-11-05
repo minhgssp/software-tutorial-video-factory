@@ -1,0 +1,27 @@
+{
+  "lesson_slug": "lesson_01",
+  "filename": "lesson_01_chatbot_vs_agent.html",
+  "code": "BÀI 1.1",
+  "title": "Từ hỏi đáp trên trình duyệt đến trợ lý AI làm việc trực tiếp trong thư mục máy tính",
+  "short_title": "1.1 · Trình duyệt web vs. Trợ lý làm việc trong thư mục",
+  "description": "Phân biệt hai phần mềm độc lập Antigravity 2.0 và Antigravity IDE, cách chọn 5 mô hình AI, bấm Open IDE và đính kèm tệp bằng @.",
+  "slide_ids": [
+    "s1",
+    "s2"
+  ],
+  "session_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "b6",
+    "b7",
+    "b8",
+    "b9",
+    "b10"
+  ],
+  "beats_count": 10,
+  "total_duration_sec": 126.5,
+  "duration_formatted": "02:06"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "b4",
+  "label": "4. Cấp quyền tự chủ Turbo",
+  "duration": 8.17,
+  "mode": "theory",
+  "pose": 4,
+  "slide": "s2",
+  "hl": [
+    "s2-c1"
+  ],
+  "focus_selectors": [
+    "#s2-c1"
+  ],
+  "caption": "Tiếp theo, để AI không dừng lại hỏi xin phép ở mọi bước nhỏ, chúng ta vào phần cài đặt This Computer và chuyển quyền thực thi sang chế độ Turbo.",
+  "audio_src": "audio/lesson_02/b4.mp3",
+  "audio_duration": 7.52
+}

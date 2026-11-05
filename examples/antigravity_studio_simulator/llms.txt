@@ -1,0 +1,22 @@
+# Antigravity Basic — Interactive Course Player & Simulator (5-Layer Modular Architecture)
+
+> Hệ thống bài giảng tương tác mô phỏng Antigravity 2.0 & Antigravity IDE kèm thuyết minh VieNeu-TTS 48kHz đồng bộ thời lượng thực.
+
+## Cấu trúc 5 Lớp Module Độc Lập
+- `config/brand_config.json`: Cấu hình thương hiệu, logo, tên khóa học, giảng viên.
+- `config/course_manifest.json`: Danh mục 6 bài giảng (47 micro-sessions).
+- `config/pronunciation_lexicon.json`: Từ điển phát âm tiếng Anh & quy tắc đọc dấu chấm đuôi tệp (`PROP-261105-02`).
+- `assets/css/`: `simulator_core.css`, `brand_tokens.css`, `player_sidebar_layout.css`, `simulator_overrides.css`.
+- `assets/js/`: `simulator_core.js`, `simulator_actions.js`, `spotlight_cursor.js`, `player_engine.js`.
+- `assets/avatar/`: `lecturer_poses.js` & `lecturer_poses.svg.html` (8 tư thế nhân vật giảng viên).
+- `assets/templates/simulator_stage_dom.html`: Khung DOM gốc của trình mô phỏng Antigravity 2.0 & IDE.
+- `lessons/lesson_01..06/`: Chứa `lesson_meta.json`, `slides/*.html`, `sessions/*.json`, `lesson_spec.js`.
+
+## Danh sách Bài giảng & Trang Công cụ
+- [Cổng Mục lục Khóa học](index.html)
+- [BÀI 1.1 — Từ hỏi đáp trên trình duyệt đến trợ lý AI làm việc trực tiếp trong thư mục máy tính](lesson_01_chatbot_vs_agent.html): Phân biệt hai phần mềm độc lập Antigravity 2.0 và Antigravity IDE, cách chọn 5 mô hình AI, bấm Open IDE và đính kèm tệp bằng @. (10 phần, 02:07)
+- [BÀI 1.2 — Mở thư mục dự án, định dạng Markdown/CSV và bật chế độ tự chủ Turbo](lesson_02_turbo_mode_and_workspace.html): Thực hành Open Folder antigravity_course_vn, xem bảng CSV bằng Office Viewer, vào Settings bật quyền Turbo, thu giọng nói Ctrl+M và trích dẫn Ctrl+L. (11 phần, 01:54)
+- [BÀI 1.3 — Đánh giá qua tệp đầu ra trên ổ cứng và cách tổ chức thư mục .agent (Rules, Skills, Workflows)](lesson_03_bo_ba_rule_skill_workflow.html): Ẩn dụ căn bếp cho Rules, Skills, Workflows cùng hồ sơ @troly.md, nghiệm thu sản phẩm đầu ra và chu trình 3 lệnh /grill-me, /plan, /learn. (8 phần, 01:30)
+- [BÀI 2.1 — Cách vượt qua cảm giác bỡ ngỡ ban đầu và thói quen hỏi trực tiếp trợ lý AI](lesson_04_vuot_qua_con_ngop_hoi_nguoc_ai.html): Xử lý 3 tình huống AI dừng/chờ (Stop, Tiếp tục, Accept), bật/tắt cây thư mục Ctrl+B, bật Preview / Office Viewer và hỏi trực tiếp AI. (6 phần, 01:04)
+- [BÀI 2.2 — Thực hành dự án mẫu TaskFlow với lệnh /start-1-1 và lưu ý khi chọn lệnh gạch chéo](lesson_05_taskflow_start_1_1_bay_phim_space.html): Làm quen công ty giả lập TaskFlow Inc. (45 nhân sự), mở 1.1_Welcome.md, chọn lệnh /start-1-1 từ bảng gợi ý và tránh lỗi lặp thành /start-1-1-1. (6 phần, 01:04)
+- [BÀI 2.3 — Giải nén tệp .zip trước khi mở thư mục và đối chiếu tệp thật bằng Reveal in File Explorer](lesson_06_giai_nen_zip_open_folder_reveal_explorer.html): Quy tắc Extract All tệp .zip, mở thư mục đã giải nén, bấm Cancel khi kéo thả nhầm thư mục và kiểm chứng đồng bộ 1-1 bằng Reveal in File Explorer. (6 phần, 01:04)

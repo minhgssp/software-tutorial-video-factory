@@ -1,0 +1,17 @@
+{
+  "id": "b1",
+  "label": "1. So sánh cách làm cũ và mới",
+  "duration": 12.0,
+  "mode": "theory",
+  "pose": 1,
+  "slide": "s1",
+  "hl": [
+    "sl-c1"
+  ],
+  "focus_selectors": [
+    "#sl-c1"
+  ],
+  "caption": "Lời giảng hiển thị trên thanh phụ đề và đọc bằng giọng thuyết minh 48kHz đồng bộ thời gian thực.",
+  "audio_src": "audio/lesson_01/b1.mp3",
+  "audio_duration": 11.35
+}

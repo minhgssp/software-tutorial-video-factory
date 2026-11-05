@@ -1,0 +1,18 @@
+{
+  "id": "b8",
+  "label": "8. Mở nút Settings ở góc trái",
+  "duration": 9.29,
+  "mode": "sim",
+  "pose": 3,
+  "surface": "mgr",
+  "focus_selectors": [
+    "#agy2-settings-btn"
+  ],
+  "focus_pad": 8,
+  "cursor_selector": "#agy2-settings-btn",
+  "cursor_label": "Bấm ⚙️ Settings ở góc dưới bên trái",
+  "caption": "Thực hành bước 3: Trên cửa sổ Antigravity 2.0, bạn nhìn xuống góc dưới cùng của thanh bên trái và bấm vào nút <code>⚙️ Settings</code> để mở bảng thiết lập quyền tự chủ.",
+  "onEnter": "kudoHidePopovers(); closeSettingsModal(); switchToSurface('mgr'); loadAgy2Thread('main');",
+  "audio_src": "audio/lesson_02/b8.mp3",
+  "audio_duration": 8.64
+}

@@ -1,0 +1,21 @@
+/* =========================================================================
+   assets/css/brand_tokens.css
+   Biến thiết kế giao diện, kích thước Sidebar trái, màu sắc thương hiệu & khung Logo.
+   Dễ dàng chỉnh sửa tại đây mà không cần đụng vào logic bài giảng.
+   ========================================================================= */
+:root {
+  --kudo-sidebar-width: 280px;
+  --kudo-subtitle-height: 68px;
+  --kudo-brand-primary: #CB4B16;
+  --kudo-brand-accent: #F59E0B;
+  --kudo-brand-info: #0284C7;
+  --kudo-brand-success: #10B981;
+  --kudo-bg-dark: #0B0F19;
+  --kudo-sidebar-bg: #111827;
+  --kudo-sidebar-card: #1E293B;
+  --kudo-border-dark: #1E293B;
+  --kudo-text-main: #F8FAFC;
+  --kudo-text-muted: #94A3B8;
+  --kudo-font-sans: 'Segoe UI', Inter, system-ui, -apple-system, sans-serif;
+  --kudo-font-mono: Consolas, 'JetBrains Mono', monospace;
+}

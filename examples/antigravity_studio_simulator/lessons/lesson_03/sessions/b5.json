@@ -1,0 +1,21 @@
+{
+  "id": "b5",
+  "label": "5. Lệnh /plan và /learn",
+  "duration": 10.09,
+  "mode": "theory",
+  "pose": 5,
+  "slide": "s2",
+  "hl": [
+    "s2-c2",
+    "s2-c3",
+    "s2-c4"
+  ],
+  "focus_selectors": [
+    "#s2-c2",
+    "#s2-c3",
+    "#s2-c4"
+  ],
+  "caption": "Khi đã đủ thông tin, bạn dùng lệnh <code>/plan</code> để duyệt kế hoạch và danh sách tệp đầu ra trước khi thực thi. Cuối buổi, hãy gõ <code>/learn</code> để AI tự lưu kinh nghiệm mới vào sổ tay nội quy.",
+  "audio_src": "audio/lesson_03/b5.mp3",
+  "audio_duration": 9.44
+}

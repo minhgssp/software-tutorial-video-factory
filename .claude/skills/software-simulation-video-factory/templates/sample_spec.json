@@ -1,0 +1,41 @@
+{
+  "video_id": "SAMPLE_01",
+  "lesson_no": 1,
+  "lesson_title": "Mẫu đặc tả video bài giảng 16x9",
+  "out_name": "SAMPLE_01.mp4",
+  "shots": [
+    {
+      "id": "s1_open",
+      "kind": "screen",
+      "kicker": "HƯỚNG DẪN THỰC CHIẾN",
+      "title": "Làm chủ <em>không gian làm việc</em>",
+      "note": "Tình huống giả lập để minh họa.",
+      "page": {
+        "type": "concept",
+        "bare": true,
+        "blocks": [
+          {
+            "type": "hero",
+            "id": "hero",
+            "kicker": "HƯỚNG DẪN THỰC CHIẾN",
+            "title": "Ba bước chuẩn hóa công việc",
+            "items": [
+              {"id": "c1", "num": "1", "tone": "amber", "title": "Cô lập ngữ cảnh", "text": "Mỗi việc một ngăn riêng"},
+              {"id": "c2", "num": "2", "tone": "blue", "title": "Giao việc có chuẩn", "text": "Nêu rõ đầu vào và đầu ra"},
+              {"id": "c3", "num": "3", "tone": "good", "title": "Kiểm định độc lập", "text": "Đối chiếu trước khi bàn giao"}
+            ]
+          }
+        ]
+      },
+      "beats": [
+        {"at": "cô lập ngữ cảnh", "target": "c1", "do": "focus", "label": "BƯỚC MỘT", "zoom": 1.25}
+      ],
+      "say": [
+        "Để làm việc hiệu quả với công cụ thông minh, bạn cần nắm vững bước đầu tiên là cô lập ngữ cảnh trong từng ca làm việc riêng."
+      ],
+      "holds": [
+        {"after": "làm việc riêng.", "sec": 0.8}
+      ]
+    }
+  ]
+}

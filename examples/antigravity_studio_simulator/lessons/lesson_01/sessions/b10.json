@@ -1,0 +1,19 @@
+{
+  "id": "b10",
+  "label": "10. Cột phải và đính kèm @",
+  "duration": 13.53,
+  "mode": "sim",
+  "pose": 8,
+  "surface": "ide",
+  "focus_selectors": [
+    "#ide-right-agent",
+    "#ide-popup-menu"
+  ],
+  "focus_pad": 6,
+  "cursor_selector": "#ide-popup-menu .popup-item[data-cmd='@COMPANY.md']",
+  "cursor_label": "Gõ @ để đính kèm tệp vào khung chat",
+  "caption": "Ở cột bên phải là khung chat trợ lý AI: bạn chỉ cần gõ ký hiệu <code>@</code> để mở danh sách gợi ý và đính kèm nhanh các tệp như <code>@COMPANY.md</code>, <code>@sales_data.csv</code> hay <code>@troly.md</code> vào câu lệnh.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); openFileInEditor('0.1_Introduction.md'); kudoOpenIdeMentionPopup();",
+  "audio_src": "audio/lesson_01/b10.mp3",
+  "audio_duration": 12.88
+}

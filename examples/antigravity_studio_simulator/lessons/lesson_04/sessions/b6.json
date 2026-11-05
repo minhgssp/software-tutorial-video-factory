@@ -1,0 +1,18 @@
+{
+  "id": "b6",
+  "label": "6. Hỏi trực tiếp AI tại khung chat",
+  "duration": 9.21,
+  "mode": "sim",
+  "pose": 8,
+  "surface": "ide",
+  "focus_selectors": [
+    "#ide-right-agent"
+  ],
+  "focus_pad": 6,
+  "cursor_selector": "#ide-chat-input",
+  "cursor_label": "Hỏi thẳng AI bằng tiếng Việt tự nhiên",
+  "caption": "Như anh chị thấy ở cột phải, chỉ cần hỏi bằng lời tự nhiên, trợ lý AI sẽ chỉ rõ phím tắt <kbd>Ctrl + B</kbd> và vị trí nút <code>👁️ Preview / Office Viewer</code> ngay lập tức.",
+  "onEnter": "kudoRunAskAiWhenStuckDemo();",
+  "audio_src": "audio/lesson_04/b6.mp3",
+  "audio_duration": 8.56
+}

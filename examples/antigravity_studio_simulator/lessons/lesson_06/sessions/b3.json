@@ -1,0 +1,18 @@
+{
+  "id": "b3",
+  "label": "3. Mở thư mục đã giải nén",
+  "duration": 10.49,
+  "mode": "sim",
+  "pose": 3,
+  "surface": "ide_welcome",
+  "focus_selectors": [
+    "#win-open-folder-modal .win-dialog"
+  ],
+  "focus_pad": 8,
+  "cursor_selector": "#win-btn-select-folder",
+  "cursor_label": "Chọn thư mục đã giải nén antigravity_course_vn",
+  "caption": "Sau khi giải nén tệp <code>.zip</code> trên Windows hoặc Mac, bạn vào Antigravity IDE bấm Open Folder, chọn đúng thư mục thường <code>antigravity_course_vn</code> và bấm Select folder.",
+  "onEnter": "kudoHidePopovers(); closeMoveWarnModal(); showIdeWelcomeScreen(); openWinFolderDialog(); selectWinFolder('antigravity_course_vn', document.getElementById('win-folder-row-agy'));",
+  "audio_src": "audio/lesson_06/b3.mp3",
+  "audio_duration": 9.84
+}

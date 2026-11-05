@@ -910,3 +910,35 @@ def generate_simulator_scaffold(
     out_p.parent.mkdir(parents=True, exist_ok=True)
     out_p.write_text(html_doc, encoding="utf-8")
     return out_p
+
+
+class RepoRouteScanner:
+    """Object-oriented adapter around `harvest_code_repository()` for scanning repository VFS trees."""
+
+    def __init__(self, repo_path: Path | str, project_name: Optional[str] = None, max_files: int = 24) -> None:
+        self.repo_path = Path(repo_path).resolve()
+        self.project_name = project_name
+        self.max_files = max_files
+
+    def scan(self) -> Dict[str, Any]:
+        return harvest_code_repository(
+            repo_path=self.repo_path,
+            project_name=self.project_name,
+            max_files=self.max_files,
+        )
+
+
+class SingleFileSimulatorBuilder:
+    """Object-oriented adapter around `generate_simulator_scaffold()` for rendering single-file HTML simulators."""
+
+    def __init__(self, blueprint: Dict[str, Any], title: Optional[str] = None) -> None:
+        self.blueprint = blueprint
+        self.title = title
+
+    def build(self, out_html: Path | str) -> Path:
+        return generate_simulator_scaffold(
+            blueprint=self.blueprint,
+            out_html=out_html,
+            title=self.title,
+        )
+

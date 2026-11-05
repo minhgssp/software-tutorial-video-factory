@@ -1,0 +1,19 @@
+{
+  "id": "b3",
+  "label": "3. Workflows và nghiệm thu tệp đầu ra",
+  "duration": 11.69,
+  "mode": "theory",
+  "pose": 3,
+  "slide": "s1",
+  "hl": [
+    "sl-c3",
+    "sl-c4"
+  ],
+  "focus_selectors": [
+    "#sl-c3",
+    "#sl-c4"
+  ],
+  "caption": "Thứ ba là Workflows, tức quy trình từng bước được gọi nhanh bằng dấu <code>/</code>. Kết hợp với hồ sơ <code>@troly.md</code>, bạn luôn nghiệm thu hiệu quả của AI qua các tệp thành phẩm thực tế lưu ngay trong thư mục dự án.",
+  "audio_src": "audio/lesson_03/b3.mp3",
+  "audio_duration": 11.04
+}

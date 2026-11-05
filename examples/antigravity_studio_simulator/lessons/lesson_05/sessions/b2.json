@@ -1,0 +1,19 @@
+{
+  "id": "b2",
+  "label": "2. Lưu ý tránh lặp /start-1-1-1",
+  "duration": 12.57,
+  "mode": "theory",
+  "pose": 4,
+  "slide": "s1",
+  "hl": [
+    "sl-c2",
+    "sl-c3"
+  ],
+  "focus_selectors": [
+    "#sl-c2",
+    "#sl-c3"
+  ],
+  "caption": "Một lỗi rất hay gặp là khi bảng gợi ý hiện ra lệnh <code>/start-1-1</code>, học viên bấm chọn xong lại gõ tiếp <code>1-1</code> khiến lệnh bị biến thành <code>/start-1-1-1</code>. Bạn chỉ cần chọn từ bảng gợi ý rồi nhấn <kbd>Enter</kbd> ngay.",
+  "audio_src": "audio/lesson_05/b2.mp3",
+  "audio_duration": 11.92
+}

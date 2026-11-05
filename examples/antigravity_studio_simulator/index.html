@@ -3,11 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Khóa học Antigravity Basic — Trình phát bài giảng tương tác</title>
+<title>Khóa học Antigravity Basic — Trình phát bài giảng tương tác (Sidebar Trái &amp; VieNeu-TTS 48kHz)</title>
+<meta name="description" content="Cổng bài giảng tương tác khóa học Antigravity Basic (6 bài học, 47 micro-sessions) với thuyết minh VieNeu-TTS 48kHz và kiến trúc Module hóa 5 lớp độc lập.">
+<meta property="og:title" content="Khóa học Antigravity Basic — Trình phát bài giảng tương tác">
+<meta property="og:description" content="Hệ thống 6 bài giảng mô phỏng trực tiếp Antigravity 2.0 &amp; Antigravity IDE kèm giọng đọc VieNeu-TTS 48kHz đồng bộ tuyệt đối.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Antigravity Basic — Làm chủ AI Agent & Không gian làm việc thông minh",
+  "description": "Khóa học thực hành Antigravity 2.0 và Antigravity IDE qua 6 bài giảng tương tác (47 micro-sessions) với giọng đọc VieNeu-TTS 48kHz.",
+  "provider": {
+    "@type": "Organization",
+    "name": "HoctapTech Academy"
+  },
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "inLanguage": "vi"
+  }
+}
+</script>
+<link rel="stylesheet" href="assets/css/brand_tokens.css">
+<style id="kudo-a11y-motion">
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+</style>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    font-family: 'Segoe UI', Inter, system-ui, sans-serif;
+    font-family: var(--kudo-font-sans, 'Segoe UI', Inter, system-ui, sans-serif);
     background: #0B0F19;
     color: #F8FAFC;
     height: 100vh;
@@ -16,22 +48,24 @@
     overflow: hidden;
   }
   .top-nav {
-    height: 52px;
+    min-height: 48px;
     background: #111827;
     border-bottom: 1px solid #1E293B;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 22px;
+    padding: 6px 16px;
+    gap: 10px;
+    flex-wrap: wrap;
   }
   .brand {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
   }
   .brand-logo {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     border-radius: 8px;
     background: linear-gradient(135deg, #CB4B16, #F59E0B);
     display: flex;
@@ -39,49 +73,104 @@
     justify-content: center;
     font-weight: 900;
     color: #fff;
+    flex-shrink: 0;
   }
   .brand-title {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 800;
+    color: #F8FAFC;
   }
   .brand-sub {
-    font-size: 12px;
+    font-size: 11px;
     color: #94A3B8;
+  }
+  .quick-lesson-pills {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+  .ql-pill {
+    background: #1E293B;
+    color: #CBD5E1;
+    border: 1px solid #334155;
+    min-height: 28px;
+    min-width: 44px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .ql-pill:hover {
+    background: #334155;
+    color: #FFFFFF;
+  }
+  .ql-pill.active {
+    background: rgba(203, 75, 22, 0.25);
+    border-color: #F59E0B;
+    color: #FDE68A;
+  }
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
   }
   .main-layout {
     flex: 1;
     display: grid;
-    grid-template-columns: 1fr 370px;
+    grid-template-columns: 320px 1fr;
+    overflow: hidden;
+    transition: grid-template-columns 0.2s ease;
+    position: relative;
+  }
+  .main-layout.sidebar-collapsed {
+    grid-template-columns: 0px 1fr;
+  }
+  .main-layout.sidebar-collapsed .curriculum-sidebar {
+    border-right: none;
     overflow: hidden;
   }
-  .player-stage {
-    background: #000;
-    position: relative;
-    width: 100%;
-    height: 100%;
+  .toggle-sb-btn {
+    background: #1E293B;
+    color: #F8FAFC;
+    border: 1px solid #334155;
+    min-height: 30px;
+    padding: 5px 11px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
   }
-  iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
+  .toggle-sb-btn:hover {
+    background: #334155;
+    border-color: #F59E0B;
   }
   .curriculum-sidebar {
     background: #111827;
-    border-left: 1px solid #1E293B;
+    border-right: 1px solid #1E293B;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
   }
   .cs-header {
-    padding: 14px 18px;
+    padding: 12px 16px;
     border-bottom: 1px solid #1E293B;
-    font-size: 13px;
+    font-size: 12.5px;
     font-weight: 800;
     color: #FBBF24;
     letter-spacing: 0.3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .lesson-card {
-    padding: 14px 18px;
+    padding: 12px 16px;
     border-bottom: 1px solid #1E293B;
     cursor: pointer;
     transition: background 0.15s;
@@ -103,94 +192,127 @@
     margin-bottom: 4px;
   }
   .lc-title {
-    font-size: 13.5px;
+    font-size: 13px;
     font-weight: 700;
     color: #F8FAFC;
     line-height: 1.35;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
   }
   .lc-desc {
-    font-size: 12px;
+    font-size: 11.5px;
     color: #94A3B8;
-    line-height: 1.45;
+    line-height: 1.42;
   }
   .open-new-tab {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    min-height: 26px;
+    min-width: 26px;
+    padding: 4px 8px;
     margin-top: 6px;
     font-size: 11.5px;
     color: #38BDF8;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 5px;
     text-decoration: none;
     font-weight: 600;
+  }
+  .open-new-tab:hover {
+    background: rgba(56, 189, 248, 0.2);
+    color: #FFFFFF;
+  }
+  .player-stage {
+    background: #000;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  @media (max-width: 900px) {
+    .brand-sub { display: none; }
+    .top-nav { padding: 6px 10px; }
   }
 </style>
 </head>
 <body>
   <div class="top-nav">
     <div class="brand">
-      <div class="brand-logo">A</div>
+      <div class="brand-logo" id="hub-logo">A</div>
       <div>
-        <div class="brand-title">Khóa học Antigravity Basic — Hệ thống bài giảng tương tác</div>
-        <div class="brand-sub">Bài giảng kết hợp Slide phân tách từng ý và thao tác trực tiếp trên phần mềm Antigravity 2.0 và Antigravity IDE</div>
+        <div class="brand-title" id="hub-title" aria-live="polite">Khóa học Antigravity Basic — Hệ thống bài giảng tương tác</div>
+        <div class="brand-sub" id="hub-sub">Bố cục 1 Sidebar Trái Tinh Gọn · Kiến trúc Module 5 Lớp · VieNeu-TTS 48kHz</div>
       </div>
     </div>
-    <div style="font-size:12px; color:#10B981; font-weight:700;">● 6 bài giảng Chặng 1 sẵn sàng</div>
-  </div>
-  <div class="main-layout">
-    <div class="player-stage">
-      <iframe id="lesson-iframe" src="lesson_01_chatbot_vs_agent.html"></iframe>
-    </div>
-    <div class="curriculum-sidebar">
-      <div class="cs-header">Danh sách bài giảng Chặng 1 (6 video)</div>
-
-      <div class="lesson-card active" onclick="loadLesson('lesson_01_chatbot_vs_agent.html', this)">
-        <div class="lc-top"><span>BÀI 1.1 · M01</span><span>9 cảnh · ~01:17</span></div>
-        <div class="lc-title">Từ hỏi đáp trên trình duyệt đến trợ lý AI làm việc trực tiếp trong thư mục máy tính</div>
-        <div class="lc-desc">Phân biệt hai phần mềm độc lập Antigravity 2.0 (đổi tên từ Agent Manager) và Antigravity IDE, kèm bảng chọn 5 mô hình mới nhất.</div>
-        <a class="open-new-tab" href="lesson_01_chatbot_vs_agent.html" target="_blank" onclick="event.stopPropagation()">↗ Mở toàn màn hình trong tab mới</a>
-      </div>
-
-      <div class="lesson-card" onclick="loadLesson('lesson_02_turbo_mode_and_workspace.html', this)">
-        <div class="lc-top"><span>BÀI 1.2 · M02</span><span>10 cảnh · ~01:26</span></div>
-        <div class="lc-title">Mở thư mục dự án, định dạng Markdown/CSV và bật chế độ tự chủ Turbo</div>
-        <div class="lc-desc">Thực hành Open Folder, xem bảng CSV bằng Office Viewer, bật quyền Turbo, thu giọng nói Ctrl+M và trích dẫn Ctrl+L.</div>
-        <a class="open-new-tab" href="lesson_02_turbo_mode_and_workspace.html" target="_blank" onclick="event.stopPropagation()">↗ Mở toàn màn hình trong tab mới</a>
-      </div>
-
-      <div class="lesson-card" onclick="loadLesson('lesson_03_bo_ba_rule_skill_workflow.html', this)">
-        <div class="lc-top"><span>BÀI 1.3 · M03</span><span>8 cảnh · ~01:10</span></div>
-        <div class="lc-title">Đánh giá qua tệp đầu ra trên ổ cứng và cách tổ chức thư mục .agent (Rules, Skills, Workflows)</div>
-        <div class="lc-desc">Ẩn dụ căn bếp cho Rules, Skills, Workflows cùng hồ sơ @troly.md và chu trình 3 lệnh /grill-me, /plan, /learn.</div>
-        <a class="open-new-tab" href="lesson_03_bo_ba_rule_skill_workflow.html" target="_blank" onclick="event.stopPropagation()">↗ Mở toàn màn hình trong tab mới</a>
-      </div>
-
-      <div class="lesson-card" onclick="loadLesson('lesson_04_vuot_qua_con_ngop_hoi_nguoc_ai.html', this)">
-        <div class="lc-top"><span>BÀI 1.4 · M04</span><span>4 cảnh · ~00:33</span></div>
-        <div class="lc-title">Cách vượt qua cảm giác bỡ ngỡ ban đầu và thói quen hỏi trực tiếp trợ lý AI</div>
-        <div class="lc-desc">Giải tỏa tâm lý sợ bấm nhầm và cách chụp màn hình hoặc hỏi trực tiếp AI bằng tiếng Việt tự nhiên khi gặp vướng mắc.</div>
-        <a class="open-new-tab" href="lesson_04_vuot_qua_con_ngop_hoi_nguoc_ai.html" target="_blank" onclick="event.stopPropagation()">↗ Mở toàn màn hình trong tab mới</a>
-      </div>
-
-      <div class="lesson-card" onclick="loadLesson('lesson_05_taskflow_start_1_1_bay_phim_space.html', this)">
-        <div class="lc-top"><span>BÀI 1.5 · M05</span><span>4 cảnh · ~00:35</span></div>
-        <div class="lc-title">Khởi động khóa học tương tác với lệnh /start 1-1 và lưu ý khi chọn lệnh gạch chéo</div>
-        <div class="lc-desc">Thực hành mở dự án mẫu TaskFlow, chọn lệnh /start-1-1 từ menu gợi ý và tránh lỗi gõ lặp thành /start-1-1-1.</div>
-        <a class="open-new-tab" href="lesson_05_taskflow_start_1_1_bay_phim_space.html" target="_blank" onclick="event.stopPropagation()">↗ Mở toàn màn hình trong tab mới</a>
-      </div>
-
-      <div class="lesson-card" onclick="loadLesson('lesson_06_giai_nen_zip_open_folder_reveal_explorer.html', this)">
-        <div class="lc-top"><span>BÀI 1.6 · M06</span><span>4 cảnh · ~00:34</span></div>
-        <div class="lc-title">Giải nén tệp .zip trước khi mở thư mục và đối chiếu tệp thật bằng Reveal in File Explorer</div>
-        <div class="lc-desc">Quy tắc Extract All tệp .zip trước khi mở trong Antigravity IDE, tránh kéo thả nhầm thư mục và kiểm tra đồng bộ 1-1.</div>
-        <a class="open-new-tab" href="lesson_06_giai_nen_zip_open_folder_reveal_explorer.html" target="_blank" onclick="event.stopPropagation()">↗ Mở toàn màn hình trong tab mới</a>
-      </div>
+    <div class="quick-lesson-pills" id="hub-quick-pills" role="navigation" aria-label="Chuyển nhanh 6 bài giảng"></div>
+    <div class="nav-right">
+      <button class="toggle-sb-btn" id="toggle-sb-btn" onclick="toggleHubSidebar()" title="Đóng/mở ngăn kéo mục lục 6 bài học">☰ Mục lục 6 bài</button>
     </div>
   </div>
+  <!-- Mặc định đóng ngăn kéo ngoài (sidebar-collapsed) để chỉ hiển thị 1 Sidebar Trái 280px duy nhất bên trong bài học, giúp khung mô phỏng rộng 1160px -->
+  <div class="main-layout sidebar-collapsed" id="hub-main-layout">
+    <aside class="curriculum-sidebar" aria-label="Danh sách chi tiết 6 bài giảng">
+      <div class="cs-header">
+        <span>Danh sách 6 bài giảng</span>
+        <span style="color:#10B981;">47 phần nhỏ</span>
+      </div>
+      <div id="hub-lesson-list"></div>
+    </aside>
+    <main class="player-stage">
+      <iframe id="lesson-iframe" src="lesson_01_chatbot_vs_agent.html" title="Khung trình chiếu bài giảng Antigravity Basic" allow="autoplay"></iframe>
+    </main>
+  </div>
+  <script src="config/brand_config.js"></script>
+  <script src="config/course_manifest.js"></script>
   <script>
-    function loadLesson(url, cardEl) {
-      document.getElementById("lesson-iframe").src = url;
-      document.querySelectorAll(".lesson-card").forEach(el => el.classList.remove("active"));
-      cardEl.classList.add("active");
+    function toggleHubSidebar() {
+      const ml = document.getElementById("hub-main-layout");
+      if (ml) ml.classList.toggle("sidebar-collapsed");
     }
+    function syncActiveLessonUi(filename) {
+      document.querySelectorAll(".lesson-card").forEach(el => {
+        el.classList.toggle("active", el.getAttribute("data-filename") === filename);
+      });
+      document.querySelectorAll(".ql-pill").forEach(el => {
+        el.classList.toggle("active", el.getAttribute("data-filename") === filename);
+      });
+    }
+    function renderHubLessons() {
+      const wrap = document.getElementById("hub-lesson-list");
+      const pillsWrap = document.getElementById("hub-quick-pills");
+      if (!wrap || !Array.isArray(window.KUDO_COURSE_MANIFEST)) return;
+      wrap.innerHTML = window.KUDO_COURSE_MANIFEST.map((ls, idx) => `
+        <div class="lesson-card ${idx === 0 ? 'active' : ''}" data-filename="${ls.filename}" onclick="loadLesson('${ls.filename}')">
+          <div class="lc-top"><span>${ls.code} · M0${idx + 1}</span><span>${ls.beats_count} phần · ${ls.duration_formatted}</span></div>
+          <div class="lc-title">${ls.title}</div>
+          <div class="lc-desc">${ls.description}</div>
+          <a class="open-new-tab" href="${ls.filename}" target="_blank" onclick="event.stopPropagation()">↗ Mở toàn màn hình</a>
+        </div>
+      `).join("");
+      if (pillsWrap) {
+        pillsWrap.innerHTML = window.KUDO_COURSE_MANIFEST.map((ls, idx) => `
+          <button class="ql-pill ${idx === 0 ? 'active' : ''}" data-filename="${ls.filename}" onclick="loadLesson('${ls.filename}')" title="${ls.code}: ${ls.title}">${ls.code}</button>
+        `).join("");
+      }
+    }
+    function loadLesson(url) {
+      document.getElementById("lesson-iframe").src = url;
+      syncActiveLessonUi(url);
+      const ml = document.getElementById("hub-main-layout");
+      if (ml && !ml.classList.contains("sidebar-collapsed")) {
+        ml.classList.add("sidebar-collapsed");
+      }
+    }
+    window.addEventListener("message", (ev) => {
+      if (ev && ev.data && ev.data.type === "KUDO_SWITCH_LESSON" && ev.data.filename) {
+        syncActiveLessonUi(ev.data.filename);
+      }
+    });
+    window.addEventListener("DOMContentLoaded", renderHubLessons);
   </script>
 </body>
 </html>

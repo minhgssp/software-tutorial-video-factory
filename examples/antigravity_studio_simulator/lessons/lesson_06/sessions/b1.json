@@ -1,0 +1,17 @@
+{
+  "id": "b1",
+  "label": "1. Giải nén tệp .zip trước khi mở",
+  "duration": 10.17,
+  "mode": "theory",
+  "pose": 1,
+  "slide": "s1",
+  "hl": [
+    "sl-c1"
+  ],
+  "focus_selectors": [
+    "#sl-c1"
+  ],
+  "caption": "Khi tải bộ học liệu hoặc thư mục dự án dạng nén <code>.zip</code> về máy tính, anh chị nhớ nhấp chuột phải chọn Extract All để giải nén thành thư mục thật trên ổ đĩa trước khi bấm Open Folder.",
+  "audio_src": "audio/lesson_06/b1.mp3",
+  "audio_duration": 9.52
+}

@@ -1,0 +1,18 @@
+{
+  "id": "b6",
+  "label": "6. Cây thư mục .agent trên IDE",
+  "duration": 16.57,
+  "mode": "sim",
+  "pose": 6,
+  "surface": "ide_rules",
+  "focus_selectors": [
+    "#ide-file-tree"
+  ],
+  "focus_pad": 8,
+  "cursor_selector": "[data-file='noi_quy_chung.md']",
+  "cursor_label": "Thư mục .agent: rules, skills, workflows",
+  "caption": "Nhìn vào cột Explorer bên trái của Antigravity IDE, bạn thấy rõ thư mục <code>.agent</code> chia thành 3 ngăn: <code>rules</code> chứa <code>noi_quy_chung.md</code>, <code>skills</code> chứa kỹ năng chuyên môn, và <code>workflows</code> chứa <code>grill-me.md</code>, <code>plan.md</code>, <code>learn.md</code>.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); currentWorkspaceTreeMode='Antigravity_Basic'; renderFileTree(); setEditorMode('wysiwyg'); openFileInEditor('noi_quy_chung.md');",
+  "audio_src": "audio/lesson_03/b6.mp3",
+  "audio_duration": 15.92
+}

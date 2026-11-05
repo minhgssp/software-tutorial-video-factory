@@ -1,0 +1,18 @@
+{
+  "id": "b6",
+  "label": "6. AI dẫn dắt bài thực hành",
+  "duration": 8.97,
+  "mode": "sim",
+  "pose": 8,
+  "surface": "ide",
+  "focus_selectors": [
+    "#ide-right-agent"
+  ],
+  "focus_pad": 6,
+  "cursor_selector": "#ide-chat-messages",
+  "cursor_label": "AI đọc kịch bản và dừng chờ bạn phản hồi",
+  "caption": "Ngay lập tức, trợ lý AI đọc tệp kịch bản trong thư mục dự án, giới thiệu bối cảnh công ty TaskFlow Inc. và dừng lại ở bước đầu tiên để chờ bạn xác nhận sẵn sàng.",
+  "onEnter": "kudoRunStart11ExecutedDemo();",
+  "audio_src": "audio/lesson_05/b6.mp3",
+  "audio_duration": 8.32
+}

@@ -1,0 +1,17 @@
+{
+  "id": "b1",
+  "label": "1. Ba tình huống AI dừng/chờ",
+  "duration": 11.21,
+  "mode": "theory",
+  "pose": 1,
+  "slide": "s1",
+  "hl": [
+    "sl-c1"
+  ],
+  "focus_selectors": [
+    "#sl-c1"
+  ],
+  "caption": "Trong buổi đầu thực hành, nếu thấy AI dừng lại hoặc chạy chưa đúng ý, anh chị chỉ cần nhớ 3 thao tác: bấm nút <code>■ Stop</code> để dừng, gõ <code>Tiếp tục</code> nếu AI ngắt quãng, hoặc bấm <code>Accept</code> khi AI xin phép chạy lệnh.",
+  "audio_src": "audio/lesson_04/b1.mp3",
+  "audio_duration": 10.56
+}

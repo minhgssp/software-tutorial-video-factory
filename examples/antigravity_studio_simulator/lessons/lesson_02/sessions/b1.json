@@ -1,0 +1,17 @@
+{
+  "id": "b1",
+  "label": "1. Quy tắc Open Folder",
+  "duration": 9.85,
+  "mode": "theory",
+  "pose": 1,
+  "slide": "s1",
+  "hl": [
+    "sl-c1"
+  ],
+  "focus_selectors": [
+    "#sl-c1"
+  ],
+  "caption": "Ở bài học thứ hai, chúng ta nắm nguyên tắc nền tảng đầu tiên: luôn chọn Open Folder để mở cả thư mục dự án, không mở từng tệp lẻ tẻ khiến trợ lý AI bị thiếu thông tin liên quan.",
+  "audio_src": "audio/lesson_02/b1.mp3",
+  "audio_duration": 9.2
+}

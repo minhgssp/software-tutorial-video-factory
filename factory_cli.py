@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Software Simulation & Tutorial Video Factory CLI (`factory_cli.py`)
+Software Simulation & Tutorial Video Factory CLI (`factory_cli.py` v2.0)
 
 Unified command-line interface for AI Agents (`Claude Code`, `Google Antigravity`, `Cursor`, `Codex`)
 to transform Screenshots, Screen Recordings, Code Repositories, or Markdown Curricula into:
-  1. Single-File Interactive HTML Software Simulators (`#laser-cursor`, `#custom-select-floating`, `VFS`, `glideLaserTo()`)
-  2. 6-Archetype Declarative 16:9 HTML Lecture Scenes (`window.__act()`)
-  3. Voice-Synced Widescreen 16:9 Tutorial & Product Demo Videos (`/kudo` + `/reelcrew` + `/fac-video`)
+  1. 5-Layer Modular Interactive HTML Courseware (`index.html`, `lesson_spec.js`, `player_engine.js`, `spotlight_cursor.js`)
+  2. Single-File Interactive HTML Software Simulators (`#laser-cursor`, `#custom-select-floating`, `VFS`, `glideLaserTo()`)
+  3. 6-Archetype Declarative 16:9 HTML Lecture Scenes (`window.__act()`)
+  4. Voice-Synced Widescreen 16:9 Tutorial & Product Demo Videos (`/kudo` + `/reelcrew` + `/fac-video`)
 
 Usage Examples:
   python factory_cli.py status
+  python factory_cli.py compile-course --course-dir examples/antigravity_studio_simulator
+  python factory_cli.py verify-course --course-dir examples/antigravity_studio_simulator
   python factory_cli.py intake-repo --repo . --out temp/blueprint.json
   python factory_cli.py intake-media --input examples/ --out temp/media_blueprint.json
   python factory_cli.py scaffold-sim --blueprint temp/blueprint.json --out temp/simulator.html
@@ -39,7 +42,9 @@ if str(ROOT_DIR) not in sys.path:
 from core_engine import (  # noqa: E402
     analyze_screenshots,
     audit_html_simulator,
+    audit_modular_courseware,
     audit_video_spec_rules,
+    compile_modular_courseware,
     compile_spec_to_pages,
     extract_video_keyframes,
     generate_simulator_scaffold,
@@ -48,20 +53,25 @@ from core_engine import (  # noqa: E402
 
 
 def cmd_status() -> int:
+    sim_dir = ROOT_DIR / "examples" / "antigravity_studio_simulator"
     status = {
-        "factory": "Software Simulation & Tutorial Video Factory v1.0.0",
+        "factory": "Software Simulation & Tutorial Video Factory v2.0.0 (5-Layer Modular Courseware & 16:9 Video Engine)",
         "root_dir": str(ROOT_DIR),
         "embedded_engines": {
+            "course_compiler_5layer": (ROOT_DIR / "core_engine" / "course_compiler.py").exists(),
             "kudo_screencast_16x9": (ROOT_DIR / "core_engine" / "kcast_engine" / "widescreen_16x9.py").exists(),
             "kudo_kcast_core": (ROOT_DIR / "core_engine" / "kcast_engine" / "kcast" / "plan.py").exists(),
             "scene_builder_6_archetypes": (ROOT_DIR / "core_engine" / "scene_builder.py").exists(),
             "intake_extractor_repo_and_media": (ROOT_DIR / "core_engine" / "intake_extractor.py").exists(),
             "fac_video_syncgate_and_foley": (ROOT_DIR / "core_engine" / "syncgate_and_foley.py").exists(),
         },
+        "documentation": {
+            "spec_v2_5layer": (ROOT_DIR / "docs" / "SPEC_V2_5LAYER_COURSEWARE_ENGINE.md").exists(),
+            "codemap_v2": (ROOT_DIR / "docs" / "CODEMAP.md").exists(),
+        },
         "examples": {
-            "antigravity_studio_simulator": (
-                ROOT_DIR / "examples" / "antigravity_studio_simulator" / "Antigravity_Simulator_Studio.html"
-            ).exists(),
+            "antigravity_5layer_courseware_hub": (sim_dir / "index.html").exists(),
+            "antigravity_studio_simulator": (sim_dir / "Antigravity_Simulator_Studio.html").exists(),
             "hanam_16x9_course_specs": sorted(
                 p.name for p in (ROOT_DIR / "examples" / "hanam_16x9_course" / "specs").glob("*.json")
             )
@@ -75,12 +85,24 @@ def cmd_status() -> int:
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Software Simulation & Tutorial Video Factory CLI",
+        description="Software Simulation & Tutorial Video Factory CLI v2.0",
         formatter_class=argparse.RawTextHelpFormatter,
     )
     sub = parser.add_subparsers(dest="subcommand")
 
-    sub.add_parser("status", help="Show factory readiness and embedded engine status")
+    sub.add_parser("status", help="Show factory readiness, docs, and embedded engine status")
+
+    p_comp = sub.add_parser(
+        "compile-course",
+        help="Compile 5-layer modular courseware (lessons/lesson_XX/sessions/*.json & slides/*.html -> lesson_spec.js & course_manifest.js)",
+    )
+    p_comp.add_argument("--course-dir", required=True, help="Path to 5-layer courseware root directory")
+
+    p_ver = sub.add_parser(
+        "verify-course",
+        help="Mechanically audit a 5-layer courseware package (5 layers, slide/audio links, zero audition pollution)",
+    )
+    p_ver.add_argument("--course-dir", required=True, help="Path to 5-layer courseware root directory")
 
     p_repo = sub.add_parser("intake-repo", help="Scan a code repository and output a VFS simulator blueprint.json")
     p_repo.add_argument("--repo", required=True, help="Path to target code repository")
@@ -112,6 +134,16 @@ def main() -> int:
     args = parser.parse_args()
     if not args.subcommand or args.subcommand == "status":
         return cmd_status()
+
+    if args.subcommand == "compile-course":
+        res = compile_modular_courseware(args.course_dir)
+        print(json.dumps(res, ensure_ascii=False, indent=2))
+        return 0
+
+    if args.subcommand == "verify-course":
+        res = audit_modular_courseware(args.course_dir)
+        print(json.dumps(res, ensure_ascii=False, indent=2))
+        return 0 if res["passed"] else 1
 
     if args.subcommand == "intake-repo":
         bp = harvest_code_repository(args.repo, project_name=args.name)

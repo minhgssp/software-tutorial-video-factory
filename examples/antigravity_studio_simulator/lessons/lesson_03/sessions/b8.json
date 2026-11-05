@@ -1,0 +1,19 @@
+{
+  "id": "b8",
+  "label": "8. Đúc kết quy tắc bằng /learn",
+  "duration": 10.97,
+  "mode": "sim",
+  "pose": 8,
+  "surface": "ide_learn",
+  "focus_selectors": [
+    "#editor-canvas",
+    "#ide-right-agent"
+  ],
+  "focus_pad": 6,
+  "cursor_selector": "#kudo-learned-rule-block",
+  "cursor_label": "Mục số 4 vừa được thêm vào noi_quy_chung.md",
+  "caption": "Sau khi tinh chỉnh báo cáo đúng ý, bạn chỉ cần gõ lệnh <code>/learn</code>. Trợ lý AI lập tức cập nhật thêm mục quy tắc xuất bảng tính CSV mới vào thẳng tệp <code>noi_quy_chung.md</code> ở cột giữa.",
+  "onEnter": "kudoRunLearnDemo();",
+  "audio_src": "audio/lesson_03/b8.mp3",
+  "audio_duration": 10.32
+}

@@ -1,0 +1,19 @@
+{
+  "id": "b11",
+  "label": "11. Bôi đen và nhấn Ctrl + L",
+  "duration": 10.97,
+  "mode": "sim",
+  "pose": 8,
+  "surface": "mgr_quote",
+  "focus_selectors": [
+    "#kudo-quote-highlight",
+    "#agy2-quote-btn"
+  ],
+  "focus_pad": 10,
+  "cursor_selector": "#agy2-quote-btn",
+  "cursor_label": "Bấm Quote in Chat (Ctrl + L)",
+  "caption": "Thực hành bước 5: Khi đọc tài liệu ở khung bên phải, chỗ nào cần sửa bạn chỉ cần bôi đen đoạn văn đó rồi bấm nút Quote in Chat hoặc nhấn <kbd>Ctrl + L</kbd> để trích dẫn thẳng nội dung kèm số dòng vào ô nhập lệnh.",
+  "onEnter": "document.getElementById('mgr-voice-bar').classList.remove('active'); kudoShowKeyHud('💬 Trích dẫn đoạn bôi đen: <kbd>Ctrl + L</kbd>'); kudoActivateQuoteDemo();",
+  "audio_src": "audio/lesson_02/b11.mp3",
+  "audio_duration": 10.32
+}

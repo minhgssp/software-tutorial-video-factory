@@ -1,0 +1,17 @@
+{
+  "id": "b2",
+  "label": "2. Trợ lý làm việc trong thư mục",
+  "duration": 10.97,
+  "mode": "theory",
+  "pose": 2,
+  "slide": "s1",
+  "hl": [
+    "sl-c2"
+  ],
+  "focus_selectors": [
+    "#sl-c2"
+  ],
+  "caption": "Ngược lại, Antigravity kết nối trợ lý AI trực tiếp vào thư mục dự án trên máy tính. Trợ lý nhìn thấy toàn bộ tài liệu liên quan, tự mở tệp, tổng hợp nội dung và lưu thành phẩm ngay vào ổ cứng cho bạn.",
+  "audio_src": "audio/lesson_01/b2.mp3",
+  "audio_duration": 10.32
+}

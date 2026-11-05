@@ -1,0 +1,18 @@
+{
+  "lesson_slug": "lesson_01",
+  "filename": "lesson_01_intro.html",
+  "code": "BÀI 1.1",
+  "title": "Tiêu đề bài giảng mẫu (Kết hợp Slide Lý thuyết & Thực hành Phần mềm)",
+  "short_title": "1.1 · Tiêu đề rút gọn hiển thị trên Sidebar",
+  "description": "Mô tả ngắn gọn mục tiêu học tập và các thao tác thực hành chính trong bài học.",
+  "slide_ids": [
+    "s1"
+  ],
+  "session_order": [
+    "b1",
+    "b2"
+  ],
+  "beats_count": 2,
+  "total_duration_sec": 24.0,
+  "duration_formatted": "00:24"
+}

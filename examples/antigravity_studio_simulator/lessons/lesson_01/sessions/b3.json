@@ -1,0 +1,17 @@
+{
+  "id": "b3",
+  "label": "3. Lưu quy trình trên ổ cứng",
+  "duration": 9.13,
+  "mode": "theory",
+  "pose": 3,
+  "slide": "s1",
+  "hl": [
+    "sl-c3"
+  ],
+  "focus_selectors": [
+    "#sl-c3"
+  ],
+  "caption": "Nhờ làm việc trực tiếp trên máy tính, mọi quy tắc và hướng dẫn công việc đều được lưu thành tệp <code>.md</code> và <code>.csv</code> trong thư mục dự án để tái sử dụng lâu dài.",
+  "audio_src": "audio/lesson_01/b3.mp3",
+  "audio_duration": 8.48
+}

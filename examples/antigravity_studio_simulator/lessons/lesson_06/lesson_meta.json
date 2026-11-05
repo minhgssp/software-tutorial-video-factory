@@ -1,0 +1,22 @@
+{
+  "lesson_slug": "lesson_06",
+  "filename": "lesson_06_giai_nen_zip_open_folder_reveal_explorer.html",
+  "code": "BÀI 2.3",
+  "title": "Giải nén tệp .zip trước khi mở thư mục và đối chiếu tệp thật bằng Reveal in File Explorer",
+  "short_title": "2.3 · Giải nén .zip & Reveal in File Explorer",
+  "description": "Quy tắc Extract All tệp .zip, mở thư mục đã giải nén, bấm Cancel khi kéo thả nhầm thư mục và kiểm chứng đồng bộ 1-1 bằng Reveal in File Explorer.",
+  "slide_ids": [
+    "s1"
+  ],
+  "session_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "b6"
+  ],
+  "beats_count": 6,
+  "total_duration_sec": 64.1,
+  "duration_formatted": "01:04"
+}

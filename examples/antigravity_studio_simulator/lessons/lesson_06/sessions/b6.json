@@ -1,0 +1,19 @@
+{
+  "id": "b6",
+  "label": "6. Xem tệp INDEX.md của khóa học",
+  "duration": 10.41,
+  "mode": "sim",
+  "pose": 7,
+  "surface": "ide",
+  "focus_selectors": [
+    "#ide-left-sidebar",
+    "#editor-canvas"
+  ],
+  "focus_pad": 6,
+  "cursor_selector": "[data-file='INDEX.md']",
+  "cursor_label": "Cây thư mục và tệp INDEX.md sẵn sàng",
+  "caption": "Khi mở đúng thư mục đã giải nén, toàn bộ học phần từ Module 0 đến Module 6 và bản đồ học tập <code>INDEX.md</code> hiển thị đầy đủ ở cột giữa để bạn và trợ lý AI bắt đầu làm việc.",
+  "onEnter": "kudoHidePopovers(); closeMoveWarnModal(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); currentWorkspaceTreeMode='antigravity_course_vn'; renderFileTree(); setEditorMode('wysiwyg'); openFileInEditor('INDEX.md');",
+  "audio_src": "audio/lesson_06/b6.mp3",
+  "audio_duration": 9.76
+}

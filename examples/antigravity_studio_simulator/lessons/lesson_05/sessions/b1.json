@@ -1,0 +1,17 @@
+{
+  "id": "b1",
+  "label": "1. Bối cảnh dự án TaskFlow",
+  "duration": 13.13,
+  "mode": "theory",
+  "pose": 1,
+  "slide": "s1",
+  "hl": [
+    "sl-c1"
+  ],
+  "focus_selectors": [
+    "#sl-c1"
+  ],
+  "caption": "Để giúp anh chị thực hành sát thực tế ngay từ buổi đầu, giáo trình đi kèm bộ hồ sơ công ty giả lập TaskFlow Inc. gồm 45 nhân sự. Bạn chỉ cần chạy lệnh <code>/start-1-1</code> để bắt đầu bài thực hành có hướng dẫn từng bước.",
+  "audio_src": "audio/lesson_05/b1.mp3",
+  "audio_duration": 12.48
+}

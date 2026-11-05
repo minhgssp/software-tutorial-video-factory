@@ -1,0 +1,17 @@
+{
+  "id": "b2",
+  "label": "2. Ưu thế của Markdown và CSV",
+  "duration": 10.89,
+  "mode": "theory",
+  "pose": 2,
+  "slide": "s1",
+  "hl": [
+    "sl-c2"
+  ],
+  "focus_selectors": [
+    "#sl-c2"
+  ],
+  "caption": "Quy tắc thứ hai là ưu tiên lưu tài liệu hướng dẫn dưới dạng Markdown <code>.md</code> và bảng dữ liệu nguồn dưới dạng <code>.csv</code>. Đây là hai định dạng văn bản gọn nhẹ giúp AI đọc và xử lý nhanh.",
+  "audio_src": "audio/lesson_02/b2.mp3",
+  "audio_duration": 10.24
+}

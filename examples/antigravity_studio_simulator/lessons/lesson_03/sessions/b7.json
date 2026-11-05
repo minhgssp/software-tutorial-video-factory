@@ -1,0 +1,18 @@
+{
+  "id": "b7",
+  "label": "7. Chạy /grill-me và /plan",
+  "duration": 11.21,
+  "mode": "sim",
+  "pose": 7,
+  "surface": "ide_grill_plan",
+  "focus_selectors": [
+    "#ide-right-agent"
+  ],
+  "focus_pad": 6,
+  "cursor_selector": "#ide-chat-input",
+  "cursor_label": "Gõ /grill-me -> trả lời 3 câu hỏi -> /plan",
+  "caption": "Ở khung chat bên phải, khi gõ lệnh <code>/grill-me</code> để lập kế hoạch sản phẩm mới, AI hỏi lại 3 câu hỏi cốt lõi về phân khúc giá, nguồn nguyên liệu và kênh phân phối trước khi nhận lệnh <code>/plan</code>.",
+  "onEnter": "kudoRunGrillAndPlanDemo();",
+  "audio_src": "audio/lesson_03/b7.mp3",
+  "audio_duration": 10.56
+}

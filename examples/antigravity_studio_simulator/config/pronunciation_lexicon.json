@@ -1,0 +1,18 @@
+{
+  "version": "2026-11-05-v2",
+  "policy": "KEEP_RAW_ENGLISH_DEFAULT (PROP-261105-02)",
+  "default_keep_raw_english": true,
+  "dot_extension_rule": {
+    "pattern": "(?<![\\d\\.])\\.([a-zA-Z][a-zA-Z0-9_-]{0,15})\\b",
+    "replacement": " Chấm \\1",
+    "examples": {
+      ".zip": "Chấm zip",
+      ".md": "Chấm md",
+      ".csv": "Chấm csv",
+      ".html": "Chấm html",
+      ".agent": "Chấm agent"
+    }
+  },
+  "custom_overrides": {},
+  "note": "Toàn bộ 56 từ tiếng Anh giữ nguyên bản gốc để sea_g2p (VieNeu-TTS v3 Turbo) tự đọc phát âm chuẩn; riêng các cụm đuôi file/thư mục có dấu chấm (.zip, .md, .csv, .html, .agent) tự động đổi dấu '.' thành chữ 'Chấm'."
+}

@@ -1,0 +1,18 @@
+{
+  "id": "b10",
+  "label": "10. Giao việc giọng nói Ctrl + M",
+  "duration": 10.97,
+  "mode": "sim",
+  "pose": 7,
+  "surface": "mgr_voice",
+  "focus_selectors": [
+    "#agy2-input-card-box"
+  ],
+  "focus_pad": 8,
+  "cursor_selector": "#agy2-mic-btn",
+  "cursor_label": "Bấm biểu tượng Micro (Ctrl + M)",
+  "caption": "Thực hành bước 4: Mở một cuộc hội thoại mới, bạn bấm vào biểu tượng chiếc Micro hoặc nhấn <kbd>Ctrl + M</kbd> để đọc yêu cầu phân tích tệp <code>@sales_data.csv</code> bằng tiếng Việt.",
+  "onEnter": "kudoHidePopovers(); closeSettingsModal(); switchToSurface('mgr'); resetAgy2NewConv(); kudoShowKeyHud('🎙️ Nhập liệu bằng giọng nói: <kbd>Ctrl + M</kbd>'); document.getElementById('mgr-voice-bar').classList.add('active'); document.getElementById('agy2-chat-input').value = 'Đọc @sales_data.csv và @troly.md rồi lập báo cáo doanh thu Quý 1 kèm đề xuất cắt giảm 2 sản phẩm lỗ.';",
+  "audio_src": "audio/lesson_02/b10.mp3",
+  "audio_duration": 10.32
+}

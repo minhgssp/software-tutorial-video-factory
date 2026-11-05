@@ -1,0 +1,19 @@
+{
+  "id": "b9",
+  "label": "9. Cột trái và cột giữa IDE",
+  "duration": 12.41,
+  "mode": "sim",
+  "pose": 5,
+  "surface": "ide",
+  "focus_selectors": [
+    "#ide-left-sidebar",
+    "#editor-canvas"
+  ],
+  "focus_pad": 6,
+  "cursor_selector": "[data-file='0.1_Introduction.md']",
+  "cursor_label": "Cột trái: Cây thư mục · Cột giữa: Xem tài liệu",
+  "caption": "Cửa sổ phần mềm Antigravity IDE lập tức mở ra với đúng thư mục dự án đó: cột bên trái hiển thị toàn bộ cây thư mục trên ổ cứng, còn cột ở giữa hiển thị trực quan nội dung tài liệu <code>0.1_Introduction.md</code>.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); currentWorkspaceTreeMode='Antigravity_Basic'; renderFileTree(); setEditorMode('wysiwyg'); openFileInEditor('0.1_Introduction.md');",
+  "audio_src": "audio/lesson_01/b9.mp3",
+  "audio_duration": 11.76
+}

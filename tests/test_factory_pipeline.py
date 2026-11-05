@@ -1,19 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Comprehensive Automated Test Suite for Software Simulation & Tutorial Video Factory (`tests/test_factory_pipeline.py`)
+Comprehensive Automated Test Suite for Software Simulation & Tutorial Video Factory (`tests/test_factory_pipeline.py` v2.0)
 
-Tests all 4 Core Engines + CLI + Real Production Assets from both Courses:
-  1. `intake_extractor`: Repository VFS harvesting, screenshot dimension parsing, and Single-File HTML Simulator scaffolding.
-  2. `scene_builder`: Compiling declarative 16:9 JSON specs (`B01_SaiLamThuongGap.json`) into standalone HTML scenes with `window.__act`.
-  3. `kcast_engine`: `/kudo` screencast planning, phrase finding (`find_phrase`), `paragraph_captions`, and `-8dB` speech-ducked SFX (`sfx_cues_around_speech`).
-  4. `syncgate_and_foley`: `/fac-video` Semantic SyncGate, Knuth-Plass Vietnamese compound-word line balancing, 48kHz Foley WAV synthesis, 5-Hz viseme extraction, `/reelcrew` 100-point Rubric, and HTML Simulator DOM Auditor (`#laser-cursor`, zero native `<select>`, `node --check`, zero context contamination).
+Tests all 5 Core Engines + CLI + Documentation (Spec & CodeMap) + Real Production Assets from both Courses:
+  1. `course_compiler`: 5-Layer Modular Interactive Courseware compilation (`LessonSpecCompiler`, `CourseManifestBuilder`), `CourseIntegrityAuditor`, and Zero Audition Scope Pollution check (`PROP-261105-03`).
+  2. `intake_extractor`: Repository VFS harvesting, screenshot dimension parsing, and Single-File HTML Simulator scaffolding.
+  3. `scene_builder`: Compiling declarative 16:9 JSON specs (`B01_SaiLamThuongGap.json`) into standalone HTML scenes with `window.__act`.
+  4. `kcast_engine`: `/kudo` screencast planning, phrase finding (`find_phrase`), `paragraph_captions`, and `-8dB` speech-ducked SFX (`sfx_cues_around_speech`).
+  5. `syncgate_and_foley`: `/fac-video` Semantic SyncGate, Knuth-Plass Vietnamese compound-word line balancing, 48kHz Foley WAV synthesis, 5-Hz viseme extraction, `/reelcrew` 100-point Rubric, and HTML Simulator DOM Auditor (`#laser-cursor`, zero native `<select>`, `node --check`, zero context contamination).
 """
 
 from __future__ import annotations
 
-import json
-import subprocess
 import sys
 from pathlib import Path
 
@@ -22,14 +21,15 @@ if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
 from core_engine import (  # noqa: E402
-    ReelCrewRubricAuditor,
-    analyze_screenshots,
+    CourseIntegrityAuditor,
+    CourseManifestBuilder,
+    LessonSpecCompiler,
     audit_html_simulator,
+    audit_modular_courseware,
     audit_video_spec_rules,
     balance_vietnamese_lines,
-    build_shot_html,
+    compile_modular_courseware,
     compile_spec_to_pages,
-    evaluate_semantic_syncgate,
     extract_5hz_visemes_from_wav,
     generate_simulator_scaffold,
     harvest_code_repository,
@@ -40,6 +40,61 @@ from core_engine.kcast_engine import (  # noqa: E402
     paragraph_captions,
     sfx_cues_around_speech,
 )
+
+
+def _get_courseware_dir() -> Path:
+    candidates = [
+        ROOT_DIR / "examples" / "antigravity_studio_simulator",
+        ROOT_DIR / "simulators" / "antigravity_basic",
+    ]
+    found = next((p for p in candidates if p.exists()), None)
+    assert found is not None, "5-layer courseware directory must exist in examples/ or simulators/"
+    return found
+
+
+def test_5layer_course_compiler_and_manifest() -> None:
+    """Verify 5-Layer LessonSpecCompiler and CourseManifestBuilder compile all 6 lessons (47 micro-beats)."""
+    cdir = _get_courseware_dir()
+    lesson_01_res = LessonSpecCompiler().compile_lesson(cdir / "lessons" / "lesson_01")
+    assert lesson_01_res["lesson_slug"] == "lesson_01"
+    assert lesson_01_res["slides_count"] == 2
+    assert lesson_01_res["beats_count"] == 10
+    assert Path(lesson_01_res["lesson_spec_js"]).exists()
+
+    course_res = compile_modular_courseware(cdir)
+    assert course_res["status"] == "ok"
+    assert course_res["lessons_compiled"] == 6
+    assert course_res["total_beats"] == 47
+    assert course_res["total_duration_sec"] > 500.0
+    assert Path(course_res["manifest_js"]).exists()
+
+
+def test_5layer_course_integrity_and_zero_audition_pollution() -> None:
+    """Verify CourseIntegrityAuditor passes with 0 errors and confirms zero audition file leakage."""
+    cdir = _get_courseware_dir()
+    audit_res = audit_modular_courseware(cdir)
+    assert audit_res["passed"] is True, f"5-layer course integrity failed: {audit_res['errors']}"
+    assert audit_res["status"] == "PASS"
+    assert audit_res["lessons_checked"] == 6
+    assert audit_res["beats_checked"] == 47
+    assert len(audit_res["errors"]) == 0
+    assert len(audit_res["warnings"]) == 0
+
+    # Ensure zero audition files exist anywhere in the repository/lab root
+    audition_hits = [p for p in ROOT_DIR.rglob("*") if "audition" in p.name.lower()]
+    assert len(audition_hits) == 0, f"Forbidden audition artifacts found: {audition_hits}"
+
+
+def test_spec_and_codemap_documentation_present() -> None:
+    """Verify comprehensive Specification and CodeMap documentation exist."""
+    if (ROOT_DIR / "docs").exists():
+        spec_doc = ROOT_DIR / "docs" / "SPEC_V2_5LAYER_COURSEWARE_ENGINE.md"
+        codemap_doc = ROOT_DIR / "docs" / "CODEMAP.md"
+        assert spec_doc.exists() and spec_doc.stat().st_size > 4000
+        assert codemap_doc.exists() and codemap_doc.stat().st_size > 4000
+    elif (ROOT_DIR / "specs").exists():
+        codemap_spec = ROOT_DIR / "specs" / "06_5Layer_Modular_Courseware_And_Codemap.md"
+        assert codemap_spec.exists() and codemap_spec.stat().st_size > 4000
 
 
 def test_repo_harvest_and_simulator_scaffold(tmp_path: Path) -> None:
@@ -60,12 +115,9 @@ def test_repo_harvest_and_simulator_scaffold(tmp_path: Path) -> None:
 
 def test_antigravity_studio_simulator_passes_audit() -> None:
     """Verify the flagship 4,355-line Antigravity_Simulator_Studio.html passes 100% of DOM & JS checks."""
-    candidates = [
-        ROOT_DIR / "examples" / "antigravity_studio_simulator" / "Antigravity_Simulator_Studio.html",
-        ROOT_DIR / "simulators" / "antigravity_basic" / "Antigravity_Simulator_Studio.html",
-    ]
-    sim_path = next((p for p in candidates if p.exists()), None)
-    assert sim_path is not None, "Antigravity_Simulator_Studio.html must exist in examples/ or simulators/"
+    cdir = _get_courseware_dir()
+    sim_path = cdir / "Antigravity_Simulator_Studio.html"
+    assert sim_path.exists(), "Antigravity_Simulator_Studio.html must exist"
 
     res = audit_html_simulator(
         sim_path,

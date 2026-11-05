@@ -1,0 +1,19 @@
+{
+  "id": "b7",
+  "label": "7. Xem bảng CSV bằng Office Viewer",
+  "duration": 10.33,
+  "mode": "sim",
+  "pose": 6,
+  "surface": "ide_md_csv",
+  "focus_selectors": [
+    "#office-toolbar",
+    "#editor-canvas .wysiwyg-doc"
+  ],
+  "focus_pad": 8,
+  "cursor_selector": "#pill-wysiwyg",
+  "cursor_label": "Xem và sửa trực tiếp bảng sales_data.csv",
+  "caption": "Thực hành bước 2: Khi bấm vào tệp <code>sales_data.csv</code>, nhờ tiện ích Office Viewer ở cột giữa, dữ liệu hiển thị thành bảng kẻ ô rõ ràng để bạn bấm chuột kiểm tra và sửa số liệu.",
+  "onEnter": "kudoHidePopovers(); closeWinFolderDialog(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); currentWorkspaceTreeMode='Antigravity_Basic'; renderFileTree(); setEditorMode('wysiwyg'); openFileInEditor('sales_data.csv');",
+  "audio_src": "audio/lesson_02/b7.mp3",
+  "audio_duration": 9.68
+}

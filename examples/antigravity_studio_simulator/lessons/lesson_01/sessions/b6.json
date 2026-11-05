@@ -1,0 +1,19 @@
+{
+  "id": "b6",
+  "label": "6. Cách chọn mô hình theo việc",
+  "duration": 16.22,
+  "mode": "theory",
+  "pose": 6,
+  "slide": "s2",
+  "hl": [
+    "s2-c3",
+    "s2-c4"
+  ],
+  "focus_selectors": [
+    "#s2-c3",
+    "#s2-c4"
+  ],
+  "caption": "Khi chọn mô hình, bạn dùng <code>Gemini 3.8 Flash Medium</code> cho việc đơn giản để phản hồi nhanh và tiết kiệm hạn mức, dùng <code>Gemini 4 Argon Medium</code> cho công việc hàng ngày, và chọn <code>Claude Sonnet 5.5</code> hoặc <code>Claude Opus 5.5</code> khi cần lập kế hoạch hay phân tích bảng tính phức tạp.",
+  "audio_src": "audio/lesson_01/b6.mp3",
+  "audio_duration": 15.57
+}

@@ -1,0 +1,18 @@
+{
+  "id": "b5",
+  "label": "5. Chọn /start-1-1 và nhấn Enter",
+  "duration": 9.37,
+  "mode": "sim",
+  "pose": 7,
+  "surface": "ide",
+  "focus_selectors": [
+    "#ide-chat-box-card"
+  ],
+  "focus_pad": 8,
+  "cursor_selector": "#ide-send-btn",
+  "cursor_label": "Kiểm tra đúng /start-1-1 rồi nhấn Enter",
+  "caption": "Sau khi nhấp chuột chọn dòng <code>/start-1-1</code>, toàn bộ tên lệnh đã được điền đủ vào ô nhập liệu. Bạn không gõ thêm số <code>1-1</code> nữa mà nhấn thẳng phím <kbd>Enter</kbd> hoặc bấm nút gửi.",
+  "onEnter": "kudoSelectStartWorkflowReadyToSend();",
+  "audio_src": "audio/lesson_05/b5.mp3",
+  "audio_duration": 8.72
+}

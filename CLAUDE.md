@@ -1,12 +1,15 @@
-# CLAUDE.md — Claude Code Instructions for `software-tutorial-video-factory`
+# CLAUDE.md — Claude Code Instructions for `software-tutorial-video-factory` (v2.0)
 
-See [`AGENTS.md`](AGENTS.md) and [`.claude/skills/software-simulation-video-factory/SKILL.md`](.claude/skills/software-simulation-video-factory/SKILL.md) for the complete operational workflow.
+Please read [`AGENTS.md`](AGENTS.md), [`docs/CODEMAP.md`](docs/CODEMAP.md), [`docs/SPEC_V2_5LAYER_COURSEWARE_ENGINE.md`](docs/SPEC_V2_5LAYER_COURSEWARE_ENGINE.md), and [`.claude/skills/software-simulation-video-factory/SKILL.md`](.claude/skills/software-simulation-video-factory/SKILL.md) before modifying or generating any courseware, simulator, or video specification.
 
-## Essential Commands
-- **Check Factory Status:** `python factory_cli.py status`
-- **Harvest a Code Repo into a VFS Blueprint:** `python factory_cli.py intake-repo --repo <path> --out temp/blueprint.json`
-- **Scaffold an Interactive Single-File HTML Simulator:** `python factory_cli.py scaffold-sim --blueprint temp/blueprint.json --out temp/simulator.html`
-- **Compile 16:9 HTML Scenes from JSON Spec:** `python factory_cli.py build-pages --spec <spec.json> --out-dir temp/pages`
-- **Audit HTML Simulator (DOM + Laser + Zero Native Select + `node --check`):** `python factory_cli.py audit-sim --html <file.html>`
-- **Audit 16:9 Video Spec (SyncGate + TTS Rules + ReelCrew Rubric):** `python factory_cli.py audit-spec --spec <spec.json>`
-- **Run Full Test Suite:** `pytest tests/ -v`
+## Quick Commands
+- `python factory_cli.py status`
+- `python factory_cli.py compile-course --course-dir examples/antigravity_studio_simulator`
+- `python factory_cli.py verify-course --course-dir examples/antigravity_studio_simulator`
+- `python factory_cli.py intake-repo --repo <dir> --out temp/blueprint.json`
+- `python factory_cli.py intake-media --input <video_or_img_dir> --out temp/media.json`
+- `python factory_cli.py scaffold-sim --blueprint temp/blueprint.json --out temp/simulator.html`
+- `python factory_cli.py build-pages --spec examples/hanam_16x9_course/specs/B01_SaiLamThuongGap.json --out-dir temp/pages`
+- `python factory_cli.py audit-sim --html examples/antigravity_studio_simulator/Antigravity_Simulator_Studio.html --forbid Viettel,BIDV`
+- `python factory_cli.py audit-spec --spec examples/hanam_16x9_course/specs/B01_SaiLamThuongGap.json --whitelabel`
+- `pytest tests/ -v`

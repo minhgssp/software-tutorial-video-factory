@@ -1,0 +1,16 @@
+window.KUDO_BRAND_CONFIG = {
+  "course_name": "Antigravity Basic",
+  "course_subtitle": "Hệ thống bài giảng mô phỏng tương tác & thuyết minh VieNeu-TTS 48kHz",
+  "logo_text": "A",
+  "logo_image_url": "",
+  "organization": "HoctapTech Academy",
+  "instructor": "Hoàng Đức Minh",
+  "voice_model": "VieNeu-TTS v3 Turbo 48kHz (Minh Quân Pro)",
+  "theme": {
+    "sidebar_width_px": 280,
+    "primary_color": "#CB4B16",
+    "accent_color": "#F59E0B",
+    "bg_dark": "#0B0F19",
+    "sidebar_bg": "#111827"
+  }
+};

@@ -1,0 +1,19 @@
+{
+  "id": "b5",
+  "label": "5. Chuyển sang Preview / Office Viewer",
+  "duration": 11.61,
+  "mode": "sim",
+  "pose": 6,
+  "surface": "ide",
+  "focus_selectors": [
+    "#ide-tabs-bar",
+    "#office-toolbar"
+  ],
+  "focus_pad": 8,
+  "cursor_selector": "#pill-wysiwyg",
+  "cursor_label": "Bấm 👁️ Preview / Office Viewer",
+  "caption": "Nếu thấy tệp <code>0.1_Introduction.md</code> hiển thị nhiều ký hiệu dấu thăng ở chế độ Raw, bạn nhìn lên thanh tiêu đề cột giữa và bấm vào nút <code>👁️ Preview / Office Viewer</code> để đọc trình bày trực quan.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); setEditorMode('wysiwyg'); openFileInEditor('0.1_Introduction.md');",
+  "audio_src": "audio/lesson_04/b5.mp3",
+  "audio_duration": 10.96
+}

@@ -1,0 +1,17 @@
+{
+  "id": "b3",
+  "label": "3. Tiện ích Office Viewer",
+  "duration": 11.05,
+  "mode": "theory",
+  "pose": 3,
+  "slide": "s1",
+  "hl": [
+    "sl-c3"
+  ],
+  "focus_selectors": [
+    "#sl-c3"
+  ],
+  "caption": "Để người làm văn phòng dễ quan sát, bạn cài đặt tiện ích Office Viewer trong Antigravity IDE để xem tệp <code>.md</code> và <code>.csv</code> dưới dạng văn bản và bảng kẻ ô trực quan.",
+  "audio_src": "audio/lesson_02/b3.mp3",
+  "audio_duration": 10.4
+}

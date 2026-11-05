@@ -1,0 +1,19 @@
+{
+  "id": "b4",
+  "label": "4. Gõ /start bật bảng gợi ý",
+  "duration": 8.57,
+  "mode": "sim",
+  "pose": 6,
+  "surface": "ide",
+  "focus_selectors": [
+    "#ide-chat-box-card",
+    "#ide-popup-menu"
+  ],
+  "focus_pad": 8,
+  "cursor_selector": "#ide-popup-menu .popup-item[data-cmd='/start-1-1']",
+  "cursor_label": "Bảng gợi ý hiện /start-1-1",
+  "caption": "Tiếp theo, tại ô nhập lệnh bên phải, khi bạn vừa gõ <code>/start</code>, phần mềm sẽ tự động bật bảng gợi ý phía trên hiển thị quy trình <code>/start-1-1</code>.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); currentWorkspaceTreeMode='antigravity_course_vn'; renderFileTree(); openFileInEditor('1.1_Welcome.md'); kudoOpenStartWorkflowPopup();",
+  "audio_src": "audio/lesson_05/b4.mp3",
+  "audio_duration": 7.92
+}

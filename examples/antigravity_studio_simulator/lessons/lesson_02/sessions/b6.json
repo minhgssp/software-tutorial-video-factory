@@ -1,0 +1,18 @@
+{
+  "id": "b6",
+  "label": "6. Thao tác Open Folder",
+  "duration": 12.01,
+  "mode": "sim",
+  "pose": 2,
+  "surface": "ide_welcome",
+  "focus_selectors": [
+    "#win-open-folder-modal .win-dialog"
+  ],
+  "focus_pad": 8,
+  "cursor_selector": "#win-btn-select-folder",
+  "cursor_label": "Chọn thư mục antigravity_course_vn -> Select folder",
+  "caption": "Thực hành bước 1: Từ màn hình bắt đầu của Antigravity IDE, bạn bấm nút Open Folder, chọn thư mục <code>antigravity_course_vn</code> trên máy tính rồi nhấn nút Select folder để mở toàn bộ dự án.",
+  "onEnter": "kudoHidePopovers(); showIdeWelcomeScreen(); openWinFolderDialog(); selectWinFolder('antigravity_course_vn', document.getElementById('win-folder-row-agy'));",
+  "audio_src": "audio/lesson_02/b6.mp3",
+  "audio_duration": 11.36
+}

@@ -1,0 +1,17 @@
+{
+  "id": "b4",
+  "label": "4. Lệnh /grill-me hỏi ngược",
+  "duration": 8.89,
+  "mode": "theory",
+  "pose": 4,
+  "slide": "s2",
+  "hl": [
+    "s2-c1"
+  ],
+  "focus_selectors": [
+    "#s2-c1"
+  ],
+  "caption": "Khi giao các đầu việc lớn, bạn đừng để AI tự đoán mò. Hãy bắt đầu bằng lệnh <code>/grill-me</code> để yêu cầu AI đặt câu hỏi làm rõ hết các thông tin còn thiếu.",
+  "audio_src": "audio/lesson_03/b4.mp3",
+  "audio_duration": 8.24
+}

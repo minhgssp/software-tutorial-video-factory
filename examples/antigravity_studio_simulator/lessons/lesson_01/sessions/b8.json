@@ -1,0 +1,18 @@
+{
+  "id": "b8",
+  "label": "8. Bấm nút Open IDE",
+  "duration": 10.09,
+  "mode": "sim",
+  "pose": 7,
+  "surface": "mgr",
+  "focus_selectors": [
+    "#agy2-open-ide-btn"
+  ],
+  "focus_pad": 8,
+  "cursor_selector": "#agy2-open-ide-btn",
+  "cursor_label": "Bấm Open IDE để mở cửa sổ 3 cột",
+  "caption": "Từ giao diện Antigravity 2.0, bất cứ khi nào muốn kiểm tra cây thư mục hoặc chỉnh sửa chi tiết tài liệu, bạn chỉ cần bấm vào nút <code>Open IDE</code> ở góc trên bên phải màn hình.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); closeSettingsModal(); loadAgy2Thread('main'); openAgy2RightPane('0.1_Introduction.md');",
+  "audio_src": "audio/lesson_01/b8.mp3",
+  "audio_duration": 9.44
+}

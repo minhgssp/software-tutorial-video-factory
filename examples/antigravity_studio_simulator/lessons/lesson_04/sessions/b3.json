@@ -1,0 +1,19 @@
+{
+  "id": "b3",
+  "label": "3. Thực hành Stop, Tiếp tục, Accept",
+  "duration": 11.29,
+  "mode": "sim",
+  "pose": 4,
+  "surface": "ide",
+  "focus_selectors": [
+    "#ide-chat-messages",
+    "#ide-chat-box-card"
+  ],
+  "focus_pad": 6,
+  "cursor_selector": "#kudo-accept-step-btn",
+  "cursor_label": "Bấm Accept hoặc gõ 'Tiếp tục' / bấm ■ Stop",
+  "caption": "Trên giao diện Antigravity IDE, khi AI dừng lại hỏi quyền tạo tệp báo cáo, bạn bấm nút <code>Accept</code> màu xanh; nếu muốn dừng ngay thì bấm nút <code>■</code> ở góc dưới khung chat, hoặc gõ <code>Tiếp tục</code> để AI hoàn tất.",
+  "onEnter": "kudoRunThreeStuckStatesDemo();",
+  "audio_src": "audio/lesson_04/b3.mp3",
+  "audio_duration": 10.64
+}

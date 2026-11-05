@@ -1,0 +1,17 @@
+{
+  "id": "b4",
+  "label": "4. Phần mềm Antigravity 2.0",
+  "duration": 15.38,
+  "mode": "theory",
+  "pose": 4,
+  "slide": "s2",
+  "hl": [
+    "s2-c1"
+  ],
+  "focus_selectors": [
+    "#s2-c1"
+  ],
+  "caption": "Anh chị lưu ý một thay đổi quan trọng: giao diện Agent Manager trước đây nay đã đổi tên thành Antigravity 2.0. Hiện tại Antigravity 2.0 và Antigravity IDE đã tách thành hai phần mềm độc lập, cần tải về và cài đặt riêng biệt trên máy tính.",
+  "audio_src": "audio/lesson_01/b4.mp3",
+  "audio_duration": 14.73
+}

@@ -1,0 +1,19 @@
+{
+  "id": "b9",
+  "label": "9. Chuyển This Computer sang Turbo",
+  "duration": 11.21,
+  "mode": "sim",
+  "pose": 4,
+  "surface": "mgr_settings",
+  "focus_selectors": [
+    "#set-row-this-computer",
+    "#kudo-turbo-popover"
+  ],
+  "focus_pad": 10,
+  "cursor_selector": "#ktp-turbo",
+  "cursor_label": "Chọn Turbo trong 4 mức quyền",
+  "caption": "Tại thẻ General, dòng This Computer hiển thị 4 mức quyền: Request Review, Default, Auto (Preview) và Turbo. Bạn chọn <code>Turbo</code> có dấu tích xanh để AI tự động thực thi trọn vẹn quy trình.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); openSettingsModal('general'); kudoOpenTurboPopover();",
+  "audio_src": "audio/lesson_02/b9.mp3",
+  "audio_duration": 10.56
+}

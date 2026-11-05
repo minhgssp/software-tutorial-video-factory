@@ -1,0 +1,21 @@
+{
+  "id": "b5",
+  "label": "5. Phím tắt Ctrl + M và Ctrl + L",
+  "duration": 9.53,
+  "mode": "theory",
+  "pose": 5,
+  "slide": "s2",
+  "hl": [
+    "s2-c2",
+    "s2-c3",
+    "s2-c4"
+  ],
+  "focus_selectors": [
+    "#s2-c2",
+    "#s2-c3",
+    "#s2-c4"
+  ],
+  "caption": "Đồng thời, bạn hãy kết hợp phím tắt thu giọng nói <kbd>Ctrl + M</kbd> và thao tác bôi đen văn bản nhấn <kbd>Ctrl + L</kbd> (Quote in Chat) để trích dẫn ngay đoạn cần sửa vào khung trò chuyện.",
+  "audio_src": "audio/lesson_02/b5.mp3",
+  "audio_duration": 8.88
+}
