@@ -1,18 +1,21 @@
 {
   "id": "b4",
-  "label": "4. Tránh kéo thả nhầm thư mục",
-  "duration": 10.09,
-  "mode": "sim",
+  "label": "4. [Thực hành B1/3] Bối cảnh & Đính kèm tệp @COMPANY.md",
+  "duration": 9.93,
   "pose": 4,
-  "surface": "ide",
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 1/3 · Đính kèm hồ sơ bằng @",
+  "pedagogy_title": "Bối cảnh: Cần tóm tắt hồ sơ công ty TaskFlow kèm bổ sung ví dụ thực tế",
+  "pedagogy_note": "Bước 1: Tại ô chat của Antigravity IDE, gõ ký hiệu @ và bấm chọn tệp @COMPANY.md từ danh sách.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); openFileInEditor('COMPANY.md'); kudoOpenIdeMentionPopup(); document.getElementById('ide-chat-input').value = '@COMPANY.md Hãy tóm tắt 3 mục tiêu trọng tâm Quý 2';",
   "focus_selectors": [
-    "#ide-move-warn-modal .warn-dialog"
+    "#ide-popup-menu",
+    "#ide-chat-input"
   ],
-  "focus_pad": 8,
-  "cursor_selector": "#ide-move-warn-modal .win-dlg-btn",
-  "cursor_label": "Bấm Cancel nếu lỡ tay kéo thả nhầm thư mục",
-  "caption": "Trong lúc dùng chuột ở cột cây thư mục bên trái, nếu lỡ tay kéo một thư mục thả vào trong thư mục khác, phần mềm sẽ hiện hộp thoại cảnh báo di chuyển. Bạn hãy bấm ngay nút <code>Cancel</code> để giữ nguyên cấu trúc.",
-  "onEnter": "kudoHidePopovers(); closeWinFolderDialog(); switchToSurface('ide'); currentWorkspaceTreeMode='antigravity_course_vn'; renderFileTree(); openMoveWarnModal();",
+  "cursor_selector": "#ide-popup-menu .popup-item:first-child",
+  "cursor_label": "Bước 1: Gõ @ và chọn @COMPANY.md",
+  "caption": "Chúng ta vào thực hành phối hợp cả 3 kỹ năng. Ở <strong>Bước 1</strong>, trong bối cảnh cần xử lý hồ sơ công ty, anh chị gõ dấu <code>@</code> vào ô chat và bấm chọn <code>@COMPANY.md</code>.",
   "audio_src": "audio/lesson_06/b4.mp3",
-  "audio_duration": 9.44
+  "audio_duration": 9.28
 }

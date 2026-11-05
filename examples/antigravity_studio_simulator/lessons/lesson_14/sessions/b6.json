@@ -1,0 +1,21 @@
+{
+  "id": "b6",
+  "label": "6. [Thực hành B3/3] Nghiệm thu bao_cao_doanh_thu_q1.md & Sang Bài 15",
+  "duration": 14.39,
+  "pose": 6,
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Nghiệm thu & Tiếp nối",
+  "pedagogy_title": "Bước 3: Nghiệm thu bảng tổng hợp và 3 phát hiện kinh doanh tại bao_cao_doanh_thu_q1.md",
+  "pedagogy_note": "Nghiệm thu: Tệp bao_cao_doanh_thu_q1.md đã hoàn thành chuẩn xác. Tiếp theo: Bài 15 điều phối nhiều Sub-Agents chạy song song.",
+  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › bao_cao_doanh_thu_q1.md (Báo cáo Phân tích CSV)', editorTitle:'📊 bao_cao_doanh_thu_q1.md — Báo Cáo Phân Tích Doanh Thu Quý 1', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#9a3412;margin-top:0;\">BÁO CÁO PHÂN TÍCH DOANH THU QUÝ 1 — TASKFLOW INC.</h2><p><strong>1. Kiểm toán dữ liệu:</strong> 100% dòng dữ liệu hợp lệ, không có bản ghi trùng lặp.</p><table style=\"width:100%;border-collapse:collapse;font-size:13px;margin-bottom:12px;\"><tr style=\"background:#ffedd5;\"><th style=\"padding:7px;border:1px solid #fed7aa;text-align:left;\">Phân khúc</th><th style=\"padding:7px;border:1px solid #fed7aa;text-align:right;\">Doanh thu Q1 (VNĐ)</th><th style=\"padding:7px;border:1px solid #fed7aa;text-align:right;\">Tỷ trọng</th><th style=\"padding:7px;border:1px solid #fed7aa;text-align:right;\">Tỷ lệ rời bỏ (Churn)</th></tr><tr><td style=\"padding:7px;border:1px solid #fed7aa;\">Doanh nghiệp lớn (Enterprise)</td><td style=\"padding:7px;border:1px solid #fed7aa;text-align:right;\">1.260.000.000</td><td style=\"padding:7px;border:1px solid #fed7aa;text-align:right;\">68,1%</td><td style=\"padding:7px;border:1px solid #fed7aa;text-align:right;\">1,8%</td></tr><tr><td style=\"padding:7px;border:1px solid #fed7aa;\">Doanh nghiệp vừa &amp; nhỏ (SMB)</td><td style=\"padding:7px;border:1px solid #fed7aa;text-align:right;\">590.000.000</td><td style=\"padding:7px;border:1px solid #fed7aa;text-align:right;\">31,9%</td><td style=\"padding:7px;border:1px solid #fed7aa;text-align:right;\">6,2%</td></tr><tr style=\"font-weight:700;background:#fff7ed;\"><td style=\"padding:7px;border:1px solid #fed7aa;\">TỔNG CỘNG QUÝ 1</td><td style=\"padding:7px;border:1px solid #fed7aa;text-align:right;\">1.850.000.000</td><td style=\"padding:7px;border:1px solid #fed7aa;text-align:right;\">100,0%</td><td style=\"padding:7px;border:1px solid #fed7aa;text-align:right;\">TB: 4,0%</td></tr></table><p><strong>2. Phát hiện cốt lõi:</strong> Nhóm Enterprise mang lại 68,1% doanh thu với tỷ lệ rời bỏ rất thấp (1,8%), trong khi nhóm SMB rời bỏ cao ở tuần đầu do chưa quen giao diện.</p></div>', userMsg:'@sales_data.csv @COMPANY.md Hãy làm sạch dữ liệu, lập bảng tổng hợp doanh thu Quý 1 và lưu vào bao_cao_doanh_thu_q1.md', aiMsg:'Đã hoàn tất phân tích <code>@sales_data.csv</code> và xuất báo cáo tại <code>bao_cao_doanh_thu_q1.md</code>!'});",
+  "focus_selectors": [
+    "#editor-canvas",
+    "#ide-chat-messages"
+  ],
+  "cursor_selector": "#editor-canvas",
+  "cursor_label": "Bước 3: Nghiệm thu tệp bao_cao_doanh_thu_q1.md",
+  "caption": "Ở <strong>Bước 3</strong>, tệp <code>bao_cao_doanh_thu_q1.md</code> đã hiện ra với bảng số liệu tổng hợp rõ ràng và chỉ ra ngay nguyên nhân khách hàng nhỏ rời bỏ ở tuần đầu tiên. Tiếp theo, ở <strong>Bài 15</strong>, chúng ta sẽ học cách điều phối nhiều trợ lý AI chạy song song cùng lúc!",
+  "audio_src": "audio/lesson_14/b6.mp3",
+  "audio_duration": 13.74
+}

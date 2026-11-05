@@ -1,0 +1,18 @@
+{
+  "id": "b1",
+  "label": "1. [Lý thuyết Kiểu 1] Vòng đời 3 bước bảo toàn trí nhớ dự án",
+  "duration": 12.53,
+  "pose": 1,
+  "mode": "theory",
+  "pedagogy_type": "theory_type_1",
+  "slide": "s1",
+  "hl": [
+    "s1_c1",
+    "s1_c2",
+    "s1_c3",
+    "s1_call"
+  ],
+  "caption": "Một câu hỏi rất thực tế của dân văn phòng là: Hôm nay làm việc với AI xong, ngày mai mở phiên chat mới thì làm sao để AI nhớ hết các quyết định hôm qua? Quy trình 3 bước trên màn hình với tệp <code>ban_giao_cong_viec.md</code> chính là chìa khóa.",
+  "audio_src": "audio/lesson_08/b1.mp3",
+  "audio_duration": 11.88
+}

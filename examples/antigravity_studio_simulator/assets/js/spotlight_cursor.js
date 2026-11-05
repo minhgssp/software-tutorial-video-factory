@@ -74,6 +74,27 @@ function kudoSyncDomAnchors() {
     spot.classList.remove("visible");
   }
 
+  // Định vị thông minh cho #kudo-stage-pedagogy-card tránh đè lên #kudo-spotlight
+  const pCard = document.getElementById("kudo-stage-pedagogy-card");
+  if (pCard && pCard.classList.contains("visible")) {
+    const midX = (sb.left + sb.right) / 2;
+    const spotCenterX = foundAny ? (spotLeft + spotRight) / 2 : midX + 100;
+    if (spotCenterX > midX) {
+      // Spotlight đang ở nửa phải -> đặt thẻ Sư phạm ở góc dưới bên trái vùng Stage
+      pCard.style.left = Math.round(sb.left + 14) + "px";
+      pCard.style.right = "auto";
+      pCard.style.bottom = Math.round(window.innerHeight - sb.bottom + 12) + "px";
+      pCard.style.top = "auto";
+    } else {
+      // Spotlight đang ở nửa trái -> đặt thẻ Sư phạm ở góc dưới bên phải vùng Stage
+      pCard.style.right = "16px";
+      pCard.style.left = "auto";
+      pCard.style.bottom = Math.round(window.innerHeight - sb.bottom + 12) + "px";
+      pCard.style.top = "auto";
+    }
+  }
+
+
   // Ẩn con chuột & nhãn Tip nếu người dùng bật chế độ "Ẩn chuột & Tip",
   // hoặc đã bấm tương tác trực tiếp trong vùng mô phỏng, hoặc nội dung trao đổi/thuyết minh của phần này đã kết thúc
   if (window.kudoHideCursorAndTip || window.kudoSpeechCompletedForBeat || window.kudoUserInteractedInSim) {

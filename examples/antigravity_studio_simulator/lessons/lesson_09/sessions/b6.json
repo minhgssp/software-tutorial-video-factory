@@ -1,0 +1,21 @@
+{
+  "id": "b6",
+  "label": "6. [Thực hành B3/3] Hỏi AI kiểm tra cấu trúc .agent & Sang Bài 10",
+  "duration": 11.29,
+  "pose": 6,
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Nghiệm thu & Tiếp nối",
+  "pedagogy_title": "Bước 3: Yêu cầu AI liệt kê các Rules, Skills và Workflows hiện có",
+  "pedagogy_note": "Nghiệm thu: Hiểu rõ 3 ngăn của .agent. Tiếp theo: Bài 10 tự tay viết Nội quy tự động (Rules) và Sổ tay kỹ năng (Skills).",
+  "onEnter": "kudoSimScene({surface:'ide', file:'start-1-1.md', userMsg:'Hãy kiểm tra thư mục .agent của dự án hiện tại và tóm tắt giúp tôi các ngăn Rules, Skills, Workflows đang có.', aiMsg:'Báo cáo kiểm tra bộ não <code>.agent/</code> của dự án:<br>• <strong>Rules (Nội quy luôn bật):</strong> Quy chuẩn tiếng Việt văn phòng &amp; bảo mật dữ liệu.<br>• <strong>Skills (Kỹ năng chuyên môn):</strong> Phân tích CSV, lập kế hoạch chiến lược, thiết kế slide.<br>• <strong>Workflows (Lệnh /):</strong> <code>/start-1-1</code>, <code>/grill-me</code>, <code>/plan</code>, <code>/learn</code>.'});",
+  "focus_selectors": [
+    "#ide-chat-messages",
+    "#editor-canvas"
+  ],
+  "cursor_selector": "#ide-chat-messages",
+  "cursor_label": "Bước 3: AI tóm tắt 3 ngăn của bộ não .agent",
+  "caption": "Ở <strong>Bước 3</strong>, trợ lý AI đã liệt kê rõ ràng cả 3 ngăn <strong>Rules</strong>, <strong>Skills</strong> và <strong>Workflows</strong> trong dự án của chúng ta. Bây giờ, chúng ta bước sang <strong>Bài 10</strong> để tự tay viết Nội quy và Kỹ năng cho phòng ban của mình!",
+  "audio_src": "audio/lesson_09/b6.mp3",
+  "audio_duration": 10.64
+}

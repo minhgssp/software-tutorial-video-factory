@@ -1,0 +1,18 @@
+{
+  "id": "b1",
+  "label": "1. [Lý thuyết Kiểu 1] 3 trụ cột của Cẩm nang Giọng văn Thương hiệu",
+  "duration": 14.64,
+  "pose": 1,
+  "mode": "theory",
+  "pedagogy_type": "theory_type_1",
+  "slide": "s1",
+  "hl": [
+    "s1_c1",
+    "s1_c2",
+    "s1_c3",
+    "s1_call"
+  ],
+  "caption": "Chào mừng anh chị bước vào <strong>Chương 5</strong> — nơi chúng ta ứng dụng AI vào truyền thông, thiết kế hình ảnh và làm báo cáo trực quan. Để bài viết không bao giờ mang mùi văn mẫu máy móc, <strong>Bài 17</strong> bắt đầu bằng việc thiết lập tệp Cẩm nang Thương hiệu <code>brand_voice.md</code> với 3 trụ cột trên màn hình.",
+  "audio_src": "audio/lesson_17/b1.mp3",
+  "audio_duration": 13.99
+}

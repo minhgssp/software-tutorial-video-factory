@@ -1,18 +1,21 @@
 {
   "id": "b5",
-  "label": "5. Chọn lệnh /start-1-1 chuẩn",
-  "duration": 9.37,
+  "label": "5. [Thực hành B2/3] Mở và đọc bảng tính sales_data.csv trực quan",
+  "duration": 11.53,
+  "pose": 5,
   "mode": "sim",
-  "pose": 7,
-  "surface": "ide",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Đọc bảng dữ liệu .csv",
+  "pedagogy_title": "Bước 2: Quay lại Explorer và bấm mở tệp sales_data.csv",
+  "pedagogy_note": "Nhờ Office Viewer, tệp .csv hiển thị thành bảng kẻ ô sắc nét gồm cột Sản phẩm, Doanh thu, Chi phí và Trạng thái.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); setEditorMode('wysiwyg'); openFileInEditor('sales_data.csv');",
   "focus_selectors": [
-    "#ide-chat-box-card"
+    "#ide-file-tree",
+    "#editor-canvas"
   ],
-  "focus_pad": 8,
-  "cursor_selector": "#ide-send-btn",
-  "cursor_label": "Kiểm tra đúng /start-1-1 rồi nhấn Enter",
-  "caption": "Sau khi nhấp chuột chọn dòng <code>/start-1-1</code>, toàn bộ tên lệnh đã được điền đủ vào ô nhập liệu. Bạn không gõ thêm số <code>1-1</code> nữa mà nhấn thẳng phím <kbd>Enter</kbd> hoặc bấm nút gửi.",
-  "onEnter": "kudoSelectStartWorkflowReadyToSend();",
+  "cursor_selector": "[data-file='sales_data.csv']",
+  "cursor_label": "Bước 2: Bấm mở bảng dữ liệu sales_data.csv",
+  "caption": "Sang <strong>Bước 2</strong>, anh chị quay lại cột cây thư mục <strong>Explorer</strong> và bấm vào tệp <code>sales_data.csv</code>. Ngay lập tức, toàn bộ dữ liệu doanh thu hiển thị thành bảng kẻ ô rõ nét mà không cần mở Excel.",
   "audio_src": "audio/lesson_05/b5.mp3",
-  "audio_duration": 8.72
+  "audio_duration": 10.88
 }

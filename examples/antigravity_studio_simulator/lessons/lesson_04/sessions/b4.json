@@ -1,18 +1,22 @@
 {
   "id": "b4",
-  "label": "4. Ẩn/hiện cây thư mục (Ctrl+B)",
-  "duration": 10.89,
+  "label": "4. [Thực hành B1/3] Bối cảnh & Bật quyền Turbo trong Settings",
+  "duration": 8.73,
+  "pose": 4,
   "mode": "sim",
-  "pose": 5,
-  "surface": "ide",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 1/3 · Bối cảnh & Cấp quyền Turbo",
+  "pedagogy_title": "Bối cảnh: Cấp quyền tự chủ cho trợ lý trước khi chạy bài thực hành TaskFlow",
+  "pedagogy_note": "Bước 1: Mở Settings (⚙️) -> thẻ General -> mục This Computer -> tích chọn chế độ Turbo.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); openSettingsModal('general'); kudoOpenTurboPopover(); document.getElementById('set-pill-this-computer').innerHTML = 'Turbo &#9662;';",
   "focus_selectors": [
-    "#ide-left-sidebar"
+    "#agy2-settings-btn",
+    "#set-pill-this-computer",
+    "#kudo-turbo-popover"
   ],
-  "focus_pad": 6,
-  "cursor_selector": "#act-btn-explorer",
-  "cursor_label": "Nhấn Ctrl + B hoặc bấm biểu tượng Explorer",
-  "caption": "Khi bạn lỡ tay bấm ẩn mất cột cây thư mục bên trái, chỉ cần nhấn tổ hợp phím <kbd>Ctrl + B</kbd> hoặc bấm vào biểu tượng hai tệp giấy trên thanh công cụ ngoài cùng bên trái là cây thư mục hiện lại ngay.",
-  "onEnter": "kudoShowKeyHud('🗂️ Bật/tắt cây thư mục: <kbd>Ctrl + B</kbd>'); switchToSurface('ide'); switchIdeSidebarMode('explorer'); document.getElementById('ide-left-sidebar').style.display='flex';",
+  "cursor_selector": "#ktp-turbo",
+  "cursor_label": "Bước 1: Tích chọn Turbo trong Settings",
+  "caption": "Chúng ta bắt đầu bài thực hành tổng kết Chương 1. Ở <strong>Bước 1</strong>, anh chị mở <strong>Settings</strong>, vào thẻ <strong>General</strong> và bấm chuyển quyền <strong>This Computer</strong> sang <strong>Turbo</strong>.",
   "audio_src": "audio/lesson_04/b4.mp3",
-  "audio_duration": 10.24
+  "audio_duration": 8.08
 }

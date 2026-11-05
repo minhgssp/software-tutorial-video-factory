@@ -62,6 +62,79 @@ function kudoOpenIdeMentionPopup() {
   handleInputKey(ta, "ide-popup-menu");
 }
 
+function kudoOpenIdeSlashPopup() {
+  const ta = document.getElementById("ide-chat-input");
+  if (!ta) return;
+  ta.value = "/";
+  handleInputKey(ta, "ide-popup-menu");
+}
+
+function kudoSimScene(cfg) {
+  if (!cfg) return;
+  kudoHidePopovers();
+  if (typeof closeIdeMenus === "function") closeIdeMenus();
+  if (typeof closeMoveWarnModal === "function") closeMoveWarnModal();
+  if (typeof closeWinFolderDialog === "function") closeWinFolderDialog();
+  if (typeof closeSettingsModal === "function") closeSettingsModal();
+  switchToSurface(cfg.surface || "ide");
+  if (cfg.surface !== "mgr") {
+    switchIdeSidebarMode("explorer");
+  }
+  if (cfg.file && typeof openFileInEditor === "function") {
+    setEditorMode(cfg.editorMode || "wysiwyg");
+    openFileInEditor(cfg.file);
+  }
+  if (cfg.breadcrumb) {
+    const bc = document.getElementById("editor-breadcrumbs");
+    if (bc) bc.innerHTML = cfg.breadcrumb;
+  }
+  if (cfg.editorTitle) {
+    const tabs = document.getElementById("editor-tabs-list");
+    if (tabs) {
+      tabs.innerHTML = `<div class="editor-tab active"><span>${cfg.editorTitle}</span></div>`;
+    }
+  }
+  if (cfg.editorHtml) {
+    const canvas = document.getElementById("editor-canvas");
+    if (canvas) {
+      canvas.innerHTML = cfg.editorHtml;
+    }
+  }
+  const msgBox = document.getElementById("ide-chat-messages");
+  if (msgBox) {
+    if (cfg.clearChat) {
+      msgBox.innerHTML = "";
+    }
+    if (cfg.userMsg || cfg.aiMsg) {
+      let html = "";
+      if (cfg.userMsg) {
+        html += `<div class="msg-user">${cfg.userMsg}</div>`;
+      }
+      if (cfg.aiMsg) {
+        html += `<div class="msg-ai"><div class="progress-card"><div class="progress-card-title"><span>Trợ lý AI Antigravity</span><span>Done ✓</span></div></div><p>${cfg.aiMsg}</p></div>`;
+      }
+      msgBox.innerHTML = html;
+    }
+  }
+  if (typeof cfg.chatInput === "string") {
+    const ta = document.getElementById("ide-chat-input");
+    if (ta) ta.value = cfg.chatInput;
+  }
+  const term = document.getElementById("ide-bottom-terminal");
+  const termBody = document.getElementById("ide-terminal-body");
+  if (term) {
+    if (cfg.showTerminal) {
+      term.style.display = "flex";
+      if (termBody && cfg.terminalHtml) {
+        termBody.innerHTML = cfg.terminalHtml;
+      }
+    } else {
+      term.style.display = "none";
+    }
+  }
+}
+
+
 function kudoOpenStartWorkflowPopup() {
   const msgBox = document.getElementById("ide-chat-messages");
   if (msgBox) {

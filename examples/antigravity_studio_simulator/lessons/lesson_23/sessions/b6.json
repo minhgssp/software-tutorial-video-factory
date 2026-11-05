@@ -1,0 +1,21 @@
+{
+  "id": "b6",
+  "label": "6. [Thực hành B3/3] Nghiệm thu Báo cáo rà soát & Bước vào Bài Cuối 24",
+  "duration": 11.53,
+  "pose": 6,
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Nghiệm thu Case Study 3",
+  "pedagogy_title": "Bước 3: Nghiệm thu bao_cao_ra_soat_hop_dong.md bắt trúng 2 lỗ hổng lớn",
+  "pedagogy_note": "Nghiệm thu: Đã chặn đứng rủi ro công nợ 45 ngày và bổ sung NDA. Tiếp theo: Bài 24 Tổng kết khóa học & Kiểm toán /audit!",
+  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › bao_cao_ra_soat_hop_dong.md (Hoàn tất)', editorTitle:'🛡️ bao_cao_ra_soat_hop_dong.md — Đã Bảo Vệ An Toàn Pháp Lý Doanh Nghiệp', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#15803d;margin-top:0;\">✅ BÁO CÁO RÀ SOÁT HỢP ĐỒNG ĐẠI LÝ HOÀN TẤT</h2><ul><li><strong>Điều khoản Đạt chuẩn (Xanh):</strong> Điều 3.1 — Chiết khấu 25% (Khớp quy chế).</li><li><strong>Điều khoản Bắt buộc sửa (Đỏ):</strong> Điều 4.2 — Rút thời hạn công nợ từ 45 ngày về <strong>15 ngày làm việc</strong>.</li><li><strong>Điều khoản Bắt buộc thêm (Đỏ):</strong> Bổ sung nguyên văn Điều 7 về <strong>Bảo mật dữ liệu khách hàng (NDA)</strong>.</li></ul></div>', userMsg:'@hop_dong_dai_ly_du_thao.md @quy_che_hop_dong_chuan.md Hãy xuất báo cáo rà soát vào bao_cao_ra_soat_hop_dong.md', aiMsg:'Đã hoàn tất kiểm toán hợp đồng tại <code>bao_cao_ra_soat_hop_dong.md</code>! Phát hiện 2 rủi ro mức Đỏ cần yêu cầu đối tác chỉnh sửa trước khi ký.'});",
+  "focus_selectors": [
+    "#editor-canvas",
+    "#ide-chat-messages"
+  ],
+  "cursor_selector": "#editor-canvas",
+  "cursor_label": "Bước 3: Phát hiện và chặn đứng 2 rủi ro hợp đồng!",
+  "caption": "Ở <strong>Bước 3</strong>, bản báo cáo rà soát đã chỉ rõ cả điều khoản đạt chuẩn lẫn 2 rủi ro mức Đỏ cần sửa ngay trước khi đặt bút ký. Bây giờ, chúng ta cùng bước vào bài học cuối cùng của khóa học — <strong>Bài 24</strong>!",
+  "audio_src": "audio/lesson_23/b6.mp3",
+  "audio_duration": 10.88
+}

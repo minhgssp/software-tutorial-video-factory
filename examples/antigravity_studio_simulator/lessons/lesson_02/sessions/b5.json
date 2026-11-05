@@ -1,21 +1,21 @@
 {
   "id": "b5",
-  "label": "5. Giọng nói và trích dẫn nhanh",
-  "duration": 9.53,
-  "mode": "theory",
+  "label": "5. [Thực hành B2/3] Kiểm tra đồng bộ bằng Reveal in File Explorer",
+  "duration": 10.65,
   "pose": 5,
-  "slide": "s2",
-  "hl": [
-    "s2-c2",
-    "s2-c3",
-    "s2-c4"
-  ],
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Thao tác đối chiếu ổ cứng",
+  "pedagogy_title": "Bước 2: Chuột phải vào INDEX.md chọn Reveal in File Explorer",
+  "pedagogy_note": "Cây thư mục dự án đã hiện ra ở cột trái! Nhấp chuột phải vào INDEX.md để đối chiếu vị trí tệp thật trên máy tính.",
+  "onEnter": "kudoHidePopovers(); closeWinFolderDialog(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); openFileInEditor('INDEX.md'); kudoOpenExplorerContextMenu(\"[data-file='INDEX.md']\");",
   "focus_selectors": [
-    "#s2-c2",
-    "#s2-c3",
-    "#s2-c4"
+    "#ide-file-tree",
+    "#kudo-context-menu"
   ],
-  "caption": "Đồng thời, bạn hãy kết hợp phím tắt thu giọng nói <kbd>Ctrl + M</kbd> và thao tác bôi đen văn bản nhấn <kbd>Ctrl + L</kbd> (Quote in Chat) để trích dẫn ngay đoạn cần sửa vào khung trò chuyện.",
+  "cursor_selector": "#kcm-reveal-explorer",
+  "cursor_label": "Bước 2: Chọn Reveal in File Explorer",
+  "caption": "Sang <strong>Bước 2</strong>, toàn bộ cây thư mục dự án đã hiện ra ở cột trái! Để kiểm chứng vị trí tệp thật trên ổ cứng, anh chị nhấp chuột phải vào tệp <code>INDEX.md</code> và chọn dòng <strong>Reveal in File Explorer</strong>.",
   "audio_src": "audio/lesson_02/b5.mp3",
-  "audio_duration": 8.88
+  "audio_duration": 10.0
 }

@@ -532,40 +532,40 @@
     <div class="brand">
       <div class="brand-logo" id="hub-logo" onclick="showHomeView()" title="Về Trang chủ Chọn chương">A</div>
       <div class="brand-title" id="hub-title" onclick="showHomeView()" aria-live="polite">Khóa học Antigravity Basic</div>
-      <button class="home-switch-btn active-home" id="btn-toggle-home" onclick="showHomeView()" title="Quay về Trang chủ Chọn chương (6 Chương · 42 Bài giảng)">🏠 Chọn chương</button>
+      <button class="home-switch-btn active-home" id="btn-toggle-home" onclick="showHomeView()" title="Quay về Trang chủ Chọn chương (6 Chương · 24 Bài giảng)">🏠 Chọn chương</button>
     </div>
-    <div class="quick-lesson-pills" id="hub-quick-pills" role="navigation" aria-label="Chuyển nhanh 6 bài giảng Chương 1"></div>
+    <div class="quick-lesson-pills" id="hub-quick-pills" role="navigation" aria-label="Chuyển nhanh 24 bài giảng"></div>
     <div class="nav-right">
-      <a class="open-full-btn" id="hub-open-full" href="lesson_01_chatbot_vs_agent.html" target="_blank" title="Mở bài học đang xem ra cửa sổ toàn màn hình">↗ Mở toàn màn hình</a>
+      <a class="open-full-btn" id="hub-open-full" href="lesson_01.html" target="_blank" title="Mở bài học đang xem ra cửa sổ toàn màn hình">↗ Mở toàn màn hình</a>
     </div>
   </div>
 
-  <!-- MÀN HÌNH 1: TRANG CHỦ CHỌN CHƯƠNG (6 CHƯƠNG · 42 BÀI HỌC) -->
+  <!-- MÀN HÌNH 1: TRANG CHỦ CHỌN CHƯƠNG (6 CHƯƠNG · 24 BÀI HỌC · 144 ĐIỂM NEO) -->
   <section id="home-view" aria-label="Trang chủ chọn chương khóa học Antigravity Basic">
     <div class="home-container">
       <div class="home-hero">
         <div class="hero-left">
-          <span class="hero-kicker">HỌC VIỆN HOCTAPTECH · LỘ TRÌNH TOÀN DIỆN 6 CHƯƠNG · 42 BÀI GIẢNG</span>
+          <span class="hero-kicker">HỌC VIỆN HOCTAPTECH · LỘ TRÌNH TOÀN DIỆN 6 CHƯƠNG · 24 BÀI GIẢNG · 144 ĐIỂM NEO</span>
           <h1 class="hero-title">Làm Chủ Trợ Lý AI Antigravity Cho Dân Văn Phòng</h1>
           <p class="hero-desc">
             Từ thói quen hỏi đáp rời rạc trên trình duyệt đến xây dựng hệ thống Trợ lý AI làm việc trực tiếp trong thư mục máy tính.
-            Chọn chương học bên dưới để bắt đầu — bấm vào bất kỳ bài nào của <strong>Chương 1</strong> để mở trình phát tương tác giữ nguyên 47 điểm neo thời gian.
+            Toàn bộ <strong>6 Chương · 24 Bài giảng · 144 Điểm neo thực hành</strong> đã sẵn sàng 100% kèm mô phỏng tương tác và thuyết minh 48kHz.
           </p>
           <div class="hero-stats">
             <span class="hero-stat-pill"><strong>6 Chương</strong> theo cấp độ</span>
-            <span class="hero-stat-pill"><strong>42 Bài giảng</strong> thực hành</span>
-            <span class="hero-stat-pill"><strong>Chương 1:</strong> 6 bài · 47 phần nhỏ đã sẵn sàng</span>
+            <span class="hero-stat-pill"><strong>24 Bài giảng</strong> thực hành</span>
+            <span class="hero-stat-pill"><strong>144 Điểm neo:</strong> 100% Đã sẵn sàng</span>
           </div>
         </div>
         <div class="hero-cta-box">
-          <button class="hero-primary-btn" id="btn-start-ch1" onclick="openChapterLesson('lesson_01_chatbot_vs_agent.html')">▶ Vào học ngay Chương 1</button>
-          <span class="hero-cta-sub">Giữ nguyên trình phát 1 Sidebar &amp; 47 điểm neo</span>
+          <button class="hero-primary-btn" id="btn-start-ch1" onclick="openChapterLesson('lesson_01.html')">▶ Vào học ngay Bài 1</button>
+          <span class="hero-cta-sub">Trình phát 1 Sidebar · 24 bài · 144 điểm neo</span>
         </div>
       </div>
 
       <div class="section-head">
-        <h2>📚 Danh mục 6 Chương trong Khóa học</h2>
-        <span class="section-head-note">Bấm vào Chương 1 hoặc từng bài học trong Chương 1 để mở trình phát</span>
+        <h2>📚 Danh mục 6 Chương &amp; 24 Bài giảng (100% Sẵn sàng)</h2>
+        <span class="section-head-note">Bấm vào bất kỳ Chương hoặc Bài học nào bên dưới để mở trình phát tương tác</span>
       </div>
 
       <div class="chapters-grid" id="chapters-grid"></div>
@@ -574,7 +574,7 @@
 
   <!-- MÀN HÌNH 2: KHUNG TRÌNH PHÁT BÀI GIẢNG (GIỮ NGUYÊN CẤU TRÚC CŨ) -->
   <main class="player-stage hidden-view" id="player-view">
-    <iframe id="lesson-iframe" src="lesson_01_chatbot_vs_agent.html" title="Khung trình chiếu bài giảng Antigravity Basic" allow="autoplay"></iframe>
+    <iframe id="lesson-iframe" src="lesson_01.html" title="Khung trình chiếu bài giảng Antigravity Basic" allow="autoplay"></iframe>
   </main>
 
   <script src="config/brand_config.js"></script>
@@ -665,7 +665,7 @@
           }).join("");
 
           const footerBtn = isReady
-            ? `<button class="ch-enter-btn" onclick="openChapterLesson('${ch.default_lesson}')">▶ Vào học ${ch.code} (6 bài)</button>`
+            ? `<button class="ch-enter-btn" onclick="openChapterLesson('${ch.default_lesson}')">▶ Vào học ${ch.code} (${ch.lessons_count} bài)</button>`
             : `<span class="ch-upcoming-tag">Sắp ra mắt · ${ch.lessons_count} bài giảng</span>`;
 
           return `

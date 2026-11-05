@@ -1,17 +1,21 @@
 {
   "id": "b2",
-  "label": "2. Ưu tiên định dạng .md và .csv",
-  "duration": 10.89,
-  "mode": "theory",
+  "label": "2. [Lý thuyết Kiểu 2] Vì sao dùng Open Folder thay vì Open File",
+  "duration": 11.53,
   "pose": 2,
-  "slide": "s1",
-  "hl": [
-    "sl-c2"
-  ],
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Quy trình Mở Dự án",
+  "pedagogy_title": "Khác biệt giữa Open File (mở lẻ) và Open Folder (mở trọn dự án)",
+  "pedagogy_note": "Open Folder nạp toàn bộ cấu trúc thư mục và bộ não .agent để trợ lý AI hiểu đầy đủ ngữ cảnh công việc.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); showIdeWelcomeScreen(); closeWinFolderDialog(); document.getElementById('ide-file-dropdown').classList.add('show');",
   "focus_selectors": [
-    "#sl-c2"
+    "#ide-menu-file-btn",
+    "#ide-file-dropdown"
   ],
-  "caption": "Quy tắc thứ hai là ưu tiên lưu tài liệu hướng dẫn dưới dạng Markdown <code>.md</code> và bảng dữ liệu nguồn dưới dạng <code>.csv</code>. Đây là hai định dạng văn bản gọn nhẹ giúp AI đọc và xử lý nhanh.",
+  "cursor_selector": "#ide-file-dropdown .dd-row:nth-child(7)",
+  "cursor_label": "Luôn chọn Open Folder thay vì Open File",
+  "caption": "Nhìn vào trình đơn <strong>File</strong> trên màn hình <strong>Antigravity IDE</strong>, anh chị sẽ thấy hai dòng cạnh nhau. Chúng ta luôn dùng <strong>Open Folder</strong> để mở trọn vẹn thư mục dự án, tuyệt đối không dùng <strong>Open File</strong> mở lẻ tẻ từng tệp.",
   "audio_src": "audio/lesson_02/b2.mp3",
-  "audio_duration": 10.24
+  "audio_duration": 10.88
 }

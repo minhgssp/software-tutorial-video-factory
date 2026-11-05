@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BÀI 6 — Quản lý Học liệu & Đồng bộ Tệp tin</title>
-<meta name="description" content="Nguyên tắc giải nén học liệu .zip trước khi mở, cơ chế đồng bộ 1-1 với ổ cứng, tránh kéo nhầm thư mục và đối chiếu bằng Reveal in File Explorer.">
-<meta property="og:title" content="BÀI 6 — Quản lý Học liệu & Đồng bộ Tệp tin">
-<meta property="og:description" content="Nguyên tắc giải nén học liệu .zip trước khi mở, cơ chế đồng bộ 1-1 với ổ cứng, tránh kéo nhầm thư mục và đối chiếu bằng Reveal in File Explorer.">
+<title>BÀI 2 — Chuẩn bị Học liệu: Giải nén .zip, Mở Thư mục & An toàn Ổ cứng</title>
+<meta name="description" content="Quy tắc bắt buộc giải nén tệp học liệu .zip trước khi mở, thao tác File -> Open Folder chuẩn xác, nguyên tắc không mở toàn bộ ổ C: và kiểm tra đồng bộ bằng Reveal in File Explorer.">
+<meta property="og:title" content="BÀI 2 — Chuẩn bị Học liệu: Giải nén .zip, Mở Thư mục & An toàn Ổ cứng">
+<meta property="og:description" content="Quy tắc bắt buộc giải nén tệp học liệu .zip trước khi mở, thao tác File -> Open Folder chuẩn xác, nguyên tắc không mở toàn bộ ổ C: và kiểm tra đồng bộ bằng Reveal in File Explorer.">
 <meta property="og:type" content="article">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LearningResource",
-  "name": "BÀI 6 — Quản lý Học liệu & Đồng bộ Tệp tin",
-  "description": "Nguyên tắc giải nén học liệu .zip trước khi mở, cơ chế đồng bộ 1-1 với ổ cứng, tránh kéo nhầm thư mục và đối chiếu bằng Reveal in File Explorer.",
+  "name": "BÀI 2 — Chuẩn bị Học liệu: Giải nén .zip, Mở Thư mục & An toàn Ổ cứng",
+  "description": "Quy tắc bắt buộc giải nén tệp học liệu .zip trước khi mở, thao tác File -> Open Folder chuẩn xác, nguyên tắc không mở toàn bộ ổ C: và kiểm tra đồng bộ bằng Reveal in File Explorer.",
   "learningResourceType": "Interactive Simulation & Audio Lecture",
   "inLanguage": "vi",
   "isPartOf": {
@@ -832,11 +832,12 @@
   </div>
 
   <div class="ksb-lesson-box">
-    <select class="ksb-lesson-select" id="ksb-lesson-select" aria-label="Chọn bài giảng" onchange="kudoSwitchLessonFromSidebar(this.value)" title="Chuyển nhanh giữa 6 bài giảng"></select>
+    <select class="ksb-lesson-select" id="ksb-lesson-select" aria-label="Chọn bài giảng" onchange="kudoSwitchLessonFromSidebar(this.value)" title="Chuyển nhanh giữa 24 bài giảng"></select>
     <div class="ksb-meta-row">
-      <span id="kudo-lesson-code">BÀI 1</span>
+      <span id="kudo-lesson-code">CHƯƠNG 1 · BÀI 1</span>
     </div>
     <div id="kudo-lesson-title">Tiêu đề bài giảng</div>
+    <div id="ksb-dep-box"></div>
   </div>
 
   <!-- CỤM ĐIỀU KHIỂN 2 HÀNG GỌN GÀNG -->
@@ -868,6 +869,7 @@
     <div id="kudo-theory-stage">
       <div id="kudo-slide-box"></div>
     </div>
+    <div id="kudo-stage-pedagogy-card" aria-live="polite"></div>
   </div>
 
   <div id="kudo-subtitle-strip">
@@ -967,7 +969,7 @@
 <script src="assets/js/simulator_core.js"></script>
 <script src="config/brand_config.js"></script>
 <script src="config/course_manifest.js"></script>
-<script src="lessons/lesson_06/lesson_spec.js"></script>
+<script src="lessons/lesson_02/lesson_spec.js"></script>
 <script src="assets/js/simulator_actions.js"></script>
 <script src="assets/js/spotlight_cursor.js"></script>
 <script src="assets/js/player_engine.js"></script>

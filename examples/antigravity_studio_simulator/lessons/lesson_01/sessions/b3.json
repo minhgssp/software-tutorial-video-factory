@@ -1,17 +1,21 @@
 {
   "id": "b3",
-  "label": "3. Lưu quy trình ngay trên máy",
-  "duration": 9.13,
-  "mode": "theory",
+  "label": "3. [Lý thuyết Kiểu 2] Quy tắc chọn 5 mô hình AI theo việc",
+  "duration": 16.11,
   "pose": 3,
-  "slide": "s1",
-  "hl": [
-    "sl-c3"
-  ],
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Kỹ thuật chọn Mô hình",
+  "pedagogy_title": "Chọn đúng mô hình AI cho từng độ khó công việc",
+  "pedagogy_note": "Flash (nhanh, việc nhẹ) · Argon Medium (mặc định hàng ngày) · Claude Sonnet/Opus 5.5 (lập kế hoạch & phân tích sâu).",
+  "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); closeSettingsModal(); resetAgy2NewConv(); kudoOpenModelPopover();",
   "focus_selectors": [
-    "#sl-c3"
+    "#agy2-model-pill",
+    "#kudo-model-popover"
   ],
-  "caption": "Nhờ làm việc trực tiếp trên máy tính, mọi quy tắc và hướng dẫn công việc đều được lưu thành tệp <code>.md</code> và <code>.csv</code> trong thư mục dự án để tái sử dụng lâu dài.",
+  "cursor_selector": "#kmp-argon",
+  "cursor_label": "Bảng chọn 5 mô hình AI trong Antigravity",
+  "caption": "Khi nhìn xuống góc dưới khung chat, anh chị thấy bảng chọn 5 mô hình AI. Ta dùng <strong>Gemini 3.8 Flash Medium</strong> cho việc nhẹ cần tốc độ, <strong>Gemini 4 Argon Medium</strong> làm mặc định hàng ngày, và chuyển sang <strong>Claude Sonnet 5.5</strong> hoặc <strong>Claude Opus 5.5</strong> khi lập kế hoạch sâu.",
   "audio_src": "audio/lesson_01/b3.mp3",
-  "audio_duration": 8.48
+  "audio_duration": 15.46
 }

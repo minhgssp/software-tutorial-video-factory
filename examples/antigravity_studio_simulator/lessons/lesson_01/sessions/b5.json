@@ -1,17 +1,21 @@
 {
   "id": "b5",
-  "label": "5. Vai trò của Antigravity IDE",
-  "duration": 11.85,
-  "mode": "theory",
+  "label": "5. [Thực hành B2/3] Bấm nút Open IDE chuyển không gian",
+  "duration": 8.49,
   "pose": 5,
-  "slide": "s2",
-  "hl": [
-    "s2-c2"
-  ],
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Thao tác trực tiếp",
+  "pedagogy_title": "Bước 2: Chuyển từ Antigravity 2.0 sang Antigravity IDE",
+  "pedagogy_note": "Nhìn lên góc trên bên phải của thanh tiêu đề giữa và bấm nút Open IDE để mở bàn làm việc chuyên sâu.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); closeSettingsModal(); resetAgy2NewConv();",
   "focus_selectors": [
-    "#s2-c2"
+    ".agy2-center-header",
+    "#agy2-open-ide-btn"
   ],
-  "caption": "Nhiều anh chị thắc mắc vì sao không lập trình vẫn dùng Antigravity IDE: thực chất đây là bàn làm việc 3 cột giúp bạn vừa quản lý cây thư mục bên trái, vừa xem tài liệu ở giữa và giao việc cho AI ở cột phải.",
+  "cursor_selector": "#agy2-open-ide-btn",
+  "cursor_label": "Bước 2: Bấm nút Open IDE ở góc trên phải",
+  "caption": "Sang <strong>Bước 2</strong>, khi cần soạn thảo hồ sơ và làm việc trực tiếp với thư mục máy tính, anh chị di chuột lên góc trên bên phải và bấm vào nút <strong>Open IDE</strong>.",
   "audio_src": "audio/lesson_01/b5.mp3",
-  "audio_duration": 11.2
+  "audio_duration": 7.84
 }

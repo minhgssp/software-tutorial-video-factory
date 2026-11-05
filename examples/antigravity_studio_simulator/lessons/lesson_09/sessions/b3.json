@@ -1,0 +1,21 @@
+{
+  "id": "b3",
+  "label": "3. [Lý thuyết Kiểu 2] Khám phá thư mục .agent trên cây Explorer",
+  "duration": 11.13,
+  "pose": 3,
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Cấu trúc Thư mục .agent",
+  "pedagogy_title": "Quan sát 3 thư mục con rules/, skills/, workflows/ bên trong .agent",
+  "pedagogy_note": "Mỗi tệp .md bên trong .agent/workflows/ chính là một lệnh gạch chéo / hiển thị khi bạn gõ trong khung chat.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); openFileInEditor('start-1-1.md');",
+  "focus_selectors": [
+    "#ide-file-tree",
+    "#editor-canvas"
+  ],
+  "cursor_selector": "[data-file='start-1-1.md']",
+  "cursor_label": "Tệp .agent/workflows/start-1-1.md tạo ra lệnh /start-1-1",
+  "caption": "Nhìn sang cột cây thư mục bên trái, ngay dưới dòng <code>.agent</code>, anh chị sẽ thấy tệp <code>start-1-1.md</code>. Chính tệp văn bản này đã tạo ra lệnh <code>/start-1-1</code> mà anh chị bấm chạy ở cuối Chương 1!",
+  "audio_src": "audio/lesson_09/b3.mp3",
+  "audio_duration": 10.48
+}

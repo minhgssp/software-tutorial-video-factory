@@ -1,0 +1,31 @@
+{
+  "lesson_slug": "lesson_10",
+  "filename": "lesson_10.html",
+  "legacy_alias": "",
+  "code": "BÀI 10",
+  "chapter_number": 3,
+  "chapter_code": "CHƯƠNG 3",
+  "chapter_title": "Thiết kế Bộ não .agent & Tự động hóa Quy trình",
+  "title": "Thiết lập Nội quy Tự động (.agent/rules) & Sổ tay Kỹ năng (.agent/skills)",
+  "short_title": "Thiết kế Rules & Skills",
+  "pill_label": "Bài 10 · Thiết kế Rules & Skills",
+  "description": "Phân biệt rõ khi nào nên đặt quy định vào .agent/rules/ (luôn tự động nạp 100% thời gian) và khi nào nên đóng gói thành .agent/skills/ (chỉ nạp khi đúng nghiệp vụ); thực hành tạo Rule và Skill đầu tiên.",
+  "prerequisites": "Bài 7 (Đã biết viết @troly.md) & Bài 9 (Đã hiểu tổng quan 3 ngăn của thư mục .agent).",
+  "dependents": "Bài 11 (Kết hợp Rules & Skills vào bên trong Workflows), Bài 12 (Dùng lệnh /learn để AI tự động nâng cấp Rules & Skills).",
+  "placement_risk": "0% Rủi ro — Học viên nâng cấp trực tiếp từ tệp @troly.md quen thuộc lên .agent/rules/ và tách phần nghiệp vụ nặng sang .agent/skills/.",
+  "continuity_bridge": "Sau khi trang bị Nội quy (Rules) và Kỹ năng chuyên môn (Skills) ở Bài 10, Bài 11 sẽ hướng dẫn cách nối chúng thành một dây chuyền tự động hóa bằng Workflows.",
+  "slide_ids": [
+    "s1"
+  ],
+  "session_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "b6"
+  ],
+  "beats_count": 6,
+  "total_duration_sec": 80.2,
+  "duration_formatted": "01:20"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "b3",
+  "label": "3. [Lý thuyết Kiểu 2] Cách AI rút trích bài viết mẫu để tự lập Brand Voice",
+  "duration": 12.97,
+  "pose": 3,
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Trích xuất Giọng văn Tự động",
+  "pedagogy_title": "Đưa 2-3 bài viết tâm đắc nhất của bạn để AI tự phân tích quy luật giọng văn",
+  "pedagogy_note": "Nếu công ty chưa có sẵn cẩm nang thương hiệu, hãy nhờ AI đọc @COMPANY.md và các bài viết cũ để tự đúc kết thành brand_voice.md.",
+  "onEnter": "kudoSimScene({surface:'ide', file:'COMPANY.md', clearChat:true, chatInput:'@COMPANY.md @troly.md Hãy phân tích hồ sơ công ty và đúc kết tệp brand_voice.md gồm: 3 tính từ thương hiệu, nỗi đau khách hàng SMB và 3 cặp câu mẫu (Cấm viết vs. Nên viết).'});",
+  "focus_selectors": [
+    "#ide-chat-input",
+    "#editor-canvas"
+  ],
+  "cursor_selector": "#ide-chat-input",
+  "cursor_label": "Nhờ AI tự đúc kết brand_voice.md từ tài liệu sẵn có",
+  "caption": "Nếu doanh nghiệp của anh chị chưa từng viết cẩm nang thương hiệu thì cũng đừng lo: Chỉ cần đính kèm hồ sơ <code>@COMPANY.md</code> hoặc vài bài viết cũ mà sếp tâm đắc nhất, trợ lý AI sẽ tự phân tích và lập ra tệp <code>brand_voice.md</code>.",
+  "audio_src": "audio/lesson_17/b3.mp3",
+  "audio_duration": 12.32
+}

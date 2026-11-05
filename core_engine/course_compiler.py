@@ -73,12 +73,20 @@ class LessonSpecCompiler:
         meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
         kudo_spec: Dict[str, Any] = {
+            "filename": meta.get("filename", ""),
+            "legacy_alias": meta.get("legacy_alias", ""),
             "code": meta.get("code", ""),
+            "chapter_number": meta.get("chapter_number", 1),
+            "chapter_code": meta.get("chapter_code", "CHƯƠNG 1"),
+            "chapter_title": meta.get("chapter_title", ""),
             "title": meta.get("title", ""),
             "short_title": meta.get("short_title", meta.get("title", "")),
             "pill_label": meta.get("pill_label", f"{meta.get('code', '')} · {meta.get('short_title', meta.get('title', ''))}"),
-            "filename": meta.get("filename", ""),
             "description": meta.get("description", ""),
+            "prerequisites": meta.get("prerequisites", ""),
+            "dependents": meta.get("dependents", ""),
+            "placement_risk": meta.get("placement_risk", ""),
+            "continuity_bridge": meta.get("continuity_bridge", ""),
             "slides": slides_map,
             "beats": beats_list,
         }
@@ -221,6 +229,20 @@ class CourseIntegrityAuditor:
             sidebar_css = sidebar_css_path.read_text(encoding="utf-8", errors="ignore")
             if "body.in-iframe .ksb-brand-bar" not in sidebar_css:
                 errors.append("Missing 'body.in-iframe .ksb-brand-bar' anti-duplication rule in player_sidebar_layout.css")
+
+        # 3b. Verify Stage Pedagogy Card & 4 Theory Type 1 Visual Layouts in simulator_overrides.css
+        overrides_css_path = root / "assets" / "css" / "simulator_overrides.css"
+        if overrides_css_path.exists():
+            overrides_css = overrides_css_path.read_text(encoding="utf-8", errors="ignore")
+            for required_token in (
+                "#kudo-stage-pedagogy-card",
+                ".k-vh-flow",
+                ".k-vh-compare-grid",
+                ".k-vh-timeline",
+                ".k-vh-anatomy-grid",
+            ):
+                if required_token not in overrides_css:
+                    warnings.append(f"Missing visual pedagogy rule '{required_token}' in simulator_overrides.css")
 
         # 4. Verify lessons, pedagogical metadata, slides, sessions, and audio references
         manifest_path = root / "config" / "course_manifest.json"

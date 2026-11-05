@@ -1,0 +1,31 @@
+{
+  "lesson_slug": "lesson_08",
+  "filename": "lesson_08.html",
+  "legacy_alias": "",
+  "code": "BÀI 8",
+  "chapter_number": 2,
+  "chapter_code": "CHƯƠNG 2",
+  "chapter_title": "Định dạng Dữ liệu, Ký hiệu @ & Hồ sơ Cá nhân hóa",
+  "title": "Quản trị Trí nhớ Dự án Dài hạn & Sổ Bàn giao Giữa Các Phiên Chat",
+  "short_title": "Trí nhớ Dự án & Sổ Bàn giao",
+  "pill_label": "Bài 8 · Trí nhớ & Bàn giao",
+  "description": "Khắc phục nhược điểm 'quên ngữ cảnh' khi cuộc trò chuyện quá dài bằng quy trình chốt Sổ bàn giao công việc (ban_giao_cong_viec.md) cuối mỗi ca và nạp lại trong 5 giây ở phiên chat mới.",
+  "prerequisites": "Bài 6 (Đính kèm tệp bằng @) & Bài 7 (Cá nhân hóa bằng @troly.md).",
+  "dependents": "Chương 3 (Tự động hóa hoàn toàn việc nạp ngữ cảnh và quy trình bằng kiến trúc .agent/).",
+  "placement_risk": "0% Rủi ro — Giải quyết triệt để nỗi sợ mất lịch sử làm việc khi mở cửa sổ chat mới của học viên.",
+  "continuity_bridge": "Kết thúc Chương 2, học viên đã biết đính kèm @troly.md và @ban_giao_cong_viec.md thủ công. Sang Chương 3 (Bài 9), chúng ta sẽ nâng cấp lên thư mục .agent để AI tự động nhớ mà không cần gõ @ mỗi lần!",
+  "slide_ids": [
+    "s1"
+  ],
+  "session_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "b6"
+  ],
+  "beats_count": 6,
+  "total_duration_sec": 68.0,
+  "duration_formatted": "01:08"
+}

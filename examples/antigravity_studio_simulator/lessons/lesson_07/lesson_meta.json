@@ -1,0 +1,31 @@
+{
+  "lesson_slug": "lesson_07",
+  "filename": "lesson_07.html",
+  "legacy_alias": "",
+  "code": "BÀI 7",
+  "chapter_number": 2,
+  "chapter_code": "CHƯƠNG 2",
+  "chapter_title": "Định dạng Dữ liệu, Ký hiệu @ & Hồ sơ Cá nhân hóa",
+  "title": "Xây dựng Hồ sơ Cá nhân hóa @troly.md Để AI Nhớ Phong cách Của Bạn",
+  "short_title": "Hồ sơ Cá nhân hóa @troly.md",
+  "pill_label": "Bài 7 · Hồ sơ @troly.md",
+  "description": "Thiết lập tệp hồ sơ cá nhân @troly.md chứa thông tin vai trò, phong cách hành văn, đối tượng độc giả và các từ cấm kỵ để Trợ lý AI luôn viết đúng ý bạn mà không cần nhắc lại.",
+  "prerequisites": "Bài 5 (Biết soạn thảo tệp .md) & Bài 6 (Biết dùng ký hiệu @ để đính kèm tệp vào câu lệnh).",
+  "dependents": "Bài 8 (Kết hợp @troly.md khi lập sổ bàn giao), Bài 9 (Nâng cấp từ @troly.md lên .agent/rules/ tự động).",
+  "placement_risk": "0% Rủi ro — Học viên bắt đầu cá nhân hóa AI bằng một tệp @troly.md đơn giản ngoài thư mục gốc trước khi bước vào kiến trúc .agent/ ở Chương 3.",
+  "continuity_bridge": "Sau khi có hồ sơ cá nhân @troly.md ở Bài 7, Bài 8 sẽ hướng dẫn cách tạo Sổ bàn giao công việc (Project Memory) để AI không bao giờ quên tiến độ dự án qua các ngày làm việc.",
+  "slide_ids": [
+    "s1"
+  ],
+  "session_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "b6"
+  ],
+  "beats_count": 6,
+  "total_duration_sec": 69.4,
+  "duration_formatted": "01:09"
+}

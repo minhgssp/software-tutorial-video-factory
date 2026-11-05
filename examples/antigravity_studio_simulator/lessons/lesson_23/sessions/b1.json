@@ -1,0 +1,18 @@
+{
+  "id": "b1",
+  "label": "1. [Lý thuyết Kiểu 1] Cơ chế đối chiếu chéo rà soát rủi ro hợp đồng",
+  "duration": 15.83,
+  "pose": 1,
+  "mode": "theory",
+  "pedagogy_type": "theory_type_1",
+  "slide": "s1",
+  "hl": [
+    "s1_c1",
+    "s1_c2",
+    "s1_c3",
+    "s1_call"
+  ],
+  "caption": "Trong <strong>Bài 23 — Tình huống Thực chiến 3</strong>, chúng ta ứng dụng trợ lý AI vào một nghiệp vụ đòi hỏi sự tỉ mỉ tuyệt đối: Rà soát hợp đồng kinh tế và quy chế nội bộ. Khung đối sánh trên màn hình chỉ ra cách dùng quy chế chuẩn của công ty để bắt lỗi bản dự thảo do đối tác gửi sang.",
+  "audio_src": "audio/lesson_23/b1.mp3",
+  "audio_duration": 15.18
+}

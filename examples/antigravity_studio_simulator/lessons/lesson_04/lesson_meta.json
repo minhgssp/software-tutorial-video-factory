@@ -1,11 +1,19 @@
 {
   "lesson_slug": "lesson_04",
-  "filename": "lesson_04_vuot_qua_con_ngop_hoi_nguoc_ai.html",
+  "filename": "lesson_04.html",
+  "legacy_alias": "lesson_05_taskflow_start_1_1_bay_phim_space.html",
   "code": "BÀI 4",
-  "title": "Làm chủ Giao diện & Hỏi Trợ lý AI",
-  "short_title": "Làm chủ Giao diện & Hỏi AI",
-  "pill_label": "Bài 4 · Làm chủ Giao diện",
-  "description": "Ba cách xử lý khi AI tạm dừng chờ lệnh, phím tắt khôi phục nhanh giao diện (Ctrl + B), bật chế độ xem trực quan và hỏi trực tiếp AI.",
+  "chapter_number": 1,
+  "chapter_code": "CHƯƠNG 1",
+  "chapter_title": "Khởi động Chuẩn & Làm chủ Giao diện",
+  "title": "Bật Quyền Tự chủ Turbo & Bài Thực hành Đầu tiên Với /start-1-1",
+  "short_title": "Chế độ Turbo & Lệnh /start-1-1",
+  "pill_label": "Bài 4 · Turbo & /start-1-1",
+  "description": "Hiểu 4 cấp độ phân quyền tự chủ (Request Review, Default, Auto, Turbo), bật chế độ Turbo trong Settings và hoàn thành bài thực hành đầu tiên với lệnh gạch chéo /start-1-1 trong dự án mẫu TaskFlow.",
+  "prerequisites": "Bài 2 (Đã mở thư mục dự án) & Bài 3 (Đã hiểu vì sao nút Accept xuất hiện khi chưa bật Turbo).",
+  "dependents": "Bài 5..Bài 24 (Toàn bộ các bài thực hành sau đều chạy mượt nhờ đã bật quyền tự chủ Turbo ở Bài 4).",
+  "placement_risk": "0% Rủi ro — Học viên chỉ làm quen với thao tác gõ dấu / để gọi bài học có sẵn /start-1-1, chưa bị nhồi nhét lý thuyết thiết kế hệ thống .agent phức tạp.",
+  "continuity_bridge": "Kết thúc Chương 1, học viên đã tự chạy thành công bài học đầu tiên. Sang Chương 2 (Bài 5), chúng ta sẽ tìm hiểu sâu về 2 định dạng tệp cốt lõi xuất hiện trong dự án là .md và .csv.",
   "slide_ids": [
     "s1"
   ],
@@ -18,6 +26,6 @@
     "b6"
   ],
   "beats_count": 6,
-  "total_duration_sec": 64.3,
-  "duration_formatted": "01:04"
+  "total_duration_sec": 71.5,
+  "duration_formatted": "01:12"
 }

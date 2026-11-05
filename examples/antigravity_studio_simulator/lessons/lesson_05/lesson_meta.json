@@ -1,11 +1,19 @@
 {
   "lesson_slug": "lesson_05",
-  "filename": "lesson_05_taskflow_start_1_1_bay_phim_space.html",
+  "filename": "lesson_05.html",
+  "legacy_alias": "lesson_02_turbo_mode_and_workspace.html",
   "code": "BÀI 5",
-  "title": "Thực hành Dự án với Lệnh Gạch chéo",
-  "short_title": "Thực hành Lệnh Gạch chéo /",
-  "pill_label": "Bài 5 · Thực hành Lệnh /",
-  "description": "Làm quen bối cảnh dự án mẫu TaskFlow, gọi quy trình bằng dấu gạch chéo /start-1-1 đúng cách và trải nghiệm AI dẫn dắt từng bước.",
+  "chapter_number": 2,
+  "chapter_code": "CHƯƠNG 2",
+  "chapter_title": "Định dạng Dữ liệu, Ký hiệu @ & Hồ sơ Cá nhân hóa",
+  "title": "Định dạng Văn bản .md, Bảng Dữ liệu .csv & Tiện ích Office Viewer",
+  "short_title": "Định dạng .md, .csv & Office Viewer",
+  "pill_label": "Bài 5 · .md, .csv & Office Viewer",
+  "description": "Hiểu vì sao Trợ lý AI đọc tệp .md (Markdown) và .csv nhanh và chính xác hơn Word/Excel truyền thống; thực hành cài đặt tiện ích Office Viewer trong Extensions để xem bảng biểu trực quan.",
+  "prerequisites": "Chương 1 (Đã biết mở thư mục dự án và chuyển đổi chế độ xem ở cột giữa Antigravity IDE).",
+  "dependents": "Bài 6 (Đính kèm tệp @COMPANY.md và @sales_data.csv), Bài 7 (Viết hồ sơ @troly.md), Bài 14 (Phân tích bảng tính CSV).",
+  "placement_risk": "0% Rủi ro — Giải thích bản chất tệp .md và .csv trước khi yêu cầu học viên đính kèm hoặc chỉnh sửa các tệp này ở Bài 6 và Bài 7.",
+  "continuity_bridge": "Sau khi biết cách đọc và chỉnh sửa tệp .md, .csv đẹp mắt bằng Office Viewer ở Bài 5, Bài 6 sẽ hướng dẫn cách đính kèm các tệp này vào câu lệnh cho AI bằng ký hiệu @.",
   "slide_ids": [
     "s1"
   ],
@@ -18,6 +26,6 @@
     "b6"
   ],
   "beats_count": 6,
-  "total_duration_sec": 63.7,
-  "duration_formatted": "01:04"
+  "total_duration_sec": 76.8,
+  "duration_formatted": "01:17"
 }

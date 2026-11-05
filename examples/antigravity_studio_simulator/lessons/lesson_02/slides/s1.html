@@ -1,29 +1,71 @@
 <div>
-                <div class="k-slide-header">
-                  <span class="k-slide-kicker">Phần 2 · Thiết lập không gian làm việc</span>
-                  <span class="k-slide-step">Cảnh 1 / 2 · Lý thuyết</span>
-                </div>
-                <div class="k-slide-h1">Quy tắc mở cả thư mục dự án và ưu thế của định dạng Markdown, CSV</div>
-                <div class="k-slide-sub">Tránh sai lầm mở từng tệp rời rạc khiến trợ lý AI không nhìn thấy các tài liệu liên quan trong dự án.</div>
-              </div>
-              <div class="k-grid-2">
-                <div class="k-card k-step-item" id="sl-c1" data-order="1">
-                  <span class="k-card-tag" style="background:#DBEAFE; color:#1E40AF;">Quy tắc số 1 · Open Folder</span>
-                  <h3>Luôn mở cả thư mục dự án</h3>
-                  <ul>
-                    <li><strong>Không dùng Open File lẻ tẻ:</strong> Mở một tệp đơn lẻ giống như đưa cho trợ lý đúng một tờ giấy rời, họ không biết dữ liệu hay quy tắc nằm ở đâu.</li>
-                    <li><strong>Luôn chọn File -> Open Folder:</strong> Đưa toàn bộ thư mục <code>antigravity_course_vn</code> vào phần mềm để AI tự động đối chiếu các tệp với nhau.</li>
-                  </ul>
-                </div>
-                <div class="k-card k-step-item" id="sl-c2" data-order="2">
-                  <span class="k-card-tag" style="background:#FCE7F3; color:#9D174D;">Quy tắc số 2 · Markdown và CSV</span>
-                  <h3>Tại sao ưu tiên .md và .csv cho dữ liệu nguồn?</h3>
-                  <ul>
-                    <li><strong>Markdown (<code>.md</code>) cho văn bản:</strong> Nhẹ, phân cấp tiêu đề rõ ràng bằng dấu <code>#</code>, giúp AI đọc hiểu cấu trúc nhanh và chính xác.</li>
-                    <li><strong>CSV (<code>.csv</code>) cho bảng số liệu:</strong> Bảng dữ liệu thuần túy ngăn cách bằng dấu phẩy. Nhờ tiện ích <strong>Office Viewer</strong>, bạn vẫn xem và sửa bảng kẻ ô trực quan ngay trong IDE.</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="k-callout k-step-item" id="sl-c3" data-order="3">
-                <span><strong>Mẹo thực hành:</strong> Cài đặt tiện ích <strong>Office Viewer</strong> trong mục Extensions của Antigravity IDE để xem tệp <code>.md</code> và <code>.csv</code> trực quan như Google Docs và Excel.</span>
-              </div>
+      <div class="k-slide-header">
+        <span class="k-slide-kicker">CHƯƠNG 1 · BÀI 2 · LÝ THUYẾT KIỂU 1 ( NGUYÊN LÝ &amp; TRỰC QUAN )</span>
+        <span class="k-slide-step">Bố cục FLOWCHART · Nhịp 1/6</span>
+      </div>
+      <div class="k-slide-h1">Ba nguyên tắc an toàn ổ cứng: Giải nén .zip, Mở đúng thư mục và Đồng bộ 1-1</div>
+      <div class="k-slide-sub">Tránh 100% lỗi mất quyền ghi tệp hoặc làm treo máy tính ngay từ buổi học đầu tiên.</div>
+    </div>
+    
+        <div class="k-visual-hero-box k-layout-flowchart">
+          <div class="k-viz-header">
+            <span class="k-viz-badge">📊 SƠ ĐỒ LUỒNG NGUYÊN LÝ</span>
+            <span class="k-viz-title">Quy trình 3 bước nạp thư mục dự án chuẩn xác vào Antigravity IDE</span>
+          </div>
+          <svg class="k-flow-svg" viewBox="0 0 860 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Quy trình 3 bước nạp thư mục dự án chuẩn xác vào Antigravity IDE">
+            <path d="M262 48 H298" stroke="#EA580C" stroke-width="3" stroke-linecap="round"/>
+            <polygon points="295,42 307,48 295,54" fill="#EA580C"/>
+            <path d="M562 48 H598" stroke="#15803D" stroke-width="3" stroke-linecap="round"/>
+            <polygon points="595,42 607,48 595,54" fill="#15803D"/>
+            <rect x="8" y="8" width="252" height="80" rx="14" fill="#FFF7ED" stroke="#FDBA74" stroke-width="2"/>
+            <text x="134" y="34" text-anchor="middle" fill="#9A3412" font-size="13" font-weight="800">1. GIẢI NÉN .ZIP</text>
+            <text x="134" y="56" text-anchor="middle" fill="#1E293B" font-size="14" font-weight="700">Chuột phải -> Extract All</text>
+            <text x="134" y="76" text-anchor="middle" fill="#475569" font-size="12">Tạo thư mục thật trên ổ cứng</text>
+            <rect x="308" y="8" width="252" height="80" rx="14" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+            <text x="434" y="34" text-anchor="middle" fill="#B45309" font-size="13" font-weight="800">2. FILE -> OPEN FOLDER</text>
+            <text x="434" y="56" text-anchor="middle" fill="#1E293B" font-size="14" font-weight="700">Chọn antigravity_course_vn</text>
+            <text x="434" y="76" text-anchor="middle" fill="#475569" font-size="12">Cấm mở cả ổ đĩa C:\ hoặc D:\</text>
+            <rect x="608" y="8" width="244" height="80" rx="14" fill="#DCFCE7" stroke="#4ADE80" stroke-width="2"/>
+            <text x="730" y="34" text-anchor="middle" fill="#166534" font-size="13" font-weight="800">3. ĐỒNG BỘ 1-1</text>
+            <text x="730" y="56" text-anchor="middle" fill="#1E293B" font-size="14" font-weight="700">Reveal in File Explorer</text>
+            <text x="730" y="76" text-anchor="middle" fill="#15803D" font-size="12">Tệp trong IDE chính là tệp trên máy</text>
+          </svg>
+        </div>
+        
+    <div class="k-grid-3">
+      
+        <div class="k-card k-step-item k-hl" id="s1_c1" data-order="1">
+          <div class="k-card-top-row">
+            <span class="k-card-tag" style="background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;">NGUYÊN TẮC 1 · GIẢI NÉN</span>
+            <span class="k-illus-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EA580C" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M8 10h8M8 14h5"/></svg></span>
+          </div>
+          <h3>Luôn Extract All tệp .zip trước</h3>
+          <p>Nếu mở trực tiếp bên trong tệp nén .zip, Windows chỉ tạo thư mục tạm chỉ đọc khiến trợ lý AI không thể lưu kết quả.</p>
+          <div class="k-card-mini-note">📦 Giải nén ra thư mục thường trước khi học</div>
+        </div>
+        
+        <div class="k-card k-step-item k-hl" id="s1_c2" data-order="2">
+          <div class="k-card-top-row">
+            <span class="k-card-tag" style="background:#E0F2FE; color:#0369A1; border:1px solid #7DD3FC;">NGUYÊN TẮC 2 · OPEN FOLDER</span>
+            <span class="k-illus-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
+          </div>
+          <h3>Mở trọn thư mục, không mở tệp lẻ</h3>
+          <p>Luôn vào File chọn Open Folder và trỏ đúng vào thư mục dự án con (như antigravity_course_vn), không mở cả ổ cứng.</p>
+          <div class="k-card-mini-note">📂 Giúp AI nhìn thấy toàn bộ tài liệu liên quan</div>
+        </div>
+        
+        <div class="k-card k-step-item k-hl" id="s1_c3" data-order="3">
+          <div class="k-card-top-row">
+            <span class="k-card-tag" style="background:#DCFCE7; color:#15803D; border:1px solid #86EFAC;">NGUYÊN TẮC 3 · ĐỒNG BỘ 1-1</span>
+            <span class="k-illus-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+          </div>
+          <h3>Tệp trên IDE là tệp thật trên máy</h3>
+          <p>Mọi tệp thêm, sửa, xóa trong cột Explorer của phần mềm đều phản chiếu tức thì ngoài Windows File Explorer.</p>
+          <div class="k-card-mini-note">🔍 Kiểm chứng bằng Reveal in File Explorer</div>
+        </div>
+        
+    </div>
+    <div class="k-callout k-step-item k-hl" id="s1_call" data-order="4">
+      <span>💡</span>
+      <div><strong>Cảnh báo an toàn:</strong> Tuyệt đối không chọn <strong>Open Folder</strong> vào toàn bộ ổ đĩa <code>C:\</code> hay <code>Desktop</code> chứa hàng vạn tệp cá nhân.</div>
+    </div>

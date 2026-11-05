@@ -1,0 +1,20 @@
+{
+  "id": "b3",
+  "label": "3. [Lý thuyết Kiểu 2] Kỹ thuật gắn trích dẫn nguồn [Tên_tệp#Dòng] khi tóm tắt",
+  "duration": 12.09,
+  "pose": 3,
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Tóm tắt Có Trích dẫn Nguồn",
+  "pedagogy_title": "Mỗi con số trong bản tóm tắt đều phải ghi rõ lấy từ tệp nào",
+  "pedagogy_note": "Yêu cầu AI luôn ghi kèm [Nguồn: @COMPANY.md] bên cạnh mỗi số liệu để đảm bảo kiểm chứng được 100%.",
+  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › tom_tat_ho_so_taskflow.md', editorTitle:'📑 tom_tat_ho_so_taskflow.md — Bản Tóm Tắt Đa Tầng Có Dẫn Nguồn', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">BẢN ĐỒ &amp; TÓM TẮT ĐIỀU HÀNH HỒ SƠ TASKFLOW</h3><ul><li><strong>Quy mô nhân sự &amp; Sản phẩm:</strong> 45 nhân sự, nền tảng SaaS quản lý công việc B2B <em>[Nguồn: @COMPANY.md#L1-L8]</em>.</li><li><strong>Thách thức trọng tâm Quý 2:</strong> Tỷ lệ khách hàng rời bỏ (Churn Rate) ở nhóm SMB cần giảm 30% <em>[Nguồn: @COMPANY.md#L12-L18]</em>.</li><li><strong>Dữ liệu kinh doanh đính kèm:</strong> Bảng doanh thu chi tiết theo khu vực và gói dịch vụ <em>[Nguồn: @sales_data.csv]</em>.</li></ul></div>'});",
+  "focus_selectors": [
+    "#editor-canvas"
+  ],
+  "cursor_selector": "#editor-canvas",
+  "cursor_label": "Mỗi ý tóm tắt đều gắn nhãn [Nguồn: @Tên_tệp]",
+  "caption": "Trên màn hình cột giữa là chuẩn mực của một bản tóm tắt chuyên nghiệp: Cuối mỗi gạch đầu dòng đều ghi rõ <code>[Nguồn: @COMPANY.md]</code> kèm số dòng để khi sếp hỏi con số này lấy ở đâu, anh chị chỉ ra được ngay lập tức.",
+  "audio_src": "audio/lesson_13/b3.mp3",
+  "audio_duration": 11.44
+}

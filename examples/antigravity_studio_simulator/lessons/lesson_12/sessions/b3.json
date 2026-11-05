@@ -1,0 +1,21 @@
+{
+  "id": "b3",
+  "label": "3. [Lý thuyết Kiểu 2] Cơ chế lệnh /learn tự động cập nhật .agent/rules/",
+  "duration": 12.33,
+  "pose": 3,
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Cơ chế Tự Học (/learn)",
+  "pedagogy_title": "Cách lệnh /learn biến lời góp ý của bạn thành quy tắc vĩnh viễn",
+  "pedagogy_note": "Khi bạn sửa một lỗi trình bày của AI và gõ /learn, AI sẽ tự động mở tệp trong .agent/rules/ để ghi thêm dòng lưu ý mới.",
+  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'.agent › rules › quy_chuan_van_phong.md (Vừa được /learn cập nhật)', editorTitle:'🧬 .agent/rules/quy_chuan_van_phong.md — Đã thêm bài học mới', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">CẬP NHẬT TỰ ĐỘNG BỞI LỆNH /LEARN</h3><div style=\"background:#ecfdf5;border-left:4px solid #10b981;padding:10px 14px;font-size:13px;\"><strong>+ Quy tắc số 4 (Mới đúc kết):</strong> Mọi kế hoạch mở rộng đại lý B2B của TaskFlow bắt buộc phải có cột <em>Chiết khấu theo bậc doanh số</em> và <em>Cam kết hỗ trợ kỹ thuật 24/7</em>.</div></div>', userMsg:'/learn Hãy nhớ rằng mọi bảng chính sách đại lý B2B đều phải có cột chiết khấu theo bậc và cam kết hỗ trợ 24/7 nhé.', aiMsg:'Đã thực thi <code>/learn</code>! Tôi đã ghi bổ sung Quy tắc số 4 vào tệp <code>.agent/rules/quy_chuan_van_phong.md</code> để áp dụng cho mọi lần sau.'});",
+  "focus_selectors": [
+    "#editor-canvas",
+    "#ide-chat-messages"
+  ],
+  "cursor_selector": "#editor-canvas",
+  "cursor_label": "Lệnh /learn tự động ghi thêm Quy tắc số 4 vào Rules",
+  "caption": "Và đặc biệt nhất là lệnh <code>/learn</code> trên màn hình: Mỗi khi anh chị nhắc nhở trợ lý điều gì, chỉ cần gõ <code>/learn</code> là trợ lý tự động mở tệp trong <code>.agent/rules/</code> ra ghi thêm quy tắc mới để không bao giờ quên.",
+  "audio_src": "audio/lesson_12/b3.mp3",
+  "audio_duration": 11.68
+}

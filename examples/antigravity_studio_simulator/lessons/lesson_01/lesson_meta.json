@@ -1,14 +1,21 @@
 {
   "lesson_slug": "lesson_01",
-  "filename": "lesson_01_chatbot_vs_agent.html",
+  "filename": "lesson_01.html",
+  "legacy_alias": "lesson_01_chatbot_vs_agent.html",
   "code": "BÀI 1",
-  "title": "Tư duy & Giao diện Trợ lý AI",
-  "short_title": "Tư duy & Giao diện AI",
-  "pill_label": "Bài 1 · Tư duy & Giao diện",
-  "description": "Phân biệt hỏi đáp trên web với Trợ lý AI làm việc trong thư mục máy tính, làm quen Antigravity 2.0, Antigravity IDE và 5 mô hình AI.",
+  "chapter_number": 1,
+  "chapter_code": "CHƯƠNG 1",
+  "chapter_title": "Khởi động Chuẩn & Làm chủ Giao diện",
+  "title": "Tư duy Trợ lý AI trên Máy tính & 2 Phần mềm Cốt lõi",
+  "short_title": "Tư duy AI & 2 Phần mềm",
+  "pill_label": "Bài 1 · Tư duy & 2 Phần mềm",
+  "description": "Phân biệt hỏi đáp trên trình duyệt web với Trợ lý AI làm việc trực tiếp trong thư mục máy tính; nắm vững vai trò của Antigravity 2.0, Antigravity IDE và 5 mô hình AI.",
+  "prerequisites": "Không yêu cầu kiến thức nền tảng (Bài mở đầu toàn khóa).",
+  "dependents": "Bài 2 (Giải nén & Mở thư mục dự án), Bài 3 (Làm chủ giao diện 3 cột), Bài 4 (Bật quyền tự chủ Turbo).",
+  "placement_risk": "0% Rủi ro — Cuối Bài 1 khi mở IDE sẽ ở màn hình chào mừng (Welcome Screen) chưa mở thư mục, khớp 100% với Bài 2 học giải nén .zip và Open Folder.",
+  "continuity_bridge": "Sau khi mở cửa sổ Antigravity IDE ở trạng thái màn hình chào mừng cuối Bài 1, Bài 2 sẽ hướng dẫn giải nén học liệu .zip và bấm Open Folder nạp dự án vào.",
   "slide_ids": [
-    "s1",
-    "s2"
+    "s1"
   ],
   "session_order": [
     "b1",
@@ -16,13 +23,9 @@
     "b3",
     "b4",
     "b5",
-    "b6",
-    "b7",
-    "b8",
-    "b9",
-    "b10"
+    "b6"
   ],
-  "beats_count": 10,
-  "total_duration_sec": 126.5,
-  "duration_formatted": "02:06"
+  "beats_count": 6,
+  "total_duration_sec": 73.2,
+  "duration_formatted": "01:13"
 }

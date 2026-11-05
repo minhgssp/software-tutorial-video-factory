@@ -1,0 +1,31 @@
+{
+  "lesson_slug": "lesson_20",
+  "filename": "lesson_20.html",
+  "legacy_alias": "",
+  "code": "BÀI 20",
+  "chapter_number": 5,
+  "chapter_code": "CHƯƠNG 5",
+  "chapter_title": "Sản xuất Nội dung, Thiết kế Slide & Báo cáo Trực quan",
+  "title": "Xuất bản Slide Thuyết trình (HTML/PPTX) & Bảng điều khiển Báo cáo Web",
+  "short_title": "Xuất bản Slide & Báo cáo Web",
+  "pill_label": "Bài 20 · Slide & Báo cáo Web",
+  "description": "Biến tệp báo cáo Markdown khô khan thành bộ Slide thuyết trình chuẩn nguyên tắc 'Tiêu đề Hành động' (Action Title, dưới 10 dòng mỗi trang) và trang Bảng điều khiển Web tương tác gửi trực tiếp cho Ban Giám đốc.",
+  "prerequisites": "Bài 14 (Báo cáo doanh thu Quý 1), Bài 18 (Nội dung chiến dịch) & Bài 19 (Thiết kế trực quan).",
+  "dependents": "Chương 6 (Vận dụng toàn bộ kỹ năng từ Chương 1 đến Chương 5 vào 4 Tình huống Thực chiến Toàn diện).",
+  "placement_risk": "0% Rủi ro — Học viên đã có sẵn toàn bộ số liệu và nội dung từ các bài trước nên chỉ tập trung vào kỹ thuật xuất bản Slide và Dashboard.",
+  "continuity_bridge": "Kết thúc Chương 5, học viên đã nắm trọn bộ kỹ năng văn phòng từ dữ liệu đến thuyết trình. Sang Chương 6 (Bài 21-24), chúng ta sẽ giải quyết 4 đại dự án thực chiến từ đầu đến cuối!",
+  "slide_ids": [
+    "s1"
+  ],
+  "session_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "b6"
+  ],
+  "beats_count": 6,
+  "total_duration_sec": 74.1,
+  "duration_formatted": "01:14"
+}

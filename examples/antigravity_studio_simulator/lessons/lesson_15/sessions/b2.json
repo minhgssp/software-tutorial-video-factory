@@ -1,0 +1,22 @@
+{
+  "id": "b2",
+  "label": "2. [Lý thuyết Kiểu 2] Quan sát các luồng tác vụ (Threads) trên Antigravity 2.0",
+  "duration": 12.25,
+  "pose": 2,
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Quản lý Đa Luồng (Multi-Threads)",
+  "pedagogy_title": "Theo dõi nhiều luồng công việc đang chạy ở cột trái Antigravity 2.0",
+  "pedagogy_note": "Mỗi dòng trong mục Conversation / Threads ở cột trái là một chuyên viên AI đang xử lý một nhiệm vụ riêng.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); closeSettingsModal(); loadAgy2Thread('main');",
+  "focus_selectors": [
+    "#agy2-left-sb",
+    "#th-main",
+    "#th-5balance"
+  ],
+  "cursor_selector": "#th-5balance",
+  "cursor_label": "Chuyển đổi nhanh giữa các luồng công việc song song",
+  "caption": "Nhìn vào cột bên trái của <strong>Antigravity 2.0</strong> trên màn hình: Anh chị có thể mở nhiều luồng hội thoại cùng lúc. Trong khi luồng số 1 đang phân tích doanh thu, chúng ta bấm sang luồng số 2 để giao tiếp việc rà soát nhân sự.",
+  "audio_src": "audio/lesson_15/b2.mp3",
+  "audio_duration": 11.6
+}

@@ -1,0 +1,21 @@
+{
+  "id": "b6",
+  "label": "6. [Thực hành B3/3] Nghiệm thu bộ Slide hoàn chỉnh & Bước vào Chương 6",
+  "duration": 15.47,
+  "pose": 6,
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Nghiệm thu Chương 5",
+  "pedagogy_title": "Bước 3: Duyệt bộ Slide 5 trang sắc nét và sẵn sàng cho 4 Dự án Thực chiến",
+  "pedagogy_note": "Nghiệm thu: Bộ slide_trinh_hdqt_q2.html hoàn tất 5/5 trang. Tiếp theo: Chương 6 (Bài 21-24) thực chiến 4 tình huống lớn!",
+  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › slide_trinh_hdqt_q2.html (Hoàn tất 5/5 Slide)', editorTitle:'📽️ slide_trinh_hdqt_q2.html — Đã sẵn sàng trình chiếu trước HĐQT', editorHtml:'<div style=\"padding:18px;background:#fbf8f3;border:2px solid #15803d;border-radius:12px;\"><h3 style=\"color:#15803d;margin-top:0;\">✅ ĐÃ XUẤT BẢN BỘ SLIDE 5 TRANG CHUẨN HỘI ĐỒNG QUẢN TRỊ</h3><p>Toàn bộ 5 trang slide đều đạt chuẩn: <strong>Tiêu đề Kết luận có số liệu + Tối đa 3 thẻ thông tin + Không quá 10 dòng/trang</strong>. Có thể mở trình chiếu toàn màn hình bằng bất kỳ trình duyệt nào!</p></div>', userMsg:'@de_an_tong_the_q2.md @bao_cao_doanh_thu_q1.md Hãy xuất bản bộ Slide thuyết trình 5 trang vào tệp slide_trinh_hdqt_q2.html', aiMsg:'Đã hoàn tất xuất bản bộ Slide 5 trang tại <code>slide_trinh_hdqt_q2.html</code>! Chúc mừng bạn đã làm chủ trọn vẹn Chương 5.'});",
+  "focus_selectors": [
+    "#editor-canvas",
+    "#ide-chat-messages"
+  ],
+  "cursor_selector": "#editor-canvas",
+  "cursor_label": "Bước 3: Hoàn tất bộ Slide 5 trang trình HĐQT!",
+  "caption": "Ở <strong>Bước 3</strong>, bộ Slide 5 trang đã xuất bản hoàn chỉnh, mở bằng bất kỳ máy tính nào cũng đẹp mắt mà không sợ lỗi phông chữ. Chúc mừng anh chị đã hoàn thành <strong>Chương 5</strong>! Bây giờ chúng ta bước vào chặng cuối cùng — <strong>Chương 6 (Bài 21 đến Bài 24)</strong> với 4 tình huống thực chiến toàn diện!",
+  "audio_src": "audio/lesson_20/b6.mp3",
+  "audio_duration": 14.82
+}

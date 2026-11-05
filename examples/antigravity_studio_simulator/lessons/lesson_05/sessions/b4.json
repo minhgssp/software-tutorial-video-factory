@@ -1,19 +1,21 @@
 {
   "id": "b4",
-  "label": "4. Gọi quy trình bằng dấu /",
-  "duration": 8.57,
+  "label": "4. [Thực hành B1/3] Bối cảnh & Kiểm tra tiện ích Office Viewer",
+  "duration": 11.21,
+  "pose": 4,
   "mode": "sim",
-  "pose": 6,
-  "surface": "ide",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 1/3 · Bối cảnh & Cài đặt",
+  "pedagogy_title": "Bối cảnh: Phòng kinh doanh gửi bảng doanh thu sales_data.csv cần đọc ngay",
+  "pedagogy_note": "Bước 1: Bấm biểu tượng Extensions ở thanh trái, chọn Office Viewer và xác nhận trạng thái đã cài đặt (Installed).",
+  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); openIdeExtensionsView(); kudoShowKeyHud('Phím tắt mở nhanh Extensions: <kbd>Ctrl + Shift + X</kbd>');",
   "focus_selectors": [
-    "#ide-chat-box-card",
-    "#ide-popup-menu"
+    "#act-btn-extensions",
+    "#ide-sb-extensions-view"
   ],
-  "focus_pad": 8,
-  "cursor_selector": "#ide-popup-menu .popup-item[data-cmd='/start-1-1']",
-  "cursor_label": "Bảng gợi ý hiện /start-1-1",
-  "caption": "Tiếp theo, tại ô nhập lệnh bên phải, khi bạn vừa gõ <code>/start</code>, phần mềm sẽ tự động bật bảng gợi ý phía trên hiển thị quy trình <code>/start-1-1</code>.",
-  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); currentWorkspaceTreeMode='antigravity_course_vn'; renderFileTree(); openFileInEditor('1.1_Welcome.md'); kudoOpenStartWorkflowPopup();",
+  "cursor_selector": "#act-btn-extensions",
+  "cursor_label": "Bước 1: Mở Extensions kiểm tra Office Viewer",
+  "caption": "Chúng ta vào thực hành 3 bước đọc hồ sơ và bảng số liệu. Trong bối cảnh phòng kinh doanh vừa gửi bảng doanh thu, ở <strong>Bước 1</strong>, anh chị bấm vào biểu tượng <strong>Extensions</strong> để xác nhận tiện ích <strong>Office Viewer</strong> đã sẵn sàng.",
   "audio_src": "audio/lesson_05/b4.mp3",
-  "audio_duration": 7.92
+  "audio_duration": 10.56
 }

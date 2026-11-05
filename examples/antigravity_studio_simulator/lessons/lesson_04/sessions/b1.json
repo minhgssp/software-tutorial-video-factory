@@ -1,17 +1,18 @@
 {
   "id": "b1",
-  "label": "1. Ba cách xử lý khi AI chờ lệnh",
-  "duration": 11.21,
-  "mode": "theory",
+  "label": "1. [Lý thuyết Kiểu 1] 4 mức phân quyền & Bối cảnh TaskFlow",
+  "duration": 13.98,
   "pose": 1,
+  "mode": "theory",
+  "pedagogy_type": "theory_type_1",
   "slide": "s1",
   "hl": [
-    "sl-c1"
+    "s1_c1",
+    "s1_c2",
+    "s1_c3",
+    "s1_call"
   ],
-  "focus_selectors": [
-    "#sl-c1"
-  ],
-  "caption": "Trong buổi đầu thực hành, nếu thấy AI dừng lại hoặc chạy chưa đúng ý, anh chị chỉ cần nhớ 3 thao tác: bấm nút <code>■ Stop</code> để dừng, gõ <code>Tiếp tục</code> nếu AI ngắt quãng, hoặc bấm <code>Accept</code> khi AI xin phép chạy lệnh.",
+  "caption": "Ở Bài 3, anh chị đã thấy nếu để mặc định thì AI sẽ dừng lại hỏi xin phép ở từng bước. Lộ trình trên màn hình cho thấy khi làm việc với tài liệu văn phòng trong thư mục riêng, chúng ta nên bật quyền tự chủ <strong>Turbo</strong> để trợ lý chạy một mạch tới khi ra kết quả.",
   "audio_src": "audio/lesson_04/b1.mp3",
-  "audio_duration": 10.56
+  "audio_duration": 13.33
 }

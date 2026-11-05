@@ -1,18 +1,21 @@
 {
   "id": "b6",
-  "label": "6. Thực hành mở thư mục dự án",
-  "duration": 12.01,
+  "label": "6. [Thực hành B3/3] Nghiệm thu lộ trình học trong INDEX.md",
+  "duration": 12.65,
+  "pose": 6,
   "mode": "sim",
-  "pose": 2,
-  "surface": "ide_welcome",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Nghiệm thu & Tiếp nối",
+  "pedagogy_title": "Bước 3: Mở tệp bản đồ khóa học INDEX.md ở cột giữa",
+  "pedagogy_note": "Nghiệm thu: Cột trái hiện đủ cây thư mục Module_0..Module_6, cột giữa hiển thị bản đồ INDEX.md. Tiếp theo: Bài 3 học điều khiển 3 cột & phím cứu hộ.",
+  "onEnter": "kudoHidePopovers(); closeWinFolderDialog(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); setEditorMode('wysiwyg'); openFileInEditor('INDEX.md');",
   "focus_selectors": [
-    "#win-open-folder-modal .win-dialog"
+    "#ide-file-tree",
+    "#editor-canvas"
   ],
-  "focus_pad": 8,
-  "cursor_selector": "#win-btn-select-folder",
-  "cursor_label": "Chọn thư mục antigravity_course_vn -> Select folder",
-  "caption": "Thực hành bước 1: Từ màn hình bắt đầu của Antigravity IDE, bạn bấm nút Open Folder, chọn thư mục <code>antigravity_course_vn</code> trên máy tính rồi nhấn nút Select folder để mở toàn bộ dự án.",
-  "onEnter": "kudoHidePopovers(); showIdeWelcomeScreen(); openWinFolderDialog(); selectWinFolder('antigravity_course_vn', document.getElementById('win-folder-row-agy'));",
+  "cursor_selector": "[data-file='INDEX.md']",
+  "cursor_label": "Bước 3: Đã mở thành công bản đồ INDEX.md",
+  "caption": "Ở <strong>Bước 3</strong>, anh chị bấm mở tệp <code>INDEX.md</code> để nghiệm thu toàn bộ lộ trình học tập đã hiển thị rõ ở cột giữa. Sau khi đã mở đúng thư mục, <strong>Bài 3</strong> sẽ giúp anh chị làm chủ hoàn toàn bố cục 3 cột và các phím tắt cứu hộ.",
   "audio_src": "audio/lesson_02/b6.mp3",
-  "audio_duration": 11.36
+  "audio_duration": 12.0
 }

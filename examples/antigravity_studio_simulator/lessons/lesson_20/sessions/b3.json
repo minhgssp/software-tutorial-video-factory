@@ -1,0 +1,21 @@
+{
+  "id": "b3",
+  "label": "3. [Lý thuyết Kiểu 2] Cách viết câu lệnh ép AI tuân thủ chuẩn dưới 10 dòng/slide",
+  "duration": 12.49,
+  "pose": 3,
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Kỹ thuật Giao việc Làm Slide",
+  "pedagogy_title": "Quy định rõ số trang, tiêu đề kết luận và giới hạn dòng trong câu lệnh",
+  "pedagogy_note": "Nếu không giới hạn số dòng, AI thường chép nguyên cả trang văn bản dài vào 1 slide. Hãy khóa chặt 'Tối đa 3 thẻ / slide'.",
+  "onEnter": "kudoSimScene({surface:'ide', clearChat:true, chatInput:'@de_an_tong_the_q2.md @bao_cao_doanh_thu_q1.md Hãy chuyển hóa đề án thành bộ Slide 5 trang tại tệp slide_trinh_hdqt_q2.html theo quy chuẩn: (1) Tỷ lệ 16:9 nền kem cam, (2) Tiêu đề mỗi trang là 1 câu kết luận có số liệu, (3) Tối đa 3 thẻ thông tin và dưới 10 dòng mỗi trang.'});",
+  "focus_selectors": [
+    "#ide-chat-input",
+    "#editor-canvas"
+  ],
+  "cursor_selector": "#ide-chat-input",
+  "cursor_label": "Khóa chặt 3 tiêu chuẩn thiết kế Slide trong câu lệnh",
+  "caption": "Khi giao việc làm slide ở cột phải, anh chị nhớ ghi rõ 3 ràng buộc vàng: Một là tỷ lệ 16:9 màu kem cam, hai là tiêu đề phải có số liệu kết luận, và ba là mỗi trang tối đa 3 thẻ thông tin dưới 10 dòng.",
+  "audio_src": "audio/lesson_20/b3.mp3",
+  "audio_duration": 11.84
+}

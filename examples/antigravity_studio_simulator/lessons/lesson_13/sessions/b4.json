@@ -1,0 +1,21 @@
+{
+  "id": "b4",
+  "label": "4. [Thực hành B1/3] Bối cảnh & Yêu cầu AI quét danh mục hồ sơ",
+  "duration": 10.81,
+  "pose": 4,
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 1/3 · Quét Bản đồ Hồ sơ",
+  "pedagogy_title": "Bối cảnh: Chuẩn bị họp Hội đồng Quản trị, cần nắm trọn bộ hồ sơ TaskFlow",
+  "pedagogy_note": "Bước 1: Mở tệp INDEX.md ở cột trái để kiểm tra danh mục các tài liệu hiện có trong dự án.",
+  "onEnter": "kudoSimScene({surface:'ide', file:'INDEX.md', clearChat:true, chatInput:'@INDEX.md Hãy lập bản đồ danh mục các tệp tài liệu quan trọng nhất trong dự án'});",
+  "focus_selectors": [
+    "#ide-file-tree",
+    "#editor-canvas"
+  ],
+  "cursor_selector": "[data-file='INDEX.md']",
+  "cursor_label": "Bước 1: Kiểm tra danh mục hồ sơ tại INDEX.md",
+  "caption": "Chúng ta vào thực hành 3 bước bóc tách hồ sơ phục vụ họp Hội đồng Quản trị. Ở <strong>Bước 1</strong>, anh chị bấm vào tệp <code>INDEX.md</code> ở cột trái để xác định các cụm tài liệu cần tổng hợp.",
+  "audio_src": "audio/lesson_13/b4.mp3",
+  "audio_duration": 10.16
+}

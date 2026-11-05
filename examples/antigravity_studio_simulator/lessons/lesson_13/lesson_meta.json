@@ -1,0 +1,31 @@
+{
+  "lesson_slug": "lesson_13",
+  "filename": "lesson_13.html",
+  "legacy_alias": "",
+  "code": "BÀI 13",
+  "chapter_number": 4,
+  "chapter_code": "CHƯƠNG 4",
+  "chapter_title": "Xử lý Dữ liệu, Bảng tính & Phối hợp Đội nhóm",
+  "title": "Bóc tách Kho Tài liệu Lớn & Tóm tắt Đa tầng Không Tràn Bộ nhớ",
+  "short_title": "Bóc tách Kho Tài liệu Lớn",
+  "pill_label": "Bài 13 · Bóc tách Tài liệu Lớn",
+  "description": "Chiến lược đọc và bóc tách các báo cáo dài hàng trăm trang hoặc hàng chục tệp biên bản họp bằng kỹ thuật lập Bản đồ Mục lục (Index-First) và Tóm tắt Đa tầng mà không làm tràn bộ nhớ AI.",
+  "prerequisites": "Chương 2 (Đính kèm @) & Chương 3 (Đóng gói quy trình xử lý tài liệu chuẩn).",
+  "dependents": "Bài 14 (Đối chiếu báo cáo chữ với bảng số liệu CSV), Bài 15 (Chia nhỏ kho tài liệu cho nhiều Sub-Agent xử lý song song).",
+  "placement_risk": "0% Rủi ro — Học viên học cách xử lý tài liệu văn bản quy mô lớn trước khi chuyển sang xử lý bảng số liệu CSV ở Bài 14.",
+  "continuity_bridge": "Sau khi bóc tách xong kho tài liệu văn bản ở Bài 13, Bài 14 sẽ hướng dẫn cách phân tích và làm sạch bảng số liệu kinh doanh .csv đi kèm.",
+  "slide_ids": [
+    "s1"
+  ],
+  "session_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "b6"
+  ],
+  "beats_count": 6,
+  "total_duration_sec": 69.9,
+  "duration_formatted": "01:10"
+}

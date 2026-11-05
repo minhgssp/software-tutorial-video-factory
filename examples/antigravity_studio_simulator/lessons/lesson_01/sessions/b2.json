@@ -1,17 +1,22 @@
 {
   "id": "b2",
-  "label": "2. AI làm việc trong thư mục",
-  "duration": 10.97,
-  "mode": "theory",
+  "label": "2. [Lý thuyết Kiểu 2] Giao diện Antigravity 2.0 trên màn hình",
+  "duration": 11.45,
   "pose": 2,
-  "slide": "s1",
-  "hl": [
-    "sl-c2"
-  ],
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Gắn màn hình",
+  "pedagogy_title": "Cấu trúc cửa sổ điều phối Antigravity 2.0 (Agent Manager)",
+  "pedagogy_note": "Cột trái quản lý các cuộc hội thoại và dự án, cột giữa là khung trao đổi trung tâm, góc trên phải có nút Open IDE.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); closeSettingsModal(); resetAgy2NewConv(); document.getElementById('agy2-right-pane').classList.add('collapsed');",
   "focus_selectors": [
-    "#sl-c2"
+    "#agy2-left-sb",
+    ".agy2-center-header",
+    "#agy2-input-card-box"
   ],
-  "caption": "Ngược lại, Antigravity kết nối trợ lý AI trực tiếp vào thư mục dự án trên máy tính. Trợ lý nhìn thấy toàn bộ tài liệu liên quan, tự mở tệp, tổng hợp nội dung và lưu thành phẩm ngay vào ổ cứng cho bạn.",
+  "cursor_selector": ".agy2-new-conv-btn",
+  "cursor_label": "Antigravity 2.0: Không gian điều phối hội thoại",
+  "caption": "Trên màn hình là phần mềm thứ nhất mang tên <strong>Antigravity 2.0</strong>, trước đây gọi là <strong>Agent Manager</strong>. Giao diện được thiết kế thoáng đãng giúp anh chị khởi tạo hội thoại mới và điều phối nhiều đầu việc cùng lúc.",
   "audio_src": "audio/lesson_01/b2.mp3",
-  "audio_duration": 10.32
+  "audio_duration": 10.8
 }

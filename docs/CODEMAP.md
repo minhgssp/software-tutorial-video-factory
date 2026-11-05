@@ -73,20 +73,18 @@ software-tutorial-video-factory/
 │       ├── fonts/                                  # Bộ phông chữ nhúng sẵn (Be Vietnam Pro, Cormorant Garamond, IBM Plex Mono)
 │       └── kcast/                                  # Các bước plan.py, capture.py, render.py, compose.py
 ├── examples/
-│   ├── antigravity_studio_simulator/               # Mẫu chuẩn vàng 1: Hệ thống Giáo án Tương tác 5 Lớp (Khóa Antigravity Basic)
-│   │   ├── index.html                              # Cổng mục lục khóa học (6 bài, 47 phần nhỏ, Single Left-Sidebar)
-│   │   ├── lesson_01_chatbot_vs_agent.html         # Bài 1.1 (10 phần, 02:07)
-│   │   ├── lesson_02_turbo_mode_and_workspace.html # Bài 1.2 (11 phần, 01:54)
-│   │   ├── lesson_03_bo_ba_rule_skill_workflow.html# Bài 1.3 (8 phần, 01:30)
-│   │   ├── lesson_04_vuot_qua_con_ngop_hoi_nguoc_ai.html # Bài 2.1 (6 phần, 01:04)
-│   │   ├── lesson_05_taskflow_start_1_1_bay_phim_space.html # Bài 2.2 (6 phần, 01:04)
-│   │   ├── lesson_06_giai_nen_zip_open_folder_reveal_explorer.html # Bài 2.3 (6 phần, 01:04)
+│   ├── antigravity_studio_simulator/               # Mẫu chuẩn vàng 1: Hệ thống Giáo án Tương tác 5 Lớp Toàn Khóa (6 Chương · 24 Bài · 144 Phần nhỏ)
+│   │   ├── index.html                              # Cổng mục lục 2 màn hình (6 Chương · 24 Bài giảng · 144 điểm neo, Single Left-Sidebar)
+│   │   ├── lesson_01.html .. lesson_24.html        # 24 bài giảng chuẩn DAG (6 phần/bài: b1 Lý thuyết Kiểu 1, b2-b3 Lý thuyết Kiểu 2, b4-b6 Thực hành 3 bước)
+│   │   ├── lesson_01_chatbot_vs_agent.html ..      # 6 tệp bí danh tương thích ngược (legacy aliases)
 │   │   ├── Antigravity_Simulator_Studio.html       # Bản Studio giả lập tự do toàn màn hình
 │   │   ├── DESIGN.md / REVIEW.md / llms.txt        # Quy chuẩn thiết kế, checklist WCAG 2.2 AA & chỉ mục AI
-│   │   ├── config/                                 # Lớp 1: brand_config.json/.js, course_manifest.json/.js, pronunciation_lexicon.json
+│   │   ├── BAO_CAO_AUDIT_DOC_LAP_5_NGUYEN_TAC_KHOA_HOC.md # Báo cáo kiểm toán độc lập 5 nguyên tắc sư phạm toàn khóa
+│   │   ├── CURRICULUM_DAG_24_LESSONS_MATRIX.md     # Ma trận đồ thị tiên quyết DAG 24 bài học (0% trùng lặp)
+│   │   ├── config/                                 # Lớp 1: brand_config.json/.js, course_manifest.json/.js, chapters_manifest.json/.js, pronunciation_lexicon.json
 │   │   ├── assets/                                 # Lớp 2 & 3: css/, js/, avatar/, templates/
-│   │   ├── lessons/                                # Lớp 4: lesson_01..06/ (lesson_meta.json, slides/*.html, sessions/*.json, lesson_spec.js)
-│   │   └── audio/                                  # Tệp giọng giảng thực tế 48kHz (lesson_01..06/b*.mp3)
+│   │   ├── lessons/                                # Lớp 4: lesson_01..24/ (lesson_meta.json, slides/*.html, sessions/*.json, lesson_spec.js)
+│   │   └── audio/                                  # Tệp giọng giảng thực tế 48kHz (lesson_01..24/b1..b6.mp3 — 144 tệp MP3)
 │   └── hanam_16x9_course/                          # Mẫu chuẩn vàng 2: Dây chuyền Video 16:9 Đa Khuôn (Khóa BIDV Hà Nam)
 │       ├── scripts/                                # build_pages.py, run_kudo_16x9.py, remux_sfx.py
 │       └── specs/                                  # B01_SaiLamThuongGap.json, B02_BaCapDoLamViecAI.json, BRIEF_AGY_VIET_SPEC.md

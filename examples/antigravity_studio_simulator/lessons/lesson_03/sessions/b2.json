@@ -1,17 +1,22 @@
 {
   "id": "b2",
-  "label": "2. Skills — Kỹ năng đóng gói sẵn",
-  "duration": 8.89,
-  "mode": "theory",
+  "label": "2. [Lý thuyết Kiểu 2] Nhận diện nút Stop (■), Tiếp tục và Accept",
+  "duration": 11.85,
   "pose": 2,
-  "slide": "s1",
-  "hl": [
-    "sl-c2"
-  ],
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · 3 Trạng thái Điều khiển AI",
+  "pedagogy_title": "Quan sát trực tiếp nút Accept, ô gõ Tiếp tục và nút ■ trên khung chat",
+  "pedagogy_note": "Nút Accept màu xanh dùng để duyệt bước tạo tệp; nút ■ dùng để dừng; ô nhập gõ 'Tiếp tục' khi AI ngắt quãng.",
+  "onEnter": "kudoRunThreeStuckStatesDemo();",
   "focus_selectors": [
-    "#sl-c2"
+    "#ide-chat-messages",
+    "#kudo-accept-step-btn",
+    "#ide-send-btn"
   ],
-  "caption": "Thứ hai là Skills, giống như công thức pha bát nước chấm chuẩn vị. Đây là một kỹ năng chuyên môn đóng gói sẵn, có thể lấy ra dùng chung cho nhiều công việc khác nhau.",
+  "cursor_selector": "#kudo-accept-step-btn",
+  "cursor_label": "Bấm Accept để duyệt bước tạo tệp mới",
+  "caption": "Nhìn sang cột phải trên màn hình thực tế: Khi trợ lý muốn tạo tệp báo cáo mới, nó sẽ dừng lại và hiện nút <strong>Accept</strong> màu xanh. Nếu muốn hủy giữa chừng, anh chị bấm nút hình vuông <code>■</code>, còn nếu mạng ngắt quãng thì gõ chữ <code>Tiếp tục</code>.",
   "audio_src": "audio/lesson_03/b2.mp3",
-  "audio_duration": 8.24
+  "audio_duration": 11.2
 }

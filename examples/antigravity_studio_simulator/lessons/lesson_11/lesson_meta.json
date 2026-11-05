@@ -1,0 +1,31 @@
+{
+  "lesson_slug": "lesson_11",
+  "filename": "lesson_11.html",
+  "legacy_alias": "",
+  "code": "BÀI 11",
+  "chapter_number": 3,
+  "chapter_code": "CHƯƠNG 3",
+  "chapter_title": "Thiết kế Bộ não .agent & Tự động hóa Quy trình",
+  "title": "Đóng gói Quy trình Lặp lại Thành Lệnh Gạch chéo (.agent/workflows)",
+  "short_title": "Đóng gói Lệnh /workflows",
+  "pill_label": "Bài 11 · Đóng gói /workflows",
+  "description": "Biến các công việc lặp đi lặp lại hàng ngày/hàng tuần thành một tệp kịch bản trong .agent/workflows/ để bất kỳ ai trong phòng cũng chỉ cần gõ /tên-quy-trình là chạy chuẩn 100%.",
+  "prerequisites": "Bài 9 (Hiểu tổng quan .agent) & Bài 10 (Đã biết thiết kế Rules và Skills).",
+  "dependents": "Bài 12 (Sử dụng thành thạo bộ 3 lệnh workflow nâng cao /grill-me, /plan, /learn).",
+  "placement_risk": "0% Rủi ro — Học viên đã hiểu lệnh /start-1-1 hoạt động ra sao nên việc tự tạo một lệnh /tong-hop-tuan tương tự diễn ra hết sức tự nhiên.",
+  "continuity_bridge": "Sau khi biết cách tự tạo lệnh workflow riêng ở Bài 11, Bài 12 sẽ hướng dẫn bộ 3 lệnh workflow mạnh mẽ nhất có sẵn để giải quyết các bài toán khó: /grill-me, /plan và /learn.",
+  "slide_ids": [
+    "s1"
+  ],
+  "session_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "b6"
+  ],
+  "beats_count": 6,
+  "total_duration_sec": 76.3,
+  "duration_formatted": "01:16"
+}

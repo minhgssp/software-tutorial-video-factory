@@ -1,19 +1,22 @@
 {
   "id": "b5",
-  "label": "5. Mở vị trí tệp thật trên máy",
-  "duration": 10.73,
+  "label": "5. [Thực hành B2/3] Bật thu âm giọng nói tiếng Việt (Ctrl+M)",
+  "duration": 10.65,
+  "pose": 5,
   "mode": "sim",
-  "pose": 6,
-  "surface": "ide",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Giao việc bằng Giọng nói",
+  "pedagogy_title": "Bước 2: Nhấn Ctrl + M (hoặc bấm biểu tượng 🎙️) để đọc yêu cầu",
+  "pedagogy_note": "Thanh sóng âm màu đỏ hiện lên, tự động chuyển lời nói tiếng Việt của bạn thành câu lệnh hoàn chỉnh trong ô chat.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); closeSettingsModal(); loadAgy2Thread('main'); simulateVoiceInput('mgr'); kudoShowKeyHud('Nhấn <kbd>Ctrl + M</kbd> để bật thu âm giọng nói');",
   "focus_selectors": [
-    "#ide-left-sidebar",
-    "#kudo-context-menu"
+    "#agy2-input-card-box",
+    "#mgr-voice-bar",
+    "#agy2-mic-btn"
   ],
-  "focus_pad": 8,
-  "cursor_selector": "#kcm-reveal-explorer",
-  "cursor_label": "Chuột phải vào INDEX.md -> Reveal in File Explorer",
-  "caption": "Để kiểm tra tệp trên ổ cứng, bạn nhấp chuột phải vào tệp <code>INDEX.md</code> ở cột trái và chọn dòng <code>Reveal in File Explorer</code>. Cửa sổ File Explorer của máy tính sẽ mở ra đúng vị trí tệp thật.",
-  "onEnter": "closeMoveWarnModal(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); currentWorkspaceTreeMode='antigravity_course_vn'; renderFileTree(); openFileInEditor('INDEX.md'); kudoOpenExplorerContextMenu(\"[data-file='INDEX.md']\");",
+  "cursor_selector": "#agy2-mic-btn",
+  "cursor_label": "Bước 2: Bấm 🎙️ hoặc nhấn Ctrl + M để đọc lệnh",
+  "caption": "Sang <strong>Bước 2</strong>, thay vì gõ bàn phím dài dòng, anh chị bấm vào biểu tượng Micro hoặc nhấn <kbd>Ctrl + M</kbd> để đọc yêu cầu bằng tiếng Việt. Thanh sóng âm sẽ chuyển lời nói thành văn bản ngay tức thì.",
   "audio_src": "audio/lesson_06/b5.mp3",
-  "audio_duration": 10.08
+  "audio_duration": 10.0
 }

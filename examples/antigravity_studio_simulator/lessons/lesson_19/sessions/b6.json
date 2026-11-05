@@ -1,0 +1,21 @@
+{
+  "id": "b6",
+  "label": "6. [Thực hành B3/3] Nghiệm thu ấn phẩm & Tiếp nối Bài 20",
+  "duration": 12.17,
+  "pose": 6,
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Nghiệm thu & Tiếp nối",
+  "pedagogy_title": "Bước 3: Nghiệm thu tấm Infographic sắc nét và chuẩn bị đóng gói Slide",
+  "pedagogy_note": "Nghiệm thu: Đã có đủ Bài viết + Infographic đồng bộ. Tiếp theo: Bài 20 xuất bản Slide thuyết trình (HTML/PPTX) & Báo cáo Web.",
+  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › infographic_onboarding.html (Hoàn tất)', editorTitle:'🖼️ infographic_onboarding.html — Nghiệm thu Ấn phẩm Trực quan', editorHtml:'<div style=\"padding:16px;background:#fbf8f3;border:2px solid #ea580c;border-radius:10px;\"><h3 style=\"color:#9a3412;margin-top:0;\">✅ ĐÃ HOÀN TẤT BỘ ẤN PHẨM TRỰC QUAN QUÝ 2</h3><p>Tấm Infographic 3 bước và bộ ảnh minh họa đã tuân thủ 100% bảng màu <code>#FBF8F3</code> / <code>#EA580C</code>, sẵn sàng đưa vào bài thuyết trình.</p></div>', userMsg:'@brand_voice.md @chien_dich_noi_dung_q2.md Hãy tạo sơ đồ Infographic 3 ngày Onboarding tại tệp infographic_onboarding.html', aiMsg:'Đã hoàn tất thiết kế <code>infographic_onboarding.html</code> đồng bộ tuyệt đối với bảng màu thương hiệu của bạn!'});",
+  "focus_selectors": [
+    "#editor-canvas",
+    "#ide-chat-messages"
+  ],
+  "cursor_selector": "#editor-canvas",
+  "cursor_label": "Bước 3: Nghiệm thu Infographic chuẩn màu thương hiệu!",
+  "caption": "Ở <strong>Bước 3</strong>, tấm <strong>Infographic</strong> đã hoàn tất sắc nét ngay trên màn hình. Khi đã có đủ số liệu, văn bản và hình ảnh, chúng ta bước sang <strong>Bài 20</strong> để đóng gói tất cả thành bộ Slide thuyết trình và trang Báo cáo Web tương tác!",
+  "audio_src": "audio/lesson_19/b6.mp3",
+  "audio_duration": 11.52
+}

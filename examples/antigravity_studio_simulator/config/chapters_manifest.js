@@ -2,55 +2,41 @@ window.KUDO_CHAPTERS_MANIFEST = [
   {
     "chapter_number": 1,
     "code": "CHƯƠNG 1",
-    "title": "Tư duy Nền tảng & Làm quen Giao diện",
-    "subtitle": "Chuyển từ hỏi đáp trên web sang làm việc cùng Trợ lý AI trực tiếp trong thư mục máy tính",
+    "title": "Khởi động Chuẩn & Làm chủ Giao diện",
+    "subtitle": "Chuyển từ hỏi đáp trên web sang làm việc cùng Trợ lý AI trực tiếp trong thư mục máy tính an toàn",
     "status": "ready",
-    "status_label": "Đã sẵn sàng · Học ngay",
-    "lessons_count": 6,
-    "beats_count": 47,
-    "duration_label": "09:05 · 47 điểm neo",
-    "default_lesson": "lesson_01_chatbot_vs_agent.html",
+    "status_label": "Đã sẵn sàng · 4 Bài · 24 Điểm neo",
+    "lessons_count": 4,
+    "beats_count": 24,
+    "duration_label": "4 bài giảng · 24 điểm neo tương tác",
+    "default_lesson": "lesson_01.html",
     "lessons": [
       {
         "code": "Bài 1",
-        "title": "Tư duy & Giao diện Trợ lý AI",
-        "meta": "10 phần · 02:07",
-        "filename": "lesson_01_chatbot_vs_agent.html",
+        "title": "Tư duy Trợ lý AI trên Máy tính & 2 Phần mềm Cốt lõi",
+        "meta": "6 phần · Đối sánh trực quan",
+        "filename": "lesson_01.html",
         "ready": true
       },
       {
         "code": "Bài 2",
-        "title": "Thiết lập Dự án & Chế độ Turbo",
-        "meta": "11 phần · 01:54",
-        "filename": "lesson_02_turbo_mode_and_workspace.html",
+        "title": "Chuẩn bị Học liệu: Giải nén .zip, Mở Thư mục & An toàn Ổ cứng",
+        "meta": "6 phần · Sơ đồ luồng",
+        "filename": "lesson_02.html",
         "ready": true
       },
       {
         "code": "Bài 3",
-        "title": "Bộ não AI: Rules, Skills, Workflows",
-        "meta": "8 phần · 01:30",
-        "filename": "lesson_03_bo_ba_rule_skill_workflow.html",
+        "title": "Làm chủ Giao diện 3 Cột, Phím Cứu hộ & Xử lý Khi AI Dừng chờ",
+        "meta": "6 phần · Giải phẫu UI",
+        "filename": "lesson_03.html",
         "ready": true
       },
       {
         "code": "Bài 4",
-        "title": "Làm chủ Giao diện & Hỏi Trợ lý AI",
-        "meta": "6 phần · 01:04",
-        "filename": "lesson_04_vuot_qua_con_ngop_hoi_nguoc_ai.html",
-        "ready": true
-      },
-      {
-        "code": "Bài 5",
-        "title": "Thực hành Dự án với Lệnh Gạch chéo",
-        "meta": "6 phần · 01:04",
-        "filename": "lesson_05_taskflow_start_1_1_bay_phim_space.html",
-        "ready": true
-      },
-      {
-        "code": "Bài 6",
-        "title": "Quản lý Học liệu & Đồng bộ Tệp tin",
-        "meta": "6 phần · 01:04",
-        "filename": "lesson_06_giai_nen_zip_open_folder_reveal_explorer.html",
+        "title": "Bật Quyền Tự chủ Turbo & Bài Thực hành Đầu tiên Với /start-1-1",
+        "meta": "6 phần · Lộ trình 4 cấp",
+        "filename": "lesson_04.html",
         "ready": true
       }
     ]
@@ -58,140 +44,84 @@ window.KUDO_CHAPTERS_MANIFEST = [
   {
     "chapter_number": 2,
     "code": "CHƯƠNG 2",
-    "title": "Định dạng Dữ liệu & Hồ sơ Cá nhân hóa",
-    "subtitle": "Làm chủ tệp văn bản .md, bảng số liệu .csv, cài đặt Office Viewer và thiết lập hồ sơ @troly.md",
-    "status": "upcoming",
-    "status_label": "Chương 2 · Bài 7 – Bài 14",
-    "lessons_count": 8,
-    "beats_count": 64,
-    "duration_label": "8 bài giảng · Dự kiến 55 phút",
-    "default_lesson": "",
+    "title": "Định dạng Dữ liệu, Ký hiệu @ & Hồ sơ Cá nhân hóa",
+    "subtitle": "Làm chủ tệp văn bản .md, bảng số liệu .csv, đính kèm @, giọng nói Ctrl+M và hồ sơ @troly.md",
+    "status": "ready",
+    "status_label": "Đã sẵn sàng · 4 Bài · 24 Điểm neo",
+    "lessons_count": 4,
+    "beats_count": 24,
+    "duration_label": "4 bài giảng · 24 điểm neo tương tác",
+    "default_lesson": "lesson_05.html",
     "lessons": [
       {
+        "code": "Bài 5",
+        "title": "Định dạng Văn bản .md, Bảng Dữ liệu .csv & Tiện ích Office Viewer",
+        "meta": "6 phần · Đối sánh định dạng",
+        "filename": "lesson_05.html",
+        "ready": true
+      },
+      {
+        "code": "Bài 6",
+        "title": "Đính kèm Tệp Bằng @, Giao việc Giọng nói (Ctrl+M) & Trích dẫn (Ctrl+L)",
+        "meta": "6 phần · Sơ đồ 3 kênh",
+        "filename": "lesson_06.html",
+        "ready": true
+      },
+      {
         "code": "Bài 7",
-        "title": "Tệp văn bản .md và bảng dữ liệu .csv cho dân văn phòng",
-        "meta": "Lý thuyết & Thực hành",
-        "filename": "",
-        "ready": false
+        "title": "Tạo Hồ sơ Trợ lý Cá nhân @troly.md & Xây dựng Ban bệ Nhân sự Ảo",
+        "meta": "6 phần · Giải phẫu hồ sơ",
+        "filename": "lesson_07.html",
+        "ready": true
       },
       {
         "code": "Bài 8",
-        "title": "Xem bảng biểu trực quan với tiện ích Office Viewer",
-        "meta": "Thao tác IDE",
-        "filename": "",
-        "ready": false
-      },
-      {
-        "code": "Bài 9",
-        "title": "Thiết lập Hồ sơ cá nhân hóa @troly.md để AI hiểu gu làm việc",
-        "meta": "Cá nhân hóa",
-        "filename": "",
-        "ready": false
-      },
-      {
-        "code": "Bài 10",
-        "title": "Phân quyền tự chủ: Request Review, Default, Auto và Turbo",
-        "meta": "Quản trị an toàn",
-        "filename": "",
-        "ready": false
-      },
-      {
-        "code": "Bài 11",
-        "title": "Ký hiệu đính kèm @ và cách giao nhiều tệp cùng lúc",
-        "meta": "Kỹ năng giao việc",
-        "filename": "",
-        "ready": false
-      },
-      {
-        "code": "Bài 12",
-        "title": "Giao việc bằng giọng nói (Ctrl+M) và trích dẫn nhanh (Ctrl+L)",
-        "meta": "Phím tắt tăng tốc",
-        "filename": "",
-        "ready": false
-      },
-      {
-        "code": "Bài 13",
-        "title": "Cách chọn đúng mô hình AI cho từng loại công việc",
-        "meta": "Tối ưu chi phí & tốc độ",
-        "filename": "",
-        "ready": false
-      },
-      {
-        "code": "Bài 14",
-        "title": "Bài tập tổng hợp Chương 2 — Chuẩn hóa bộ hồ sơ cá nhân",
-        "meta": "Thực hành tổng hợp",
-        "filename": "",
-        "ready": false
+        "title": "Quản trị Hội thoại Dài: Bàn giao Ca ban_giao_cong_viec.md & /compact",
+        "meta": "6 phần · Chu trình giao ca",
+        "filename": "lesson_08.html",
+        "ready": true
       }
     ]
   },
   {
     "chapter_number": 3,
     "code": "CHƯƠNG 3",
-    "title": "Thiết lập Bộ não .agent & Kho Kỹ năng",
-    "subtitle": "Xây dựng nội quy Rules, đóng gói chuyên môn vào Skills, tạo lệnh Workflows và kết nối Kho Tiện ích",
-    "status": "upcoming",
-    "status_label": "Chương 3 · Bài 15 – Bài 22",
-    "lessons_count": 8,
-    "beats_count": 64,
-    "duration_label": "8 bài giảng · Dự kiến 60 phút",
-    "default_lesson": "",
+    "title": "Thiết lập Bộ não .agent & Chu trình Cộng tác",
+    "subtitle": "Xây dựng nội quy Rules, đóng gói chuyên môn vào Skills, tạo lệnh Workflows và chu trình 3 lệnh vàng",
+    "status": "ready",
+    "status_label": "Đã sẵn sàng · 4 Bài · 24 Điểm neo",
+    "lessons_count": 4,
+    "beats_count": 24,
+    "duration_label": "4 bài giảng · 24 điểm neo tương tác",
+    "default_lesson": "lesson_09.html",
     "lessons": [
       {
-        "code": "Bài 15",
-        "title": "Toàn cảnh thư mục .agent — Rules, Skills và Workflows phối hợp thế nào?",
-        "meta": "Kiến trúc cốt lõi",
-        "filename": "",
-        "ready": false
+        "code": "Bài 9",
+        "title": "Kiến trúc Bộ ba .agent (Rules, Skills, Workflows) & Thiết lập Rules",
+        "meta": "6 phần · Giải phẫu .agent",
+        "filename": "lesson_09.html",
+        "ready": true
       },
       {
-        "code": "Bài 16",
-        "title": "Viết tệp Rules đầu tiên để rèn kỷ luật đầu ra cho AI",
-        "meta": "Thiết lập nội quy",
-        "filename": "",
-        "ready": false
+        "code": "Bài 10",
+        "title": "Giải phẫu Skills Chuyên môn (viet-chuyen-nghiep) & Kho skills.sh",
+        "meta": "6 phần · Sơ đồ nạp Skill",
+        "filename": "lesson_10.html",
+        "ready": true
       },
       {
-        "code": "Bài 17",
-        "title": "Khám phá cấu trúc một Skill chuẩn (SKILL.md, scripts và mẫu biểu)",
-        "meta": "Đóng gói kỹ năng",
-        "filename": "",
-        "ready": false
+        "code": "Bài 11",
+        "title": "Thiết kế Biểu mẫu (Templates), Quy trình Workflows (/) & Lệnh /buildflow",
+        "meta": "6 phần · Luồng đóng gói",
+        "filename": "lesson_11.html",
+        "ready": true
       },
       {
-        "code": "Bài 18",
-        "title": "Tạo lệnh gạch chéo Workflows (/) cho công việc lặp lại hàng tuần",
-        "meta": "Tự động hóa quy trình",
-        "filename": "",
-        "ready": false
-      },
-      {
-        "code": "Bài 19",
-        "title": "Chu trình 3 lệnh vàng: /grill-me, /plan và /learn",
-        "meta": "Tư duy cộng tác AI",
-        "filename": "",
-        "ready": false
-      },
-      {
-        "code": "Bài 20",
-        "title": "Kết nối Kho Kỹ năng (Skills Hub) và các cổng dữ liệu MCP",
-        "meta": "Mở rộng công cụ",
-        "filename": "",
-        "ready": false
-      },
-      {
-        "code": "Bài 21",
-        "title": "Kiểm tra và sửa lỗi khi AI không nhận diện đúng quy trình",
-        "meta": "Chẩn đoán & xử lý",
-        "filename": "",
-        "ready": false
-      },
-      {
-        "code": "Bài 22",
-        "title": "Bài tập tổng hợp Chương 3 — Đóng gói quy trình phòng ban",
-        "meta": "Thực hành tổng hợp",
-        "filename": "",
-        "ready": false
+        "code": "Bài 12",
+        "title": "Chu trình Cộng tác 3 Lệnh Vàng: Hỏi ngược /grill-me, /plan & /learn",
+        "meta": "6 phần · Chu trình 3 bước",
+        "filename": "lesson_12.html",
+        "ready": true
       }
     ]
   },
@@ -199,62 +129,41 @@ window.KUDO_CHAPTERS_MANIFEST = [
     "chapter_number": 4,
     "code": "CHƯƠNG 4",
     "title": "Ứng dụng Văn phòng Thực chiến",
-    "subtitle": "Tự động nghiên cứu thông tin trên Web, phân tích bảng tính doanh thu và xuất bản Slide thuyết trình",
-    "status": "upcoming",
-    "status_label": "Chương 4 · Bài 23 – Bài 29",
-    "lessons_count": 7,
-    "beats_count": 56,
-    "duration_label": "7 bài giảng · Dự kiến 50 phút",
-    "default_lesson": "",
+    "subtitle": "Tự động nghiên cứu Web với /browser, phân tích bảng tính doanh thu, nhân bản giọng văn và xuất Slide",
+    "status": "ready",
+    "status_label": "Đã sẵn sàng · 4 Bài · 24 Điểm neo",
+    "lessons_count": 4,
+    "beats_count": 24,
+    "duration_label": "4 bài giảng · 24 điểm neo tương tác",
+    "default_lesson": "lesson_13.html",
     "lessons": [
       {
-        "code": "Bài 23",
-        "title": "Điều khiển trình duyệt tự động nghiên cứu thị trường và đối thủ",
-        "meta": "Nghiên cứu Web",
-        "filename": "",
-        "ready": false
+        "code": "Bài 13",
+        "title": "Tự động Nghiên cứu Thị trường & Đối thủ Trên Web Với /browser",
+        "meta": "6 phần · Luồng lướt Web",
+        "filename": "lesson_13.html",
+        "ready": true
       },
       {
-        "code": "Bài 24",
-        "title": "Làm sạch và phân tích dữ liệu doanh thu từ tệp CSV/Excel",
-        "meta": "Phân tích số liệu",
-        "filename": "",
-        "ready": false
+        "code": "Bài 14",
+        "title": "Phân tích Bảng tính Kinh doanh (@sales_data.csv) & Báo cáo Điều hành",
+        "meta": "6 phần · Giải phẫu KPI",
+        "filename": "lesson_14.html",
+        "ready": true
       },
       {
-        "code": "Bài 25",
-        "title": "Tự động lập báo cáo tổng hợp kèm biểu đồ trực quan",
-        "meta": "Báo cáo quản trị",
-        "filename": "",
-        "ready": false
+        "code": "Bài 15",
+        "title": "Nhân bản Giọng văn Cá nhân (Style Cloning), Minh họa & Landing Page",
+        "meta": "6 phần · Sơ đồ DNA",
+        "filename": "lesson_15.html",
+        "ready": true
       },
       {
-        "code": "Bài 26",
-        "title": "Chuyển báo cáo văn bản thành bộ Slide thuyết trình HTML/PPTX",
-        "meta": "Thiết kế Slide",
-        "filename": "",
-        "ready": false
-      },
-      {
-        "code": "Bài 27",
-        "title": "Soạn thảo chuỗi nội dung đa kênh đồng nhất giọng văn thương hiệu",
-        "meta": "Sáng tạo nội dung",
-        "filename": "",
-        "ready": false
-      },
-      {
-        "code": "Bài 28",
-        "title": "Nghiệm thu chéo chất lượng đầu ra trước khi gửi sếp và khách hàng",
-        "meta": "Kiểm định đầu ra",
-        "filename": "",
-        "ready": false
-      },
-      {
-        "code": "Bài 29",
-        "title": "Bài tập tổng hợp Chương 4 — Từ bảng số liệu đến bộ Slide hoàn chỉnh",
-        "meta": "Thực hành tổng hợp",
-        "filename": "",
-        "ready": false
+        "code": "Bài 16",
+        "title": "Thiết kế Slide Thuyết trình Từ Báo cáo: Xuất .pptx & Đồng bộ Phông chữ",
+        "meta": "6 phần · Lộ trình 2 pha",
+        "filename": "lesson_16.html",
+        "ready": true
       }
     ]
   },
@@ -262,118 +171,83 @@ window.KUDO_CHAPTERS_MANIFEST = [
     "chapter_number": 5,
     "code": "CHƯƠNG 5",
     "title": "Tự động hóa Chuyên sâu & Quản trị Tri thức",
-    "subtitle": "Phối hợp đa Trợ lý AI, tổ chức kho tài liệu theo mô hình P.A.R.A, xuất Word/Excel chuẩn và hẹn giờ",
-    "status": "upcoming",
-    "status_label": "Chương 5 · Bài 30 – Bài 36",
-    "lessons_count": 7,
-    "beats_count": 56,
-    "duration_label": "7 bài giảng · Dự kiến 55 phút",
-    "default_lesson": "",
+    "subtitle": "Tổ chức kho tài liệu P.A.R.A, phối hợp đa trợ lý /teamwork, tự động hóa Word/Excel và hẹn giờ /schedule",
+    "status": "ready",
+    "status_label": "Đã sẵn sàng · 4 Bài · 24 Điểm neo",
+    "lessons_count": 4,
+    "beats_count": 24,
+    "duration_label": "4 bài giảng · 24 điểm neo tương tác",
+    "default_lesson": "lesson_17.html",
     "lessons": [
       {
-        "code": "Bài 30",
-        "title": "Tổ chức kho tài liệu máy tính theo mô hình 4 thư mục P.A.R.A",
-        "meta": "Quản trị tri thức",
-        "filename": "",
-        "ready": false
+        "code": "Bài 17",
+        "title": "Tổ chức Kho Tài liệu Theo Mô hình P.A.R.A & Chống Bịa Số liệu",
+        "meta": "6 phần · Giải phẫu 4 ngăn",
+        "filename": "lesson_17.html",
+        "ready": true
       },
       {
-        "code": "Bài 31",
-        "title": "Phối hợp nhiều Trợ lý AI cùng giải quyết dự án lớn",
-        "meta": "Đa trợ lý (Multi-Agent)",
-        "filename": "",
-        "ready": false
+        "code": "Bài 18",
+        "title": "Phối hợp Đa Trợ lý (/teamwork), Mục tiêu Dài hạn (/goal) & Kiểm duyệt",
+        "meta": "6 phần · Luồng đa trợ lý",
+        "filename": "lesson_18.html",
+        "ready": true
       },
       {
-        "code": "Bài 32",
-        "title": "Tự động tạo và chỉnh sửa tài liệu Word (.docx) đúng chuẩn trình bày",
-        "meta": "Tự động hóa Word",
-        "filename": "",
-        "ready": false
+        "code": "Bài 19",
+        "title": "Tự động hóa Word (.docx Chuẩn NĐ 30) & Excel (.xlsx Công thức Sống)",
+        "meta": "6 phần · Đối sánh Office",
+        "filename": "lesson_19.html",
+        "ready": true
       },
       {
-        "code": "Bài 33",
-        "title": "Tự động xuất bảng tính Excel (.xlsx) có sẵn công thức sống",
-        "meta": "Tự động hóa Excel",
-        "filename": "",
-        "ready": false
-      },
-      {
-        "code": "Bài 34",
-        "title": "Thiết lập lịch hẹn giờ tự động chạy báo cáo mỗi sáng",
-        "meta": "Tác vụ định kỳ",
-        "filename": "",
-        "ready": false
-      },
-      {
-        "code": "Bài 35",
-        "title": "Bảo mật dữ liệu nhạy cảm và nguyên tắc sao lưu an toàn",
-        "meta": "An toàn thông tin",
-        "filename": "",
-        "ready": false
-      },
-      {
-        "code": "Bài 36",
-        "title": "Bài tập tổng hợp Chương 5 — Xây dựng bàn làm việc tự động hóa",
-        "meta": "Thực hành tổng hợp",
-        "filename": "",
-        "ready": false
+        "code": "Bài 20",
+        "title": "Hẹn giờ Tự động hóa Định kỳ Với Automations (/schedule) & Công cụ Tĩnh",
+        "meta": "6 phần · Chu trình hẹn giờ",
+        "filename": "lesson_20.html",
+        "ready": true
       }
     ]
   },
   {
     "chapter_number": 6,
     "code": "CHƯƠNG 6",
-    "title": "5 Tình huống Đa ngành & Điều khiển Từ xa",
-    "subtitle": "Thực chiến 5 bài toán Nhân sự, Tài chính, Pháp chế, Kinh doanh, Đào tạo và điều khiển qua điện thoại",
-    "status": "upcoming",
-    "status_label": "Chương 6 · Bài 37 – Bài 42",
-    "lessons_count": 6,
-    "beats_count": 48,
-    "duration_label": "6 bài giảng · Dự kiến 45 phút",
-    "default_lesson": "",
+    "title": "4 Tình huống Đa ngành, Bảo mật & Điều khiển Từ xa",
+    "subtitle": "Thực chiến Chiến lược 7 bước, Tuyển dụng 120 CV ẩn danh, Thiết kế đa phương tiện và Remote Control",
+    "status": "ready",
+    "status_label": "Đã sẵn sàng · 4 Bài · 24 Điểm neo",
+    "lessons_count": 4,
+    "beats_count": 24,
+    "duration_label": "4 bài giảng · 24 điểm neo tương tác",
+    "default_lesson": "lesson_21.html",
     "lessons": [
       {
-        "code": "Bài 37",
-        "title": "Tình huống 1 — Tuyển dụng & Sàng lọc hồ sơ ứng viên tự động (HR)",
-        "meta": "Nhân sự",
-        "filename": "",
-        "ready": false
+        "code": "Bài 21",
+        "title": "Tình huống 1 (Chiến lược): Nhân bản Quy trình 7 Bước Sang Giày Bã Mía",
+        "meta": "6 phần · Sơ đồ 7 bước",
+        "filename": "lesson_21.html",
+        "ready": true
       },
       {
-        "code": "Bài 38",
-        "title": "Tình huống 2 — Đối soát công nợ & Báo cáo dòng tiền (Tài chính)",
-        "meta": "Tài chính - Kế toán",
-        "filename": "",
-        "ready": false
+        "code": "Bài 22",
+        "title": "Tình huống 2 (Nhân sự & Pháp chế): Sàng lọc 120 CV Ẩn danh & Hợp đồng",
+        "meta": "6 phần · Luồng 5 bước HR",
+        "filename": "lesson_22.html",
+        "ready": true
       },
       {
-        "code": "Bài 39",
-        "title": "Tình huống 3 — Rà soát điều khoản hợp đồng & Rủi ro (Pháp chế)",
-        "meta": "Pháp chế",
-        "filename": "",
-        "ready": false
+        "code": "Bài 23",
+        "title": "Tình huống 3 (Đa định dạng): Bản tin Giá vàng, Nội thất & Google Stitch",
+        "meta": "6 phần · Giải phẫu đa kênh",
+        "filename": "lesson_23.html",
+        "ready": true
       },
       {
-        "code": "Bài 40",
-        "title": "Tình huống 4 — Chăm sóc khách hàng & Lập đề xuất báo giá (Sales)",
-        "meta": "Kinh doanh",
-        "filename": "",
-        "ready": false
-      },
-      {
-        "code": "Bài 41",
-        "title": "Tình huống 5 — Biên soạn giáo trình & Học liệu tương tác (Đào tạo)",
-        "meta": "Giáo dục & Đào tạo",
-        "filename": "",
-        "ready": false
-      },
-      {
-        "code": "Bài 42",
-        "title": "Kết nối điện thoại điều khiển Trợ lý AI từ xa & Tổng kết khóa học",
-        "meta": "Điều khiển từ xa",
-        "filename": "",
-        "ready": false
+        "code": "Bài 24",
+        "title": "Bảo vệ Bí kíp (.gitignore), So sánh Công cụ & Điều khiển Qua Điện thoại",
+        "meta": "6 phần · Tổng kết khóa",
+        "filename": "lesson_24.html",
+        "ready": true
       }
     ]
   }

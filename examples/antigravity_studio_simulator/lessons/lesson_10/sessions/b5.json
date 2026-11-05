@@ -1,0 +1,21 @@
+{
+  "id": "b5",
+  "label": "5. [Thực hành B2/3] Giao lệnh cho AI tự tạo Rule và Skill chuẩn",
+  "duration": 13.45,
+  "pose": 5,
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Nhờ AI đóng gói Rule & Skill",
+  "pedagogy_title": "Bước 2: Nhập lệnh vào ô chat yêu cầu AI tạo tệp trong .agent/rules/ và .agent/skills/",
+  "pedagogy_note": "Bạn chỉ cần nói bằng tiếng Việt, chính Trợ lý AI sẽ tự tạo đúng thư mục và viết chuẩn cú pháp SKILL.md cho bạn.",
+  "onEnter": "kudoSimScene({surface:'ide', file:'troly.md', clearChat:true, chatInput:'@troly.md Hãy chuyển các quy tắc chung vào .agent/rules/quy_chuan_van_phong.md và tạo thêm kỹ năng viết báo cáo tuần tại .agent/skills/bao-cao-tuan/SKILL.md'});",
+  "focus_selectors": [
+    "#ide-chat-input",
+    "#ide-send-btn"
+  ],
+  "cursor_selector": "#ide-send-btn",
+  "cursor_label": "Bước 2: Gửi lệnh để AI tự khởi tạo Rule & Skill",
+  "caption": "Sang <strong>Bước 2</strong>, điều tuyệt vời nhất của <strong>Antigravity IDE</strong> là anh chị không phải tự tạo thư mục bằng tay: Hãy gõ lệnh bảo trợ lý chuyển quy tắc chung vào <code>.agent/rules/</code> và tạo kỹ năng báo cáo tuần trong <code>.agent/skills/</code>.",
+  "audio_src": "audio/lesson_10/b5.mp3",
+  "audio_duration": 12.8
+}

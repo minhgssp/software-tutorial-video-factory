@@ -1,14 +1,21 @@
 {
   "lesson_slug": "lesson_02",
-  "filename": "lesson_02_turbo_mode_and_workspace.html",
+  "filename": "lesson_02.html",
+  "legacy_alias": "lesson_06_giai_nen_zip_open_folder_reveal_explorer.html",
   "code": "BÀI 2",
-  "title": "Thiết lập Dự án & Chế độ Turbo",
-  "short_title": "Mở Dự án & Chế độ Turbo",
-  "pill_label": "Bài 2 · Dự án & Turbo",
-  "description": "Nguyên tắc mở thư mục dự án, ưu tiên định dạng .md và .csv, cài đặt Office Viewer, bật quyền tự chủ Turbo và giao việc bằng giọng nói.",
+  "chapter_number": 1,
+  "chapter_code": "CHƯƠNG 1",
+  "chapter_title": "Khởi động Chuẩn & Làm chủ Giao diện",
+  "title": "Chuẩn bị Học liệu: Giải nén .zip, Mở Thư mục & An toàn Ổ cứng",
+  "short_title": "Giải nén .zip & Mở Thư mục",
+  "pill_label": "Bài 2 · Giải nén & Open Folder",
+  "description": "Quy tắc bắt buộc giải nén tệp học liệu .zip trước khi mở, thao tác File -> Open Folder chuẩn xác, nguyên tắc không mở toàn bộ ổ C: và kiểm tra đồng bộ bằng Reveal in File Explorer.",
+  "prerequisites": "Bài 1 (Đã mở cửa sổ Antigravity IDE ở màn hình chào mừng Welcome Screen).",
+  "dependents": "Bài 3 (Làm chủ giao diện 3 cột trên thư mục vừa mở), Bài 4 (Gọi lệnh /start-1-1 từ thư mục dự án), Bài 5 (Đọc tệp .md/.csv).",
+  "placement_risk": "0% Rủi ro — Đặt ngay ở Bài 2 để học viên giải nén và mở đúng thư mục antigravity_course_vn trước khi thực hiện bất kỳ thao tác tệp hay lệnh gạch chéo nào.",
+  "continuity_bridge": "Sau khi mở thành công thư mục antigravity_course_vn ở Bài 2, Bài 3 sẽ hướng dẫn điều khiển 3 cột giao diện và các phím cứu hộ khi lỡ tay bấm nhầm.",
   "slide_ids": [
-    "s1",
-    "s2"
+    "s1"
   ],
   "session_order": [
     "b1",
@@ -16,14 +23,9 @@
     "b3",
     "b4",
     "b5",
-    "b6",
-    "b7",
-    "b8",
-    "b9",
-    "b10",
-    "b11"
+    "b6"
   ],
-  "beats_count": 11,
-  "total_duration_sec": 114.3,
-  "duration_formatted": "01:54"
+  "beats_count": 6,
+  "total_duration_sec": 72.1,
+  "duration_formatted": "01:12"
 }

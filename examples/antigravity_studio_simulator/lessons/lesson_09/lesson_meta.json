@@ -1,0 +1,31 @@
+{
+  "lesson_slug": "lesson_09",
+  "filename": "lesson_09.html",
+  "legacy_alias": "lesson_03_nghiem_thu_file_va_kien_truc_agent.html",
+  "code": "BÀI 9",
+  "chapter_number": 3,
+  "chapter_code": "CHƯƠNG 3",
+  "chapter_title": "Thiết kế Bộ não .agent & Tự động hóa Quy trình",
+  "title": "Tư duy Quản trị Đầu ra & Kiến trúc Bộ não .agent (Rules, Skills, Workflows)",
+  "short_title": "Kiến trúc .agent: Rules, Skills, Workflows",
+  "pill_label": "Bài 9 · Kiến trúc Bộ não .agent",
+  "description": "Chuyển dịch từ thói quen chỉ đọc câu trả lời trên khung chat sang nghiệm thu tệp sản phẩm thật trên ổ cứng; hiểu rõ ẩn dụ 'Căn bếp Nhà hàng' cho 3 ngăn Rules, Skills và Workflows trong thư mục .agent.",
+  "prerequisites": "Chương 2 (Đã hiểu cách hoạt động của tệp @troly.md và lệnh gạch chéo /start-1-1).",
+  "dependents": "Bài 10 (Thiết kế Rules & Skills), Bài 11 (Đóng gói Workflows), Bài 12 (Bộ 3 lệnh /grill-me, /plan, /learn).",
+  "placement_risk": "0% Rủi ro — Học viên đã tự tay dùng @troly.md và /start-1-1 ở Chương 1-2 nên khi mở thư mục .agent ở Bài 9 sẽ hiểu ngay mối liên hệ thực tế.",
+  "continuity_bridge": "Sau khi nắm được bức tranh tổng thể 3 ngăn của thư mục .agent ở Bài 9, Bài 10 sẽ hướng dẫn chi tiết cách viết Nội quy tự động (Rules) và Sổ tay kỹ năng (Skills).",
+  "slide_ids": [
+    "s1"
+  ],
+  "session_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "b6"
+  ],
+  "beats_count": 6,
+  "total_duration_sec": 70.1,
+  "duration_formatted": "01:10"
+}

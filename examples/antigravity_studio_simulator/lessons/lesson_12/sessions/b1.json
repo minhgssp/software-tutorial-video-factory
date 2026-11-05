@@ -1,0 +1,18 @@
+{
+  "id": "b1",
+  "label": "1. [Lý thuyết Kiểu 1] Chu trình 3 lệnh vàng: /grill-me, /plan, /learn",
+  "duration": 15.66,
+  "pose": 1,
+  "mode": "theory",
+  "pedagogy_type": "theory_type_1",
+  "slide": "s1",
+  "hl": [
+    "s1_c1",
+    "s1_c2",
+    "s1_c3",
+    "s1_call"
+  ],
+  "caption": "Trong bài cuối cùng của <strong>Chương 3 — Bài 12</strong>, chúng ta làm chủ chu trình 3 lệnh vàng giúp giải quyết mọi đề bài khó: Dùng <code>/grill-me</code> để trợ lý phỏng vấn làm rõ yêu cầu, dùng <code>/plan</code> để chốt khung kế hoạch, và dùng <code>/learn</code> để trợ lý tự ghi nhớ bài học vào bộ não <code>.agent</code>.",
+  "audio_src": "audio/lesson_12/b1.mp3",
+  "audio_duration": 15.01
+}

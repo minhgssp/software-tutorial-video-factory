@@ -9,7 +9,14 @@
 
 ## 1. Hợp Đồng Đối Soát Tệp Đích & Số Đo Định Lượng (`TARGET_FILE` Parity Contract — `[WHAT]`)
 
-Đặc tả này quy định nâng cấp kho mã nguồn [`C:\Github\software-tutorial-video-factory`](file:///C:/Github/software-tutorial-video-factory/README.md#L1-L40) từ kiến trúc HTML đơn khối (`6.731 dòng`, `290KB/bài`) sang **Kiến trúc Giáo án Tương tác 5 Lớp (`980 dòng`, `60KB/bài`, giảm `85%` dung lượng mỗi trang bài học, tổng cộng `6 bài học`, `47 phần nhỏ / micro-beats`, `523.0 giây` thời lượng thuyết minh `48kHz`)** dựa trên chuẩn vàng tại [`Module_6_Live_Masterclass_06/html_video_demos/index.html`](file:///c:/commandcenter/06_Academy_Group/02_Course_Hub/Cohorts_HoctapTech/Antigravity_Basic/antigravity_course_vn/Module_6_Live_Masterclass_06/html_video_demos/index.html#L1-L120).
+Đặc tả này quy định nâng cấp kho mã nguồn [`C:\Github\software-tutorial-video-factory`](file:///C:/Github/software-tutorial-video-factory/README.md#L1-L40) từ kiến trúc HTML đơn khối (`6.731 dòng`, `290KB/bài`) sang **Kiến trúc Giáo án Tương tác 5 Lớp Toàn Khóa (`53KB/bài`, giảm `85%` dung lượng mỗi trang bài học, tổng cộng `6 Chương · 24 Bài giảng`, `144 phần nhỏ / micro-beats` (`b1`..`b6`), `~1.750 giây` thời lượng thuyết minh `48kHz`)** dựa trên chuẩn vàng tại [`Module_6_Live_Masterclass_06/html_video_demos/index.html`](file:///c:/commandcenter/06_Academy_Group/02_Course_Hub/Cohorts_HoctapTech/Antigravity_Basic/antigravity_course_vn/Module_6_Live_Masterclass_06/html_video_demos/index.html#L1-L120).
+
+Bản nâng cấp v2.2 tích hợp thêm **5 Cải Cách Sư Phạm Toàn Khóa (`PROP-261105-04`)**:
+1. **Đồ thị Tiên quyết Không Chu trình & 0% Trùng lặp (`Prerequisite DAG`):** Toàn bộ 24 bài học (`lesson_01.html`..`lesson_24.html`) khai báo tường minh `prerequisites`, `dependents`, `placement_risk`, `continuity_bridge` trong `lesson_meta.json` và hiển thị trực tiếp tại hộp `#ksb-dep-box` trên Sidebar Trái.
+2. **Tách bạch Lý thuyết Kiểu 1 (`theory_type_1` — `b1`):** Slide Hero 100% Trực quan với **4 Bố cục Đồ họa Chuyên biệt** (`.k-layout-flowchart`, `.k-layout-comparison`, `.k-layout-timeline`, `.k-layout-anatomy`), loại bỏ hoàn toàn biểu đồ phần trăm bịa đặt.
+3. **Tách bạch Lý thuyết Kiểu 2 (`theory_type_2` — `b2`, `b3`):** Giảng lý thuyết kỹ thuật/quy trình gắn trực tiếp trên màn hình mô phỏng (`mode: "sim"`) kèm Thẻ Kiến thức Nổi (`#kudo-stage-pedagogy-card`).
+4. **Thực hành 3 Bước Tiến triển Thực sự (`practice_step` — `b4`, `b5`, `b6`):** Chuỗi 3 bước liên hoàn (`Bước 1/3` chuẩn bị $\to$ `Bước 2/3` thao tác $\to$ `Bước 3/3` nghiệm thu kết quả) có trạng thái màn hình thay đổi thực tế qua từng nhịp.
+5. **144 Tệp Âm thanh Thuyết minh `VieNeu-TTS 48kHz`:** Đồng bộ thời lượng thực cho toàn bộ 24 bài học (`audio/lesson_01..24/b1..b6.mp3`).
 
 Các tệp mã nguồn và tài liệu cốt lõi bắt buộc phải hiện diện và khớp chữ ký AST trong kho mã nguồn đích `C:\Github\software-tutorial-video-factory`:
 

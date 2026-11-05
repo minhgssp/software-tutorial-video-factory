@@ -1,0 +1,31 @@
+{
+  "lesson_slug": "lesson_18",
+  "filename": "lesson_18.html",
+  "legacy_alias": "",
+  "code": "BÀI 18",
+  "chapter_number": 5,
+  "chapter_code": "CHƯƠNG 5",
+  "chapter_title": "Sản xuất Nội dung, Thiết kế Slide & Báo cáo Trực quan",
+  "title": "Tự động hóa Sản xuất Bài viết, Email Chuỗi & Kiểm duyệt Chất lượng",
+  "short_title": "Sản xuất Bài viết & Email Chuỗi",
+  "pill_label": "Bài 18 · Bài viết & Email Chuỗi",
+  "description": "Áp dụng mô hình 'Tòa soạn AI 2 bước': Từ 1 tài liệu chuyên môn gốc, tự động chuyển hóa thành Bài chuyên sâu Website, Bài đăng mạng xã hội và Chuỗi 3 Email chăm sóc khách hàng, kèm bước tự chấm điểm kiểm duyệt.",
+  "prerequisites": "Bài 17 (Đã có tệp brand_voice.md và kho số liệu thực tế từ bao_cao_doanh_thu_q1.md).",
+  "dependents": "Bài 19 (Tạo bộ ảnh minh họa đi kèm cho chính các bài viết vừa xuất bản ở Bài 18).",
+  "placement_risk": "0% Rủi ro — Học viên tách bạch rõ bước Viết nháp và bước Kiểm duyệt (Editorial Review) nên bài viết luôn sắc sảo.",
+  "continuity_bridge": "Sau khi có trọn bộ văn bản bài viết và email ở Bài 18, Bài 19 sẽ hướng dẫn cách tạo ảnh minh họa và infographic đồng bộ nhận diện để đăng kèm bài viết.",
+  "slide_ids": [
+    "s1"
+  ],
+  "session_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "b6"
+  ],
+  "beats_count": 6,
+  "total_duration_sec": 70.3,
+  "duration_formatted": "01:10"
+}

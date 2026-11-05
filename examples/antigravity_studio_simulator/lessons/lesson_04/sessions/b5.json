@@ -1,19 +1,21 @@
 {
   "id": "b5",
-  "label": "5. Chế độ đọc tài liệu trực quan",
-  "duration": 11.61,
+  "label": "5. [Thực hành B2/3] Gõ /start và chọn chuẩn lệnh /start-1-1",
+  "duration": 9.13,
+  "pose": 5,
   "mode": "sim",
-  "pose": 6,
-  "surface": "ide",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Gọi quy trình học tập",
+  "pedagogy_title": "Bước 2: Mở tệp 1.1_Welcome.md và chọn lệnh /start-1-1",
+  "pedagogy_note": "Sau khi chọn /start-1-1 từ bảng gợi ý, kiểm tra ô nhập hiển thị đúng '/start-1-1' rồi bấm nút Gửi (→).",
+  "onEnter": "kudoHidePopovers(); closeSettingsModal(); switchToSurface('ide'); openFileInEditor('1.1_Welcome.md'); kudoSelectStartWorkflowReadyToSend();",
   "focus_selectors": [
-    "#ide-tabs-bar",
-    "#office-toolbar"
+    "#ide-chat-input",
+    "#ide-send-btn"
   ],
-  "focus_pad": 8,
-  "cursor_selector": "#pill-wysiwyg",
-  "cursor_label": "Bấm 👁️ Preview / Office Viewer",
-  "caption": "Nếu thấy tệp <code>0.1_Introduction.md</code> hiển thị nhiều ký hiệu dấu thăng ở chế độ Raw, bạn nhìn lên thanh tiêu đề cột giữa và bấm vào nút <code>👁️ Preview / Office Viewer</code> để đọc trình bày trực quan.",
-  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); setEditorMode('wysiwyg'); openFileInEditor('0.1_Introduction.md');",
+  "cursor_selector": "#ide-send-btn",
+  "cursor_label": "Bước 2: Kiểm tra /start-1-1 rồi nhấn Enter / Gửi",
+  "caption": "Sang <strong>Bước 2</strong>, anh chị mở tệp <code>1.1_Welcome.md</code> của công ty giả lập <strong>TaskFlow</strong>, chọn lệnh <code>/start-1-1</code> vào ô chat và nhấn nút Gửi.",
   "audio_src": "audio/lesson_04/b5.mp3",
-  "audio_duration": 10.96
+  "audio_duration": 8.48
 }

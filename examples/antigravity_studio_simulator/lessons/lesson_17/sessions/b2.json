@@ -1,0 +1,20 @@
+{
+  "id": "b2",
+  "label": "2. [Lý thuyết Kiểu 2] Quan sát cấu trúc tệp brand_voice.md trong IDE",
+  "duration": 12.01,
+  "pose": 2,
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Giải phẫu Tệp Brand Voice",
+  "pedagogy_title": "Cách khai báo Tính cách, Độc giả và Cặp câu Mẫu (Nên viết vs. Không nên viết)",
+  "pedagogy_note": "Mẹo hiệu quả nhất để dạy giọng văn cho AI là đưa ra 2 ví dụ đối lập: Câu viết sai giọng ( ❌ ) và Câu viết chuẩn giọng ( ✅ ).",
+  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › brand_voice.md', editorTitle:'🎙️ brand_voice.md — Cẩm Nang Giọng Văn Thương Hiệu TaskFlow', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#9a3412;margin-top:0;\">CẨM NANG GIỌNG VĂN THƯƠNG HIỆU — TASKFLOW INC.</h2><ul><li><strong>Tính cách cốt lõi:</strong> Thực chiến, Đáng tin cậy, Tôn trọng thời gian của người đọc.</li><li><strong>Khách hàng mục tiêu:</strong> CEO &amp; Trưởng phòng Vận hành doanh nghiệp 20-200 nhân sự.</li></ul><div style=\"background:#fef2f2;border-left:4px solid #ef4444;padding:8px 12px;margin-bottom:8px;font-size:13px;\">❌ <strong>Cấm viết chung chung:</strong> \"TaskFlow là giải pháp công nghệ đột phá hàng đầu kỷ nguyên số.\"</div><div style=\"background:#ecfdf5;border-left:4px solid #10b981;padding:8px 12px;font-size:13px;\">✅ <strong>Luôn viết bằng con số thật:</strong> \"TaskFlow giúp doanh nghiệp 50 nhân sự rút ngắn thời gian bàn giao việc từ 14 ngày xuống còn 3 ngày.\"</div></div>'});",
+  "focus_selectors": [
+    "#editor-canvas"
+  ],
+  "cursor_selector": "#editor-canvas",
+  "cursor_label": "Dạy AI bằng cặp ví dụ ❌ Không nên viết và ✅ Nên viết",
+  "caption": "Nhìn vào tệp <code>brand_voice.md</code> ở cột giữa trên màn hình: Bí quyết hay nhất để AI bắt trúng giọng văn thương hiệu là anh chị hãy đặt hai câu ví dụ cạnh nhau — một câu chung chung bị cấm và một câu cụ thể được khuyến khích.",
+  "audio_src": "audio/lesson_17/b2.mp3",
+  "audio_duration": 11.36
+}

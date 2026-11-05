@@ -1,0 +1,18 @@
+{
+  "id": "b1",
+  "label": "1. [Lý thuyết Kiểu 1] Quy trình 3 tầng bóc tách kho tài liệu lớn",
+  "duration": 14.69,
+  "pose": 1,
+  "mode": "theory",
+  "pedagogy_type": "theory_type_1",
+  "slide": "s1",
+  "hl": [
+    "s1_c1",
+    "s1_c2",
+    "s1_c3",
+    "s1_call"
+  ],
+  "caption": "Chào mừng anh chị bước vào <strong>Chương 4</strong>. Khi phải xử lý hàng chục biên bản họp hay báo cáo dài hàng trăm trang, nếu anh chị đính kèm tất cả vào một câu lệnh thì AI sẽ đọc lướt rất sơ sài. Sơ đồ 3 tầng trên màn hình giúp chúng ta bóc tách sâu mà không sót một chi tiết nào.",
+  "audio_src": "audio/lesson_13/b1.mp3",
+  "audio_duration": 14.04
+}

@@ -1,19 +1,22 @@
 {
   "id": "b6",
-  "label": "6. Cách chọn mô hình theo việc",
-  "duration": 16.22,
-  "mode": "theory",
+  "label": "6. [Thực hành B3/3] Nghiệm thu màn hình chào mừng Antigravity IDE",
+  "duration": 12.81,
   "pose": 6,
-  "slide": "s2",
-  "hl": [
-    "s2-c3",
-    "s2-c4"
-  ],
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Nghiệm thu & Tiếp nối",
+  "pedagogy_title": "Bước 3: Màn hình chào mừng Antigravity IDE sẵn sàng nhận thư mục",
+  "pedagogy_note": "Nghiệm thu: Cửa sổ Antigravity IDE mở ra ở màn hình Welcome (chưa mở thư mục). Tiếp theo: Bài 2 học giải nén .zip & bấm Open Folder.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); showIdeWelcomeScreen();",
   "focus_selectors": [
-    "#s2-c3",
-    "#s2-c4"
+    "#ide-left-sidebar",
+    "#editor-canvas",
+    "#ide-right-agent"
   ],
-  "caption": "Khi chọn mô hình, bạn dùng <code>Gemini 3.8 Flash Medium</code> cho việc đơn giản để phản hồi nhanh và tiết kiệm hạn mức, dùng <code>Gemini 4 Argon Medium</code> cho công việc hàng ngày, và chọn <code>Claude Sonnet 5.5</code> hoặc <code>Claude Opus 5.5</code> khi cần lập kế hoạch hay phân tích bảng tính phức tạp.",
+  "cursor_selector": "#ide-left-sidebar",
+  "cursor_label": "Bước 3: Màn hình Welcome chờ mở thư mục dự án",
+  "caption": "Ở <strong>Bước 3</strong>, cửa sổ <strong>Antigravity IDE</strong> hiện ra ở trạng thái màn hình chào mừng và đang chờ chúng ta mở thư mục dự án. Vậy làm sao để giải nén học liệu <code>.zip</code> và nạp thư mục vào đây an toàn? Chúng ta sang ngay <strong>Bài 2</strong>.",
   "audio_src": "audio/lesson_01/b6.mp3",
-  "audio_duration": 15.57
+  "audio_duration": 12.16
 }

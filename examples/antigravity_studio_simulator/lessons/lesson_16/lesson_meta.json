@@ -1,0 +1,31 @@
+{
+  "lesson_slug": "lesson_16",
+  "filename": "lesson_16.html",
+  "legacy_alias": "",
+  "code": "BÀI 16",
+  "chapter_number": 4,
+  "chapter_code": "CHƯƠNG 4",
+  "chapter_title": "Xử lý Dữ liệu, Bảng tính & Phối hợp Đội nhóm",
+  "title": "Đồng bộ Tài liệu Nhóm Qua GitHub & Sao lưu Google Drive Tự động",
+  "short_title": "Đồng bộ GitHub & Google Drive",
+  "pill_label": "Bài 16 · Đồng bộ GitHub & Drive",
+  "description": "Xóa bỏ cảnh gửi file qua lại trên Zalo/Email với tên 'Bao_cao_final_v2_sua_lan_3': Học cách nhờ Trợ lý AI lưu mốc lịch sử phiên bản (Git/GitHub) và đồng bộ trực tiếp lên thư mục Google Drive của công ty.",
+  "prerequisites": "Bài 14 & Bài 15 (Đã tạo ra tệp báo cáo bao_cao_doanh_thu_q1.md và de_an_tong_the_q2.md trên ổ cứng).",
+  "dependents": "Chương 5 (Sản xuất nội dung truyền thông & thuyết trình từ kho dữ liệu đã đồng bộ).",
+  "placement_risk": "0% Rủi ro — Dân văn phòng không cần thuộc câu lệnh Git khó nhớ vì chỉ cần ra lệnh bằng tiếng Việt cho Trợ lý AI thực hiện trọn gói.",
+  "continuity_bridge": "Kết thúc Chương 4, toàn bộ dữ liệu và báo cáo đã được phân tích chuẩn xác và đồng bộ an toàn. Sang Chương 5 (Bài 17), chúng ta sẽ biến các báo cáo này thành bài viết truyền thông, slide và bảng điều khiển đẹp mắt!",
+  "slide_ids": [
+    "s1"
+  ],
+  "session_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "b6"
+  ],
+  "beats_count": 6,
+  "total_duration_sec": 75.2,
+  "duration_formatted": "01:15"
+}

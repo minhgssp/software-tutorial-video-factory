@@ -1,0 +1,21 @@
+{
+  "id": "b2",
+  "label": "2. [Lý thuyết Kiểu 2] Quan sát cấu trúc tệp workflow trong IDE",
+  "duration": 11.93,
+  "pose": 2,
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Giải phẫu Tệp Workflow",
+  "pedagogy_title": "Cấu trúc Đầu vào -> Các bước xử lý -> Đầu ra trong tệp .agent/workflows/",
+  "pedagogy_note": "Mở tệp start-1-1.md để thấy cách viết từng bước Bước 1, Bước 2, Bước 3 bằng ngôn ngữ tiếng Việt tự nhiên.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); setEditorMode('wysiwyg'); openFileInEditor('start-1-1.md');",
+  "focus_selectors": [
+    "#ide-file-tree",
+    "#editor-canvas"
+  ],
+  "cursor_selector": "[data-file='start-1-1.md']",
+  "cursor_label": "Mỗi tệp trong .agent/workflows/ là một kịch bản từng bước",
+  "caption": "Nhìn vào cột giữa trên màn hình: Một tệp <code>workflow</code> thực chất không có mã lập trình phức tạp nào cả. Nó chỉ là một văn bản tiếng Việt chia rõ Bước 1 đọc tệp gì, Bước 2 phân tích sao và Bước 3 lưu kết quả vào đâu.",
+  "audio_src": "audio/lesson_11/b2.mp3",
+  "audio_duration": 11.28
+}

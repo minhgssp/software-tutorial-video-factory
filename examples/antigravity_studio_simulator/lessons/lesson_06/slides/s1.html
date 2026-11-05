@@ -1,29 +1,71 @@
 <div>
-                <div class="k-slide-header">
-                  <span class="k-slide-kicker">Phần 6 · Quản lý tệp tin trên máy tính</span>
-                  <span class="k-slide-step">Cảnh 1 / 1 · Lý thuyết</span>
-                </div>
-                <div class="k-slide-h1">Quy tắc giải nén tệp .zip và kiểm tra sự đồng bộ 1-1 với ổ cứng máy tính</div>
-                <div class="k-slide-sub">Hiểu rõ mối liên hệ trực tiếp giữa cây thư mục trong Antigravity IDE và cửa sổ quản lý tệp của hệ điều hành.</div>
-              </div>
-              <div class="k-grid-2">
-                <div class="k-card k-step-item" id="sl-c1" data-order="1">
-                  <span class="k-card-tag" style="background:#FEF3C7; color:#92400E;">Quy tắc 1 · Giải nén tệp .zip</span>
-                  <h3>Phải Extract All trước khi chọn Open Folder</h3>
-                  <ul>
-                    <li><strong>Không mở trực tiếp trong tệp nén:</strong> Khi tải học liệu dạng <code>.zip</code> về máy, nếu chưa giải nén thì Antigravity sẽ không thấy thư mục thật để tạo và lưu tệp mới.</li>
-                    <li><strong>Thao tác chuẩn:</strong> Nhấp chuột phải vào tệp <code>.zip</code>, chọn <strong>Extract All</strong> (Giải nén tất cả) ra một thư mục cố định trên ổ đĩa rồi mới mở trong Antigravity.</li>
-                  </ul>
-                </div>
-                <div class="k-card k-step-item" id="sl-c2" data-order="2">
-                  <span class="k-card-tag" style="background:#DCFCE7; color:#166534;">Quy tắc 2 · Reveal in File Explorer</span>
-                  <h3>Kiểm chứng sự đồng bộ 1-1 với máy tính</h3>
-                  <ul>
-                    <li><strong>Không phải bản sao ảo:</strong> Mọi tệp do AI tạo ra trong cột trái của Antigravity IDE đều là tệp thật nằm ngay trên ổ cứng máy tính của bạn.</li>
-                    <li><strong>Mở nhanh vị trí tệp:</strong> Nhấp chuột phải vào bất kỳ tệp nào ở cột trái và chọn <strong>Reveal in File Explorer</strong> (hoặc <em>Reveal in Finder</em> trên máy Mac) để mở đúng thư mục chứa tệp đó.</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="k-callout k-step-item" id="sl-c3" data-order="3">
-                <span><strong>Lưu ý an toàn:</strong> Tránh kéo thả nhầm thư mục này lồng vào trong thư mục khác trên cột Explorer bên trái; nếu hiện hộp thoại hỏi di chuyển, hãy bấm <strong>Cancel</strong>.</span>
-              </div>
+      <div class="k-slide-header">
+        <span class="k-slide-kicker">CHƯƠNG 2 · BÀI 6 · LÝ THUYẾT KIỂU 1 ( NGUYÊN LÝ &amp; TRỰC QUAN )</span>
+        <span class="k-slide-step">Bố cục FLOWCHART · Nhịp 1/6</span>
+      </div>
+      <div class="k-slide-h1">Bộ ba tăng tốc giao việc: Đính kèm tệp (@), Giọng nói (Ctrl+M) và Trích dẫn dòng (Ctrl+L)</div>
+      <div class="k-slide-sub">Giao việc cho Trợ lý AI nhanh gấp nhiều lần gõ phím truyền thống và chính xác tới từng dòng văn bản.</div>
+    </div>
+    
+        <div class="k-visual-hero-box k-layout-flowchart">
+          <div class="k-viz-header">
+            <span class="k-viz-badge">📊 SƠ ĐỒ LUỒNG NGUYÊN LÝ</span>
+            <span class="k-viz-title">Ba kênh truyền đạt ngữ cảnh chính xác tuyệt đối cho Trợ lý AI</span>
+          </div>
+          <svg class="k-flow-svg" viewBox="0 0 860 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ba kênh truyền đạt ngữ cảnh chính xác tuyệt đối cho Trợ lý AI">
+            <path d="M262 48 H298" stroke="#EA580C" stroke-width="3" stroke-linecap="round"/>
+            <polygon points="295,42 307,48 295,54" fill="#EA580C"/>
+            <path d="M562 48 H598" stroke="#15803D" stroke-width="3" stroke-linecap="round"/>
+            <polygon points="595,42 607,48 595,54" fill="#15803D"/>
+            <rect x="8" y="8" width="252" height="80" rx="14" fill="#FFF7ED" stroke="#FDBA74" stroke-width="2"/>
+            <text x="134" y="34" text-anchor="middle" fill="#9A3412" font-size="13" font-weight="800">1. KÝ HIỆU @ (MENTION)</text>
+            <text x="134" y="56" text-anchor="middle" fill="#1E293B" font-size="14" font-weight="700">Chỉ định đích danh tệp</text>
+            <text x="134" y="76" text-anchor="middle" fill="#475569" font-size="12">@COMPANY.md, @sales_data.csv</text>
+            <rect x="308" y="8" width="252" height="80" rx="14" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+            <text x="434" y="34" text-anchor="middle" fill="#B45309" font-size="13" font-weight="800">2. PHÍM CTRL + M (VOICE)</text>
+            <text x="434" y="56" text-anchor="middle" fill="#1E293B" font-size="14" font-weight="700">Đọc yêu cầu tiếng Việt</text>
+            <text x="434" y="76" text-anchor="middle" fill="#475569" font-size="12">Tự chuyển giọng nói thành chữ</text>
+            <rect x="608" y="8" width="244" height="80" rx="14" fill="#DCFCE7" stroke="#4ADE80" stroke-width="2"/>
+            <text x="730" y="34" text-anchor="middle" fill="#166534" font-size="13" font-weight="800">3. PHÍM CTRL + L (QUOTE)</text>
+            <text x="730" y="56" text-anchor="middle" fill="#1E293B" font-size="14" font-weight="700">Bôi đen đoạn văn -> Trích dẫn</text>
+            <text x="730" y="76" text-anchor="middle" fill="#15803D" font-size="12">Gắn kèm số dòng #L7-L8</text>
+          </svg>
+        </div>
+        
+    <div class="k-grid-3">
+      
+        <div class="k-card k-step-item k-hl" id="s1_c1" data-order="1">
+          <div class="k-card-top-row">
+            <span class="k-card-tag" style="background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;">KÝ HIỆU @ · ĐÍNH KÈM TỆP</span>
+            <span class="k-illus-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EA580C" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M8 10h8M8 14h5"/></svg></span>
+          </div>
+          <h3>Không bao giờ sợ AI đọc nhầm tài liệu</h3>
+          <p>Gõ dấu @ trong ô chat để mở danh sách toàn bộ tệp trong thư mục dự án, có thể đính kèm 2-3 tệp trong cùng một câu lệnh.</p>
+          <div class="k-card-mini-note">📎 Ví dụ: Đối chiếu @COMPANY.md với @sales_data.csv</div>
+        </div>
+        
+        <div class="k-card k-step-item k-hl" id="s1_c2" data-order="2">
+          <div class="k-card-top-row">
+            <span class="k-card-tag" style="background:#E0F2FE; color:#0369A1; border:1px solid #7DD3FC;">CTRL + M · GIỌNG NÓI TIẾNG VIỆT</span>
+            <span class="k-illus-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
+          </div>
+          <h3>Nói tự nhiên, AI tự chuyển thành văn bản</h3>
+          <p>Bấm biểu tượng Micro (🎙️) hoặc nhấn Ctrl + M (hoặc Windows + H) để đọc yêu cầu dài mà không mỏi tay gõ phím.</p>
+          <div class="k-card-mini-note">🎙️ Nhận diện chuẩn tiếng Việt và thuật ngữ văn phòng</div>
+        </div>
+        
+        <div class="k-card k-step-item k-hl" id="s1_c3" data-order="3">
+          <div class="k-card-top-row">
+            <span class="k-card-tag" style="background:#DCFCE7; color:#15803D; border:1px solid #86EFAC;">CTRL + L · QUOTE IN CHAT</span>
+            <span class="k-illus-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+          </div>
+          <h3>Sửa đúng đoạn văn không ảnh hưởng phần khác</h3>
+          <p>Bôi đen đúng câu cần sửa trong tài liệu rồi nhấn Ctrl + L (hoặc bấm nút Quote in Chat) để đưa tọa độ dòng vào ô chat.</p>
+          <div class="k-card-mini-note">💬 Tự động gắn nhãn @0.1_Introduction.md#L7-L8</div>
+        </div>
+        
+    </div>
+    <div class="k-callout k-step-item k-hl" id="s1_call" data-order="4">
+      <span>💡</span>
+      <div><strong>Công thức giao việc chuẩn:</strong> <code>@Tên_tệp</code> + <code>Đoạn trích dẫn (Ctrl+L)</code> + <code>Yêu cầu cụ thể (gõ phím hoặc đọc bằng Ctrl+M)</code>.</div>
+    </div>

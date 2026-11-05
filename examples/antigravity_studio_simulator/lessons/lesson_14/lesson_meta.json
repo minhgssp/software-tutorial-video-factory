@@ -1,0 +1,31 @@
+{
+  "lesson_slug": "lesson_14",
+  "filename": "lesson_14.html",
+  "legacy_alias": "",
+  "code": "BÀI 14",
+  "chapter_number": 4,
+  "chapter_code": "CHƯƠNG 4",
+  "chapter_title": "Xử lý Dữ liệu, Bảng tính & Phối hợp Đội nhóm",
+  "title": "Phân tích Bảng tính CSV, Làm sạch Dữ liệu & Trích xuất Insight Kinh doanh",
+  "short_title": "Phân tích CSV & Insight Kinh doanh",
+  "pill_label": "Bài 14 · Phân tích Bảng tính CSV",
+  "description": "Biến bảng dữ liệu thô .csv nhiều lỗi định dạng thành bảng số liệu sạch sẽ và báo cáo phân tích doanh thu theo khu vực, sản phẩm, nhân sự mà không cần nhớ các hàm Excel phức tạp.",
+  "prerequisites": "Bài 5 (Biết mở xem tệp .csv bằng Office Viewer) & Bài 13 (Kỹ thuật bóc tách hồ sơ có dẫn nguồn).",
+  "dependents": "Bài 15 (Phối hợp phân tích dữ liệu & nghiên cứu thị trường), Bài 16 (Đồng bộ báo cáo doanh thu bao_cao_doanh_thu_q1.md lên GitHub/Drive).",
+  "placement_risk": "0% Rủi ro — Học viên thao tác trực tiếp trên tệp sales_data.csv có sẵn trong bộ học liệu và xuất ra tệp bao_cao_doanh_thu_q1.md dùng xuyên suốt tới Bài 16.",
+  "continuity_bridge": "Sau khi phân tích thành công một bảng dữ liệu ở Bài 14, Bài 15 sẽ hướng dẫn cách gọi nhiều trợ lý con (Sub-Agents) chạy song song khi có hàng loạt bảng dữ liệu và báo cáo cần xử lý cùng lúc.",
+  "slide_ids": [
+    "s1"
+  ],
+  "session_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "b6"
+  ],
+  "beats_count": 6,
+  "total_duration_sec": 74.1,
+  "duration_formatted": "01:14"
+}

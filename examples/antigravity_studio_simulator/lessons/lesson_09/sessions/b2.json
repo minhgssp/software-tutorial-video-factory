@@ -1,0 +1,22 @@
+{
+  "id": "b2",
+  "label": "2. [Lý thuyết Kiểu 2] Đối chiếu khung chat và tệp sản phẩm đầu ra",
+  "duration": 11.53,
+  "pose": 2,
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Nghiệm thu Tệp Đầu ra",
+  "pedagogy_title": "Khung chat phải chỉ là nơi giao việc; Cột giữa mới là bàn nghiệm thu sản phẩm",
+  "pedagogy_note": "Khi AI báo đã hoàn thành, hãy bấm vào tệp mới sinh ra ở cây thư mục trái để kiểm tra chất lượng thực tế.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); setEditorMode('wysiwyg'); openFileInEditor('1.2_QuickStart.md');",
+  "focus_selectors": [
+    "#ide-file-tree",
+    "#editor-canvas",
+    "#ide-chat-messages"
+  ],
+  "cursor_selector": "#editor-canvas",
+  "cursor_label": "Nghiệm thu sản phẩm trực tiếp tại cột giữa",
+  "caption": "Trên màn hình làm việc thực tế, anh chị cần thay đổi một thói quen cốt lõi: Khung chat bên phải chỉ là nơi trao đổi ngắn gọn, còn sản phẩm cuối cùng bắt buộc phải xuất thành tệp trong cây thư mục và hiển thị ở cột giữa để nghiệm thu.",
+  "audio_src": "audio/lesson_09/b2.mp3",
+  "audio_duration": 10.88
+}

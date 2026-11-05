@@ -1,0 +1,21 @@
+{
+  "id": "b6",
+  "label": "6. [Thực hành B3/3] Nghiệm thu Lộ trình 30 ngày & Tốt nghiệp Khóa học!",
+  "duration": 17.15,
+  "pose": 6,
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🎓 Thực hành Bước 3/3 · Tốt nghiệp Antigravity Basic",
+  "pedagogy_title": "Bước 3: Nghiệm thu lo_trinh_30_ngay_cua_toi.md & Hoàn thành trọn vẹn 24 Bài giảng!",
+  "pedagogy_note": "Chúc mừng bạn đã hoàn thành 100% khóa học Antigravity Basic (6 Chương · 24 Bài giảng · 144 Điểm neo thời gian)!",
+  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › lo_trinh_30_ngay_cua_toi.md (Tốt nghiệp!)', editorTitle:'🎓 lo_trinh_30_ngay_cua_toi.md — Chúc Mừng Tốt Nghiệp Antigravity Basic!', editorHtml:'<div style=\"padding:18px;background:#fbf8f3;border:2px solid #ea580c;border-radius:12px;\"><h2 style=\"color:#9a3412;margin-top:0;\">🎓 CHÚC MỪNG BẠN ĐÃ HOÀN THÀNH KHÓA HỌC ANTIGRAVITY BASIC!</h2><p><strong>Tổng kết hành trình:</strong> Bạn đã làm chủ hoàn toàn <strong>6 Chương · 24 Bài giảng · 144 Điểm neo thực hành</strong>.</p><ul><li><strong>Tuần 1:</strong> Tạo thư mục công việc thật, bật quyền <code>Turbo</code> và thiết lập <code>.agent/rules/</code> cá nhân.</li><li><strong>Tuần 2:</strong> Đóng gói 3 công việc lặp lại hàng tuần thành lệnh gạch chéo <code>/workflow</code>.</li><li><strong>Tuần 3 &amp; 4:</strong> Áp dụng chu trình <code>/grill-me &rarr; /plan &rarr; /audit &rarr; /learn</code> cho toàn bộ báo cáo và đề án của phòng ban.</li></ul></div>', userMsg:'@troly.md @bien_ban_audit_du_an.md Hãy lập Lộ trình 30 ngày ứng dụng tại lo_trinh_30_ngay_cua_toi.md', aiMsg:'Chúc mừng bạn đã hoàn thành trọn vẹn 24 bài giảng của khóa học <strong>Antigravity Basic</strong>! Tệp <code>lo_trinh_30_ngay_cua_toi.md</code> đã sẵn sàng đồng hành cùng bạn trong mọi dự án sắp tới.'});",
+  "focus_selectors": [
+    "#editor-canvas",
+    "#ide-chat-messages"
+  ],
+  "cursor_selector": "#editor-canvas",
+  "cursor_label": "🎓 Chúc mừng tốt nghiệp khóa học Antigravity Basic!",
+  "caption": "Và ở <strong>Bước 3</strong>, tấm bản đồ <code>lo_trinh_30_ngay_cua_toi.md</code> đã hiện ra rõ nét trên màn hình. Chúc mừng anh chị đã hoàn thành trọn vẹn <strong>6 Chương, 24 Bài giảng và 144 Điểm neo thực hành</strong> của khóa học <strong>Antigravity Basic</strong>! Chúc anh chị gặt hái thật nhiều thành tựu đột phá cùng Trợ lý AI của mình!",
+  "audio_src": "audio/lesson_24/b6.mp3",
+  "audio_duration": 16.5
+}

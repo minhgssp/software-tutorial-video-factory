@@ -1,0 +1,21 @@
+{
+  "id": "b6",
+  "label": "6. [Thực hành B3/3] Nghiệm thu brand_voice.md & Tiếp nối Bài 18",
+  "duration": 12.89,
+  "pose": 6,
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Nghiệm thu & Tiếp nối",
+  "pedagogy_title": "Bước 3: Nghiệm thu tệp brand_voice.md có sẵn kho số liệu và cặp câu mẫu",
+  "pedagogy_note": "Nghiệm thu: Đã khóa chặt giọng văn thương hiệu TaskFlow. Tiếp theo: Bài 18 tự động hóa sản xuất bài viết đa kênh & email chuỗi.",
+  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › brand_voice.md (Đã khởi tạo)', editorTitle:'🎙️ brand_voice.md — Đã sẵn sàng cho Tòa soạn AI', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#15803d;margin-top:0;\">✅ ĐÃ KHỞI TẠO CẨM NANG THƯƠNG HIỆU TASKFLOW</h2><ul><li><strong>Thông điệp chủ đạo Quý 2:</strong> Rút ngắn thời gian hội nhập nhân sự mới từ 14 ngày xuống 3 ngày.</li><li><strong>Số liệu bảo chứng (Từ Báo cáo Q1):</strong> Tỷ lệ giữ chân khách hàng Enterprise đạt 98,2% (Churn chỉ 1,8%).</li><li><strong>Quy tắc kiểm duyệt:</strong> Mọi bài viết phải mở đầu bằng câu hỏi chạm nỗi đau quản lý và kết thúc bằng lời mời dùng thử 14 ngày.</li></ul></div>', userMsg:'@COMPANY.md @bao_cao_doanh_thu_q1.md Hãy khởi tạo tệp brand_voice.md cho chiến dịch Quý 2.', aiMsg:'Đã tạo xong <code>brand_voice.md</code>! Từ giờ mọi bài viết và email của bạn sẽ luôn nhất quán 100% với giọng văn này.'});",
+  "focus_selectors": [
+    "#editor-canvas",
+    "#ide-chat-messages"
+  ],
+  "cursor_selector": "#editor-canvas",
+  "cursor_label": "Bước 3: Hoàn tất tệp brand_voice.md chuẩn mực!",
+  "caption": "Ở <strong>Bước 3</strong>, tệp <code>brand_voice.md</code> đã hiện ra với đầy đủ thông điệp chủ đạo, số liệu bảo chứng thực tế và quy tắc kiểm duyệt. Bây giờ chúng ta bước sang <strong>Bài 18</strong> để sản xuất hàng loạt bài viết và chuỗi email từ cẩm nang này!",
+  "audio_src": "audio/lesson_17/b6.mp3",
+  "audio_duration": 12.24
+}

@@ -1,14 +1,21 @@
 {
   "lesson_slug": "lesson_03",
-  "filename": "lesson_03_bo_ba_rule_skill_workflow.html",
+  "filename": "lesson_03.html",
+  "legacy_alias": "lesson_04_vuot_qua_con_ngop_hoi_nguoc_ai.html",
   "code": "BÀI 3",
-  "title": "Bộ não AI: Rules, Skills, Workflows",
-  "short_title": "Rules, Skills & Workflows",
-  "pill_label": "Bài 3 · Rules, Skills, Workflows",
-  "description": "Cách tổ chức thư mục .agent gồm Rules, Skills, Workflows, nghiệm thu qua tệp đầu ra và phối hợp 3 lệnh /grill-me, /plan, /learn.",
+  "chapter_number": 1,
+  "chapter_code": "CHƯƠNG 1",
+  "chapter_title": "Khởi động Chuẩn & Làm chủ Giao diện",
+  "title": "Làm chủ Giao diện 3 Cột, Phím Cứu hộ & Xử lý Khi AI Dừng chờ",
+  "short_title": "Giao diện 3 Cột & Phím Cứu hộ",
+  "pill_label": "Bài 3 · 3 Cột & Phím Cứu hộ",
+  "description": "Hiểu rõ vai trò 3 cột của Antigravity IDE, 3 trạng thái khi AI dừng chờ (Stop, Tiếp tục, Accept), phím tắt cứu hộ Ctrl+B khôi phục cột trái và thói quen hỏi trực tiếp AI.",
+  "prerequisites": "Bài 2 (Đã mở thành công thư mục dự án antigravity_course_vn trong Antigravity IDE).",
+  "dependents": "Bài 4 (Thiết lập quyền tự chủ Turbo để không phải bấm Accept thủ công liên tục).",
+  "placement_risk": "0% Rủi ro — Học viên nắm vững cách khôi phục giao diện và xử lý nút chờ trước khi bắt đầu giao việc tự động cho AI.",
+  "continuity_bridge": "Khi đã biết nút Accept (Chấp nhận từng bước) ở Bài 3, học viên sẽ thấy ngay nhu cầu bật chế độ tự chủ Turbo ở Bài 4 để AI chạy liền mạch.",
   "slide_ids": [
-    "s1",
-    "s2"
+    "s1"
   ],
   "session_order": [
     "b1",
@@ -16,11 +23,9 @@
     "b3",
     "b4",
     "b5",
-    "b6",
-    "b7",
-    "b8"
+    "b6"
   ],
-  "beats_count": 8,
-  "total_duration_sec": 90.1,
-  "duration_formatted": "01:30"
+  "beats_count": 6,
+  "total_duration_sec": 71.7,
+  "duration_formatted": "01:12"
 }

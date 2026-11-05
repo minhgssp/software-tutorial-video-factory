@@ -1,0 +1,21 @@
+{
+  "id": "b2",
+  "label": "2. [Lý thuyết Kiểu 2] Nhận biết khi nào cần tạo phiên chat mới (+)",
+  "duration": 10.49,
+  "pose": 2,
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Quản lý Phiên Chat (Threads)",
+  "pedagogy_title": "Cách đóng phiên chat cũ đã dài và mở phiên chat mới sạch sẽ",
+  "pedagogy_note": "Mỗi khi chuyển sang một đầu việc mới hoặc cuối ngày làm việc, hãy yêu cầu AI ghi sổ bàn giao trước khi mở phiên mới.",
+  "onEnter": "kudoSimScene({surface:'ide', file:'COMPANY.md', userMsg:'Tổng hợp toàn bộ các việc chúng ta đã làm từ sáng đến giờ', aiMsg:'Luồng hội thoại hiện tại đã trải qua 18 bước xử lý. Để bộ nhớ luôn sắc bén, bạn nên chốt kết quả vào tệp <code>ban_giao_cong_viec.md</code> trên ổ cứng!'});",
+  "focus_selectors": [
+    "#ide-chat-messages",
+    "#ide-chat-input"
+  ],
+  "cursor_selector": "#ide-chat-messages",
+  "cursor_label": "Chốt sổ bàn giao khi luồng hội thoại đã dài",
+  "caption": "Nhìn vào cột phải trên màn hình: Khi một luồng trò chuyện đã kéo dài qua hàng chục bước, việc tiếp tục nhồi thêm yêu cầu mới sẽ làm trợ lý bị phân tán. Đó là lúc chúng ta cần chốt sổ bàn giao.",
+  "audio_src": "audio/lesson_08/b2.mp3",
+  "audio_duration": 9.84
+}

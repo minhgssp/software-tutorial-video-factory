@@ -1,0 +1,21 @@
+{
+  "id": "b5",
+  "label": "5. [Thực hành B2/3] Mở phiên chat mới và đính kèm @ban_giao_cong_viec.md",
+  "duration": 9.53,
+  "pose": 5,
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Khôi phục ngữ cảnh ca mới",
+  "pedagogy_title": "Bước 2: Sáng hôm sau mở chat mới và gõ @ban_giao_cong_viec.md",
+  "pedagogy_note": "Đính kèm @ban_giao_cong_viec.md kèm yêu cầu thực hiện ngay mục việc cần làm tiếp theo.",
+  "onEnter": "kudoSimScene({surface:'ide', clearChat:true, chatInput:'@ban_giao_cong_viec.md @sales_data.csv Hãy đọc sổ bàn giao hôm qua và thực hiện ngay mục việc cần làm tiếp theo.'});",
+  "focus_selectors": [
+    "#ide-chat-input",
+    "#ide-send-btn"
+  ],
+  "cursor_selector": "#ide-send-btn",
+  "cursor_label": "Bước 2: Nạp lại @ban_giao_cong_viec.md trong 5 giây",
+  "caption": "Sang <strong>Bước 2</strong>, sáng hôm sau khi mở phiên chat mới tinh, anh chị chỉ mất 5 giây gõ <code>@ban_giao_cong_viec.md</code> và bảo trợ lý làm tiếp mục đang dang dở.",
+  "audio_src": "audio/lesson_08/b5.mp3",
+  "audio_duration": 8.88
+}

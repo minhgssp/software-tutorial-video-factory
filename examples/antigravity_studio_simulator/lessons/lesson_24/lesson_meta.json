@@ -1,0 +1,31 @@
+{
+  "lesson_slug": "lesson_24",
+  "filename": "lesson_24.html",
+  "legacy_alias": "",
+  "code": "BÀI 24",
+  "chapter_number": 6,
+  "chapter_code": "CHƯƠNG 6",
+  "chapter_title": "4 Tình huống Thực chiến Toàn diện (Case Studies)",
+  "title": "Tình huống 4 — Tổng kết, Kiểm toán Chất lượng (/audit) & Mở rộng Hệ thống",
+  "short_title": "Case Study 4: Kiểm toán /audit & Tổng kết",
+  "pill_label": "Bài 24 · Case 4: Kiểm toán /audit",
+  "description": "Mảnh ghép hoàn thiện năng lực Quản trị AI Chuyên nghiệp: Sử dụng quy trình Kiểm toán Độc lập (/audit) để rà soát chéo toàn bộ sản phẩm trong thư mục dự án trước khi nghiệm thu bàn giao, và thiết lập Lộ trình 30 ngày áp dụng vào công việc thực tế.",
+  "prerequisites": "Toàn bộ Bài 1 đến Bài 23 (Đã hoàn thành đầy đủ các tệp sản phẩm Chiến lược, Dữ liệu, Nội dung, Slide, HR và Pháp lý).",
+  "dependents": "Áp dụng trực tiếp vào công việc hàng ngày tại doanh nghiệp của học viên sau khi tốt nghiệp khóa Antigravity Basic.",
+  "placement_risk": "0% Rủi ro — Bài tổng kết khép kín vòng tròn quản trị: Từ Khởi tạo (Chương 1) -> Dữ liệu (Chương 2) -> Bộ não .agent (Chương 3) -> Đội nhóm (Chương 4) -> Xuất bản (Chương 5) -> Thực chiến & Kiểm toán /audit (Chương 6).",
+  "continuity_bridge": "Hoàn thành Bài 24, học viên chính thức tốt nghiệp khóa học Antigravity Basic với trọn bộ công cụ và quy trình sẵn sàng vận hành ngay trong công việc thực tế!",
+  "slide_ids": [
+    "s1"
+  ],
+  "session_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "b6"
+  ],
+  "beats_count": 6,
+  "total_duration_sec": 82.5,
+  "duration_formatted": "01:22"
+}

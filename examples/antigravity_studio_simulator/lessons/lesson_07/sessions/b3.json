@@ -1,0 +1,21 @@
+{
+  "id": "b3",
+  "label": "3. [Lý thuyết Kiểu 2] Sự khác biệt khi giao việc có đính kèm @troly.md",
+  "duration": 12.01,
+  "pose": 3,
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Kích hoạt Hồ sơ Cá nhân",
+  "pedagogy_title": "Đính kèm @troly.md cùng tài liệu công việc trong một câu lệnh",
+  "pedagogy_note": "Khi gõ '@troly.md @COMPANY.md', AI sẽ lấy dữ liệu từ COMPANY.md nhưng trình bày theo đúng phong cách của troly.md.",
+  "onEnter": "kudoSimScene({surface:'ide', file:'troly.md', clearChat:true, chatInput:'@troly.md @COMPANY.md Hãy soạn thông báo nội bộ gửi 45 nhân sự về mục tiêu Quý 2 theo đúng văn phong của tôi.'});",
+  "focus_selectors": [
+    "#ide-chat-input",
+    "#editor-canvas"
+  ],
+  "cursor_selector": "#ide-chat-input",
+  "cursor_label": "Kết hợp @troly.md + @COMPANY.md trong ô lệnh",
+  "caption": "Khi giao việc ở cột phải, anh chị chỉ cần gõ <code>@troly.md</code> đi kèm với tệp dữ liệu như <code>@COMPANY.md</code>. Trợ lý sẽ lấy số liệu từ công ty nhưng viết ra bằng đúng giọng văn của riêng anh chị.",
+  "audio_src": "audio/lesson_07/b3.mp3",
+  "audio_duration": 11.36
+}

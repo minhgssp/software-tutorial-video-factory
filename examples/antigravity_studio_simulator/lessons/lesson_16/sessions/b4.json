@@ -1,0 +1,20 @@
+{
+  "id": "b4",
+  "label": "4. [Thực hành B1/3] Bối cảnh & Kiểm tra tệp bao_cao_doanh_thu_q1.md",
+  "duration": 10.01,
+  "pose": 4,
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 1/3 · Kiểm tra Tệp Trước Khi Gửi",
+  "pedagogy_title": "Bối cảnh: Cần gửi báo cáo doanh thu Quý 1 lên kho chung cho Ban Giám đốc",
+  "pedagogy_note": "Bước 1: Mở kiểm tra lại tệp bao_cao_doanh_thu_q1.md để đảm bảo số liệu đã chốt chính xác.",
+  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › bao_cao_doanh_thu_q1.md', editorTitle:'📊 bao_cao_doanh_thu_q1.md — Kiểm tra lần cuối trước khi đồng bộ', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">BÁO CÁO DOANH THU QUÝ 1 (BẢN CHỐT)</h3><p>Tổng doanh thu Quý 1: <strong>1.850.000.000 VNĐ</strong> (Enterprise: 68,1% | SMB: 31,9%).</p><p>Trạng thái: Đã kiểm duyệt 100%, sẵn sàng lưu mốc phiên bản và tải lên Google Drive.</p></div>'});",
+  "focus_selectors": [
+    "#editor-canvas"
+  ],
+  "cursor_selector": "#editor-canvas",
+  "cursor_label": "Bước 1: Xác nhận nội dung bao_cao_doanh_thu_q1.md",
+  "caption": "Chúng ta vào thực hành 3 bước đồng bộ tài liệu nhóm. Ở <strong>Bước 1</strong>, anh chị mở kiểm tra lại tệp <code>bao_cao_doanh_thu_q1.md</code> ở cột giữa trước khi xuất bản cho toàn công ty.",
+  "audio_src": "audio/lesson_16/b4.mp3",
+  "audio_duration": 9.36
+}

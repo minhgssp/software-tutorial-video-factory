@@ -1,0 +1,21 @@
+{
+  "id": "b5",
+  "label": "5. [Thực hành B2/3] Gửi thông số Giày Bã Mía và kích hoạt lệnh /plan",
+  "duration": 10.81,
+  "pose": 5,
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Chốt thông số & Chạy /plan",
+  "pedagogy_title": "Bước 2: Nhập câu trả lời phỏng vấn và gõ /plan để xuất bản đề án",
+  "pedagogy_note": "Cung cấp giá bán 890.000đ, mục tiêu Pre-order 500 đôi và yêu cầu lưu ra tệp ke_hoach_giay_ba_mia_2026.md.",
+  "onEnter": "kudoSimScene({surface:'ide', file:'08_quy_trinh_lap_ke_hoach_chien_luoc.md', clearChat:true, chatInput:'@08_quy_trinh_lap_ke_hoach_chien_luoc.md /plan Dự án Giày Bã Mía: Giá bán 890.000 VNĐ/đôi, khách hàng trẻ 22-35 tuổi, mục tiêu Pre-order 500 đôi tháng đầu. Hãy xuất bản kế hoạch 7 bước vào ke_hoach_giay_ba_mia_2026.md'});",
+  "focus_selectors": [
+    "#ide-chat-input",
+    "#ide-send-btn"
+  ],
+  "cursor_selector": "#ide-send-btn",
+  "cursor_label": "Bước 2: Gửi thông số Giày Bã Mía + lệnh /plan",
+  "caption": "Sang <strong>Bước 2</strong>, sau khi trả lời các câu hỏi về mức giá 890.000 đồng và mục tiêu 500 đôi đặt trước, anh chị gõ lệnh <code>/plan</code> để trợ lý đổ toàn bộ dữ liệu vào khuôn 7 bước.",
+  "audio_src": "audio/lesson_21/b5.mp3",
+  "audio_duration": 10.16
+}

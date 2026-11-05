@@ -1,18 +1,21 @@
 {
   "id": "b6",
-  "label": "6. Hỏi trực tiếp AI khi quên lệnh",
-  "duration": 9.21,
+  "label": "6. [Thực hành B3/3] Nghiệm thu AI giảng bài & Chuyển sang Chương 2",
+  "duration": 14.15,
+  "pose": 6,
   "mode": "sim",
-  "pose": 8,
-  "surface": "ide",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Nghiệm thu Chương 1",
+  "pedagogy_title": "Bước 3: Trợ lý AI tự động đọc giáo trình và dẫn dắt thực hành từng bước",
+  "pedagogy_note": "Nghiệm thu: AI phản hồi kịch bản tương tác Module 1.1 tại khung chat phải. Tiếp theo: Chương 2 (Bài 5) làm chủ định dạng .md, .csv & Office Viewer.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); kudoRunStart11ExecutedDemo();",
   "focus_selectors": [
-    "#ide-right-agent"
+    "#ide-chat-messages",
+    "#editor-canvas"
   ],
-  "focus_pad": 6,
-  "cursor_selector": "#ide-chat-input",
-  "cursor_label": "Hỏi thẳng AI bằng tiếng Việt tự nhiên",
-  "caption": "Như anh chị thấy ở cột phải, chỉ cần hỏi bằng lời tự nhiên, trợ lý AI sẽ chỉ rõ phím tắt <kbd>Ctrl + B</kbd> và vị trí nút <code>👁️ Preview / Office Viewer</code> ngay lập tức.",
-  "onEnter": "kudoRunAskAiWhenStuckDemo();",
+  "cursor_selector": "#ide-chat-messages",
+  "cursor_label": "Bước 3: AI bắt đầu dẫn dắt bài học tương tác!",
+  "caption": "Ở <strong>Bước 3</strong>, ngay lập tức trợ lý AI tự đọc tài liệu bài học và đóng vai giảng viên hướng dẫn anh chị thực hành từng bước. Chúc mừng anh chị đã hoàn thành <strong>Chương 1</strong>! Bây giờ chúng ta bước sang <strong>Chương 2 — Bài 5</strong> để làm chủ định dạng <code>.md</code> và <code>.csv</code>.",
   "audio_src": "audio/lesson_04/b6.mp3",
-  "audio_duration": 8.56
+  "audio_duration": 13.5
 }

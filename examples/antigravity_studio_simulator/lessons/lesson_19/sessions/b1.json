@@ -1,0 +1,18 @@
+{
+  "id": "b1",
+  "label": "1. [Lý thuyết Kiểu 1] Công thức 4 lớp tạo ảnh minh họa đồng bộ",
+  "duration": 13.88,
+  "pose": 1,
+  "mode": "theory",
+  "pedagogy_type": "theory_type_1",
+  "slide": "s1",
+  "hl": [
+    "s1_c1",
+    "s1_c2",
+    "s1_c3",
+    "s1_call"
+  ],
+  "caption": "Tại sao nhiều người dùng AI tạo ảnh thấy bức thứ nhất là ảnh chụp, bức thứ hai lại ra hoạt hình rất lệch tông? Trong <strong>Bài 19</strong>, công thức 3 khối cố định trên màn hình giúp anh chị khóa chặt phong cách và bảng màu để cả bộ ấn phẩm đồng nhất 100%.",
+  "audio_src": "audio/lesson_19/b1.mp3",
+  "audio_duration": 13.23
+}

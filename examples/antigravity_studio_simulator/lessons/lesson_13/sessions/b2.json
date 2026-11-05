@@ -1,0 +1,21 @@
+{
+  "id": "b2",
+  "label": "2. [Lý thuyết Kiểu 2] Quan sát kho hồ sơ nhiều tệp trên cây thư mục",
+  "duration": 10.65,
+  "pose": 2,
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Quản lý Kho Hồ sơ Lớn",
+  "pedagogy_title": "Đối diện với thư mục chứa nhiều tệp tài liệu chiến lược & vận hành",
+  "pedagogy_note": "Quan sát cột trái gồm COMPANY.md, INDEX.md, các Module và bảng dữ liệu: Cần lập bản đồ mục lục trước khi đọc sâu.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); openFileInEditor('INDEX.md');",
+  "focus_selectors": [
+    "#ide-file-tree",
+    "#editor-canvas"
+  ],
+  "cursor_selector": "#ide-file-tree",
+  "cursor_label": "Kho hồ sơ dự án gồm nhiều tệp văn bản & bảng biểu",
+  "caption": "Nhìn vào cây thư mục bên trái trên màn hình: Khi nhận bàn giao một thư mục dự án có hàng chục tệp như thế này, bước đầu tiên không phải là mở đọc mò từng tệp, mà là bảo trợ lý lập bản đồ tổng quan.",
+  "audio_src": "audio/lesson_13/b2.mp3",
+  "audio_duration": 10.0
+}

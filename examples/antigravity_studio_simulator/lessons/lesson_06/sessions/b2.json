@@ -1,19 +1,22 @@
 {
   "id": "b2",
-  "label": "2. Đồng bộ 1-1 với ổ cứng máy",
-  "duration": 12.25,
-  "mode": "theory",
+  "label": "2. [Lý thuyết Kiểu 2] Cơ chế gợi ý tệp tự động khi gõ ký hiệu @",
+  "duration": 14.89,
   "pose": 2,
-  "slide": "s1",
-  "hl": [
-    "sl-c2",
-    "sl-c3"
-  ],
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Đính kèm Tệp bằng @",
+  "pedagogy_title": "Bảng gợi ý tệp thông minh khi gõ dấu @ trong khung chat",
+  "pedagogy_note": "Phần mềm tự động quét toàn bộ thư mục đang mở và liệt kê các tệp (@COMPANY.md, @sales_data.csv, @troly.md) để chọn ngay.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); openFileInEditor('COMPANY.md'); kudoOpenIdeMentionPopup();",
   "focus_selectors": [
-    "#sl-c2",
-    "#sl-c3"
+    ".context-toolbar",
+    "#ide-popup-menu",
+    "#ide-chat-input"
   ],
-  "caption": "Mọi tệp tin ở cột bên trái của Antigravity IDE đều đồng bộ 1-1 với thư mục thật trên ổ cứng. Bạn có thể kiểm chứng bằng lệnh Reveal in File Explorer và nhớ bấm Cancel nếu lỡ tay kéo nhầm thư mục.",
+  "cursor_selector": "#ide-popup-menu .popup-item:first-child",
+  "cursor_label": "Gõ @ để chọn tệp cần đính kèm vào câu lệnh",
+  "caption": "Nhìn vào khung chat bên phải trên màn hình: Ngay khi anh chị gõ ký hiệu <code>@</code>, phần mềm sẽ liệt kê toàn bộ các tệp có trong thư mục như <code>@COMPANY.md</code> hay <code>@sales_data.csv</code> để anh chị bấm chọn mà không cần gõ tay tên tệp.",
   "audio_src": "audio/lesson_06/b2.mp3",
-  "audio_duration": 11.6
+  "audio_duration": 14.24
 }

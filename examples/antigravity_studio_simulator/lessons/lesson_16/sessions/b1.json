@@ -1,0 +1,18 @@
+{
+  "id": "b1",
+  "label": "1. [Lý thuyết Kiểu 1] Quy trình 3 bước lưu lịch sử GitHub & đồng bộ Drive",
+  "duration": 14.99,
+  "pose": 1,
+  "mode": "theory",
+  "pedagogy_type": "theory_type_1",
+  "slide": "s1",
+  "hl": [
+    "s1_c1",
+    "s1_c2",
+    "s1_c3",
+    "s1_call"
+  ],
+  "caption": "Trong bài cuối cùng của <strong>Chương 4 — Bài 16</strong>, chúng ta giải quyết triệt để nỗi khổ gửi tệp qua lại với đủ thứ tên <em>Final_v1, Final_v2</em>. Quy trình 3 bước trên màn hình giúp anh chị dùng tiếng Việt bảo trợ lý đóng dấu phiên bản lên <strong>GitHub</strong> và sao lưu thẳng lên <strong>Google Drive</strong>.",
+  "audio_src": "audio/lesson_16/b1.mp3",
+  "audio_duration": 14.34
+}

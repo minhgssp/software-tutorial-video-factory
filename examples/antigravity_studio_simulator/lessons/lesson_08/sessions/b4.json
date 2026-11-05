@@ -1,0 +1,21 @@
+{
+  "id": "b4",
+  "label": "4. [Thực hành B1/3] Bối cảnh & Ra lệnh cho AI tự ghi Sổ bàn giao",
+  "duration": 10.17,
+  "pose": 4,
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 1/3 · Lệnh chốt Sổ bàn giao",
+  "pedagogy_title": "Bối cảnh: Hết giờ làm việc chiều thứ Năm, cần lưu lại toàn bộ tiến độ",
+  "pedagogy_note": "Bước 1: Gõ lệnh yêu cầu AI tổng hợp tiến độ hiện tại vào tệp ban_giao_cong_viec.md rồi bấm Gửi.",
+  "onEnter": "kudoSimScene({surface:'ide', file:'COMPANY.md', clearChat:true, chatInput:'Hãy tổng hợp toàn bộ kết quả làm việc hôm nay, các con số đã chốt và việc cần làm ngày mai vào tệp ban_giao_cong_viec.md'});",
+  "focus_selectors": [
+    "#ide-chat-input",
+    "#ide-send-btn"
+  ],
+  "cursor_selector": "#ide-send-btn",
+  "cursor_label": "Bước 1: Yêu cầu AI ghi tệp ban_giao_cong_viec.md",
+  "caption": "Chúng ta thực hành 3 bước bàn giao giữa các ca làm việc. Ở <strong>Bước 1</strong>, trước khi nghỉ chiều, anh chị gõ lệnh yêu cầu trợ lý tổng hợp tiến độ hôm nay vào tệp <code>ban_giao_cong_viec.md</code>.",
+  "audio_src": "audio/lesson_08/b4.mp3",
+  "audio_duration": 9.52
+}

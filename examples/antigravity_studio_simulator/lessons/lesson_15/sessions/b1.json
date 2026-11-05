@@ -1,0 +1,18 @@
+{
+  "id": "b1",
+  "label": "1. [Lý thuyết Kiểu 1] Mô hình điều phối 3 nhánh Trợ lý AI song song",
+  "duration": 14.23,
+  "pose": 1,
+  "mode": "theory",
+  "pedagogy_type": "theory_type_1",
+  "slide": "s1",
+  "hl": [
+    "s1_c1",
+    "s1_c2",
+    "s1_c3",
+    "s1_call"
+  ],
+  "caption": "Khi cần chuẩn bị gấp một bộ đề án lớn gồm cả Tài chính, Nhân sự và Thị trường, nếu chờ một trợ lý làm lần lượt từng phần thì rất mất thời gian. Trong <strong>Bài 15</strong>, sơ đồ trên màn hình chỉ ra cách phân công 3 nhánh trợ lý chạy song song và ghi ra 3 tệp độc lập.",
+  "audio_src": "audio/lesson_15/b1.mp3",
+  "audio_duration": 13.58
+}

@@ -1,0 +1,20 @@
+{
+  "id": "b3",
+  "label": "3. [Lý thuyết Kiểu 2] Bảng phát hiện điều khoản bất lợi kèm câu chữ sửa lại",
+  "duration": 13.21,
+  "pose": 3,
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Báo cáo Rà soát Đỏ / Vàng / Xanh",
+  "pedagogy_title": "AI chỉ rõ số dòng bất lợi và viết sẵn đoạn văn bản thay thế để đàm phán",
+  "pedagogy_note": "Phát hiện đối tác tự ý ghi hạn thanh toán 45 ngày tại Điều 4.2 và bỏ quên điều khoản Bảo mật dữ liệu.",
+  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › bao_cao_ra_soat_hop_dong.md', editorTitle:'🚩 bao_cao_ra_soat_hop_dong.md — Phát Hiện 2 Rủi Ro Đỏ Cần Sửa Ngay', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">BẢNG RÀ SOÁT RỦI RO DỰ THẢO HỢP ĐỒNG ĐẠI LÝ SAO VIỆT</h3><div style=\"background:#fef2f2;border-left:4px solid #ef4444;padding:10px 12px;margin-bottom:10px;font-size:13px;\">🔴 <strong>Rủi ro Đỏ #1 [Điều 4.2 - Dòng 28]:</strong> Đối tác đang ghi thời hạn thanh toán là <strong>45 ngày</strong> (Vi phạm chốt chặn tối đa 15 ngày).<br>&rarr; <strong>Đề xuất sửa lại:</strong> <em>\"Bên B thanh toán cho Bên A trong vòng 15 ngày làm việc kể từ ngày nhận hóa đơn GTGT.\"</em></div><div style=\"background:#fef2f2;border-left:4px solid #ef4444;padding:10px 12px;font-size:13px;\">🔴 <strong>Rủi ro Đỏ #2 [Thiếu điều khoản]:</strong> Dự thảo hoàn toàn <strong>không có điều khoản Bảo mật thông tin khách hàng (NDA)</strong>.<br>&rarr; <strong>Đề xuất bổ sung Điều 7:</strong> <em>\"Cam kết bảo mật tuyệt đối dữ liệu khách hàng trên hệ thống TaskFlow.\"</em></div></div>'});",
+  "focus_selectors": [
+    "#editor-canvas"
+  ],
+  "cursor_selector": "#editor-canvas",
+  "cursor_label": "Gắn cờ Đỏ đúng dòng vi phạm kèm câu chữ sửa lại",
+  "caption": "Khi đối chiếu với bản hợp đồng do đối tác gửi sang, báo cáo ở cột giữa lập tức gắn cờ Đỏ vào Điều 4.2 vì đối tác lén kéo dài hạn thanh toán lên 45 ngày, đồng thời viết sẵn luôn câu chữ chuẩn để chúng ta gửi lại đàm phán!",
+  "audio_src": "audio/lesson_23/b3.mp3",
+  "audio_duration": 12.56
+}

@@ -1,0 +1,20 @@
+{
+  "id": "b3",
+  "label": "3. [Lý thuyết Kiểu 2] Cấu trúc chuẩn 3 phần của Sổ bàn giao công việc",
+  "duration": 10.89,
+  "pose": 3,
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Cấu trúc Sổ Bàn Giao",
+  "pedagogy_title": "3 mục bắt buộc trong tệp ban_giao_cong_viec.md",
+  "pedagogy_note": "1. Các tệp đã hoàn thành; 2. Các thông số/quyết định đã chốt; 3. Danh sách việc cần làm tiếp trong ca sau.",
+  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › ban_giao_cong_viec.md', editorTitle:'📒 ban_giao_cong_viec.md — Sổ Bàn Giao Dự Án', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#9a3412;margin-top:0;\">SỔ BÀN GIAO CÔNG VIỆC — DỰ ÁN TASKFLOW QUÝ 2</h2><h4>1. Hạng mục đã hoàn thành (Done)</h4><ul><li>Đã chuẩn hóa hồ sơ <code>@COMPANY.md</code> và <code>@troly.md</code>.</li><li>Đã ban hành thông báo mục tiêu Quý 2 tại <code>thong_bao_q2.md</code>.</li></ul><h4>2. Quyết định quan trọng đã chốt (Key Decisions)</h4><ul><li>Chỉ tiêu giảm Churn Rate chốt ở mức <strong>30%</strong> (từ 6.2% xuống 4.3%).</li></ul><h4>3. Việc cần làm tiếp ở phiên sau (Next Actions)</h4><ul><li>[ ] Phân tích chi tiết bảng <code>sales_data.csv</code> theo từng khu vực.</li></ul></div>'});",
+  "focus_selectors": [
+    "#editor-canvas"
+  ],
+  "cursor_selector": "#editor-canvas",
+  "cursor_label": "3 mục chuẩn: Đã xong - Đã chốt - Làm tiếp",
+  "caption": "Trên màn hình cột giữa là cấu trúc chuẩn của tệp <code>ban_giao_cong_viec.md</code> do chính AI tự ghi lại: Gồm các hạng mục đã hoàn thành, những con số đã chốt và danh sách việc cần làm tiếp theo.",
+  "audio_src": "audio/lesson_08/b3.mp3",
+  "audio_duration": 10.24
+}

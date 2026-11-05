@@ -1,0 +1,21 @@
+{
+  "id": "b3",
+  "label": "3. [Lý thuyết Kiểu 2] Giao việc đồng bộ bằng tiếng Việt thay vì gõ lệnh Terminal",
+  "duration": 12.65,
+  "pose": 3,
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Đồng bộ Tự động Bằng Tiếng Việt",
+  "pedagogy_title": "Trợ lý AI tự động thực thi lệnh lưu phiên bản ở cửa sổ Terminal bên dưới",
+  "pedagogy_note": "Bạn chỉ cần ra lệnh ở khung chat phải; AI sẽ tự chạy lệnh đồng bộ ở thanh Terminal phía dưới và báo cáo kết quả.",
+  "onEnter": "kudoSimScene({surface:'ide', showTerminal:true, terminalHtml:'<div style=\"padding:10px;font-family:monospace;font-size:12px;color:#15803d;background:#f8fafc;\">$ git add bao_cao_doanh_thu_q1.md de_an_tong_the_q2.md<br>$ git commit -m \" docs(q1): hoan tat bao cao doanh thu Q1 va de an Q2\"<br>[main 8f4a2c1] docs(q1): hoan tat bao cao doanh thu Q1 va de an Q2 (2 files changed)<br>$ gdrive sync bao_cao_doanh_thu_q1.md &rarr; Thư mục Drive: TaskFlow_Bao_Cao_2026 [OK]</div>', userMsg:'Hãy lưu mốc phiên bản cho tệp bao_cao_doanh_thu_q1.md và đồng bộ lên thư mục Google Drive của phòng.', aiMsg:'Tôi đã tự động đóng dấu phiên bản (Commit <code>8f4a2c1</code>) và tải tệp <code>bao_cao_doanh_thu_q1.md</code> lên Google Drive thành công!'});",
+  "focus_selectors": [
+    "#ide-bottom-terminal",
+    "#ide-chat-messages"
+  ],
+  "cursor_selector": "#ide-bottom-terminal",
+  "cursor_label": "AI tự động chạy lệnh đồng bộ ở khung bên dưới",
+  "caption": "Anh chị nhìn xuống khung nhỏ phía dưới màn hình: Dân văn phòng không cần tự gõ bất kỳ dòng lệnh kỹ thuật nào. Khi anh chị yêu cầu bằng tiếng Việt ở khung chat, chính trợ lý AI sẽ tự chạy lệnh đóng dấu phiên bản và tải tệp lên <strong>Google Drive</strong>.",
+  "audio_src": "audio/lesson_16/b3.mp3",
+  "audio_duration": 12.0
+}

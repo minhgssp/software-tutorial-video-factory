@@ -1,0 +1,31 @@
+{
+  "lesson_slug": "lesson_17",
+  "filename": "lesson_17.html",
+  "legacy_alias": "",
+  "code": "BÀI 17",
+  "chapter_number": 5,
+  "chapter_code": "CHƯƠNG 5",
+  "chapter_title": "Sản xuất Nội dung, Thiết kế Slide & Báo cáo Trực quan",
+  "title": "Khởi tạo Trung tâm Nội dung Đa kênh & Quản lý Giọng văn Thương hiệu",
+  "short_title": "Trung tâm Nội dung & Brand Voice",
+  "pill_label": "Bài 17 · Nội dung & Thương hiệu",
+  "description": "Thiết lập tệp Cẩm nang Giọng văn Thương hiệu (brand_voice.md) và Chân dung Khách hàng mục tiêu để mọi bài viết Website, Facebook, LinkedIn và Email do AI soạn ra đều đồng nhất một bản sắc.",
+  "prerequisites": "Chương 3 (Biết thiết lập Rules/Skills) & Chương 4 (Đã có báo cáo dữ liệu bao_cao_doanh_thu_q1.md làm chất liệu thực tế).",
+  "dependents": "Bài 18 (Sản xuất chuỗi bài viết & email từ brand_voice.md), Bài 19 (Thiết kế ảnh minh họa đồng bộ nhận diện thương hiệu).",
+  "placement_risk": "0% Rủi ro — Học viên khóa chặt Giọng văn Thương hiệu ở Bài 17 trước khi sản xuất hàng loạt bài viết ở Bài 18.",
+  "continuity_bridge": "Sau khi thiết lập xong Cẩm nang Giọng văn Thương hiệu ở Bài 17, Bài 18 sẽ hướng dẫn cách nhân bản 1 ý tưởng gốc thành chuỗi bài viết đa kênh và kiểm duyệt tự động.",
+  "slide_ids": [
+    "s1"
+  ],
+  "session_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "b6"
+  ],
+  "beats_count": 6,
+  "total_duration_sec": 71.9,
+  "duration_formatted": "01:12"
+}

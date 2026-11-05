@@ -1,0 +1,31 @@
+{
+  "lesson_slug": "lesson_23",
+  "filename": "lesson_23.html",
+  "legacy_alias": "",
+  "code": "BÀI 23",
+  "chapter_number": 6,
+  "chapter_code": "CHƯƠNG 6",
+  "chapter_title": "4 Tình huống Thực chiến Toàn diện (Case Studies)",
+  "title": "Tình huống 3 — Xây dựng Trợ lý Nghiên cứu Pháp lý, Hợp đồng & Quy chế",
+  "short_title": "Case Study 3: Hợp đồng & Pháp lý",
+  "pill_label": "Bài 23 · Case 3: Hợp đồng & Pháp lý",
+  "description": "Biến Trợ lý AI thành Chuyên viên Rà soát Rủi ro Hợp đồng: Đối chiếu dự thảo hợp đồng đối tác gửi với Danh mục Điều khoản Bảo vệ (Legal Checklist) của công ty, phát hiện các điều khoản bất lợi và đề xuất câu chữ sửa đổi.",
+  "prerequisites": "Bài 6 (Trích dẫn dòng #L), Bài 10 (Thiết lập Rules/Skills kiểm duyệt) & Bài 13 (Bóc tách tài liệu có dẫn nguồn).",
+  "dependents": "Bài 24 (Tình huống 4 — Tổng kết, Kiểm toán Chất lượng Độc lập /audit & Lộ trình Mở rộng).",
+  "placement_risk": "0% Rủi ro — Nhấn mạnh nguyên tắc AI chỉ đối chiếu dựa trên văn bản quy chế chính thức được nạp vào thư mục, tuyệt đối không tự suy diễn luật bên ngoài.",
+  "continuity_bridge": "Sau khi hoàn thành Tình huống Rà soát Hợp đồng ở Bài 23, Bài 24 sẽ khép lại toàn bộ khóa học bằng Tình huống Kiểm toán Chất lượng Độc lập (/audit) và xây dựng Hệ điều hành Cá nhân hóa.",
+  "slide_ids": [
+    "s1"
+  ],
+  "session_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "b6"
+  ],
+  "beats_count": 6,
+  "total_duration_sec": 69.9,
+  "duration_formatted": "01:10"
+}

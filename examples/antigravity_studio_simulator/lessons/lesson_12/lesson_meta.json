@@ -1,0 +1,31 @@
+{
+  "lesson_slug": "lesson_12",
+  "filename": "lesson_12.html",
+  "legacy_alias": "",
+  "code": "BÀI 12",
+  "chapter_number": 3,
+  "chapter_code": "CHƯƠNG 3",
+  "chapter_title": "Thiết kế Bộ não .agent & Tự động hóa Quy trình",
+  "title": "Chu trình 3 Lệnh Vàng: /grill-me (Phỏng vấn), /plan (Lập kế hoạch) & /learn (Đúc kết)",
+  "short_title": "Chu trình /grill-me, /plan, /learn",
+  "pill_label": "Bài 12 · /grill-me, /plan, /learn",
+  "description": "Làm chủ chu trình 3 lệnh chiến lược giúp giải quyết mọi đề bài phức tạp: Dùng /grill-me để AI phỏng vấn làm rõ lỗ hổng, dùng /plan để lập bản kế hoạch trước khi làm, và dùng /learn để AI tự ghi nhớ bài học vào bộ não .agent.",
+  "prerequisites": "Bài 9, Bài 10 & Bài 11 (Đã hiểu rõ toàn bộ cấu trúc Rules, Skills, Workflows của thư mục .agent).",
+  "dependents": "Chương 4, Chương 5 & Chương 6 (Áp dụng chu trình /grill-me -> /plan -> /learn vào mọi dự án dữ liệu, nội dung và thực chiến).",
+  "placement_risk": "0% Rủi ro — Sử dụng kịch bản Mở rộng Kênh Đại lý B2B Quý 2 của TaskFlow để minh họa kỹ thuật lệnh, hoàn toàn tách biệt với Case Study Giày Bã Mía ở Bài 21.",
+  "continuity_bridge": "Kết thúc Chương 3, học viên đã làm chủ hoàn toàn bộ não .agent. Sang Chương 4 (Bài 13), chúng ta bắt đầu đưa bộ não này vào xử lý hồ sơ lớn, bảng tính CSV và làm việc nhóm.",
+  "slide_ids": [
+    "s1"
+  ],
+  "session_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "b6"
+  ],
+  "beats_count": 6,
+  "total_duration_sec": 78.3,
+  "duration_formatted": "01:18"
+}

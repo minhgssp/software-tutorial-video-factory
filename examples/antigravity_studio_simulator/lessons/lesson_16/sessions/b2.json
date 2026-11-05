@@ -1,0 +1,21 @@
+{
+  "id": "b2",
+  "label": "2. [Lý thuyết Kiểu 2] Quan sát trạng thái các tệp mới tạo trước khi đồng bộ",
+  "duration": 12.41,
+  "pose": 2,
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Kiểm tra Tệp Chờ Đồng bộ",
+  "pedagogy_title": "Rà soát tệp bao_cao_doanh_thu_q1.md và de_an_tong_the_q2.md vừa hoàn thành",
+  "pedagogy_note": "Trước khi đẩy lên kho chung của phòng, trợ lý AI sẽ liệt kê danh sách các tệp mới hoặc vừa được chỉnh sửa trong ca làm việc.",
+  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › bao_cao_doanh_thu_q1.md', editorTitle:'📊 bao_cao_doanh_thu_q1.md — Sẵn sàng đồng bộ lên Kho chung', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">DANH SÁCH TỆP MỚI CHỜ ĐỒNG BỘ (PENDING SYNC)</h3><ul><li><code>bao_cao_doanh_thu_q1.md</code> — Báo cáo phân tích doanh thu Quý 1 (Tạo ở Bài 14)</li><li><code>de_an_tong_the_q2.md</code> — Đề án tổng thể hợp nhất 3 nhánh (Tạo ở Bài 15)</li><li><code>.agent/rules/quy_chuan_van_phong.md</code> — Bộ quy tắc văn phòng mới cập nhật</li></ul></div>'});",
+  "focus_selectors": [
+    "#editor-canvas",
+    "#ide-file-tree"
+  ],
+  "cursor_selector": "#editor-canvas",
+  "cursor_label": "Danh sách các tệp báo cáo sẵn sàng sao lưu",
+  "caption": "Nhìn vào cột giữa trên màn hình: Sau khi hoàn thành báo cáo doanh thu Quý 1 ở Bài 14 và đề án tổng thể ở Bài 15, trợ lý sẽ giúp chúng ta kiểm kê toàn bộ các tệp mới phát sinh để chuẩn bị đẩy lên kho chung.",
+  "audio_src": "audio/lesson_16/b2.mp3",
+  "audio_duration": 11.76
+}

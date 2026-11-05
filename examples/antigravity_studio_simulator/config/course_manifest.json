@@ -1,15 +1,22 @@
 [
   {
     "lesson_slug": "lesson_01",
-    "filename": "lesson_01_chatbot_vs_agent.html",
+    "filename": "lesson_01.html",
+    "legacy_alias": "lesson_01_chatbot_vs_agent.html",
     "code": "BÀI 1",
-    "title": "Tư duy & Giao diện Trợ lý AI",
-    "short_title": "Tư duy & Giao diện AI",
-    "pill_label": "Bài 1 · Tư duy & Giao diện",
-    "description": "Phân biệt hỏi đáp trên web với Trợ lý AI làm việc trong thư mục máy tính, làm quen Antigravity 2.0, Antigravity IDE và 5 mô hình AI.",
+    "chapter_number": 1,
+    "chapter_code": "CHƯƠNG 1",
+    "chapter_title": "Khởi động Chuẩn & Làm chủ Giao diện",
+    "title": "Tư duy Trợ lý AI trên Máy tính & 2 Phần mềm Cốt lõi",
+    "short_title": "Tư duy AI & 2 Phần mềm",
+    "pill_label": "Bài 1 · Tư duy & 2 Phần mềm",
+    "description": "Phân biệt hỏi đáp trên trình duyệt web với Trợ lý AI làm việc trực tiếp trong thư mục máy tính; nắm vững vai trò của Antigravity 2.0, Antigravity IDE và 5 mô hình AI.",
+    "prerequisites": "Không yêu cầu kiến thức nền tảng (Bài mở đầu toàn khóa).",
+    "dependents": "Bài 2 (Giải nén & Mở thư mục dự án), Bài 3 (Làm chủ giao diện 3 cột), Bài 4 (Bật quyền tự chủ Turbo).",
+    "placement_risk": "0% Rủi ro — Cuối Bài 1 khi mở IDE sẽ ở màn hình chào mừng (Welcome Screen) chưa mở thư mục, khớp 100% với Bài 2 học giải nén .zip và Open Folder.",
+    "continuity_bridge": "Sau khi mở cửa sổ Antigravity IDE ở trạng thái màn hình chào mừng cuối Bài 1, Bài 2 sẽ hướng dẫn giải nén học liệu .zip và bấm Open Folder nạp dự án vào.",
     "slide_ids": [
-      "s1",
-      "s2"
+      "s1"
     ],
     "session_order": [
       "b1",
@@ -17,27 +24,30 @@
       "b3",
       "b4",
       "b5",
-      "b6",
-      "b7",
-      "b8",
-      "b9",
-      "b10"
+      "b6"
     ],
-    "beats_count": 10,
-    "total_duration_sec": 126.5,
-    "duration_formatted": "02:06"
+    "beats_count": 6,
+    "total_duration_sec": 73.2,
+    "duration_formatted": "01:13"
   },
   {
     "lesson_slug": "lesson_02",
-    "filename": "lesson_02_turbo_mode_and_workspace.html",
+    "filename": "lesson_02.html",
+    "legacy_alias": "lesson_06_giai_nen_zip_open_folder_reveal_explorer.html",
     "code": "BÀI 2",
-    "title": "Thiết lập Dự án & Chế độ Turbo",
-    "short_title": "Mở Dự án & Chế độ Turbo",
-    "pill_label": "Bài 2 · Dự án & Turbo",
-    "description": "Nguyên tắc mở thư mục dự án, ưu tiên định dạng .md và .csv, cài đặt Office Viewer, bật quyền tự chủ Turbo và giao việc bằng giọng nói.",
+    "chapter_number": 1,
+    "chapter_code": "CHƯƠNG 1",
+    "chapter_title": "Khởi động Chuẩn & Làm chủ Giao diện",
+    "title": "Chuẩn bị Học liệu: Giải nén .zip, Mở Thư mục & An toàn Ổ cứng",
+    "short_title": "Giải nén .zip & Mở Thư mục",
+    "pill_label": "Bài 2 · Giải nén & Open Folder",
+    "description": "Quy tắc bắt buộc giải nén tệp học liệu .zip trước khi mở, thao tác File -> Open Folder chuẩn xác, nguyên tắc không mở toàn bộ ổ C: và kiểm tra đồng bộ bằng Reveal in File Explorer.",
+    "prerequisites": "Bài 1 (Đã mở cửa sổ Antigravity IDE ở màn hình chào mừng Welcome Screen).",
+    "dependents": "Bài 3 (Làm chủ giao diện 3 cột trên thư mục vừa mở), Bài 4 (Gọi lệnh /start-1-1 từ thư mục dự án), Bài 5 (Đọc tệp .md/.csv).",
+    "placement_risk": "0% Rủi ro — Đặt ngay ở Bài 2 để học viên giải nén và mở đúng thư mục antigravity_course_vn trước khi thực hiện bất kỳ thao tác tệp hay lệnh gạch chéo nào.",
+    "continuity_bridge": "Sau khi mở thành công thư mục antigravity_course_vn ở Bài 2, Bài 3 sẽ hướng dẫn điều khiển 3 cột giao diện và các phím cứu hộ khi lỡ tay bấm nhầm.",
     "slide_ids": [
-      "s1",
-      "s2"
+      "s1"
     ],
     "session_order": [
       "b1",
@@ -45,28 +55,30 @@
       "b3",
       "b4",
       "b5",
-      "b6",
-      "b7",
-      "b8",
-      "b9",
-      "b10",
-      "b11"
+      "b6"
     ],
-    "beats_count": 11,
-    "total_duration_sec": 114.3,
-    "duration_formatted": "01:54"
+    "beats_count": 6,
+    "total_duration_sec": 72.1,
+    "duration_formatted": "01:12"
   },
   {
     "lesson_slug": "lesson_03",
-    "filename": "lesson_03_bo_ba_rule_skill_workflow.html",
+    "filename": "lesson_03.html",
+    "legacy_alias": "lesson_04_vuot_qua_con_ngop_hoi_nguoc_ai.html",
     "code": "BÀI 3",
-    "title": "Bộ não AI: Rules, Skills, Workflows",
-    "short_title": "Rules, Skills & Workflows",
-    "pill_label": "Bài 3 · Rules, Skills, Workflows",
-    "description": "Cách tổ chức thư mục .agent gồm Rules, Skills, Workflows, nghiệm thu qua tệp đầu ra và phối hợp 3 lệnh /grill-me, /plan, /learn.",
+    "chapter_number": 1,
+    "chapter_code": "CHƯƠNG 1",
+    "chapter_title": "Khởi động Chuẩn & Làm chủ Giao diện",
+    "title": "Làm chủ Giao diện 3 Cột, Phím Cứu hộ & Xử lý Khi AI Dừng chờ",
+    "short_title": "Giao diện 3 Cột & Phím Cứu hộ",
+    "pill_label": "Bài 3 · 3 Cột & Phím Cứu hộ",
+    "description": "Hiểu rõ vai trò 3 cột của Antigravity IDE, 3 trạng thái khi AI dừng chờ (Stop, Tiếp tục, Accept), phím tắt cứu hộ Ctrl+B khôi phục cột trái và thói quen hỏi trực tiếp AI.",
+    "prerequisites": "Bài 2 (Đã mở thành công thư mục dự án antigravity_course_vn trong Antigravity IDE).",
+    "dependents": "Bài 4 (Thiết lập quyền tự chủ Turbo để không phải bấm Accept thủ công liên tục).",
+    "placement_risk": "0% Rủi ro — Học viên nắm vững cách khôi phục giao diện và xử lý nút chờ trước khi bắt đầu giao việc tự động cho AI.",
+    "continuity_bridge": "Khi đã biết nút Accept (Chấp nhận từng bước) ở Bài 3, học viên sẽ thấy ngay nhu cầu bật chế độ tự chủ Turbo ở Bài 4 để AI chạy liền mạch.",
     "slide_ids": [
-      "s1",
-      "s2"
+      "s1"
     ],
     "session_order": [
       "b1",
@@ -74,22 +86,28 @@
       "b3",
       "b4",
       "b5",
-      "b6",
-      "b7",
-      "b8"
+      "b6"
     ],
-    "beats_count": 8,
-    "total_duration_sec": 90.1,
-    "duration_formatted": "01:30"
+    "beats_count": 6,
+    "total_duration_sec": 71.7,
+    "duration_formatted": "01:12"
   },
   {
     "lesson_slug": "lesson_04",
-    "filename": "lesson_04_vuot_qua_con_ngop_hoi_nguoc_ai.html",
+    "filename": "lesson_04.html",
+    "legacy_alias": "lesson_05_taskflow_start_1_1_bay_phim_space.html",
     "code": "BÀI 4",
-    "title": "Làm chủ Giao diện & Hỏi Trợ lý AI",
-    "short_title": "Làm chủ Giao diện & Hỏi AI",
-    "pill_label": "Bài 4 · Làm chủ Giao diện",
-    "description": "Ba cách xử lý khi AI tạm dừng chờ lệnh, phím tắt khôi phục nhanh giao diện (Ctrl + B), bật chế độ xem trực quan và hỏi trực tiếp AI.",
+    "chapter_number": 1,
+    "chapter_code": "CHƯƠNG 1",
+    "chapter_title": "Khởi động Chuẩn & Làm chủ Giao diện",
+    "title": "Bật Quyền Tự chủ Turbo & Bài Thực hành Đầu tiên Với /start-1-1",
+    "short_title": "Chế độ Turbo & Lệnh /start-1-1",
+    "pill_label": "Bài 4 · Turbo & /start-1-1",
+    "description": "Hiểu 4 cấp độ phân quyền tự chủ (Request Review, Default, Auto, Turbo), bật chế độ Turbo trong Settings và hoàn thành bài thực hành đầu tiên với lệnh gạch chéo /start-1-1 trong dự án mẫu TaskFlow.",
+    "prerequisites": "Bài 2 (Đã mở thư mục dự án) & Bài 3 (Đã hiểu vì sao nút Accept xuất hiện khi chưa bật Turbo).",
+    "dependents": "Bài 5..Bài 24 (Toàn bộ các bài thực hành sau đều chạy mượt nhờ đã bật quyền tự chủ Turbo ở Bài 4).",
+    "placement_risk": "0% Rủi ro — Học viên chỉ làm quen với thao tác gõ dấu / để gọi bài học có sẵn /start-1-1, chưa bị nhồi nhét lý thuyết thiết kế hệ thống .agent phức tạp.",
+    "continuity_bridge": "Kết thúc Chương 1, học viên đã tự chạy thành công bài học đầu tiên. Sang Chương 2 (Bài 5), chúng ta sẽ tìm hiểu sâu về 2 định dạng tệp cốt lõi xuất hiện trong dự án là .md và .csv.",
     "slide_ids": [
       "s1"
     ],
@@ -102,17 +120,25 @@
       "b6"
     ],
     "beats_count": 6,
-    "total_duration_sec": 64.3,
-    "duration_formatted": "01:04"
+    "total_duration_sec": 71.5,
+    "duration_formatted": "01:12"
   },
   {
     "lesson_slug": "lesson_05",
-    "filename": "lesson_05_taskflow_start_1_1_bay_phim_space.html",
+    "filename": "lesson_05.html",
+    "legacy_alias": "lesson_02_turbo_mode_and_workspace.html",
     "code": "BÀI 5",
-    "title": "Thực hành Dự án với Lệnh Gạch chéo",
-    "short_title": "Thực hành Lệnh Gạch chéo /",
-    "pill_label": "Bài 5 · Thực hành Lệnh /",
-    "description": "Làm quen bối cảnh dự án mẫu TaskFlow, gọi quy trình bằng dấu gạch chéo /start-1-1 đúng cách và trải nghiệm AI dẫn dắt từng bước.",
+    "chapter_number": 2,
+    "chapter_code": "CHƯƠNG 2",
+    "chapter_title": "Định dạng Dữ liệu, Ký hiệu @ & Hồ sơ Cá nhân hóa",
+    "title": "Định dạng Văn bản .md, Bảng Dữ liệu .csv & Tiện ích Office Viewer",
+    "short_title": "Định dạng .md, .csv & Office Viewer",
+    "pill_label": "Bài 5 · .md, .csv & Office Viewer",
+    "description": "Hiểu vì sao Trợ lý AI đọc tệp .md (Markdown) và .csv nhanh và chính xác hơn Word/Excel truyền thống; thực hành cài đặt tiện ích Office Viewer trong Extensions để xem bảng biểu trực quan.",
+    "prerequisites": "Chương 1 (Đã biết mở thư mục dự án và chuyển đổi chế độ xem ở cột giữa Antigravity IDE).",
+    "dependents": "Bài 6 (Đính kèm tệp @COMPANY.md và @sales_data.csv), Bài 7 (Viết hồ sơ @troly.md), Bài 14 (Phân tích bảng tính CSV).",
+    "placement_risk": "0% Rủi ro — Giải thích bản chất tệp .md và .csv trước khi yêu cầu học viên đính kèm hoặc chỉnh sửa các tệp này ở Bài 6 và Bài 7.",
+    "continuity_bridge": "Sau khi biết cách đọc và chỉnh sửa tệp .md, .csv đẹp mắt bằng Office Viewer ở Bài 5, Bài 6 sẽ hướng dẫn cách đính kèm các tệp này vào câu lệnh cho AI bằng ký hiệu @.",
     "slide_ids": [
       "s1"
     ],
@@ -125,17 +151,25 @@
       "b6"
     ],
     "beats_count": 6,
-    "total_duration_sec": 63.7,
-    "duration_formatted": "01:04"
+    "total_duration_sec": 76.8,
+    "duration_formatted": "01:17"
   },
   {
     "lesson_slug": "lesson_06",
-    "filename": "lesson_06_giai_nen_zip_open_folder_reveal_explorer.html",
+    "filename": "lesson_06.html",
+    "legacy_alias": "",
     "code": "BÀI 6",
-    "title": "Quản lý Học liệu & Đồng bộ Tệp tin",
-    "short_title": "Quản lý Học liệu & Tệp tin",
-    "pill_label": "Bài 6 · Quản lý Học liệu",
-    "description": "Nguyên tắc giải nén học liệu .zip trước khi mở, cơ chế đồng bộ 1-1 với ổ cứng, tránh kéo nhầm thư mục và đối chiếu bằng Reveal in File Explorer.",
+    "chapter_number": 2,
+    "chapter_code": "CHƯƠNG 2",
+    "chapter_title": "Định dạng Dữ liệu, Ký hiệu @ & Hồ sơ Cá nhân hóa",
+    "title": "Đính kèm Tệp Bằng @, Giao việc Giọng nói (Ctrl+M) & Trích dẫn (Ctrl+L)",
+    "short_title": "Đính kèm @, Ctrl+M & Ctrl+L",
+    "pill_label": "Bài 6 · Ký hiệu @, Ctrl+M, Ctrl+L",
+    "description": "Làm chủ bộ 3 kỹ năng giao việc tốc độ cao: Gõ @ để đính kèm chính xác tệp dữ liệu trong thư mục, nhấn Ctrl+M để đọc yêu cầu bằng giọng nói tiếng Việt và bôi đen nhấn Ctrl+L để trích dẫn đúng dòng.",
+    "prerequisites": "Bài 5 (Đã hiểu cấu trúc tệp .md, .csv và chế độ đánh số dòng trong trình soạn thảo).",
+    "dependents": "Bài 7 (Gọi @troly.md), Bài 8 (Gọi @ban_giao_cong_viec.md), Bài 14 (Phân tích @sales_data.csv).",
+    "placement_risk": "0% Rủi ro — Học viên đã mở thư mục (Bài 2) và hiểu tệp .md/.csv (Bài 5) nên khi gõ @ sẽ hiểu ngay các tệp trong danh sách gợi ý từ đâu mà có.",
+    "continuity_bridge": "Sau khi biết dùng dấu @ để đính kèm tài liệu dự án ở Bài 6, Bài 7 sẽ hướng dẫn tạo tệp hồ sơ cá nhân @troly.md để AI luôn nhớ phong cách làm việc của riêng bạn.",
     "slide_ids": [
       "s1"
     ],
@@ -148,7 +182,565 @@
       "b6"
     ],
     "beats_count": 6,
-    "total_duration_sec": 64.1,
-    "duration_formatted": "01:04"
+    "total_duration_sec": 72.9,
+    "duration_formatted": "01:13"
+  },
+  {
+    "lesson_slug": "lesson_07",
+    "filename": "lesson_07.html",
+    "legacy_alias": "",
+    "code": "BÀI 7",
+    "chapter_number": 2,
+    "chapter_code": "CHƯƠNG 2",
+    "chapter_title": "Định dạng Dữ liệu, Ký hiệu @ & Hồ sơ Cá nhân hóa",
+    "title": "Xây dựng Hồ sơ Cá nhân hóa @troly.md Để AI Nhớ Phong cách Của Bạn",
+    "short_title": "Hồ sơ Cá nhân hóa @troly.md",
+    "pill_label": "Bài 7 · Hồ sơ @troly.md",
+    "description": "Thiết lập tệp hồ sơ cá nhân @troly.md chứa thông tin vai trò, phong cách hành văn, đối tượng độc giả và các từ cấm kỵ để Trợ lý AI luôn viết đúng ý bạn mà không cần nhắc lại.",
+    "prerequisites": "Bài 5 (Biết soạn thảo tệp .md) & Bài 6 (Biết dùng ký hiệu @ để đính kèm tệp vào câu lệnh).",
+    "dependents": "Bài 8 (Kết hợp @troly.md khi lập sổ bàn giao), Bài 9 (Nâng cấp từ @troly.md lên .agent/rules/ tự động).",
+    "placement_risk": "0% Rủi ro — Học viên bắt đầu cá nhân hóa AI bằng một tệp @troly.md đơn giản ngoài thư mục gốc trước khi bước vào kiến trúc .agent/ ở Chương 3.",
+    "continuity_bridge": "Sau khi có hồ sơ cá nhân @troly.md ở Bài 7, Bài 8 sẽ hướng dẫn cách tạo Sổ bàn giao công việc (Project Memory) để AI không bao giờ quên tiến độ dự án qua các ngày làm việc.",
+    "slide_ids": [
+      "s1"
+    ],
+    "session_order": [
+      "b1",
+      "b2",
+      "b3",
+      "b4",
+      "b5",
+      "b6"
+    ],
+    "beats_count": 6,
+    "total_duration_sec": 69.4,
+    "duration_formatted": "01:09"
+  },
+  {
+    "lesson_slug": "lesson_08",
+    "filename": "lesson_08.html",
+    "legacy_alias": "",
+    "code": "BÀI 8",
+    "chapter_number": 2,
+    "chapter_code": "CHƯƠNG 2",
+    "chapter_title": "Định dạng Dữ liệu, Ký hiệu @ & Hồ sơ Cá nhân hóa",
+    "title": "Quản trị Trí nhớ Dự án Dài hạn & Sổ Bàn giao Giữa Các Phiên Chat",
+    "short_title": "Trí nhớ Dự án & Sổ Bàn giao",
+    "pill_label": "Bài 8 · Trí nhớ & Bàn giao",
+    "description": "Khắc phục nhược điểm 'quên ngữ cảnh' khi cuộc trò chuyện quá dài bằng quy trình chốt Sổ bàn giao công việc (ban_giao_cong_viec.md) cuối mỗi ca và nạp lại trong 5 giây ở phiên chat mới.",
+    "prerequisites": "Bài 6 (Đính kèm tệp bằng @) & Bài 7 (Cá nhân hóa bằng @troly.md).",
+    "dependents": "Chương 3 (Tự động hóa hoàn toàn việc nạp ngữ cảnh và quy trình bằng kiến trúc .agent/).",
+    "placement_risk": "0% Rủi ro — Giải quyết triệt để nỗi sợ mất lịch sử làm việc khi mở cửa sổ chat mới của học viên.",
+    "continuity_bridge": "Kết thúc Chương 2, học viên đã biết đính kèm @troly.md và @ban_giao_cong_viec.md thủ công. Sang Chương 3 (Bài 9), chúng ta sẽ nâng cấp lên thư mục .agent để AI tự động nhớ mà không cần gõ @ mỗi lần!",
+    "slide_ids": [
+      "s1"
+    ],
+    "session_order": [
+      "b1",
+      "b2",
+      "b3",
+      "b4",
+      "b5",
+      "b6"
+    ],
+    "beats_count": 6,
+    "total_duration_sec": 68.0,
+    "duration_formatted": "01:08"
+  },
+  {
+    "lesson_slug": "lesson_09",
+    "filename": "lesson_09.html",
+    "legacy_alias": "lesson_03_nghiem_thu_file_va_kien_truc_agent.html",
+    "code": "BÀI 9",
+    "chapter_number": 3,
+    "chapter_code": "CHƯƠNG 3",
+    "chapter_title": "Thiết kế Bộ não .agent & Tự động hóa Quy trình",
+    "title": "Tư duy Quản trị Đầu ra & Kiến trúc Bộ não .agent (Rules, Skills, Workflows)",
+    "short_title": "Kiến trúc .agent: Rules, Skills, Workflows",
+    "pill_label": "Bài 9 · Kiến trúc Bộ não .agent",
+    "description": "Chuyển dịch từ thói quen chỉ đọc câu trả lời trên khung chat sang nghiệm thu tệp sản phẩm thật trên ổ cứng; hiểu rõ ẩn dụ 'Căn bếp Nhà hàng' cho 3 ngăn Rules, Skills và Workflows trong thư mục .agent.",
+    "prerequisites": "Chương 2 (Đã hiểu cách hoạt động của tệp @troly.md và lệnh gạch chéo /start-1-1).",
+    "dependents": "Bài 10 (Thiết kế Rules & Skills), Bài 11 (Đóng gói Workflows), Bài 12 (Bộ 3 lệnh /grill-me, /plan, /learn).",
+    "placement_risk": "0% Rủi ro — Học viên đã tự tay dùng @troly.md và /start-1-1 ở Chương 1-2 nên khi mở thư mục .agent ở Bài 9 sẽ hiểu ngay mối liên hệ thực tế.",
+    "continuity_bridge": "Sau khi nắm được bức tranh tổng thể 3 ngăn của thư mục .agent ở Bài 9, Bài 10 sẽ hướng dẫn chi tiết cách viết Nội quy tự động (Rules) và Sổ tay kỹ năng (Skills).",
+    "slide_ids": [
+      "s1"
+    ],
+    "session_order": [
+      "b1",
+      "b2",
+      "b3",
+      "b4",
+      "b5",
+      "b6"
+    ],
+    "beats_count": 6,
+    "total_duration_sec": 70.1,
+    "duration_formatted": "01:10"
+  },
+  {
+    "lesson_slug": "lesson_10",
+    "filename": "lesson_10.html",
+    "legacy_alias": "",
+    "code": "BÀI 10",
+    "chapter_number": 3,
+    "chapter_code": "CHƯƠNG 3",
+    "chapter_title": "Thiết kế Bộ não .agent & Tự động hóa Quy trình",
+    "title": "Thiết lập Nội quy Tự động (.agent/rules) & Sổ tay Kỹ năng (.agent/skills)",
+    "short_title": "Thiết kế Rules & Skills",
+    "pill_label": "Bài 10 · Thiết kế Rules & Skills",
+    "description": "Phân biệt rõ khi nào nên đặt quy định vào .agent/rules/ (luôn tự động nạp 100% thời gian) và khi nào nên đóng gói thành .agent/skills/ (chỉ nạp khi đúng nghiệp vụ); thực hành tạo Rule và Skill đầu tiên.",
+    "prerequisites": "Bài 7 (Đã biết viết @troly.md) & Bài 9 (Đã hiểu tổng quan 3 ngăn của thư mục .agent).",
+    "dependents": "Bài 11 (Kết hợp Rules & Skills vào bên trong Workflows), Bài 12 (Dùng lệnh /learn để AI tự động nâng cấp Rules & Skills).",
+    "placement_risk": "0% Rủi ro — Học viên nâng cấp trực tiếp từ tệp @troly.md quen thuộc lên .agent/rules/ và tách phần nghiệp vụ nặng sang .agent/skills/.",
+    "continuity_bridge": "Sau khi trang bị Nội quy (Rules) và Kỹ năng chuyên môn (Skills) ở Bài 10, Bài 11 sẽ hướng dẫn cách nối chúng thành một dây chuyền tự động hóa bằng Workflows.",
+    "slide_ids": [
+      "s1"
+    ],
+    "session_order": [
+      "b1",
+      "b2",
+      "b3",
+      "b4",
+      "b5",
+      "b6"
+    ],
+    "beats_count": 6,
+    "total_duration_sec": 80.2,
+    "duration_formatted": "01:20"
+  },
+  {
+    "lesson_slug": "lesson_11",
+    "filename": "lesson_11.html",
+    "legacy_alias": "",
+    "code": "BÀI 11",
+    "chapter_number": 3,
+    "chapter_code": "CHƯƠNG 3",
+    "chapter_title": "Thiết kế Bộ não .agent & Tự động hóa Quy trình",
+    "title": "Đóng gói Quy trình Lặp lại Thành Lệnh Gạch chéo (.agent/workflows)",
+    "short_title": "Đóng gói Lệnh /workflows",
+    "pill_label": "Bài 11 · Đóng gói /workflows",
+    "description": "Biến các công việc lặp đi lặp lại hàng ngày/hàng tuần thành một tệp kịch bản trong .agent/workflows/ để bất kỳ ai trong phòng cũng chỉ cần gõ /tên-quy-trình là chạy chuẩn 100%.",
+    "prerequisites": "Bài 9 (Hiểu tổng quan .agent) & Bài 10 (Đã biết thiết kế Rules và Skills).",
+    "dependents": "Bài 12 (Sử dụng thành thạo bộ 3 lệnh workflow nâng cao /grill-me, /plan, /learn).",
+    "placement_risk": "0% Rủi ro — Học viên đã hiểu lệnh /start-1-1 hoạt động ra sao nên việc tự tạo một lệnh /tong-hop-tuan tương tự diễn ra hết sức tự nhiên.",
+    "continuity_bridge": "Sau khi biết cách tự tạo lệnh workflow riêng ở Bài 11, Bài 12 sẽ hướng dẫn bộ 3 lệnh workflow mạnh mẽ nhất có sẵn để giải quyết các bài toán khó: /grill-me, /plan và /learn.",
+    "slide_ids": [
+      "s1"
+    ],
+    "session_order": [
+      "b1",
+      "b2",
+      "b3",
+      "b4",
+      "b5",
+      "b6"
+    ],
+    "beats_count": 6,
+    "total_duration_sec": 76.3,
+    "duration_formatted": "01:16"
+  },
+  {
+    "lesson_slug": "lesson_12",
+    "filename": "lesson_12.html",
+    "legacy_alias": "",
+    "code": "BÀI 12",
+    "chapter_number": 3,
+    "chapter_code": "CHƯƠNG 3",
+    "chapter_title": "Thiết kế Bộ não .agent & Tự động hóa Quy trình",
+    "title": "Chu trình 3 Lệnh Vàng: /grill-me (Phỏng vấn), /plan (Lập kế hoạch) & /learn (Đúc kết)",
+    "short_title": "Chu trình /grill-me, /plan, /learn",
+    "pill_label": "Bài 12 · /grill-me, /plan, /learn",
+    "description": "Làm chủ chu trình 3 lệnh chiến lược giúp giải quyết mọi đề bài phức tạp: Dùng /grill-me để AI phỏng vấn làm rõ lỗ hổng, dùng /plan để lập bản kế hoạch trước khi làm, và dùng /learn để AI tự ghi nhớ bài học vào bộ não .agent.",
+    "prerequisites": "Bài 9, Bài 10 & Bài 11 (Đã hiểu rõ toàn bộ cấu trúc Rules, Skills, Workflows của thư mục .agent).",
+    "dependents": "Chương 4, Chương 5 & Chương 6 (Áp dụng chu trình /grill-me -> /plan -> /learn vào mọi dự án dữ liệu, nội dung và thực chiến).",
+    "placement_risk": "0% Rủi ro — Sử dụng kịch bản Mở rộng Kênh Đại lý B2B Quý 2 của TaskFlow để minh họa kỹ thuật lệnh, hoàn toàn tách biệt với Case Study Giày Bã Mía ở Bài 21.",
+    "continuity_bridge": "Kết thúc Chương 3, học viên đã làm chủ hoàn toàn bộ não .agent. Sang Chương 4 (Bài 13), chúng ta bắt đầu đưa bộ não này vào xử lý hồ sơ lớn, bảng tính CSV và làm việc nhóm.",
+    "slide_ids": [
+      "s1"
+    ],
+    "session_order": [
+      "b1",
+      "b2",
+      "b3",
+      "b4",
+      "b5",
+      "b6"
+    ],
+    "beats_count": 6,
+    "total_duration_sec": 78.3,
+    "duration_formatted": "01:18"
+  },
+  {
+    "lesson_slug": "lesson_13",
+    "filename": "lesson_13.html",
+    "legacy_alias": "",
+    "code": "BÀI 13",
+    "chapter_number": 4,
+    "chapter_code": "CHƯƠNG 4",
+    "chapter_title": "Xử lý Dữ liệu, Bảng tính & Phối hợp Đội nhóm",
+    "title": "Bóc tách Kho Tài liệu Lớn & Tóm tắt Đa tầng Không Tràn Bộ nhớ",
+    "short_title": "Bóc tách Kho Tài liệu Lớn",
+    "pill_label": "Bài 13 · Bóc tách Tài liệu Lớn",
+    "description": "Chiến lược đọc và bóc tách các báo cáo dài hàng trăm trang hoặc hàng chục tệp biên bản họp bằng kỹ thuật lập Bản đồ Mục lục (Index-First) và Tóm tắt Đa tầng mà không làm tràn bộ nhớ AI.",
+    "prerequisites": "Chương 2 (Đính kèm @) & Chương 3 (Đóng gói quy trình xử lý tài liệu chuẩn).",
+    "dependents": "Bài 14 (Đối chiếu báo cáo chữ với bảng số liệu CSV), Bài 15 (Chia nhỏ kho tài liệu cho nhiều Sub-Agent xử lý song song).",
+    "placement_risk": "0% Rủi ro — Học viên học cách xử lý tài liệu văn bản quy mô lớn trước khi chuyển sang xử lý bảng số liệu CSV ở Bài 14.",
+    "continuity_bridge": "Sau khi bóc tách xong kho tài liệu văn bản ở Bài 13, Bài 14 sẽ hướng dẫn cách phân tích và làm sạch bảng số liệu kinh doanh .csv đi kèm.",
+    "slide_ids": [
+      "s1"
+    ],
+    "session_order": [
+      "b1",
+      "b2",
+      "b3",
+      "b4",
+      "b5",
+      "b6"
+    ],
+    "beats_count": 6,
+    "total_duration_sec": 69.9,
+    "duration_formatted": "01:10"
+  },
+  {
+    "lesson_slug": "lesson_14",
+    "filename": "lesson_14.html",
+    "legacy_alias": "",
+    "code": "BÀI 14",
+    "chapter_number": 4,
+    "chapter_code": "CHƯƠNG 4",
+    "chapter_title": "Xử lý Dữ liệu, Bảng tính & Phối hợp Đội nhóm",
+    "title": "Phân tích Bảng tính CSV, Làm sạch Dữ liệu & Trích xuất Insight Kinh doanh",
+    "short_title": "Phân tích CSV & Insight Kinh doanh",
+    "pill_label": "Bài 14 · Phân tích Bảng tính CSV",
+    "description": "Biến bảng dữ liệu thô .csv nhiều lỗi định dạng thành bảng số liệu sạch sẽ và báo cáo phân tích doanh thu theo khu vực, sản phẩm, nhân sự mà không cần nhớ các hàm Excel phức tạp.",
+    "prerequisites": "Bài 5 (Biết mở xem tệp .csv bằng Office Viewer) & Bài 13 (Kỹ thuật bóc tách hồ sơ có dẫn nguồn).",
+    "dependents": "Bài 15 (Phối hợp phân tích dữ liệu & nghiên cứu thị trường), Bài 16 (Đồng bộ báo cáo doanh thu bao_cao_doanh_thu_q1.md lên GitHub/Drive).",
+    "placement_risk": "0% Rủi ro — Học viên thao tác trực tiếp trên tệp sales_data.csv có sẵn trong bộ học liệu và xuất ra tệp bao_cao_doanh_thu_q1.md dùng xuyên suốt tới Bài 16.",
+    "continuity_bridge": "Sau khi phân tích thành công một bảng dữ liệu ở Bài 14, Bài 15 sẽ hướng dẫn cách gọi nhiều trợ lý con (Sub-Agents) chạy song song khi có hàng loạt bảng dữ liệu và báo cáo cần xử lý cùng lúc.",
+    "slide_ids": [
+      "s1"
+    ],
+    "session_order": [
+      "b1",
+      "b2",
+      "b3",
+      "b4",
+      "b5",
+      "b6"
+    ],
+    "beats_count": 6,
+    "total_duration_sec": 74.1,
+    "duration_formatted": "01:14"
+  },
+  {
+    "lesson_slug": "lesson_15",
+    "filename": "lesson_15.html",
+    "legacy_alias": "",
+    "code": "BÀI 15",
+    "chapter_number": 4,
+    "chapter_code": "CHƯƠNG 4",
+    "chapter_title": "Xử lý Dữ liệu, Bảng tính & Phối hợp Đội nhóm",
+    "title": "Điều phối Đa Tác nhân (Sub-Agents) Chạy Song song Cho Dự án Lớn",
+    "short_title": "Điều phối Đa Tác nhân Song song",
+    "pill_label": "Bài 15 · Đa Tác nhân Song song",
+    "description": "Nhân gấp 3 tốc độ xử lý công việc bằng cách chia một dự án lớn thành nhiều nhánh độc lập và điều phối các Trợ lý con (Sub-Agents / Parallel Threads) làm việc đồng thời trên Antigravity 2.0 và IDE.",
+    "prerequisites": "Bài 13 (Bóc tách tài liệu) & Bài 14 (Phân tích bảng tính CSV).",
+    "dependents": "Bài 16 (Đồng bộ toàn bộ kết quả của đội ngũ Sub-Agents lên GitHub và Google Drive).",
+    "placement_risk": "0% Rủi ro — Học viên đã thành thạo việc giao 1 nhiệm vụ đơn lẻ trước khi học cách tách 3 nhiệm vụ chạy song song.",
+    "continuity_bridge": "Sau khi tạo ra nhiều tệp báo cáo từ các Sub-Agents ở Bài 15, Bài 16 sẽ hướng dẫn cách đồng bộ và sao lưu toàn bộ kho kết quả này lên đám mây cho đồng nghiệp.",
+    "slide_ids": [
+      "s1"
+    ],
+    "session_order": [
+      "b1",
+      "b2",
+      "b3",
+      "b4",
+      "b5",
+      "b6"
+    ],
+    "beats_count": 6,
+    "total_duration_sec": 71.6,
+    "duration_formatted": "01:12"
+  },
+  {
+    "lesson_slug": "lesson_16",
+    "filename": "lesson_16.html",
+    "legacy_alias": "",
+    "code": "BÀI 16",
+    "chapter_number": 4,
+    "chapter_code": "CHƯƠNG 4",
+    "chapter_title": "Xử lý Dữ liệu, Bảng tính & Phối hợp Đội nhóm",
+    "title": "Đồng bộ Tài liệu Nhóm Qua GitHub & Sao lưu Google Drive Tự động",
+    "short_title": "Đồng bộ GitHub & Google Drive",
+    "pill_label": "Bài 16 · Đồng bộ GitHub & Drive",
+    "description": "Xóa bỏ cảnh gửi file qua lại trên Zalo/Email với tên 'Bao_cao_final_v2_sua_lan_3': Học cách nhờ Trợ lý AI lưu mốc lịch sử phiên bản (Git/GitHub) và đồng bộ trực tiếp lên thư mục Google Drive của công ty.",
+    "prerequisites": "Bài 14 & Bài 15 (Đã tạo ra tệp báo cáo bao_cao_doanh_thu_q1.md và de_an_tong_the_q2.md trên ổ cứng).",
+    "dependents": "Chương 5 (Sản xuất nội dung truyền thông & thuyết trình từ kho dữ liệu đã đồng bộ).",
+    "placement_risk": "0% Rủi ro — Dân văn phòng không cần thuộc câu lệnh Git khó nhớ vì chỉ cần ra lệnh bằng tiếng Việt cho Trợ lý AI thực hiện trọn gói.",
+    "continuity_bridge": "Kết thúc Chương 4, toàn bộ dữ liệu và báo cáo đã được phân tích chuẩn xác và đồng bộ an toàn. Sang Chương 5 (Bài 17), chúng ta sẽ biến các báo cáo này thành bài viết truyền thông, slide và bảng điều khiển đẹp mắt!",
+    "slide_ids": [
+      "s1"
+    ],
+    "session_order": [
+      "b1",
+      "b2",
+      "b3",
+      "b4",
+      "b5",
+      "b6"
+    ],
+    "beats_count": 6,
+    "total_duration_sec": 75.2,
+    "duration_formatted": "01:15"
+  },
+  {
+    "lesson_slug": "lesson_17",
+    "filename": "lesson_17.html",
+    "legacy_alias": "",
+    "code": "BÀI 17",
+    "chapter_number": 5,
+    "chapter_code": "CHƯƠNG 5",
+    "chapter_title": "Sản xuất Nội dung, Thiết kế Slide & Báo cáo Trực quan",
+    "title": "Khởi tạo Trung tâm Nội dung Đa kênh & Quản lý Giọng văn Thương hiệu",
+    "short_title": "Trung tâm Nội dung & Brand Voice",
+    "pill_label": "Bài 17 · Nội dung & Thương hiệu",
+    "description": "Thiết lập tệp Cẩm nang Giọng văn Thương hiệu (brand_voice.md) và Chân dung Khách hàng mục tiêu để mọi bài viết Website, Facebook, LinkedIn và Email do AI soạn ra đều đồng nhất một bản sắc.",
+    "prerequisites": "Chương 3 (Biết thiết lập Rules/Skills) & Chương 4 (Đã có báo cáo dữ liệu bao_cao_doanh_thu_q1.md làm chất liệu thực tế).",
+    "dependents": "Bài 18 (Sản xuất chuỗi bài viết & email từ brand_voice.md), Bài 19 (Thiết kế ảnh minh họa đồng bộ nhận diện thương hiệu).",
+    "placement_risk": "0% Rủi ro — Học viên khóa chặt Giọng văn Thương hiệu ở Bài 17 trước khi sản xuất hàng loạt bài viết ở Bài 18.",
+    "continuity_bridge": "Sau khi thiết lập xong Cẩm nang Giọng văn Thương hiệu ở Bài 17, Bài 18 sẽ hướng dẫn cách nhân bản 1 ý tưởng gốc thành chuỗi bài viết đa kênh và kiểm duyệt tự động.",
+    "slide_ids": [
+      "s1"
+    ],
+    "session_order": [
+      "b1",
+      "b2",
+      "b3",
+      "b4",
+      "b5",
+      "b6"
+    ],
+    "beats_count": 6,
+    "total_duration_sec": 71.9,
+    "duration_formatted": "01:12"
+  },
+  {
+    "lesson_slug": "lesson_18",
+    "filename": "lesson_18.html",
+    "legacy_alias": "",
+    "code": "BÀI 18",
+    "chapter_number": 5,
+    "chapter_code": "CHƯƠNG 5",
+    "chapter_title": "Sản xuất Nội dung, Thiết kế Slide & Báo cáo Trực quan",
+    "title": "Tự động hóa Sản xuất Bài viết, Email Chuỗi & Kiểm duyệt Chất lượng",
+    "short_title": "Sản xuất Bài viết & Email Chuỗi",
+    "pill_label": "Bài 18 · Bài viết & Email Chuỗi",
+    "description": "Áp dụng mô hình 'Tòa soạn AI 2 bước': Từ 1 tài liệu chuyên môn gốc, tự động chuyển hóa thành Bài chuyên sâu Website, Bài đăng mạng xã hội và Chuỗi 3 Email chăm sóc khách hàng, kèm bước tự chấm điểm kiểm duyệt.",
+    "prerequisites": "Bài 17 (Đã có tệp brand_voice.md và kho số liệu thực tế từ bao_cao_doanh_thu_q1.md).",
+    "dependents": "Bài 19 (Tạo bộ ảnh minh họa đi kèm cho chính các bài viết vừa xuất bản ở Bài 18).",
+    "placement_risk": "0% Rủi ro — Học viên tách bạch rõ bước Viết nháp và bước Kiểm duyệt (Editorial Review) nên bài viết luôn sắc sảo.",
+    "continuity_bridge": "Sau khi có trọn bộ văn bản bài viết và email ở Bài 18, Bài 19 sẽ hướng dẫn cách tạo ảnh minh họa và infographic đồng bộ nhận diện để đăng kèm bài viết.",
+    "slide_ids": [
+      "s1"
+    ],
+    "session_order": [
+      "b1",
+      "b2",
+      "b3",
+      "b4",
+      "b5",
+      "b6"
+    ],
+    "beats_count": 6,
+    "total_duration_sec": 70.3,
+    "duration_formatted": "01:10"
+  },
+  {
+    "lesson_slug": "lesson_19",
+    "filename": "lesson_19.html",
+    "legacy_alias": "",
+    "code": "BÀI 19",
+    "chapter_number": 5,
+    "chapter_code": "CHƯƠNG 5",
+    "chapter_title": "Sản xuất Nội dung, Thiết kế Slide & Báo cáo Trực quan",
+    "title": "Tạo Hình ảnh Minh họa, Infographic & Ấn phẩm Nhận diện Thương hiệu",
+    "short_title": "Tạo Ảnh Minh họa & Infographic",
+    "pill_label": "Bài 19 · Ảnh Minh họa & Infographic",
+    "description": "Áp dụng công thức 4 thành phần (Chủ thể + Bối cảnh + Phong cách + Bảng màu thương hiệu) để tạo hình ảnh minh họa bài viết, sơ đồ Infographic và biểu ngữ truyền thông đồng bộ sắc màu doanh nghiệp.",
+    "prerequisites": "Bài 17 (Cẩm nang thương hiệu brand_voice.md) & Bài 18 (Đã có bài viết chien_dich_noi_dung_q2.md cần ảnh minh họa).",
+    "dependents": "Bài 20 (Đưa hình ảnh và biểu đồ trực quan vào bộ Slide thuyết trình và Báo cáo Web).",
+    "placement_risk": "0% Rủi ro — Học viên học cách khóa chặt Bảng màu & Phong cách cố định nên bộ ảnh sinh ra không bị lệch tông nhau.",
+    "continuity_bridge": "Sau khi có đủ cả Bài viết (Bài 18) lẫn Hình ảnh minh họa & Sơ đồ (Bài 19), Bài 20 sẽ hướng dẫn cách đóng gói tất cả thành bộ Slide thuyết trình và Trang báo cáo Web tương tác.",
+    "slide_ids": [
+      "s1"
+    ],
+    "session_order": [
+      "b1",
+      "b2",
+      "b3",
+      "b4",
+      "b5",
+      "b6"
+    ],
+    "beats_count": 6,
+    "total_duration_sec": 65.5,
+    "duration_formatted": "01:06"
+  },
+  {
+    "lesson_slug": "lesson_20",
+    "filename": "lesson_20.html",
+    "legacy_alias": "",
+    "code": "BÀI 20",
+    "chapter_number": 5,
+    "chapter_code": "CHƯƠNG 5",
+    "chapter_title": "Sản xuất Nội dung, Thiết kế Slide & Báo cáo Trực quan",
+    "title": "Xuất bản Slide Thuyết trình (HTML/PPTX) & Bảng điều khiển Báo cáo Web",
+    "short_title": "Xuất bản Slide & Báo cáo Web",
+    "pill_label": "Bài 20 · Slide & Báo cáo Web",
+    "description": "Biến tệp báo cáo Markdown khô khan thành bộ Slide thuyết trình chuẩn nguyên tắc 'Tiêu đề Hành động' (Action Title, dưới 10 dòng mỗi trang) và trang Bảng điều khiển Web tương tác gửi trực tiếp cho Ban Giám đốc.",
+    "prerequisites": "Bài 14 (Báo cáo doanh thu Quý 1), Bài 18 (Nội dung chiến dịch) & Bài 19 (Thiết kế trực quan).",
+    "dependents": "Chương 6 (Vận dụng toàn bộ kỹ năng từ Chương 1 đến Chương 5 vào 4 Tình huống Thực chiến Toàn diện).",
+    "placement_risk": "0% Rủi ro — Học viên đã có sẵn toàn bộ số liệu và nội dung từ các bài trước nên chỉ tập trung vào kỹ thuật xuất bản Slide và Dashboard.",
+    "continuity_bridge": "Kết thúc Chương 5, học viên đã nắm trọn bộ kỹ năng văn phòng từ dữ liệu đến thuyết trình. Sang Chương 6 (Bài 21-24), chúng ta sẽ giải quyết 4 đại dự án thực chiến từ đầu đến cuối!",
+    "slide_ids": [
+      "s1"
+    ],
+    "session_order": [
+      "b1",
+      "b2",
+      "b3",
+      "b4",
+      "b5",
+      "b6"
+    ],
+    "beats_count": 6,
+    "total_duration_sec": 74.1,
+    "duration_formatted": "01:14"
+  },
+  {
+    "lesson_slug": "lesson_21",
+    "filename": "lesson_21.html",
+    "legacy_alias": "lesson_06_lap_ke_hoach_chien_luoc_7_buoc.html",
+    "code": "BÀI 21",
+    "chapter_number": 6,
+    "chapter_code": "CHƯƠNG 6",
+    "chapter_title": "4 Tình huống Thực chiến Toàn diện (Case Studies)",
+    "title": "Tình huống 1 — Lập Kế hoạch Chiến lược Từ 0 Đến Bản Thảo Hoàn chỉnh",
+    "short_title": "Case Study 1: Kế hoạch Chiến lược",
+    "pill_label": "Bài 21 · Case 1: Chiến lược 7 Bước",
+    "description": "Thực chiến bài toán 'Đứng trên vai người khổng lồ': Phỏng vấn một chuyên gia có dự án thành công mẫu (Thương hiệu 5balance), rút trích bộ khung chiến lược 7 bước và nhân bản sang dự án mới tinh (Giày Thời trang Bền vững từ Bã Mía).",
+    "prerequisites": "Toàn bộ Chương 1..5 (Đặc biệt là kỹ thuật bóc tách hồ sơ mẫu, bộ não .agent và chu trình /grill-me -> /plan).",
+    "dependents": "Bài 22 (Case Study Tuyển dụng HR), Bài 23 (Case Study Pháp lý), Bài 24 (Tổng kết & Kiểm toán /audit).",
+    "placement_risk": "0% Rủi ro — Đây là Case Study thực chiến độc lập số 1 của Chương 6 (sử dụng bài toán 5balance -> Giày Bã Mía), hoàn toàn không trùng lặp với bài tập TaskFlow B2B ở Bài 12.",
+    "continuity_bridge": "Sau khi hoàn thành Tình huống Chiến lược Kinh doanh ở Bài 21, Bài 22 sẽ đưa chúng ta sang Tình huống Quản trị Nhân sự & Tuyển dụng tự động.",
+    "slide_ids": [
+      "s1"
+    ],
+    "session_order": [
+      "b1",
+      "b2",
+      "b3",
+      "b4",
+      "b5",
+      "b6"
+    ],
+    "beats_count": 6,
+    "total_duration_sec": 68.9,
+    "duration_formatted": "01:09"
+  },
+  {
+    "lesson_slug": "lesson_22",
+    "filename": "lesson_22.html",
+    "legacy_alias": "",
+    "code": "BÀI 22",
+    "chapter_number": 6,
+    "chapter_code": "CHƯƠNG 6",
+    "chapter_title": "4 Tình huống Thực chiến Toàn diện (Case Studies)",
+    "title": "Tình huống 2 — Tự động hóa Tuyển dụng, Chấm CV & Lộ trình Hội nhập (HR)",
+    "short_title": "Case Study 2: Tuyển dụng & HR",
+    "pill_label": "Bài 22 · Case 2: Tuyển dụng & HR",
+    "description": "Giải quyết bài toán quá tải của phòng Nhân sự (HR) và Trưởng bộ phận: Xây dựng Thang điểm chấm hồ sơ ứng viên khách quan (Rubric), lọc 20 CV trong 2 phút, tạo Bộ câu hỏi phỏng vấn riêng cho từng người và Lộ trình thử việc 30-60-90 ngày.",
+    "prerequisites": "Chương 2 (Đọc bảng .csv), Chương 3 (Thiết kế Skill chấm điểm) & Bài 21 (Tư duy quy trình thực chiến).",
+    "dependents": "Bài 23 (Tình huống 3 — Rà soát hợp đồng lao động & quy chế pháp lý), Bài 24 (Tổng kết khóa học).",
+    "placement_risk": "0% Rủi ro — Quy trình HR được chia thành 3 bước rõ ràng (Tiêu chí JD -> Bảng chấm điểm CV -> Bộ câu hỏi phỏng vấn) rất gần gũi với mọi cấp quản lý.",
+    "continuity_bridge": "Sau khi tuyển chọn được ứng viên xuất sắc ở Bài 22, Bài 23 sẽ hướng dẫn cách dùng AI để rà soát Hợp đồng lao động, Hợp đồng kinh tế và Quy chế pháp lý an toàn tuyệt đối.",
+    "slide_ids": [
+      "s1"
+    ],
+    "session_order": [
+      "b1",
+      "b2",
+      "b3",
+      "b4",
+      "b5",
+      "b6"
+    ],
+    "beats_count": 6,
+    "total_duration_sec": 72.0,
+    "duration_formatted": "01:12"
+  },
+  {
+    "lesson_slug": "lesson_23",
+    "filename": "lesson_23.html",
+    "legacy_alias": "",
+    "code": "BÀI 23",
+    "chapter_number": 6,
+    "chapter_code": "CHƯƠNG 6",
+    "chapter_title": "4 Tình huống Thực chiến Toàn diện (Case Studies)",
+    "title": "Tình huống 3 — Xây dựng Trợ lý Nghiên cứu Pháp lý, Hợp đồng & Quy chế",
+    "short_title": "Case Study 3: Hợp đồng & Pháp lý",
+    "pill_label": "Bài 23 · Case 3: Hợp đồng & Pháp lý",
+    "description": "Biến Trợ lý AI thành Chuyên viên Rà soát Rủi ro Hợp đồng: Đối chiếu dự thảo hợp đồng đối tác gửi với Danh mục Điều khoản Bảo vệ (Legal Checklist) của công ty, phát hiện các điều khoản bất lợi và đề xuất câu chữ sửa đổi.",
+    "prerequisites": "Bài 6 (Trích dẫn dòng #L), Bài 10 (Thiết lập Rules/Skills kiểm duyệt) & Bài 13 (Bóc tách tài liệu có dẫn nguồn).",
+    "dependents": "Bài 24 (Tình huống 4 — Tổng kết, Kiểm toán Chất lượng Độc lập /audit & Lộ trình Mở rộng).",
+    "placement_risk": "0% Rủi ro — Nhấn mạnh nguyên tắc AI chỉ đối chiếu dựa trên văn bản quy chế chính thức được nạp vào thư mục, tuyệt đối không tự suy diễn luật bên ngoài.",
+    "continuity_bridge": "Sau khi hoàn thành Tình huống Rà soát Hợp đồng ở Bài 23, Bài 24 sẽ khép lại toàn bộ khóa học bằng Tình huống Kiểm toán Chất lượng Độc lập (/audit) và xây dựng Hệ điều hành Cá nhân hóa.",
+    "slide_ids": [
+      "s1"
+    ],
+    "session_order": [
+      "b1",
+      "b2",
+      "b3",
+      "b4",
+      "b5",
+      "b6"
+    ],
+    "beats_count": 6,
+    "total_duration_sec": 69.9,
+    "duration_formatted": "01:10"
+  },
+  {
+    "lesson_slug": "lesson_24",
+    "filename": "lesson_24.html",
+    "legacy_alias": "",
+    "code": "BÀI 24",
+    "chapter_number": 6,
+    "chapter_code": "CHƯƠNG 6",
+    "chapter_title": "4 Tình huống Thực chiến Toàn diện (Case Studies)",
+    "title": "Tình huống 4 — Tổng kết, Kiểm toán Chất lượng (/audit) & Mở rộng Hệ thống",
+    "short_title": "Case Study 4: Kiểm toán /audit & Tổng kết",
+    "pill_label": "Bài 24 · Case 4: Kiểm toán /audit",
+    "description": "Mảnh ghép hoàn thiện năng lực Quản trị AI Chuyên nghiệp: Sử dụng quy trình Kiểm toán Độc lập (/audit) để rà soát chéo toàn bộ sản phẩm trong thư mục dự án trước khi nghiệm thu bàn giao, và thiết lập Lộ trình 30 ngày áp dụng vào công việc thực tế.",
+    "prerequisites": "Toàn bộ Bài 1 đến Bài 23 (Đã hoàn thành đầy đủ các tệp sản phẩm Chiến lược, Dữ liệu, Nội dung, Slide, HR và Pháp lý).",
+    "dependents": "Áp dụng trực tiếp vào công việc hàng ngày tại doanh nghiệp của học viên sau khi tốt nghiệp khóa Antigravity Basic.",
+    "placement_risk": "0% Rủi ro — Bài tổng kết khép kín vòng tròn quản trị: Từ Khởi tạo (Chương 1) -> Dữ liệu (Chương 2) -> Bộ não .agent (Chương 3) -> Đội nhóm (Chương 4) -> Xuất bản (Chương 5) -> Thực chiến & Kiểm toán /audit (Chương 6).",
+    "continuity_bridge": "Hoàn thành Bài 24, học viên chính thức tốt nghiệp khóa học Antigravity Basic với trọn bộ công cụ và quy trình sẵn sàng vận hành ngay trong công việc thực tế!",
+    "slide_ids": [
+      "s1"
+    ],
+    "session_order": [
+      "b1",
+      "b2",
+      "b3",
+      "b4",
+      "b5",
+      "b6"
+    ],
+    "beats_count": 6,
+    "total_duration_sec": 82.5,
+    "duration_formatted": "01:22"
   }
 ]

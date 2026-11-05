@@ -1,0 +1,21 @@
+{
+  "id": "b4",
+  "label": "4. [Thực hành B1/3] Bối cảnh & Mở kiểm tra tệp workflow mẫu",
+  "duration": 9.69,
+  "pose": 4,
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 1/3 · Bối cảnh & Khảo sát .agent",
+  "pedagogy_title": "Bối cảnh: Tìm hiểu cách khóa học đóng gói quy trình tự động trong .agent",
+  "pedagogy_note": "Bước 1: Tại cột cây thư mục bên trái, bấm mở tệp start-1-1.md bên trong nhánh .agent/workflows.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); openFileInEditor('start-1-1.md'); setEditorMode('raw');",
+  "focus_selectors": [
+    "#ide-file-tree",
+    "#editor-canvas"
+  ],
+  "cursor_selector": "[data-file='start-1-1.md']",
+  "cursor_label": "Bước 1: Mở tệp start-1-1.md trong .agent",
+  "caption": "Chúng ta vào thực hành 3 bước khám phá bộ não <code>.agent</code>. Ở <strong>Bước 1</strong>, anh chị nhìn sang cột trái và bấm mở tệp <code>start-1-1.md</code> để xem bên trong một quy trình tự động viết gì.",
+  "audio_src": "audio/lesson_09/b4.mp3",
+  "audio_duration": 9.04
+}

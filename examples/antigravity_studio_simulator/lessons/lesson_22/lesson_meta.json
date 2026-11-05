@@ -1,0 +1,31 @@
+{
+  "lesson_slug": "lesson_22",
+  "filename": "lesson_22.html",
+  "legacy_alias": "",
+  "code": "BÀI 22",
+  "chapter_number": 6,
+  "chapter_code": "CHƯƠNG 6",
+  "chapter_title": "4 Tình huống Thực chiến Toàn diện (Case Studies)",
+  "title": "Tình huống 2 — Tự động hóa Tuyển dụng, Chấm CV & Lộ trình Hội nhập (HR)",
+  "short_title": "Case Study 2: Tuyển dụng & HR",
+  "pill_label": "Bài 22 · Case 2: Tuyển dụng & HR",
+  "description": "Giải quyết bài toán quá tải của phòng Nhân sự (HR) và Trưởng bộ phận: Xây dựng Thang điểm chấm hồ sơ ứng viên khách quan (Rubric), lọc 20 CV trong 2 phút, tạo Bộ câu hỏi phỏng vấn riêng cho từng người và Lộ trình thử việc 30-60-90 ngày.",
+  "prerequisites": "Chương 2 (Đọc bảng .csv), Chương 3 (Thiết kế Skill chấm điểm) & Bài 21 (Tư duy quy trình thực chiến).",
+  "dependents": "Bài 23 (Tình huống 3 — Rà soát hợp đồng lao động & quy chế pháp lý), Bài 24 (Tổng kết khóa học).",
+  "placement_risk": "0% Rủi ro — Quy trình HR được chia thành 3 bước rõ ràng (Tiêu chí JD -> Bảng chấm điểm CV -> Bộ câu hỏi phỏng vấn) rất gần gũi với mọi cấp quản lý.",
+  "continuity_bridge": "Sau khi tuyển chọn được ứng viên xuất sắc ở Bài 22, Bài 23 sẽ hướng dẫn cách dùng AI để rà soát Hợp đồng lao động, Hợp đồng kinh tế và Quy chế pháp lý an toàn tuyệt đối.",
+  "slide_ids": [
+    "s1"
+  ],
+  "session_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "b6"
+  ],
+  "beats_count": 6,
+  "total_duration_sec": 72.0,
+  "duration_formatted": "01:12"
+}

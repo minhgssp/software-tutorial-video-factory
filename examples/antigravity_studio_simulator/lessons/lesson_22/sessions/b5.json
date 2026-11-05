@@ -1,0 +1,21 @@
+{
+  "id": "b5",
+  "label": "5. [Thực hành B2/3] Gửi lệnh chấm điểm ứng viên và lập lộ trình 30-60-90 ngày",
+  "duration": 9.45,
+  "pose": 5,
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Chấm CV & Lập Lộ trình Thử việc",
+  "pedagogy_title": "Bước 2: Đính kèm @jd_truong_nhom_cs.md và @danh_sach_ung_vien.csv",
+  "pedagogy_note": "Yêu cầu AI xếp hạng ứng viên, soạn câu hỏi phỏng vấn và lập lộ trình thử việc 30-60-90 ngày vào tệp ho_so_tuyen_dung_cs.md.",
+  "onEnter": "kudoSimScene({surface:'ide', clearChat:true, chatInput:'@jd_truong_nhom_cs.md @danh_sach_ung_vien.csv @COMPANY.md Hãy chấm điểm xếp hạng ứng viên, tạo bộ câu hỏi phỏng vấn riêng và lập lộ trình thử việc 30-60-90 ngày vào tệp ho_so_tuyen_dung_cs.md'});",
+  "focus_selectors": [
+    "#ide-chat-input",
+    "#ide-send-btn"
+  ],
+  "cursor_selector": "#ide-send-btn",
+  "cursor_label": "Bước 2: Nhấn Gửi để AI chấm CV & lập lộ trình thử việc",
+  "caption": "Sang <strong>Bước 2</strong>, anh chị đính kèm thang điểm cùng danh sách ứng viên vào ô chat, yêu cầu chấm điểm và lập lộ trình thử việc 30-60-90 ngày rồi nhấn nút Gửi.",
+  "audio_src": "audio/lesson_22/b5.mp3",
+  "audio_duration": 8.8
+}

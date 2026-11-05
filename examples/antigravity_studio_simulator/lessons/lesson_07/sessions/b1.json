@@ -1,0 +1,18 @@
+{
+  "id": "b1",
+  "label": "1. [Lý thuyết Kiểu 1] Cấu trúc 4 phần của hồ sơ @troly.md",
+  "duration": 13.69,
+  "pose": 1,
+  "mode": "theory",
+  "pedagogy_type": "theory_type_1",
+  "slide": "s1",
+  "hl": [
+    "s1_c1",
+    "s1_c2",
+    "s1_c3",
+    "s1_call"
+  ],
+  "caption": "Tại sao nhiều người dùng AI thấy câu chữ cứ chung chung, máy móc? Vì trợ lý chưa biết bạn là ai! Trong <strong>Bài 7</strong>, chúng ta thiết lập tệp hồ sơ cá nhân <code>@troly.md</code> gồm 3 khối: Vai trò chủ nhân, Gu văn phong và Danh sách từ cấm kỵ.",
+  "audio_src": "audio/lesson_07/b1.mp3",
+  "audio_duration": 13.04
+}

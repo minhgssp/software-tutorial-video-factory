@@ -1,0 +1,31 @@
+{
+  "lesson_slug": "lesson_19",
+  "filename": "lesson_19.html",
+  "legacy_alias": "",
+  "code": "BÀI 19",
+  "chapter_number": 5,
+  "chapter_code": "CHƯƠNG 5",
+  "chapter_title": "Sản xuất Nội dung, Thiết kế Slide & Báo cáo Trực quan",
+  "title": "Tạo Hình ảnh Minh họa, Infographic & Ấn phẩm Nhận diện Thương hiệu",
+  "short_title": "Tạo Ảnh Minh họa & Infographic",
+  "pill_label": "Bài 19 · Ảnh Minh họa & Infographic",
+  "description": "Áp dụng công thức 4 thành phần (Chủ thể + Bối cảnh + Phong cách + Bảng màu thương hiệu) để tạo hình ảnh minh họa bài viết, sơ đồ Infographic và biểu ngữ truyền thông đồng bộ sắc màu doanh nghiệp.",
+  "prerequisites": "Bài 17 (Cẩm nang thương hiệu brand_voice.md) & Bài 18 (Đã có bài viết chien_dich_noi_dung_q2.md cần ảnh minh họa).",
+  "dependents": "Bài 20 (Đưa hình ảnh và biểu đồ trực quan vào bộ Slide thuyết trình và Báo cáo Web).",
+  "placement_risk": "0% Rủi ro — Học viên học cách khóa chặt Bảng màu & Phong cách cố định nên bộ ảnh sinh ra không bị lệch tông nhau.",
+  "continuity_bridge": "Sau khi có đủ cả Bài viết (Bài 18) lẫn Hình ảnh minh họa & Sơ đồ (Bài 19), Bài 20 sẽ hướng dẫn cách đóng gói tất cả thành bộ Slide thuyết trình và Trang báo cáo Web tương tác.",
+  "slide_ids": [
+    "s1"
+  ],
+  "session_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "b6"
+  ],
+  "beats_count": 6,
+  "total_duration_sec": 65.5,
+  "duration_formatted": "01:06"
+}

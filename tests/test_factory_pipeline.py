@@ -53,26 +53,36 @@ def _get_courseware_dir() -> Path:
 
 
 def test_5layer_course_compiler_and_manifest() -> None:
-    """Verify 5-Layer LessonSpecCompiler and CourseManifestBuilder compile all 6 lessons (47 micro-beats)."""
+    """Verify 5-Layer LessonSpecCompiler and CourseManifestBuilder compile all 24 lessons (144 micro-beats)."""
     cdir = _get_courseware_dir()
     lesson_01_res = LessonSpecCompiler().compile_lesson(cdir / "lessons" / "lesson_01")
     assert lesson_01_res["lesson_slug"] == "lesson_01"
-    assert lesson_01_res["slides_count"] == 2
-    assert lesson_01_res["beats_count"] == 10
+    assert lesson_01_res["slides_count"] == 1
+    assert lesson_01_res["beats_count"] == 6
     assert Path(lesson_01_res["lesson_spec_js"]).exists()
+    assert lesson_01_res["meta"].get("prerequisites")
+    assert lesson_01_res["meta"].get("dependents")
 
     course_res = compile_modular_courseware(cdir)
     assert course_res["status"] == "ok"
-    assert course_res["lessons_compiled"] == 6
-    assert course_res["total_beats"] == 47
-    assert course_res["total_duration_sec"] > 500.0
+    assert course_res["lessons_compiled"] == 24
+    assert course_res["total_beats"] == 144
+    assert course_res["total_duration_sec"] > 1500.0
     assert Path(course_res["manifest_js"]).exists()
     assert (cdir / "config" / "chapters_manifest.js").exists()
     assert (cdir / "BAI_HOC_DAT_TEN_VA_THIET_KE_MUC_LUC_KHOA_HOC.md").exists()
+    assert (cdir / "BAO_CAO_AUDIT_DOC_LAP_5_NGUYEN_TAC_KHOA_HOC.md").exists()
+    assert (cdir / "CURRICULUM_DAG_24_LESSONS_MATRIX.md").exists()
     index_txt = (cdir / "index.html").read_text(encoding="utf-8")
     assert 'id="home-view"' in index_txt and 'id="player-view"' in index_txt
     tokens_txt = (cdir / "assets" / "css" / "brand_tokens.css").read_text(encoding="utf-8")
     assert "--kudo-bg-cream: #FAF8F5" in tokens_txt and "--kudo-sidebar-width: 315px" in tokens_txt
+    overrides_txt = (cdir / "assets" / "css" / "simulator_overrides.css").read_text(encoding="utf-8")
+    assert "#kudo-stage-pedagogy-card" in overrides_txt
+    assert ".k-vh-flow" in overrides_txt
+    assert ".k-vh-compare-grid" in overrides_txt
+    assert ".k-vh-timeline" in overrides_txt
+    assert ".k-vh-anatomy-grid" in overrides_txt
 
 
 def test_5layer_course_integrity_and_zero_audition_pollution() -> None:
@@ -81,8 +91,8 @@ def test_5layer_course_integrity_and_zero_audition_pollution() -> None:
     audit_res = audit_modular_courseware(cdir)
     assert audit_res["passed"] is True, f"5-layer course integrity failed: {audit_res['errors']}"
     assert audit_res["status"] == "PASS"
-    assert audit_res["lessons_checked"] == 6
-    assert audit_res["beats_checked"] == 47
+    assert audit_res["lessons_checked"] == 24
+    assert audit_res["beats_checked"] == 144
     assert len(audit_res["errors"]) == 0
     assert len(audit_res["warnings"]) == 0
 

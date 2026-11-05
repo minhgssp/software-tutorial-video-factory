@@ -1,0 +1,18 @@
+{
+  "id": "b1",
+  "label": "1. [Lý thuyết Kiểu 1] Sơ đồ 4 bước đóng gói lệnh /workflow",
+  "duration": 14.71,
+  "pose": 1,
+  "mode": "theory",
+  "pedagogy_type": "theory_type_1",
+  "slide": "s1",
+  "hl": [
+    "s1_c1",
+    "s1_c2",
+    "s1_c3",
+    "s1_call"
+  ],
+  "caption": "Mỗi sáng thứ Hai, anh chị có những việc nào phải làm lặp đi lặp lại không? Trong <strong>Bài 11</strong>, sơ đồ trên màn hình chỉ ra cách đóng gói chuỗi việc đó thành một tệp trong <code>.agent/workflows/</code> để chỉ cần gõ một dấu gạch chéo là trợ lý tự chạy từ đầu đến cuối.",
+  "audio_src": "audio/lesson_11/b1.mp3",
+  "audio_duration": 14.06
+}

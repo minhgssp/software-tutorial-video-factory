@@ -1,18 +1,21 @@
 {
   "id": "b6",
-  "label": "6. AI dẫn dắt thực hành từng bước",
-  "duration": 8.97,
+  "label": "6. [Thực hành B3/3] Chuyển sang Raw xem số dòng & Tiếp nối Bài 6",
+  "duration": 14.49,
+  "pose": 6,
   "mode": "sim",
-  "pose": 8,
-  "surface": "ide",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Nghiệm thu & Tiếp nối",
+  "pedagogy_title": "Bước 3: Bấm nút </> Raw / Số dòng để kiểm tra cấu trúc gốc",
+  "pedagogy_note": "Nghiệm thu: Nắm vững 2 chế độ Preview và Raw của .md/.csv. Tiếp theo: Bài 6 học đính kèm @, giọng nói Ctrl+M và trích dẫn Ctrl+L.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); openFileInEditor('COMPANY.md'); setEditorMode('raw');",
   "focus_selectors": [
-    "#ide-right-agent"
+    "#pill-raw",
+    "#editor-canvas"
   ],
-  "focus_pad": 6,
-  "cursor_selector": "#ide-chat-messages",
-  "cursor_label": "AI đọc kịch bản và dừng chờ bạn phản hồi",
-  "caption": "Ngay lập tức, trợ lý AI đọc tệp kịch bản trong thư mục dự án, giới thiệu bối cảnh công ty TaskFlow Inc. và dừng lại ở bước đầu tiên để chờ bạn xác nhận sẵn sàng.",
-  "onEnter": "kudoRunStart11ExecutedDemo();",
+  "cursor_selector": "#pill-raw",
+  "cursor_label": "Bước 3: Xem chế độ Raw có đánh số dòng",
+  "caption": "Ở <strong>Bước 3</strong>, anh chị mở tệp <code>COMPANY.md</code> và bấm thử nút <strong>Raw / Số dòng</strong> để thấy từng dòng văn bản được đánh số thứ tự. Vậy làm sao để chỉ định chính xác các tệp và dòng văn bản này cho AI xử lý? Chúng ta sang ngay <strong>Bài 6</strong>.",
   "audio_src": "audio/lesson_05/b6.mp3",
-  "audio_duration": 8.32
+  "audio_duration": 13.84
 }

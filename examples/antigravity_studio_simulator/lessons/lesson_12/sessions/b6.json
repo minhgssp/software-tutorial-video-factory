@@ -1,0 +1,21 @@
+{
+  "id": "b6",
+  "label": "6. [Thực hành B3/3] Chạy /learn đúc kết bài học & Chuyển sang Chương 4",
+  "duration": 13.76,
+  "pose": 6,
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Đúc kết bằng /learn",
+  "pedagogy_title": "Bước 3: Gõ /learn để lưu tiêu chuẩn chính sách đại lý vào bộ não .agent",
+  "pedagogy_note": "Nghiệm thu: Bộ não .agent đã tự nâng cấp! Tiếp theo: Chương 4 (Bài 13) xử lý dữ liệu lớn, bảng tính CSV & làm việc nhóm.",
+  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'.agent › rules › quy_chuan_van_phong.md (Đã cập nhật bởi /learn)', editorTitle:'🧬 Đã lưu bài học mới vào .agent/rules/quy_chuan_van_phong.md', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#15803d;margin-top:0;\">✅ HOÀN TẤT CHU TRÌNH /GRILL-ME &rarr; /PLAN &rarr; /LEARN</h3><p>Trợ lý AI đã tự động cập nhật tiêu chuẩn <strong>Chính sách Đại lý B2B TaskFlow (Chiết khấu 25% + Cam kết SLA 24/7)</strong> vào bộ nhớ dài hạn của dự án.</p></div>', userMsg:'/learn Hãy lưu quy chuẩn chiết khấu 25% và cam kết hỗ trợ 24/7 cho kênh đại lý B2B vào bộ quy tắc của dự án.', aiMsg:'Đã thực thi <code>/learn</code> và cập nhật vào <code>.agent/rules/quy_chuan_van_phong.md</code>! Chúc mừng bạn đã hoàn thành trọn vẹn Chương 3.'});",
+  "focus_selectors": [
+    "#editor-canvas",
+    "#ide-chat-messages"
+  ],
+  "cursor_selector": "#ide-chat-messages",
+  "cursor_label": "Bước 3: Hoàn tất chu trình /grill-me -> /plan -> /learn!",
+  "caption": "Ở <strong>Bước 3</strong>, anh chị gõ lệnh <code>/learn</code> để trợ lý ghi nhớ luôn quy chuẩn chiết khấu đại lý vào bộ não <code>.agent</code>. Chúc mừng anh chị đã hoàn thành <strong>Chương 3</strong>! Bây giờ chúng ta bước sang <strong>Chương 4 — Bài 13</strong> để xử lý kho tài liệu lớn và bảng tính dữ liệu.",
+  "audio_src": "audio/lesson_12/b6.mp3",
+  "audio_duration": 13.11
+}

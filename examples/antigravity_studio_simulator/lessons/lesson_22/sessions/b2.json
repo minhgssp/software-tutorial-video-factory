@@ -1,0 +1,20 @@
+{
+  "id": "b2",
+  "label": "2. [Lý thuyết Kiểu 2] Quan sát tệp Thang điểm tuyển dụng (Rubric) trong IDE",
+  "duration": 11.61,
+  "pose": 2,
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Thang điểm Chấm CV (Rubric)",
+  "pedagogy_title": "Cấu trúc tệp tiêu chí tuyển dụng jd_truong_nhom_cs.md",
+  "pedagogy_note": "Để AI không chấm điểm cảm tính, hãy ghi rõ thang 100 điểm chia làm 3 tiêu chí cụ thể.",
+  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › jd_truong_nhom_cs.md', editorTitle:'📋 jd_truong_nhom_cs.md — Tiêu Chí Chấm Điểm Ứng Viên (100 Điểm)', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">THANG ĐIỂM TUYỂN DỤNG TRƯỞNG NHÓM CS (TASKFLOW INC.)</h3><ul><li><strong>Tiêu chí 1 — Kinh nghiệm CS B2B (40 điểm):</strong> Tối thiểu 2 năm chăm sóc khách hàng phần mềm doanh nghiệp.</li><li><strong>Tiêu chí 2 — Thành tích giảm Churn Rate (35 điểm):</strong> Có số liệu chứng minh đã giữ chân khách hàng thành công.</li><li><strong>Tiêu chí 3 — Độ gắn bó &amp; Kỹ năng dẫn dắt (25 điểm):</strong> Thời gian làm việc trung bình trên 18 tháng/công ty.</li></ul></div>'});",
+  "focus_selectors": [
+    "#editor-canvas"
+  ],
+  "cursor_selector": "#editor-canvas",
+  "cursor_label": "Thang điểm 100 chia rõ 3 tiêu chí định lượng",
+  "caption": "Nhìn vào cột giữa trên màn hình là tệp <code>jd_truong_nhom_cs.md</code>: Thay vì chỉ bảo AI tìm người giỏi chung chung, chúng ta chia rõ 100 điểm thành 3 tiêu chí định lượng để AI đối chiếu với từng hồ sơ ứng viên.",
+  "audio_src": "audio/lesson_22/b2.mp3",
+  "audio_duration": 10.96
+}

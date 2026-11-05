@@ -1,0 +1,20 @@
+{
+  "id": "b3",
+  "label": "3. [Lý thuyết Kiểu 2] Xuất trực tiếp sơ đồ Infographic sắc nét ngay trong IDE",
+  "duration": 10.97,
+  "pose": 3,
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Thiết kế Infographic Trực quan",
+  "pedagogy_title": "Trợ lý AI tự động dựng tấm Infographic so sánh 14 ngày vs. 3 ngày",
+  "pedagogy_note": "Không cần mở phần mềm đồ họa: AI có thể dựng ngay sơ đồ Infographic trực quan để bạn chụp ảnh hoặc nhúng vào bài viết.",
+  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › infographic_onboarding.html', editorTitle:'🖼️ infographic_onboarding.html — Bản Xem Trước Infographic', editorHtml:'<div style=\"padding:18px;background:#fbf8f3;border:2px solid #fed7aa;border-radius:12px;\"><div style=\"font-size:11px;font-weight:800;color:#ea580c;letter-spacing:0.08em;\">TASKFLOW INFOGRAPHIC · HIỆU SUẤT HỘI NHẬP NHÂN SỰ</div><h3 style=\"color:#1c1917;margin:6px 0 14px 0;\">Rút ngắn thời gian bàn giao việc từ 14 ngày xuống đúng 3 ngày</h3><div style=\"display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;text-align:center;\"><div style=\"background:#fff;padding:12px;border-radius:8px;border:1px solid #fdba74;\"><div style=\"font-size:20px;font-weight:900;color:#ea580c;\">NGÀY 1</div><div style=\"font-size:12px;font-weight:700;margin-top:4px;\">Mở thư mục &amp; Đọc @COMPANY.md</div></div><div style=\"background:#fff;padding:12px;border-radius:8px;border:1px solid #fdba74;\"><div style=\"font-size:20px;font-weight:900;color:#ea580c;\">NGÀY 2</div><div style=\"font-size:12px;font-weight:700;margin-top:4px;\">Chạy lệnh mẫu trong .agent/workflows</div></div><div style=\"background:#ecfdf5;padding:12px;border-radius:8px;border:1px solid #6ee7b7;\"><div style=\"font-size:20px;font-weight:900;color:#15803d;\">NGÀY 3</div><div style=\"font-size:12px;font-weight:700;margin-top:4px;\">Tự chủ xuất báo cáo đầu tiên</div></div></div></div>'});",
+  "focus_selectors": [
+    "#editor-canvas"
+  ],
+  "cursor_selector": "#editor-canvas",
+  "cursor_label": "Infographic trực quan hiển thị ngay tại cột giữa",
+  "caption": "Và như anh chị thấy trên màn hình cột giữa: Không chỉ viết kịch bản tạo ảnh, trợ lý AI còn có thể dựng trực tiếp tấm <strong>Infographic 3 ngày hội nhập</strong> với màu sắc chuẩn thương hiệu để anh chị đưa thẳng vào bài đăng.",
+  "audio_src": "audio/lesson_19/b3.mp3",
+  "audio_duration": 10.32
+}

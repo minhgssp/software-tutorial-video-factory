@@ -1,17 +1,21 @@
 {
   "id": "b4",
-  "label": "4. Giao diện Antigravity 2.0",
-  "duration": 15.38,
-  "mode": "theory",
+  "label": "4. [Thực hành B1/3] Bối cảnh & Chọn mô hình mặc định",
+  "duration": 10.73,
   "pose": 4,
-  "slide": "s2",
-  "hl": [
-    "s2-c1"
-  ],
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 1/3 · Bối cảnh & Khởi tạo",
+  "pedagogy_title": "Bối cảnh: Chuẩn bị bàn làm việc cho dự án đầu tiên",
+  "pedagogy_note": "Bước 1: Mở hộp chọn Model ở đáy khung chat Antigravity 2.0 và kiểm tra mô hình Gemini 4 Argon Medium đã được tích chọn.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); closeSettingsModal(); resetAgy2NewConv(); kudoOpenModelPopover(); document.getElementById('agy2-chat-input').value = 'Xin chào, hãy kiểm tra trạng thái sẵn sàng của hệ thống.';",
   "focus_selectors": [
-    "#s2-c1"
+    "#agy2-model-pill",
+    "#kudo-model-popover"
   ],
-  "caption": "Anh chị lưu ý một thay đổi quan trọng: giao diện Agent Manager trước đây nay đã đổi tên thành Antigravity 2.0. Hiện tại Antigravity 2.0 và Antigravity IDE đã tách thành hai phần mềm độc lập, cần tải về và cài đặt riêng biệt trên máy tính.",
+  "cursor_selector": "#agy2-model-pill",
+  "cursor_label": "Bước 1: Bấm chọn Gemini 4 Argon Medium",
+  "caption": "Bây giờ chúng ta vào thực hành theo 3 bước. Trong bối cảnh bắt đầu ngày làm việc mới, <strong>Bước 1</strong> là anh chị bấm vào nút chọn mô hình ở đáy khung chat và xác nhận <strong>Gemini 4 Argon Medium</strong> đang được tích chọn.",
   "audio_src": "audio/lesson_01/b4.mp3",
-  "audio_duration": 14.73
+  "audio_duration": 10.08
 }

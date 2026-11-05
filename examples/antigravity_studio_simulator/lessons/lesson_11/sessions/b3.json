@@ -1,0 +1,22 @@
+{
+  "id": "b3",
+  "label": "3. [Lý thuyết Kiểu 2] Cơ chế hiển thị lệnh mới trong bảng gạch chéo (/)",
+  "duration": 11.05,
+  "pose": 3,
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Kích hoạt Lệnh Gạch chéo",
+  "pedagogy_title": "Tệp vừa lưu trong .agent/workflows/ lập tức xuất hiện khi gõ dấu /",
+  "pedagogy_note": "Không cần khởi động lại phần mềm: Lưu tệp xong là gõ dấu / gọi chạy được ngay.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); kudoOpenIdeSlashPopup();",
+  "focus_selectors": [
+    ".context-toolbar",
+    "#ide-popup-menu",
+    "#ide-chat-input"
+  ],
+  "cursor_selector": "#ide-popup-menu",
+  "cursor_label": "Bảng lệnh gạch chéo tự động cập nhật theo thư mục workflows",
+  "caption": "Ngay khi tệp quy trình được lưu vào thư mục <code>.agent/workflows/</code>, anh chị không cần khởi động lại phần mềm. Chỉ cần gõ dấu gạch chéo <code>/</code> ở ô chat là tên lệnh mới đã sẵn sàng để bấm chạy.",
+  "audio_src": "audio/lesson_11/b3.mp3",
+  "audio_duration": 10.4
+}

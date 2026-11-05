@@ -1,29 +1,64 @@
 <div>
-                <div class="k-slide-header">
-                  <span class="k-slide-kicker">Phần 5 · Thực hành dự án mẫu TaskFlow</span>
-                  <span class="k-slide-step">Cảnh 1 / 1 · Lý thuyết</span>
-                </div>
-                <div class="k-slide-h1">Cách khởi chạy bài thực hành /start-1-1 và tránh lỗi gõ thừa hậu tố</div>
-                <div class="k-slide-sub">Hiểu bối cảnh công ty giả lập TaskFlow Inc. (45 nhân sự) và cách chọn lệnh trong bảng gợi ý của thư mục .agent/workflows.</div>
-              </div>
-              <div class="k-grid-2">
-                <div class="k-card k-step-item" id="sl-c1" data-order="1">
-                  <span class="k-card-tag" style="background:#E0F2FE; color:#075985;">1 · Bối cảnh công ty giả lập TaskFlow</span>
-                  <h3>Đóng vai quản lý vận hành tại TaskFlow Inc.</h3>
-                  <ul>
-                    <li><strong>Quy mô 45 nhân sự:</strong> Bạn làm việc cùng <strong>Alex</strong> (CEO), <strong>Sarah</strong> (Giám đốc Nhân sự) và <strong>Mike</strong> (Giám đốc Kinh doanh) trên bộ dữ liệu thật.</li>
-                    <li><strong>Bài thực hành có hướng dẫn từng bước:</strong> Gõ lệnh <code>/start-1-1</code> vào khung chat để AI dẫn dắt bạn đi qua từng nhiệm vụ nhỏ.</li>
-                  </ul>
-                </div>
-                <div class="k-card k-step-item" id="sl-c2" data-order="2">
-                  <span class="k-card-tag" style="background:#FEE2E2; color:#991B1B;">2 · Lưu ý khi chọn bảng gợi ý lệnh /</span>
-                  <h3>Tránh biến lệnh /start-1-1 thành /start-1-1-1</h3>
-                  <ul>
-                    <li><strong>Nguyên nhân lỗi:</strong> Khi gõ <code>/start</code>, bảng gợi ý hiện ra <code>/start-1-1</code>. Nếu bạn bấm chọn hoặc nhấn phím Cách rồi lại gõ thêm <code>1-1</code>, ô chat sẽ bị lặp thành <code>/start-1-1-1</code>.</li>
-                    <li><strong>Cách thao tác chuẩn:</strong> Nhấp chuột chọn <code>/start-1-1</code> từ danh sách gợi ý rồi nhấn thẳng phím <kbd>Enter</kbd> để gửi đi.</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="k-callout k-step-item" id="sl-c3" data-order="3">
-                <span><strong>Mẹo kiểm tra nhanh:</strong> Quan sát nội dung trong ô nhập lệnh đã hiển thị đúng <code>/start-1-1</code> trước khi nhấn <kbd>Enter</kbd>.</span>
-              </div>
+      <div class="k-slide-header">
+        <span class="k-slide-kicker">CHƯƠNG 2 · BÀI 5 · LÝ THUYẾT KIỂU 1 ( NGUYÊN LÝ &amp; TRỰC QUAN )</span>
+        <span class="k-slide-step">Bố cục COMPARISON · Nhịp 1/6</span>
+      </div>
+      <div class="k-slide-h1">Vì sao dân văn phòng hiện đại ưu tiên định dạng .md và .csv khi làm việc với AI?</div>
+      <div class="k-slide-sub">Loại bỏ lớp vỏ định dạng nặng nề để AI đọc chính xác 100% nội dung, đồng thời vẫn hiển thị đẹp mắt nhờ Office Viewer.</div>
+    </div>
+    
+        <div class="k-visual-hero-box k-layout-comparison">
+          <div class="k-cmp-col k-cmp-before">
+            <div class="k-cmp-badge-old">❌ CÁCH LÀM CŨ · THỦ CÔNG RỜI RẠC</div>
+            <div class="k-cmp-main">FILE WORD / EXCEL NẶNG — Chứa hàng ngàn thẻ ẩn</div>
+            <div class="k-cmp-sub">AI dễ đọc sót ô gộp phức tạp</div>
+          </div>
+          <div class="k-cmp-arrow">➔</div>
+          <div class="k-cmp-col k-cmp-after">
+            <div class="k-cmp-badge-new">✅ CÁCH LÀM MỚI · TRỢ LÝ AI TRONG THƯ MỤC</div>
+            <div class="k-cmp-main">TỆP CHUẨN .MD & .CSV — 100% văn bản & số liệu tinh khiết</div>
+            <div class="k-cmp-sub">AI đọc tức thì, 0% lỗi định dạng</div>
+          </div>
+          <blockquote class="k-quote-box">
+            <span class="k-quote-mark">“</span>
+            <p>Tệp .md và .csv giống như nguyên liệu đã sơ chế sạch sẽ: Trợ lý AI hấp thụ được ngay trong tích tắc mà không bị vướng vào hàng ngàn thẻ định dạng ẩn của Word hay Excel.</p>
+          </blockquote>
+        </div>
+        
+    <div class="k-grid-3">
+      
+        <div class="k-card k-step-item k-hl" id="s1_c1" data-order="1">
+          <div class="k-card-top-row">
+            <span class="k-card-tag" style="background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;">ĐỊNH DẠNG .MD (MARKDOWN)</span>
+            <span class="k-illus-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EA580C" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M8 10h8M8 14h5"/></svg></span>
+          </div>
+          <h3>Văn bản có cấu trúc tiêu đề rõ ràng</h3>
+          <p>Chỉ dùng dấu # cho tiêu đề và dấu * cho gạch đầu dòng, giúp AI phân biệt rành mạch đâu là mục lớn, đâu là ý chi tiết.</p>
+          <div class="k-card-mini-note">📄 Chuẩn mực cho báo cáo, quy trình, hồ sơ</div>
+        </div>
+        
+        <div class="k-card k-step-item k-hl" id="s1_c2" data-order="2">
+          <div class="k-card-top-row">
+            <span class="k-card-tag" style="background:#E0F2FE; color:#0369A1; border:1px solid #7DD3FC;">ĐỊNH DẠNG .CSV (BẢNG TÍNH)</span>
+            <span class="k-illus-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
+          </div>
+          <h3>Bảng số liệu thuần túy không lỗi công thức</h3>
+          <p>Mỗi dòng là một bản ghi ngăn cách bằng dấu phẩy, giúp AI tính tổng, lọc trùng và phân tích hàng vạn dòng cực nhanh.</p>
+          <div class="k-card-mini-note">📊 Chuẩn mực cho danh sách, doanh thu, nhân sự</div>
+        </div>
+        
+        <div class="k-card k-step-item k-hl" id="s1_c3" data-order="3">
+          <div class="k-card-top-row">
+            <span class="k-card-tag" style="background:#DCFCE7; color:#15803D; border:1px solid #86EFAC;">TIỆN ÍCH OFFICE VIEWER</span>
+            <span class="k-illus-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+          </div>
+          <h3>Xem bảng .csv và văn bản .md như Office</h3>
+          <p>Cài tiện ích Office Viewer (của tác giả cweijan) trong mục Extensions để xem bảng kẻ ô rõ nét ngay trong IDE.</p>
+          <div class="k-card-mini-note">🧩 Không cần mở phần mềm Excel bên ngoài</div>
+        </div>
+        
+    </div>
+    <div class="k-callout k-step-item k-hl" id="s1_call" data-order="4">
+      <span>💡</span>
+      <div><strong>Quy tắc vàng Chương 2:</strong> Lưu trữ tri thức nội bộ bằng <code>.md</code> và <code>.csv</code> để AI xử lý tốt nhất; khi gửi đối tác mới xuất ra <code>.docx</code> hoặc <code>.xlsx</code>.</div>
+    </div>

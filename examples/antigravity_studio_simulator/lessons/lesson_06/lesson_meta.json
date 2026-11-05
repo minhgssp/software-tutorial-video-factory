@@ -1,11 +1,19 @@
 {
   "lesson_slug": "lesson_06",
-  "filename": "lesson_06_giai_nen_zip_open_folder_reveal_explorer.html",
+  "filename": "lesson_06.html",
+  "legacy_alias": "",
   "code": "BÀI 6",
-  "title": "Quản lý Học liệu & Đồng bộ Tệp tin",
-  "short_title": "Quản lý Học liệu & Tệp tin",
-  "pill_label": "Bài 6 · Quản lý Học liệu",
-  "description": "Nguyên tắc giải nén học liệu .zip trước khi mở, cơ chế đồng bộ 1-1 với ổ cứng, tránh kéo nhầm thư mục và đối chiếu bằng Reveal in File Explorer.",
+  "chapter_number": 2,
+  "chapter_code": "CHƯƠNG 2",
+  "chapter_title": "Định dạng Dữ liệu, Ký hiệu @ & Hồ sơ Cá nhân hóa",
+  "title": "Đính kèm Tệp Bằng @, Giao việc Giọng nói (Ctrl+M) & Trích dẫn (Ctrl+L)",
+  "short_title": "Đính kèm @, Ctrl+M & Ctrl+L",
+  "pill_label": "Bài 6 · Ký hiệu @, Ctrl+M, Ctrl+L",
+  "description": "Làm chủ bộ 3 kỹ năng giao việc tốc độ cao: Gõ @ để đính kèm chính xác tệp dữ liệu trong thư mục, nhấn Ctrl+M để đọc yêu cầu bằng giọng nói tiếng Việt và bôi đen nhấn Ctrl+L để trích dẫn đúng dòng.",
+  "prerequisites": "Bài 5 (Đã hiểu cấu trúc tệp .md, .csv và chế độ đánh số dòng trong trình soạn thảo).",
+  "dependents": "Bài 7 (Gọi @troly.md), Bài 8 (Gọi @ban_giao_cong_viec.md), Bài 14 (Phân tích @sales_data.csv).",
+  "placement_risk": "0% Rủi ro — Học viên đã mở thư mục (Bài 2) và hiểu tệp .md/.csv (Bài 5) nên khi gõ @ sẽ hiểu ngay các tệp trong danh sách gợi ý từ đâu mà có.",
+  "continuity_bridge": "Sau khi biết dùng dấu @ để đính kèm tài liệu dự án ở Bài 6, Bài 7 sẽ hướng dẫn tạo tệp hồ sơ cá nhân @troly.md để AI luôn nhớ phong cách làm việc của riêng bạn.",
   "slide_ids": [
     "s1"
   ],
@@ -18,6 +26,6 @@
     "b6"
   ],
   "beats_count": 6,
-  "total_duration_sec": 64.1,
-  "duration_formatted": "01:04"
+  "total_duration_sec": 72.9,
+  "duration_formatted": "01:13"
 }

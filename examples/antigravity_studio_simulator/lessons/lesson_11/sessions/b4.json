@@ -1,0 +1,21 @@
+{
+  "id": "b4",
+  "label": "4. [Thực hành B1/3] Bối cảnh & Yêu cầu AI tạo workflow /tong-hop-tuan",
+  "duration": 12.09,
+  "pose": 4,
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 1/3 · Khởi tạo Workflow mới",
+  "pedagogy_title": "Bối cảnh: Đóng gói quy trình 3 bước tổng hợp doanh thu và soạn email sáng thứ Hai",
+  "pedagogy_note": "Bước 1: Nhập yêu cầu vào ô chat để AI tự tạo tệp .agent/workflows/tong-hop-tuan.md.",
+  "onEnter": "kudoSimScene({surface:'ide', file:'start-1-1.md', clearChat:true, chatInput:'Hãy tạo giúp tôi một quy trình tại .agent/workflows/tong-hop-tuan.md gồm 3 bước: (1) Đọc @sales_data.csv, (2) Áp dụng kỹ năng bao-cao-tuan, (3) Xuất tệp bao_cao_thu_hai.md'});",
+  "focus_selectors": [
+    "#ide-chat-input",
+    "#ide-send-btn"
+  ],
+  "cursor_selector": "#ide-send-btn",
+  "cursor_label": "Bước 1: Yêu cầu AI tạo tệp workflow tong-hop-tuan.md",
+  "caption": "Chúng ta vào thực hành 3 bước đóng gói quy trình tự động. Ở <strong>Bước 1</strong>, anh chị gõ vào ô chat yêu cầu trợ lý tạo tệp <code>.agent/workflows/tong-hop-tuan.md</code> gồm 3 bước xử lý doanh thu sáng thứ Hai.",
+  "audio_src": "audio/lesson_11/b4.mp3",
+  "audio_duration": 11.44
+}

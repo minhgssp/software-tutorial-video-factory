@@ -1,17 +1,18 @@
 {
   "id": "b1",
-  "label": "1. Giải nén .zip trước khi học",
-  "duration": 10.17,
-  "mode": "theory",
+  "label": "1. [Lý thuyết Kiểu 1] Bộ ba kỹ năng @, Ctrl+M và Ctrl+L",
+  "duration": 13.21,
   "pose": 1,
+  "mode": "theory",
+  "pedagogy_type": "theory_type_1",
   "slide": "s1",
   "hl": [
-    "sl-c1"
+    "s1_c1",
+    "s1_c2",
+    "s1_c3",
+    "s1_call"
   ],
-  "focus_selectors": [
-    "#sl-c1"
-  ],
-  "caption": "Khi tải bộ học liệu hoặc thư mục dự án dạng nén <code>.zip</code> về máy tính, anh chị nhớ nhấp chuột phải chọn Extract All để giải nén thành thư mục thật trên ổ đĩa trước khi bấm Open Folder.",
+  "caption": "Trong <strong>Bài 6</strong>, chúng ta làm chủ bộ ba kỹ năng giao việc nhanh và chuẩn xác nhất cho dân văn phòng: Dùng ký hiệu <code>@</code> để đính kèm tệp, dùng <kbd>Ctrl + M</kbd> để giao việc bằng giọng nói và dùng <kbd>Ctrl + L</kbd> để trích dẫn đúng dòng cần sửa.",
   "audio_src": "audio/lesson_06/b1.mp3",
-  "audio_duration": 9.52
+  "audio_duration": 12.56
 }

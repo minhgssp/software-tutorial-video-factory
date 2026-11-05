@@ -1,17 +1,18 @@
 {
   "id": "b1",
-  "label": "1. Bối cảnh dự án mẫu TaskFlow",
-  "duration": 13.13,
-  "mode": "theory",
+  "label": "1. [Lý thuyết Kiểu 1] Đối sánh .md, .csv & tiện ích Office Viewer",
+  "duration": 15.38,
   "pose": 1,
+  "mode": "theory",
+  "pedagogy_type": "theory_type_1",
   "slide": "s1",
   "hl": [
-    "sl-c1"
+    "s1_c1",
+    "s1_c2",
+    "s1_c3",
+    "s1_call"
   ],
-  "focus_selectors": [
-    "#sl-c1"
-  ],
-  "caption": "Để giúp anh chị thực hành sát thực tế ngay từ buổi đầu, giáo trình đi kèm bộ hồ sơ công ty giả lập TaskFlow Inc. gồm 45 nhân sự. Bạn chỉ cần chạy lệnh <code>/start-1-1</code> để bắt đầu bài thực hành có hướng dẫn từng bước.",
+  "caption": "Chào mừng anh chị bước vào <strong>Chương 2</strong>. Khung đối sánh trên màn hình giải thích vì sao khi làm việc với trợ lý AI, chúng ta ưu tiên dùng tệp văn bản <code>.md</code> và bảng số liệu <code>.csv</code>: Chúng cực nhẹ, chuẩn xác và hiển thị đẹp như Word, Excel nhờ tiện ích <strong>Office Viewer</strong>.",
   "audio_src": "audio/lesson_05/b1.mp3",
-  "audio_duration": 12.48
+  "audio_duration": 14.73
 }

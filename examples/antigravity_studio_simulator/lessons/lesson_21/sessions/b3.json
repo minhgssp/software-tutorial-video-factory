@@ -1,0 +1,22 @@
+{
+  "id": "b3",
+  "label": "3. [Lý thuyết Kiểu 2] Cách kết hợp khuôn mẫu có sẵn với lệnh /grill-me",
+  "duration": 11.53,
+  "pose": 3,
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Phỏng vấn Theo Khuôn 7 Bước",
+  "pedagogy_title": "AI dựa vào 7 bước trong tệp mẫu để đặt câu hỏi phỏng vấn người dùng",
+  "pedagogy_note": "Nhờ có tệp mẫu đính kèm bằng @, lệnh /grill-me không hỏi lan man mà hỏi xoáy đúng 7 mảnh ghép còn thiếu của dự án Giày Bã Mía.",
+  "onEnter": "kudoRunGrillAndPlanDemo();",
+  "focus_selectors": [
+    "#editor-canvas",
+    "#ide-chat-messages",
+    "#ide-chat-input"
+  ],
+  "cursor_selector": "#ide-chat-messages",
+  "cursor_label": "AI phỏng vấn theo đúng khung 7 bước chiến lược",
+  "caption": "Khi anh chị đính kèm tệp quy trình 7 bước cùng lệnh <code>/grill-me</code> ở cột phải, trợ lý AI sẽ đóng vai Giám đốc Chiến lược hỏi anh chị từng thông số của đôi giày bã mía để lấp đầy cả 7 bước mà không bị sót mục nào.",
+  "audio_src": "audio/lesson_21/b3.mp3",
+  "audio_duration": 10.88
+}

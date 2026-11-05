@@ -1,0 +1,18 @@
+{
+  "id": "b1",
+  "label": "1. [Lý thuyết Kiểu 1] Ẩn dụ Căn bếp: Rules, Skills và Workflows",
+  "duration": 14.8,
+  "pose": 1,
+  "mode": "theory",
+  "pedagogy_type": "theory_type_1",
+  "slide": "s1",
+  "hl": [
+    "s1_c1",
+    "s1_c2",
+    "s1_c3",
+    "s1_call"
+  ],
+  "caption": "Chào mừng anh chị đến với <strong>Chương 3</strong> — trái tim của khóa học. Hãy hình dung thư mục <code>.agent</code> giống như một căn bếp nhà hàng 5 sao gồm 3 ngăn: <strong>Rules</strong> là nội quy vệ sinh luôn phải tuân thủ, <strong>Skills</strong> là sổ công thức nấu từng món, và <strong>Workflows</strong> là thực đơn bấm nút chạy tự động.",
+  "audio_src": "audio/lesson_09/b1.mp3",
+  "audio_duration": 14.15
+}

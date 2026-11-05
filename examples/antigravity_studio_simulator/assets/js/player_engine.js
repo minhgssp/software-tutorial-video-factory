@@ -266,9 +266,19 @@ function kudoApplyBeat(idx) {
   const beat = KUDO_SPEC.beats[idx];
   window.kudoActiveAnchorBeat = beat;
 
-  document.getElementById("kudo-lesson-code").textContent = KUDO_SPEC.code;
+  document.getElementById("kudo-lesson-code").textContent = (KUDO_SPEC.chapter_code ? KUDO_SPEC.chapter_code + " · " : "") + KUDO_SPEC.code;
   document.getElementById("kudo-lesson-title").textContent = KUDO_SPEC.title;
   document.getElementById("kudo-scene-indicator").textContent = `Phần ${idx + 1}/${KUDO_SPEC.beats.length}`;
+
+  const depBox = document.getElementById("ksb-dep-box");
+  if (depBox) {
+    if (KUDO_SPEC.prerequisites || KUDO_SPEC.dependents) {
+      depBox.style.display = "block";
+      depBox.innerHTML = `<div><strong>Tiên quyết:</strong> ${KUDO_SPEC.prerequisites || "Không"}</div><div style="margin-top:2px;"><strong>Mở đường:</strong> ${KUDO_SPEC.dependents || "Thực hành nâng cao"}</div>`;
+    } else {
+      depBox.style.display = "none";
+    }
+  }
 
   document.getElementById("kudo-subtitle-box").innerHTML = `<span class="sub-speaker">▶</span>${beat.caption}`;
   kudoSetAvatarPose(beat.pose || ((idx % 8) + 1));
@@ -278,6 +288,7 @@ function kudoApplyBeat(idx) {
   const rig = document.getElementById("kudo-avatar-rig");
   const spot = document.getElementById("kudo-spotlight");
   const cur = document.getElementById("kudo-cursor");
+  const pCard = document.getElementById("kudo-stage-pedagogy-card");
 
   rig.classList.toggle("speaking", kudoIsPlaying);
   kudoSyncVoiceForBeat(beat, true);
@@ -287,6 +298,8 @@ function kudoApplyBeat(idx) {
     stage.classList.remove("hidden-stage");
     spot.classList.remove("visible");
     cur.classList.remove("visible");
+    if (pCard) pCard.classList.remove("visible");
+
 
     const slideHtml = KUDO_SPEC.slides[beat.slide] || "";
     slideBox.innerHTML = slideHtml;
@@ -316,6 +329,19 @@ function kudoApplyBeat(idx) {
     });
   } else {
     stage.classList.add("hidden-stage");
+    if (pCard) {
+      if (beat.pedagogy_title || beat.pedagogy_note) {
+        pCard.classList.toggle("practice-mode", beat.pedagogy_type === "practice_step");
+        pCard.innerHTML = `
+          <div class="k-spc-badge">${beat.pedagogy_badge || (beat.pedagogy_type === "practice_step" ? "🛠️ Hướng dẫn Thực hành Từng bước" : "📘 Lý thuyết Kiểu 2 · Gắn màn hình")}</div>
+          <div class="k-spc-title">${beat.pedagogy_title || beat.label}</div>
+          <div class="k-spc-note">${beat.pedagogy_note || ""}</div>
+        `;
+        pCard.classList.add("visible");
+      } else {
+        pCard.classList.remove("visible");
+      }
+    }
 
     if (beat.onEnter) {
       try {

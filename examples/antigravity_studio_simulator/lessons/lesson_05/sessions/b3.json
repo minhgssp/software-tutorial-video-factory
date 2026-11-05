@@ -1,19 +1,22 @@
 {
   "id": "b3",
-  "label": "3. Mở tài liệu 1.1_Welcome.md",
-  "duration": 11.13,
+  "label": "3. [Lý thuyết Kiểu 2] Kho tiện ích Extensions và Office Viewer",
+  "duration": 11.29,
+  "pose": 3,
   "mode": "sim",
-  "pose": 5,
-  "surface": "ide",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Kho Tiện ích Extensions",
+  "pedagogy_title": "Cài đặt tiện ích mở rộng trong Extensions (Ctrl + Shift + X)",
+  "pedagogy_note": "Tìm từ khóa 'Office Viewer' (tác giả cweijan) và 'Muty PPT Viewer' để xem trực tiếp bảng CSV, Excel, Word và PowerPoint.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); openIdeExtensionsView();",
   "focus_selectors": [
-    "#ide-left-sidebar",
+    "#act-btn-extensions",
+    "#ide-sb-extensions-view",
     "#editor-canvas"
   ],
-  "focus_pad": 6,
-  "cursor_selector": "[data-file='1.1_Welcome.md']",
-  "cursor_label": "Mở 1.1_Welcome.md trong Module_1_Fundamentals",
-  "caption": "Trên Antigravity IDE, khi mở thư mục học liệu <code>antigravity_course_vn</code>, bạn bấm vào tệp <code>1.1_Welcome.md</code> ở cột trái để đọc hướng dẫn mở đầu của bài thực hành TaskFlow.",
-  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); currentWorkspaceTreeMode='antigravity_course_vn'; renderFileTree(); setEditorMode('wysiwyg'); openFileInEditor('1.1_Welcome.md');",
+  "cursor_selector": "#ide-sb-extensions-view .ext-list-item.selected",
+  "cursor_label": "Tiện ích Office Viewer (cweijan) trong Extensions",
+  "caption": "Nếu máy tính mới cài đặt chưa có sẵn chế độ xem bảng đẹp, anh chị chỉ cần nhìn sang thanh biểu tượng ngoài cùng bên trái, bấm vào mục <strong>Extensions</strong> có hình bốn ô vuông và cài đặt tiện ích <strong>Office Viewer</strong>.",
   "audio_src": "audio/lesson_05/b3.mp3",
-  "audio_duration": 10.48
+  "audio_duration": 10.64
 }

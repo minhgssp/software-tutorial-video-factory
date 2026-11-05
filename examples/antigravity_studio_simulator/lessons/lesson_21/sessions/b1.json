@@ -1,0 +1,18 @@
+{
+  "id": "b1",
+  "label": "1. [Lý thuyết Kiểu 1] Lộ trình 3 giai đoạn nhân bản chiến lược 7 bước",
+  "duration": 13.81,
+  "pose": 1,
+  "mode": "theory",
+  "pedagogy_type": "theory_type_1",
+  "slide": "s1",
+  "hl": [
+    "s1_c1",
+    "s1_c2",
+    "s1_c3",
+    "s1_call"
+  ],
+  "caption": "Chào mừng anh chị bước vào <strong>Chương 6</strong> với 4 tình huống thực chiến toàn diện. Ở <strong>Bài 21 — Tình huống 1</strong>, chúng ta giải bài toán lập kế hoạch cho một thương hiệu mới tinh là <strong>Giày Bã Mía</strong> bằng cách rút trích bộ khung 7 bước từ dự án thành công mẫu <strong>5balance</strong>.",
+  "audio_src": "audio/lesson_21/b1.mp3",
+  "audio_duration": 13.16
+}

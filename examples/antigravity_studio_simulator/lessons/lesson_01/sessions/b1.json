@@ -1,17 +1,18 @@
 {
   "id": "b1",
-  "label": "1. Chat Web khác gì Trợ lý AI?",
-  "duration": 14.14,
-  "mode": "theory",
+  "label": "1. [Lý thuyết Kiểu 1] Đối sánh Chat Web vs. Trợ lý AI trên máy",
+  "duration": 13.64,
   "pose": 1,
+  "mode": "theory",
+  "pedagogy_type": "theory_type_1",
   "slide": "s1",
   "hl": [
-    "sl-c1"
+    "s1_c1",
+    "s1_c2",
+    "s1_c3",
+    "s1_call"
   ],
-  "focus_selectors": [
-    "#sl-c1"
-  ],
-  "caption": "Chào mừng anh chị đến với khóa học Antigravity Basic. Khi dùng ChatGPT trên trình duyệt web, chúng ta giống như đang gọi điện cho một tư vấn viên ở xa: họ không nhìn thấy thư mục hồ sơ trên máy tính của bạn, khiến ta phải tải tệp lên và sao chép thủ công liên tục.",
+  "caption": "Chào mừng anh chị đến với khóa học <strong>Antigravity Basic</strong>. Nhìn vào khung đối sánh trên màn hình, khác biệt lớn nhất là thay vì tải tệp lên trình duyệt <strong>ChatGPT</strong> mỗi ngày, chúng ta đưa trợ lý AI vào làm việc trực tiếp ngay trong thư mục máy tính.",
   "audio_src": "audio/lesson_01/b1.mp3",
-  "audio_duration": 13.49
+  "audio_duration": 12.99
 }

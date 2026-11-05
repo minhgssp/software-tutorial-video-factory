@@ -1,19 +1,22 @@
 {
   "id": "b2",
-  "label": "2. Phím tắt khôi phục giao diện",
-  "duration": 10.09,
-  "mode": "theory",
+  "label": "2. [Lý thuyết Kiểu 2] Vị trí cài đặt quyền Turbo trong Settings",
+  "duration": 11.29,
   "pose": 2,
-  "slide": "s1",
-  "hl": [
-    "sl-c2",
-    "sl-c3"
-  ],
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Phân quyền This Computer",
+  "pedagogy_title": "Bảng thiết lập quyền tự chủ (Settings -> General -> This Computer)",
+  "pedagogy_note": "4 tùy chọn: Request Review, Default, Auto (Preview) và Turbo (Run all commands without restrictions).",
+  "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); openSettingsModal('general'); kudoOpenTurboPopover();",
   "focus_selectors": [
-    "#sl-c2",
-    "#sl-c3"
+    "#snav-general",
+    "#set-pill-this-computer",
+    "#kudo-turbo-popover"
   ],
-  "caption": "Nếu lỡ tay làm ẩn cột cây thư mục, bạn chỉ cần nhấn <kbd>Ctrl + B</kbd> để mở lại. Và bất cứ khi nào quên thao tác, hãy gõ câu hỏi bằng tiếng Việt tự nhiên ngay tại khung chat bên phải.",
+  "cursor_selector": "#ktp-turbo",
+  "cursor_label": "Chế độ Turbo: Chạy liền mạch không gián đoạn",
+  "caption": "Trên màn hình cài đặt <strong>Settings</strong> mục <strong>General</strong>, anh chị nhìn vào dòng <strong>This Computer</strong>. Khi chọn <strong>Turbo</strong>, trợ lý sẽ tự động đọc và tạo tệp báo cáo trong thư mục dự án mà không làm gián đoạn mạch làm việc.",
   "audio_src": "audio/lesson_04/b2.mp3",
-  "audio_duration": 9.44
+  "audio_duration": 10.64
 }

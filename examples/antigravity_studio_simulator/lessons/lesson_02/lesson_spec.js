@@ -1,214 +1,142 @@
 window.KUDO_SPEC = {
+  "filename": "lesson_02.html",
+  "legacy_alias": "lesson_06_giai_nen_zip_open_folder_reveal_explorer.html",
   "code": "BÀI 2",
-  "title": "Thiết lập Dự án & Chế độ Turbo",
-  "short_title": "Mở Dự án & Chế độ Turbo",
-  "pill_label": "Bài 2 · Dự án & Turbo",
-  "filename": "lesson_02_turbo_mode_and_workspace.html",
-  "description": "Nguyên tắc mở thư mục dự án, ưu tiên định dạng .md và .csv, cài đặt Office Viewer, bật quyền tự chủ Turbo và giao việc bằng giọng nói.",
+  "chapter_number": 1,
+  "chapter_code": "CHƯƠNG 1",
+  "chapter_title": "Khởi động Chuẩn & Làm chủ Giao diện",
+  "title": "Chuẩn bị Học liệu: Giải nén .zip, Mở Thư mục & An toàn Ổ cứng",
+  "short_title": "Giải nén .zip & Mở Thư mục",
+  "pill_label": "Bài 2 · Giải nén & Open Folder",
+  "description": "Quy tắc bắt buộc giải nén tệp học liệu .zip trước khi mở, thao tác File -> Open Folder chuẩn xác, nguyên tắc không mở toàn bộ ổ C: và kiểm tra đồng bộ bằng Reveal in File Explorer.",
+  "prerequisites": "Bài 1 (Đã mở cửa sổ Antigravity IDE ở màn hình chào mừng Welcome Screen).",
+  "dependents": "Bài 3 (Làm chủ giao diện 3 cột trên thư mục vừa mở), Bài 4 (Gọi lệnh /start-1-1 từ thư mục dự án), Bài 5 (Đọc tệp .md/.csv).",
+  "placement_risk": "0% Rủi ro — Đặt ngay ở Bài 2 để học viên giải nén và mở đúng thư mục antigravity_course_vn trước khi thực hiện bất kỳ thao tác tệp hay lệnh gạch chéo nào.",
+  "continuity_bridge": "Sau khi mở thành công thư mục antigravity_course_vn ở Bài 2, Bài 3 sẽ hướng dẫn điều khiển 3 cột giao diện và các phím cứu hộ khi lỡ tay bấm nhầm.",
   "slides": {
-    "s1": "<div>\n                <div class=\"k-slide-header\">\n                  <span class=\"k-slide-kicker\">Phần 2 · Thiết lập không gian làm việc</span>\n                  <span class=\"k-slide-step\">Cảnh 1 / 2 · Lý thuyết</span>\n                </div>\n                <div class=\"k-slide-h1\">Quy tắc mở cả thư mục dự án và ưu thế của định dạng Markdown, CSV</div>\n                <div class=\"k-slide-sub\">Tránh sai lầm mở từng tệp rời rạc khiến trợ lý AI không nhìn thấy các tài liệu liên quan trong dự án.</div>\n              </div>\n              <div class=\"k-grid-2\">\n                <div class=\"k-card k-step-item\" id=\"sl-c1\" data-order=\"1\">\n                  <span class=\"k-card-tag\" style=\"background:#DBEAFE; color:#1E40AF;\">Quy tắc số 1 · Open Folder</span>\n                  <h3>Luôn mở cả thư mục dự án</h3>\n                  <ul>\n                    <li><strong>Không dùng Open File lẻ tẻ:</strong> Mở một tệp đơn lẻ giống như đưa cho trợ lý đúng một tờ giấy rời, họ không biết dữ liệu hay quy tắc nằm ở đâu.</li>\n                    <li><strong>Luôn chọn File -> Open Folder:</strong> Đưa toàn bộ thư mục <code>antigravity_course_vn</code> vào phần mềm để AI tự động đối chiếu các tệp với nhau.</li>\n                  </ul>\n                </div>\n                <div class=\"k-card k-step-item\" id=\"sl-c2\" data-order=\"2\">\n                  <span class=\"k-card-tag\" style=\"background:#FCE7F3; color:#9D174D;\">Quy tắc số 2 · Markdown và CSV</span>\n                  <h3>Tại sao ưu tiên .md và .csv cho dữ liệu nguồn?</h3>\n                  <ul>\n                    <li><strong>Markdown (<code>.md</code>) cho văn bản:</strong> Nhẹ, phân cấp tiêu đề rõ ràng bằng dấu <code>#</code>, giúp AI đọc hiểu cấu trúc nhanh và chính xác.</li>\n                    <li><strong>CSV (<code>.csv</code>) cho bảng số liệu:</strong> Bảng dữ liệu thuần túy ngăn cách bằng dấu phẩy. Nhờ tiện ích <strong>Office Viewer</strong>, bạn vẫn xem và sửa bảng kẻ ô trực quan ngay trong IDE.</li>\n                  </ul>\n                </div>\n              </div>\n              <div class=\"k-callout k-step-item\" id=\"sl-c3\" data-order=\"3\">\n                <span><strong>Mẹo thực hành:</strong> Cài đặt tiện ích <strong>Office Viewer</strong> trong mục Extensions của Antigravity IDE để xem tệp <code>.md</code> và <code>.csv</code> trực quan như Google Docs và Excel.</span>\n              </div>",
-    "s2": "<div>\n                <div class=\"k-slide-header\">\n                  <span class=\"k-slide-kicker\">Phần 2 · Tăng tốc thao tác hàng ngày</span>\n                  <span class=\"k-slide-step\">Cảnh 2 / 2 · Lý thuyết</span>\n                </div>\n                <div class=\"k-slide-h1\">Bật quyền tự chủ Turbo và hai phím tắt giao việc nhanh</div>\n                <div class=\"k-slide-sub\">Giảm thao tác bấm xác nhận thủ công và kết hợp nhập liệu bằng giọng nói tiếng Việt.</div>\n              </div>\n              <div class=\"k-grid-3\">\n                <div class=\"k-card k-step-item\" id=\"s2-c1\" data-order=\"1\">\n                  <span class=\"k-card-tag\" style=\"background:#DCFCE7; color:#166534;\">1 · Permissions = Turbo</span>\n                  <h3>Ủy quyền tự động thực thi</h3>\n                  <p>Vào <strong>Settings -> General -> This Computer</strong> và chuyển sang <strong>Turbo</strong> để AI tự tạo tệp, sửa báo cáo và chạy công cụ mà không dừng lại chờ bấm duyệt từng bước nhỏ.</p>\n                </div>\n                <div class=\"k-card k-step-item\" id=\"s2-c2\" data-order=\"2\">\n                  <span class=\"k-card-tag\" style=\"background:#FEF3C7; color:#92400E;\">2 · Voice Input (Ctrl + M)</span>\n                  <h3>Giao việc bằng giọng nói</h3>\n                  <p>Nhấn tổ hợp phím <kbd>Ctrl + M</kbd> hoặc <kbd>Windows + H</kbd> để đọc trực tiếp yêu cầu bằng tiếng Việt nhanh gấp ba lần tốc độ gõ bàn phím.</p>\n                </div>\n                <div class=\"k-card k-step-item\" id=\"s2-c3\" data-order=\"3\">\n                  <span class=\"k-card-tag\" style=\"background:#E0E7FF; color:#3730A3;\">3 · Quote in Chat (Ctrl + L)</span>\n                  <h3>Trích dẫn đoạn văn bôi đen</h3>\n                  <p>Khi đang đọc tài liệu, chỉ cần bôi đen đoạn văn cần sửa rồi nhấn <kbd>Ctrl + L</kbd>, đoạn đó sẽ được đưa thẳng vào khung chat kèm vị trí dòng chính xác.</p>\n                </div>\n              </div>\n              <div class=\"k-callout k-step-item\" id=\"s2-c4\" data-order=\"4\">\n                <span>Hãy quan sát đầy đủ thao tác thực tế ngay trên màn hình: mở thư mục <code>antigravity_course_vn</code>, xem bảng <code>sales_data.csv</code>, vào Settings bật <strong>Turbo</strong>, thu giọng nói <kbd>Ctrl + M</kbd> và trích dẫn <kbd>Ctrl + L</kbd>.</span>\n              </div>"
+    "s1": "<div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 1 · BÀI 2 · LÝ THUYẾT KIỂU 1 ( NGUYÊN LÝ &amp; TRỰC QUAN )</span>\n        <span class=\"k-slide-step\">Bố cục FLOWCHART · Nhịp 1/6</span>\n      </div>\n      <div class=\"k-slide-h1\">Ba nguyên tắc an toàn ổ cứng: Giải nén .zip, Mở đúng thư mục và Đồng bộ 1-1</div>\n      <div class=\"k-slide-sub\">Tránh 100% lỗi mất quyền ghi tệp hoặc làm treo máy tính ngay từ buổi học đầu tiên.</div>\n    </div>\n    \n        <div class=\"k-visual-hero-box k-layout-flowchart\">\n          <div class=\"k-viz-header\">\n            <span class=\"k-viz-badge\">📊 SƠ ĐỒ LUỒNG NGUYÊN LÝ</span>\n            <span class=\"k-viz-title\">Quy trình 3 bước nạp thư mục dự án chuẩn xác vào Antigravity IDE</span>\n          </div>\n          <svg class=\"k-flow-svg\" viewBox=\"0 0 860 96\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Quy trình 3 bước nạp thư mục dự án chuẩn xác vào Antigravity IDE\">\n            <path d=\"M262 48 H298\" stroke=\"#EA580C\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n            <polygon points=\"295,42 307,48 295,54\" fill=\"#EA580C\"/>\n            <path d=\"M562 48 H598\" stroke=\"#15803D\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n            <polygon points=\"595,42 607,48 595,54\" fill=\"#15803D\"/>\n            <rect x=\"8\" y=\"8\" width=\"252\" height=\"80\" rx=\"14\" fill=\"#FFF7ED\" stroke=\"#FDBA74\" stroke-width=\"2\"/>\n            <text x=\"134\" y=\"34\" text-anchor=\"middle\" fill=\"#9A3412\" font-size=\"13\" font-weight=\"800\">1. GIẢI NÉN .ZIP</text>\n            <text x=\"134\" y=\"56\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"14\" font-weight=\"700\">Chuột phải -> Extract All</text>\n            <text x=\"134\" y=\"76\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"12\">Tạo thư mục thật trên ổ cứng</text>\n            <rect x=\"308\" y=\"8\" width=\"252\" height=\"80\" rx=\"14\" fill=\"#FEF3C7\" stroke=\"#F59E0B\" stroke-width=\"2\"/>\n            <text x=\"434\" y=\"34\" text-anchor=\"middle\" fill=\"#B45309\" font-size=\"13\" font-weight=\"800\">2. FILE -> OPEN FOLDER</text>\n            <text x=\"434\" y=\"56\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"14\" font-weight=\"700\">Chọn antigravity_course_vn</text>\n            <text x=\"434\" y=\"76\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"12\">Cấm mở cả ổ đĩa C:\\ hoặc D:\\</text>\n            <rect x=\"608\" y=\"8\" width=\"244\" height=\"80\" rx=\"14\" fill=\"#DCFCE7\" stroke=\"#4ADE80\" stroke-width=\"2\"/>\n            <text x=\"730\" y=\"34\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"13\" font-weight=\"800\">3. ĐỒNG BỘ 1-1</text>\n            <text x=\"730\" y=\"56\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"14\" font-weight=\"700\">Reveal in File Explorer</text>\n            <text x=\"730\" y=\"76\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"12\">Tệp trong IDE chính là tệp trên máy</text>\n          </svg>\n        </div>\n        \n    <div class=\"k-grid-3\">\n      \n        <div class=\"k-card k-step-item k-hl\" id=\"s1_c1\" data-order=\"1\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">NGUYÊN TẮC 1 · GIẢI NÉN</span>\n            <span class=\"k-illus-badge\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#EA580C\" stroke-width=\"2\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"3\"/><path d=\"M8 10h8M8 14h5\"/></svg></span>\n          </div>\n          <h3>Luôn Extract All tệp .zip trước</h3>\n          <p>Nếu mở trực tiếp bên trong tệp nén .zip, Windows chỉ tạo thư mục tạm chỉ đọc khiến trợ lý AI không thể lưu kết quả.</p>\n          <div class=\"k-card-mini-note\">📦 Giải nén ra thư mục thường trước khi học</div>\n        </div>\n        \n        <div class=\"k-card k-step-item k-hl\" id=\"s1_c2\" data-order=\"2\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#E0F2FE; color:#0369A1; border:1px solid #7DD3FC;\">NGUYÊN TẮC 2 · OPEN FOLDER</span>\n            <span class=\"k-illus-badge\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#0284C7\" stroke-width=\"2\"><path d=\"M12 2L2 7l10 5 10-5-10-5z\"/><path d=\"M2 17l10 5 10-5M2 12l10 5 10-5\"/></svg></span>\n          </div>\n          <h3>Mở trọn thư mục, không mở tệp lẻ</h3>\n          <p>Luôn vào File chọn Open Folder và trỏ đúng vào thư mục dự án con (như antigravity_course_vn), không mở cả ổ cứng.</p>\n          <div class=\"k-card-mini-note\">📂 Giúp AI nhìn thấy toàn bộ tài liệu liên quan</div>\n        </div>\n        \n        <div class=\"k-card k-step-item k-hl\" id=\"s1_c3\" data-order=\"3\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#DCFCE7; color:#15803D; border:1px solid #86EFAC;\">NGUYÊN TẮC 3 · ĐỒNG BỘ 1-1</span>\n            <span class=\"k-illus-badge\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#16A34A\" stroke-width=\"2\"><path d=\"M22 11.08V12a10 10 0 1 1-5.93-9.14\"/><polyline points=\"22 4 12 14.01 9 11.01\"/></svg></span>\n          </div>\n          <h3>Tệp trên IDE là tệp thật trên máy</h3>\n          <p>Mọi tệp thêm, sửa, xóa trong cột Explorer của phần mềm đều phản chiếu tức thì ngoài Windows File Explorer.</p>\n          <div class=\"k-card-mini-note\">🔍 Kiểm chứng bằng Reveal in File Explorer</div>\n        </div>\n        \n    </div>\n    <div class=\"k-callout k-step-item k-hl\" id=\"s1_call\" data-order=\"4\">\n      <span>💡</span>\n      <div><strong>Cảnh báo an toàn:</strong> Tuyệt đối không chọn <strong>Open Folder</strong> vào toàn bộ ổ đĩa <code>C:\\</code> hay <code>Desktop</code> chứa hàng vạn tệp cá nhân.</div>\n    </div>"
   },
   "beats": [
     {
       "id": "b1",
-      "label": "1. Nguyên tắc mở thư mục dự án",
-      "duration": 9.85,
-      "mode": "theory",
+      "label": "1. [Lý thuyết Kiểu 1] 3 nguyên tắc Giải nén, Open Folder & Đồng bộ",
+      "duration": 14.65,
       "pose": 1,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
       "slide": "s1",
       "hl": [
-        "sl-c1"
+        "s1_c1",
+        "s1_c2",
+        "s1_c3",
+        "s1_call"
       ],
-      "focus_selectors": [
-        "#sl-c1"
-      ],
-      "caption": "Ở bài học thứ hai, chúng ta nắm nguyên tắc nền tảng đầu tiên: luôn chọn Open Folder để mở cả thư mục dự án, không mở từng tệp lẻ tẻ khiến trợ lý AI bị thiếu thông tin liên quan.",
+      "caption": "Trước khi nạp học liệu vào màn hình chào mừng của <strong>Antigravity IDE</strong>, anh chị cần nắm vững 3 nguyên tắc trên sơ đồ luồng: Một là phải giải nén tệp <code>.zip</code> bằng <strong>Extract All</strong>; hai là chỉ mở đúng thư mục dự án con; và ba là cơ chế đồng bộ 1-1 với ổ cứng.",
       "audio_src": "audio/lesson_02/b1.mp3",
-      "audio_duration": 9.2
+      "audio_duration": 14.0
     },
     {
       "id": "b2",
-      "label": "2. Ưu tiên định dạng .md và .csv",
-      "duration": 10.89,
-      "mode": "theory",
+      "label": "2. [Lý thuyết Kiểu 2] Vì sao dùng Open Folder thay vì Open File",
+      "duration": 11.53,
       "pose": 2,
-      "slide": "s1",
-      "hl": [
-        "sl-c2"
-      ],
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Quy trình Mở Dự án",
+      "pedagogy_title": "Khác biệt giữa Open File (mở lẻ) và Open Folder (mở trọn dự án)",
+      "pedagogy_note": "Open Folder nạp toàn bộ cấu trúc thư mục và bộ não .agent để trợ lý AI hiểu đầy đủ ngữ cảnh công việc.",
+      "onEnter": "kudoHidePopovers(); switchToSurface('ide'); showIdeWelcomeScreen(); closeWinFolderDialog(); document.getElementById('ide-file-dropdown').classList.add('show');",
       "focus_selectors": [
-        "#sl-c2"
+        "#ide-menu-file-btn",
+        "#ide-file-dropdown"
       ],
-      "caption": "Quy tắc thứ hai là ưu tiên lưu tài liệu hướng dẫn dưới dạng Markdown <code>.md</code> và bảng dữ liệu nguồn dưới dạng <code>.csv</code>. Đây là hai định dạng văn bản gọn nhẹ giúp AI đọc và xử lý nhanh.",
+      "cursor_selector": "#ide-file-dropdown .dd-row:nth-child(7)",
+      "cursor_label": "Luôn chọn Open Folder thay vì Open File",
+      "caption": "Nhìn vào trình đơn <strong>File</strong> trên màn hình <strong>Antigravity IDE</strong>, anh chị sẽ thấy hai dòng cạnh nhau. Chúng ta luôn dùng <strong>Open Folder</strong> để mở trọn vẹn thư mục dự án, tuyệt đối không dùng <strong>Open File</strong> mở lẻ tẻ từng tệp.",
       "audio_src": "audio/lesson_02/b2.mp3",
-      "audio_duration": 10.24
+      "audio_duration": 10.88
     },
     {
       "id": "b3",
-      "label": "3. Xem bảng bằng Office Viewer",
-      "duration": 11.05,
-      "mode": "theory",
+      "label": "3. [Lý thuyết Kiểu 2] Cảnh báo khi lỡ tay kéo thả nhầm thư mục",
+      "duration": 10.97,
       "pose": 3,
-      "slide": "s1",
-      "hl": [
-        "sl-c3"
-      ],
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Phòng tránh lỗi thao tác chuột",
+      "pedagogy_title": "Xử lý hộp thoại cảnh báo di chuyển nhầm thư mục (Are you sure you want to move...)",
+      "pedagogy_note": "Khi dùng chuột ở cột trái, nếu lỡ kéo thư mục này vào thư mục khác, hãy bấm Cancel ngay để bảo toàn cấu trúc.",
+      "onEnter": "kudoHidePopovers(); closeIdeMenus(); switchToSurface('ide'); openMoveWarnModal();",
       "focus_selectors": [
-        "#sl-c3"
+        "#ide-move-warn-modal .warn-dialog"
       ],
-      "caption": "Để người làm văn phòng dễ quan sát, bạn cài đặt tiện ích Office Viewer trong Antigravity IDE để xem tệp <code>.md</code> và <code>.csv</code> dưới dạng văn bản và bảng kẻ ô trực quan.",
+      "cursor_selector": "#ide-move-warn-modal .warn-dialog button:first-child",
+      "cursor_label": "Bấm Cancel ngay khi thấy cảnh báo Move",
+      "caption": "Một lưu ý nữa khi thao tác chuột ở cột cây thư mục bên trái là tránh lỡ tay kéo nhầm thư mục này thả vào thư mục khác. Khi thấy bảng cảnh báo hiện ra như trên màn hình, anh chị nhớ bấm ngay nút <strong>Cancel</strong>.",
       "audio_src": "audio/lesson_02/b3.mp3",
-      "audio_duration": 10.4
+      "audio_duration": 10.32
     },
     {
       "id": "b4",
-      "label": "4. Cơ chế quyền tự chủ Turbo",
-      "duration": 8.17,
-      "mode": "theory",
+      "label": "4. [Thực hành B1/3] Bối cảnh & Chọn thư mục đã giải nén",
+      "duration": 11.69,
       "pose": 4,
-      "slide": "s2",
-      "hl": [
-        "s2-c1"
-      ],
-      "focus_selectors": [
-        "#s2-c1"
-      ],
-      "caption": "Tiếp theo, để AI không dừng lại hỏi xin phép ở mọi bước nhỏ, chúng ta vào phần cài đặt This Computer và chuyển quyền thực thi sang chế độ Turbo.",
-      "audio_src": "audio/lesson_02/b4.mp3",
-      "audio_duration": 7.52
-    },
-    {
-      "id": "b5",
-      "label": "5. Giọng nói và trích dẫn nhanh",
-      "duration": 9.53,
-      "mode": "theory",
-      "pose": 5,
-      "slide": "s2",
-      "hl": [
-        "s2-c2",
-        "s2-c3",
-        "s2-c4"
-      ],
-      "focus_selectors": [
-        "#s2-c2",
-        "#s2-c3",
-        "#s2-c4"
-      ],
-      "caption": "Đồng thời, bạn hãy kết hợp phím tắt thu giọng nói <kbd>Ctrl + M</kbd> và thao tác bôi đen văn bản nhấn <kbd>Ctrl + L</kbd> (Quote in Chat) để trích dẫn ngay đoạn cần sửa vào khung trò chuyện.",
-      "audio_src": "audio/lesson_02/b5.mp3",
-      "audio_duration": 8.88
-    },
-    {
-      "id": "b6",
-      "label": "6. Thực hành mở thư mục dự án",
-      "duration": 12.01,
       "mode": "sim",
-      "pose": 2,
-      "surface": "ide_welcome",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "🛠️ Thực hành Bước 1/3 · Bối cảnh & Chọn thư mục",
+      "pedagogy_title": "Bối cảnh: Nạp bộ học liệu antigravity_course_vn đã giải nén vào IDE",
+      "pedagogy_note": "Bước 1: Trong hộp thoại Open Folder, bấm chọn đúng thư mục antigravity_course_vn và nhấn nút Select folder.",
+      "onEnter": "kudoHidePopovers(); closeMoveWarnModal(); switchToSurface('ide'); openWinFolderDialog();",
       "focus_selectors": [
         "#win-open-folder-modal .win-dialog"
       ],
-      "focus_pad": 8,
       "cursor_selector": "#win-btn-select-folder",
-      "cursor_label": "Chọn thư mục antigravity_course_vn -> Select folder",
-      "caption": "Thực hành bước 1: Từ màn hình bắt đầu của Antigravity IDE, bạn bấm nút Open Folder, chọn thư mục <code>antigravity_course_vn</code> trên máy tính rồi nhấn nút Select folder để mở toàn bộ dự án.",
-      "onEnter": "kudoHidePopovers(); showIdeWelcomeScreen(); openWinFolderDialog(); selectWinFolder('antigravity_course_vn', document.getElementById('win-folder-row-agy'));",
-      "audio_src": "audio/lesson_02/b6.mp3",
-      "audio_duration": 11.36
+      "cursor_label": "Bước 1: Chọn antigravity_course_vn -> Select folder",
+      "caption": "Giờ chúng ta thực hành 3 bước nạp học liệu. Ở <strong>Bước 1</strong>, sau khi đã giải nén tệp <code>.zip</code>, trong hộp thoại <strong>Open Folder</strong>, anh chị bấm chọn đúng thư mục <code>antigravity_course_vn</code> rồi nhấn nút <strong>Select folder</strong>.",
+      "audio_src": "audio/lesson_02/b4.mp3",
+      "audio_duration": 11.04
     },
     {
-      "id": "b7",
-      "label": "7. Thực hành đọc bảng .csv",
-      "duration": 10.33,
+      "id": "b5",
+      "label": "5. [Thực hành B2/3] Kiểm tra đồng bộ bằng Reveal in File Explorer",
+      "duration": 10.65,
+      "pose": 5,
       "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Thao tác đối chiếu ổ cứng",
+      "pedagogy_title": "Bước 2: Chuột phải vào INDEX.md chọn Reveal in File Explorer",
+      "pedagogy_note": "Cây thư mục dự án đã hiện ra ở cột trái! Nhấp chuột phải vào INDEX.md để đối chiếu vị trí tệp thật trên máy tính.",
+      "onEnter": "kudoHidePopovers(); closeWinFolderDialog(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); openFileInEditor('INDEX.md'); kudoOpenExplorerContextMenu(\"[data-file='INDEX.md']\");",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#kudo-context-menu"
+      ],
+      "cursor_selector": "#kcm-reveal-explorer",
+      "cursor_label": "Bước 2: Chọn Reveal in File Explorer",
+      "caption": "Sang <strong>Bước 2</strong>, toàn bộ cây thư mục dự án đã hiện ra ở cột trái! Để kiểm chứng vị trí tệp thật trên ổ cứng, anh chị nhấp chuột phải vào tệp <code>INDEX.md</code> và chọn dòng <strong>Reveal in File Explorer</strong>.",
+      "audio_src": "audio/lesson_02/b5.mp3",
+      "audio_duration": 10.0
+    },
+    {
+      "id": "b6",
+      "label": "6. [Thực hành B3/3] Nghiệm thu lộ trình học trong INDEX.md",
+      "duration": 12.65,
       "pose": 6,
-      "surface": "ide_md_csv",
-      "focus_selectors": [
-        "#office-toolbar",
-        "#editor-canvas .wysiwyg-doc"
-      ],
-      "focus_pad": 8,
-      "cursor_selector": "#pill-wysiwyg",
-      "cursor_label": "Xem và sửa trực tiếp bảng sales_data.csv",
-      "caption": "Thực hành bước 2: Khi bấm vào tệp <code>sales_data.csv</code>, nhờ tiện ích Office Viewer ở cột giữa, dữ liệu hiển thị thành bảng kẻ ô rõ ràng để bạn bấm chuột kiểm tra và sửa số liệu.",
-      "onEnter": "kudoHidePopovers(); closeWinFolderDialog(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); currentWorkspaceTreeMode='Antigravity_Basic'; renderFileTree(); setEditorMode('wysiwyg'); openFileInEditor('sales_data.csv');",
-      "audio_src": "audio/lesson_02/b7.mp3",
-      "audio_duration": 9.68
-    },
-    {
-      "id": "b8",
-      "label": "8. Mở bảng cài đặt quyền AI",
-      "duration": 9.29,
       "mode": "sim",
-      "pose": 3,
-      "surface": "mgr",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Nghiệm thu & Tiếp nối",
+      "pedagogy_title": "Bước 3: Mở tệp bản đồ khóa học INDEX.md ở cột giữa",
+      "pedagogy_note": "Nghiệm thu: Cột trái hiện đủ cây thư mục Module_0..Module_6, cột giữa hiển thị bản đồ INDEX.md. Tiếp theo: Bài 3 học điều khiển 3 cột & phím cứu hộ.",
+      "onEnter": "kudoHidePopovers(); closeWinFolderDialog(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); setEditorMode('wysiwyg'); openFileInEditor('INDEX.md');",
       "focus_selectors": [
-        "#agy2-settings-btn"
+        "#ide-file-tree",
+        "#editor-canvas"
       ],
-      "focus_pad": 8,
-      "cursor_selector": "#agy2-settings-btn",
-      "cursor_label": "Bấm ⚙️ Settings ở góc dưới bên trái",
-      "caption": "Thực hành bước 3: Trên cửa sổ Antigravity 2.0, bạn nhìn xuống góc dưới cùng của thanh bên trái và bấm vào nút <code>⚙️ Settings</code> để mở bảng thiết lập quyền tự chủ.",
-      "onEnter": "kudoHidePopovers(); closeSettingsModal(); switchToSurface('mgr'); loadAgy2Thread('main');",
-      "audio_src": "audio/lesson_02/b8.mp3",
-      "audio_duration": 8.64
-    },
-    {
-      "id": "b9",
-      "label": "9. Bật chế độ tự chủ Turbo",
-      "duration": 11.21,
-      "mode": "sim",
-      "pose": 4,
-      "surface": "mgr_settings",
-      "focus_selectors": [
-        "#set-row-this-computer",
-        "#kudo-turbo-popover"
-      ],
-      "focus_pad": 10,
-      "cursor_selector": "#ktp-turbo",
-      "cursor_label": "Chọn Turbo trong 4 mức quyền",
-      "caption": "Tại thẻ General, dòng This Computer hiển thị 4 mức quyền: Request Review, Default, Auto (Preview) và Turbo. Bạn chọn <code>Turbo</code> có dấu tích xanh để AI tự động thực thi trọn vẹn quy trình.",
-      "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); openSettingsModal('general'); kudoOpenTurboPopover();",
-      "audio_src": "audio/lesson_02/b9.mp3",
-      "audio_duration": 10.56
-    },
-    {
-      "id": "b10",
-      "label": "10. Giao việc giọng nói (Ctrl+M)",
-      "duration": 10.97,
-      "mode": "sim",
-      "pose": 7,
-      "surface": "mgr_voice",
-      "focus_selectors": [
-        "#agy2-input-card-box"
-      ],
-      "focus_pad": 8,
-      "cursor_selector": "#agy2-mic-btn",
-      "cursor_label": "Bấm biểu tượng Micro (Ctrl + M)",
-      "caption": "Thực hành bước 4: Mở một cuộc hội thoại mới, bạn bấm vào biểu tượng chiếc Micro hoặc nhấn <kbd>Ctrl + M</kbd> để đọc yêu cầu phân tích tệp <code>@sales_data.csv</code> bằng tiếng Việt.",
-      "onEnter": "kudoHidePopovers(); closeSettingsModal(); switchToSurface('mgr'); resetAgy2NewConv(); kudoShowKeyHud('🎙️ Nhập liệu bằng giọng nói: <kbd>Ctrl + M</kbd>'); document.getElementById('mgr-voice-bar').classList.add('active'); document.getElementById('agy2-chat-input').value = 'Đọc @sales_data.csv và @troly.md rồi lập báo cáo doanh thu Quý 1 kèm đề xuất cắt giảm 2 sản phẩm lỗ.';",
-      "audio_src": "audio/lesson_02/b10.mp3",
-      "audio_duration": 10.32
-    },
-    {
-      "id": "b11",
-      "label": "11. Bôi đen trích dẫn (Ctrl+L)",
-      "duration": 10.97,
-      "mode": "sim",
-      "pose": 8,
-      "surface": "mgr_quote",
-      "focus_selectors": [
-        "#kudo-quote-highlight",
-        "#agy2-quote-btn"
-      ],
-      "focus_pad": 10,
-      "cursor_selector": "#agy2-quote-btn",
-      "cursor_label": "Bấm Quote in Chat (Ctrl + L)",
-      "caption": "Thực hành bước 5: Khi đọc tài liệu ở khung bên phải, chỗ nào cần sửa bạn chỉ cần bôi đen đoạn văn đó rồi bấm nút Quote in Chat hoặc nhấn <kbd>Ctrl + L</kbd> để trích dẫn thẳng nội dung kèm số dòng vào ô nhập lệnh.",
-      "onEnter": "document.getElementById('mgr-voice-bar').classList.remove('active'); kudoShowKeyHud('💬 Trích dẫn đoạn bôi đen: <kbd>Ctrl + L</kbd>'); kudoActivateQuoteDemo();",
-      "audio_src": "audio/lesson_02/b11.mp3",
-      "audio_duration": 10.32
+      "cursor_selector": "[data-file='INDEX.md']",
+      "cursor_label": "Bước 3: Đã mở thành công bản đồ INDEX.md",
+      "caption": "Ở <strong>Bước 3</strong>, anh chị bấm mở tệp <code>INDEX.md</code> để nghiệm thu toàn bộ lộ trình học tập đã hiển thị rõ ở cột giữa. Sau khi đã mở đúng thư mục, <strong>Bài 3</strong> sẽ giúp anh chị làm chủ hoàn toàn bố cục 3 cột và các phím tắt cứu hộ.",
+      "audio_src": "audio/lesson_02/b6.mp3",
+      "audio_duration": 12.0
     }
   ]
 };

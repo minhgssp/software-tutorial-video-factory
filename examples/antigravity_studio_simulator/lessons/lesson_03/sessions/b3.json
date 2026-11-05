@@ -1,19 +1,21 @@
 {
   "id": "b3",
-  "label": "3. Workflows & Nghiệm thu tệp",
-  "duration": 11.69,
-  "mode": "theory",
+  "label": "3. [Lý thuyết Kiểu 2] Khôi phục nhanh cột trái bằng phím Ctrl + B",
+  "duration": 10.57,
   "pose": 3,
-  "slide": "s1",
-  "hl": [
-    "sl-c3",
-    "sl-c4"
-  ],
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Phím tắt Cứu hộ Giao diện",
+  "pedagogy_title": "Bật/tắt nhanh cột cây thư mục Explorer bằng tổ hợp phím Ctrl + B",
+  "pedagogy_note": "Khi cần mở rộng không gian đọc tài liệu hoặc lỡ tay bấm ẩn cột trái, nhấn Ctrl + B hoặc bấm biểu tượng 2 tệp giấy.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); openFileInEditor('0.1_Introduction.md'); kudoShowKeyHud('Nhấn <kbd>Ctrl + B</kbd> để Bật / Tắt nhanh cột cây thư mục bên trái');",
   "focus_selectors": [
-    "#sl-c3",
-    "#sl-c4"
+    "#act-btn-explorer",
+    "#ide-left-sidebar"
   ],
-  "caption": "Thứ ba là Workflows, tức quy trình từng bước được gọi nhanh bằng dấu <code>/</code>. Kết hợp với hồ sơ <code>@troly.md</code>, bạn luôn nghiệm thu hiệu quả của AI qua các tệp thành phẩm thực tế lưu ngay trong thư mục dự án.",
+  "cursor_selector": "#act-btn-explorer",
+  "cursor_label": "Biểu tượng Explorer (Phím tắt: Ctrl + B)",
+  "caption": "Rất nhiều anh chị khi đang làm việc vô tình bấm vào biểu tượng hai tệp giấy ở ngoài cùng bên trái khiến cột cây thư mục biến mất. Để lấy lại ngay lập tức, anh chị chỉ cần nhấn tổ hợp phím <kbd>Ctrl + B</kbd>.",
   "audio_src": "audio/lesson_03/b3.mp3",
-  "audio_duration": 11.04
+  "audio_duration": 9.92
 }

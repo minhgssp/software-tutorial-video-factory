@@ -1,0 +1,20 @@
+{
+  "id": "b3",
+  "label": "3. [Lý thuyết Kiểu 2] Bảng xếp hạng ứng viên kèm câu hỏi phỏng vấn xoáy sâu",
+  "duration": 11.37,
+  "pose": 3,
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Bảng Đánh giá & Câu hỏi Xoáy sâu",
+  "pedagogy_title": "AI chỉ ra Điểm mạnh, Điểm nghi vấn và Câu hỏi kiểm chứng cho từng ứng viên",
+  "pedagogy_note": "Với mỗi ứng viên lọt vào vòng trong, AI soạn riêng 2 câu hỏi phỏng vấn xoáy vào đúng điểm còn thiếu trong CV của người đó.",
+  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › ket_qua_cham_cv.md', editorTitle:'🏆 ket_qua_cham_cv.md — Bảng Xếp Hạng & Câu Hỏi Phỏng Vấn', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">KẾT QUẢ SÀNG LỌC HỒ SƠ ỨNG VIÊN TRƯỞNG NHÓM CS</h3><table style=\"width:100%;border-collapse:collapse;font-size:13px;\"><tr style=\"background:#ffedd5;\"><th style=\"padding:7px;border:1px solid #fed7aa;text-align:left;\">Ứng viên</th><th style=\"padding:7px;border:1px solid #fed7aa;text-align:center;\">Tổng điểm</th><th style=\"padding:7px;border:1px solid #fed7aa;text-align:left;\">Điểm mạnh &amp; Điểm cần hỏi kỹ khi phỏng vấn</th></tr><tr><td style=\"padding:7px;border:1px solid #fed7aa;font-weight:700;\">1. Trần Minh Anh</td><td style=\"padding:7px;border:1px solid #fed7aa;text-align:center;color:#15803d;font-weight:800;\">91 / 100</td><td style=\"padding:7px;border:1px solid #fed7aa;\">3 năm CS SaaS, từng giảm Churn 25%. <em>Câu hỏi:</em> Quy trình bạn áp dụng trong 7 ngày đầu cho khách hàng mới là gì?</td></tr><tr><td style=\"padding:7px;border:1px solid #fed7aa;font-weight:700;\">2. Lê Hoàng Nam</td><td style=\"padding:7px;border:1px solid #fed7aa;text-align:center;color:#d97706;font-weight:800;\">78 / 100</td><td style=\"padding:7px;border:1px solid #fed7aa;\">Mạnh giao tiếp nhưng mới làm B2C. <em>Câu hỏi:</em> Bạn sẽ xử lý thế nào khi khách hàng doanh nghiệp yêu cầu tích hợp kỹ thuật?</td></tr></table></div>'});",
+  "focus_selectors": [
+    "#editor-canvas"
+  ],
+  "cursor_selector": "#editor-canvas",
+  "cursor_label": "Bảng điểm kèm câu hỏi phỏng vấn cá nhân hóa từng người",
+  "caption": "Và kết quả ở cột giữa thật sự ấn tượng: Trợ lý không chỉ chấm điểm xếp hạng 91 trên 100 cho ứng viên số 1, mà còn chuẩn bị sẵn câu hỏi phỏng vấn riêng biệt để anh chị kiểm tra năng lực thực chất của từng người.",
+  "audio_src": "audio/lesson_22/b3.mp3",
+  "audio_duration": 10.72
+}

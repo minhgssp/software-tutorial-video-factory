@@ -1,19 +1,22 @@
 {
   "id": "b6",
-  "label": "6. Lộ trình học trong INDEX.md",
-  "duration": 10.41,
+  "label": "6. [Thực hành B3/3] Bôi đen trích dẫn Ctrl+L & Tiếp nối Bài 7",
+  "duration": 12.65,
+  "pose": 6,
   "mode": "sim",
-  "pose": 7,
-  "surface": "ide",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Trích dẫn & Nghiệm thu",
+  "pedagogy_title": "Bước 3: Bôi đen đoạn văn cần sửa và nhấn Ctrl + L",
+  "pedagogy_note": "Nghiệm thu: Ô chat nhận chính xác tọa độ dòng @0.1_Introduction.md#L7-L8. Tiếp theo: Bài 7 xây dựng hồ sơ cá nhân @troly.md.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); kudoActivateQuoteDemo();",
   "focus_selectors": [
-    "#ide-left-sidebar",
-    "#editor-canvas"
+    "#kudo-quote-highlight",
+    "#agy2-quote-btn",
+    "#agy2-chat-input"
   ],
-  "focus_pad": 6,
-  "cursor_selector": "[data-file='INDEX.md']",
-  "cursor_label": "Cây thư mục và tệp INDEX.md sẵn sàng",
-  "caption": "Khi mở đúng thư mục đã giải nén, toàn bộ học phần từ Module 0 đến Module 6 và bản đồ học tập <code>INDEX.md</code> hiển thị đầy đủ ở cột giữa để bạn và trợ lý AI bắt đầu làm việc.",
-  "onEnter": "kudoHidePopovers(); closeMoveWarnModal(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); currentWorkspaceTreeMode='antigravity_course_vn'; renderFileTree(); setEditorMode('wysiwyg'); openFileInEditor('INDEX.md');",
+  "cursor_selector": "#agy2-submit-btn",
+  "cursor_label": "Bước 3: Đã trích dẫn dòng #L7-L8 sẵn sàng gửi",
+  "caption": "Ở <strong>Bước 3</strong>, anh chị bôi đen đoạn văn bản bên phải và nhấn <kbd>Ctrl + L</kbd> để gắn tọa độ dòng vào câu lệnh rồi bấm gửi. Khi đã thuần thục dấu <code>@</code>, chúng ta sang <strong>Bài 7</strong> để tạo hồ sơ cá nhân hóa <code>@troly.md</code>.",
   "audio_src": "audio/lesson_06/b6.mp3",
-  "audio_duration": 9.76
+  "audio_duration": 12.0
 }

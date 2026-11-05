@@ -1,0 +1,21 @@
+{
+  "id": "b6",
+  "label": "6. [Thực hành B3/3] Nghiệm thu dây chuyền tự chạy 3 bước & Sang Bài 12",
+  "duration": 16.08,
+  "pose": 6,
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Nghiệm thu & Tiếp nối",
+  "pedagogy_title": "Bước 3: Nghiệm thu tệp bao_cao_thu_hai.md được sinh ra tự động sau 1 lệnh",
+  "pedagogy_note": "Nghiệm thu: Chỉ 1 lệnh /tong-hop-tuan đã hoàn thành trọn gói 3 bước. Tiếp theo: Bài 12 học bộ 3 lệnh nâng cao /grill-me, /plan, /learn.",
+  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › bao_cao_thu_hai.md (Sinh bởi /tong-hop-tuan)', editorTitle:'📄 bao_cao_thu_hai.md — Hoàn tất tự động 3/3 bước', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#15803d;margin-top:0;\">BÁO CÁO GIAO BAN SÁNG THỨ HAI — TASKFLOW INC.</h2><p><strong>Trạng thái quy trình:</strong> Đã chạy tự động Bước 1 (Đọc CSV) &rarr; Bước 2 (Áp dụng Skill) &rarr; Bước 3 (Xuất tệp).</p><p><strong>Điểm nhấn tuần qua:</strong> Khu vực miền Nam tăng trưởng 14%, đề xuất nhân rộng kịch bản chăm sóc khách hàng sang miền Bắc.</p></div>', userMsg:'/tong-hop-tuan', aiMsg:'Đã thực thi trọn gói quy trình <code>/tong-hop-tuan</code> qua 3 bước và lưu kết quả tại <code>bao_cao_thu_hai.md</code>!'});",
+  "focus_selectors": [
+    "#editor-canvas",
+    "#ide-chat-messages"
+  ],
+  "cursor_selector": "#editor-canvas",
+  "cursor_label": "Bước 3: Tệp bao_cao_thu_hai.md hoàn thành sau 1 nút bấm!",
+  "caption": "Ở <strong>Bước 3</strong>, chỉ sau một cú nhấn <kbd>Enter</kbd>, trợ lý đã tự động chạy hết cả 3 bước và xuất ra tệp <code>bao_cao_thu_hai.md</code> hoàn chỉnh. Vậy với những dự án mới hoàn toàn chưa có quy trình sẵn thì sao? Chúng ta sang ngay <strong>Bài 12</strong> với bộ ba lệnh <code>/grill-me</code>, <code>/plan</code> và <code>/learn</code>.",
+  "audio_src": "audio/lesson_11/b6.mp3",
+  "audio_duration": 15.43
+}

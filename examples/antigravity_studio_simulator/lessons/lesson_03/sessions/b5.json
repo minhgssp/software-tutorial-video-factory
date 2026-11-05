@@ -1,21 +1,21 @@
 {
   "id": "b5",
-  "label": "5. Lệnh /plan và đúc kết /learn",
-  "duration": 10.09,
-  "mode": "theory",
+  "label": "5. [Thực hành B2/3] Gõ câu hỏi tiếng Việt vào khung chat khi quên thao tác",
+  "duration": 8.41,
   "pose": 5,
-  "slide": "s2",
-  "hl": [
-    "s2-c2",
-    "s2-c3",
-    "s2-c4"
-  ],
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Hỏi trực tiếp Trợ lý AI",
+  "pedagogy_title": "Bước 2: Nhập câu hỏi bằng tiếng Việt vào ô chat phải rồi bấm Gửi (→)",
+  "pedagogy_note": "Khi quên phím tắt mở lại cột trái hoặc chế độ xem đẹp, hãy gõ câu hỏi vào ô nhập #ide-chat-input và nhấn Gửi.",
+  "onEnter": "kudoSimScene({surface:'ide', file:'0.1_Introduction.md', clearChat:true, chatInput:'Tôi lỡ tay bấm tắt mất cột cây thư mục bên trái, làm sao để mở lại nhanh và xem tệp Markdown cho dễ đọc?'});",
   "focus_selectors": [
-    "#s2-c2",
-    "#s2-c3",
-    "#s2-c4"
+    "#ide-chat-input",
+    "#ide-send-btn"
   ],
-  "caption": "Khi đã đủ thông tin, bạn dùng lệnh <code>/plan</code> để duyệt kế hoạch và danh sách tệp đầu ra trước khi thực thi. Cuối buổi, hãy gõ <code>/learn</code> để AI tự lưu kinh nghiệm mới vào sổ tay nội quy.",
+  "cursor_selector": "#ide-send-btn",
+  "cursor_label": "Bước 2: Nhập câu hỏi vào ô chat và bấm Gửi (→)",
+  "caption": "Sang <strong>Bước 2</strong>, khi quên bất kỳ thao tác nào trên phần mềm, anh chị hãy gõ câu hỏi bằng tiếng Việt vào ô nhập ở đáy cột phải rồi bấm nút Gửi.",
   "audio_src": "audio/lesson_03/b5.mp3",
-  "audio_duration": 9.44
+  "audio_duration": 7.76
 }

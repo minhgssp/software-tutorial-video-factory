@@ -1,0 +1,21 @@
+{
+  "id": "b4",
+  "label": "4. [Thực hành B1/3] Bối cảnh & Mở hồ sơ gốc để trích xuất thương hiệu",
+  "duration": 9.21,
+  "pose": 4,
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 1/3 · Bối cảnh & Chọn tài liệu gốc",
+  "pedagogy_title": "Bối cảnh: Chuẩn bị chiến dịch ra mắt tính năng Onboarding 3 ngày của TaskFlow",
+  "pedagogy_note": "Bước 1: Mở tệp COMPANY.md ở cột trái để kiểm tra thông điệp cốt lõi của sản phẩm.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); openFileInEditor('COMPANY.md');",
+  "focus_selectors": [
+    "#ide-file-tree",
+    "#editor-canvas"
+  ],
+  "cursor_selector": "[data-file='COMPANY.md']",
+  "cursor_label": "Bước 1: Mở tệp COMPANY.md làm gốc thông điệp",
+  "caption": "Chúng ta vào thực hành 3 bước xây dựng trung tâm nội dung. Ở <strong>Bước 1</strong>, anh chị mở tệp <code>COMPANY.md</code> ở cột trái để lấy thông số cốt lõi cho chiến dịch truyền thông Quý 2.",
+  "audio_src": "audio/lesson_17/b4.mp3",
+  "audio_duration": 8.56
+}

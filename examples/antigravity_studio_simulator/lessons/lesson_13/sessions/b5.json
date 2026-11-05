@@ -1,0 +1,21 @@
+{
+  "id": "b5",
+  "label": "5. [Thực hành B2/3] Giao lệnh tóm tắt 2 tầng kèm bắt buộc dẫn nguồn",
+  "duration": 8.25,
+  "pose": 5,
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Ra lệnh Bóc tách Có Dẫn nguồn",
+  "pedagogy_title": "Bước 2: Nhập lệnh bóc tách @COMPANY.md và @1.1_Welcome.md vào ô chat",
+  "pedagogy_note": "Yêu cầu rõ: Tóm tắt thành 3 phần (Bối cảnh, Thách thức, Hành động) và bắt buộc ghi [Nguồn: @tên_tệp] sau mỗi ý.",
+  "onEnter": "kudoSimScene({surface:'ide', file:'COMPANY.md', clearChat:true, chatInput:'@COMPANY.md @1.1_Welcome.md Hãy bóc tách hồ sơ công ty thành 3 mục (Quy mô, Thách thức Quý 2, Trọng tâm hành động), gắn trích dẫn [Nguồn] cho từng ý và lưu vào tệp tom_tat_hdqt.md'});",
+  "focus_selectors": [
+    "#ide-chat-input",
+    "#ide-send-btn"
+  ],
+  "cursor_selector": "#ide-send-btn",
+  "cursor_label": "Bước 2: Gửi lệnh bóc tách đa tầng kèm dẫn nguồn",
+  "caption": "Sang <strong>Bước 2</strong>, anh chị đính kèm cụm tệp hồ sơ vào ô chat, yêu cầu trợ lý bóc tách thành 3 mục kèm trích dẫn nguồn chính xác rồi nhấn nút Gửi.",
+  "audio_src": "audio/lesson_13/b5.mp3",
+  "audio_duration": 7.6
+}

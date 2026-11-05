@@ -1,0 +1,21 @@
+{
+  "id": "b5",
+  "label": "5. [Thực hành B2/3] Gõ dấu / để đối chiếu tệp với danh sách lệnh",
+  "duration": 11.69,
+  "pose": 5,
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Đối chiếu Тệp và Lệnh /",
+  "pedagogy_title": "Bước 2: Bấm nút / trên thanh công cụ chat để xem danh sách Workflows",
+  "pedagogy_note": "Mỗi tệp .md đặt trong thư mục .agent/workflows/ đều tự động xuất hiện trong bảng lệnh gạch chéo này.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('ide'); openFileInEditor('start-1-1.md'); kudoOpenIdeSlashPopup();",
+  "focus_selectors": [
+    ".context-toolbar",
+    "#ide-popup-menu"
+  ],
+  "cursor_selector": "#ide-popup-menu .popup-item:first-child",
+  "cursor_label": "Bước 2: Kiểm tra danh sách lệnh / tương ứng",
+  "caption": "Sang <strong>Bước 2</strong>, anh chị bấm vào biểu tượng dấu gạch chéo <code>/</code> ở khung chat phải. Anh chị sẽ thấy các lệnh như <code>/plan</code> hay <code>/grill-me</code> hiện ra, tương ứng 1-1 với các tệp trong thư mục <code>.agent</code>.",
+  "audio_src": "audio/lesson_09/b5.mp3",
+  "audio_duration": 11.04
+}

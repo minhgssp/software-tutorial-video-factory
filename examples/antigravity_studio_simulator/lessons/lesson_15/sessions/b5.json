@@ -1,0 +1,21 @@
+{
+  "id": "b5",
+  "label": "5. [Thực hành B2/3] Ra lệnh hợp nhất kết quả từ 3 tệp thành phần",
+  "duration": 8.97,
+  "pose": 5,
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Hợp nhất 3 Tệp Thành phần",
+  "pedagogy_title": "Bước 2: Quay về IDE, đính kèm cả 3 tệp đầu ra để tổng hợp Đề án Quý 2",
+  "pedagogy_note": "Khi cả 3 nhánh đã hoàn tất, dùng dấu @ gọi cả 3 tệp để AI ghép thành bản de_an_tong_the_q2.md.",
+  "onEnter": "kudoSimScene({surface:'ide', file:'COMPANY.md', clearChat:true, chatInput:'@bao_cao_doanh_thu_q1.md @de_xuat_nhan_su_q2.md @bang_doi_sanh_doi_thu.md Hãy hợp nhất kết quả của 3 nhóm thành bản Đề án Tổng thể Quý 2 tại tệp de_an_tong_the_q2.md'});",
+  "focus_selectors": [
+    "#ide-chat-input",
+    "#ide-send-btn"
+  ],
+  "cursor_selector": "#ide-send-btn",
+  "cursor_label": "Bước 2: Hợp nhất kết quả của cả 3 Sub-Agents",
+  "caption": "Sang <strong>Bước 2</strong>, khi cả 3 nhánh đều đã báo hoàn thành, anh chị quay về khung chat, đính kèm cả 3 tệp kết quả vừa sinh ra và yêu cầu hợp nhất thành bản đề án tổng thể.",
+  "audio_src": "audio/lesson_15/b5.mp3",
+  "audio_duration": 8.32
+}

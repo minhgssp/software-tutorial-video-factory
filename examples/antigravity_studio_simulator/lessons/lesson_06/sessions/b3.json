@@ -1,18 +1,22 @@
 {
   "id": "b3",
-  "label": "3. Mở thư mục đã giải nén",
-  "duration": 10.49,
-  "mode": "sim",
+  "label": "3. [Lý thuyết Kiểu 2] Cơ chế thu giọng nói (Ctrl+M) và trích dẫn (Ctrl+L)",
+  "duration": 11.53,
   "pose": 3,
-  "surface": "ide_welcome",
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Giọng nói & Trích dẫn dòng",
+  "pedagogy_title": "Thanh thu âm giọng nói tiếng Việt (🎙️) và nút Quote in Chat (Ctrl + L)",
+  "pedagogy_note": "Khi bôi đen một đoạn văn bản, nút Quote in Chat bật lên kèm số thứ tự dòng (#L7-L8) giúp AI chỉ sửa đúng đoạn đó.",
+  "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); kudoActivateQuoteDemo(); kudoShowKeyHud('Bôi đen văn bản + Nhấn <kbd>Ctrl + L</kbd> (Quote in Chat)');",
   "focus_selectors": [
-    "#win-open-folder-modal .win-dialog"
+    "#kudo-quote-highlight",
+    "#agy2-quote-btn",
+    "#agy2-chat-input"
   ],
-  "focus_pad": 8,
-  "cursor_selector": "#win-btn-select-folder",
-  "cursor_label": "Chọn thư mục đã giải nén antigravity_course_vn",
-  "caption": "Sau khi giải nén tệp <code>.zip</code> trên Windows hoặc Mac, bạn vào Antigravity IDE bấm Open Folder, chọn đúng thư mục thường <code>antigravity_course_vn</code> và bấm Select folder.",
-  "onEnter": "kudoHidePopovers(); closeMoveWarnModal(); showIdeWelcomeScreen(); openWinFolderDialog(); selectWinFolder('antigravity_course_vn', document.getElementById('win-folder-row-agy'));",
+  "cursor_selector": "#agy2-quote-btn",
+  "cursor_label": "Bấm Quote in Chat hoặc nhấn Ctrl + L",
+  "caption": "Đặc biệt, khi đang đọc một tài liệu dài mà chỉ muốn AI viết lại đúng một câu, anh chị chỉ cần bôi đen câu đó. Nút <strong>Quote in Chat</strong> kèm phím tắt <kbd>Ctrl + L</kbd> sẽ hiện ra, tự động chèn đúng số dòng vào khung chat.",
   "audio_src": "audio/lesson_06/b3.mp3",
-  "audio_duration": 9.84
+  "audio_duration": 10.88
 }

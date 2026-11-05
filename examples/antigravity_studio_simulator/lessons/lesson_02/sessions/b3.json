@@ -1,17 +1,20 @@
 {
   "id": "b3",
-  "label": "3. Xem bảng bằng Office Viewer",
-  "duration": 11.05,
-  "mode": "theory",
+  "label": "3. [Lý thuyết Kiểu 2] Cảnh báo khi lỡ tay kéo thả nhầm thư mục",
+  "duration": 10.97,
   "pose": 3,
-  "slide": "s1",
-  "hl": [
-    "sl-c3"
-  ],
+  "mode": "sim",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Phòng tránh lỗi thao tác chuột",
+  "pedagogy_title": "Xử lý hộp thoại cảnh báo di chuyển nhầm thư mục (Are you sure you want to move...)",
+  "pedagogy_note": "Khi dùng chuột ở cột trái, nếu lỡ kéo thư mục này vào thư mục khác, hãy bấm Cancel ngay để bảo toàn cấu trúc.",
+  "onEnter": "kudoHidePopovers(); closeIdeMenus(); switchToSurface('ide'); openMoveWarnModal();",
   "focus_selectors": [
-    "#sl-c3"
+    "#ide-move-warn-modal .warn-dialog"
   ],
-  "caption": "Để người làm văn phòng dễ quan sát, bạn cài đặt tiện ích Office Viewer trong Antigravity IDE để xem tệp <code>.md</code> và <code>.csv</code> dưới dạng văn bản và bảng kẻ ô trực quan.",
+  "cursor_selector": "#ide-move-warn-modal .warn-dialog button:first-child",
+  "cursor_label": "Bấm Cancel ngay khi thấy cảnh báo Move",
+  "caption": "Một lưu ý nữa khi thao tác chuột ở cột cây thư mục bên trái là tránh lỡ tay kéo nhầm thư mục này thả vào thư mục khác. Khi thấy bảng cảnh báo hiện ra như trên màn hình, anh chị nhớ bấm ngay nút <strong>Cancel</strong>.",
   "audio_src": "audio/lesson_02/b3.mp3",
-  "audio_duration": 10.4
+  "audio_duration": 10.32
 }

@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BÀI 4 — Làm chủ Giao diện & Hỏi Trợ lý AI</title>
-<meta name="description" content="Ba cách xử lý khi AI tạm dừng chờ lệnh, phím tắt khôi phục nhanh giao diện (Ctrl + B), bật chế độ xem trực quan và hỏi trực tiếp AI.">
-<meta property="og:title" content="BÀI 4 — Làm chủ Giao diện & Hỏi Trợ lý AI">
-<meta property="og:description" content="Ba cách xử lý khi AI tạm dừng chờ lệnh, phím tắt khôi phục nhanh giao diện (Ctrl + B), bật chế độ xem trực quan và hỏi trực tiếp AI.">
+<title>BÀI 3 — Làm chủ Giao diện 3 Cột, Phím Cứu hộ & Xử lý Khi AI Dừng chờ</title>
+<meta name="description" content="Hiểu rõ vai trò 3 cột của Antigravity IDE, 3 trạng thái khi AI dừng chờ (Stop, Tiếp tục, Accept), phím tắt cứu hộ Ctrl+B khôi phục cột trái và thói quen hỏi trực tiếp AI.">
+<meta property="og:title" content="BÀI 3 — Làm chủ Giao diện 3 Cột, Phím Cứu hộ & Xử lý Khi AI Dừng chờ">
+<meta property="og:description" content="Hiểu rõ vai trò 3 cột của Antigravity IDE, 3 trạng thái khi AI dừng chờ (Stop, Tiếp tục, Accept), phím tắt cứu hộ Ctrl+B khôi phục cột trái và thói quen hỏi trực tiếp AI.">
 <meta property="og:type" content="article">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LearningResource",
-  "name": "BÀI 4 — Làm chủ Giao diện & Hỏi Trợ lý AI",
-  "description": "Ba cách xử lý khi AI tạm dừng chờ lệnh, phím tắt khôi phục nhanh giao diện (Ctrl + B), bật chế độ xem trực quan và hỏi trực tiếp AI.",
+  "name": "BÀI 3 — Làm chủ Giao diện 3 Cột, Phím Cứu hộ & Xử lý Khi AI Dừng chờ",
+  "description": "Hiểu rõ vai trò 3 cột của Antigravity IDE, 3 trạng thái khi AI dừng chờ (Stop, Tiếp tục, Accept), phím tắt cứu hộ Ctrl+B khôi phục cột trái và thói quen hỏi trực tiếp AI.",
   "learningResourceType": "Interactive Simulation & Audio Lecture",
   "inLanguage": "vi",
   "isPartOf": {
@@ -832,11 +832,12 @@
   </div>
 
   <div class="ksb-lesson-box">
-    <select class="ksb-lesson-select" id="ksb-lesson-select" aria-label="Chọn bài giảng" onchange="kudoSwitchLessonFromSidebar(this.value)" title="Chuyển nhanh giữa 6 bài giảng"></select>
+    <select class="ksb-lesson-select" id="ksb-lesson-select" aria-label="Chọn bài giảng" onchange="kudoSwitchLessonFromSidebar(this.value)" title="Chuyển nhanh giữa 24 bài giảng"></select>
     <div class="ksb-meta-row">
-      <span id="kudo-lesson-code">BÀI 1</span>
+      <span id="kudo-lesson-code">CHƯƠNG 1 · BÀI 1</span>
     </div>
     <div id="kudo-lesson-title">Tiêu đề bài giảng</div>
+    <div id="ksb-dep-box"></div>
   </div>
 
   <!-- CỤM ĐIỀU KHIỂN 2 HÀNG GỌN GÀNG -->
@@ -868,6 +869,7 @@
     <div id="kudo-theory-stage">
       <div id="kudo-slide-box"></div>
     </div>
+    <div id="kudo-stage-pedagogy-card" aria-live="polite"></div>
   </div>
 
   <div id="kudo-subtitle-strip">
@@ -967,7 +969,7 @@
 <script src="assets/js/simulator_core.js"></script>
 <script src="config/brand_config.js"></script>
 <script src="config/course_manifest.js"></script>
-<script src="lessons/lesson_04/lesson_spec.js"></script>
+<script src="lessons/lesson_03/lesson_spec.js"></script>
 <script src="assets/js/simulator_actions.js"></script>
 <script src="assets/js/spotlight_cursor.js"></script>
 <script src="assets/js/player_engine.js"></script>

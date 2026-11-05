@@ -1,0 +1,21 @@
+{
+  "id": "b6",
+  "label": "6. [Thực hành B3/3] Nghiệm thu bộ hồ sơ tuyển dụng & Sang Bài 23",
+  "duration": 16.78,
+  "pose": 6,
+  "mode": "sim",
+  "pedagogy_type": "practice_step",
+  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Nghiệm thu Case Study 2",
+  "pedagogy_title": "Bước 3: Nghiệm thu tệp ho_so_tuyen_dung_cs.md trọn gói từ Chấm điểm tới Hội nhập",
+  "pedagogy_note": "Nghiệm thu: Hoàn tất bảng xếp hạng + câu hỏi phỏng vấn + KPI 90 ngày. Tiếp theo: Bài 23 (Tình huống 3) Rà soát Hợp đồng & Pháp lý.",
+  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › ho_so_tuyen_dung_cs.md (Hoàn tất HR)', editorTitle:'🤝 ho_so_tuyen_dung_cs.md — Hồ Sơ Tuyển Dụng & Hội Nhập 30-60-90 Ngày', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#15803d;margin-top:0;\">✅ HOÀN TẤT BỘ HỒ SƠ TUYỂN DỤNG &amp; HỘI NHẬP TRƯỞNG NHÓM CS</h2><ul><li><strong>Ứng viên đề xuất số 1:</strong> Trần Minh Anh (91/100 điểm).</li><li><strong>Mục tiêu 30 ngày đầu:</strong> Nắm vững sản phẩm TaskFlow và chuẩn hóa kịch bản gọi chào mừng khách hàng mới.</li><li><strong>Mục tiêu 60 ngày:</strong> Vận hành cổng Onboarding tự động rút ngắn thời gian xuống 3 ngày.</li><li><strong>Mục tiêu 90 ngày:</strong> Giảm tỷ lệ Churn nhóm SMB từ 6,2% xuống 4,3%.</li></ul></div>', userMsg:'@jd_truong_nhom_cs.md @danh_sach_ung_vien.csv @COMPANY.md Hãy xuất bộ hồ sơ vào ho_so_tuyen_dung_cs.md', aiMsg:'Đã hoàn tất chấm điểm ứng viên và lập lộ trình hội nhập 30-60-90 ngày tại <code>ho_so_tuyen_dung_cs.md</code>!'});",
+  "focus_selectors": [
+    "#editor-canvas",
+    "#ide-chat-messages"
+  ],
+  "cursor_selector": "#editor-canvas",
+  "cursor_label": "Bước 3: Hoàn tất trọn gói Tuyển dụng & Hội nhập 90 ngày!",
+  "caption": "Ở <strong>Bước 3</strong>, bộ hồ sơ <code>ho_so_tuyen_dung_cs.md</code> đã hoàn tất từ bảng chấm điểm ứng viên đến lộ trình thử việc 30-60-90 ngày. Khi đã chọn được người và mở rộng đại lý, làm sao để rà soát hợp đồng không bị rủi ro pháp lý? Chúng ta sang ngay <strong>Bài 23 — Tình huống 3</strong>!",
+  "audio_src": "audio/lesson_22/b6.mp3",
+  "audio_duration": 16.13
+}

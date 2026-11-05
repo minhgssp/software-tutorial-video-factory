@@ -1,19 +1,21 @@
 {
   "id": "b3",
-  "label": "3. Nút Dừng, Tiếp tục, Chấp nhận",
-  "duration": 11.29,
+  "label": "3. [Lý thuyết Kiểu 2] Cách chọn lệnh gạch chéo (/) không bị lỗi lặp chữ",
+  "duration": 14.25,
+  "pose": 3,
   "mode": "sim",
-  "pose": 4,
-  "surface": "ide",
+  "pedagogy_type": "theory_type_2",
+  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Kỹ thuật gọi Lệnh Gạch chéo (/)",
+  "pedagogy_title": "Tránh bẫy phím cách (Spacebar) khi bảng gợi ý lệnh / đang mở",
+  "pedagogy_note": "Gõ /start -> Dùng chuột click hoặc nhấn phím Enter/Tab để chọn /start-1-1. Không bấm phím Space để tránh bị nhân đôi thành /start-1-1-1.",
+  "onEnter": "kudoHidePopovers(); closeSettingsModal(); switchToSurface('ide'); openFileInEditor('1.1_Welcome.md'); kudoOpenStartWorkflowPopup();",
   "focus_selectors": [
-    "#ide-chat-messages",
-    "#ide-chat-box-card"
+    "#ide-popup-menu",
+    "#ide-chat-input"
   ],
-  "focus_pad": 6,
-  "cursor_selector": "#kudo-accept-step-btn",
-  "cursor_label": "Bấm Accept hoặc gõ 'Tiếp tục' / bấm ■ Stop",
-  "caption": "Trên giao diện Antigravity IDE, khi AI dừng lại hỏi quyền tạo tệp báo cáo, bạn bấm nút <code>Accept</code> màu xanh; nếu muốn dừng ngay thì bấm nút <code>■</code> ở góc dưới khung chat, hoặc gõ <code>Tiếp tục</code> để AI hoàn tất.",
-  "onEnter": "kudoRunThreeStuckStatesDemo();",
+  "cursor_selector": "#ide-popup-menu .popup-item:first-child",
+  "cursor_label": "Click chuột hoặc nhấn Enter để chọn /start-1-1",
+  "caption": "Khi quay lại <strong>Antigravity IDE</strong> và gõ dấu gạch chéo <code>/start</code>, một bảng gợi ý sẽ bật lên. Anh chị lưu ý kỹ thuật rất quan trọng: Hãy dùng chuột bấm chọn hoặc nhấn phím <kbd>Enter</kbd>, tuyệt đối không bấm phím cách để tránh lỗi nhân đôi tên lệnh.",
   "audio_src": "audio/lesson_04/b3.mp3",
-  "audio_duration": 10.64
+  "audio_duration": 13.6
 }
