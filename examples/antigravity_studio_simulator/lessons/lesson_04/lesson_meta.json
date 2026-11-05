@@ -1,10 +1,11 @@
 {
   "lesson_slug": "lesson_04",
   "filename": "lesson_04_vuot_qua_con_ngop_hoi_nguoc_ai.html",
-  "code": "BÀI 2.1",
-  "title": "Cách vượt qua cảm giác bỡ ngỡ ban đầu và thói quen hỏi trực tiếp trợ lý AI",
-  "short_title": "2.1 · Xử lý khi AI dừng & hỏi trực tiếp AI",
-  "description": "Xử lý 3 tình huống AI dừng/chờ (Stop, Tiếp tục, Accept), bật/tắt cây thư mục Ctrl+B, bật Preview / Office Viewer và hỏi trực tiếp AI.",
+  "code": "BÀI 4",
+  "title": "Làm chủ Giao diện & Hỏi Trợ lý AI",
+  "short_title": "Làm chủ Giao diện & Hỏi AI",
+  "pill_label": "Bài 4 · Làm chủ Giao diện",
+  "description": "Ba cách xử lý khi AI tạm dừng chờ lệnh, phím tắt khôi phục nhanh giao diện (Ctrl + B), bật chế độ xem trực quan và hỏi trực tiếp AI.",
   "slide_ids": [
     "s1"
   ],

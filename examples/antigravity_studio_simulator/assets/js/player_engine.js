@@ -29,10 +29,10 @@ function kudoUpdateCursorBtnUi() {
   const btn = document.getElementById("kp-cursor-btn");
   if (!btn) return;
   if (window.kudoHideCursorAndTip) {
-    btn.textContent = "🖱️ Hiện chuột & Tip [C]";
+    btn.textContent = "🖱️ Hiện chuột [C]";
     btn.classList.add("cursor-hidden-mode");
   } else {
-    btn.textContent = "🖱️ Ẩn chuột & Tip [C]";
+    btn.textContent = "🖱️ Ẩn chuột [C]";
     btn.classList.remove("cursor-hidden-mode");
   }
 }

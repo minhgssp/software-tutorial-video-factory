@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BÀI 2.2 — Thực hành dự án mẫu TaskFlow với lệnh /start-1-1 và lưu ý khi chọn lệnh gạch chéo</title>
-<meta name="description" content="Làm quen công ty giả lập TaskFlow Inc. (45 nhân sự), mở 1.1_Welcome.md, chọn lệnh /start-1-1 từ bảng gợi ý và tránh lỗi lặp thành /start-1-1-1.">
-<meta property="og:title" content="BÀI 2.2 — Thực hành dự án mẫu TaskFlow với lệnh /start-1-1 và lưu ý khi chọn lệnh gạch chéo">
-<meta property="og:description" content="Làm quen công ty giả lập TaskFlow Inc. (45 nhân sự), mở 1.1_Welcome.md, chọn lệnh /start-1-1 từ bảng gợi ý và tránh lỗi lặp thành /start-1-1-1.">
+<title>BÀI 5 — Thực hành Dự án với Lệnh Gạch chéo</title>
+<meta name="description" content="Làm quen bối cảnh dự án mẫu TaskFlow, gọi quy trình bằng dấu gạch chéo /start-1-1 đúng cách và trải nghiệm AI dẫn dắt từng bước.">
+<meta property="og:title" content="BÀI 5 — Thực hành Dự án với Lệnh Gạch chéo">
+<meta property="og:description" content="Làm quen bối cảnh dự án mẫu TaskFlow, gọi quy trình bằng dấu gạch chéo /start-1-1 đúng cách và trải nghiệm AI dẫn dắt từng bước.">
 <meta property="og:type" content="article">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LearningResource",
-  "name": "BÀI 2.2 — Thực hành dự án mẫu TaskFlow với lệnh /start-1-1 và lưu ý khi chọn lệnh gạch chéo",
-  "description": "Làm quen công ty giả lập TaskFlow Inc. (45 nhân sự), mở 1.1_Welcome.md, chọn lệnh /start-1-1 từ bảng gợi ý và tránh lỗi lặp thành /start-1-1-1.",
+  "name": "BÀI 5 — Thực hành Dự án với Lệnh Gạch chéo",
+  "description": "Làm quen bối cảnh dự án mẫu TaskFlow, gọi quy trình bằng dấu gạch chéo /start-1-1 đúng cách và trải nghiệm AI dẫn dắt từng bước.",
   "learningResourceType": "Interactive Simulation & Audio Lecture",
   "inLanguage": "vi",
   "isPartOf": {
@@ -816,7 +816,7 @@
   </div>
 </div>
 
-<!-- CỘT 1: SIDEBAR TRÁI (THƯƠNG HIỆU, CHUYỂN BÀI, THANH ĐIỀU KHIỂN & DANH SÁCH CÁC PHẦN NHỎ) -->
+<!-- CỘT 1: SIDEBAR TRÁI TINH GỌN (CHỌN BÀI, ĐIỀU KHIỂN 2 HÀNG & 47 ĐIỂM NEO THỜI GIAN CHỮ LỚN) -->
 <aside id="kudo-left-sidebar" aria-label="Thanh điều hướng và điều khiển bài giảng">
   <div class="ksb-brand-bar">
     <a class="ksb-brand-left" href="index.html" title="Về cổng mục lục khóa học">
@@ -827,20 +827,19 @@
       </div>
     </a>
     <div class="ksb-top-links">
-      <a class="ksb-mini-link" href="index.html" title="Mục lục 6 bài giảng">Mục lục</a>
+      <a class="ksb-mini-link" href="index.html" title="Mục lục khóa học">Mục lục</a>
     </div>
   </div>
 
   <div class="ksb-lesson-box">
-    <select class="ksb-lesson-select" id="ksb-lesson-select" aria-label="Chọn bài giảng" onchange="kudoSwitchLessonFromSidebar(this.value)" title="Chuyển nhanh giữa các bài giảng"></select>
+    <select class="ksb-lesson-select" id="ksb-lesson-select" aria-label="Chọn bài giảng" onchange="kudoSwitchLessonFromSidebar(this.value)" title="Chuyển nhanh giữa 6 bài giảng"></select>
     <div class="ksb-meta-row">
-      <span id="kudo-lesson-code">BÀI 1.1</span>
-      <span id="kudo-scene-indicator" aria-live="polite">Phần 1/10</span>
+      <span id="kudo-lesson-code">BÀI 1</span>
     </div>
     <div id="kudo-lesson-title">Tiêu đề bài giảng</div>
   </div>
 
-  <!-- HÀNG THANH ĐIỀU KHIỂN ĐÃ ĐƯA SANG SIDEBAR BÊN TRÁI -->
+  <!-- CỤM ĐIỀU KHIỂN 2 HÀNG GỌN GÀNG -->
   <div id="kudo-player-bar">
     <div class="ksb-ctrl-row-1">
       <button class="kp-btn primary" id="kp-play-btn" onclick="kudoTogglePlay()" title="Tạm dừng hoặc tiếp tục bài giảng (Phím tắt: Space)">⏸ Tạm dừng</button>
@@ -850,20 +849,17 @@
     <div class="ksb-ctrl-row-2">
       <button class="kp-btn" id="kp-mute-btn" onclick="kudoToggleMute()" title="Bật hoặc tắt tiếng thuyết minh (Phím tắt: M)">🔇 Tắt tiếng</button>
       <button class="kp-btn" id="kp-speed-btn" onclick="kudoCycleSpeed()" title="Đổi tốc độ phát thuyết minh">1.0x</button>
-      <div class="kp-time" id="kp-time-label">00:00 / 01:00</div>
-    </div>
-    <div class="ksb-ctrl-row-3">
-      <button class="kp-btn" id="kp-cursor-btn" onclick="kudoToggleCursorMode()" title="Ẩn hoặc hiện con trỏ chuột giả lập và nhãn gợi ý (Phím tắt: C)">🖱️ Ẩn chuột &amp; Tip [C]</button>
+      <button class="kp-btn" id="kp-cursor-btn" onclick="kudoToggleCursorMode()" title="Ẩn hoặc hiện con trỏ chuột giả lập và nhãn gợi ý (Phím tắt: C)">🖱️ Ẩn chuột [C]</button>
     </div>
     <div id="kudo-key-hud"></div>
   </div>
 
-  <!-- DANH SÁCH DỌC CÁC BÀI GIẢNG NHỎ / CÁC PHẦN TRONG BÀI -->
+  <!-- DANH SÁCH DỌC CÁC ĐIỂM NEO THỜI GIAN TRONG BÀI -->
   <div class="ksb-segments-header">
-    <span>Các phần trong bài học</span>
-    <span>Thời lượng</span>
+    <span id="kudo-scene-indicator" aria-live="polite">Phần 1/10</span>
+    <span class="kp-time" id="kp-time-label">00:00 / 02:07</span>
   </div>
-  <div class="kp-timeline" id="kp-timeline-segs" role="list" aria-label="Danh sách các phần nhỏ trong bài học"></div>
+  <div class="kp-timeline" id="kp-timeline-segs" role="list" aria-label="Danh sách các phần trong bài học"></div>
 </aside>
 
 <!-- CỘT 2: KHU VỰC TRÌNH CHIẾU CHÍNH & DẢI PHỤ ĐỀ BÊN PHẢI -->

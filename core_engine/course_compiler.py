@@ -76,6 +76,7 @@ class LessonSpecCompiler:
             "code": meta.get("code", ""),
             "title": meta.get("title", ""),
             "short_title": meta.get("short_title", meta.get("title", "")),
+            "pill_label": meta.get("pill_label", f"{meta.get('code', '')} · {meta.get('short_title', meta.get('title', ''))}"),
             "filename": meta.get("filename", ""),
             "description": meta.get("description", ""),
             "slides": slides_map,
@@ -151,6 +152,15 @@ class CourseManifestBuilder:
                 encoding="utf-8",
             )
 
+        chapters_json_path = config_dir / "chapters_manifest.json"
+        chapters_js_path = config_dir / "chapters_manifest.js"
+        if chapters_json_path.exists():
+            chapters_obj = json.loads(chapters_json_path.read_text(encoding="utf-8"))
+            chapters_js_path.write_text(
+                "window.KUDO_CHAPTERS_MANIFEST = " + json.dumps(chapters_obj, ensure_ascii=False, indent=2) + ";\n",
+                encoding="utf-8",
+            )
+
         return {
             "status": "ok",
             "course_root": str(root),
@@ -170,10 +180,13 @@ class CourseIntegrityAuditor:
         "DESIGN.md",
         "REVIEW.md",
         "llms.txt",
+        "BAI_HOC_DAT_TEN_VA_THIET_KE_MUC_LUC_KHOA_HOC.md",
         "config/brand_config.json",
         "config/brand_config.js",
         "config/course_manifest.json",
         "config/course_manifest.js",
+        "config/chapters_manifest.json",
+        "config/chapters_manifest.js",
         "config/pronunciation_lexicon.json",
         "assets/css/simulator_core.css",
         "assets/css/brand_tokens.css",
@@ -202,7 +215,14 @@ class CourseIntegrityAuditor:
             if "audition" in p.name.lower():
                 errors.append(f"Scope pollution detected (forbidden audition artifact in courseware): {p.relative_to(root)}")
 
-        # 3. Verify lessons, slides, sessions, and audio references
+        # 3. Verify Single-Sidebar Anti-Duplication rule in player_sidebar_layout.css
+        sidebar_css_path = root / "assets" / "css" / "player_sidebar_layout.css"
+        if sidebar_css_path.exists():
+            sidebar_css = sidebar_css_path.read_text(encoding="utf-8", errors="ignore")
+            if "body.in-iframe .ksb-brand-bar" not in sidebar_css:
+                errors.append("Missing 'body.in-iframe .ksb-brand-bar' anti-duplication rule in player_sidebar_layout.css")
+
+        # 4. Verify lessons, pedagogical metadata, slides, sessions, and audio references
         manifest_path = root / "config" / "course_manifest.json"
         lessons_checked = 0
         beats_checked = 0
@@ -213,6 +233,8 @@ class CourseIntegrityAuditor:
                     lessons_checked += 1
                     lslug = item.get("lesson_slug", "")
                     fname = item.get("filename", "")
+                    if not item.get("short_title") or not item.get("pill_label"):
+                        errors.append(f"Lesson {lslug} missing pedagogical 'short_title' or 'pill_label'")
                     if not fname or not (root / fname).exists():
                         errors.append(f"Missing lesson entry HTML file '{fname}' for {lslug}")
                     ldir = root / "lessons" / lslug

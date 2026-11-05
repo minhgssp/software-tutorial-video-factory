@@ -1,10 +1,11 @@
 {
   "lesson_slug": "lesson_06",
   "filename": "lesson_06_giai_nen_zip_open_folder_reveal_explorer.html",
-  "code": "BÀI 2.3",
-  "title": "Giải nén tệp .zip trước khi mở thư mục và đối chiếu tệp thật bằng Reveal in File Explorer",
-  "short_title": "2.3 · Giải nén .zip & Reveal in File Explorer",
-  "description": "Quy tắc Extract All tệp .zip, mở thư mục đã giải nén, bấm Cancel khi kéo thả nhầm thư mục và kiểm chứng đồng bộ 1-1 bằng Reveal in File Explorer.",
+  "code": "BÀI 6",
+  "title": "Quản lý Học liệu & Đồng bộ Tệp tin",
+  "short_title": "Quản lý Học liệu & Tệp tin",
+  "pill_label": "Bài 6 · Quản lý Học liệu",
+  "description": "Nguyên tắc giải nén học liệu .zip trước khi mở, cơ chế đồng bộ 1-1 với ổ cứng, tránh kéo nhầm thư mục và đối chiếu bằng Reveal in File Explorer.",
   "slide_ids": [
     "s1"
   ],

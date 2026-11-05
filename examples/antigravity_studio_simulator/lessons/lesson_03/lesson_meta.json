@@ -1,10 +1,11 @@
 {
   "lesson_slug": "lesson_03",
   "filename": "lesson_03_bo_ba_rule_skill_workflow.html",
-  "code": "BÀI 1.3",
-  "title": "Đánh giá qua tệp đầu ra trên ổ cứng và cách tổ chức thư mục .agent (Rules, Skills, Workflows)",
-  "short_title": "1.3 · Tổ chức .agent (Rules, Skills, Workflows)",
-  "description": "Ẩn dụ căn bếp cho Rules, Skills, Workflows cùng hồ sơ @troly.md, nghiệm thu sản phẩm đầu ra và chu trình 3 lệnh /grill-me, /plan, /learn.",
+  "code": "BÀI 3",
+  "title": "Bộ não AI: Rules, Skills, Workflows",
+  "short_title": "Rules, Skills & Workflows",
+  "pill_label": "Bài 3 · Rules, Skills, Workflows",
+  "description": "Cách tổ chức thư mục .agent gồm Rules, Skills, Workflows, nghiệm thu qua tệp đầu ra và phối hợp 3 lệnh /grill-me, /plan, /learn.",
   "slide_ids": [
     "s1",
     "s2"

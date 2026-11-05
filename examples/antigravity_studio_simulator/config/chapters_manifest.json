@@ -1,0 +1,380 @@
+[
+  {
+    "chapter_number": 1,
+    "code": "CHƯƠNG 1",
+    "title": "Tư duy Nền tảng & Làm quen Giao diện",
+    "subtitle": "Chuyển từ hỏi đáp trên web sang làm việc cùng Trợ lý AI trực tiếp trong thư mục máy tính",
+    "status": "ready",
+    "status_label": "Đã sẵn sàng · Học ngay",
+    "lessons_count": 6,
+    "beats_count": 47,
+    "duration_label": "09:05 · 47 điểm neo",
+    "default_lesson": "lesson_01_chatbot_vs_agent.html",
+    "lessons": [
+      {
+        "code": "Bài 1",
+        "title": "Tư duy & Giao diện Trợ lý AI",
+        "meta": "10 phần · 02:07",
+        "filename": "lesson_01_chatbot_vs_agent.html",
+        "ready": true
+      },
+      {
+        "code": "Bài 2",
+        "title": "Thiết lập Dự án & Chế độ Turbo",
+        "meta": "11 phần · 01:54",
+        "filename": "lesson_02_turbo_mode_and_workspace.html",
+        "ready": true
+      },
+      {
+        "code": "Bài 3",
+        "title": "Bộ não AI: Rules, Skills, Workflows",
+        "meta": "8 phần · 01:30",
+        "filename": "lesson_03_bo_ba_rule_skill_workflow.html",
+        "ready": true
+      },
+      {
+        "code": "Bài 4",
+        "title": "Làm chủ Giao diện & Hỏi Trợ lý AI",
+        "meta": "6 phần · 01:04",
+        "filename": "lesson_04_vuot_qua_con_ngop_hoi_nguoc_ai.html",
+        "ready": true
+      },
+      {
+        "code": "Bài 5",
+        "title": "Thực hành Dự án với Lệnh Gạch chéo",
+        "meta": "6 phần · 01:04",
+        "filename": "lesson_05_taskflow_start_1_1_bay_phim_space.html",
+        "ready": true
+      },
+      {
+        "code": "Bài 6",
+        "title": "Quản lý Học liệu & Đồng bộ Tệp tin",
+        "meta": "6 phần · 01:04",
+        "filename": "lesson_06_giai_nen_zip_open_folder_reveal_explorer.html",
+        "ready": true
+      }
+    ]
+  },
+  {
+    "chapter_number": 2,
+    "code": "CHƯƠNG 2",
+    "title": "Định dạng Dữ liệu & Hồ sơ Cá nhân hóa",
+    "subtitle": "Làm chủ tệp văn bản .md, bảng số liệu .csv, cài đặt Office Viewer và thiết lập hồ sơ @troly.md",
+    "status": "upcoming",
+    "status_label": "Chương 2 · Bài 7 – Bài 14",
+    "lessons_count": 8,
+    "beats_count": 64,
+    "duration_label": "8 bài giảng · Dự kiến 55 phút",
+    "default_lesson": "",
+    "lessons": [
+      {
+        "code": "Bài 7",
+        "title": "Tệp văn bản .md và bảng dữ liệu .csv cho dân văn phòng",
+        "meta": "Lý thuyết & Thực hành",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 8",
+        "title": "Xem bảng biểu trực quan với tiện ích Office Viewer",
+        "meta": "Thao tác IDE",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 9",
+        "title": "Thiết lập Hồ sơ cá nhân hóa @troly.md để AI hiểu gu làm việc",
+        "meta": "Cá nhân hóa",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 10",
+        "title": "Phân quyền tự chủ: Request Review, Default, Auto và Turbo",
+        "meta": "Quản trị an toàn",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 11",
+        "title": "Ký hiệu đính kèm @ và cách giao nhiều tệp cùng lúc",
+        "meta": "Kỹ năng giao việc",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 12",
+        "title": "Giao việc bằng giọng nói (Ctrl+M) và trích dẫn nhanh (Ctrl+L)",
+        "meta": "Phím tắt tăng tốc",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 13",
+        "title": "Cách chọn đúng mô hình AI cho từng loại công việc",
+        "meta": "Tối ưu chi phí & tốc độ",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 14",
+        "title": "Bài tập tổng hợp Chương 2 — Chuẩn hóa bộ hồ sơ cá nhân",
+        "meta": "Thực hành tổng hợp",
+        "filename": "",
+        "ready": false
+      }
+    ]
+  },
+  {
+    "chapter_number": 3,
+    "code": "CHƯƠNG 3",
+    "title": "Thiết lập Bộ não .agent & Kho Kỹ năng",
+    "subtitle": "Xây dựng nội quy Rules, đóng gói chuyên môn vào Skills, tạo lệnh Workflows và kết nối Kho Tiện ích",
+    "status": "upcoming",
+    "status_label": "Chương 3 · Bài 15 – Bài 22",
+    "lessons_count": 8,
+    "beats_count": 64,
+    "duration_label": "8 bài giảng · Dự kiến 60 phút",
+    "default_lesson": "",
+    "lessons": [
+      {
+        "code": "Bài 15",
+        "title": "Toàn cảnh thư mục .agent — Rules, Skills và Workflows phối hợp thế nào?",
+        "meta": "Kiến trúc cốt lõi",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 16",
+        "title": "Viết tệp Rules đầu tiên để rèn kỷ luật đầu ra cho AI",
+        "meta": "Thiết lập nội quy",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 17",
+        "title": "Khám phá cấu trúc một Skill chuẩn (SKILL.md, scripts và mẫu biểu)",
+        "meta": "Đóng gói kỹ năng",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 18",
+        "title": "Tạo lệnh gạch chéo Workflows (/) cho công việc lặp lại hàng tuần",
+        "meta": "Tự động hóa quy trình",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 19",
+        "title": "Chu trình 3 lệnh vàng: /grill-me, /plan và /learn",
+        "meta": "Tư duy cộng tác AI",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 20",
+        "title": "Kết nối Kho Kỹ năng (Skills Hub) và các cổng dữ liệu MCP",
+        "meta": "Mở rộng công cụ",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 21",
+        "title": "Kiểm tra và sửa lỗi khi AI không nhận diện đúng quy trình",
+        "meta": "Chẩn đoán & xử lý",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 22",
+        "title": "Bài tập tổng hợp Chương 3 — Đóng gói quy trình phòng ban",
+        "meta": "Thực hành tổng hợp",
+        "filename": "",
+        "ready": false
+      }
+    ]
+  },
+  {
+    "chapter_number": 4,
+    "code": "CHƯƠNG 4",
+    "title": "Ứng dụng Văn phòng Thực chiến",
+    "subtitle": "Tự động nghiên cứu thông tin trên Web, phân tích bảng tính doanh thu và xuất bản Slide thuyết trình",
+    "status": "upcoming",
+    "status_label": "Chương 4 · Bài 23 – Bài 29",
+    "lessons_count": 7,
+    "beats_count": 56,
+    "duration_label": "7 bài giảng · Dự kiến 50 phút",
+    "default_lesson": "",
+    "lessons": [
+      {
+        "code": "Bài 23",
+        "title": "Điều khiển trình duyệt tự động nghiên cứu thị trường và đối thủ",
+        "meta": "Nghiên cứu Web",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 24",
+        "title": "Làm sạch và phân tích dữ liệu doanh thu từ tệp CSV/Excel",
+        "meta": "Phân tích số liệu",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 25",
+        "title": "Tự động lập báo cáo tổng hợp kèm biểu đồ trực quan",
+        "meta": "Báo cáo quản trị",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 26",
+        "title": "Chuyển báo cáo văn bản thành bộ Slide thuyết trình HTML/PPTX",
+        "meta": "Thiết kế Slide",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 27",
+        "title": "Soạn thảo chuỗi nội dung đa kênh đồng nhất giọng văn thương hiệu",
+        "meta": "Sáng tạo nội dung",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 28",
+        "title": "Nghiệm thu chéo chất lượng đầu ra trước khi gửi sếp và khách hàng",
+        "meta": "Kiểm định đầu ra",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 29",
+        "title": "Bài tập tổng hợp Chương 4 — Từ bảng số liệu đến bộ Slide hoàn chỉnh",
+        "meta": "Thực hành tổng hợp",
+        "filename": "",
+        "ready": false
+      }
+    ]
+  },
+  {
+    "chapter_number": 5,
+    "code": "CHƯƠNG 5",
+    "title": "Tự động hóa Chuyên sâu & Quản trị Tri thức",
+    "subtitle": "Phối hợp đa Trợ lý AI, tổ chức kho tài liệu theo mô hình P.A.R.A, xuất Word/Excel chuẩn và hẹn giờ",
+    "status": "upcoming",
+    "status_label": "Chương 5 · Bài 30 – Bài 36",
+    "lessons_count": 7,
+    "beats_count": 56,
+    "duration_label": "7 bài giảng · Dự kiến 55 phút",
+    "default_lesson": "",
+    "lessons": [
+      {
+        "code": "Bài 30",
+        "title": "Tổ chức kho tài liệu máy tính theo mô hình 4 thư mục P.A.R.A",
+        "meta": "Quản trị tri thức",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 31",
+        "title": "Phối hợp nhiều Trợ lý AI cùng giải quyết dự án lớn",
+        "meta": "Đa trợ lý (Multi-Agent)",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 32",
+        "title": "Tự động tạo và chỉnh sửa tài liệu Word (.docx) đúng chuẩn trình bày",
+        "meta": "Tự động hóa Word",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 33",
+        "title": "Tự động xuất bảng tính Excel (.xlsx) có sẵn công thức sống",
+        "meta": "Tự động hóa Excel",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 34",
+        "title": "Thiết lập lịch hẹn giờ tự động chạy báo cáo mỗi sáng",
+        "meta": "Tác vụ định kỳ",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 35",
+        "title": "Bảo mật dữ liệu nhạy cảm và nguyên tắc sao lưu an toàn",
+        "meta": "An toàn thông tin",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 36",
+        "title": "Bài tập tổng hợp Chương 5 — Xây dựng bàn làm việc tự động hóa",
+        "meta": "Thực hành tổng hợp",
+        "filename": "",
+        "ready": false
+      }
+    ]
+  },
+  {
+    "chapter_number": 6,
+    "code": "CHƯƠNG 6",
+    "title": "5 Tình huống Đa ngành & Điều khiển Từ xa",
+    "subtitle": "Thực chiến 5 bài toán Nhân sự, Tài chính, Pháp chế, Kinh doanh, Đào tạo và điều khiển qua điện thoại",
+    "status": "upcoming",
+    "status_label": "Chương 6 · Bài 37 – Bài 42",
+    "lessons_count": 6,
+    "beats_count": 48,
+    "duration_label": "6 bài giảng · Dự kiến 45 phút",
+    "default_lesson": "",
+    "lessons": [
+      {
+        "code": "Bài 37",
+        "title": "Tình huống 1 — Tuyển dụng & Sàng lọc hồ sơ ứng viên tự động (HR)",
+        "meta": "Nhân sự",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 38",
+        "title": "Tình huống 2 — Đối soát công nợ & Báo cáo dòng tiền (Tài chính)",
+        "meta": "Tài chính - Kế toán",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 39",
+        "title": "Tình huống 3 — Rà soát điều khoản hợp đồng & Rủi ro (Pháp chế)",
+        "meta": "Pháp chế",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 40",
+        "title": "Tình huống 4 — Chăm sóc khách hàng & Lập đề xuất báo giá (Sales)",
+        "meta": "Kinh doanh",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 41",
+        "title": "Tình huống 5 — Biên soạn giáo trình & Học liệu tương tác (Đào tạo)",
+        "meta": "Giáo dục & Đào tạo",
+        "filename": "",
+        "ready": false
+      },
+      {
+        "code": "Bài 42",
+        "title": "Kết nối điện thoại điều khiển Trợ lý AI từ xa & Tổng kết khóa học",
+        "meta": "Điều khiển từ xa",
+        "filename": "",
+        "ready": false
+      }
+    ]
+  }
+]

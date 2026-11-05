@@ -1,9 +1,10 @@
 window.KUDO_SPEC = {
-  "code": "BÀI 1.1",
-  "title": "Từ hỏi đáp trên trình duyệt đến trợ lý AI làm việc trực tiếp trong thư mục máy tính",
-  "short_title": "1.1 · Trình duyệt web vs. Trợ lý làm việc trong thư mục",
+  "code": "BÀI 1",
+  "title": "Tư duy & Giao diện Trợ lý AI",
+  "short_title": "Tư duy & Giao diện AI",
+  "pill_label": "Bài 1 · Tư duy & Giao diện",
   "filename": "lesson_01_chatbot_vs_agent.html",
-  "description": "Phân biệt hai phần mềm độc lập Antigravity 2.0 và Antigravity IDE, cách chọn 5 mô hình AI, bấm Open IDE và đính kèm tệp bằng @.",
+  "description": "Phân biệt hỏi đáp trên web với Trợ lý AI làm việc trong thư mục máy tính, làm quen Antigravity 2.0, Antigravity IDE và 5 mô hình AI.",
   "slides": {
     "s1": "<div>\n                <div class=\"k-slide-header\">\n                  <span class=\"k-slide-kicker\">Phần 1 · Tư duy nền tảng</span>\n                  <span class=\"k-slide-step\">Cảnh 1 / 2 · Lý thuyết</span>\n                </div>\n                <div class=\"k-slide-h1\">Từ hỏi đáp trên trình duyệt web đến trợ lý làm việc trực tiếp trên máy tính</div>\n                <div class=\"k-slide-sub\">Tại sao dùng ChatGPT trên trình duyệt vẫn khiến dân văn phòng mất nhiều thời gian tải tệp và sao chép thủ công?</div>\n              </div>\n              <div class=\"k-grid-2\">\n                <div class=\"k-card k-step-item\" id=\"sl-c1\" data-order=\"1\">\n                  <span class=\"k-card-tag\" style=\"background:#FEE2E2; color:#991B1B;\">Cách cũ · Hỏi đáp trên trình duyệt</span>\n                  <h3>Chuyên gia tư vấn qua điện thoại</h3>\n                  <ul>\n                    <li><strong>Không nhìn thấy thư mục máy tính:</strong> Trình duyệt web không kết nối trực tiếp với các tệp hồ sơ có sẵn trên ổ cứng của bạn.</li>\n                    <li><strong>Thao tác rời rạc:</strong> Mỗi lần hỏi phải tải tệp lên, nhận câu trả lời xong lại phải tự bôi đen, sao chép và dán sang Word hoặc Excel.</li>\n                    <li><strong>Chỉ trả lời văn bản:</strong> Chỉ hiển thị chữ trên khung chat, không tự tạo hay sửa tệp trực tiếp trong thư mục dự án.</li>\n                  </ul>\n                </div>\n                <div class=\"k-card k-step-item\" id=\"sl-c2\" data-order=\"2\">\n                  <span class=\"k-card-tag\" style=\"background:#DCFCE7; color:#166534;\">Cách mới · Trợ lý AI trên máy tính</span>\n                  <h3>Trợ lý làm việc trực tiếp trong thư mục</h3>\n                  <ul>\n                    <li><strong>Kết nối thẳng vào thư mục dự án:</strong> Mở trực tiếp thư mục trên máy tính để trợ lý AI nhìn thấy toàn bộ tài liệu liên quan.</li>\n                    <li><strong>Tự mở tệp và chỉnh sửa:</strong> Tự đọc tài liệu, tổng hợp bảng số liệu và lưu tệp kết quả ngay trong thư mục của bạn.</li>\n                    <li><strong>Lưu giữ quy trình làm việc:</strong> Mọi quy tắc, kỹ năng và quy trình được lưu thành tệp văn bản ngay trên ổ cứng để tái sử dụng lâu dài.</li>\n                  </ul>\n                </div>\n              </div>\n              <div class=\"k-callout k-step-item\" id=\"sl-c3\" data-order=\"3\">\n                <span><strong>Điểm cốt lõi:</strong> Thay vì để ký ức trôi mất trên các cuộc chat trực tuyến, bạn lưu toàn bộ quy tắc và dữ liệu thành tệp <code>.md</code> và <code>.csv</code> ngay trên máy tính.</span>\n              </div>",
     "s2": "<div>\n                <div class=\"k-slide-header\">\n                  <span class=\"k-slide-kicker\">Phần 1 · Hai phần mềm độc lập và danh sách mô hình</span>\n                  <span class=\"k-slide-step\">Cảnh 2 / 2 · Lý thuyết</span>\n                </div>\n                <div class=\"k-slide-h1\">Hai phần mềm độc lập Antigravity 2.0, Antigravity IDE và cách chọn mô hình AI</div>\n                <div class=\"k-slide-sub\">Tại sao dân văn phòng dùng IDE (môi trường làm việc 3 cột) và khi nào nên chọn mô hình nhanh hay mô hình suy luận sâu?</div>\n              </div>\n              <div class=\"k-grid-3\">\n                <div class=\"k-card k-step-item\" id=\"s2-c1\" data-order=\"1\">\n                  <span class=\"k-card-tag\" style=\"background:#FEF3C7; color:#92400E;\">1 · Phần mềm Antigravity 2.0</span>\n                  <h3>Đổi tên từ Agent Manager cũ</h3>\n                  <p>Là <strong>phần mềm độc lập cài đặt riêng</strong> trên máy tính, dùng để giao việc cho nhiều luồng hội thoại song song, quản lý danh sách dự án và đặt lịch tự động.</p>\n                </div>\n                <div class=\"k-card k-step-item\" id=\"s2-c2\" data-order=\"2\">\n                  <span class=\"k-card-tag\" style=\"background:#E0F2FE; color:#075985;\">2 · Phần mềm Antigravity IDE</span>\n                  <h3>Vì sao dân văn phòng dùng IDE?</h3>\n                  <p>IDE là môi trường làm việc tích hợp 3 cột: cột trái quản lý cây thư mục, cột giữa xem trực tiếp tài liệu <code>.md</code>, <code>.csv</code>, <code>.html</code>, cột phải là khung chat giao việc và đính kèm tệp bằng <code>@</code>.</p>\n                </div>\n                <div class=\"k-card k-step-item\" id=\"s2-c3\" data-order=\"3\">\n                  <span class=\"k-card-tag\" style=\"background:#F3E8FF; color:#6B21A8;\">3 · Chọn mô hình theo độ khó</span>\n                  <h3>Tiết kiệm hạn mức và đúng việc</h3>\n                  <p><strong>Gemini 3.8 Flash Medium</strong> (việc đơn giản, tóm tắt nhanh, tiết kiệm hạn mức), <strong>Gemini 4 Argon Medium</strong> (cân bằng mặc định), <strong>Claude Sonnet 5.5 / Opus 5.5</strong> (lập kế hoạch, phân tích sâu).</p>\n                </div>\n              </div>\n              <div class=\"k-callout k-step-item\" id=\"s2-c4\" data-order=\"4\">\n                <span>Bây giờ, chúng ta sẽ quan sát bảng chọn 5 mô hình trên Antigravity 2.0, bấm nút <strong>Open IDE</strong> và làm quen với bố cục 3 cột của Antigravity IDE.</span>\n              </div>"
@@ -11,7 +12,7 @@ window.KUDO_SPEC = {
   "beats": [
     {
       "id": "b1",
-      "label": "1. Hạn chế khi hỏi trên web",
+      "label": "1. Chat Web khác gì Trợ lý AI?",
       "duration": 14.14,
       "mode": "theory",
       "pose": 1,
@@ -28,7 +29,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b2",
-      "label": "2. Trợ lý làm việc trong thư mục",
+      "label": "2. AI làm việc trong thư mục",
       "duration": 10.97,
       "mode": "theory",
       "pose": 2,
@@ -45,7 +46,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b3",
-      "label": "3. Lưu quy trình trên ổ cứng",
+      "label": "3. Lưu quy trình ngay trên máy",
       "duration": 9.13,
       "mode": "theory",
       "pose": 3,
@@ -62,7 +63,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b4",
-      "label": "4. Phần mềm Antigravity 2.0",
+      "label": "4. Giao diện Antigravity 2.0",
       "duration": 15.38,
       "mode": "theory",
       "pose": 4,
@@ -79,7 +80,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b5",
-      "label": "5. Vì sao dân văn phòng dùng IDE",
+      "label": "5. Vai trò của Antigravity IDE",
       "duration": 11.85,
       "mode": "theory",
       "pose": 5,
@@ -115,7 +116,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b7",
-      "label": "7. Bảng chọn 5 mô hình",
+      "label": "7. Thực hành chọn 5 mô hình",
       "duration": 12.81,
       "mode": "sim",
       "pose": 2,
@@ -134,7 +135,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b8",
-      "label": "8. Bấm nút Open IDE",
+      "label": "8. Mở không gian Antigravity IDE",
       "duration": 10.09,
       "mode": "sim",
       "pose": 7,
@@ -152,7 +153,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b9",
-      "label": "9. Cột trái và cột giữa IDE",
+      "label": "9. Cây thư mục và vùng soạn thảo",
       "duration": 12.41,
       "mode": "sim",
       "pose": 5,
@@ -171,7 +172,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b10",
-      "label": "10. Cột phải và đính kèm @",
+      "label": "10. Khung chat và đính kèm @",
       "duration": 13.53,
       "mode": "sim",
       "pose": 8,

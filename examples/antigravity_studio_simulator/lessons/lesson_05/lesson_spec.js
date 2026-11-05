@@ -1,16 +1,17 @@
 window.KUDO_SPEC = {
-  "code": "BÀI 2.2",
-  "title": "Thực hành dự án mẫu TaskFlow với lệnh /start-1-1 và lưu ý khi chọn lệnh gạch chéo",
-  "short_title": "2.2 · Thực hành TaskFlow với lệnh /start-1-1",
+  "code": "BÀI 5",
+  "title": "Thực hành Dự án với Lệnh Gạch chéo",
+  "short_title": "Thực hành Lệnh Gạch chéo /",
+  "pill_label": "Bài 5 · Thực hành Lệnh /",
   "filename": "lesson_05_taskflow_start_1_1_bay_phim_space.html",
-  "description": "Làm quen công ty giả lập TaskFlow Inc. (45 nhân sự), mở 1.1_Welcome.md, chọn lệnh /start-1-1 từ bảng gợi ý và tránh lỗi lặp thành /start-1-1-1.",
+  "description": "Làm quen bối cảnh dự án mẫu TaskFlow, gọi quy trình bằng dấu gạch chéo /start-1-1 đúng cách và trải nghiệm AI dẫn dắt từng bước.",
   "slides": {
     "s1": "<div>\n                <div class=\"k-slide-header\">\n                  <span class=\"k-slide-kicker\">Phần 5 · Thực hành dự án mẫu TaskFlow</span>\n                  <span class=\"k-slide-step\">Cảnh 1 / 1 · Lý thuyết</span>\n                </div>\n                <div class=\"k-slide-h1\">Cách khởi chạy bài thực hành /start-1-1 và tránh lỗi gõ thừa hậu tố</div>\n                <div class=\"k-slide-sub\">Hiểu bối cảnh công ty giả lập TaskFlow Inc. (45 nhân sự) và cách chọn lệnh trong bảng gợi ý của thư mục .agent/workflows.</div>\n              </div>\n              <div class=\"k-grid-2\">\n                <div class=\"k-card k-step-item\" id=\"sl-c1\" data-order=\"1\">\n                  <span class=\"k-card-tag\" style=\"background:#E0F2FE; color:#075985;\">1 · Bối cảnh công ty giả lập TaskFlow</span>\n                  <h3>Đóng vai quản lý vận hành tại TaskFlow Inc.</h3>\n                  <ul>\n                    <li><strong>Quy mô 45 nhân sự:</strong> Bạn làm việc cùng <strong>Alex</strong> (CEO), <strong>Sarah</strong> (Giám đốc Nhân sự) và <strong>Mike</strong> (Giám đốc Kinh doanh) trên bộ dữ liệu thật.</li>\n                    <li><strong>Bài thực hành có hướng dẫn từng bước:</strong> Gõ lệnh <code>/start-1-1</code> vào khung chat để AI dẫn dắt bạn đi qua từng nhiệm vụ nhỏ.</li>\n                  </ul>\n                </div>\n                <div class=\"k-card k-step-item\" id=\"sl-c2\" data-order=\"2\">\n                  <span class=\"k-card-tag\" style=\"background:#FEE2E2; color:#991B1B;\">2 · Lưu ý khi chọn bảng gợi ý lệnh /</span>\n                  <h3>Tránh biến lệnh /start-1-1 thành /start-1-1-1</h3>\n                  <ul>\n                    <li><strong>Nguyên nhân lỗi:</strong> Khi gõ <code>/start</code>, bảng gợi ý hiện ra <code>/start-1-1</code>. Nếu bạn bấm chọn hoặc nhấn phím Cách rồi lại gõ thêm <code>1-1</code>, ô chat sẽ bị lặp thành <code>/start-1-1-1</code>.</li>\n                    <li><strong>Cách thao tác chuẩn:</strong> Nhấp chuột chọn <code>/start-1-1</code> từ danh sách gợi ý rồi nhấn thẳng phím <kbd>Enter</kbd> để gửi đi.</li>\n                  </ul>\n                </div>\n              </div>\n              <div class=\"k-callout k-step-item\" id=\"sl-c3\" data-order=\"3\">\n                <span><strong>Mẹo kiểm tra nhanh:</strong> Quan sát nội dung trong ô nhập lệnh đã hiển thị đúng <code>/start-1-1</code> trước khi nhấn <kbd>Enter</kbd>.</span>\n              </div>"
   },
   "beats": [
     {
       "id": "b1",
-      "label": "1. Bối cảnh dự án TaskFlow",
+      "label": "1. Bối cảnh dự án mẫu TaskFlow",
       "duration": 13.13,
       "mode": "theory",
       "pose": 1,
@@ -27,7 +28,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b2",
-      "label": "2. Lưu ý tránh lặp /start-1-1-1",
+      "label": "2. Tránh lỗi lặp khi chọn lệnh /",
       "duration": 12.57,
       "mode": "theory",
       "pose": 4,
@@ -46,7 +47,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b3",
-      "label": "3. Mở tệp 1.1_Welcome.md",
+      "label": "3. Mở tài liệu 1.1_Welcome.md",
       "duration": 11.13,
       "mode": "sim",
       "pose": 5,
@@ -65,7 +66,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b4",
-      "label": "4. Gõ /start bật bảng gợi ý",
+      "label": "4. Gọi quy trình bằng dấu /",
       "duration": 8.57,
       "mode": "sim",
       "pose": 6,
@@ -84,7 +85,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b5",
-      "label": "5. Chọn /start-1-1 và nhấn Enter",
+      "label": "5. Chọn lệnh /start-1-1 chuẩn",
       "duration": 9.37,
       "mode": "sim",
       "pose": 7,
@@ -102,7 +103,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b6",
-      "label": "6. AI dẫn dắt bài thực hành",
+      "label": "6. AI dẫn dắt thực hành từng bước",
       "duration": 8.97,
       "mode": "sim",
       "pose": 8,

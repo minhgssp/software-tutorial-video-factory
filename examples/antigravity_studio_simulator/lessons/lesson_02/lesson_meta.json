@@ -1,10 +1,11 @@
 {
   "lesson_slug": "lesson_02",
   "filename": "lesson_02_turbo_mode_and_workspace.html",
-  "code": "BÀI 1.2",
-  "title": "Mở thư mục dự án, định dạng Markdown/CSV và bật chế độ tự chủ Turbo",
-  "short_title": "1.2 · Open Folder, Markdown/CSV & chế độ Turbo",
-  "description": "Thực hành Open Folder antigravity_course_vn, xem bảng CSV bằng Office Viewer, vào Settings bật quyền Turbo, thu giọng nói Ctrl+M và trích dẫn Ctrl+L.",
+  "code": "BÀI 2",
+  "title": "Thiết lập Dự án & Chế độ Turbo",
+  "short_title": "Mở Dự án & Chế độ Turbo",
+  "pill_label": "Bài 2 · Dự án & Turbo",
+  "description": "Nguyên tắc mở thư mục dự án, ưu tiên định dạng .md và .csv, cài đặt Office Viewer, bật quyền tự chủ Turbo và giao việc bằng giọng nói.",
   "slide_ids": [
     "s1",
     "s2"

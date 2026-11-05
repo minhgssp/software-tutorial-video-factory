@@ -1,16 +1,17 @@
 window.KUDO_SPEC = {
-  "code": "BÀI 2.3",
-  "title": "Giải nén tệp .zip trước khi mở thư mục và đối chiếu tệp thật bằng Reveal in File Explorer",
-  "short_title": "2.3 · Giải nén .zip & Reveal in File Explorer",
+  "code": "BÀI 6",
+  "title": "Quản lý Học liệu & Đồng bộ Tệp tin",
+  "short_title": "Quản lý Học liệu & Tệp tin",
+  "pill_label": "Bài 6 · Quản lý Học liệu",
   "filename": "lesson_06_giai_nen_zip_open_folder_reveal_explorer.html",
-  "description": "Quy tắc Extract All tệp .zip, mở thư mục đã giải nén, bấm Cancel khi kéo thả nhầm thư mục và kiểm chứng đồng bộ 1-1 bằng Reveal in File Explorer.",
+  "description": "Nguyên tắc giải nén học liệu .zip trước khi mở, cơ chế đồng bộ 1-1 với ổ cứng, tránh kéo nhầm thư mục và đối chiếu bằng Reveal in File Explorer.",
   "slides": {
     "s1": "<div>\n                <div class=\"k-slide-header\">\n                  <span class=\"k-slide-kicker\">Phần 6 · Quản lý tệp tin trên máy tính</span>\n                  <span class=\"k-slide-step\">Cảnh 1 / 1 · Lý thuyết</span>\n                </div>\n                <div class=\"k-slide-h1\">Quy tắc giải nén tệp .zip và kiểm tra sự đồng bộ 1-1 với ổ cứng máy tính</div>\n                <div class=\"k-slide-sub\">Hiểu rõ mối liên hệ trực tiếp giữa cây thư mục trong Antigravity IDE và cửa sổ quản lý tệp của hệ điều hành.</div>\n              </div>\n              <div class=\"k-grid-2\">\n                <div class=\"k-card k-step-item\" id=\"sl-c1\" data-order=\"1\">\n                  <span class=\"k-card-tag\" style=\"background:#FEF3C7; color:#92400E;\">Quy tắc 1 · Giải nén tệp .zip</span>\n                  <h3>Phải Extract All trước khi chọn Open Folder</h3>\n                  <ul>\n                    <li><strong>Không mở trực tiếp trong tệp nén:</strong> Khi tải học liệu dạng <code>.zip</code> về máy, nếu chưa giải nén thì Antigravity sẽ không thấy thư mục thật để tạo và lưu tệp mới.</li>\n                    <li><strong>Thao tác chuẩn:</strong> Nhấp chuột phải vào tệp <code>.zip</code>, chọn <strong>Extract All</strong> (Giải nén tất cả) ra một thư mục cố định trên ổ đĩa rồi mới mở trong Antigravity.</li>\n                  </ul>\n                </div>\n                <div class=\"k-card k-step-item\" id=\"sl-c2\" data-order=\"2\">\n                  <span class=\"k-card-tag\" style=\"background:#DCFCE7; color:#166534;\">Quy tắc 2 · Reveal in File Explorer</span>\n                  <h3>Kiểm chứng sự đồng bộ 1-1 với máy tính</h3>\n                  <ul>\n                    <li><strong>Không phải bản sao ảo:</strong> Mọi tệp do AI tạo ra trong cột trái của Antigravity IDE đều là tệp thật nằm ngay trên ổ cứng máy tính của bạn.</li>\n                    <li><strong>Mở nhanh vị trí tệp:</strong> Nhấp chuột phải vào bất kỳ tệp nào ở cột trái và chọn <strong>Reveal in File Explorer</strong> (hoặc <em>Reveal in Finder</em> trên máy Mac) để mở đúng thư mục chứa tệp đó.</li>\n                  </ul>\n                </div>\n              </div>\n              <div class=\"k-callout k-step-item\" id=\"sl-c3\" data-order=\"3\">\n                <span><strong>Lưu ý an toàn:</strong> Tránh kéo thả nhầm thư mục này lồng vào trong thư mục khác trên cột Explorer bên trái; nếu hiện hộp thoại hỏi di chuyển, hãy bấm <strong>Cancel</strong>.</span>\n              </div>"
   },
   "beats": [
     {
       "id": "b1",
-      "label": "1. Giải nén tệp .zip trước khi mở",
+      "label": "1. Giải nén .zip trước khi học",
       "duration": 10.17,
       "mode": "theory",
       "pose": 1,
@@ -27,7 +28,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b2",
-      "label": "2. Đồng bộ 1-1 và tránh kéo nhầm",
+      "label": "2. Đồng bộ 1-1 với ổ cứng máy",
       "duration": 12.25,
       "mode": "theory",
       "pose": 2,
@@ -64,7 +65,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b4",
-      "label": "4. Cảnh báo kéo thả nhầm thư mục",
+      "label": "4. Tránh kéo thả nhầm thư mục",
       "duration": 10.09,
       "mode": "sim",
       "pose": 4,
@@ -82,7 +83,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b5",
-      "label": "5. Chọn Reveal in File Explorer",
+      "label": "5. Mở vị trí tệp thật trên máy",
       "duration": 10.73,
       "mode": "sim",
       "pose": 6,
@@ -101,7 +102,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b6",
-      "label": "6. Xem tệp INDEX.md của khóa học",
+      "label": "6. Lộ trình học trong INDEX.md",
       "duration": 10.41,
       "mode": "sim",
       "pose": 7,

@@ -67,6 +67,12 @@ def test_5layer_course_compiler_and_manifest() -> None:
     assert course_res["total_beats"] == 47
     assert course_res["total_duration_sec"] > 500.0
     assert Path(course_res["manifest_js"]).exists()
+    assert (cdir / "config" / "chapters_manifest.js").exists()
+    assert (cdir / "BAI_HOC_DAT_TEN_VA_THIET_KE_MUC_LUC_KHOA_HOC.md").exists()
+    index_txt = (cdir / "index.html").read_text(encoding="utf-8")
+    assert 'id="home-view"' in index_txt and 'id="player-view"' in index_txt
+    tokens_txt = (cdir / "assets" / "css" / "brand_tokens.css").read_text(encoding="utf-8")
+    assert "--kudo-bg-cream: #FAF8F5" in tokens_txt and "--kudo-sidebar-width: 315px" in tokens_txt
 
 
 def test_5layer_course_integrity_and_zero_audition_pollution() -> None:

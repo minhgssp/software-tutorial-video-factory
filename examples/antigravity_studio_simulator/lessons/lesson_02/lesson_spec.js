@@ -1,9 +1,10 @@
 window.KUDO_SPEC = {
-  "code": "BÀI 1.2",
-  "title": "Mở thư mục dự án, định dạng Markdown/CSV và bật chế độ tự chủ Turbo",
-  "short_title": "1.2 · Open Folder, Markdown/CSV & chế độ Turbo",
+  "code": "BÀI 2",
+  "title": "Thiết lập Dự án & Chế độ Turbo",
+  "short_title": "Mở Dự án & Chế độ Turbo",
+  "pill_label": "Bài 2 · Dự án & Turbo",
   "filename": "lesson_02_turbo_mode_and_workspace.html",
-  "description": "Thực hành Open Folder antigravity_course_vn, xem bảng CSV bằng Office Viewer, vào Settings bật quyền Turbo, thu giọng nói Ctrl+M và trích dẫn Ctrl+L.",
+  "description": "Nguyên tắc mở thư mục dự án, ưu tiên định dạng .md và .csv, cài đặt Office Viewer, bật quyền tự chủ Turbo và giao việc bằng giọng nói.",
   "slides": {
     "s1": "<div>\n                <div class=\"k-slide-header\">\n                  <span class=\"k-slide-kicker\">Phần 2 · Thiết lập không gian làm việc</span>\n                  <span class=\"k-slide-step\">Cảnh 1 / 2 · Lý thuyết</span>\n                </div>\n                <div class=\"k-slide-h1\">Quy tắc mở cả thư mục dự án và ưu thế của định dạng Markdown, CSV</div>\n                <div class=\"k-slide-sub\">Tránh sai lầm mở từng tệp rời rạc khiến trợ lý AI không nhìn thấy các tài liệu liên quan trong dự án.</div>\n              </div>\n              <div class=\"k-grid-2\">\n                <div class=\"k-card k-step-item\" id=\"sl-c1\" data-order=\"1\">\n                  <span class=\"k-card-tag\" style=\"background:#DBEAFE; color:#1E40AF;\">Quy tắc số 1 · Open Folder</span>\n                  <h3>Luôn mở cả thư mục dự án</h3>\n                  <ul>\n                    <li><strong>Không dùng Open File lẻ tẻ:</strong> Mở một tệp đơn lẻ giống như đưa cho trợ lý đúng một tờ giấy rời, họ không biết dữ liệu hay quy tắc nằm ở đâu.</li>\n                    <li><strong>Luôn chọn File -> Open Folder:</strong> Đưa toàn bộ thư mục <code>antigravity_course_vn</code> vào phần mềm để AI tự động đối chiếu các tệp với nhau.</li>\n                  </ul>\n                </div>\n                <div class=\"k-card k-step-item\" id=\"sl-c2\" data-order=\"2\">\n                  <span class=\"k-card-tag\" style=\"background:#FCE7F3; color:#9D174D;\">Quy tắc số 2 · Markdown và CSV</span>\n                  <h3>Tại sao ưu tiên .md và .csv cho dữ liệu nguồn?</h3>\n                  <ul>\n                    <li><strong>Markdown (<code>.md</code>) cho văn bản:</strong> Nhẹ, phân cấp tiêu đề rõ ràng bằng dấu <code>#</code>, giúp AI đọc hiểu cấu trúc nhanh và chính xác.</li>\n                    <li><strong>CSV (<code>.csv</code>) cho bảng số liệu:</strong> Bảng dữ liệu thuần túy ngăn cách bằng dấu phẩy. Nhờ tiện ích <strong>Office Viewer</strong>, bạn vẫn xem và sửa bảng kẻ ô trực quan ngay trong IDE.</li>\n                  </ul>\n                </div>\n              </div>\n              <div class=\"k-callout k-step-item\" id=\"sl-c3\" data-order=\"3\">\n                <span><strong>Mẹo thực hành:</strong> Cài đặt tiện ích <strong>Office Viewer</strong> trong mục Extensions của Antigravity IDE để xem tệp <code>.md</code> và <code>.csv</code> trực quan như Google Docs và Excel.</span>\n              </div>",
     "s2": "<div>\n                <div class=\"k-slide-header\">\n                  <span class=\"k-slide-kicker\">Phần 2 · Tăng tốc thao tác hàng ngày</span>\n                  <span class=\"k-slide-step\">Cảnh 2 / 2 · Lý thuyết</span>\n                </div>\n                <div class=\"k-slide-h1\">Bật quyền tự chủ Turbo và hai phím tắt giao việc nhanh</div>\n                <div class=\"k-slide-sub\">Giảm thao tác bấm xác nhận thủ công và kết hợp nhập liệu bằng giọng nói tiếng Việt.</div>\n              </div>\n              <div class=\"k-grid-3\">\n                <div class=\"k-card k-step-item\" id=\"s2-c1\" data-order=\"1\">\n                  <span class=\"k-card-tag\" style=\"background:#DCFCE7; color:#166534;\">1 · Permissions = Turbo</span>\n                  <h3>Ủy quyền tự động thực thi</h3>\n                  <p>Vào <strong>Settings -> General -> This Computer</strong> và chuyển sang <strong>Turbo</strong> để AI tự tạo tệp, sửa báo cáo và chạy công cụ mà không dừng lại chờ bấm duyệt từng bước nhỏ.</p>\n                </div>\n                <div class=\"k-card k-step-item\" id=\"s2-c2\" data-order=\"2\">\n                  <span class=\"k-card-tag\" style=\"background:#FEF3C7; color:#92400E;\">2 · Voice Input (Ctrl + M)</span>\n                  <h3>Giao việc bằng giọng nói</h3>\n                  <p>Nhấn tổ hợp phím <kbd>Ctrl + M</kbd> hoặc <kbd>Windows + H</kbd> để đọc trực tiếp yêu cầu bằng tiếng Việt nhanh gấp ba lần tốc độ gõ bàn phím.</p>\n                </div>\n                <div class=\"k-card k-step-item\" id=\"s2-c3\" data-order=\"3\">\n                  <span class=\"k-card-tag\" style=\"background:#E0E7FF; color:#3730A3;\">3 · Quote in Chat (Ctrl + L)</span>\n                  <h3>Trích dẫn đoạn văn bôi đen</h3>\n                  <p>Khi đang đọc tài liệu, chỉ cần bôi đen đoạn văn cần sửa rồi nhấn <kbd>Ctrl + L</kbd>, đoạn đó sẽ được đưa thẳng vào khung chat kèm vị trí dòng chính xác.</p>\n                </div>\n              </div>\n              <div class=\"k-callout k-step-item\" id=\"s2-c4\" data-order=\"4\">\n                <span>Hãy quan sát đầy đủ thao tác thực tế ngay trên màn hình: mở thư mục <code>antigravity_course_vn</code>, xem bảng <code>sales_data.csv</code>, vào Settings bật <strong>Turbo</strong>, thu giọng nói <kbd>Ctrl + M</kbd> và trích dẫn <kbd>Ctrl + L</kbd>.</span>\n              </div>"
@@ -11,7 +12,7 @@ window.KUDO_SPEC = {
   "beats": [
     {
       "id": "b1",
-      "label": "1. Quy tắc Open Folder",
+      "label": "1. Nguyên tắc mở thư mục dự án",
       "duration": 9.85,
       "mode": "theory",
       "pose": 1,
@@ -28,7 +29,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b2",
-      "label": "2. Ưu thế của Markdown và CSV",
+      "label": "2. Ưu tiên định dạng .md và .csv",
       "duration": 10.89,
       "mode": "theory",
       "pose": 2,
@@ -45,7 +46,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b3",
-      "label": "3. Tiện ích Office Viewer",
+      "label": "3. Xem bảng bằng Office Viewer",
       "duration": 11.05,
       "mode": "theory",
       "pose": 3,
@@ -62,7 +63,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b4",
-      "label": "4. Cấp quyền tự chủ Turbo",
+      "label": "4. Cơ chế quyền tự chủ Turbo",
       "duration": 8.17,
       "mode": "theory",
       "pose": 4,
@@ -79,7 +80,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b5",
-      "label": "5. Phím tắt Ctrl + M và Ctrl + L",
+      "label": "5. Giọng nói và trích dẫn nhanh",
       "duration": 9.53,
       "mode": "theory",
       "pose": 5,
@@ -100,7 +101,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b6",
-      "label": "6. Thao tác Open Folder",
+      "label": "6. Thực hành mở thư mục dự án",
       "duration": 12.01,
       "mode": "sim",
       "pose": 2,
@@ -118,7 +119,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b7",
-      "label": "7. Xem bảng CSV bằng Office Viewer",
+      "label": "7. Thực hành đọc bảng .csv",
       "duration": 10.33,
       "mode": "sim",
       "pose": 6,
@@ -137,7 +138,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b8",
-      "label": "8. Mở nút Settings ở góc trái",
+      "label": "8. Mở bảng cài đặt quyền AI",
       "duration": 9.29,
       "mode": "sim",
       "pose": 3,
@@ -155,7 +156,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b9",
-      "label": "9. Chuyển This Computer sang Turbo",
+      "label": "9. Bật chế độ tự chủ Turbo",
       "duration": 11.21,
       "mode": "sim",
       "pose": 4,
@@ -174,7 +175,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b10",
-      "label": "10. Giao việc giọng nói Ctrl + M",
+      "label": "10. Giao việc giọng nói (Ctrl+M)",
       "duration": 10.97,
       "mode": "sim",
       "pose": 7,
@@ -192,7 +193,7 @@ window.KUDO_SPEC = {
     },
     {
       "id": "b11",
-      "label": "11. Bôi đen và nhấn Ctrl + L",
+      "label": "11. Bôi đen trích dẫn (Ctrl+L)",
       "duration": 10.97,
       "mode": "sim",
       "pose": 8,

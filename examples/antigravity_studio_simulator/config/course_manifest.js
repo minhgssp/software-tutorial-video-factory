@@ -2,10 +2,11 @@ window.KUDO_COURSE_MANIFEST = [
   {
     "lesson_slug": "lesson_01",
     "filename": "lesson_01_chatbot_vs_agent.html",
-    "code": "BÀI 1.1",
-    "title": "Từ hỏi đáp trên trình duyệt đến trợ lý AI làm việc trực tiếp trong thư mục máy tính",
-    "short_title": "1.1 · Trình duyệt web vs. Trợ lý làm việc trong thư mục",
-    "description": "Phân biệt hai phần mềm độc lập Antigravity 2.0 và Antigravity IDE, cách chọn 5 mô hình AI, bấm Open IDE và đính kèm tệp bằng @.",
+    "code": "BÀI 1",
+    "title": "Tư duy & Giao diện Trợ lý AI",
+    "short_title": "Tư duy & Giao diện AI",
+    "pill_label": "Bài 1 · Tư duy & Giao diện",
+    "description": "Phân biệt hỏi đáp trên web với Trợ lý AI làm việc trong thư mục máy tính, làm quen Antigravity 2.0, Antigravity IDE và 5 mô hình AI.",
     "slide_ids": [
       "s1",
       "s2"
@@ -29,10 +30,11 @@ window.KUDO_COURSE_MANIFEST = [
   {
     "lesson_slug": "lesson_02",
     "filename": "lesson_02_turbo_mode_and_workspace.html",
-    "code": "BÀI 1.2",
-    "title": "Mở thư mục dự án, định dạng Markdown/CSV và bật chế độ tự chủ Turbo",
-    "short_title": "1.2 · Open Folder, Markdown/CSV & chế độ Turbo",
-    "description": "Thực hành Open Folder antigravity_course_vn, xem bảng CSV bằng Office Viewer, vào Settings bật quyền Turbo, thu giọng nói Ctrl+M và trích dẫn Ctrl+L.",
+    "code": "BÀI 2",
+    "title": "Thiết lập Dự án & Chế độ Turbo",
+    "short_title": "Mở Dự án & Chế độ Turbo",
+    "pill_label": "Bài 2 · Dự án & Turbo",
+    "description": "Nguyên tắc mở thư mục dự án, ưu tiên định dạng .md và .csv, cài đặt Office Viewer, bật quyền tự chủ Turbo và giao việc bằng giọng nói.",
     "slide_ids": [
       "s1",
       "s2"
@@ -57,10 +59,11 @@ window.KUDO_COURSE_MANIFEST = [
   {
     "lesson_slug": "lesson_03",
     "filename": "lesson_03_bo_ba_rule_skill_workflow.html",
-    "code": "BÀI 1.3",
-    "title": "Đánh giá qua tệp đầu ra trên ổ cứng và cách tổ chức thư mục .agent (Rules, Skills, Workflows)",
-    "short_title": "1.3 · Tổ chức .agent (Rules, Skills, Workflows)",
-    "description": "Ẩn dụ căn bếp cho Rules, Skills, Workflows cùng hồ sơ @troly.md, nghiệm thu sản phẩm đầu ra và chu trình 3 lệnh /grill-me, /plan, /learn.",
+    "code": "BÀI 3",
+    "title": "Bộ não AI: Rules, Skills, Workflows",
+    "short_title": "Rules, Skills & Workflows",
+    "pill_label": "Bài 3 · Rules, Skills, Workflows",
+    "description": "Cách tổ chức thư mục .agent gồm Rules, Skills, Workflows, nghiệm thu qua tệp đầu ra và phối hợp 3 lệnh /grill-me, /plan, /learn.",
     "slide_ids": [
       "s1",
       "s2"
@@ -82,10 +85,11 @@ window.KUDO_COURSE_MANIFEST = [
   {
     "lesson_slug": "lesson_04",
     "filename": "lesson_04_vuot_qua_con_ngop_hoi_nguoc_ai.html",
-    "code": "BÀI 2.1",
-    "title": "Cách vượt qua cảm giác bỡ ngỡ ban đầu và thói quen hỏi trực tiếp trợ lý AI",
-    "short_title": "2.1 · Xử lý khi AI dừng & hỏi trực tiếp AI",
-    "description": "Xử lý 3 tình huống AI dừng/chờ (Stop, Tiếp tục, Accept), bật/tắt cây thư mục Ctrl+B, bật Preview / Office Viewer và hỏi trực tiếp AI.",
+    "code": "BÀI 4",
+    "title": "Làm chủ Giao diện & Hỏi Trợ lý AI",
+    "short_title": "Làm chủ Giao diện & Hỏi AI",
+    "pill_label": "Bài 4 · Làm chủ Giao diện",
+    "description": "Ba cách xử lý khi AI tạm dừng chờ lệnh, phím tắt khôi phục nhanh giao diện (Ctrl + B), bật chế độ xem trực quan và hỏi trực tiếp AI.",
     "slide_ids": [
       "s1"
     ],
@@ -104,10 +108,11 @@ window.KUDO_COURSE_MANIFEST = [
   {
     "lesson_slug": "lesson_05",
     "filename": "lesson_05_taskflow_start_1_1_bay_phim_space.html",
-    "code": "BÀI 2.2",
-    "title": "Thực hành dự án mẫu TaskFlow với lệnh /start-1-1 và lưu ý khi chọn lệnh gạch chéo",
-    "short_title": "2.2 · Thực hành TaskFlow với lệnh /start-1-1",
-    "description": "Làm quen công ty giả lập TaskFlow Inc. (45 nhân sự), mở 1.1_Welcome.md, chọn lệnh /start-1-1 từ bảng gợi ý và tránh lỗi lặp thành /start-1-1-1.",
+    "code": "BÀI 5",
+    "title": "Thực hành Dự án với Lệnh Gạch chéo",
+    "short_title": "Thực hành Lệnh Gạch chéo /",
+    "pill_label": "Bài 5 · Thực hành Lệnh /",
+    "description": "Làm quen bối cảnh dự án mẫu TaskFlow, gọi quy trình bằng dấu gạch chéo /start-1-1 đúng cách và trải nghiệm AI dẫn dắt từng bước.",
     "slide_ids": [
       "s1"
     ],
@@ -126,10 +131,11 @@ window.KUDO_COURSE_MANIFEST = [
   {
     "lesson_slug": "lesson_06",
     "filename": "lesson_06_giai_nen_zip_open_folder_reveal_explorer.html",
-    "code": "BÀI 2.3",
-    "title": "Giải nén tệp .zip trước khi mở thư mục và đối chiếu tệp thật bằng Reveal in File Explorer",
-    "short_title": "2.3 · Giải nén .zip & Reveal in File Explorer",
-    "description": "Quy tắc Extract All tệp .zip, mở thư mục đã giải nén, bấm Cancel khi kéo thả nhầm thư mục và kiểm chứng đồng bộ 1-1 bằng Reveal in File Explorer.",
+    "code": "BÀI 6",
+    "title": "Quản lý Học liệu & Đồng bộ Tệp tin",
+    "short_title": "Quản lý Học liệu & Tệp tin",
+    "pill_label": "Bài 6 · Quản lý Học liệu",
+    "description": "Nguyên tắc giải nén học liệu .zip trước khi mở, cơ chế đồng bộ 1-1 với ổ cứng, tránh kéo nhầm thư mục và đối chiếu bằng Reveal in File Explorer.",
     "slide_ids": [
       "s1"
     ],

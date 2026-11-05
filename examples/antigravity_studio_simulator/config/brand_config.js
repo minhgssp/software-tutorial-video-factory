@@ -1,16 +1,19 @@
 window.KUDO_BRAND_CONFIG = {
   "course_name": "Antigravity Basic",
-  "course_subtitle": "Hệ thống bài giảng mô phỏng tương tác & thuyết minh VieNeu-TTS 48kHz",
+  "course_subtitle": "Khóa học thực hành Trợ lý AI làm việc trực tiếp trên máy tính",
   "logo_text": "A",
   "logo_image_url": "",
   "organization": "HoctapTech Academy",
   "instructor": "Hoàng Đức Minh",
   "voice_model": "VieNeu-TTS v3 Turbo 48kHz (Minh Quân Pro)",
   "theme": {
-    "sidebar_width_px": 280,
+    "name": "Cream Beige & Orange Accent (Be Kem & Da Cam Nhấn)",
+    "sidebar_width_px": 315,
     "primary_color": "#CB4B16",
+    "orange_accent": "#EA580C",
     "accent_color": "#F59E0B",
-    "bg_dark": "#0B0F19",
-    "sidebar_bg": "#111827"
+    "bg_cream": "#FAF8F5",
+    "sidebar_bg": "#F4EFE6",
+    "header_bg": "#EFE9DD"
   }
 };

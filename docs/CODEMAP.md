@@ -25,11 +25,11 @@ flowchart TB
     end
 
     subgraph WEB_RUNTIME["3. KIẾN TRÚC GIÁO ÁN TƯƠNG TÁC 5 LỚP (5-LAYER WEB COURSEWARE)"]
-        L1["Lớp 1: config/<br/>(brand_config.js, course_manifest.js,<br/>pronunciation_lexicon.json)"]
+        L1["Lớp 1: config/<br/>(brand_config.js, course_manifest.js,<br/>chapters_manifest.js, pronunciation_lexicon.json)"]
         L2["Lớp 2: assets/css/<br/>(simulator_core.css, brand_tokens.css,<br/>player_sidebar_layout.css, simulator_overrides.css)"]
         L3["Lớp 3: assets/js/ & avatar/ & templates/<br/>(simulator_core.js, simulator_actions.js,<br/>spotlight_cursor.js, player_engine.js,<br/>lecturer_poses.js, simulator_stage_dom.html)"]
         L4["Lớp 4: lessons/lesson_01..06/ & audio/<br/>(lesson_meta.json, slides/s*.html,<br/>sessions/b*.json -> lesson_spec.js)"]
-        L5["Lớp 5: Cổng Trình Chiếu & AX Docs<br/>(index.html, lesson_01..06_*.html,<br/>DESIGN.md, REVIEW.md, llms.txt)"]
+        L5["Lớp 5: Cổng Chọn Chương & AX Docs<br/>(index.html #home-view + #player-view,<br/>lesson_01..06_*.html, DESIGN.md, REVIEW.md, llms.txt,<br/>BAI_HOC_DAT_TEN_VA_THIET_KE_MUC_LUC_KHOA_HOC.md)"]
     end
 
     subgraph OUTPUT["4. ĐẦU RA KÉP (DUAL DELIVERABLES)"]
@@ -152,12 +152,13 @@ sequenceDiagram
 
 | Lớp (Layer) | Đường dẫn tệp | Biến toàn cục / Hàm xuất ra | Vai trò trong Giáo án |
 | :--- | :--- | :--- | :--- |
-| **Lớp 1: Cấu hình (`config/`)** | `config/brand_config.json` & `.js` | `window.KUDO_BRAND_CONFIG` | Lưu tên khóa học, học viện, giảng viên, bảng màu thương hiệu. |
-| **Lớp 1: Cấu hình (`config/`)** | `config/course_manifest.json` & `.js` | `window.KUDO_COURSE_MANIFEST` | Danh mục 6 bài học, mã bài, số phần nhỏ (`beats_count`), thời lượng (`duration_formatted`). |
+| **Lớp 1: Cấu hình (`config/`)** | `config/brand_config.json` & `.js` | `window.KUDO_BRAND_CONFIG` | Lưu tên khóa học, học viện, giảng viên, bảng màu thương hiệu Be Kem & Da Cam Nhấn (`#FAF8F5`, `#F4EFE6`, `#CB4B16`). |
+| **Lớp 1: Cấu hình (`config/`)** | `config/course_manifest.json` & `.js` | `window.KUDO_COURSE_MANIFEST` | Danh mục 6 bài học (`BÀI 1`..`BÀI 6`), `short_title`, `pill_label`, số phần nhỏ (`beats_count`), thời lượng (`duration_formatted`). |
+| **Lớp 1: Cấu hình (`config/`)** | `config/chapters_manifest.json` & `.js` | `window.KUDO_CHAPTERS_MANIFEST` | Lộ trình tổng thể 6 Chương · 42 Bài giảng phục vụ Trang chủ Chọn Chương (`#home-view` trên `index.html`). |
 | **Lớp 1: Cấu hình (`config/`)** | `config/pronunciation_lexicon.json` | JSON cấu hình phát âm | Quy tắc giữ nguyên tiếng Anh gốc và đọc dấu chấm đuôi tệp (`.zip` $\to$ `Chấm zip`). |
 | **Lớp 2: Giao diện (`assets/css/`)** | `assets/css/simulator_core.css` | CSS cho `#surface-mgr` & `#surface-ide` | Tái tạo giao diện Antigravity 2.0 (bảng màu `#E3DFD1`, `#CB4B16`) và Antigravity IDE 3 cột. |
-| **Lớp 2: Giao diện (`assets/css/`)** | `assets/css/brand_tokens.css` | `:root` CSS Variables (`--kudo-*`) | Định nghĩa chiều rộng Sidebar (`280px`), chiều cao phụ đề (`96px`), màu sắc và phông chữ. |
-| **Lớp 2: Giao diện (`assets/css/`)** | `assets/css/player_sidebar_layout.css` | CSS Grid 2 cột & Responsive `@media` | Chia cột trái điều khiển (`#kudo-left-sidebar`) và cột phải trình chiếu (`#kudo-right-main`), hỗ trợ xếp chồng trên màn hình `<900px`. |
+| **Lớp 2: Giao diện (`assets/css/`)** | `assets/css/brand_tokens.css` | `:root` CSS Variables (`--kudo-*`) | Định nghĩa chiều rộng Sidebar (`315px`), chiều cao phụ đề (`68px`), tông màu Be Kem (`#FAF8F5`) và phông chữ. |
+| **Lớp 2: Giao diện (`assets/css/`)** | `assets/css/player_sidebar_layout.css` | CSS Grid 2 cột & Responsive `@media` | Chia cột trái điều khiển (`#kudo-left-sidebar`, `315px`, 2 hàng nút gọn) và cột phải trình chiếu (`#kudo-right-main`), tự ẩn `.ksb-brand-bar` khi nhúng trong `iframe` (`body.in-iframe`). |
 | **Lớp 2: Giao diện (`assets/css/`)** | `assets/css/simulator_overrides.css` | CSS cho `#kudo-spotlight` & `#kudo-cursor` | Định dạng hộp tiêu điểm màu cam, con trỏ chuột giả lập, nhãn gợi ý và các popover nổi. |
 | **Lớp 3: Động cơ (`assets/js/`, `avatar/`, `templates/`)** | `assets/avatar/lecturer_poses.js` | `window.KUDO_LECTURER_POSES_SVG` | Chứa 8 tư thế SVG của giảng viên với cơ chế nhép môi 2 trạng thái êm (`.kudo-mouth-closed` / `.kudo-mouth-parted`). |
 | **Lớp 3: Động cơ** | `assets/templates/simulator_stage_dom.html` | HTML Fragment chuẩn của Simulator | Khung DOM gốc của cả 2 bề mặt phần mềm (`#surface-mgr` và `#surface-ide`) để tái sử dụng cho mọi bài học. |
@@ -166,7 +167,7 @@ sequenceDiagram
 | **Lớp 3: Động cơ** | `assets/js/spotlight_cursor.js` | `kudoSyncDomAnchors()` | Tính toán hộp tiêu điểm `#kudo-spotlight` và vị trí con trỏ `#kudo-cursor` kẹp trong `#kudo-stage-viewport`, chống đè lên bảng gợi ý. |
 | **Lớp 3: Động cơ** | `assets/js/player_engine.js` | `kudoApplyBeat()`, `kudoStartLoop()`, `kudoTogglePlay()`, `kudoToggleMute()`, `kudoToggleCursorMode()` | Trái tim điều khiển bài giảng: đồng hồ chủ theo giọng đọc (`Audio-First Lock`), phím tắt `Space`/`←`/`→`/`M`/`C` và chuyển bài qua `postMessage`. |
 | **Lớp 4: Nội dung (`lessons/`)** | `lessons/lesson_01..06/lesson_meta.json`, `slides/s*.html`, `sessions/b*.json` $\to$ `lesson_spec.js` | `window.KUDO_SPEC` | Nguồn dữ liệu biên tập từng bài học và tệp `.js` đã biên dịch để chạy trực tiếp qua `file://`. |
-| **Lớp 5: Cổng vào (`*.html`)** | `index.html`, `lesson_01..06_*.html`, `DESIGN.md`, `REVIEW.md`, `llms.txt` | Giao diện người học & tài liệu AX | Cổng khóa học 6 bài và các trang bài học đạt chuẩn WCAG 2.2 AA & Schema.org `LearningResource`. |
+| **Lớp 5: Cổng vào (`*.html`)** | `index.html`, `lesson_01..06_*.html`, `DESIGN.md`, `REVIEW.md`, `llms.txt`, `BAI_HOC_DAT_TEN_VA_THIET_KE_MUC_LUC_KHOA_HOC.md` | Giao diện 2 màn hình (`#home-view` Chọn Chương + `#player-view` Trình phát) & tài liệu quy chuẩn | Cổng khóa học 6 Chương · 42 Bài giảng, 47 điểm neo đặt tên chuẩn sư phạm và chuẩn WCAG 2.2 AA. |
 
 ---
 

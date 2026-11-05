@@ -1,21 +1,26 @@
 /* =========================================================================
    assets/css/brand_tokens.css
-   Biến thiết kế giao diện, kích thước Sidebar trái, màu sắc thương hiệu & khung Logo.
+   Biến thiết kế giao diện Be Kem & Da Cam Nhấn (Cream Beige & Orange Accent).
    Dễ dàng chỉnh sửa tại đây mà không cần đụng vào logic bài giảng.
    ========================================================================= */
 :root {
-  --kudo-sidebar-width: 280px;
+  --kudo-sidebar-width: 315px;
   --kudo-subtitle-height: 68px;
   --kudo-brand-primary: #CB4B16;
+  --kudo-brand-orange: #EA580C;
   --kudo-brand-accent: #F59E0B;
   --kudo-brand-info: #0284C7;
-  --kudo-brand-success: #10B981;
-  --kudo-bg-dark: #0B0F19;
-  --kudo-sidebar-bg: #111827;
-  --kudo-sidebar-card: #1E293B;
-  --kudo-border-dark: #1E293B;
-  --kudo-text-main: #F8FAFC;
-  --kudo-text-muted: #94A3B8;
+  --kudo-brand-success: #15803D;
+  --kudo-bg-cream: #FAF8F5;
+  --kudo-bg-dark: #FAF8F5;
+  --kudo-sidebar-bg: #F4EFE6;
+  --kudo-sidebar-header: #EFE9DD;
+  --kudo-sidebar-card: #FFFFFF;
+  --kudo-border-dark: #DDD5C7;
+  --kudo-border-strong: #C8BFA8;
+  --kudo-text-main: #1E293B;
+  --kudo-text-sub: #475569;
+  --kudo-text-muted: #64748B;
   --kudo-font-sans: 'Segoe UI', Inter, system-ui, -apple-system, sans-serif;
   --kudo-font-mono: Consolas, 'JetBrains Mono', monospace;
 }

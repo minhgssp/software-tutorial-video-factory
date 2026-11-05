@@ -1,10 +1,11 @@
 {
   "lesson_slug": "lesson_05",
   "filename": "lesson_05_taskflow_start_1_1_bay_phim_space.html",
-  "code": "BÀI 2.2",
-  "title": "Thực hành dự án mẫu TaskFlow với lệnh /start-1-1 và lưu ý khi chọn lệnh gạch chéo",
-  "short_title": "2.2 · Thực hành TaskFlow với lệnh /start-1-1",
-  "description": "Làm quen công ty giả lập TaskFlow Inc. (45 nhân sự), mở 1.1_Welcome.md, chọn lệnh /start-1-1 từ bảng gợi ý và tránh lỗi lặp thành /start-1-1-1.",
+  "code": "BÀI 5",
+  "title": "Thực hành Dự án với Lệnh Gạch chéo",
+  "short_title": "Thực hành Lệnh Gạch chéo /",
+  "pill_label": "Bài 5 · Thực hành Lệnh /",
+  "description": "Làm quen bối cảnh dự án mẫu TaskFlow, gọi quy trình bằng dấu gạch chéo /start-1-1 đúng cách và trải nghiệm AI dẫn dắt từng bước.",
   "slide_ids": [
     "s1"
   ],
