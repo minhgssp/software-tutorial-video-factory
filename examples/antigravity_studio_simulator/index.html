@@ -3,28 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Khóa học Antigravity Basic — Trang chủ Chọn chương & Hệ thống Bài giảng Tương tác</title>
-<meta name="description" content="Trang chủ chọn chương (6 Chương, 42 Bài giảng) và trình phát bài giảng tương tác khóa học Antigravity Basic với thuyết minh VieNeu-TTS 48kHz.">
-<meta property="og:title" content="Khóa học Antigravity Basic — Trang chủ Chọn chương (6 Chương · 42 Bài học)">
-<meta property="og:description" content="Lộ trình 6 chương toàn diện làm chủ Antigravity 2.0 &amp; Antigravity IDE cho dân văn phòng kèm mô phỏng tương tác và thuyết minh 48kHz.">
-<meta property="og:type" content="website">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Course",
-  "name": "Antigravity Basic — Làm chủ Trợ lý AI & Không gian làm việc thông minh",
-  "description": "Khóa học thực hành Antigravity 2.0 và Antigravity IDE qua 6 chương (42 bài giảng, Chương 1 gồm 6 bài tương tác 47 điểm neo thời gian) với giọng đọc VieNeu-TTS 48kHz.",
-  "provider": {
-    "@type": "Organization",
-    "name": "HoctapTech Academy"
-  },
-  "hasCourseInstance": {
-    "@type": "CourseInstance",
-    "courseMode": "online",
-    "inLanguage": "vi"
-  }
-}
-</script>
+<title>Khóa học Antigravity Basic — Mục lục Chia đôi 6 Chương &amp; Phòng học Tương tác</title>
+<meta name="description" content="Mục lục chia đôi 6 Chương · 24 Bài giảng (1 cột tinh gọn) và trình phát bài giảng tương tác khóa học Antigravity Basic với thuyết minh VieNeu-TTS 48kHz.">
 <link rel="stylesheet" href="assets/css/brand_tokens.css">
 <style id="kudo-a11y-motion">
   @media (prefers-reduced-motion: reduce) {
@@ -43,23 +23,27 @@
     background: #FAF8F5;
     color: #1E293B;
     height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    user-select: none;
   }
 
-  /* Thanh điều hướng trên cùng — Tông Be Kem & Da Cam Nhấn */
+  /* =========================================================================
+     1. THANH ĐIỀU HƯỚNG ĐỈNH TINH GỌN (BE KEM & CAM ĐẤT)
+     ========================================================================= */
   .top-nav {
-    min-height: 48px;
+    height: 50px;
     background: #EFE9DD;
     border-bottom: 1px solid #DDD5C7;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 6px 16px;
-    gap: 10px;
-    flex-wrap: nowrap;
+    padding: 0 16px;
+    gap: 12px;
     z-index: 100;
+    flex-shrink: 0;
   }
   .brand {
     display: flex;
@@ -68,18 +52,16 @@
     flex-shrink: 0;
   }
   .brand-logo {
-    width: 30px;
-    height: 30px;
-    border-radius: 8px;
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
     background: linear-gradient(135deg, #EA580C, #CB4B16);
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 900;
-    font-size: 14px;
+    font-size: 13.5px;
     color: #FFFFFF;
-    flex-shrink: 0;
-    box-shadow: 0 2px 6px rgba(203, 75, 22, 0.25);
     cursor: pointer;
   }
   .brand-title {
@@ -110,40 +92,76 @@
     background: linear-gradient(135deg, #EA580C, #CB4B16);
     border-color: #C2410C;
     color: #FFFFFF;
-    box-shadow: 0 2px 8px rgba(234, 88, 12, 0.25);
   }
 
-  .quick-lesson-pills {
+  /* Điều hướng Bài trước / Bài đang học / Bài tiếp gọn gàng ở giữa */
+  .top-center-stepper {
     display: flex;
     align-items: center;
-    gap: 5px;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+    gap: 8px;
+    flex: 1;
+    justify-content: center;
+    min-width: 0;
   }
-  .ql-pill {
+  .step-nav-btn {
     background: #FFFFFF;
-    color: #475569;
+    color: #1E293B;
     border: 1px solid #D6CEC0;
-    min-height: 28px;
-    padding: 4px 8px;
+    padding: 5px 10px;
     border-radius: 7px;
-    font-size: 11.5px;
+    font-size: 12px;
     font-weight: 700;
     cursor: pointer;
     white-space: nowrap;
     transition: all 0.15s;
   }
-  .ql-pill:hover {
+  .step-nav-btn:hover:not(:disabled) {
     background: #FFF7ED;
     border-color: #EA580C;
-    color: #9A3412;
-  }
-  .ql-pill.active {
-    background: #FFF1E6;
-    border: 1.5px solid #EA580C;
     color: #C2410C;
-    box-shadow: 0 2px 6px rgba(234, 88, 12, 0.14);
   }
+  .step-nav-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  .current-lesson-trigger {
+    background: #FFFFFF;
+    border: 1px solid #C8BFA8;
+    border-radius: 8px;
+    padding: 5px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    max-width: 520px;
+    min-width: 260px;
+    transition: border-color 0.15s;
+  }
+  .current-lesson-trigger:hover {
+    border-color: #EA580C;
+  }
+  .clt-badge {
+    background: #FFF7ED;
+    color: #C2410C;
+    border: 1px solid #FDBA74;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 2px 7px;
+    border-radius: 5px;
+    white-space: nowrap;
+  }
+  .clt-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1E293B;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+    text-align: left;
+  }
+
   .nav-right {
     display: flex;
     align-items: center;
@@ -172,335 +190,298 @@
   }
 
   /* =========================================================================
-     TRANG CHỦ CHỌN CHƯƠNG (#home-view) — BE KEM & DA CAM NHẤN
+     2. CỔNG MỤC LỤC CHIA ĐÔI TỐI GIẢN (#home-view)
+        - Bỏ hoàn toàn phần giới thiệu dài dòng
+        - Cột Trái (350px): Danh sách 6 Chương + Ô tìm kiếm
+        - Cột Phải (1fr): Danh sách Bài học xếp 1 Cột duy nhất
      ========================================================================= */
   #home-view {
     flex: 1;
-    overflow-y: auto;
-    background: radial-gradient(circle at 15% 10%, #FFFDF9 0%, #FAF8F5 55%, #F3EFE6 100%);
-    padding: 26px 32px 44px 32px;
+    height: calc(100vh - 50px);
+    display: grid;
+    grid-template-columns: 350px minmax(0, 1fr);
+    background: #FAF8F5;
+    overflow: hidden;
   }
   #home-view.hidden-view {
     display: none !important;
   }
-  .home-container {
-    max-width: 1320px;
-    margin: 0 auto;
+
+  /* Cột Trái: Danh sách 6 Chương */
+  .hub-left-chapters {
+    background: #F4EFE6;
+    border-right: 1px solid #DDD5C7;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    height: 100%;
+    overflow: hidden;
+  }
+  .hlc-search-bar {
+    padding: 12px 14px;
+    background: #EFE9DD;
+    border-bottom: 1px solid #DDD5C7;
+  }
+  .hlc-search-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #FFFFFF;
+    border: 1px solid #C8BFA8;
+    border-radius: 8px;
+    padding: 7px 11px;
+  }
+  .hlc-search-box input {
+    border: none;
+    background: transparent;
+    color: #1E293B;
+    font-size: 13px;
+    width: 100%;
+    outline: none;
   }
 
-  /* Hero Banner Trang chủ */
-  .home-hero {
-    background: linear-gradient(135deg, #FFFDF9 0%, #FFF7ED 60%, #FFEDD5 100%);
-    border: 1.5px solid #FDBA74;
-    border-radius: 18px;
-    padding: 24px 30px;
+  .hlc-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .chap-split-item {
+    background: #FFFFFF;
+    border: 1.5px solid #DDD5C7;
+    border-radius: 10px;
+    padding: 12px 14px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: all 0.15s;
+  }
+  .chap-split-item:hover {
+    border-color: #EA580C;
+  }
+  .chap-split-item.active {
+    background: #FFF7ED;
+    border-color: #EA580C;
+    box-shadow: 0 3px 10px rgba(234, 88, 12, 0.1);
+  }
+  .csi-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 24px;
-    box-shadow: 0 10px 28px rgba(203, 75, 22, 0.08);
-    position: relative;
-    overflow: hidden;
-  }
-  .home-hero::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 5px;
-    background: linear-gradient(90deg, #CB4B16, #EA580C, #F59E0B);
-  }
-  .hero-left {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    max-width: 820px;
-  }
-  .hero-kicker {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    width: fit-content;
-    font-size: 11.5px;
+    font-size: 11px;
     font-weight: 800;
-    letter-spacing: 0.4px;
     color: #C2410C;
-    background: #FFEDD5;
-    border: 1px solid #FDBA74;
-    padding: 4px 12px;
-    border-radius: 999px;
   }
-  .hero-title {
-    font-size: 25px;
-    font-weight: 900;
-    color: #1E293B;
-    line-height: 1.25;
-  }
-  .hero-desc {
-    font-size: 14px;
-    color: #475569;
-    line-height: 1.55;
-  }
-  .hero-stats {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 4px;
-  }
-  .hero-stat-pill {
-    background: #FFFFFF;
-    border: 1px solid #E2DACB;
-    color: #334155;
-    font-size: 12.5px;
+  .csi-count {
+    font-size: 11px;
     font-weight: 700;
-    padding: 5px 12px;
-    border-radius: 8px;
+    color: #64748B;
   }
-  .hero-stat-pill strong {
-    color: #EA580C;
-  }
-  .hero-cta-box {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 8px;
-    flex-shrink: 0;
-  }
-  .hero-primary-btn {
-    background: linear-gradient(135deg, #EA580C, #CB4B16);
-    color: #FFFFFF;
-    border: 1px solid #C2410C;
-    padding: 13px 22px;
-    min-height: 46px;
-    border-radius: 12px;
-    font-size: 14.5px;
+  .csi-title {
+    font-size: 14px;
     font-weight: 800;
-    cursor: pointer;
-    box-shadow: 0 6px 18px rgba(234, 88, 12, 0.28);
-    transition: transform 0.15s, box-shadow 0.15s;
-    white-space: nowrap;
-  }
-  .hero-primary-btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 8px 22px rgba(234, 88, 12, 0.36);
-  }
-  .hero-cta-sub {
-    font-size: 12px;
-    font-weight: 600;
-    color: #9A3412;
+    color: #1E293B;
+    line-height: 1.35;
   }
 
-  /* Tiêu đề khu vực Chọn Chương */
-  .section-head {
+  /* Cột Phải: Danh sách Bài học 1 Cột duy nhất */
+  .hub-right-lessons {
+    background: #FAF8F5;
+    height: 100%;
+    overflow-y: auto;
+    padding: 20px 28px 36px 28px;
+  }
+  .hrl-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .hrl-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1.5px solid #DDD5C7;
   }
-  .section-head h2 {
+  .hrl-title {
     font-size: 18px;
-    font-weight: 800;
+    font-weight: 900;
     color: #1E293B;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
   }
-  .section-head-note {
-    font-size: 13px;
-    color: #64748B;
-    font-weight: 600;
+  .hrl-badge {
+    background: #EA580C;
+    color: #FFFFFF;
+    font-size: 11.5px;
+    font-weight: 800;
+    padding: 3px 9px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+  .hrl-start-btn {
+    background: linear-gradient(135deg, #EA580C, #CB4B16);
+    color: #FFFFFF;
+    border: 1px solid #C2410C;
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-size: 12.5px;
+    font-weight: 800;
+    cursor: pointer;
+    white-space: nowrap;
   }
 
-  /* Lưới 6 Chương (2 cột rộng thoáng trên Desktop) */
-  .chapters-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
+  /* Danh sách 1 Cột các Bài học */
+  .one-col-lessons-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
-  .chapter-card {
+  .one-col-lesson-card {
     background: #FFFFFF;
-    border: 1.5px solid #E2DACB;
-    border-radius: 16px;
-    padding: 20px 22px;
+    border: 1.5px solid #DDD5C7;
+    border-radius: 11px;
+    padding: 14px 18px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 14px;
-    box-shadow: 0 4px 14px rgba(30, 41, 59, 0.04);
-    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.15s;
   }
-  .chapter-card.ready-chapter {
-    background: #FFFDF9;
-    border: 2px solid #EA580C;
-    box-shadow: 0 10px 26px rgba(234, 88, 12, 0.12);
-  }
-  .chapter-card:hover {
-    border-color: #FB923C;
-    box-shadow: 0 8px 22px rgba(203, 75, 22, 0.1);
-  }
-  .ch-top {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .ch-badges {
+  .ocl-top-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 8px;
+    gap: 14px;
+    width: 100%;
   }
-  .ch-code-badge {
+  .ocl-beats-flat {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 8px;
+    border-top: 1px dashed #DDD5C7;
+    width: 100%;
+  }
+  .ocl-beat-row {
+    width: 100%;
+    background: #FAF8F5;
+    border: 1px solid #E2DACB;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #1E293B;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    transition: all 0.12s;
+  }
+  .ocl-beat-row:hover {
+    border-color: #EA580C;
+    background: #FFF7ED;
+    color: #C2410C;
+  }
+  .ocl-beat-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+  }
+  .ocl-beat-tag {
+    font-size: 11px;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 5px;
+    background: #FEF3C7;
+    color: #92400E;
+    border: 1px solid #FDE68A;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .ocl-beat-tag.sim {
+    background: #DBEAFE;
+    color: #1E40AF;
+    border-color: #BFDBFE;
+  }
+  .ocl-beat-dur {
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: 700;
+    color: #64748B;
+    flex-shrink: 0;
+  }
+  .one-col-lesson-card:hover {
+    border-color: #EA580C;
+    background: #FFFDF9;
+    box-shadow: 0 4px 14px rgba(234, 88, 12, 0.08);
+  }
+  .one-col-lesson-card.active {
+    border-color: #EA580C;
+    background: #FFF7ED;
+  }
+  .ocl-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+  }
+  .ocl-code {
+    background: #F4EFE6;
+    border: 1px solid #C8BFA8;
+    color: #C2410C;
     font-size: 12px;
     font-weight: 800;
     padding: 4px 10px;
     border-radius: 7px;
-    background: #F4EFE6;
-    color: #475569;
-    border: 1px solid #DDD5C7;
-  }
-  .chapter-card.ready-chapter .ch-code-badge {
-    background: linear-gradient(135deg, #EA580C, #CB4B16);
-    color: #FFFFFF;
-    border-color: #C2410C;
-  }
-  .ch-status-badge {
-    font-size: 11.5px;
-    font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 999px;
-    background: #F4EFE6;
-    color: #64748B;
-  }
-  .chapter-card.ready-chapter .ch-status-badge {
-    background: #FFF1E6;
-    color: #C2410C;
-    border: 1px solid #FDBA74;
-  }
-  .ch-title {
-    font-size: 18px;
-    font-weight: 800;
-    color: #1E293B;
-    line-height: 1.3;
-  }
-  .ch-sub {
-    font-size: 13.2px;
-    color: #475569;
-    line-height: 1.48;
-  }
-
-  /* Danh sách bài học trong mỗi chương */
-  .ch-lessons-list {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    background: #FAF8F5;
-    border: 1px solid #EAE3D5;
-    border-radius: 12px;
-    padding: 10px 12px;
-  }
-  .ch-lesson-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 7px 10px;
-    border-radius: 8px;
-    font-size: 13.2px;
-    color: #334155;
-    background: #FFFFFF;
-    border: 1px solid #EFECE6;
-    transition: all 0.15s;
-  }
-  .ch-lesson-row.playable {
-    cursor: pointer;
-    border-color: #E2DACB;
-  }
-  .ch-lesson-row.playable:hover {
-    background: #FFF7ED;
-    border-color: #EA580C;
-    color: #9A3412;
-  }
-  .ch-lesson-left {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    min-width: 0;
-  }
-  .ch-lesson-code {
-    font-size: 11.5px;
-    font-weight: 800;
-    color: #C2410C;
-    background: #FFF1E6;
-    border: 1px solid #FED7AA;
-    padding: 2px 7px;
-    border-radius: 5px;
-    flex-shrink: 0;
-  }
-  .ch-lesson-row:not(.playable) .ch-lesson-code {
-    color: #64748B;
-    background: #F4EFE6;
-    border-color: #DDD5C7;
-  }
-  .ch-lesson-name {
-    font-weight: 600;
-    line-height: 1.35;
-  }
-  .ch-lesson-meta {
-    font-size: 11.5px;
-    font-weight: 700;
-    color: #64748B;
     white-space: nowrap;
     flex-shrink: 0;
   }
-
-  .ch-footer {
+  .ocl-name {
+    font-size: 15.5px;
+    font-weight: 800;
+    color: #1E293B;
+    line-height: 1.35;
+  }
+  .ocl-right {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    padding-top: 4px;
+    gap: 12px;
+    flex-shrink: 0;
   }
-  .ch-meta-info {
-    font-size: 12.5px;
-    font-weight: 700;
-    color: #64748B;
-  }
-  .ch-enter-btn {
-    background: linear-gradient(135deg, #EA580C, #CB4B16);
-    color: #FFFFFF;
-    border: 1px solid #C2410C;
-    padding: 8px 16px;
-    min-height: 36px;
-    border-radius: 9px;
-    font-size: 13px;
-    font-weight: 800;
-    cursor: pointer;
-    transition: all 0.15s;
-  }
-  .ch-enter-btn:hover {
-    background: linear-gradient(135deg, #C2410C, #9A3412);
-  }
-  .ch-upcoming-tag {
+  .ocl-meta {
     font-size: 12px;
     font-weight: 700;
     color: #64748B;
-    background: #F4EFE6;
-    border: 1px solid #DDD5C7;
+    white-space: nowrap;
+  }
+  .ocl-enter {
+    background: #EA580C;
+    color: #FFFFFF;
+    border: none;
     padding: 6px 12px;
-    border-radius: 8px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
   }
 
   /* =========================================================================
-     KHUNG TRÌNH PHÁT BÀI GIẢNG (#player-view) — GIỮ NGUYÊN CẤU TRÚC CŨ
+     3. KHUNG TRÌNH PHÁT BÀI GIẢNG (#player-view)
      ========================================================================= */
   .player-stage {
     flex: 1;
     background: #FAF8F5;
     position: relative;
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 50px);
     overflow: hidden;
   }
   .player-stage.hidden-view {
@@ -512,67 +493,61 @@
     border: none;
   }
 
-  @media (max-width: 960px) {
-    .chapters-grid {
+  @media (max-width: 900px) {
+    #home-view {
       grid-template-columns: 1fr;
+      overflow-y: auto;
     }
-    .home-hero {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .hero-cta-box {
-      align-items: flex-start;
+    .hub-left-chapters {
+      height: auto;
+      border-right: none;
+      border-bottom: 1px solid #DDD5C7;
     }
   }
 </style>
 </head>
 <body>
-  <!-- THANH ĐIỀU HƯỚNG TRÊN CÙNG (BE KEM & DA CAM NHẤN) -->
+  <!-- THANH ĐIỀU HƯỚNG ĐỈNH -->
   <div class="top-nav">
     <div class="brand">
-      <div class="brand-logo" id="hub-logo" onclick="showHomeView()" title="Về Trang chủ Chọn chương">A</div>
-      <div class="brand-title" id="hub-title" onclick="showHomeView()" aria-live="polite">Khóa học Antigravity Basic</div>
-      <button class="home-switch-btn active-home" id="btn-toggle-home" onclick="showHomeView()" title="Quay về Trang chủ Chọn chương (6 Chương · 24 Bài giảng)">🏠 Chọn chương</button>
+      <div class="brand-logo" id="hub-logo" onclick="showHomeView()" title="Về Mục lục Chia đôi">A</div>
+      <div class="brand-title" id="hub-title" onclick="showHomeView()">Antigravity Basic</div>
+      <button class="home-switch-btn active-home" id="btn-toggle-home" onclick="toggleHomePlayerView()" title="Chuyển giữa Mục lục 6 Chương và Phòng học">🗂️ Mục lục 6 Chương</button>
     </div>
-    <div class="quick-lesson-pills" id="hub-quick-pills" role="navigation" aria-label="Chuyển nhanh 24 bài giảng"></div>
+
+    <div class="top-center-stepper">
+      <button class="step-nav-btn" id="btn-prev-ls" onclick="stepActiveLesson(-1)">◀ Bài trước</button>
+      <div class="current-lesson-trigger" onclick="toggleHomePlayerView()" title="Bấm để mở Mục lục Chia đôi 6 Chương · 24 Bài">
+        <span class="clt-badge" id="top-cur-chap">CHƯƠNG 1/6</span>
+        <span class="clt-title" id="top-cur-title">BÀI 1 — Tư duy Trợ lý AI trên Máy tính &amp; 2 Phần mềm Cốt lõi</span>
+        <span style="font-size:11px;color:#64748B;">▾</span>
+      </div>
+      <button class="step-nav-btn" id="btn-next-ls" onclick="stepActiveLesson(1)">Bài tiếp ▶</button>
+    </div>
+
     <div class="nav-right">
-      <a class="open-full-btn" id="hub-open-full" href="lesson_01.html" target="_blank" title="Mở bài học đang xem ra cửa sổ toàn màn hình">↗ Mở toàn màn hình</a>
+      <a class="open-full-btn" id="hub-open-full" href="lesson_01.html" target="_blank" title="Mở bài học đang xem ra cửa sổ toàn màn hình">↗ Toàn màn hình</a>
     </div>
   </div>
 
-  <!-- MÀN HÌNH 1: TRANG CHỦ CHỌN CHƯƠNG (6 CHƯƠNG · 24 BÀI HỌC · 144 ĐIỂM NEO) -->
-  <section id="home-view" aria-label="Trang chủ chọn chương khóa học Antigravity Basic">
-    <div class="home-container">
-      <div class="home-hero">
-        <div class="hero-left">
-          <span class="hero-kicker">HỌC VIỆN HOCTAPTECH · LỘ TRÌNH TOÀN DIỆN 6 CHƯƠNG · 24 BÀI GIẢNG · 144 ĐIỂM NEO</span>
-          <h1 class="hero-title">Làm Chủ Trợ Lý AI Antigravity Cho Dân Văn Phòng</h1>
-          <p class="hero-desc">
-            Từ thói quen hỏi đáp rời rạc trên trình duyệt đến xây dựng hệ thống Trợ lý AI làm việc trực tiếp trong thư mục máy tính.
-            Toàn bộ <strong>6 Chương · 24 Bài giảng · 144 Điểm neo thực hành</strong> đã sẵn sàng 100% kèm mô phỏng tương tác và thuyết minh 48kHz.
-          </p>
-          <div class="hero-stats">
-            <span class="hero-stat-pill"><strong>6 Chương</strong> theo cấp độ</span>
-            <span class="hero-stat-pill"><strong>24 Bài giảng</strong> thực hành</span>
-            <span class="hero-stat-pill"><strong>144 Điểm neo:</strong> 100% Đã sẵn sàng</span>
-          </div>
-        </div>
-        <div class="hero-cta-box">
-          <button class="hero-primary-btn" id="btn-start-ch1" onclick="openChapterLesson('lesson_01.html')">▶ Vào học ngay Bài 1</button>
-          <span class="hero-cta-sub">Trình phát 1 Sidebar · 24 bài · 144 điểm neo</span>
+  <!-- MÀN HÌNH 1: CỔNG MỤC LỤC CHIA ĐÔI (TRÁI: 6 CHƯƠNG | PHẢI: 1 CỘT BÀI HỌC) -->
+  <section id="home-view" aria-label="Mục lục chia đôi 6 Chương 24 Bài giảng">
+    <aside class="hub-left-chapters">
+      <div class="hlc-search-bar">
+        <div class="hlc-search-box">
+          <span>🔍</span>
+          <input type="text" id="hub-search-input" placeholder="Tìm nhanh bài học..." oninput="renderSplitHub()">
         </div>
       </div>
+      <div class="hlc-list" id="chapters-split-nav"></div>
+    </aside>
 
-      <div class="section-head">
-        <h2>📚 Danh mục 6 Chương &amp; 24 Bài giảng (100% Sẵn sàng)</h2>
-        <span class="section-head-note">Bấm vào bất kỳ Chương hoặc Bài học nào bên dưới để mở trình phát tương tác</span>
-      </div>
-
-      <div class="chapters-grid" id="chapters-grid"></div>
+    <div class="hub-right-lessons">
+      <div class="hrl-inner" id="chapters-grid"></div>
     </div>
   </section>
 
-  <!-- MÀN HÌNH 2: KHUNG TRÌNH PHÁT BÀI GIẢNG (GIỮ NGUYÊN CẤU TRÚC CŨ) -->
+  <!-- MÀN HÌNH 2: KHUNG TRÌNH PHÁT BÀI GIẢNG -->
   <main class="player-stage hidden-view" id="player-view">
     <iframe id="lesson-iframe" src="lesson_01.html" title="Khung trình chiếu bài giảng Antigravity Basic" allow="autoplay"></iframe>
   </main>
@@ -581,12 +556,56 @@
   <script src="config/course_manifest.js"></script>
   <script src="config/chapters_manifest.js"></script>
   <script>
+    let currentSelectedChapterNum = 1;
+    let currentActiveFilename = "lesson_01.html";
+
+    function findLessonMeta(filename) {
+      const list = window.KUDO_COURSE_MANIFEST || [];
+      return list.find(x => x.filename === filename) || list[0] || null;
+    }
+
     function syncActiveLessonUi(filename) {
-      document.querySelectorAll(".ql-pill").forEach(el => {
-        el.classList.toggle("active", el.getAttribute("data-filename") === filename);
-      });
+      if (!filename) return;
+      currentActiveFilename = filename;
+      const list = window.KUDO_COURSE_MANIFEST || [];
+      const idx = list.findIndex(x => x.filename === filename);
+      const item = idx >= 0 ? list[idx] : list[0];
+
+      if (item) {
+        if (item.chapter_number) currentSelectedChapterNum = item.chapter_number;
+        const chapEl = document.getElementById("top-cur-chap");
+        const titleEl = document.getElementById("top-cur-title");
+        if (chapEl) chapEl.textContent = (item.chapter_code || "CHƯƠNG 1") + "/6";
+        if (titleEl) titleEl.textContent = `${item.code} — ${item.title}`;
+      }
+
+      const prevBtn = document.getElementById("btn-prev-ls");
+      const nextBtn = document.getElementById("btn-next-ls");
+      if (prevBtn) prevBtn.disabled = (idx <= 0);
+      if (nextBtn) nextBtn.disabled = (idx < 0 || idx >= list.length - 1);
+
       const fullBtn = document.getElementById("hub-open-full");
-      if (fullBtn && filename) fullBtn.href = filename;
+      if (fullBtn) fullBtn.href = filename;
+
+      renderSplitHub();
+    }
+
+    function stepActiveLesson(delta) {
+      const list = window.KUDO_COURSE_MANIFEST || [];
+      const idx = list.findIndex(x => x.filename === currentActiveFilename);
+      const nextIdx = Math.max(0, Math.min(list.length - 1, (idx >= 0 ? idx : 0) + delta));
+      if (list[nextIdx]) {
+        openChapterLesson(list[nextIdx].filename);
+      }
+    }
+
+    function toggleHomePlayerView() {
+      const homeEl = document.getElementById("home-view");
+      if (homeEl && homeEl.classList.contains("hidden-view")) {
+        showHomeView();
+      } else {
+        showPlayerView();
+      }
     }
 
     function showHomeView() {
@@ -595,8 +614,10 @@
       const homeBtn = document.getElementById("btn-toggle-home");
       if (homeEl) homeEl.classList.remove("hidden-view");
       if (playerEl) playerEl.classList.add("hidden-view");
-      if (homeBtn) homeBtn.classList.add("active-home");
-      /* Tạm dừng tiếng trong iframe khi quay ra Trang chủ Chọn chương */
+      if (homeBtn) {
+        homeBtn.classList.add("active-home");
+        homeBtn.textContent = "▶️ Quay lại Bài đang học";
+      }
       const ifr = document.getElementById("lesson-iframe");
       if (ifr && ifr.contentWindow) {
         try {
@@ -604,6 +625,7 @@
           if (vp && !vp.paused) vp.pause();
         } catch (e) {}
       }
+      renderSplitHub();
     }
 
     function showPlayerView() {
@@ -612,7 +634,10 @@
       const homeBtn = document.getElementById("btn-toggle-home");
       if (homeEl) homeEl.classList.add("hidden-view");
       if (playerEl) playerEl.classList.remove("hidden-view");
-      if (homeBtn) homeBtn.classList.remove("active-home");
+      if (homeBtn) {
+        homeBtn.classList.remove("active-home");
+        homeBtn.textContent = "🗂️ Mục lục 6 Chương";
+      }
     }
 
     function openChapterLesson(url) {
@@ -625,73 +650,84 @@
       syncActiveLessonUi(url);
     }
 
-    function loadLesson(url) {
-      openChapterLesson(url);
+    function selectHubChapter(chNum) {
+      currentSelectedChapterNum = chNum;
+      renderSplitHub();
     }
 
-    function renderHubLessons() {
-      const pillsWrap = document.getElementById("hub-quick-pills");
-      if (pillsWrap && Array.isArray(window.KUDO_COURSE_MANIFEST)) {
-        pillsWrap.innerHTML = window.KUDO_COURSE_MANIFEST.map((ls, idx) => `
-          <button class="ql-pill ${idx === 0 ? 'active' : ''}" data-filename="${ls.filename}" onclick="loadLesson('${ls.filename}')" title="${ls.code}: ${ls.title}">${ls.pill_label || (ls.code + ' · ' + ls.title)}</button>
+    function renderSplitHub() {
+      const chapters = window.KUDO_CHAPTERS_MANIFEST || [];
+      const navWrap = document.getElementById("chapters-split-nav");
+      const rightWrap = document.getElementById("chapters-grid");
+      const q = (document.getElementById("hub-search-input")?.value || "").trim().toLowerCase();
+
+      if (navWrap) {
+        navWrap.innerHTML = chapters.map(ch => `
+          <div class="chap-split-item ${ch.chapter_number === currentSelectedChapterNum ? 'active' : ''}" onclick="selectHubChapter(${ch.chapter_number})">
+            <div class="csi-top">
+              <span>${ch.code}</span>
+              <span class="csi-count">${ch.lessons_count} bài</span>
+            </div>
+            <div class="csi-title">${ch.title}</div>
+          </div>
         `).join("");
       }
 
-      const gridWrap = document.getElementById("chapters-grid");
-      if (gridWrap && Array.isArray(window.KUDO_CHAPTERS_MANIFEST)) {
-        gridWrap.innerHTML = window.KUDO_CHAPTERS_MANIFEST.map(ch => {
-          const isReady = ch.status === "ready";
-          const lessonsHtml = (ch.lessons || []).map(item => {
-            if (item.ready && item.filename) {
-              return `
-                <div class="ch-lesson-row playable" onclick="openChapterLesson('${item.filename}')" title="Bấm để vào học ${item.code}: ${item.title}">
-                  <div class="ch-lesson-left">
-                    <span class="ch-lesson-code">${item.code}</span>
-                    <span class="ch-lesson-name">${item.title}</span>
-                  </div>
-                  <span class="ch-lesson-meta">▶ ${item.meta}</span>
-                </div>
-              `;
+      if (!rightWrap) return;
+      const activeCh = chapters.find(c => c.chapter_number === currentSelectedChapterNum) || chapters[0];
+      if (!activeCh) return;
+
+      let rows = [];
+      if (q) {
+        chapters.forEach(ch => {
+          (ch.lessons || []).forEach(ls => {
+            if ((ls.title || "").toLowerCase().includes(q) || (ls.code || "").toLowerCase().includes(q)) {
+              rows.push({ ch, ls });
             }
-            return `
-              <div class="ch-lesson-row">
-                <div class="ch-lesson-left">
-                  <span class="ch-lesson-code">${item.code}</span>
-                  <span class="ch-lesson-name">${item.title}</span>
-                </div>
-                <span class="ch-lesson-meta">${item.meta}</span>
-              </div>
-            `;
-          }).join("");
-
-          const footerBtn = isReady
-            ? `<button class="ch-enter-btn" onclick="openChapterLesson('${ch.default_lesson}')">▶ Vào học ${ch.code} (${ch.lessons_count} bài)</button>`
-            : `<span class="ch-upcoming-tag">Sắp ra mắt · ${ch.lessons_count} bài giảng</span>`;
-
-          return `
-            <article class="chapter-card ${isReady ? 'ready-chapter' : ''}" id="chapter-card-${ch.chapter_number}">
-              <div class="ch-top">
-                <div class="ch-badges">
-                  <span class="ch-code-badge">${ch.code}</span>
-                  <span class="ch-status-badge">${ch.status_label}</span>
-                </div>
-                <h3 class="ch-title">${ch.title}</h3>
-                <p class="ch-sub">${ch.subtitle}</p>
-                <div class="ch-lessons-list">${lessonsHtml}</div>
-              </div>
-              <div class="ch-footer">
-                <span class="ch-meta-info">${ch.duration_label}</span>
-                ${footerBtn}
-              </div>
-            </article>
-          `;
-        }).join("");
+          });
+        });
+      } else {
+        rows = (activeCh.lessons || []).map(ls => ({ ch: activeCh, ls }));
       }
 
-      /* Nếu URL có ?view=player hoặc #player thì mở thẳng khung Player */
-      if (window.location.search.includes("view=player") || window.location.hash === "#player") {
-        showPlayerView();
-      }
+      rightWrap.innerHTML = `
+        <div class="hrl-header">
+          <div class="hrl-title">
+            <span class="hrl-badge">${q ? 'KẾT QUẢ LỌC' : activeCh.code}</span>
+            <span>${q ? `Tìm thấy ${rows.length} bài giảng` : activeCh.title}</span>
+          </div>
+          ${(!q && activeCh.default_lesson) ? `<button class="hrl-start-btn" onclick="openChapterLesson('${activeCh.default_lesson}')">▶ Học từ đầu ${activeCh.code}</button>` : ''}
+        </div>
+        <div class="one-col-lessons-stack">
+          ${rows.map(({ ch, ls }) => `
+            <div class="one-col-lesson-card ${ls.filename === currentActiveFilename ? 'active' : ''}" onclick="openChapterLesson('${ls.filename || 'lesson_01.html'}')">
+              <div class="ocl-top-row">
+                <div class="ocl-left">
+                  <span class="ocl-code">${q ? (ch.code + ' · ' + ls.code) : ls.code}</span>
+                  <span class="ocl-name">${ls.title}</span>
+                </div>
+                <div class="ocl-right">
+                  <span class="ocl-meta">${ls.meta || '6 phần tương tác'}</span>
+                  <button class="ocl-enter">Vào học ▸</button>
+                </div>
+              </div>
+              ${(Array.isArray(ls.beats) && ls.beats.length > 0) ? `
+                <div class="ocl-beats-flat">
+                  ${ls.beats.map(b => `
+                    <div class="ocl-beat-row" onclick="event.stopPropagation(); openChapterLesson('${ls.filename || 'lesson_01.html'}')">
+                      <div class="ocl-beat-left">
+                        <span class="ocl-beat-tag ${b.mode === 'sim' ? 'sim' : ''}">${b.mode === 'theory' ? '📖 Lý thuyết' : '🖱️ Thực hành'}</span>
+                        <span>${b.title}</span>
+                      </div>
+                      <span class="ocl-beat-dur">${b.dur} ▸</span>
+                    </div>
+                  `).join("")}
+                </div>
+              ` : ''}
+            </div>
+          `).join("")}
+        </div>
+      `;
     }
 
     window.addEventListener("message", (ev) => {
@@ -701,7 +737,13 @@
         showHomeView();
       }
     });
-    window.addEventListener("DOMContentLoaded", renderHubLessons);
+
+    window.addEventListener("DOMContentLoaded", () => {
+      syncActiveLessonUi("lesson_01.html");
+      if (window.location.search.includes("view=player") || window.location.hash === "#player") {
+        showPlayerView();
+      }
+    });
   </script>
 </body>
 </html>

@@ -216,10 +216,38 @@ function kudoSetAvatarPose(poseNum) {
   });
 }
 
+function kudoToggleSidebarCollapse() {
+  document.body.classList.toggle("kudo-sidebar-collapsed");
+  setTimeout(kudoSyncDomAnchors, 220);
+}
+
 function kudoRenderTimelineBar() {
   const wrap = document.getElementById("kp-timeline-segs");
   if (!wrap || !window.KUDO_SPEC) return;
-  wrap.innerHTML = KUDO_SPEC.beats.map((b, idx) => `
+
+  const segHeader = document.querySelector(".ksb-segments-header");
+  if (segHeader && !document.getElementById("kudo-collapse-sb-btn")) {
+    const collapseBtn = document.createElement("button");
+    collapseBtn.id = "kudo-collapse-sb-btn";
+    collapseBtn.className = "kp-btn";
+    collapseBtn.style.cssText = "padding:3px 8px;min-height:24px;font-size:11.5px;";
+    collapseBtn.innerHTML = "« Ẩn [";
+    collapseBtn.title = "Ẩn cây mục lục bên trái (Phím tắt: [)";
+    collapseBtn.onclick = kudoToggleSidebarCollapse;
+    segHeader.appendChild(collapseBtn);
+  }
+
+  const rightMain = document.getElementById("kudo-right-main");
+  if (rightMain && !document.getElementById("kudo-expand-sidebar-btn")) {
+    const expBtn = document.createElement("button");
+    expBtn.id = "kudo-expand-sidebar-btn";
+    expBtn.innerHTML = "☰ Hiện mục lục [";
+    expBtn.title = "Hiện lại cây mục lục bên trái (Phím tắt: [)";
+    expBtn.onclick = kudoToggleSidebarCollapse;
+    rightMain.appendChild(expBtn);
+  }
+
+  const beatsHtml = KUDO_SPEC.beats.map((b, idx) => `
     <div class="kp-seg" id="kp-seg-${idx}" role="button" tabindex="0" aria-label="${b.label} (${Math.round(b.duration)} giây)" onclick="kudoOnSegmentClick(${idx}, event)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();kudoOnSegmentClick(${idx},event);}" title="${b.label} (${b.duration}s) — Bấm để chuyển cảnh hoặc tua trong phần đang phát">
       <div class="kp-seg-fill" id="kp-fill-${idx}"></div>
       <div class="kp-seg-top">
@@ -228,6 +256,59 @@ function kudoRenderTimelineBar() {
       </div>
     </div>
   `).join("");
+
+  const manifest = Array.isArray(window.KUDO_COURSE_MANIFEST) ? window.KUDO_COURSE_MANIFEST : [];
+  if (manifest.length === 0) {
+    wrap.innerHTML = beatsHtml;
+    return;
+  }
+
+  const chapMap = new Map();
+  manifest.forEach(item => {
+    const chNum = item.chapter_number || 1;
+    if (!chapMap.has(chNum)) {
+      chapMap.set(chNum, {
+        chapter_number: chNum,
+        chapter_code: item.chapter_code || ("CHƯƠNG " + chNum),
+        chapter_title: item.chapter_title || "",
+        lessons: []
+      });
+    }
+    chapMap.get(chNum).lessons.push(item);
+  });
+
+  const curFilename = window.KUDO_SPEC.filename || "lesson_01.html";
+  const curChapNum = window.KUDO_SPEC.chapter_number || 1;
+
+  let treeHtml = "";
+  chapMap.forEach((ch) => {
+    const isOpen = (ch.chapter_number === curChapNum);
+    const lessonsHtml = ch.lessons.map(ls => {
+      const isCur = (ls.filename === curFilename);
+      return `
+        <div>
+          <div class="k-tree-lesson-row ${isCur ? 'active-lesson' : ''}" onclick="${isCur ? '' : `kudoSwitchLessonFromSidebar('${ls.filename}')`}">
+            <span>${isCur ? '▾' : '▸'} <strong>${ls.code}:</strong> ${ls.short_title || ls.title}</span>
+          </div>
+          ${isCur ? `<div class="k-tree-beats-sublist">${beatsHtml}</div>` : ''}
+        </div>
+      `;
+    }).join("");
+
+    treeHtml += `
+      <div class="k-tree-chapter ${isOpen ? 'open' : ''}">
+        <div class="k-tree-chap-head" onclick="this.parentElement.classList.toggle('open')">
+          <span>${ch.chapter_code}${ch.chapter_title ? ': ' + ch.chapter_title : ''}</span>
+          <span>▾</span>
+        </div>
+        <div class="k-tree-chap-lessons">
+          ${lessonsHtml}
+        </div>
+      </div>
+    `;
+  });
+
+  wrap.innerHTML = treeHtml;
 }
 
 function kudoOnSegmentClick(idx, ev) {
@@ -541,6 +622,9 @@ window.addEventListener("keydown", (ev) => {
   } else if (ev.code === "KeyC" && !ev.ctrlKey && !ev.metaKey && !ev.altKey) {
     ev.preventDefault();
     kudoToggleCursorMode();
+  } else if (ev.key === "[" && !ev.ctrlKey && !ev.metaKey && !ev.altKey) {
+    ev.preventDefault();
+    kudoToggleSidebarCollapse();
   }
 });
 

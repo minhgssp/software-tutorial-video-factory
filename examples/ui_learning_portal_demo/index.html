@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="vi" data-theme="cream" data-sidebar-mode="tabs" data-hub-layout="split" data-sub-size="normal">
+<html lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Antigravity Learning Portal v3.0 — Giao Diện Học Tập Đa Chương & Tương Tác 1-Thing-At-A-Time</title>
+<title>Antigravity Learning Portal — Mục Lục Chia Đôi 1 Cột & Cây Đa Cấp Thu Gọn</title>
 <style>
   :root {
+    /* Bảng màu Be Kem Ấm (Warm Cream) chuẩn mặc định */
     --bg-app: #FAF8F5;
     --bg-panel: #F4EFE6;
     --bg-panel-alt: #EFE9DD;
@@ -13,60 +14,24 @@
     --bg-stage: #EDE6D8;
     --text-main: #1E293B;
     --text-muted: #64748B;
-    --text-soft: #475569;
+    --text-soft: #334155;
     --border-main: #DDD5C7;
     --border-strong: #C8BFA8;
     --accent: #EA580C;
     --accent-dark: #C2410C;
-    --accent-Deep: #9A3412;
+    --accent-deep: #9A3412;
     --accent-soft: #FFF7ED;
     --accent-border: #FDBA74;
     --green: #16A34A;
     --green-soft: #F0FDF4;
     --green-border: #86EFAC;
-    --blue: #2563EB;
-    --blue-soft: #EFF6FF;
-    --sidebar-w: 336px;
-    --topbar-h: 54px;
-    --subbar-h: 74px;
-    --sub-font: 14.5px;
+    --sidebar-w: 340px;
+    --topbar-h: 52px;
+    /* Phụ đề lớn mặc định */
+    --subbar-h: 88px;
+    --sub-font: 17px;
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --font-mono: 'JetBrains Mono', Consolas, monospace;
-  }
-
-  html[data-theme="light"] {
-    --bg-app: #F8FAFC;
-    --bg-panel: #F1F5F9;
-    --bg-panel-alt: #E2E8F0;
-    --bg-card: #FFFFFF;
-    --bg-stage: #E2E8F0;
-    --text-main: #0F172A;
-    --text-muted: #64748B;
-    --text-soft: #334155;
-    --border-main: #CBD5E1;
-    --border-strong: #94A3B8;
-  }
-
-  html[data-theme="dark"] {
-    --bg-app: #0F172A;
-    --bg-panel: #1E293B;
-    --bg-panel-alt: #162032;
-    --bg-card: #1E293B;
-    --bg-stage: #0B1120;
-    --text-main: #F8FAFC;
-    --text-muted: #94A3B8;
-    --text-soft: #CBD5E1;
-    --border-main: #334155;
-    --border-strong: #475569;
-    --accent-soft: rgba(234, 88, 12, 0.16);
-    --accent-border: rgba(251, 146, 60, 0.45);
-    --green-soft: rgba(22, 163, 74, 0.16);
-    --green-border: rgba(74, 222, 128, 0.4);
-  }
-
-  html[data-sub-size="large"] {
-    --subbar-h: 86px;
-    --sub-font: 16.5px;
   }
 
   * {
@@ -88,7 +53,7 @@
   }
 
   /* =========================================================================
-     1. TOP NAVIGATION BAR (SMART BREADCRUMB + PROGRESS + UI LAB SWITCHER)
+     1. THANH ĐIỀU HƯỚNG ĐỈNH TINH GỌN (TOPBAR)
      ========================================================================= */
   .portal-topbar {
     height: var(--topbar-h);
@@ -107,7 +72,6 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    min-width: 0;
   }
 
   .brand-pill {
@@ -115,53 +79,43 @@
     align-items: center;
     gap: 9px;
     cursor: pointer;
-    padding: 5px 10px 5px 6px;
-    border-radius: 9px;
-    border: 1px solid transparent;
-    transition: all 0.15s;
+    padding: 4px 8px 4px 4px;
+    border-radius: 8px;
+    transition: background 0.15s;
   }
   .brand-pill:hover {
-    background: var(--bg-card);
-    border-color: var(--border-main);
+    background: var(--bg-panel-alt);
   }
   .brand-logo {
-    width: 30px;
-    height: 30px;
-    border-radius: 8px;
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
     background: linear-gradient(135deg, #EA580C, #C2410C);
     color: #fff;
     font-weight: 900;
-    font-size: 14px;
+    font-size: 13.5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 6px rgba(234, 88, 12, 0.25);
-    flex-shrink: 0;
   }
   .brand-title {
-    font-size: 13.5px;
+    font-size: 14px;
     font-weight: 800;
     color: var(--text-main);
-    white-space: nowrap;
-  }
-  .brand-sub {
-    font-size: 10.5px;
-    color: var(--text-muted);
-    font-weight: 600;
   }
 
   .tb-divider {
     width: 1px;
-    height: 24px;
+    height: 22px;
     background: var(--border-main);
   }
 
-  /* View Switcher Pills (Cổng Mục Lục vs. Phòng Học Tương Tác) */
+  /* Chuyển nhanh 2 chế độ: Cổng Mục Lục vs Phòng Học */
   .view-mode-tabs {
     display: flex;
     background: var(--bg-panel-alt);
     padding: 3px;
-    border-radius: 9px;
+    border-radius: 8px;
     border: 1px solid var(--border-main);
     gap: 3px;
   }
@@ -171,14 +125,13 @@
     color: var(--text-soft);
     font-size: 12.5px;
     font-weight: 700;
-    padding: 6px 12px;
-    border-radius: 7px;
+    padding: 5px 12px;
+    border-radius: 6px;
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 6px;
     transition: all 0.15s;
-    white-space: nowrap;
   }
   .vm-tab:hover {
     color: var(--text-main);
@@ -186,35 +139,34 @@
   .vm-tab.active {
     background: var(--bg-card);
     color: var(--accent-dark);
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
   }
 
-  /* Smart Context Stepper (Thay cho 24 nút pill tràn ngang) */
+  /* Trung tâm Topbar: Điều hướng Bài trước / Bài đang học / Bài tiếp */
   .tb-center {
     display: flex;
     align-items: center;
     gap: 8px;
-    min-width: 0;
     flex: 1;
     justify-content: center;
+    min-width: 0;
   }
 
   .smart-curriculum-trigger {
     background: var(--bg-card);
-    border: 1.5px solid var(--border-strong);
-    border-radius: 9px;
-    padding: 6px 12px;
+    border: 1px solid var(--border-strong);
+    border-radius: 8px;
+    padding: 5px 12px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 9px;
     cursor: pointer;
-    max-width: 520px;
-    min-width: 280px;
-    transition: all 0.15s;
+    max-width: 500px;
+    min-width: 260px;
+    transition: border-color 0.15s;
   }
   .smart-curriculum-trigger:hover {
     border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.12);
   }
   .sct-chap-badge {
     background: var(--accent-soft);
@@ -236,15 +188,6 @@
     flex: 1;
     text-align: left;
   }
-  .sct-kbd {
-    font-family: var(--font-mono);
-    font-size: 10.5px;
-    color: var(--text-muted);
-    background: var(--bg-panel);
-    padding: 2px 6px;
-    border-radius: 4px;
-    border: 1px solid var(--border-main);
-  }
 
   .nav-step-btn {
     background: var(--bg-card);
@@ -252,12 +195,12 @@
     color: var(--text-main);
     font-size: 12px;
     font-weight: 700;
-    padding: 6px 10px;
-    border-radius: 8px;
+    padding: 5px 10px;
+    border-radius: 7px;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    gap: 4px;
+    gap: 5px;
     white-space: nowrap;
     transition: all 0.15s;
   }
@@ -271,12 +214,10 @@
     cursor: not-allowed;
   }
 
-  /* Right Topbar: Progress + UI Customizer Button */
   .tb-right {
     display: flex;
     align-items: center;
     gap: 10px;
-    flex-shrink: 0;
   }
 
   .course-prog-pill {
@@ -285,13 +226,13 @@
     gap: 8px;
     background: var(--bg-card);
     border: 1px solid var(--border-main);
-    padding: 5px 11px;
+    padding: 5px 12px;
     border-radius: 999px;
     font-size: 12px;
     font-weight: 700;
   }
   .cpp-bar {
-    width: 68px;
+    width: 64px;
     height: 7px;
     background: var(--bg-panel-alt);
     border-radius: 999px;
@@ -299,252 +240,52 @@
   }
   .cpp-fill {
     height: 100%;
-    background: linear-gradient(90deg, #16A34A, #22C55E);
+    background: var(--green);
     width: 33%;
-    transition: width 0.3s ease;
-  }
-
-  .ui-lab-btn {
-    background: linear-gradient(135deg, #EA580C, #C2410C);
-    color: #FFFFFF;
-    border: none;
-    padding: 7px 13px;
-    border-radius: 8px;
-    font-size: 12.5px;
-    font-weight: 800;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    box-shadow: 0 2px 8px rgba(234, 88, 12, 0.28);
-    transition: transform 0.12s, box-shadow 0.15s;
-  }
-  .ui-lab-btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(234, 88, 12, 0.38);
   }
 
   /* =========================================================================
-     2. UI OPTIMIZATION LAB BAR (THANH THỬ NGHIỆM TỐI ƯU UI TRỰC TIẾP)
-     ========================================================================= */
-  .ui-lab-drawer {
-    background: var(--bg-card);
-    border-bottom: 2px solid var(--accent);
-    padding: 10px 18px;
-    display: none;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 14px;
-    z-index: 2900;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  }
-  .ui-lab-drawer.open {
-    display: flex;
-  }
-  .lab-group {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    flex-wrap: wrap;
-  }
-  .lab-label {
-    font-size: 11.5px;
-    font-weight: 800;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-  }
-  .lab-chip {
-    background: var(--bg-panel);
-    border: 1px solid var(--border-main);
-    color: var(--text-soft);
-    font-size: 12px;
-    font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.15s;
-  }
-  .lab-chip:hover {
-    border-color: var(--accent);
-    color: var(--text-main);
-  }
-  .lab-chip.active {
-    background: var(--accent-soft);
-    border-color: var(--accent);
-    color: var(--accent-dark);
-  }
-
-  /* =========================================================================
-     3. VIEW 1: COURSE HUB (CỔNG MỤC LỤC 6 CHƯƠNG × 24 BÀI × 144 PHẦN NHỎ)
+     2. VIEW 1: CỔNG MỤC LỤC CHIA ĐÔI TỐI GIẢN (#hub-view)
+        - Bỏ hoàn toàn phần giới thiệu rườm rà
+        - Cột Trái: Danh sách 6 Chương + Ô lọc nhanh
+        - Cột Phải: Danh sách Bài học xếp 1 Cột dọc duy nhất, rõ ràng
      ========================================================================= */
   #hub-view {
     flex: 1;
-    overflow-y: auto;
-    padding: 22px 28px 40px 28px;
+    height: calc(100vh - var(--topbar-h));
     display: none;
-  }
-  #hub-view.active {
-    display: block;
-  }
-
-  .hub-container {
-    max-width: 1380px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  /* Banner Tiếp Tục Học & Thống Kê */
-  .hub-hero-card {
-    background: var(--bg-card);
-    border: 1.5px solid var(--border-main);
-    border-radius: 16px;
-    padding: 20px 24px;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 20px;
-    align-items: center;
-    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
-    position: relative;
     overflow: hidden;
   }
-  .hub-hero-card::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #EA580C, #F59E0B, #16A34A);
+  #hub-view.active {
+    display: grid;
+    grid-template-columns: 350px minmax(0, 1fr);
   }
 
-  .hh-left {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .hh-badge-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-  .hh-tag {
-    background: var(--accent-soft);
-    color: var(--accent-dark);
-    border: 1px solid var(--accent-border);
-    font-size: 11.5px;
-    font-weight: 800;
-    padding: 3px 9px;
-    border-radius: 999px;
-  }
-  .hh-title {
-    font-size: 22px;
-    font-weight: 900;
-    color: var(--text-main);
-    line-height: 1.25;
-  }
-  .hh-desc {
-    font-size: 13.5px;
-    color: var(--text-soft);
-    line-height: 1.55;
-  }
-
-  .hh-resume-box {
+  /* Cột Trái Cổng Mục Lục: Danh sách Chương */
+  .hub-left-pane {
     background: var(--bg-panel);
-    border: 1px solid var(--border-main);
-    border-radius: 12px;
-    padding: 14px 16px;
+    border-right: 1px solid var(--border-main);
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    height: 100%;
+    overflow: hidden;
   }
-  .hhr-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--text-muted);
+
+  .hlp-search-box {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border-main);
+    background: var(--bg-panel-alt);
   }
-  .hhr-lesson {
-    font-size: 14.5px;
-    font-weight: 800;
-    color: var(--text-main);
-  }
-  .hhr-actions {
+  .hlp-search-inner {
     display: flex;
     align-items: center;
     gap: 8px;
-  }
-  .btn-resume-main {
-    flex: 1;
-    background: linear-gradient(135deg, #EA580C, #C2410C);
-    color: #fff;
-    border: none;
-    padding: 9px 14px;
-    border-radius: 8px;
-    font-size: 13px;
-    font-weight: 800;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-  }
-
-  /* Bộ lọc Chương + Tìm kiếm + Chuyển chế độ xem Hub */
-  .hub-filter-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    flex-wrap: wrap;
     background: var(--bg-card);
-    padding: 12px 16px;
-    border-radius: 12px;
-    border: 1px solid var(--border-main);
-  }
-  .chapter-filter-pills {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    flex-wrap: wrap;
-  }
-  .cf-pill {
-    background: var(--bg-panel);
-    border: 1px solid var(--border-main);
-    color: var(--text-soft);
-    padding: 6px 12px;
-    border-radius: 8px;
-    font-size: 12.5px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.15s;
-  }
-  .cf-pill:hover {
-    border-color: var(--accent);
-    color: var(--text-main);
-  }
-  .cf-pill.active {
-    background: var(--accent);
-    border-color: var(--accent-dark);
-    color: #fff;
-  }
-
-  .hub-search-wrap {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex: 1;
-    max-width: 340px;
-    background: var(--bg-panel);
     border: 1px solid var(--border-strong);
     border-radius: 8px;
-    padding: 6px 11px;
+    padding: 7px 11px;
   }
-  .hub-search-wrap input {
+  .hlp-search-inner input {
     border: none;
     background: transparent;
     color: var(--text-main);
@@ -553,239 +294,255 @@
     outline: none;
   }
 
-  /* --- HUB LAYOUT MODE 1: SPLIT MASTER-DETAIL (CHỌN CHƯƠNG TRÁI -> CHI TIẾT BÀI PHẢI) --- */
-  .hub-split-layout {
-    display: none;
-    grid-template-columns: 350px 1fr;
-    gap: 18px;
-    align-items: start;
-  }
-  html[data-hub-layout="split"] .hub-split-layout {
-    display: grid;
-  }
-
-  .hub-chap-nav-list {
+  .hlp-chapters-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
   }
-  .hcn-card {
+
+  .chap-nav-item {
     background: var(--bg-card);
     border: 1.5px solid var(--border-main);
-    border-radius: 12px;
-    padding: 13px 15px;
+    border-radius: 10px;
+    padding: 12px 14px;
     cursor: pointer;
     transition: all 0.15s;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 5px;
   }
-  .hcn-card:hover {
+  .chap-nav-item:hover {
     border-color: var(--accent);
   }
-  .hcn-card.active {
+  .chap-nav-item.active {
     border-color: var(--accent);
     background: var(--accent-soft);
-    box-shadow: 0 4px 14px rgba(234, 88, 12, 0.12);
+    box-shadow: 0 3px 10px rgba(234, 88, 12, 0.1);
   }
-  .hcn-top {
+  .cni-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 11.5px;
+    font-size: 11px;
     font-weight: 800;
     color: var(--accent-dark);
   }
-  .hcn-title {
-    font-size: 14.5px;
+  .cni-done-badge {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+  }
+  .cni-done-badge.full {
+    color: var(--green);
+  }
+  .cni-title {
+    font-size: 14px;
     font-weight: 800;
     color: var(--text-main);
     line-height: 1.35;
   }
-  .hcn-meta {
-    font-size: 12px;
-    color: var(--text-muted);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+  /* Cột Phải Cổng Mục Lục: Danh sách Bài học 1 Cột Dọc Duy Nhất */
+  .hub-right-pane {
+    background: var(--bg-app);
+    height: 100%;
+    overflow-y: auto;
+    padding: 20px 28px 36px 28px;
   }
 
-  .hub-chap-detail-pane {
-    background: var(--bg-card);
-    border: 1.5px solid var(--border-main);
-    border-radius: 14px;
-    padding: 20px 22px;
+  .hrp-inner {
+    max-width: 920px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 16px;
-  }
-  .hcd-header {
-    border-bottom: 1px solid var(--border-main);
-    padding-bottom: 12px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 12px;
-  }
-  .hcd-lessons-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 14px;
   }
 
-  /* --- HUB LAYOUT MODE 2: GRID 2-COLUMN CHAPTERS --- */
-  .hub-grid-layout {
-    display: none;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-  }
-  html[data-hub-layout="grid"] .hub-grid-layout {
-    display: grid;
-  }
-
-  /* --- HUB LAYOUT MODE 3: ACCORDION ROADMAP --- */
-  .hub-accordion-layout {
-    display: none;
-    flex-direction: column;
-    gap: 12px;
-  }
-  html[data-hub-layout="accordion"] .hub-accordion-layout {
-    display: flex;
-  }
-
-  .chapter-box {
-    background: var(--bg-card);
-    border: 1.5px solid var(--border-main);
-    border-radius: 14px;
-    padding: 16px 18px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .cb-head {
+  .hrp-chap-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
-    cursor: pointer;
+    gap: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1.5px solid var(--border-main);
   }
-  .cb-title-group {
+  .hrp-chap-title {
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--text-main);
     display: flex;
     align-items: center;
     gap: 10px;
   }
-  .cb-num {
+  .hrp-chap-tag {
+    background: var(--accent);
+    color: #fff;
+    font-size: 11.5px;
+    font-weight: 800;
+    padding: 3px 9px;
+    border-radius: 6px;
+  }
+
+  /* Danh sách Bài học 1 Cột (1-Column Stack) */
+  .lessons-one-col-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .lesson-row-card {
+    background: var(--bg-card);
+    border: 1.5px solid var(--border-main);
+    border-radius: 11px;
+    padding: 14px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .lesson-row-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 4px 14px rgba(234, 88, 12, 0.08);
+  }
+  .lesson-row-card.active {
+    border-color: var(--accent);
     background: var(--accent-soft);
+  }
+
+  .lrc-main-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+  }
+  .lrc-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+  }
+  .lrc-num {
+    background: var(--bg-panel);
+    border: 1px solid var(--border-strong);
     color: var(--accent-dark);
-    border: 1px solid var(--accent-border);
     font-size: 12px;
     font-weight: 800;
     padding: 4px 10px;
     border-radius: 7px;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
-  .cb-name {
-    font-size: 16px;
+  .lesson-row-card.done .lrc-num {
+    background: var(--green-soft);
+    border-color: var(--green-border);
+    color: var(--green);
+  }
+  .lrc-title {
+    font-size: 15.5px;
     font-weight: 800;
     color: var(--text-main);
-  }
-  .cb-lessons-list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
+    line-height: 1.35;
   }
 
-  /* Lesson Card inside Hub */
-  .lesson-card-item {
-    background: var(--bg-panel);
-    border: 1.5px solid var(--border-main);
-    border-radius: 11px;
-    padding: 13px 14px;
+  .lrc-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+  .lrc-dur {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-muted);
+  }
+  .lrc-play-btn {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 800;
     cursor: pointer;
+  }
+
+  /* Các phần nhỏ (Beats) trải phẳng 1 cột dọc (Mỗi phần 1 hàng riêng biệt, không chồng 2 phần trên 1 hàng) */
+  .lrc-beats-strip {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
-    transition: all 0.15s;
+    gap: 6px;
+    padding-top: 8px;
+    border-top: 1px dashed var(--border-main);
   }
-  .lesson-card-item:hover {
-    border-color: var(--accent);
-    background: var(--bg-card);
-    transform: translateY(-1px);
-    box-shadow: 0 5px 15px rgba(234, 88, 12, 0.1);
-  }
-  .lesson-card-item.active-lesson {
-    border-color: var(--accent);
-    background: var(--accent-soft);
-  }
-  .lesson-card-item.completed-lesson {
-    border-color: var(--green-border);
-  }
-
-  .lci-top {
+  .lrc-beat-chip {
+    width: 100%;
+    background: var(--bg-panel);
+    border: 1px solid var(--border-main);
+    color: var(--text-main);
+    font-size: 13.5px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 6px;
+    gap: 12px;
+    transition: all 0.12s;
   }
-  .lci-code {
+  .lrc-beat-chip:hover {
+    border-color: var(--accent);
+    color: var(--accent-dark);
+    background: var(--accent-soft);
+  }
+  .lrc-beat-chip.sim {
+    background: #F8FAFC;
+    border-color: #CBD5E1;
+  }
+  .lrc-beat-chip.sim:hover {
+    background: #EFF6FF;
+    border-color: #60A5FA;
+    color: #1E40AF;
+  }
+  .lbc-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+  }
+  .lbc-type-tag {
     font-size: 11px;
     font-weight: 800;
-    color: var(--accent-dark);
-    background: var(--bg-card);
     padding: 2px 8px;
     border-radius: 5px;
-    border: 1px solid var(--border-main);
+    background: #FEF3C7;
+    color: #92400E;
+    border: 1px solid #FDE68A;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
-  .lci-status {
-    font-size: 11px;
-    font-weight: 800;
-    padding: 2px 7px;
-    border-radius: 999px;
+  .lrc-beat-chip.sim .lbc-type-tag {
+    background: #DBEAFE;
+    color: #1E40AF;
+    border-color: #BFDBFE;
   }
-  .lci-status.done {
-    background: var(--green-soft);
-    color: var(--green);
-    border: 1px solid var(--green-border);
-  }
-  .lci-status.current {
-    background: var(--accent);
-    color: #fff;
-  }
-  .lci-title {
-    font-size: 14px;
-    font-weight: 800;
-    color: var(--text-main);
-    line-height: 1.38;
-  }
-  .lci-desc {
+  .lbc-dur {
+    font-family: var(--font-mono);
     font-size: 12px;
-    color: var(--text-muted);
-    line-height: 1.45;
-  }
-  .lci-beats-preview {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    padding-top: 6px;
-    border-top: 1px dashed var(--border-main);
-  }
-  .lci-beat-dot {
-    font-size: 10.5px;
     font-weight: 700;
-    padding: 2px 6px;
-    border-radius: 4px;
-    background: var(--bg-card);
-    color: var(--text-soft);
-    border: 1px solid var(--border-main);
-  }
-  .lci-beat-dot.sim {
-    border-color: #93C5FD;
-    color: #1D4ED8;
-    background: #EFF6FF;
+    color: var(--text-muted);
+    flex-shrink: 0;
   }
 
   /* =========================================================================
-     4. VIEW 2: UNIFIED PLAYER VIEW (SIDEBAR ĐA NĂNG + SÂN KHẤU 1-THING-AT-A-TIME)
+     3. VIEW 2: PHÒNG HỌC TƯƠNG TÁC (#player-view)
+        - Sidebar Trái: Cây Đa Cấp (Chương ▸ Bài ▸ 6 Phần nhỏ) + Cho phép Ẩn/Hiện
+        - Sân khấu Phải: 1-Thing-At-A-Time + Phụ đề chữ lớn 17px
      ========================================================================= */
   #player-view {
     flex: 1;
@@ -797,11 +554,11 @@
   #player-view.active {
     display: grid;
   }
-  html[data-sidebar-mode="cinema"] #player-view.active {
+  body.sidebar-collapsed #player-view.active {
     grid-template-columns: 0px minmax(0, 1fr);
   }
 
-  /* --- LEFT SIDEBAR IN PLAYER (#kudo-left-sidebar) --- */
+  /* --- SIDEBAR TRÁI CÂY ĐA CẤP (#kudo-left-sidebar) --- */
   #kudo-left-sidebar {
     background: var(--bg-panel);
     border-right: 1px solid var(--border-main);
@@ -809,40 +566,50 @@
     flex-direction: column;
     height: 100%;
     overflow: hidden;
-    transition: width 0.2s ease;
   }
-  html[data-sidebar-mode="cinema"] #kudo-left-sidebar {
+  body.sidebar-collapsed #kudo-left-sidebar {
     width: 0;
     border-right: none;
   }
 
-  /* Sidebar Header: Active Chapter + Lesson Info */
-  .psb-lesson-header {
-    padding: 12px 14px;
+  /* Thanh tiêu đề Sidebar + Nút Ẩn Sidebar */
+  .psb-top-header {
+    padding: 10px 12px;
     background: var(--bg-panel-alt);
     border-bottom: 1px solid var(--border-main);
     display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-  .psb-chap-row {
-    display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 11px;
+    gap: 8px;
+  }
+  .psb-tree-title {
+    font-size: 12px;
     font-weight: 800;
     color: var(--accent-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
   }
-  .psb-lesson-title {
-    font-size: 14px;
-    font-weight: 800;
-    color: var(--text-main);
-    line-height: 1.35;
+  .btn-collapse-sb {
+    background: var(--bg-card);
+    border: 1px solid var(--border-strong);
+    color: var(--text-soft);
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 4px 9px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .btn-collapse-sb:hover {
+    border-color: var(--accent);
+    color: var(--accent-dark);
   }
 
-  /* Sidebar Playback Controls (2 Compact Rows) */
+  /* Cụm nút điều khiển phát 2 hàng gọn */
   .psb-controls {
-    padding: 10px 12px;
+    padding: 9px 12px;
     border-bottom: 1px solid var(--border-main);
     background: var(--bg-panel);
     display: flex;
@@ -880,179 +647,158 @@
     border-color: #C2410C;
   }
 
-  /* Sidebar Mode Switcher Tabs: "🎯 Trong bài này (6 phần)" vs "📚 Lộ trình 6 Chương (24 bài)" */
-  .psb-mode-tabs {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 6px 10px;
-    background: var(--bg-panel-alt);
-    border-bottom: 1px solid var(--border-main);
-    gap: 5px;
-  }
-  html[data-sidebar-mode="tree"] .psb-mode-tabs {
-    display: none;
-  }
-  .psb-tab-btn {
-    border: 1px solid transparent;
-    background: transparent;
-    color: var(--text-soft);
-    font-size: 12px;
-    font-weight: 800;
-    padding: 6px 8px;
-    border-radius: 7px;
-    cursor: pointer;
-    transition: all 0.15s;
-  }
-  .psb-tab-btn.active {
-    background: var(--bg-card);
-    color: var(--accent-dark);
-    border-color: var(--border-main);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  }
-
-  /* Sidebar Scrollable Body */
-  .psb-scroll-area {
+  /* Cây Mục Lục Đa Cấp 3 Tầng (Chương ▸ Bài ▸ Phần nhỏ) */
+  .psb-tree-scroll {
     flex: 1;
     overflow-y: auto;
-    padding: 10px 12px 16px 12px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 8px;
   }
 
-  /* Beat Item Card inside Sidebar */
-  .beat-item {
+  /* Tầng 1: Chương */
+  .tree-chapter {
     background: var(--bg-card);
-    border: 1.5px solid var(--border-main);
-    border-radius: 10px;
-    padding: 10px 12px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    transition: all 0.15s;
-  }
-  .beat-item:hover {
-    border-color: var(--accent);
-  }
-  .beat-item.active {
-    border-color: var(--accent);
-    background: var(--accent-soft);
-    box-shadow: 0 3px 10px rgba(234, 88, 12, 0.12);
-  }
-  .beat-item.done {
-    border-color: var(--green-border);
-  }
-  .bi-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 6px;
-  }
-  .bi-badge {
-    font-size: 10.5px;
-    font-weight: 800;
-    padding: 2px 7px;
-    border-radius: 5px;
-  }
-  .bi-badge.theory {
-    background: #FEF3C7;
-    color: #92400E;
-    border: 1px solid #FDE68A;
-  }
-  .bi-badge.sim {
-    background: #DBEAFE;
-    color: #1E40AF;
-    border: 1px solid #BFDBFE;
-  }
-  .bi-dur {
-    font-family: var(--font-mono);
-    font-size: 11.5px;
-    font-weight: 700;
-    color: var(--text-muted);
-  }
-  .bi-title {
-    font-size: 13.5px;
-    font-weight: 700;
-    color: var(--text-main);
-    line-height: 1.38;
-  }
-  .bi-sub {
-    font-size: 11.5px;
-    color: var(--text-muted);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  /* Chapter-Lesson Tree inside Sidebar Tab 2 / Unified Tree Mode */
-  .tree-chap-block {
     border: 1px solid var(--border-main);
-    border-radius: 10px;
-    background: var(--bg-card);
+    border-radius: 9px;
     overflow: hidden;
     flex-shrink: 0;
   }
-  .tcb-header {
+  .tree-chapter.active-chap {
+    border-color: var(--border-strong);
+  }
+  .tc-head {
     padding: 9px 11px;
     background: var(--bg-panel-alt);
-    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 12.5px;
     font-weight: 800;
     color: var(--text-main);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
   }
-  .tcb-lessons {
-    padding: 6px;
+  .tc-head:hover {
+    background: #E7DFC6;
+  }
+  .tc-arrow {
+    font-size: 11px;
+    color: var(--text-muted);
+    transition: transform 0.15s;
+  }
+  .tree-chapter.open .tc-arrow {
+    transform: rotate(90deg);
+  }
+
+  /* Tầng 2: Danh sách Bài trong Chương */
+  .tc-lessons-wrap {
     display: none;
     flex-direction: column;
+    padding: 5px;
     gap: 4px;
+    background: var(--bg-card);
   }
-  .tree-chap-block.open .tcb-lessons {
+  .tree-chapter.open .tc-lessons-wrap {
     display: flex;
   }
-  .tcb-lesson-row {
-    padding: 7px 9px;
+
+  .tree-lesson-node {
     border-radius: 7px;
-    font-size: 12.5px;
-    font-weight: 600;
-    color: var(--text-soft);
+    overflow: hidden;
+  }
+  .tln-head {
+    padding: 7px 9px;
     cursor: pointer;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    gap: 8px;
-    transition: all 0.12s;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-soft);
+    border-radius: 7px;
+    line-height: 1.35;
+    transition: background 0.12s;
   }
-  .tcb-lesson-row:hover {
+  .tln-head:hover {
     background: var(--bg-panel);
     color: var(--text-main);
   }
-  .tcb-lesson-row.active {
+  .tree-lesson-node.active-lesson > .tln-head {
     background: var(--accent-soft);
     color: var(--accent-dark);
     font-weight: 800;
     border: 1px solid var(--accent-border);
   }
 
+  /* Tầng 3: 6 Phần nhỏ (Beats) bên dưới Bài đang mở */
+  .tln-beats-list {
+    display: none;
+    flex-direction: column;
+    gap: 3px;
+    padding: 5px 4px 5px 16px;
+    border-left: 2px solid var(--accent-border);
+    margin: 3px 0 4px 12px;
+  }
+  .tree-lesson-node.open-beats .tln-beats-list {
+    display: flex;
+  }
+
+  .tree-beat-leaf {
+    padding: 6px 9px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-soft);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    transition: all 0.12s;
+  }
+  .tree-beat-leaf:hover {
+    background: var(--bg-panel);
+    color: var(--text-main);
+  }
+  .tree-beat-leaf.active-beat {
+    background: var(--accent);
+    color: #FFFFFF;
+    font-weight: 700;
+  }
+  .tbl-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+  }
+  .tbl-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .tbl-dur {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    opacity: 0.8;
+    flex-shrink: 0;
+  }
+
   /* =========================================================================
-     5. RIGHT MAIN STAGE ("ONE THING AT A TIME" — ZERO FLOATING TEXTBOX OVERLAY)
+     4. SÂN KHẤU PHẢI ("ONE THING AT A TIME" + PHỤ ĐỀ LỚN 17PX)
      ========================================================================= */
   #kudo-right-main {
     display: grid;
-    grid-template-rows: 38px minmax(0, 1fr) var(--subbar-h);
+    grid-template-rows: 40px minmax(0, 1fr) var(--subbar-h);
     height: 100%;
     background: var(--bg-stage);
     position: relative;
     overflow: hidden;
   }
 
-  /* Hàng 1 (38px): Non-Overlapping Context Action Bar (Không bao giờ đè lên phần mềm!) */
+  /* Thanh trạng thái mỏng phía trên sân khấu (Chứa nút Hiện Mục Lục khi Sidebar đang ẩn) */
   .stage-top-context-bar {
     background: var(--bg-panel-alt);
     border-bottom: 1px solid var(--border-main);
@@ -1069,6 +815,23 @@
     gap: 8px;
     min-width: 0;
   }
+  .btn-expand-sb {
+    display: none;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    align-items: center;
+    gap: 5px;
+  }
+  body.sidebar-collapsed .btn-expand-sb {
+    display: inline-flex;
+  }
+
   .mode-indicator-pill {
     font-size: 11px;
     font-weight: 800;
@@ -1093,6 +856,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
   .stcb-right {
     display: flex;
     align-items: center;
@@ -1108,12 +872,11 @@
     border: 1px solid var(--border-strong);
     background: var(--bg-card);
     color: var(--text-soft);
-    font-size: 11px;
+    font-size: 11.5px;
     font-weight: 800;
-    padding: 2px 8px;
+    padding: 3px 9px;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.15s;
   }
   .psp-btn.active {
     background: var(--accent);
@@ -1126,7 +889,7 @@
     color: var(--green);
   }
 
-  /* Hàng 2 (1fr): Sân khấu chính (#kudo-stage-viewport) */
+  /* Khung Sân Khấu Chính */
   #kudo-stage-viewport {
     position: relative;
     width: 100%;
@@ -1138,16 +901,16 @@
     padding: 16px 22px;
   }
 
-  /* --- A. SÂN KHẤU SLIDE LÝ THUYẾT ĐỘC LẬP (PROGRESSIVE REVEAL) --- */
+  /* A. Slide Lý Thuyết Độc Lập (Mở dần từng thẻ) */
   #kudo-theory-stage {
     width: 100%;
-    max-width: 1240px;
+    max-width: 1260px;
     height: 100%;
     max-height: 700px;
     background: var(--bg-card);
     border: 1.5px solid var(--border-main);
-    border-radius: 18px;
-    box-shadow: 0 14px 36px rgba(15, 23, 42, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(120, 90, 50, 0.1);
     padding: 24px 30px;
     display: flex;
     flex-direction: column;
@@ -1177,7 +940,7 @@
     font-weight: 800;
     color: var(--accent-dark);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
     margin-bottom: 4px;
   }
   .ts-title {
@@ -1186,22 +949,11 @@
     color: var(--text-main);
     line-height: 1.25;
   }
-  .ts-rule-badge {
-    background: var(--green-soft);
-    color: var(--green);
-    border: 1px solid var(--green-border);
-    padding: 5px 10px;
-    border-radius: 8px;
-    font-size: 11.5px;
-    font-weight: 800;
-    white-space: nowrap;
-  }
 
-  /* Progressive Reveal Cards Grid */
   .ts-cards-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px;
+    grid-template-columns: 1fr;
+    gap: 10px;
     margin: 12px 0;
     flex: 1;
     align-content: center;
@@ -1215,12 +967,11 @@
     flex-direction: column;
     gap: 8px;
     cursor: pointer;
-    transition: all 0.28s cubic-bezier(0.22, 1, 0.36, 1);
-    position: relative;
+    transition: all 0.25s ease;
   }
   .ts-card.k-unreached {
-    opacity: 0.25;
-    filter: grayscale(0.5);
+    opacity: 0.24;
+    filter: grayscale(0.45);
     transform: scale(0.985);
   }
   .ts-card.k-visited {
@@ -1231,14 +982,13 @@
     opacity: 1;
     background: var(--bg-card);
     border-color: var(--accent);
-    box-shadow: 0 10px 28px rgba(234, 88, 12, 0.16);
-    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 10px 26px rgba(234, 88, 12, 0.15);
+    transform: translateY(-2px);
   }
   .tsc-head {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 8px;
   }
   .tsc-step-num {
     background: var(--accent-soft);
@@ -1254,12 +1004,12 @@
     color: #fff;
   }
   .tsc-title {
-    font-size: 15.5px;
+    font-size: 16px;
     font-weight: 800;
     color: var(--text-main);
   }
   .tsc-body {
-    font-size: 13.5px;
+    font-size: 14px;
     color: var(--text-soft);
     line-height: 1.5;
   }
@@ -1267,18 +1017,18 @@
   .ts-footer-takeaway {
     background: var(--accent-soft);
     border: 1.5px solid var(--accent-border);
-    border-radius: 12px;
-    padding: 11px 16px;
+    border-radius: 11px;
+    padding: 10px 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 12px;
     font-size: 13.5px;
     font-weight: 700;
-    color: var(--accent-Deep);
+    color: var(--accent-deep);
   }
 
-  /* --- B. SÂN KHẤU MÔ PHỎNG PHẦN MỀM SẠCH 100% (ZERO FLOATING TEXTBOX OVERLAY) --- */
+  /* B. Sân khấu Mô phỏng Phần mềm Sạch 100% (Không có hộp thoại đè lên) */
   #kudo-sim-stage {
     width: 100%;
     max-width: 1280px;
@@ -1287,7 +1037,7 @@
     background: #1E1E1E;
     border-radius: 14px;
     border: 1.5px solid #334155;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
     display: none;
     flex-direction: column;
     overflow: hidden;
@@ -1297,7 +1047,6 @@
     display: flex;
   }
 
-  /* Simulated OS Titlebar */
   .sim-os-bar {
     height: 32px;
     background: #252526;
@@ -1314,17 +1063,7 @@
     align-items: center;
     gap: 14px;
   }
-  .sim-os-menu-item {
-    padding: 2px 6px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  .sim-os-menu-item.hl-target {
-    background: rgba(234, 88, 12, 0.35);
-    color: #fff;
-  }
 
-  /* Simulated 3-Column IDE / AGY 2.0 Workspace */
   .sim-workspace-grid {
     flex: 1;
     display: grid;
@@ -1334,7 +1073,6 @@
     overflow: hidden;
     position: relative;
   }
-
   .sim-explorer {
     background: #252526;
     border-right: 1px solid #333333;
@@ -1348,13 +1086,11 @@
     font-size: 11px;
     font-weight: 800;
     color: #858585;
-    text-transform: uppercase;
     margin-bottom: 4px;
   }
   .sim-file-row {
     padding: 6px 8px;
     border-radius: 5px;
-    cursor: pointer;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -1363,7 +1099,6 @@
     background: #37373D;
     color: #FFFFFF;
   }
-
   .sim-editor-center {
     display: flex;
     flex-direction: column;
@@ -1400,7 +1135,6 @@
     color: #D4D4D4;
     flex: 1;
   }
-
   .sim-agent-pane {
     background: #252526;
     padding: 12px;
@@ -1436,10 +1170,8 @@
     font-weight: 700;
     padding: 4px 9px;
     border-radius: 6px;
-    width: fit-content;
   }
 
-  /* Two-Stage Click Context Menu / Modal inside Simulator */
   .sim-context-menu {
     position: absolute;
     top: 42px;
@@ -1473,7 +1205,6 @@
     font-weight: 700;
   }
 
-  /* Spotlight & Simulated Cursor inside Stage */
   #demo-spotlight {
     position: absolute;
     border: 2.5px solid #EA580C;
@@ -1509,28 +1240,26 @@
   .cursor-tag {
     background: #EA580C;
     color: #fff;
-    font-size: 11px;
+    font-size: 11.5px;
     font-weight: 800;
-    padding: 3px 8px;
+    padding: 4px 9px;
     border-radius: 6px;
     white-space: nowrap;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   }
 
   /* =========================================================================
-     6. BOTTOM SUBTITLE & TIMELINE SCRUBBER DOCK (#kudo-subtitle-strip)
+     5. DẢI PHỤ ĐỀ LỚN (17PX) & AVATAR GIẢNG VIÊN (#kudo-subtitle-strip)
      ========================================================================= */
   #kudo-subtitle-strip {
     background: var(--bg-panel);
     border-top: 1px solid var(--border-main);
-    padding: 0 18px;
+    padding: 0 20px;
     display: flex;
     align-items: center;
     gap: 14px;
     position: relative;
   }
-
-  /* Scrubber Progress Line along top edge of Subtitle Strip */
   .sub-scrubber-track {
     position: absolute;
     top: -3px;
@@ -1548,15 +1277,15 @@
   }
 
   .lecturer-avatar-circle {
-    width: 48px;
-    height: 48px;
+    width: 54px;
+    height: 54px;
     border-radius: 50%;
     background: radial-gradient(circle at 50% 35%, #FEF3C7 0%, #FDE68A 50%, #F59E0B 100%);
     border: 2.5px solid var(--accent);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
+    font-size: 24px;
     flex-shrink: 0;
     box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.2);
   }
@@ -1564,100 +1293,43 @@
   .subtitle-text-card {
     flex: 1;
     background: var(--bg-card);
-    border: 1px solid var(--border-strong);
-    border-radius: 10px;
-    padding: 8px 15px;
+    border: 1.5px solid var(--border-strong);
+    border-radius: 12px;
+    padding: 10px 18px;
     font-size: var(--sub-font);
-    line-height: 1.45;
+    line-height: 1.48;
     color: var(--text-main);
-    font-weight: 500;
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
+    gap: 14px;
+    box-shadow: 0 2px 6px rgba(30, 41, 59, 0.04);
   }
   .sub-speaker-tag {
     color: var(--accent-dark);
     font-weight: 800;
     margin-right: 6px;
   }
-
-  /* =========================================================================
-     7. QUICK CURRICULUM SEARCH DRAWER / MODAL (CTRL + K)
-     ========================================================================= */
-  .quick-drawer-backdrop {
-    position: fixed;
-    inset: 0;
-    background: rgba(15, 23, 42, 0.45);
-    backdrop-filter: blur(3px);
-    z-index: 5000;
-    display: none;
-    align-items: flex-start;
-    justify-content: center;
-    padding-top: 64px;
-  }
-  .quick-drawer-backdrop.open {
-    display: flex;
-  }
-  .quick-drawer-modal {
-    width: 92%;
-    max-width: 780px;
-    max-height: 78vh;
-    background: var(--bg-card);
-    border: 1.5px solid var(--border-strong);
-    border-radius: 16px;
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
-  .qdm-search-top {
-    padding: 14px 18px;
-    border-bottom: 1px solid var(--border-main);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: var(--bg-panel);
-  }
-  .qdm-search-top input {
-    flex: 1;
-    border: none;
-    background: transparent;
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--text-main);
-    outline: none;
-  }
-  .qdm-body {
-    padding: 14px 18px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
 </style>
 </head>
 <body>
 
 <!-- =========================================================================
-     1. TOP NAVIGATION BAR (SMART BREADCRUMB + PROGRESS + LIVE UI LAB)
+     1. THANH ĐIỀU HƯỚNG ĐỈNH (TOPBAR)
      ========================================================================= -->
 <header class="portal-topbar">
   <div class="tb-left">
-    <div class="brand-pill" onclick="switchPortalView('hub')" title="Về Cổng Mục Lục Khóa Học">
+    <div class="brand-pill" onclick="switchPortalView('hub')" title="Về Cổng Mục Lục Chia Đôi">
       <div class="brand-logo">A</div>
-      <div>
-        <div class="brand-title">Antigravity Basic</div>
-        <div class="brand-sub">6 Chương · 24 Bài · 144 Phần nhỏ</div>
-      </div>
+      <div class="brand-title">Antigravity Basic</div>
     </div>
 
     <div class="tb-divider"></div>
 
-    <!-- Chuyển nhanh giữa Cổng Khóa Học và Phòng Học Tương Tác -->
     <div class="view-mode-tabs">
       <button class="vm-tab" id="tab-btn-hub" onclick="switchPortalView('hub')">
-        <span>🗂️</span> <span>Cổng Mục Lục (6 Chương)</span>
+        <span>🗂️</span> <span>Mục lục Khóa học (6 Chương)</span>
       </button>
       <button class="vm-tab active" id="tab-btn-player" onclick="switchPortalView('player')">
         <span>▶️</span> <span>Phòng Học Tương Tác</span>
@@ -1665,137 +1337,66 @@
     </div>
   </div>
 
-  <!-- Thanh Breadcrumb Chọn Chương/Bài Thông Minh (Thay cho 24 nút pill tràn ngang) -->
+  <!-- Điều hướng Bài học gọn trên thanh đỉnh -->
   <div class="tb-center">
-    <button class="nav-step-btn" id="btn-prev-lesson" onclick="stepLesson(-1)" title="Bài học trước">◀ Bài trước</button>
+    <button class="nav-step-btn" id="btn-prev-lesson" onclick="stepLesson(-1)">◀ Bài trước</button>
 
-    <button class="smart-curriculum-trigger" onclick="toggleQuickModal()" title="Bấm để mở nhanh mục lục 6 Chương · 24 Bài (Phím tắt: Ctrl + K)">
+    <button class="smart-curriculum-trigger" onclick="switchPortalView(state.view === 'hub' ? 'player' : 'hub')" title="Bấm để mở Mục lục Chia đôi 6 Chương · 24 Bài">
       <span class="sct-chap-badge" id="top-chap-badge">CHƯƠNG 1/6</span>
       <span class="sct-lesson-name" id="top-lesson-title">Bài 1: Tư duy Trợ lý AI trên Máy tính & 2 Phần mềm Cốt lõi</span>
-      <span class="sct-kbd">Ctrl+K ▾</span>
+      <span style="font-size:11px;color:var(--text-muted);">▾</span>
     </button>
 
-    <button class="nav-step-btn" id="btn-next-lesson" onclick="stepLesson(1)" title="Bài học tiếp theo">Bài tiếp ▶</button>
+    <button class="nav-step-btn" id="btn-next-lesson" onclick="stepLesson(1)">Bài tiếp ▶</button>
   </div>
 
   <div class="tb-right">
-    <div class="course-prog-pill" title="Tiến độ hoàn thành toàn khóa học">
-      <span>Tiến độ: <strong id="top-prog-text">8/24 bài (33%)</strong></span>
-      <div class="cpp-bar"><div class="cpp-fill" id="top-prog-fill"></div></div>
+    <div class="course-prog-pill">
+      <span>Hoàn thành: <strong>8/24 bài (33%)</strong></span>
+      <div class="cpp-bar"><div class="cpp-fill"></div></div>
     </div>
-
-    <button class="ui-lab-btn" onclick="toggleUiLabDrawer()" title="Mở bảng điều khiển thử nghiệm các phương án tối ưu giao diện">
-      <span>🎨</span> <span>Tối ưu UI (Live Lab)</span>
-    </button>
   </div>
 </header>
 
 <!-- =========================================================================
-     2. THANH THỬ NGHIỆM TỐI ƯU GIAO DIỆN TRỰC TIẾP (LIVE UI OPTIMIZATION LAB)
-     ========================================================================= -->
-<section class="ui-lab-drawer open" id="ui-lab-drawer" aria-label="Bảng tùy chỉnh và so sánh giao diện">
-  <div class="lab-group">
-    <span class="lab-label">1. Bố cục Cổng Mục lục:</span>
-    <button class="lab-chip active" data-hub-opt="split" onclick="setHubLayout('split')">Chia đôi (Chương Trái ▸ Bài Phải)</button>
-    <button class="lab-chip" data-hub-opt="grid" onclick="setHubLayout('grid')">Lưới 2 Cột (Grid)</button>
-    <button class="lab-chip" data-hub-opt="accordion" onclick="setHubLayout('accordion')">Thu gọn (Accordion)</button>
-  </div>
-
-  <div class="lab-group">
-    <span class="lab-label">2. Sidebar Phòng học:</span>
-    <button class="lab-chip active" data-sb-opt="tabs" onclick="setSidebarMode('tabs')">2 Tab (Phần nhỏ + Lộ trình 6 Chương)</button>
-    <button class="lab-chip" data-sb-opt="tree" onclick="setSidebarMode('tree')">Cây Đa Cấp Gộp Chung</button>
-    <button class="lab-chip" data-sb-opt="cinema" onclick="setSidebarMode('cinema')">Rạp Chiếu (Ẩn Sidebar `[`)</button>
-  </div>
-
-  <div class="lab-group">
-    <span class="lab-label">3. Sân khấu 1-Thing-At-A-Time:</span>
-    <button class="lab-chip active" id="chip-stage-theory" onclick="switchBeatByMode('theory')">Xem mẫu Slide Lý thuyết (Tách thẻ)</button>
-    <button class="lab-chip" id="chip-stage-sim" onclick="switchBeatByMode('sim')">Xem mẫu Mô phỏng (0 Hộp thoại đè)</button>
-  </div>
-
-  <div class="lab-group">
-    <span class="lab-label">4. Bảng màu & Phụ đề:</span>
-    <button class="lab-chip active" data-theme-opt="cream" onclick="setPortalTheme('cream')">Be Kem Ấm</button>
-    <button class="lab-chip" data-theme-opt="light" onclick="setPortalTheme('light')">Trắng Sáng</button>
-    <button class="lab-chip" data-theme-opt="dark" onclick="setPortalTheme('dark')">Tối Dịu Mắt</button>
-    <button class="lab-chip" id="chip-sub-size" onclick="toggleSubtitleSize()">Chữ Phụ đề: Chuẩn/Lớn</button>
-  </div>
-</section>
-
-<!-- =========================================================================
-     3. VIEW 1: CỔNG MỤC LỤC KHÓA HỌC ĐA CHƯƠNG (#hub-view)
+     2. VIEW 1: CỔNG MỤC LỤC CHIA ĐÔI TỐI GIẢN (#hub-view)
+        - Cột Trái: 6 Chương + Ô lọc
+        - Cột Phải: 1 Cột dọc các Bài học (Không có giới thiệu rườm rà)
      ========================================================================= -->
 <main id="hub-view">
-  <div class="hub-container">
-    <!-- Hero Resume Card -->
-    <div class="hub-hero-card">
-      <div class="hh-left">
-        <div class="hh-badge-row">
-          <span class="hh-tag">🎓 KHÓA HỌC TƯƠNG TÁC 5 LỚP</span>
-          <span class="hh-tag" style="background:var(--green-soft);color:var(--green);border-color:var(--green-border);">✓ Chuẩn 1-Thing-At-A-Time (Không đè hộp thoại)</span>
-        </div>
-        <h1 class="hh-title">Làm Chủ Antigravity 2.0 & Quản Trị Không Gian Làm Việc Thực Chiến</h1>
-        <p class="hh-desc">
-          Hệ thống 6 Chương · 24 Bài giảng · 144 Phần nhỏ kết hợp giữa <strong>Slide Lý thuyết Mở Dần Từng Ý (Progressive Reveal)</strong> và <strong>Phòng Thí Nghiệm Mô Phỏng Phần Mềm Sạch 100%</strong>.
-        </p>
-      </div>
-
-      <div class="hh-resume-box">
-        <div class="hhr-top">
-          <span>⏱️ ĐANG HỌC DỞ GẦN NHẤT</span>
-          <span id="hub-resume-chap" style="color:var(--accent-dark);">Chương 1 · Bài 2</span>
-        </div>
-        <div class="hhr-lesson" id="hub-resume-title">Bài 2: Giải nén Học liệu & Mở Thư mục Dự án Đúng Cấp</div>
-        <div class="hhr-actions">
-          <button class="btn-resume-main" onclick="switchPortalView('player')">
-            <span>▶ Tiếp tục học ngay</span>
-          </button>
-          <button class="nav-step-btn" onclick="openRealCoursewareWindow()" title="Mở bộ giáo án 24 bài thật kèm âm thanh 48kHz">
-            <span>🔊 Mở Bản Full 48kHz</span>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Filter & Search Bar -->
-    <div class="hub-filter-bar">
-      <div class="chapter-filter-pills" id="hub-chapter-pills"></div>
-      <div class="hub-search-wrap">
+  <!-- Cột Trái: Danh sách 6 Chương -->
+  <aside class="hub-left-pane">
+    <div class="hlp-search-box">
+      <div class="hlp-search-inner">
         <span>🔍</span>
-        <input type="text" id="hub-search-input" placeholder="Tìm bài học, kỹ năng, phím tắt (VD: @, /plan, sub-agent)..." oninput="renderAllHubLayouts()">
+        <input type="text" id="hub-search-input" placeholder="Tìm nhanh bài học..." oninput="renderSplitHub()">
       </div>
     </div>
+    <div class="hlp-chapters-list" id="hub-chapters-list"></div>
+  </aside>
 
-    <!-- LAYOUT A: SPLIT MASTER-DETAIL VIEW (CHỌN CHƯƠNG BÊN TRÁI -> XEM BÀI BÊN PHẢI) -->
-    <div class="hub-split-layout">
-      <div class="hub-chap-nav-list" id="hub-split-left"></div>
-      <div class="hub-chap-detail-pane" id="hub-split-right"></div>
-    </div>
-
-    <!-- LAYOUT B: 2-COLUMN GRID VIEW -->
-    <div class="hub-grid-layout" id="hub-grid-container"></div>
-
-    <!-- LAYOUT C: ACCORDION ROADMAP VIEW -->
-    <div class="hub-accordion-layout" id="hub-accordion-container"></div>
-  </div>
+  <!-- Cột Phải: Danh sách Bài học xếp 1 Cột duy nhất -->
+  <section class="hub-right-pane">
+    <div class="hrp-inner" id="hub-lessons-pane"></div>
+  </section>
 </main>
 
 <!-- =========================================================================
-     4. VIEW 2: PHÒNG HỌC TƯƠNG TÁC ĐA CHƯƠNG (#player-view)
+     3. VIEW 2: PHÒNG HỌC TƯƠNG TÁC (#player-view)
+        - Sidebar Trái: Cây Đa Cấp (Chương ▸ Bài ▸ Phần nhỏ) + Cho phép Ẩn/Hiện
+        - Sân Khấu Phải: 1-Thing-At-A-Time + Phụ Đề Lớn 17px
      ========================================================================= -->
 <section id="player-view" class="active">
-  <!-- CỘT 1: SIDEBAR TRÁI ĐA NĂNG (2 TAB HOẶC CÂY ĐA CẤP) -->
+  <!-- CỘT 1: SIDEBAR CÂY ĐA CẤP (CHO PHÉP ẨN) -->
   <aside id="kudo-left-sidebar">
-    <div class="psb-lesson-header">
-      <div class="psb-chap-row">
-        <span id="psb-chap-label">CHƯƠNG 1 · BÀI 1/24</span>
-        <span style="cursor:pointer; color:var(--text-muted);" onclick="setSidebarMode('cinema')" title="Thu gọn Sidebar (Phím tắt: [)">◧ Thu gọn `[`</span>
-      </div>
-      <div class="psb-lesson-title" id="psb-lesson-title">Bài 1: Tư duy Trợ lý AI trên Máy tính & 2 Phần mềm Cốt lõi</div>
+    <div class="psb-top-header">
+      <span class="psb-tree-title">📚 Cây Mục Lục (6 Chương · 24 Bài)</span>
+      <button class="btn-collapse-sb" onclick="toggleSidebarCollapse()" title="Ẩn thanh mục lục bên trái (Phím tắt: [)">
+        <span>« Ẩn</span>
+      </button>
     </div>
 
-    <!-- Cụm nút điều khiển 2 hàng -->
+    <!-- Cụm nút điều khiển phát -->
     <div class="psb-controls">
       <div class="psb-ctrl-row">
         <button class="kp-btn primary" id="btn-play-toggle" onclick="toggleDemoPlay()">⏸ Đang phát</button>
@@ -1803,88 +1404,80 @@
         <button class="kp-btn" onclick="stepBeat(1)">⏭ Phần tiếp</button>
       </div>
       <div class="psb-ctrl-row">
-        <button class="kp-btn" onclick="stepRevealCard(1)" title="Chuyển sang thẻ kiến thức / pha chuột tiếp theo trong phần này">✨ Ý tiếp (1/4)</button>
+        <button class="kp-btn" onclick="stepRevealCard(1)">✨ Ý tiếp</button>
         <button class="kp-btn" id="btn-speed" onclick="cycleSpeed()">1.0x</button>
-        <button class="kp-btn" onclick="toggleQuickModal()">📚 Đổi bài</button>
+        <button class="kp-btn" onclick="switchBeatByMode(getCurrentBeat().mode === 'theory' ? 'sim' : 'theory')">🔄 Slide/Sim</button>
       </div>
     </div>
 
-    <!-- Chuyển Tab trong Sidebar: "Trong bài này" vs "Lộ trình 6 Chương" -->
-    <div class="psb-mode-tabs">
-      <button class="psb-tab-btn active" id="psb-tab-beats" onclick="switchSidebarInnerTab('beats')">🎯 Trong bài này (6)</button>
-      <button class="psb-tab-btn" id="psb-tab-curriculum" onclick="switchSidebarInnerTab('curriculum')">📚 6 Chương · 24 Bài</button>
-    </div>
-
-    <!-- Danh sách cuộn trong Sidebar -->
-    <div class="psb-scroll-area" id="psb-scroll-container"></div>
+    <!-- Cây Đa Cấp 3 Tầng: Chương ▸ Bài ▸ Các Phần Nhỏ -->
+    <div class="psb-tree-scroll" id="psb-multilevel-tree"></div>
   </aside>
 
-  <!-- CỘT 2: SÂN KHẤU CHÍNH "ONE THING AT A TIME" + DẢI PHỤ ĐỀ -->
+  <!-- CỘT 2: SÂN KHẤU CHÍNH + DẢI PHỤ ĐỀ LỚN -->
   <div id="kudo-right-main">
-    <!-- Hàng 1: Thanh trạng thái mỏng phía trên (Không bao giờ đè lên màn hình minh họa!) -->
+    <!-- Hàng 1: Thanh trạng thái mỏng phía trên -->
     <div class="stage-top-context-bar">
       <div class="stcb-left">
-        <button class="nav-step-btn" id="btn-uncollapse-sb" style="display:none; padding:3px 8px;" onclick="setSidebarMode('tabs')">◧ Mở Sidebar</button>
+        <button class="btn-expand-sb" onclick="toggleSidebarCollapse()" title="Hiện lại cây mục lục bên trái (Phím tắt: [)">
+          <span>☰ Hiện mục lục</span>
+        </button>
         <span class="mode-indicator-pill theory" id="stage-mode-pill">📖 SLIDE LÝ THUYẾT ĐỘC LẬP</span>
         <span class="stcb-step-text" id="stage-context-text">Phần 1/6: Phân biệt Web Chat với Trợ lý AI trực tiếp trong thư mục máy tính</span>
       </div>
 
       <div class="stcb-right">
-        <span style="font-size:11.5px; font-weight:700; color:var(--text-muted);" id="stepper-label">Tách từng ý (1-Thing-At-A-Time):</span>
         <div class="progressive-stepper-pills" id="progressive-stepper-pills"></div>
       </div>
     </div>
 
     <!-- Hàng 2: Sân khấu chính (#kudo-stage-viewport) -->
     <div id="kudo-stage-viewport">
-      <!-- A. SÂN KHẤU SLIDE LÝ THUYẾT (HIỂN THỊ KHI mode === 'theory') -->
+      <!-- A. SÂN KHẤU SLIDE LÝ THUYẾT (MỞ DẦN TỪNG THẺ) -->
       <div id="kudo-theory-stage">
         <div class="ts-header">
           <div>
             <div class="ts-kicker" id="slide-kicker">CHƯƠNG 1 · BÀI 1 · PHẦN 1/6</div>
             <h2 class="ts-title" id="slide-title">Sự Khác Biệt Giữa Chat Trình Duyệt Web & Trợ Lý AI Trên Máy Tính</h2>
           </div>
-          <div class="ts-rule-badge">✓ Mở dần từng thẻ theo giọng giảng (Progressive Reveal)</div>
         </div>
 
         <div class="ts-cards-grid" id="slide-cards-grid"></div>
 
         <div class="ts-footer-takeaway">
-          <span id="slide-takeaway">💡 Điểm cốt lõi: Mọi thẻ kiến thức đều nằm trên Slide độc lập, giúp học viên tập trung từng ý một trước khi xem thao tác chuột.</span>
+          <span>💡 Mỗi thẻ kiến thức mở sáng tuần tự theo lời giảng để tập trung 1 ý tại 1 thời điểm.</span>
           <button class="nav-step-btn" onclick="switchBeatByMode('sim')" style="background:var(--accent);color:#fff;border-color:var(--accent-dark);">
-            Chuyển sang Phần Thực Hành Mẫu ▸
+            Xem Thực Hành Phần Mềm ▸
           </button>
         </div>
       </div>
 
-      <!-- B. SÂN KHẤU MÔ PHỎNG PHẦN MỀM SẠCH 100% (HIỂN THỊ KHI mode === 'sim') -->
+      <!-- B. SÂN KHẤU MÔ PHỎNG PHẦN MỀM SẠCH 100% (0 HỘP THOẠI ĐÈ) -->
       <div id="kudo-sim-stage">
         <div class="sim-os-bar">
           <div class="sim-os-menus">
             <strong style="color:#EA580C;">Antigravity Studio</strong>
-            <span class="sim-os-menu-item" id="sim-menu-file">File</span>
-            <span class="sim-os-menu-item">Edit</span>
-            <span class="sim-os-menu-item">View</span>
-            <span class="sim-os-menu-item">Terminal</span>
+            <span>File</span>
+            <span>Edit</span>
+            <span>View</span>
+            <span>Terminal</span>
           </div>
-          <div><span style="color:#4ADE80;font-weight:700;">● 0 Floating Textbox Overlays (Màn hình sạch 100%)</span></div>
+          <div><span style="color:#4ADE80;font-weight:700;">● Màn hình sạch 100% (Không chèn hộp thoại đè lên hình)</span></div>
         </div>
 
-        <div class="sim-workspace-grid" id="sim-workspace-canvas">
-          <!-- Cột 1: Cây thư mục Explorer -->
+        <div class="sim-workspace-grid">
           <div class="sim-explorer">
             <div class="sim-exp-header">EXPLORER: ANTIGRAVITY_COURSE_VN</div>
             <div class="sim-file-row"><span>📂</span> <span>Module_0_Introduction</span></div>
-            <div class="sim-file-row active" id="sim-target-file"><span>M↓</span> <span>0.1_Introduction.md</span></div>
+            <div class="sim-file-row active"><span>M↓</span> <span>0.1_Introduction.md</span></div>
             <div class="sim-file-row"><span>📊</span> <span>sales_q1_2026.csv</span></div>
             <div class="sim-file-row"><span>⚙️</span> <span>AGENTS.md</span></div>
             <div class="sim-file-row"><span>📁</span> <span>skills/</span></div>
           </div>
 
-          <!-- Cột 2: Trình soạn thảo & Tab -->
           <div class="sim-editor-center">
             <div class="sim-tabs-bar">
-              <div class="sim-tab" id="sim-target-tab">
+              <div class="sim-tab">
                 <span style="color:#38BDF8;">M↓</span>
                 <span>0.1_Introduction.md</span>
                 <span style="opacity:0.5;">×</span>
@@ -1894,9 +1487,8 @@
               </div>
             </div>
 
-            <!-- Menu Chuột Phải (Chỉ mở ở Pha 2 của Two-Stage Click Choreography) -->
             <div class="sim-context-menu" id="sim-context-menu">
-              <div class="scm-item active" id="sim-target-preview">
+              <div class="scm-item active">
                 <span>Open Preview</span>
                 <span style="opacity:0.8;font-family:var(--font-mono);font-size:10.5px;">Ctrl+Shift+V</span>
               </div>
@@ -1910,7 +1502,7 @@
               </div>
             </div>
 
-            <div class="sim-editor-content" id="sim-editor-body">
+            <div class="sim-editor-content">
               <div style="color:#F59E0B;font-weight:700;margin-bottom:8px;"># HỒ SƠ KHỞI ĐỘNG DỰ ÁN ANTIGRAVITY</div>
               <div style="color:#94A3B8;margin-bottom:12px;">Tài liệu hướng dẫn thực hành trực tiếp trong thư mục máy tính.</div>
               <div style="background:#252526;padding:12px;border-radius:8px;border-left:3px solid #EA580C;">
@@ -1921,23 +1513,21 @@
             </div>
           </div>
 
-          <!-- Cột 3: Khung Chat AI Agent -->
           <div class="sim-agent-pane">
             <div class="sim-chat-bubble">
               <div style="color:#EA580C;font-weight:800;margin-bottom:4px;">🤖 Antigravity Agent</div>
-              Đã nạp bối cảnh thư mục <code>antigravity_course_vn</code>. Bạn có thể nhấp chuột phải vào tệp Markdown để bật chế độ xem đẹp (Preview) hoặc gõ <code>@</code> để đính kèm tài liệu.
+              Đã nạp bối cảnh thư mục <code>antigravity_course_vn</code>. Nhấp chuột phải vào thẻ tệp để bật chế độ xem đẹp (Preview).
             </div>
 
-            <div class="sim-input-box" id="sim-target-input">
+            <div class="sim-input-box">
               <div style="font-size:12px;color:#94A3B8;">Ask anything, @ to mention, / for workflows...</div>
               <div style="display:flex;justify-content:space-between;align-items:center;">
-                <span class="sim-model-pill" id="sim-target-model">Gemini 4 Argon Medium ▾</span>
+                <span class="sim-model-pill">Gemini 4 Argon Medium ▾</span>
                 <span style="background:#EA580C;color:#fff;padding:3px 9px;border-radius:5px;font-size:11px;font-weight:800;">🛡️ Turbo</span>
               </div>
             </div>
           </div>
 
-          <!-- Khung Spotlight & Con trỏ chuột 2 Pha (Hoàn toàn không có hộp thoại đè lên!) -->
           <div id="demo-spotlight" style="top:4px;left:238px;width:175px;height:32px;"></div>
           <div id="demo-cursor" style="top:22px;left:340px;">
             <div class="cursor-ripple"></div>
@@ -1950,236 +1540,1353 @@
       </div>
     </div>
 
-    <!-- Hàng 3: Dải Phụ Đề & Thanh Tua Thời Gian (#kudo-subtitle-strip) -->
+    <!-- Hàng 3: Dải Phụ Đề Chữ Lớn (17px) -->
     <div id="kudo-subtitle-strip">
       <div class="sub-scrubber-track" onclick="scrubTimeline(event)" title="Bấm để tua nhanh trong phần đang học">
         <div class="sub-scrubber-fill" id="sub-scrubber-fill"></div>
       </div>
 
-      <div class="lecturer-avatar-circle" title="Giảng viên AI thuyết minh">👨‍🏫</div>
+      <div class="lecturer-avatar-circle">👨‍🏫</div>
 
       <div class="subtitle-text-card">
-        <div id="subtitle-content">
+        <div>
           <span class="sub-speaker-tag">Giảng viên:</span>
-          <span id="subtitle-line">Chào mừng bạn đến với giao diện học tập thế hệ mới: Tách bạch hoàn toàn giữa Slide Lý thuyết (mở dần từng thẻ) và Màn hình Thực hành Phần mềm sạch 100% không bị hộp thoại đè lên.</span>
+          <span id="subtitle-line">Trước khi chạm vào chuột, chúng ta cùng nhìn rõ bức tranh tổng thể trên trang Slide độc lập này.</span>
         </div>
-        <div style="display:flex;align-items:center;gap:6px;flex-shrink:0;">
-          <span style="font-family:var(--font-mono);font-size:12px;font-weight:700;color:var(--text-muted);" id="sub-time-badge">00:08 / 00:24</span>
-        </div>
+        <span style="font-family:var(--font-mono);font-size:13px;font-weight:800;color:var(--text-muted);flex-shrink:0;" id="sub-time-badge">00:05 / 00:22</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- =========================================================================
-     5. HỘP THOẠI TÌM KIẾM & CHUYỂN NHANH 6 CHƯƠNG · 24 BÀI (CTRL + K)
-     ========================================================================= -->
-<div class="quick-drawer-backdrop" id="quick-modal-backdrop" onclick="toggleQuickModal(false)">
-  <div class="quick-drawer-modal" onclick="event.stopPropagation()">
-    <div class="qdm-search-top">
-      <span>🔍</span>
-      <input type="text" id="quick-modal-input" placeholder="Gõ tên bài học, chương hoặc từ khóa để nhảy tới ngay..." oninput="renderQuickModalList()">
-      <button class="nav-step-btn" onclick="toggleQuickModal(false)">Đóng (Esc)</button>
-    </div>
-    <div class="qdm-body" id="quick-modal-body"></div>
-  </div>
-</div>
-
 <script>
-/* =========================================================================
-   DỮ LIỆU ĐẦY ĐỦ 6 CHƯƠNG × 24 BÀI HỌC × 6 PHẦN NHỎ (144 BEATS)
-   ========================================================================= */
 const CHAPTERS_DATA = [
   {
-    id: 1,
-    code: "CHƯƠNG 1",
-    title: "Làm Chủ Không Gian Làm Việc & Cài Đặt Chuẩn",
-    desc: "Phân biệt Web Chat với Trợ lý AI trên máy tính, giải nén học liệu, mở đúng thư mục gốc và làm chủ chế độ xem Markdown Preview.",
-    lessons: [
-      { id: 1, title: "Tư duy Trợ lý AI trên Máy tính & 2 Phần mềm Cốt lõi", dur: "02:15", done: true, desc: "Phân biệt hỏi đáp trên trình duyệt web với Trợ lý AI làm việc trực tiếp trong thư mục máy tính." },
-      { id: 2, title: "Giải nén Học liệu & Mở Thư mục Dự án Đúng Cấp", dur: "02:30", done: true, desc: "Tránh lỗi mở nhầm thư mục bọc ngoài hoặc kéo thả làm lệch cây thư mục dự án." },
-      { id: 3, title: "Bố cục 3 Cột của IDE & Chế độ Đọc Tài liệu Đẹp (Preview)", dur: "02:10", done: true, desc: "Bật tắt linh hoạt 3 cột Explorer, Editor, Agent Chat và mở Markdown Preview." },
-      { id: 4, title: "Bảng chọn 5 Mô hình AI & Chế độ Cấp quyền Thực thi", dur: "02:20", done: true, desc: "Chọn đúng mô hình Gemini/Claude và thiết lập quyền Request Review / Turbo an toàn." }
+    "id": 1,
+    "code": "CHƯƠNG 1",
+    "title": "Khởi động Chuẩn & Làm chủ Giao diện",
+    "lessons": [
+      {
+        "id": 1,
+        "code": "Bài 1",
+        "title": "Tư duy Trợ lý AI trong Thư mục, 2 Giao diện & Cách Mở Dự án Đầu tiên",
+        "filename": "lesson_01.html",
+        "dur": "7 phần · Thực hành tương tác",
+        "done": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Đối sánh Chat Web vs. Trợ lý AI trên máy",
+            "dur": "00:14",
+            "caption": "Chào mừng anh chị đến với khóa học <strong>Antigravity Basic</strong>. Nhìn vào khung đối sánh trên màn hình, khác biệt lớn nhất là thay vì tải tệp lên trình duyệt <strong>ChatGPT</strong> mỗi ngày, chúng ta đưa trợ lý AI vào làm việc trực tiếp ngay trong thư mục máy tính."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Giao diện Antigravity 2.0 trên màn hình",
+            "dur": "00:11",
+            "caption": "Trên màn hình là phần mềm thứ nhất mang tên <strong>Antigravity 2.0</strong>, trước đây gọi là <strong>Agent Manager</strong>. Giao diện được thiết kế thoáng đãng giúp anh chị khởi tạo hội thoại mới và điều phối nhiều đầu việc cùng lúc."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Quy tắc chọn 5 mô hình AI theo việc",
+            "dur": "00:16",
+            "caption": "Khi nhìn xuống góc dưới khung chat, anh chị thấy bảng chọn 5 mô hình AI. Ta dùng <strong>Gemini 3.8 Flash Medium</strong> cho việc nhẹ cần tốc độ, <strong>Gemini 4 Argon Medium</strong> làm mặc định hàng ngày, và chuyển sang <strong>Claude Sonnet 5.5</strong> hoặc <strong>Claude Opus 5.5</strong> khi lập kế hoạch sâu."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Chọn mô hình mặc định",
+            "dur": "00:11",
+            "caption": "Bây giờ chúng ta vào thực hành theo 3 bước. Trong bối cảnh bắt đầu ngày làm việc mới, <strong>Bước 1</strong> là anh chị bấm vào nút chọn mô hình ở đáy khung chat và xác nhận <strong>Gemini 4 Argon Medium</strong> đang được tích chọn."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Bấm nút Open IDE chuyển không gian",
+            "dur": "00:08",
+            "caption": "Sang <strong>Bước 2</strong>, khi cần soạn thảo hồ sơ và làm việc trực tiếp với thư mục máy tính, anh chị di chuột lên góc trên bên phải và bấm vào nút <strong>Open IDE</strong>."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất màn hình chào mừng Antigravity IDE",
+            "dur": "00:13",
+            "caption": "Ở <strong>Bước 3</strong>, cửa sổ <strong>Antigravity IDE</strong> hiện ra ở trạng thái màn hình chào mừng và đang chờ chúng ta mở thư mục dự án. Vậy làm sao để giải nén học liệu <code>.zip</code> và nạp thư mục vào đây an toàn? Chúng ta sang ngay <strong>Bài 2</strong>."
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "code": "Bài 2",
+        "title": "Đồng bộ Ổ cứng 1-1, Phòng tránh Lỗi Thao tác & Chọn 5 Mô hình AI",
+        "filename": "lesson_02.html",
+        "dur": "7 phần · Thực hành tương tác",
+        "done": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: 3 nguyên tắc Giải nén, Open Folder & Đồng bộ",
+            "dur": "00:15",
+            "caption": "Trước khi nạp học liệu vào màn hình chào mừng của <strong>Antigravity IDE</strong>, anh chị cần nắm vững 3 nguyên tắc trên sơ đồ luồng: Một là phải giải nén tệp <code>.zip</code> bằng <strong>Extract All</strong>; hai là chỉ mở đúng thư mục dự án con; và ba là cơ chế đồng bộ 1-1 với ổ cứng."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Vì sao dùng Open Folder thay vì Open File",
+            "dur": "00:12",
+            "caption": "Nhìn vào trình đơn <strong>File</strong> trên màn hình <strong>Antigravity IDE</strong>, anh chị sẽ thấy hai dòng cạnh nhau. Chúng ta luôn dùng <strong>Open Folder</strong> để mở trọn vẹn thư mục dự án, tuyệt đối không dùng <strong>Open File</strong> mở lẻ tẻ từng tệp."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Cảnh báo khi lỡ tay kéo thả nhầm thư mục",
+            "dur": "00:11",
+            "caption": "Một lưu ý nữa khi thao tác chuột ở cột cây thư mục bên trái là tránh lỡ tay kéo nhầm thư mục này thả vào thư mục khác. Khi thấy bảng cảnh báo hiện ra như trên màn hình, anh chị nhớ bấm ngay nút <strong>Cancel</strong>."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Chọn thư mục đã giải nén",
+            "dur": "00:12",
+            "caption": "Giờ chúng ta thực hành 3 bước nạp học liệu. Ở <strong>Bước 1</strong>, sau khi đã giải nén tệp <code>.zip</code>, trong hộp thoại <strong>Open Folder</strong>, anh chị bấm chọn đúng thư mục <code>antigravity_course_vn</code> rồi nhấn nút <strong>Select folder</strong>."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Kiểm tra đồng bộ bằng Reveal in File Explorer",
+            "dur": "00:11",
+            "caption": "Sang <strong>Bước 2</strong>, toàn bộ cây thư mục dự án đã hiện ra ở cột trái! Để kiểm chứng vị trí tệp thật trên ổ cứng, anh chị nhấp chuột phải vào tệp <code>INDEX.md</code> và chọn dòng <strong>Reveal in File Explorer</strong>."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất lộ trình học trong INDEX.md",
+            "dur": "00:13",
+            "caption": "Ở <strong>Bước 3</strong>, anh chị bấm mở tệp <code>INDEX.md</code> để nghiệm thu toàn bộ lộ trình học tập đã hiển thị rõ ở cột giữa. Sau khi đã mở đúng thư mục, <strong>Bài 3</strong> sẽ giúp anh chị làm chủ hoàn toàn bố cục 3 cột và các phím tắt cứu hộ."
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "code": "Bài 3",
+        "title": "Làm chủ Giao diện 3 Cột, Mở Preview Chuột phải & Xử lý Khi AI Dừng chờ",
+        "filename": "lesson_03.html",
+        "dur": "7 phần · Thực hành tương tác",
+        "done": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Giải phẫu 3 cột & 3 trạng thái AI dừng chờ",
+            "dur": "00:15",
+            "caption": "Khi đã mở thư mục dự án trong <strong>Antigravity IDE</strong>, anh chị chỉ cần nhìn nó như một bàn làm việc gồm 3 ngăn: Ngăn trái đựng hồ sơ, ngăn giữa để đọc tài liệu, và ngăn phải là trợ lý AI. Đồng thời, hãy nhớ 3 cách xử lý khi thấy AI dừng lại chờ lệnh."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Nhận diện nút Stop (■), Tiếp tục và Accept",
+            "dur": "00:12",
+            "caption": "Nhìn sang cột phải trên màn hình thực tế: Khi trợ lý muốn tạo tệp báo cáo mới, nó sẽ dừng lại và hiện nút <strong>Accept</strong> màu xanh. Nếu muốn hủy giữa chừng, anh chị bấm nút hình vuông <code>■</code>, còn nếu mạng ngắt quãng thì gõ chữ <code>Tiếp tục</code>."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Khôi phục nhanh cột trái bằng phím Ctrl + B",
+            "dur": "00:11",
+            "caption": "Rất nhiều anh chị khi đang làm việc vô tình bấm vào biểu tượng hai tệp giấy ở ngoài cùng bên trái khiến cột cây thư mục biến mất. Để lấy lại ngay lập tức, anh chị chỉ cần nhấn tổ hợp phím <kbd>Ctrl + B</kbd>."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Bật chế độ đọc Preview trực quan",
+            "dur": "00:12",
+            "caption": "Chúng ta vào thực hành 3 bước làm chủ giao diện. Giả sử tài liệu ở cột giữa đang hiện nhiều ký hiệu thô, ở <strong>Bước 1</strong>, anh chị bấm vào nút <strong>Preview / Office Viewer</strong> ở góc trên cột giữa để chuyển về giao diện trang giấy quen thuộc."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Gõ câu hỏi tiếng Việt vào khung chat khi quên thao tác",
+            "dur": "00:08",
+            "caption": "Sang <strong>Bước 2</strong>, khi quên bất kỳ thao tác nào trên phần mềm, anh chị hãy gõ câu hỏi bằng tiếng Việt vào ô nhập ở đáy cột phải rồi bấm nút Gửi."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất chỉ dẫn của AI & Chuẩn bị bật Turbo",
+            "dur": "00:14",
+            "caption": "Ở <strong>Bước 3</strong>, trợ lý AI lập tức chỉ dẫn rõ phím tắt <kbd>Ctrl + B</kbd> và nút <strong>Preview</strong> ngay trong khung chat. Vậy làm sao để trợ lý tự động thực thi trơn tru mà không bắt chúng ta bấm nút <strong>Accept</strong> ở từng bước nhỏ? Chúng ta sang ngay <strong>Bài 4</strong>."
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "code": "Bài 4",
+        "title": "Bật Quyền Tự chủ Turbo & Bài Thực hành Đầu tiên Với /start-1-1",
+        "filename": "lesson_04.html",
+        "dur": "7 phần · Thực hành tương tác",
+        "done": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: 4 mức phân quyền & Bối cảnh TaskFlow",
+            "dur": "00:14",
+            "caption": "Ở Bài 3, anh chị đã thấy nếu để mặc định thì AI sẽ dừng lại hỏi xin phép ở từng bước. Lộ trình trên màn hình cho thấy khi làm việc với tài liệu văn phòng trong thư mục riêng, chúng ta nên bật quyền tự chủ <strong>Turbo</strong> để trợ lý chạy một mạch tới khi ra kết quả."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Vị trí cài đặt quyền Turbo trong Settings",
+            "dur": "00:11",
+            "caption": "Trên màn hình cài đặt <strong>Settings</strong> mục <strong>General</strong>, anh chị nhìn vào dòng <strong>This Computer</strong>. Khi chọn <strong>Turbo</strong>, trợ lý sẽ tự động đọc và tạo tệp báo cáo trong thư mục dự án mà không làm gián đoạn mạch làm việc."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Cách chọn lệnh gạch chéo (/) không bị lỗi lặp chữ",
+            "dur": "00:14",
+            "caption": "Khi quay lại <strong>Antigravity IDE</strong> và gõ dấu gạch chéo <code>/start</code>, một bảng gợi ý sẽ bật lên. Anh chị lưu ý kỹ thuật rất quan trọng: Hãy dùng chuột bấm chọn hoặc nhấn phím <kbd>Enter</kbd>, tuyệt đối không bấm phím cách để tránh lỗi nhân đôi tên lệnh."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Bật quyền Turbo trong Settings",
+            "dur": "00:09",
+            "caption": "Chúng ta bắt đầu bài thực hành tổng kết Chương 1. Ở <strong>Bước 1</strong>, anh chị mở <strong>Settings</strong>, vào thẻ <strong>General</strong> và bấm chuyển quyền <strong>This Computer</strong> sang <strong>Turbo</strong>."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Gõ /start và chọn chuẩn lệnh /start-1-1",
+            "dur": "00:09",
+            "caption": "Sang <strong>Bước 2</strong>, anh chị mở tệp <code>1.1_Welcome.md</code> của công ty giả lập <strong>TaskFlow</strong>, chọn lệnh <code>/start-1-1</code> vào ô chat và nhấn nút Gửi."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất AI giảng bài",
+            "dur": "00:14",
+            "caption": "Ở <strong>Bước 3</strong>, ngay lập tức trợ lý AI tự đọc tài liệu bài học và đóng vai giảng viên hướng dẫn anh chị thực hành từng bước. Chúc mừng anh chị đã hoàn thành <strong>Chương 1</strong>! Bây giờ chúng ta bước sang <strong>Chương 2 — Bài 5</strong> để làm chủ định dạng <code>.md</code> và <code>.csv</code>."
+          }
+        ]
+      }
     ]
   },
   {
-    id: 2,
-    code: "CHƯƠNG 2",
-    title: "Điều Phối Tệp Tin Bằng @, Lệnh / & Giọng Nói Tiếng Việt",
-    desc: "Gọi đúng tệp tin bằng ký hiệu @, kích hoạt quy trình chuẩn bằng dấu gạch chéo / và ra lệnh bằng giọng nói.",
-    lessons: [
-      { id: 5, title: "Ký hiệu @ — Chỉ điểm Đúng Tệp Tin và Thư mục Cần Xử lý", dur: "02:05", done: true, desc: "Gắn thẻ chính xác tệp dữ liệu CSV, Markdown vào câu lệnh để AI không đoán mò." },
-      { id: 6, title: "Ký hiệu / — Kích hoạt Quy trình Tự động Đóng gói Sẵn", dur: "02:18", done: true, desc: "Gọi các quy trình mẫu chỉ bằng một cú gõ phím / mà không cần viết lại câu lệnh dài." },
-      { id: 7, title: "Nhập liệu Giọng nói Tiếng Việt & Đính kèm Ảnh Chụp Màn hình", dur: "01:55", done: true, desc: "Kết hợp nói trực tiếp bằng micro và dán ảnh chụp màn hình để giao việc siêu tốc." },
-      { id: 8, title: "Trích dẫn Đoạn Văn Bản (Quote in Chat Ctrl+L) Để Sửa Nhanh", dur: "02:12", done: true, desc: "Bôi đen đúng đoạn cần sửa và bấm Ctrl+L để AI chỉnh sửa cục bộ, giữ nguyên phần còn lại." }
+    "id": 2,
+    "code": "CHƯƠNG 2",
+    "title": "Định dạng Dữ liệu, Ký hiệu @ & Hồ sơ Cá nhân hóa",
+    "lessons": [
+      {
+        "id": 1,
+        "code": "Bài 5",
+        "title": "Định dạng Văn bản .md, Bảng Dữ liệu .csv & Tiện ích Office Viewer",
+        "filename": "lesson_05.html",
+        "dur": "6 phần · Thực hành tương tác",
+        "done": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Đối sánh .md, .csv & tiện ích Office Viewer",
+            "dur": "00:15",
+            "caption": "Chào mừng anh chị bước vào <strong>Chương 2</strong>. Khung đối sánh trên màn hình giải thích vì sao khi làm việc với trợ lý AI, chúng ta ưu tiên dùng tệp văn bản <code>.md</code> và bảng số liệu <code>.csv</code>: Chúng cực nhẹ, chuẩn xác và hiển thị đẹp như Word, Excel nhờ tiện ích <strong>Office Viewer</strong>."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: So sánh chế độ Raw và Preview của tệp .md",
+            "dur": "00:13",
+            "caption": "Nhìn vào tệp <code>COMPANY.md</code> đang mở ở cột giữa: Khi bật <strong>Preview / Office Viewer</strong>, anh chị có thanh công cụ in đậm, in nghiêng, kẻ bảng y hệt như Google Docs. Còn khi bấm sang <strong>Raw</strong>, phần mềm sẽ hiện số thứ tự từng dòng."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Kho tiện ích Extensions và Office Viewer",
+            "dur": "00:11",
+            "caption": "Nếu máy tính mới cài đặt chưa có sẵn chế độ xem bảng đẹp, anh chị chỉ cần nhìn sang thanh biểu tượng ngoài cùng bên trái, bấm vào mục <strong>Extensions</strong> có hình bốn ô vuông và cài đặt tiện ích <strong>Office Viewer</strong>."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Kiểm tra tiện ích Office Viewer",
+            "dur": "00:11",
+            "caption": "Chúng ta vào thực hành 3 bước đọc hồ sơ và bảng số liệu. Trong bối cảnh phòng kinh doanh vừa gửi bảng doanh thu, ở <strong>Bước 1</strong>, anh chị bấm vào biểu tượng <strong>Extensions</strong> để xác nhận tiện ích <strong>Office Viewer</strong> đã sẵn sàng."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Mở và đọc bảng tính sales_data.csv trực quan",
+            "dur": "00:12",
+            "caption": "Sang <strong>Bước 2</strong>, anh chị quay lại cột cây thư mục <strong>Explorer</strong> và bấm vào tệp <code>sales_data.csv</code>. Ngay lập tức, toàn bộ dữ liệu doanh thu hiển thị thành bảng kẻ ô rõ nét mà không cần mở Excel."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Chuyển sang Raw xem số dòng",
+            "dur": "00:14",
+            "caption": "Ở <strong>Bước 3</strong>, anh chị mở tệp <code>COMPANY.md</code> và bấm thử nút <strong>Raw / Số dòng</strong> để thấy từng dòng văn bản được đánh số thứ tự. Vậy làm sao để chỉ định chính xác các tệp và dòng văn bản này cho AI xử lý? Chúng ta sang ngay <strong>Bài 6</strong>."
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "code": "Bài 6",
+        "title": "Đính kèm Tệp Bằng @, Giao việc Giọng nói (Ctrl+M) & Trích dẫn (Ctrl+L)",
+        "filename": "lesson_06.html",
+        "dur": "6 phần · Thực hành tương tác",
+        "done": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Bộ ba kỹ năng @, Ctrl+M và Ctrl+L",
+            "dur": "00:13",
+            "caption": "Trong <strong>Bài 6</strong>, chúng ta làm chủ bộ ba kỹ năng giao việc nhanh và chuẩn xác nhất cho dân văn phòng: Dùng ký hiệu <code>@</code> để đính kèm tệp, dùng <kbd>Ctrl + M</kbd> để giao việc bằng giọng nói và dùng <kbd>Ctrl + L</kbd> để trích dẫn đúng dòng cần sửa."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Cơ chế gợi ý tệp tự động khi gõ ký hiệu @",
+            "dur": "00:15",
+            "caption": "Nhìn vào khung chat bên phải trên màn hình: Ngay khi anh chị gõ ký hiệu <code>@</code>, phần mềm sẽ liệt kê toàn bộ các tệp có trong thư mục như <code>@COMPANY.md</code> hay <code>@sales_data.csv</code> để anh chị bấm chọn mà không cần gõ tay tên tệp."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Cơ chế thu giọng nói (Ctrl+M) và trích dẫn (Ctrl+L)",
+            "dur": "00:12",
+            "caption": "Đặc biệt, khi đang đọc một tài liệu dài mà chỉ muốn AI viết lại đúng một câu, anh chị chỉ cần bôi đen câu đó. Nút <strong>Quote in Chat</strong> kèm phím tắt <kbd>Ctrl + L</kbd> sẽ hiện ra, tự động chèn đúng số dòng vào khung chat."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Đính kèm tệp @COMPANY.md",
+            "dur": "00:10",
+            "caption": "Chúng ta vào thực hành phối hợp cả 3 kỹ năng. Ở <strong>Bước 1</strong>, trong bối cảnh cần xử lý hồ sơ công ty, anh chị gõ dấu <code>@</code> vào ô chat và bấm chọn <code>@COMPANY.md</code>."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Bật thu âm giọng nói tiếng Việt (Ctrl+M)",
+            "dur": "00:11",
+            "caption": "Sang <strong>Bước 2</strong>, thay vì gõ bàn phím dài dòng, anh chị bấm vào biểu tượng Micro hoặc nhấn <kbd>Ctrl + M</kbd> để đọc yêu cầu bằng tiếng Việt. Thanh sóng âm sẽ chuyển lời nói thành văn bản ngay tức thì."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Bôi đen trích dẫn Ctrl+L",
+            "dur": "00:13",
+            "caption": "Ở <strong>Bước 3</strong>, anh chị bôi đen đoạn văn bản bên phải và nhấn <kbd>Ctrl + L</kbd> để gắn tọa độ dòng vào câu lệnh rồi bấm gửi. Khi đã thuần thục dấu <code>@</code>, chúng ta sang <strong>Bài 7</strong> để tạo hồ sơ cá nhân hóa <code>@troly.md</code>."
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "code": "Bài 7",
+        "title": "Xây dựng Hồ sơ Cá nhân hóa @troly.md Để AI Nhớ Phong cách Của Bạn",
+        "filename": "lesson_07.html",
+        "dur": "6 phần · Thực hành tương tác",
+        "done": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Cấu trúc 4 phần của hồ sơ @troly.md",
+            "dur": "00:14",
+            "caption": "Tại sao nhiều người dùng AI thấy câu chữ cứ chung chung, máy móc? Vì trợ lý chưa biết bạn là ai! Trong <strong>Bài 7</strong>, chúng ta thiết lập tệp hồ sơ cá nhân <code>@troly.md</code> gồm 3 khối: Vai trò chủ nhân, Gu văn phong và Danh sách từ cấm kỵ."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Quan sát nội dung tệp @troly.md trong IDE",
+            "dur": "00:10",
+            "caption": "Nhìn vào tệp <code>troly.md</code> đang mở ở cột giữa trên màn hình: Anh chị không cần viết dài, chỉ cần gạch đầu dòng rõ chức vụ, đối tượng đọc báo cáo và quy tắc <em>luôn đưa kết luận lên câu đầu tiên</em>."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Sự khác biệt khi giao việc có đính kèm @troly.md",
+            "dur": "00:12",
+            "caption": "Khi giao việc ở cột phải, anh chị chỉ cần gõ <code>@troly.md</code> đi kèm với tệp dữ liệu như <code>@COMPANY.md</code>. Trợ lý sẽ lấy số liệu từ công ty nhưng viết ra bằng đúng giọng văn của riêng anh chị."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Cập nhật thông tin vào troly.md",
+            "dur": "00:10",
+            "caption": "Chúng ta vào thực hành 3 bước cá nhân hóa trợ lý. Ở <strong>Bước 1</strong>, anh chị bấm mở tệp <code>troly.md</code> ở cột trái và điền chức danh cùng nguyên tắc trình bày ngắn gọn của mình vào."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Gõ lệnh kết hợp @troly.md và @COMPANY.md",
+            "dur": "00:10",
+            "caption": "Sang <strong>Bước 2</strong>, tại ô chat bên phải, anh chị đính kèm <code>@troly.md</code> cùng <code>@COMPANY.md</code>, yêu cầu soạn thông báo Quý 2 rồi nhấn nút Gửi."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất văn bản chuẩn gu",
+            "dur": "00:14",
+            "caption": "Ở <strong>Bước 3</strong>, anh chị nhìn vào cột giữa: Tệp <code>thong_bao_q2.md</code> vừa được tạo ra có ngay phần Kết luận trực diện ở đầu và bảng phân công gọn gàng, không hề có một chữ sáo rỗng nào! Sang <strong>Bài 8</strong>, chúng ta sẽ học cách giữ trí nhớ dài hạn cho dự án."
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "code": "Bài 8",
+        "title": "Quản trị Trí nhớ Dự án Dài hạn & Sổ Bàn giao Giữa Các Phiên Chat",
+        "filename": "lesson_08.html",
+        "dur": "6 phần · Thực hành tương tác",
+        "done": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Vòng đời 3 bước bảo toàn trí nhớ dự án",
+            "dur": "00:13",
+            "caption": "Một câu hỏi rất thực tế của dân văn phòng là: Hôm nay làm việc với AI xong, ngày mai mở phiên chat mới thì làm sao để AI nhớ hết các quyết định hôm qua? Quy trình 3 bước trên màn hình với tệp <code>ban_giao_cong_viec.md</code> chính là chìa khóa."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Nhận biết khi nào cần tạo phiên chat mới (+)",
+            "dur": "00:10",
+            "caption": "Nhìn vào cột phải trên màn hình: Khi một luồng trò chuyện đã kéo dài qua hàng chục bước, việc tiếp tục nhồi thêm yêu cầu mới sẽ làm trợ lý bị phân tán. Đó là lúc chúng ta cần chốt sổ bàn giao."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Cấu trúc chuẩn 3 phần của Sổ bàn giao công việc",
+            "dur": "00:11",
+            "caption": "Trên màn hình cột giữa là cấu trúc chuẩn của tệp <code>ban_giao_cong_viec.md</code> do chính AI tự ghi lại: Gồm các hạng mục đã hoàn thành, những con số đã chốt và danh sách việc cần làm tiếp theo."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Ra lệnh cho AI tự ghi Sổ bàn giao",
+            "dur": "00:10",
+            "caption": "Chúng ta thực hành 3 bước bàn giao giữa các ca làm việc. Ở <strong>Bước 1</strong>, trước khi nghỉ chiều, anh chị gõ lệnh yêu cầu trợ lý tổng hợp tiến độ hôm nay vào tệp <code>ban_giao_cong_viec.md</code>."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Mở phiên chat mới và đính kèm @ban_giao_cong_viec.md",
+            "dur": "00:10",
+            "caption": "Sang <strong>Bước 2</strong>, sáng hôm sau khi mở phiên chat mới tinh, anh chị chỉ mất 5 giây gõ <code>@ban_giao_cong_viec.md</code> và bảo trợ lý làm tiếp mục đang dang dở."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất AI nối mạch hoàn hảo",
+            "dur": "00:14",
+            "caption": "Ở <strong>Bước 3</strong>, anh chị thấy trợ lý nhắc lại chính xác chỉ tiêu 30% đã chốt hôm qua và bắt tay làm ngay việc tiếp theo. Vậy làm sao để AI tự động tuân thủ nội quy mà không cần ta gõ <code>@troly.md</code> mỗi lần? Chào mừng anh chị sang <strong>Chương 3 — Bài 9</strong>!"
+          }
+        ]
+      }
     ]
   },
   {
-    id: 3,
-    code: "CHƯƠNG 3",
-    title: "Thiết Lập Bộ Nhớ Dự Án (AGENTS.md) & Quy Tắc Chuẩn",
-    desc: "Xây dựng sổ tay quy tắc AGENTS.md để AI luôn nhớ bối cảnh doanh nghiệp, văn phong và các ràng buộc bắt buộc.",
-    lessons: [
-      { id: 9, title: "Cấu trúc Tệp AGENTS.md — Sổ Tay Hiến Chương Của Dự Án", dur: "02:25", done: false, current: true, desc: "Thiết lập bối cảnh dự án một lần duy nhất để mọi phiên chat đều hiểu đúng chuẩn." },
-      { id: 10, title: "Khai báo Văn phong, Định dạng Đầu ra & Danh sách Cấm", dur: "02:08", done: false, desc: "Chặn triệt để lỗi AI tự bịa số liệu hoặc dùng thuật ngữ ngoài phạm vi cho phép." },
-      { id: 11, title: "Phân tầng Bộ nhớ Chung (Global) và Bộ nhớ Riêng Từng Thư mục", dur: "02:14", done: false, desc: "Kết hợp quy tắc cá nhân toàn cục với quy tắc chuyên biệt của từng phòng ban." },
-      { id: 12, title: "Kiểm thử & Tinh chỉnh Bộ quy tắc Qua Tình huống Thực tế", dur: "02:30", done: false, desc: "Chạy bài kiểm tra đối chiếu trước và sau khi có tệp AGENTS.md." }
+    "id": 3,
+    "code": "CHƯƠNG 3",
+    "title": "Thiết lập Bộ não .agent & Chu trình Cộng tác",
+    "lessons": [
+      {
+        "id": 1,
+        "code": "Bài 9",
+        "title": "Tư duy Quản trị Đầu ra & Kiến trúc Bộ não .agent (Rules, Skills, Workflows)",
+        "filename": "lesson_09.html",
+        "dur": "6 phần · Thực hành tương tác",
+        "done": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Ẩn dụ Căn bếp: Rules, Skills và Workflows",
+            "dur": "00:15",
+            "caption": "Chào mừng anh chị đến với <strong>Chương 3</strong> — trái tim của khóa học. Hãy hình dung thư mục <code>.agent</code> giống như một căn bếp nhà hàng 5 sao gồm 3 ngăn: <strong>Rules</strong> là nội quy vệ sinh luôn phải tuân thủ, <strong>Skills</strong> là sổ công thức nấu từng món, và <strong>Workflows</strong> là thực đơn bấm nút chạy tự động."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Đối chiếu khung chat và tệp sản phẩm đầu ra",
+            "dur": "00:12",
+            "caption": "Trên màn hình làm việc thực tế, anh chị cần thay đổi một thói quen cốt lõi: Khung chat bên phải chỉ là nơi trao đổi ngắn gọn, còn sản phẩm cuối cùng bắt buộc phải xuất thành tệp trong cây thư mục và hiển thị ở cột giữa để nghiệm thu."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Khám phá thư mục .agent trên cây Explorer",
+            "dur": "00:11",
+            "caption": "Nhìn sang cột cây thư mục bên trái, ngay dưới dòng <code>.agent</code>, anh chị sẽ thấy tệp <code>start-1-1.md</code>. Chính tệp văn bản này đã tạo ra lệnh <code>/start-1-1</code> mà anh chị bấm chạy ở cuối Chương 1!"
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Mở kiểm tra tệp workflow mẫu",
+            "dur": "00:10",
+            "caption": "Chúng ta vào thực hành 3 bước khám phá bộ não <code>.agent</code>. Ở <strong>Bước 1</strong>, anh chị nhìn sang cột trái và bấm mở tệp <code>start-1-1.md</code> để xem bên trong một quy trình tự động viết gì."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Gõ dấu / để đối chiếu tệp với danh sách lệnh",
+            "dur": "00:12",
+            "caption": "Sang <strong>Bước 2</strong>, anh chị bấm vào biểu tượng dấu gạch chéo <code>/</code> ở khung chat phải. Anh chị sẽ thấy các lệnh như <code>/plan</code> hay <code>/grill-me</code> hiện ra, tương ứng 1-1 với các tệp trong thư mục <code>.agent</code>."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hỏi AI kiểm tra cấu trúc .agent",
+            "dur": "00:11",
+            "caption": "Ở <strong>Bước 3</strong>, trợ lý AI đã liệt kê rõ ràng cả 3 ngăn <strong>Rules</strong>, <strong>Skills</strong> và <strong>Workflows</strong> trong dự án của chúng ta. Bây giờ, chúng ta bước sang <strong>Bài 10</strong> để tự tay viết Nội quy và Kỹ năng cho phòng ban của mình!"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "code": "Bài 10",
+        "title": "Thiết lập Nội quy Tự động (.agent/rules) & Sổ tay Kỹ năng (.agent/skills)",
+        "filename": "lesson_10.html",
+        "dur": "6 phần · Thực hành tương tác",
+        "done": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Phân biệt Rules (Luôn bật) và Skills (Theo việc)",
+            "dur": "00:14",
+            "caption": "Trong <strong>Bài 10</strong>, chúng ta giải quyết câu hỏi: Cái gì nên đặt vào <strong>Rules</strong> và cái gì nên đặt vào <strong>Skills</strong>? Nguyên tắc rất dễ nhớ: Những quy định ngắn gọn mà câu lệnh nào cũng phải tuân theo thì đặt vào <code>rules/</code>; còn hướng dẫn chuyên môn dài thì đóng gói vào <code>skills/</code>."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Giải phẫu một tệp Nội quy trong .agent/rules/",
+            "dur": "00:15",
+            "caption": "Nhìn vào cột giữa trên màn hình là tệp <code>.agent/rules/quy_chuan_van_phong.md</code>. Nhờ đặt tệp này trong ngăn <code>rules</code>, từ nay anh chị không cần gõ <code>@troly.md</code> nữa mà trợ lý vẫn tự động áp dụng chuẩn ngày tháng và tiền tệ Việt Nam."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Giải phẫu một tệp Kỹ năng trong .agent/skills/",
+            "dur": "00:15",
+            "caption": "Còn đây là tệp <code>SKILL.md</code> nằm trong ngăn <code>.agent/skills/bao-cao-tuan/</code>. Anh chị chú ý phần khung màu cam ở đầu tệp có dòng <code>description</code>: Đây chính là nhãn tên trên gáy sách giúp trợ lý biết khi nào cần rút cuốn kỹ năng này ra dùng."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Yêu cầu AI chuyển @troly.md thành Rule",
+            "dur": "00:09",
+            "caption": "Chúng ta vào thực hành 3 bước tạo Rules và Skills mà không cần tự gõ mã kỹ thuật. Ở <strong>Bước 1</strong>, anh chị chọn tệp <code>troly.md</code> mà chúng ta đã làm ở Chương 2."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Giao lệnh cho AI tự tạo Rule và Skill chuẩn",
+            "dur": "00:13",
+            "caption": "Sang <strong>Bước 2</strong>, điều tuyệt vời nhất của <strong>Antigravity IDE</strong> là anh chị không phải tự tạo thư mục bằng tay: Hãy gõ lệnh bảo trợ lý chuyển quy tắc chung vào <code>.agent/rules/</code> và tạo kỹ năng báo cáo tuần trong <code>.agent/skills/</code>."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất AI tự kích hoạt Rule & Skill mới",
+            "dur": "00:14",
+            "caption": "Ở <strong>Bước 3</strong>, khi anh chị chỉ gõ một câu ngắn gọn <em>Hãy lập báo cáo tuần</em>, hệ thống tự động nạp ngầm cả Nội quy lẫn Kỹ năng chuyên môn để xuất ra báo cáo chuẩn chỉnh. Tiếp theo, ở <strong>Bài 11</strong>, chúng ta sẽ ghép nhiều bước thành một lệnh gạch chéo <code>/</code>."
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "code": "Bài 11",
+        "title": "Đóng gói Quy trình Lặp lại Thành Lệnh Gạch chéo (.agent/workflows)",
+        "filename": "lesson_11.html",
+        "dur": "6 phần · Thực hành tương tác",
+        "done": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Sơ đồ 4 bước đóng gói lệnh /workflow",
+            "dur": "00:15",
+            "caption": "Mỗi sáng thứ Hai, anh chị có những việc nào phải làm lặp đi lặp lại không? Trong <strong>Bài 11</strong>, sơ đồ trên màn hình chỉ ra cách đóng gói chuỗi việc đó thành một tệp trong <code>.agent/workflows/</code> để chỉ cần gõ một dấu gạch chéo là trợ lý tự chạy từ đầu đến cuối."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Quan sát cấu trúc tệp workflow trong IDE",
+            "dur": "00:12",
+            "caption": "Nhìn vào cột giữa trên màn hình: Một tệp <code>workflow</code> thực chất không có mã lập trình phức tạp nào cả. Nó chỉ là một văn bản tiếng Việt chia rõ Bước 1 đọc tệp gì, Bước 2 phân tích sao và Bước 3 lưu kết quả vào đâu."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Cơ chế hiển thị lệnh mới trong bảng gạch chéo (/)",
+            "dur": "00:11",
+            "caption": "Ngay khi tệp quy trình được lưu vào thư mục <code>.agent/workflows/</code>, anh chị không cần khởi động lại phần mềm. Chỉ cần gõ dấu gạch chéo <code>/</code> ở ô chat là tên lệnh mới đã sẵn sàng để bấm chạy."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Yêu cầu AI tạo workflow /tong-hop-tuan",
+            "dur": "00:12",
+            "caption": "Chúng ta vào thực hành 3 bước đóng gói quy trình tự động. Ở <strong>Bước 1</strong>, anh chị gõ vào ô chat yêu cầu trợ lý tạo tệp <code>.agent/workflows/tong-hop-tuan.md</code> gồm 3 bước xử lý doanh thu sáng thứ Hai."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Kiểm tra tệp workflow vừa tạo và gõ /tong-hop-tuan",
+            "dur": "00:10",
+            "caption": "Sang <strong>Bước 2</strong>, sau khi tệp kịch bản <code>tong-hop-tuan.md</code> hiện lên ở cột giữa, anh chị chỉ cần gõ đúng một lệnh ngắn gọn <code>/tong-hop-tuan</code> vào ô chat và nhấn Gửi."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất dây chuyền tự chạy 3 bước",
+            "dur": "00:16",
+            "caption": "Ở <strong>Bước 3</strong>, chỉ sau một cú nhấn <kbd>Enter</kbd>, trợ lý đã tự động chạy hết cả 3 bước và xuất ra tệp <code>bao_cao_thu_hai.md</code> hoàn chỉnh. Vậy với những dự án mới hoàn toàn chưa có quy trình sẵn thì sao? Chúng ta sang ngay <strong>Bài 12</strong> với bộ ba lệnh <code>/grill-me</code>, <code>/plan</code> và <code>/learn</code>."
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "code": "Bài 12",
+        "title": "Chu trình 3 Lệnh Vàng: /grill-me (Phỏng vấn), /plan (Lập kế hoạch) & /learn (Đúc kết)",
+        "filename": "lesson_12.html",
+        "dur": "6 phần · Thực hành tương tác",
+        "done": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Chu trình 3 lệnh vàng: /grill-me, /plan, /learn",
+            "dur": "00:16",
+            "caption": "Trong bài cuối cùng của <strong>Chương 3 — Bài 12</strong>, chúng ta làm chủ chu trình 3 lệnh vàng giúp giải quyết mọi đề bài khó: Dùng <code>/grill-me</code> để trợ lý phỏng vấn làm rõ yêu cầu, dùng <code>/plan</code> để chốt khung kế hoạch, và dùng <code>/learn</code> để trợ lý tự ghi nhớ bài học vào bộ não <code>.agent</code>."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Cách chọn lệnh /grill-me và /plan trong khung chat",
+            "dur": "00:09",
+            "caption": "Nhìn vào bảng lệnh gạch chéo trên màn hình: Thay vì ra lệnh viết ngay, khi bắt đầu một đề án mới cho công ty, anh chị hãy chọn lệnh <code>/grill-me</code> để kích hoạt chế độ phỏng vấn ngược."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Cơ chế lệnh /learn tự động cập nhật .agent/rules/",
+            "dur": "00:12",
+            "caption": "Và đặc biệt nhất là lệnh <code>/learn</code> trên màn hình: Mỗi khi anh chị nhắc nhở trợ lý điều gì, chỉ cần gõ <code>/learn</code> là trợ lý tự động mở tệp trong <code>.agent/rules/</code> ra ghi thêm quy tắc mới để không bao giờ quên."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Chạy /grill-me cho đề án Đại lý B2B TaskFlow",
+            "dur": "00:13",
+            "caption": "Chúng ta vào thực hành 3 bước với đề án mở rộng đại lý B2B cho công ty <strong>TaskFlow</strong>. Ở <strong>Bước 1</strong>, khi anh chị gõ <code>/grill-me</code>, trợ lý lập tức hỏi ngược 3 câu về đối tượng đại lý, mức chiết khấu và chỉ tiêu số lượng."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Gõ /plan để xuất bản kế hoạch ke_hoach_mo_rong_b2b_q2.md",
+            "dur": "00:14",
+            "caption": "Sang <strong>Bước 2</strong>, sau khi trả lời xong 3 câu hỏi, anh chị gõ lệnh <code>/plan</code>. Ngay lập tức bản kế hoạch 10 đại lý IT với mức chiết khấu 25% được xuất ra tệp <code>ke_hoach_mo_rong_b2b_q2.md</code> sát thực tế 100%."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Chạy /learn đúc kết bài học",
+            "dur": "00:14",
+            "caption": "Ở <strong>Bước 3</strong>, anh chị gõ lệnh <code>/learn</code> để trợ lý ghi nhớ luôn quy chuẩn chiết khấu đại lý vào bộ não <code>.agent</code>. Chúc mừng anh chị đã hoàn thành <strong>Chương 3</strong>! Bây giờ chúng ta bước sang <strong>Chương 4 — Bài 13</strong> để xử lý kho tài liệu lớn và bảng tính dữ liệu."
+          }
+        ]
+      }
     ]
   },
   {
-    id: 4,
-    code: "CHƯƠNG 4",
-    title: "Đóng Gói Kỹ Năng Tái Sử Dụng (Skills) & Quy Trình 5 Bước",
-    desc: "Biến quy trình nghiệp vụ lặp đi lặp lại thành bộ kỹ năng SKILL.md chuẩn hóa cho toàn đội ngũ.",
-    lessons: [
-      { id: 13, title: "Giải phẫu Một Kỹ năng Chuẩn (SKILL.md, Templates & Scripts)", dur: "02:22", done: false, desc: "Hiểu rõ cấu trúc 3 phần giúp AI thực thi nhất quán 100 lần như một." },
-      { id: 14, title: "Xây dựng Quy trình Tuyển dụng & Đánh giá Hồ sơ HR 5 Bước", dur: "02:40", done: false, desc: "Thực hành đóng gói quy trình lọc CV, chấm điểm và soạn thư mời phỏng vấn." },
-      { id: 15, title: "Xây dựng Quy trình Phân tích Dữ liệu Doanh thu & Lập Báo cáo", dur: "02:35", done: false, desc: "Tự động đọc bảng CSV, tổng hợp chỉ số chính và xuất báo cáo điều hành." },
-      { id: 16, title: "Chia sẻ & Đồng bộ Kho Kỹ năng Cho Toàn Phòng Ban", dur: "01:58", done: false, desc: "Đóng gói thư mục kỹ năng để đồng nghiệp mở lên dùng ngay trong 30 giây." }
+    "id": 4,
+    "code": "CHƯƠNG 4",
+    "title": "Xử lý Dữ liệu Lớn, Bảng tính CSV & Phối hợp Đội nhóm",
+    "lessons": [
+      {
+        "id": 1,
+        "code": "Bài 13",
+        "title": "Bóc tách Kho Tài liệu Lớn & Tóm tắt Đa tầng Không Tràn Bộ nhớ",
+        "filename": "lesson_13.html",
+        "dur": "6 phần · Thực hành tương tác",
+        "done": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Quy trình 3 tầng bóc tách kho tài liệu lớn",
+            "dur": "00:15",
+            "caption": "Chào mừng anh chị bước vào <strong>Chương 4</strong>. Khi phải xử lý hàng chục biên bản họp hay báo cáo dài hàng trăm trang, nếu anh chị đính kèm tất cả vào một câu lệnh thì AI sẽ đọc lướt rất sơ sài. Sơ đồ 3 tầng trên màn hình giúp chúng ta bóc tách sâu mà không sót một chi tiết nào."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Quan sát kho hồ sơ nhiều tệp trên cây thư mục",
+            "dur": "00:11",
+            "caption": "Nhìn vào cây thư mục bên trái trên màn hình: Khi nhận bàn giao một thư mục dự án có hàng chục tệp như thế này, bước đầu tiên không phải là mở đọc mò từng tệp, mà là bảo trợ lý lập bản đồ tổng quan."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Kỹ thuật gắn trích dẫn nguồn [Tên_tệp#Dòng] khi tóm tắt",
+            "dur": "00:12",
+            "caption": "Trên màn hình cột giữa là chuẩn mực của một bản tóm tắt chuyên nghiệp: Cuối mỗi gạch đầu dòng đều ghi rõ <code>[Nguồn: @COMPANY.md]</code> kèm số dòng để khi sếp hỏi con số này lấy ở đâu, anh chị chỉ ra được ngay lập tức."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Yêu cầu AI quét danh mục hồ sơ",
+            "dur": "00:11",
+            "caption": "Chúng ta vào thực hành 3 bước bóc tách hồ sơ phục vụ họp Hội đồng Quản trị. Ở <strong>Bước 1</strong>, anh chị bấm vào tệp <code>INDEX.md</code> ở cột trái để xác định các cụm tài liệu cần tổng hợp."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Giao lệnh tóm tắt 2 tầng kèm bắt buộc dẫn nguồn",
+            "dur": "00:08",
+            "caption": "Sang <strong>Bước 2</strong>, anh chị đính kèm cụm tệp hồ sơ vào ô chat, yêu cầu trợ lý bóc tách thành 3 mục kèm trích dẫn nguồn chính xác rồi nhấn nút Gửi."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất tệp tom_tat_hdqt.md",
+            "dur": "00:13",
+            "caption": "Ở <strong>Bước 3</strong>, bản tóm tắt trình Hội đồng Quản trị đã hiện ra ở cột giữa với đầy đủ trích dẫn nguồn cho từng con số. Sau khi xử lý xong phần văn bản, chúng ta bước sang <strong>Bài 14</strong> để phân tích bảng số liệu doanh thu <code>sales_data.csv</code>!"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "code": "Bài 14",
+        "title": "Phân tích Bảng tính CSV, Làm sạch Dữ liệu & Trích xuất Insight Kinh doanh",
+        "filename": "lesson_14.html",
+        "dur": "6 phần · Thực hành tương tác",
+        "done": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Quy trình 3 bước Làm sạch, Nhóm gộp & Tìm Insight",
+            "dur": "00:15",
+            "caption": "Trong <strong>Bài 14</strong>, chúng ta biến trợ lý AI thành chuyên viên phân tích dữ liệu kinh doanh. Thay vì phải vật lộn với các hàm bảng tính phức tạp, quy trình 3 bước trên màn hình giúp anh chị làm sạch bảng <code>.csv</code>, nhóm gộp theo từng khu vực và rút ra khuyến nghị hành động ngay lập tức."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Quan sát bảng dữ liệu gốc sales_data.csv trong IDE",
+            "dur": "00:14",
+            "caption": "Nhìn vào bảng <code>sales_data.csv</code> đang mở ở cột giữa: Chúng ta có đầy đủ các cột từ Tháng, Khu vực, Gói dịch vụ cho tới Doanh thu và Tỷ lệ rời bỏ. Việc của chúng ta là giao cho trợ lý kiểm tra độ sạch và tính toán bảng tổng hợp."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Cách viết câu lệnh phân tích số liệu không sai sót",
+            "dur": "00:11",
+            "caption": "Khi viết câu lệnh phân tích ở cột phải, anh chị hãy chia rõ làm 3 ý nhỏ: Một là kiểm tra dữ liệu lỗi, hai là lập bảng có dòng tổng cộng để đối chiếu, và ba là đề xuất hành động cụ thể dựa trên mục tiêu công ty."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Mở kiểm tra bảng sales_data.csv",
+            "dur": "00:08",
+            "caption": "Chúng ta bắt đầu thực hành 3 bước phân tích dữ liệu Quý 1. Ở <strong>Bước 1</strong>, anh chị bấm mở tệp <code>sales_data.csv</code> trên cây thư mục bên trái."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Gửi lệnh phân tích kết hợp @sales_data.csv và @COMPANY.md",
+            "dur": "00:12",
+            "caption": "Sang <strong>Bước 2</strong>, anh chị đính kèm <code>@sales_data.csv</code> và <code>@COMPANY.md</code> vào ô chat, yêu cầu xuất báo cáo ra tệp <code>bao_cao_doanh_thu_q1.md</code> rồi bấm nút Gửi."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất bao_cao_doanh_thu_q1.md",
+            "dur": "00:14",
+            "caption": "Ở <strong>Bước 3</strong>, tệp <code>bao_cao_doanh_thu_q1.md</code> đã hiện ra với bảng số liệu tổng hợp rõ ràng và chỉ ra ngay nguyên nhân khách hàng nhỏ rời bỏ ở tuần đầu tiên. Tiếp theo, ở <strong>Bài 15</strong>, chúng ta sẽ học cách điều phối nhiều trợ lý AI chạy song song cùng lúc!"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "code": "Bài 15",
+        "title": "Phối hợp Nhiều Luồng Công việc Song song Cho Dự án Lớn",
+        "filename": "lesson_15.html",
+        "dur": "6 phần · Thực hành tương tác",
+        "done": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Mô hình điều phối 3 nhánh Trợ lý AI song song",
+            "dur": "00:14",
+            "caption": "Khi cần chuẩn bị gấp một bộ đề án lớn gồm cả Tài chính, Nhân sự và Thị trường, nếu chờ một trợ lý làm lần lượt từng phần thì rất mất thời gian. Trong <strong>Bài 15</strong>, sơ đồ trên màn hình chỉ ra cách phân công 3 nhánh trợ lý chạy song song và ghi ra 3 tệp độc lập."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Quan sát các luồng tác vụ (Threads) trên Antigravity 2.0",
+            "dur": "00:12",
+            "caption": "Nhìn vào cột bên trái của <strong>Antigravity 2.0</strong> trên màn hình: Anh chị có thể mở nhiều luồng hội thoại cùng lúc. Trong khi luồng số 1 đang phân tích doanh thu, chúng ta bấm sang luồng số 2 để giao tiếp việc rà soát nhân sự."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Cách chia tệp đích riêng biệt trong IDE để tránh ghi đè",
+            "dur": "00:11",
+            "caption": "Bảng điều phối ở cột giữa cho thấy nguyên tắc vàng khi chạy nhiều luồng song song: Cả 3 nhánh có thể cùng đọc tệp <code>@COMPANY.md</code>, nhưng khi xuất kết quả thì mỗi nhánh phải ghi vào một tệp có tên riêng biệt."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Kích hoạt luồng công việc song song",
+            "dur": "00:11",
+            "caption": "Chúng ta vào thực hành 3 bước phối hợp nhiều luồng công việc. Ở <strong>Bước 1</strong>, anh chị bấm chọn luồng công việc thứ hai ở cột trái để giao nhiệm vụ rà soát nhân sự và đối thủ song song với luồng phân tích doanh thu."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Ra lệnh hợp nhất kết quả từ 3 tệp thành phần",
+            "dur": "00:09",
+            "caption": "Sang <strong>Bước 2</strong>, khi cả 3 nhánh đều đã báo hoàn thành, anh chị quay về khung chat, đính kèm cả 3 tệp kết quả vừa sinh ra và yêu cầu hợp nhất thành bản đề án tổng thể."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất Đề án Tổng thể",
+            "dur": "00:14",
+            "caption": "Ở <strong>Bước 3</strong>, bản <code>de_an_tong_the_q2.md</code> đã hiện ra đầy đủ cả 3 mảng Tài chính, Nhân sự và Thị trường chỉ trong vài phút. Vậy làm sao để gửi các tệp báo cáo này lên đám mây cho cả phòng cùng làm việc? Chúng ta sang ngay <strong>Bài 16</strong>."
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "code": "Bài 16",
+        "title": "Đồng bộ Tài liệu Nhóm Qua GitHub & Sao lưu Google Drive Tự động",
+        "filename": "lesson_16.html",
+        "dur": "6 phần · Thực hành tương tác",
+        "done": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Quy trình 3 bước lưu lịch sử GitHub & đồng bộ Drive",
+            "dur": "00:15",
+            "caption": "Trong bài cuối cùng của <strong>Chương 4 — Bài 16</strong>, chúng ta giải quyết triệt để nỗi khổ gửi tệp qua lại với đủ thứ tên <em>Final_v1, Final_v2</em>. Quy trình 3 bước trên màn hình giúp anh chị dùng tiếng Việt bảo trợ lý đóng dấu phiên bản lên <strong>GitHub</strong> và sao lưu thẳng lên <strong>Google Drive</strong>."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Quan sát trạng thái các tệp mới tạo trước khi đồng bộ",
+            "dur": "00:12",
+            "caption": "Nhìn vào cột giữa trên màn hình: Sau khi hoàn thành báo cáo doanh thu Quý 1 ở Bài 14 và đề án tổng thể ở Bài 15, trợ lý sẽ giúp chúng ta kiểm kê toàn bộ các tệp mới phát sinh để chuẩn bị đẩy lên kho chung."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Giao việc đồng bộ bằng tiếng Việt thay vì gõ lệnh Terminal",
+            "dur": "00:13",
+            "caption": "Anh chị nhìn xuống khung nhỏ phía dưới màn hình: Dân văn phòng không cần tự gõ bất kỳ dòng lệnh kỹ thuật nào. Khi anh chị yêu cầu bằng tiếng Việt ở khung chat, chính trợ lý AI sẽ tự chạy lệnh đóng dấu phiên bản và tải tệp lên <strong>Google Drive</strong>."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Kiểm tra tệp bao_cao_doanh_thu_q1.md",
+            "dur": "00:10",
+            "caption": "Chúng ta vào thực hành 3 bước đồng bộ tài liệu nhóm. Ở <strong>Bước 1</strong>, anh chị mở kiểm tra lại tệp <code>bao_cao_doanh_thu_q1.md</code> ở cột giữa trước khi xuất bản cho toàn công ty."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Gõ lệnh yêu cầu AI lưu phiên bản và đẩy lên Drive",
+            "dur": "00:10",
+            "caption": "Sang <strong>Bước 2</strong>, tại ô chat bên phải, anh chị đính kèm <code>@bao_cao_doanh_thu_q1.md</code>, yêu cầu lưu mốc lịch sử kèm ghi chú rõ ràng và đẩy lên thư mục <strong>Google Drive</strong> rồi nhấn Gửi."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất liên kết đồng bộ",
+            "dur": "00:15",
+            "caption": "Ở <strong>Bước 3</strong>, trợ lý báo cáo đã đóng dấu phiên bản và trả về đúng vị trí tệp trên <strong>Google Drive</strong>. Chúc mừng anh chị đã hoàn thành <strong>Chương 4</strong>! Bây giờ chúng ta bước sang <strong>Chương 5 — Bài 17</strong> để biến dữ liệu khô khan thành các ấn phẩm truyền thông, hình ảnh và slide thuyết trình."
+          }
+        ]
+      }
     ]
   },
   {
-    id: 5,
-    code: "CHƯƠNG 5",
-    title: "Phối Hợp Đội Ngũ Đa Đặc Vụ (Sub-Agents) & Kiểm Duyệt Chéo",
-    desc: "Chia việc cho nhiều trợ lý chuyên trách chạy song song và tự động kiểm tra chất lượng độc lập.",
-    lessons: [
-      { id: 17, title: "Khi nào Dùng 1 Trợ lý, Khi nào Triệu tập Đội ngũ Đa Đặc vụ?", dur: "02:15", done: false, desc: "Nguyên tắc tách ngữ cảnh để tránh tràn bộ nhớ khi xử lý dự án lớn." },
-      { id: 18, title: "Phối hợp 3 Đặc vụ: Nghiên cứu ▸ Biên soạn ▸ Kiểm định Độc lập", dur: "02:45", done: false, desc: "Chấm dứt tình trạng vừa đá bóng vừa thổi còi bằng bước kiểm toán chéo." },
-      { id: 19, title: "Theo dõi Tiến độ Đa Luồng Trên Giao diện Antigravity 2.0", dur: "02:10", done: false, desc: "Quản lý nhiều cuộc hội thoại dự án cùng lúc trên bảng điều phối trung tâm." },
-      { id: 20, title: "Xử lý Xung đột Tài liệu & Hợp nhất Kết quả Đầu ra", dur: "02:20", done: false, desc: "Quy tắc phân vùng tệp tin để các đặc vụ làm việc song song không ghi đè nhau." }
+    "id": 5,
+    "code": "CHƯƠNG 5",
+    "title": "Sản xuất Nội dung Đa kênh, Hình ảnh, Slide & Báo cáo Web",
+    "lessons": [
+      {
+        "id": 1,
+        "code": "Bài 17",
+        "title": "Khởi tạo Trung tâm Nội dung Đa kênh & Quản lý Giọng văn Thương hiệu",
+        "filename": "lesson_17.html",
+        "dur": "6 phần · Thực hành tương tác",
+        "done": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: 3 trụ cột của Cẩm nang Giọng văn Thương hiệu",
+            "dur": "00:15",
+            "caption": "Chào mừng anh chị bước vào <strong>Chương 5</strong> — nơi chúng ta ứng dụng AI vào truyền thông, thiết kế hình ảnh và làm báo cáo trực quan. Để bài viết không bao giờ mang mùi văn mẫu máy móc, <strong>Bài 17</strong> bắt đầu bằng việc thiết lập tệp Cẩm nang Thương hiệu <code>brand_voice.md</code> với 3 trụ cột trên màn hình."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Quan sát cấu trúc tệp brand_voice.md trong IDE",
+            "dur": "00:12",
+            "caption": "Nhìn vào tệp <code>brand_voice.md</code> ở cột giữa trên màn hình: Bí quyết hay nhất để AI bắt trúng giọng văn thương hiệu là anh chị hãy đặt hai câu ví dụ cạnh nhau — một câu chung chung bị cấm và một câu cụ thể được khuyến khích."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Cách AI rút trích bài viết mẫu để tự lập Brand Voice",
+            "dur": "00:13",
+            "caption": "Nếu doanh nghiệp của anh chị chưa từng viết cẩm nang thương hiệu thì cũng đừng lo: Chỉ cần đính kèm hồ sơ <code>@COMPANY.md</code> hoặc vài bài viết cũ mà sếp tâm đắc nhất, trợ lý AI sẽ tự phân tích và lập ra tệp <code>brand_voice.md</code>."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Mở hồ sơ gốc để trích xuất thương hiệu",
+            "dur": "00:09",
+            "caption": "Chúng ta vào thực hành 3 bước xây dựng trung tâm nội dung. Ở <strong>Bước 1</strong>, anh chị mở tệp <code>COMPANY.md</code> ở cột trái để lấy thông số cốt lõi cho chiến dịch truyền thông Quý 2."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Ra lệnh khởi tạo tệp brand_voice.md chuẩn B2B",
+            "dur": "00:10",
+            "caption": "Sang <strong>Bước 2</strong>, anh chị đính kèm <code>@COMPANY.md</code> và <code>@bao_cao_doanh_thu_q1.md</code> vào ô chat, yêu cầu tạo tệp <code>brand_voice.md</code> rồi nhấn nút Gửi."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất brand_voice.md",
+            "dur": "00:13",
+            "caption": "Ở <strong>Bước 3</strong>, tệp <code>brand_voice.md</code> đã hiện ra với đầy đủ thông điệp chủ đạo, số liệu bảo chứng thực tế và quy tắc kiểm duyệt. Bây giờ chúng ta bước sang <strong>Bài 18</strong> để sản xuất hàng loạt bài viết và chuỗi email từ cẩm nang này!"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "code": "Bài 18",
+        "title": "Tự động hóa Sản xuất Bài viết, Email Chuỗi & Kiểm duyệt Chất lượng",
+        "filename": "lesson_18.html",
+        "dur": "6 phần · Thực hành tương tác",
+        "done": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Dây chuyền 3 chặng sản xuất & kiểm duyệt nội dung",
+            "dur": "00:14",
+            "caption": "Trong <strong>Bài 18</strong>, chúng ta vận hành một tòa soạn thu nhỏ ngay trong <strong>Antigravity IDE</strong>. Sơ đồ 3 chặng trên màn hình giúp anh chị từ một tài liệu gốc chuyển hóa ra bài đăng Website, bài mạng xã hội và chuỗi Email, đồng thời bắt trợ lý đóng vai Tổng biên tập tự gọt giũa câu chữ."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Kỹ thuật ra lệnh 'Viết nháp + Tự biên tập' trong 1 bước",
+            "dur": "00:13",
+            "caption": "Nhìn vào cột giữa trên màn hình: Khi chúng ta yêu cầu trợ lý lập một <strong>Bảng tự kiểm duyệt 3 tiêu chí</strong> ngay bên dưới bài viết, chất lượng câu chữ tăng lên rõ rệt vì trợ lý buộc phải tự rà soát lại từng câu so với tệp <code>@brand_voice.md</code>."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Cấu trúc chuyển hóa 1 nội dung sang 3 định dạng kênh",
+            "dur": "00:11",
+            "caption": "Trên màn hình là hai khung văn bản song song: Cùng xuất phát từ một thông điệp cốt lõi nhưng bài đăng <strong>LinkedIn</strong> được viết giàu tính gợi mở, trong khi bức <strong>Email</strong> gửi Giám đốc lại đi thẳng vào giải pháp và quà tặng thực tế."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Chọn tệp @brand_voice.md",
+            "dur": "00:08",
+            "caption": "Chúng ta vào thực hành 3 bước sản xuất nội dung tự động. Ở <strong>Bước 1</strong>, anh chị kiểm tra tệp <code>brand_voice.md</code> đang mở ở cột giữa."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Gửi lệnh sản xuất 3 kênh kèm bước tự kiểm duyệt",
+            "dur": "00:10",
+            "caption": "Sang <strong>Bước 2</strong>, anh chị đính kèm <code>@brand_voice.md</code> cùng <code>@de_an_tong_the_q2.md</code>, yêu cầu soạn trọn bộ 3 kênh kèm bảng tự kiểm duyệt rồi bấm nút Gửi."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất bộ nội dung sạch lỗi",
+            "dur": "00:14",
+            "caption": "Ở <strong>Bước 3</strong>, trọn bộ bài Blog, bài mạng xã hội và Email chăm sóc khách hàng đã sẵn sàng trong tệp <code>chien_dich_noi_dung_q2.md</code>. Khi đã có phần chữ hoàn hảo, chúng ta bước sang <strong>Bài 19</strong> để tạo bộ hình ảnh minh họa và sơ đồ thông tin đi kèm!"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "code": "Bài 19",
+        "title": "Tạo Hình ảnh Minh họa, Infographic & Ấn phẩm Nhận diện Thương hiệu",
+        "filename": "lesson_19.html",
+        "dur": "6 phần · Thực hành tương tác",
+        "done": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Công thức 4 lớp tạo ảnh minh họa đồng bộ",
+            "dur": "00:14",
+            "caption": "Tại sao nhiều người dùng AI tạo ảnh thấy bức thứ nhất là ảnh chụp, bức thứ hai lại ra hoạt hình rất lệch tông? Trong <strong>Bài 19</strong>, công thức 3 khối cố định trên màn hình giúp anh chị khóa chặt phong cách và bảng màu để cả bộ ấn phẩm đồng nhất 100%."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Quan sát tệp kịch bản thiết kế hình ảnh trong IDE",
+            "dur": "00:10",
+            "caption": "Nhìn vào cột giữa trên màn hình: Khi chuẩn bị bộ ảnh cho chiến dịch Quý 2, chúng ta đóng khung sẵn một dòng <strong>Khóa phong cách cố định</strong> gồm nền giấy kem và màu nhấn cam đất để gắn vào cuối mọi yêu cầu vẽ ảnh."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Xuất trực tiếp sơ đồ Infographic sắc nét ngay trong IDE",
+            "dur": "00:11",
+            "caption": "Và như anh chị thấy trên màn hình cột giữa: Không chỉ viết kịch bản tạo ảnh, trợ lý AI còn có thể dựng trực tiếp tấm <strong>Infographic 3 ngày hội nhập</strong> với màu sắc chuẩn thương hiệu để anh chị đưa thẳng vào bài đăng."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Mở bài viết cần minh họa",
+            "dur": "00:10",
+            "caption": "Chúng ta vào thực hành 3 bước thiết kế ấn phẩm trực quan. Ở <strong>Bước 1</strong>, anh chị mở tệp bài viết <code>chien_dich_noi_dung_q2.md</code> để đối chiếu thông điệp cần vẽ minh họa."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Gửi câu lệnh tạo bộ ảnh và Infographic đồng bộ",
+            "dur": "00:09",
+            "caption": "Sang <strong>Bước 2</strong>, anh chị đính kèm <code>@brand_voice.md</code> và tệp bài viết, yêu cầu dựng tấm <strong>Infographic</strong> theo đúng bảng màu kem và cam đất rồi nhấn Gửi."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất ấn phẩm",
+            "dur": "00:12",
+            "caption": "Ở <strong>Bước 3</strong>, tấm <strong>Infographic</strong> đã hoàn tất sắc nét ngay trên màn hình. Khi đã có đủ số liệu, văn bản và hình ảnh, chúng ta bước sang <strong>Bài 20</strong> để đóng gói tất cả thành bộ Slide thuyết trình và trang Báo cáo Web tương tác!"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "code": "Bài 20",
+        "title": "Xuất bản Slide Thuyết trình (HTML/PPTX) & Bảng điều khiển Báo cáo Web",
+        "filename": "lesson_20.html",
+        "dur": "6 phần · Thực hành tương tác",
+        "done": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Quy trình 3 bước xuất bản Slide & Web Dashboard",
+            "dur": "00:14",
+            "caption": "Trong bài cuối cùng của <strong>Chương 5 — Bài 20</strong>, chúng ta biến các tệp báo cáo đã làm thành bộ Slide thuyết trình cấp cao. Quy trình 3 bước trên màn hình áp dụng nguyên tắc <strong>Tiêu đề Kết luận</strong> và giới hạn dưới 10 dòng mỗi trang để sếp nhìn lướt 3 giây là nắm trọn thông điệp."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Quan sát tiện ích xem Slide ngay trong Antigravity IDE",
+            "dur": "00:14",
+            "caption": "Nhìn vào trang Slide mẫu ở cột giữa trên màn hình: Dòng tiêu đề trên cùng nêu thẳng kết luận số liệu, phía dưới là 3 thẻ thông tin lớn làm nổi bật con số 1,85 tỷ VNĐ, mục tiêu 3 ngày và 10 đại lý mới. Rất thoáng và sang trọng!"
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Cách viết câu lệnh ép AI tuân thủ chuẩn dưới 10 dòng/slide",
+            "dur": "00:12",
+            "caption": "Khi giao việc làm slide ở cột phải, anh chị nhớ ghi rõ 3 ràng buộc vàng: Một là tỷ lệ 16:9 màu kem cam, hai là tiêu đề phải có số liệu kết luận, và ba là mỗi trang tối đa 3 thẻ thông tin dưới 10 dòng."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Chọn tệp đề án gốc cần chuyển thành Slide",
+            "dur": "00:10",
+            "caption": "Chúng ta vào thực hành 3 bước xuất bản bộ Slide báo cáo. Ở <strong>Bước 1</strong>, anh chị mở tệp <code>de_an_tong_the_q2.md</code> để xác nhận 5 nội dung chính cần đưa lên 5 trang trình chiếu."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Gửi lệnh xuất bản bộ Slide HTML/PPTX 5 trang",
+            "dur": "00:08",
+            "caption": "Sang <strong>Bước 2</strong>, anh chị đính kèm tệp đề án và báo cáo doanh thu vào ô chat, yêu cầu xuất bản bộ Slide 5 trang chuẩn <strong>Action Title</strong> rồi nhấn nút Gửi."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất bộ Slide hoàn chỉnh",
+            "dur": "00:15",
+            "caption": "Ở <strong>Bước 3</strong>, bộ Slide 5 trang đã xuất bản hoàn chỉnh, mở bằng bất kỳ máy tính nào cũng đẹp mắt mà không sợ lỗi phông chữ. Chúc mừng anh chị đã hoàn thành <strong>Chương 5</strong>! Bây giờ chúng ta bước vào chặng cuối cùng — <strong>Chương 6 (Bài 21 đến Bài 24)</strong> với 4 tình huống thực chiến toàn diện!"
+          }
+        ]
+      }
     ]
   },
   {
-    id: 6,
-    code: "CHƯƠNG 6",
-    title: "Tự Động Hóa Định Kỳ (Automations) & Dự Án Thực Chiến Cuối Khóa",
-    desc: "Hẹn giờ tự động chạy báo cáo mỗi sáng và hoàn thiện dự án tốt nghiệp toàn trình.",
-    lessons: [
-      { id: 21, title: "Thiết lập Lịch chạy Tự động (Automations) Theo Giờ & Sự kiện", dur: "02:12", done: false, desc: "Giao việc định kỳ mỗi sáng thứ Hai tự động tổng hợp tin tức và báo cáo." },
-      { id: 22, title: "Bảo mật Dữ liệu Nội bộ & Các Chốt chặn An toàn Trước Khi Xuất bản", dur: "02:05", done: false, desc: "Rà soát thông tin nhạy cảm và khóa phạm vi thư mục được phép truy cập." },
-      { id: 23, title: "Dự án Thực chiến Phần 1: Thiết kế Kiến trúc Không gian Làm việc", dur: "02:50", done: false, desc: "Tự tay dựng bộ khung dự án hoàn chỉnh cho bài toán thực tế của doanh nghiệp bạn." },
-      { id: 24, title: "Dự án Thực chiến Phần 2: Nghiệm thu, Đóng gói & Bàn giao Toàn trình", dur: "02:35", done: false, desc: "Chạy kiểm định toàn bộ đầu ra và hoàn thành chứng nhận khóa học." }
+    "id": 6,
+    "code": "CHƯƠNG 6",
+    "title": "4 Tình huống Thực chiến Toàn diện (Case Studies)",
+    "lessons": [
+      {
+        "id": 1,
+        "code": "Bài 21",
+        "title": "Tình huống 1 — Lập Kế hoạch Chiến lược Từ 0 Đến Bản Thảo Hoàn chỉnh",
+        "filename": "lesson_21.html",
+        "dur": "6 phần · Thực hành tương tác",
+        "done": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Lộ trình 3 giai đoạn nhân bản chiến lược 7 bước",
+            "dur": "00:14",
+            "caption": "Chào mừng anh chị bước vào <strong>Chương 6</strong> với 4 tình huống thực chiến toàn diện. Ở <strong>Bài 21 — Tình huống 1</strong>, chúng ta giải bài toán lập kế hoạch cho một thương hiệu mới tinh là <strong>Giày Bã Mía</strong> bằng cách rút trích bộ khung 7 bước từ dự án thành công mẫu <strong>5balance</strong>."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Quan sát tệp quy trình chiến lược 7 bước trong IDE",
+            "dur": "00:12",
+            "caption": "Nhìn vào tệp <code>08_quy_trinh_lap_ke_hoach_chien_luoc.md</code> đang mở ở cột giữa: Trợ lý đã tách riêng phần khung phương pháp luận 7 bước từ dự án mẫu <strong>5balance</strong> để chuẩn bị phỏng vấn thông số cho dự án <strong>Giày Bã Mía</strong>."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Cách kết hợp khuôn mẫu có sẵn với lệnh /grill-me",
+            "dur": "00:12",
+            "caption": "Khi anh chị đính kèm tệp quy trình 7 bước cùng lệnh <code>/grill-me</code> ở cột phải, trợ lý AI sẽ đóng vai Giám đốc Chiến lược hỏi anh chị từng thông số của đôi giày bã mía để lấp đầy cả 7 bước mà không bị sót mục nào."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Mở tệp khung chiến lược 7 bước",
+            "dur": "00:08",
+            "caption": "Chúng ta bắt đầu thực hành 3 bước của Tình huống 1. Ở <strong>Bước 1</strong>, anh chị bấm mở tệp <code>08_quy_trinh_lap_ke_hoach_chien_luoc.md</code> ở cột trái."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Gửi thông số Giày Bã Mía và kích hoạt lệnh /plan",
+            "dur": "00:11",
+            "caption": "Sang <strong>Bước 2</strong>, sau khi trả lời các câu hỏi về mức giá 890.000 đồng và mục tiêu 500 đôi đặt trước, anh chị gõ lệnh <code>/plan</code> để trợ lý đổ toàn bộ dữ liệu vào khuôn 7 bước."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất Đề án Giày Bã Mía",
+            "dur": "00:13",
+            "caption": "Ở <strong>Bước 3</strong>, toàn bộ kế hoạch chiến lược 7 bước của thương hiệu <strong>Giày Bã Mía</strong> đã hoàn tất từ định vị, giá bán tới điểm hòa vốn. Tiếp theo, ở <strong>Bài 22 — Tình huống 2</strong>, chúng ta sẽ giải quyết bài toán Tự động hóa Tuyển dụng và Đào tạo Nhân sự!"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "code": "Bài 22",
+        "title": "Tình huống 2 — Tự động hóa Tuyển dụng, Chấm CV & Lộ trình Hội nhập (HR)",
+        "filename": "lesson_22.html",
+        "dur": "6 phần · Thực hành tương tác",
+        "done": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Dây chuyền 3 bước tự động hóa tuyển dụng HR",
+            "dur": "00:15",
+            "caption": "Bước sang <strong>Bài 22 — Tình huống Thực chiến 2</strong>, chúng ta giải quyết bài toán mà mọi giám đốc và trưởng phòng đều gặp phải: Tuyển dụng và đào tạo nhân sự mới. Sơ đồ 3 bước trên màn hình giúp anh chị chấm điểm hồ sơ ứng viên khách quan và tạo bộ câu hỏi phỏng vấn sắc bén cho từng người."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Quan sát tệp Thang điểm tiêu chí tuyển dụng trong IDE",
+            "dur": "00:12",
+            "caption": "Nhìn vào cột giữa trên màn hình là tệp <code>jd_truong_nhom_cs.md</code>: Thay vì chỉ bảo AI tìm người giỏi chung chung, chúng ta chia rõ 100 điểm thành 3 tiêu chí định lượng để AI đối chiếu với từng hồ sơ ứng viên."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Bảng xếp hạng ứng viên kèm câu hỏi phỏng vấn xoáy sâu",
+            "dur": "00:11",
+            "caption": "Và kết quả ở cột giữa thật sự ấn tượng: Trợ lý không chỉ chấm điểm xếp hạng 91 trên 100 cho ứng viên số 1, mà còn chuẩn bị sẵn câu hỏi phỏng vấn riêng biệt để anh chị kiểm tra năng lực thực chất của từng người."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Kiểm tra tệp tiêu chí jd_truong_nhom_cs.md",
+            "dur": "00:08",
+            "caption": "Chúng ta vào thực hành 3 bước tự động hóa tuyển dụng. Ở <strong>Bước 1</strong>, anh chị mở kiểm tra tệp tiêu chí <code>jd_truong_nhom_cs.md</code> ở cột giữa."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Gửi lệnh chấm điểm ứng viên và lập lộ trình 30-60-90 ngày",
+            "dur": "00:09",
+            "caption": "Sang <strong>Bước 2</strong>, anh chị đính kèm thang điểm cùng danh sách ứng viên vào ô chat, yêu cầu chấm điểm và lập lộ trình thử việc 30-60-90 ngày rồi nhấn nút Gửi."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất bộ hồ sơ tuyển dụng",
+            "dur": "00:17",
+            "caption": "Ở <strong>Bước 3</strong>, bộ hồ sơ <code>ho_so_tuyen_dung_cs.md</code> đã hoàn tất từ bảng chấm điểm ứng viên đến lộ trình thử việc 30-60-90 ngày. Khi đã chọn được người và mở rộng đại lý, làm sao để rà soát hợp đồng không bị rủi ro pháp lý? Chúng ta sang ngay <strong>Bài 23 — Tình huống 3</strong>!"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "code": "Bài 23",
+        "title": "Tình huống 3 — Xây dựng Trợ lý Nghiên cứu Pháp lý, Hợp đồng & Quy chế",
+        "filename": "lesson_23.html",
+        "dur": "6 phần · Thực hành tương tác",
+        "done": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Cơ chế đối chiếu chéo rà soát rủi ro hợp đồng",
+            "dur": "00:16",
+            "caption": "Trong <strong>Bài 23 — Tình huống Thực chiến 3</strong>, chúng ta ứng dụng trợ lý AI vào một nghiệp vụ đòi hỏi sự tỉ mỉ tuyệt đối: Rà soát hợp đồng kinh tế và quy chế nội bộ. Khung đối sánh trên màn hình chỉ ra cách dùng quy chế chuẩn của công ty để bắt lỗi bản dự thảo do đối tác gửi sang."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Quan sát tệp Quy chế Hợp đồng Chuẩn của công ty",
+            "dur": "00:12",
+            "caption": "Nhìn vào tệp <code>quy_che_hop_dong_chuan.md</code> ở cột giữa: Đây chính là cây thước đo pháp lý của công ty chúng ta, quy định rõ thời hạn công nợ tối đa chỉ là 15 ngày và bắt buộc phải có điều khoản bảo mật dữ liệu khách hàng."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Bảng phát hiện điều khoản bất lợi kèm câu chữ sửa lại",
+            "dur": "00:13",
+            "caption": "Khi đối chiếu với bản hợp đồng do đối tác gửi sang, báo cáo ở cột giữa lập tức gắn cờ Đỏ vào Điều 4.2 vì đối tác lén kéo dài hạn thanh toán lên 45 ngày, đồng thời viết sẵn luôn câu chữ chuẩn để chúng ta gửi lại đàm phán!"
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Mở bản dự thảo hợp đồng đối tác gửi",
+            "dur": "00:08",
+            "caption": "Chúng ta vào thực hành 3 bước rà soát hợp đồng. Ở <strong>Bước 1</strong>, anh chị mở tệp dự thảo <code>hop_dong_dai_ly_du_thao.md</code> vừa nhận được từ đối tác."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Gửi lệnh đối chiếu 1-1 giữa Dự thảo và Quy chế chuẩn",
+            "dur": "00:09",
+            "caption": "Sang <strong>Bước 2</strong>, anh chị đính kèm cả tệp dự thảo của đối tác lẫn tệp quy chế chuẩn của công ty vào ô chat, yêu cầu gắn cờ rủi ro kèm câu chữ sửa đổi rồi nhấn nút Gửi."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất Báo cáo rà soát",
+            "dur": "00:12",
+            "caption": "Ở <strong>Bước 3</strong>, bản báo cáo rà soát đã chỉ rõ cả điều khoản đạt chuẩn lẫn 2 rủi ro mức Đỏ cần sửa ngay trước khi đặt bút ký. Bây giờ, chúng ta cùng bước vào bài học cuối cùng của khóa học — <strong>Bài 24</strong>!"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "code": "Bài 24",
+        "title": "Tình huống 4 — Tổng duyệt Chất lượng Dự án, Bảo mật (.gitignore) & Lộ trình 30 Ngày",
+        "filename": "lesson_24.html",
+        "dur": "6 phần · Thực hành tương tác",
+        "done": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Bản đồ 6 Chương & Quy trình tổng duyệt dự án",
+            "dur": "00:15",
+            "caption": "Chào mừng anh chị đến với <strong>Bài 24</strong> — bài học cuối cùng khép lại hành trình <strong>Antigravity Basic</strong>! Trước khi bàn giao bất kỳ dự án lớn nào, chúng ta trang bị hai chốt chặn quan trọng nhất: Đối chiếu chéo số liệu giữa các tệp báo cáo và bảo vệ tài liệu mật bằng tệp <code>.gitignore</code>."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Quan sát: Toàn bộ danh mục tài sản số hóa sau 6 Chương",
+            "dur": "00:15",
+            "caption": "Nhìn vào cột giữa trên màn hình: Khác hẳn với việc hỏi đáp trên web xong là trôi mất, sau 24 bài học, trong thư mục máy tính của anh chị đã có trọn bộ tài sản từ Bộ não <code>.agent</code>, Báo cáo doanh thu, Chiến dịch nội dung, Bộ Slide cho tới Hồ sơ nhân sự và Pháp lý."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Đối chiếu chéo số liệu và khóa bảo mật .gitignore",
+            "dur": "00:14",
+            "caption": "Trên màn hình là biên bản tổng duyệt dự án: Trợ lý tự động đối chiếu con số 1,85 tỷ đồng từ bảng <code>sales_data.csv</code> gốc tới tận trang Slide thuyết trình, đồng thời kiểm tra tệp <code>.gitignore</code> để đảm bảo danh sách ứng viên được bảo mật an toàn."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Yêu cầu AI đối chiếu chéo số liệu toàn dự án",
+            "dur": "00:10",
+            "caption": "Chúng ta bước vào bài thực hành tổng kết khóa học. Ở <strong>Bước 1</strong>, trước khi đóng gói hồ sơ gửi Ban Giám đốc, anh chị đính kèm tệp gốc và yêu cầu trợ lý đối chiếu chéo số liệu toàn bộ dự án."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Yêu cầu AI lập Lộ trình 30 ngày áp dụng cho bản thân",
+            "dur": "00:12",
+            "caption": "Sang <strong>Bước 2</strong>, sau khi dự án mẫu đã đạt chuẩn kiểm toán, anh chị đính kèm hồ sơ cá nhân <code>@troly.md</code> và yêu cầu trợ lý thiết kế riêng một <strong>Lộ trình 30 ngày</strong> áp dụng ngay vào công việc thật của anh chị."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Mở xem Lộ trình 30 ngày & Tốt nghiệp Khóa học!",
+            "dur": "00:17",
+            "caption": "Và ở <strong>Bước 3</strong>, tấm bản đồ <code>lo_trinh_30_ngay_cua_toi.md</code> đã hiện ra rõ nét trên màn hình. Chúc mừng anh chị đã hoàn thành trọn vẹn <strong>6 Chương, 24 Bài giảng và 144 Điểm neo thực hành</strong> của khóa học <strong>Antigravity Basic</strong>! Chúc anh chị gặt hái thật nhiều thành tựu đột phá cùng Trợ lý AI của mình!"
+          }
+        ]
+      }
     ]
   }
 ];
 
-/* Mẫu 6 Phần Nhỏ (Beats) trong mỗi bài học — Đan xen Lý thuyết (Progressive Reveal) & Thực hành (Zero Overlay) */
 function getBeatsForLesson(lessonObj, chapObj) {
-  return [
-    {
-      idx: 0,
-      mode: "theory",
-      badge: "Lý thuyết 1",
-      title: "Bức tranh tổng quan & Tại sao bước này quyết định 80% hiệu quả",
-      dur: "00:22",
-      subtitles: [
-        "Trước khi chạm vào chuột, chúng ta cùng nhìn rõ bức tranh tổng thể trên trang Slide độc lập này.",
-        "Thẻ thứ nhất: Khi hỏi đáp trên web, AI hoàn toàn mù thông tin về cây thư mục trên máy tính của bạn.",
-        "Thẻ thứ hai: Khi mở dự án trong Antigravity, AI đọc trực tiếp từng tệp tài liệu mà không cần copy-paste.",
-        "Thẻ thứ ba và thứ tư: Hai mặt phẳng Antigravity 2.0 và IDE 3 cột phối hợp nhịp nhàng trên cùng một thư mục gốc."
-      ],
-      cards: [
-        { step: "Ý 1/4", title: "1. Hỏi đáp trên Web (Tách rời thư mục)", body: "Phải copy-paste thủ công từng đoạn văn bản; AI không thấy cấu trúc thư mục thật trên máy." },
-        { step: "Ý 2/4", title: "2. Trợ lý AI trên Máy tính (Đọc trực tiếp)", body: "Làm việc ngay bên trong thư mục dự án, đọc và tạo tệp trực tiếp theo đúng quy chuẩn." },
-        { step: "Ý 3/4", title: "3. Antigravity 2.0 (Bàn điều phối đa luồng)", body: "Giao diện sáng thoáng để giao việc cho nhiều luồng hội thoại và xem tài liệu bên phải." },
-        { step: "Ý 4/4", title: "4. Antigravity IDE (Bàn kỹ thuật 3 cột)", body: "Hiển thị đầy đủ cây thư mục trái, trình biên tập giữa và khung chat điều khiển bên phải." }
-      ]
-    },
-    {
-      idx: 1,
-      mode: "sim",
-      badge: "Thực hành 1",
-      title: "Quan sát Bàn làm việc 3 Cột & Mở Chế độ Đọc Đẹp (Preview)",
-      dur: "00:25",
-      simType: "preview_click",
-      subtitles: [
-        "Bây giờ trên màn hình phần mềm hoàn toàn sạch sẽ, không có bất kỳ hộp thoại chữ nào che khuất giao diện.",
-        "Pha 1 (0.0s - 2.0s): Con trỏ di chuyển tới thẻ 0.1_Introduction.md và nhấp chuột phải.",
-        "Pha 2 (2.0s+): Menu ngữ cảnh hiện ra, con trỏ lướt xuống chọn đúng dòng Open Preview (Ctrl+Shift+V)."
-      ]
-    },
-    {
-      idx: 2,
-      mode: "theory",
-      badge: "Lý thuyết 2",
-      title: "3 Nguyên tắc Vàng Để Không Bao Giờ Mở Nhầm Cấp Thư Mục",
-      dur: "00:20",
-      subtitles: [
-        "Chúng ta chuyển sang Slide lý thuyết độc lập thứ hai để nắm vững 3 nguyên tắc kiểm tra thư mục gốc.",
-        "Ý 1: Luôn giải nén tệp .zip ra thư mục thật trước khi mở bằng Antigravity.",
-        "Ý 2: Tránh mở thư mục bọc ngoài bị lồng 2 tầng cùng tên.",
-        "Ý 3 & 4: Kiểm tra ngay cột Explorer bên trái xem đã thấy tệp AGENTS.md ở ngay tầng đầu tiên chưa."
-      ],
-      cards: [
-        { step: "Ý 1/4", title: "1. Giải nén hoàn tất trước khi mở", body: "Tuyệt đối không mở trực tiếp bên trong cửa sổ xem tạm của tệp nén ZIP/RAR." },
-        { step: "Ý 2/4", title: "2. Tránh lỗi thư mục lồng 2 tầng", body: "Chọn đúng thư mục chứa trực tiếp các Module bài học, không chọn thư mục vỏ bọc bên ngoài." },
-        { step: "Ý 3/4", title: "3. Dấu hiệu nhận biết mở đúng cấp", body: "Nhìn cột Explorer bên trái thấy ngay các thư mục Module_0, Module_1 và tệp AGENTS.md." },
-        { step: "Ý 4/4", title: "4. Cẩn trọng khi kéo thả chuột", body: "Nếu hiện bảng hỏi 'Are you sure you want to move...', hãy bấm Cancel ngay để tránh lệch cấu trúc." }
-      ]
-    },
-    {
-      idx: 3,
-      mode: "sim",
-      badge: "Thực hành 2",
-      title: "Thao tác Gọi Tệp Tin Bằng @ Và Chọn Mô Hình AI Phù Hợp",
-      dur: "00:24",
-      simType: "model_select",
-      subtitles: [
-        "Quay lại màn hình mô phỏng phần mềm 100% không hộp thoại chèn: hãy nhìn xuống khung nhập lệnh phía dưới bên phải.",
-        "Pha 1: Con trỏ lướt tới nút chọn mô hình Gemini 4 Argon Medium và nhấp chuột.",
-        "Pha 2: Sau khi chọn xong mô hình, con trỏ di chuyển vào ô nhập lệnh để gõ ký hiệu @ đính kèm tệp."
-      ]
-    },
-    {
-      idx: 4,
-      mode: "theory",
-      badge: "Lý thuyết 3",
-      title: "Tóm tắt Các Phím Tắt Cốt Lõi Cần Nhớ Trong Bài Học",
-      dur: "00:18",
-      subtitles: [
-        "Trước khi khép lại bài học, chúng ta điểm lại 4 phím tắt giúp tăng gấp đôi tốc độ thao tác.",
-        "Mỗi phím tắt xuất hiện lần lượt theo nhịp thuyết minh để bạn dễ dàng ghi nhớ."
-      ],
-      cards: [
-        { step: "Ý 1/4", title: "Ctrl + Shift + V — Mở Markdown Preview", body: "Chuyển ngay văn bản mã Markdown thô sang trang trình bày có bảng biểu và tiêu đề rõ đẹp." },
-        { step: "Ý 2/4", title: "Ctrl + L — Quote in Chat", body: "Bôi đen bất kỳ đoạn nội dung nào và đưa thẳng vào khung chat để yêu cầu AI sửa đúng chỗ đó." },
-        { step: "Ý 3/4", title: "Ký hiệu @ — Đính kèm tệp tin", body: "Chỉ định đích danh tệp hoặc thư mục cần AI đọc mà không phải mô tả dài dòng." },
-        { step: "Ý 4/4", title: "Ký hiệu / — Gọi quy trình mẫu", body: "Kích hoạt ngay các quy trình tự động hóa đã được đóng gói sẵn trong dự án." }
-      ]
-    },
-    {
-      idx: 5,
-      mode: "sim",
-      badge: "Thực hành 3",
-      title: "Kiểm tra Hoàn tất & Chuẩn bị Chuyển Sang Bài Tiếp Theo",
-      dur: "00:19",
-      simType: "file_check",
-      subtitles: [
-        "Bước thực hành cuối cùng: kiểm tra lại tệp kết quả ở cột Explorer bên trái.",
-        "Bạn có thể bấm nút 'Bài tiếp ▶' trên thanh đỉnh hoặc chọn bất kỳ bài nào trong tab '6 Chương · 24 Bài'."
-      ]
-    }
-  ];
+  const rawBeats = (lessonObj && Array.isArray(lessonObj.beats) && lessonObj.beats.length > 0)
+    ? lessonObj.beats
+    : [];
+  return rawBeats.map((b, idx) => ({
+    idx: idx,
+    mode: b.mode || (idx % 2 === 0 ? "theory" : "sim"),
+    title: b.title || (`Phần ${idx + 1}`),
+    dur: b.dur || "00:22",
+    simType: idx === 1 ? "preview_click" : (idx === 3 ? "model_select" : "file_check"),
+    subtitles: [
+      b.caption || "Nội dung thuyết minh đồng bộ từng ý trên sân khấu học tập.",
+      "Ý tiếp theo được làm nổi bật tuần tự theo giọng giảng viên để học viên tập trung tối đa.",
+      "Màn hình hoàn toàn sạch sẽ, tách biệt rõ giữa trang lý thuyết và thao tác phần mềm."
+    ],
+    cards: [
+      { step: "Ý 1/4", title: "1. Điểm cốt lõi thứ nhất trong phần học", body: b.caption || "Nắm vững bản chất trước khi đi vào thao tác trực tiếp trên phần mềm." },
+      { step: "Ý 2/4", title: "2. Quy tắc thực hành chuẩn xác", body: "Thực hiện đúng trình tự từng bước trên thư mục dự án thật của máy tính." },
+      { step: "Ý 3/4", title: "3. Điểm cần lưu ý để tránh sai sót", body: "Kiểm tra kỹ trạng thái phản hồi của trợ lý AI trên giao diện làm việc." },
+      { step: "Ý 4/4", title: "4. Kết quả nghiệm thu đầu ra", body: "Đảm bảo tệp tài liệu được cập nhật đúng định dạng và cấu trúc yêu cầu." }
+    ]
+  }));
 }
 
-/* =========================================================================
-   TRẠNG THÁI ỨNG DỤNG (STATE)
-   ========================================================================= */
 let state = {
-  view: "player",          // 'hub' | 'player'
-  hubLayout: "split",      // 'split' | 'grid' | 'accordion'
-  hubFilterChap: 0,        // 0 = Tất cả, 1..6 = Chương
-  selectedSplitChap: 1,    // Chương đang chọn ở chế độ Split Hub
-  sidebarMode: "tabs",     // 'tabs' | 'tree' | 'cinema'
-  sidebarTab: "beats",     // 'beats' | 'curriculum'
+  view: "player",
+  hubSelectedChapId: 1,
+  openTreeChapIds: [1],
   activeChapId: 1,
   activeLessonId: 1,
   activeBeatIdx: 0,
-  activeRevealIdx: 1,      // 1..4 (Ý đang sáng trên Slide hoặc Pha chuột trên Sim)
+  activeRevealIdx: 1,
   isPlaying: true,
-  speed: 1.0,
-  timerSec: 8
+  speed: 1.0
 };
 
 function findLessonAndChap(lessonId) {
@@ -2191,279 +2898,199 @@ function findLessonAndChap(lessonId) {
   return { chap: CHAPTERS_DATA[0], lesson: CHAPTERS_DATA[0].lessons[0] };
 }
 
-/* =========================================================================
-   ĐIỀU KHIỂN CHUYỂN VIEW & TUỲ CHỈNH UI LAB
-   ========================================================================= */
+function getCurrentBeat() {
+  const { chap, lesson } = findLessonAndChap(state.activeLessonId);
+  const beats = getBeatsForLesson(lesson, chap);
+  return beats[state.activeBeatIdx] || beats[0];
+}
+
 function switchPortalView(v) {
   state.view = v;
   document.getElementById("hub-view").classList.toggle("active", v === "hub");
   document.getElementById("player-view").classList.toggle("active", v === "player");
   document.getElementById("tab-btn-hub").classList.toggle("active", v === "hub");
   document.getElementById("tab-btn-player").classList.toggle("active", v === "player");
-  if (v === "hub") renderAllHubLayouts();
+  if (v === "hub") renderSplitHub();
 }
 
-function toggleUiLabDrawer() {
-  document.getElementById("ui-lab-drawer").classList.toggle("open");
-}
-
-function setHubLayout(mode) {
-  state.hubLayout = mode;
-  document.documentElement.setAttribute("data-hub-layout", mode);
-  document.querySelectorAll("[data-hub-opt]").forEach(btn => {
-    btn.classList.toggle("active", btn.getAttribute("data-hub-opt") === mode);
-  });
-  switchPortalView("hub");
-}
-
-function setSidebarMode(mode) {
-  state.sidebarMode = mode;
-  document.documentElement.setAttribute("data-sidebar-mode", mode);
-  document.querySelectorAll("[data-sb-opt]").forEach(btn => {
-    btn.classList.toggle("active", btn.getAttribute("data-sb-opt") === mode);
-  });
-  document.getElementById("btn-uncollapse-sb").style.display = (mode === "cinema") ? "inline-flex" : "none";
-  switchPortalView("player");
-  renderPlayerSidebar();
-}
-
-function setPortalTheme(theme) {
-  document.documentElement.setAttribute("data-theme", theme);
-  document.querySelectorAll("[data-theme-opt]").forEach(btn => {
-    btn.classList.toggle("active", btn.getAttribute("data-theme-opt") === theme);
-  });
-}
-
-function toggleSubtitleSize() {
-  const cur = document.documentElement.getAttribute("data-sub-size");
-  const next = cur === "large" ? "normal" : "large";
-  document.documentElement.setAttribute("data-sub-size", next);
-  document.getElementById("chip-sub-size").classList.toggle("active", next === "large");
+function toggleSidebarCollapse() {
+  document.body.classList.toggle("sidebar-collapsed");
 }
 
 /* =========================================================================
-   RENDER CỔNG KHÓA HỌC ĐA CHƯƠNG (HUB VIEW: SPLIT + GRID + ACCORDION)
+   RENDER CỔNG MỤC LỤC CHIA ĐÔI (TRÁI: 6 CHƯƠNG | PHẢI: 1 CỘT BÀI HỌC GỌN)
    ========================================================================= */
-function renderHubFilterPills() {
-  const wrap = document.getElementById("hub-chapter-pills");
-  let html = `<button class="cf-pill ${state.hubFilterChap === 0 ? 'active' : ''}" onclick="setHubChapFilter(0)">Tất cả (6 Chương · 24 Bài)</button>`;
-  for (const ch of CHAPTERS_DATA) {
-    html += `<button class="cf-pill ${state.hubFilterChap === ch.id ? 'active' : ''}" onclick="setHubChapFilter(${ch.id})">${ch.code} (4)</button>`;
-  }
-  wrap.innerHTML = html;
-}
-
-function setHubChapFilter(chapId) {
-  state.hubFilterChap = chapId;
-  if (chapId > 0) state.selectedSplitChap = chapId;
-  renderAllHubLayouts();
-}
-
-function createLessonCardHtml(ls, ch) {
-  const statusBadge = ls.done
-    ? `<span class="lci-status done">✓ Hoàn thành</span>`
-    : (ls.id === state.activeLessonId ? `<span class="lci-status current">● Đang học</span>` : `<span class="lci-status" style="color:var(--text-muted);">6 phần · ${ls.dur}</span>`);
-
-  return `
-    <div class="lesson-card-item ${ls.id === state.activeLessonId ? 'active-lesson' : ''} ${ls.done ? 'completed-lesson' : ''}" onclick="selectLessonAndOpenPlayer(${ls.id})">
-      <div class="lci-top">
-        <span class="lci-code">${ch.code} · BÀI ${ls.id}</span>
-        ${statusBadge}
-      </div>
-      <div class="lci-title">Bài ${ls.id}: ${ls.title}</div>
-      <div class="lci-desc">${ls.desc}</div>
-      <div class="lci-beats-preview">
-        <span class="lci-beat-dot">1. Lý thuyết (Tách thẻ)</span>
-        <span class="lci-beat-dot sim">2. Thực hành mẫu</span>
-        <span class="lci-beat-dot">3. Nguyên tắc</span>
-        <span class="lci-beat-dot sim">4. Thao tác chuột</span>
-        <span class="lci-beat-dot">+2 phần</span>
-      </div>
-    </div>
-  `;
-}
-
-function renderAllHubLayouts() {
-  renderHubFilterPills();
+function renderSplitHub() {
   const q = (document.getElementById("hub-search-input")?.value || "").trim().toLowerCase();
+  const leftEl = document.getElementById("hub-chapters-list");
+  const rightEl = document.getElementById("hub-lessons-pane");
 
-  const filteredChaps = CHAPTERS_DATA.filter(ch => state.hubFilterChap === 0 || ch.id === state.hubFilterChap);
-
-  // 1. Split Master-Detail View
-  const splitLeft = document.getElementById("hub-split-left");
-  const splitRight = document.getElementById("hub-split-right");
-  let leftHtml = "";
-  for (const ch of filteredChaps) {
+  // Cột Trái: Danh sách 6 Chương tinh gọn (Không có đoạn giới thiệu thừa)
+  leftEl.innerHTML = CHAPTERS_DATA.map(ch => {
     const doneCount = ch.lessons.filter(l => l.done).length;
-    leftHtml += `
-      <div class="hcn-card ${ch.id === state.selectedSplitChap ? 'active' : ''}" onclick="state.selectedSplitChap=${ch.id}; renderAllHubLayouts();">
-        <div class="hcn-top">
+    const isFull = doneCount === ch.lessons.length;
+    return `
+      <div class="chap-nav-item ${ch.id === state.hubSelectedChapId ? 'active' : ''}" onclick="state.hubSelectedChapId=${ch.id}; renderSplitHub();">
+        <div class="cni-top">
           <span>${ch.code}</span>
-          <span>${doneCount}/4 bài hoàn thành</span>
+          <span class="cni-done-badge ${isFull ? 'full' : ''}">${isFull ? '✓ ' : ''}${doneCount}/${ch.lessons.length} bài</span>
         </div>
-        <div class="hcn-title">${ch.title}</div>
-        <div class="hcn-meta">
-          <span>4 bài giảng · 24 phần nhỏ</span>
-          <span>▸</span>
-        </div>
+        <div class="cni-title">${ch.title}</div>
       </div>
     `;
-  }
-  splitLeft.innerHTML = leftHtml;
+  }).join("");
 
-  const activeChapObj = CHAPTERS_DATA.find(c => c.id === state.selectedSplitChap) || filteredChaps[0] || CHAPTERS_DATA[0];
-  const matchedLessons = activeChapObj.lessons.filter(ls => !q || ls.title.toLowerCase().includes(q) || ls.desc.toLowerCase().includes(q));
-  splitRight.innerHTML = `
-    <div class="hcd-header">
-      <div>
-        <div style="font-size:12px;font-weight:800;color:var(--accent-dark);">${activeChapObj.code} — 4 BÀI HỌC · 24 PHẦN NHỎ</div>
-        <h3 style="font-size:19px;font-weight:900;margin-top:3px;">${activeChapObj.title}</h3>
-        <p style="font-size:13px;color:var(--text-soft);margin-top:4px;">${activeChapObj.desc}</p>
+  // Cột Phải: Danh sách Bài học 1 Cột duy nhất
+  const activeChap = CHAPTERS_DATA.find(c => c.id === state.hubSelectedChapId) || CHAPTERS_DATA[0];
+  let lessonsToRender = [];
+  if (q) {
+    for (const ch of CHAPTERS_DATA) {
+      for (const ls of ch.lessons) {
+        if (ls.title.toLowerCase().includes(q)) lessonsToRender.push({ ch, ls });
+      }
+    }
+  } else {
+    lessonsToRender = activeChap.lessons.map(ls => ({ ch: activeChap, ls }));
+  }
+
+  rightEl.innerHTML = `
+    <div class="hrp-chap-bar">
+      <div class="hrp-chap-title">
+        <span class="hrp-chap-tag">${q ? 'KẾT QUẢ TÌM KIẾM' : activeChap.code}</span>
+        <span>${q ? `Tìm thấy ${lessonsToRender.length} bài học` : activeChap.title}</span>
       </div>
-      <button class="btn-resume-main" style="flex:0 0 auto; width:auto;" onclick="selectLessonAndOpenPlayer(${activeChapObj.lessons[0].id})">
-        ▶ Học từ đầu ${activeChapObj.code}
-      </button>
+      ${!q ? `<button class="nav-step-btn" style="background:var(--accent);color:#fff;border-color:var(--accent-dark);" onclick="openLessonAndBeat(${activeChap.lessons[0].id}, 0)">▶ Học từ đầu ${activeChap.code}</button>` : ''}
     </div>
-    <div class="hcd-lessons-grid">
-      ${matchedLessons.map(ls => createLessonCardHtml(ls, activeChapObj)).join("")}
+
+    <div class="lessons-one-col-list">
+      ${lessonsToRender.map(({ ch, ls }) => {
+        const beats = getBeatsForLesson(ls, ch);
+        return `
+          <div class="lesson-row-card ${ls.id === state.activeLessonId ? 'active' : ''} ${ls.done ? 'done' : ''}" onclick="openLessonAndBeat(${ls.id}, 0)">
+            <div class="lrc-main-line">
+              <div class="lrc-left">
+                <span class="lrc-num">${ls.done ? '✓ ' : ''}BÀI ${String(ls.id).padStart(2, '0')}</span>
+                <span class="lrc-title">${ls.title}</span>
+              </div>
+              <div class="lrc-right">
+                <span class="lrc-dur">${ls.dur}</span>
+                <button class="lrc-play-btn">Vào học ▸</button>
+              </div>
+            </div>
+            <div class="lrc-beats-strip" onclick="event.stopPropagation()">
+              ${beats.map(b => `
+                <div class="lrc-beat-chip ${b.mode === 'sim' ? 'sim' : ''}" onclick="openLessonAndBeat(${ls.id}, ${b.idx})">
+                  <div class="lbc-left">
+                    <span class="lbc-type-tag">${b.mode === 'theory' ? '📖 Lý thuyết' : '🖱️ Thực hành'}</span>
+                    <span>${b.title}</span>
+                  </div>
+                  <span class="lbc-dur">${b.dur} ▸</span>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+        `;
+      }).join("")}
     </div>
   `;
-
-  // 2. Grid 2-Column View & 3. Accordion View
-  let gridHtml = "";
-  let accHtml = "";
-  for (const ch of filteredChaps) {
-    const lsList = ch.lessons.filter(ls => !q || ls.title.toLowerCase().includes(q) || ls.desc.toLowerCase().includes(q));
-    if (lsList.length === 0) continue;
-    const boxHtml = `
-      <div class="chapter-box">
-        <div class="cb-head">
-          <div class="cb-title-group">
-            <span class="cb-num">${ch.code}</span>
-            <span class="cb-name">${ch.title}</span>
-          </div>
-          <span style="font-size:12px;font-weight:700;color:var(--text-muted);">${lsList.length} bài · 24 phần</span>
-        </div>
-        <div class="cb-lessons-list">
-          ${lsList.map(ls => createLessonCardHtml(ls, ch)).join("")}
-        </div>
-      </div>
-    `;
-    gridHtml += boxHtml;
-    accHtml += boxHtml;
-  }
-  document.getElementById("hub-grid-container").innerHTML = gridHtml;
-  document.getElementById("hub-accordion-container").innerHTML = accHtml;
 }
 
 /* =========================================================================
-   RENDER PHÒNG HỌC TƯƠNG TÁC (PLAYER SIDEBAR + STAGE 1-THING-AT-A-TIME)
+   RENDER SIDEBAR CÂY ĐA CẤP 3 TẦNG (CHƯƠNG ▸ BÀI ▸ PHẦN NHỎ)
    ========================================================================= */
-function selectLessonAndOpenPlayer(lessonId) {
+function toggleTreeChapter(chapId) {
+  if (state.openTreeChapIds.includes(chapId)) {
+    state.openTreeChapIds = state.openTreeChapIds.filter(id => id !== chapId);
+  } else {
+    state.openTreeChapIds.push(chapId);
+  }
+  renderMultiLevelTreeSidebar();
+}
+
+function renderMultiLevelTreeSidebar() {
+  const treeEl = document.getElementById("psb-multilevel-tree");
+  let html = "";
+
+  for (const ch of CHAPTERS_DATA) {
+    const isChapOpen = state.openTreeChapIds.includes(ch.id);
+    const isCurrentChap = ch.id === state.activeChapId;
+
+    html += `
+      <div class="tree-chapter ${isChapOpen ? 'open' : ''} ${isCurrentChap ? 'active-chap' : ''}">
+        <div class="tc-head" onclick="toggleTreeChapter(${ch.id})">
+          <span>${ch.code}: ${ch.title}</span>
+          <span class="tc-arrow">▸</span>
+        </div>
+        <div class="tc-lessons-wrap">
+          ${ch.lessons.map(ls => {
+            const isCurrentLesson = ls.id === state.activeLessonId;
+            const beats = getBeatsForLesson(ls, ch);
+            return `
+              <div class="tree-lesson-node ${isCurrentLesson ? 'active-lesson open-beats' : ''}">
+                <div class="tln-head" onclick="openLessonAndBeat(${ls.id}, 0)">
+                  <span>${ls.done ? '✓' : '●'} <strong>Bài ${ls.id}:</strong> ${ls.title}</span>
+                  <span style="font-size:11px;opacity:0.75;flex-shrink:0;">${ls.dur}</span>
+                </div>
+                <div class="tln-beats-list">
+                  ${beats.map(b => `
+                    <div class="tree-beat-leaf ${isCurrentLesson && b.idx === state.activeBeatIdx ? 'active-beat' : ''}" onclick="openLessonAndBeat(${ls.id}, ${b.idx})">
+                      <div class="tbl-left">
+                        <span>${b.mode === 'theory' ? '📖' : '🖱️'}</span>
+                        <span class="tbl-title">${b.idx + 1}. ${b.title}</span>
+                      </div>
+                      <span class="tbl-dur">${b.dur}</span>
+                    </div>
+                  `).join("")}
+                </div>
+              </div>
+            `;
+          }).join("")}
+        </div>
+      </div>
+    `;
+  }
+
+  treeEl.innerHTML = html;
+}
+
+function openLessonAndBeat(lessonId, beatIdx) {
   const { chap, lesson } = findLessonAndChap(lessonId);
   state.activeChapId = chap.id;
+  state.hubSelectedChapId = chap.id;
+  if (!state.openTreeChapIds.includes(chap.id)) {
+    state.openTreeChapIds.push(chap.id);
+  }
   state.activeLessonId = lesson.id;
-  state.activeBeatIdx = 0;
+  state.activeBeatIdx = beatIdx || 0;
   state.activeRevealIdx = 1;
   switchPortalView("player");
-  renderPlayerAll();
+  renderMultiLevelTreeSidebar();
+  renderStageAndSubtitles();
 }
 
 function stepLesson(delta) {
   const nextId = Math.max(1, Math.min(24, state.activeLessonId + delta));
-  selectLessonAndOpenPlayer(nextId);
-}
-
-function switchSidebarInnerTab(tabName) {
-  state.sidebarTab = tabName;
-  document.getElementById("psb-tab-beats").classList.toggle("active", tabName === "beats");
-  document.getElementById("psb-tab-curriculum").classList.toggle("active", tabName === "curriculum");
-  renderPlayerSidebar();
-}
-
-function renderPlayerSidebar() {
-  const { chap, lesson } = findLessonAndChap(state.activeLessonId);
-  const beats = getBeatsForLesson(lesson, chap);
-  const container = document.getElementById("psb-scroll-container");
-
-  document.getElementById("psb-chap-label").textContent = `${chap.code} · BÀI ${lesson.id}/24`;
-  document.getElementById("psb-lesson-title").textContent = `Bài ${lesson.id}: ${lesson.title}`;
-
-  // Nếu ở chế độ Cây Đa Cấp Gộp Chung ('tree') hoặc Tab 'curriculum'
-  if (state.sidebarMode === "tree" || state.sidebarTab === "curriculum") {
-    let html = "";
-    for (const ch of CHAPTERS_DATA) {
-      const isOpen = ch.id === state.activeChapId;
-      html += `
-        <div class="tree-chap-block ${isOpen ? 'open' : ''}">
-          <div class="tcb-header" onclick="this.parentElement.classList.toggle('open')">
-            <span>${ch.code}: ${ch.title}</span>
-            <span>▾</span>
-          </div>
-          <div class="tcb-lessons">
-            ${ch.lessons.map(ls => `
-              <div class="tcb-lesson-row ${ls.id === state.activeLessonId ? 'active' : ''}" onclick="selectLessonAndOpenPlayer(${ls.id})">
-                <span>${ls.done ? '✓' : '●'} Bài ${ls.id}: ${ls.title}</span>
-                <span style="font-size:11px;opacity:0.75;">${ls.dur}</span>
-              </div>
-              ${(state.sidebarMode === "tree" && ls.id === state.activeLessonId) ? `
-                <div style="padding-left:12px;display:flex;flex-direction:column;gap:4px;margin:4px 0;">
-                  ${beats.map(b => `
-                    <div class="tcb-lesson-row ${b.idx === state.activeBeatIdx ? 'active' : ''}" style="font-size:11.5px;padding:5px 8px;" onclick="selectBeat(${b.idx})">
-                      <span>${b.mode === 'theory' ? '📖' : '🖱️'} Phần ${b.idx + 1}: ${b.title}</span>
-                    </div>
-                  `).join("")}
-                </div>
-              ` : ''}
-            `).join("")}
-          </div>
-        </div>
-      `;
-    }
-    container.innerHTML = html;
-    return;
-  }
-
-  // Mặc định: Tab 'beats' (6 phần nhỏ trong bài đang học)
-  container.innerHTML = beats.map(b => `
-    <div class="beat-item ${b.idx === state.activeBeatIdx ? 'active' : ''} ${b.idx < state.activeBeatIdx ? 'done' : ''}" onclick="selectBeat(${b.idx})">
-      <div class="bi-top">
-        <span class="bi-badge ${b.mode}">${b.mode === 'theory' ? '📖 Slide Lý thuyết' : '🖱️ Thực hành mẫu'} · Phần ${b.idx + 1}/6</span>
-        <span class="bi-dur">${b.dur}</span>
-      </div>
-      <div class="bi-title">${b.title}</div>
-      <div class="bi-sub">
-        <span>${b.mode === 'theory' ? 'Mở dần 4 thẻ kiến thức' : 'Màn hình sạch 0 hộp thoại đè'}</span>
-        <span>${b.idx === state.activeBeatIdx ? 'Đang học ▸' : ''}</span>
-      </div>
-    </div>
-  `).join("");
-}
-
-function selectBeat(beatIdx) {
-  state.activeBeatIdx = Math.max(0, Math.min(5, beatIdx));
-  state.activeRevealIdx = 1;
-  renderPlayerAll();
+  openLessonAndBeat(nextId, 0);
 }
 
 function stepBeat(delta) {
   const next = state.activeBeatIdx + delta;
   if (next < 0) {
-    if (state.activeLessonId > 1) selectLessonAndOpenPlayer(state.activeLessonId - 1);
+    if (state.activeLessonId > 1) openLessonAndBeat(state.activeLessonId - 1, 0);
     return;
   }
   if (next > 5) {
-    if (state.activeLessonId < 24) selectLessonAndOpenPlayer(state.activeLessonId + 1);
+    if (state.activeLessonId < 24) openLessonAndBeat(state.activeLessonId + 1, 0);
     return;
   }
-  selectBeat(next);
+  openLessonAndBeat(state.activeLessonId, next);
 }
 
 function switchBeatByMode(targetMode) {
   const { chap, lesson } = findLessonAndChap(state.activeLessonId);
   const beats = getBeatsForLesson(lesson, chap);
   const found = beats.find(b => b.mode === targetMode);
-  if (found) selectBeat(found.idx);
+  if (found) openLessonAndBeat(state.activeLessonId, found.idx);
 }
 
 function stepRevealCard(delta) {
@@ -2482,17 +3109,11 @@ function renderStageAndSubtitles() {
   const beats = getBeatsForLesson(lesson, chap);
   const beat = beats[state.activeBeatIdx] || beats[0];
 
-  // Top Header Breadcrumb
   document.getElementById("top-chap-badge").textContent = `${chap.code}/6`;
   document.getElementById("top-lesson-title").textContent = `Bài ${lesson.id}: ${lesson.title}`;
   document.getElementById("btn-prev-lesson").disabled = (lesson.id <= 1);
   document.getElementById("btn-next-lesson").disabled = (lesson.id >= 24);
 
-  // Update Live Lab Chips
-  document.getElementById("chip-stage-theory").classList.toggle("active", beat.mode === "theory");
-  document.getElementById("chip-stage-sim").classList.toggle("active", beat.mode === "sim");
-
-  // Stage Top Context Bar
   const modePill = document.getElementById("stage-mode-pill");
   if (beat.mode === "theory") {
     modePill.className = "mode-indicator-pill theory";
@@ -2503,10 +3124,8 @@ function renderStageAndSubtitles() {
   }
   document.getElementById("stage-context-text").textContent = `Phần ${beat.idx + 1}/6: ${beat.title}`;
 
-  // Stepper Pills (Ý 1..4 cho Slide hoặc Pha 1..2 cho Sim)
   const stepperWrap = document.getElementById("progressive-stepper-pills");
   if (beat.mode === "theory") {
-    document.getElementById("stepper-label").textContent = "Mở dần từng thẻ (Progressive Reveal):";
     stepperWrap.innerHTML = [1, 2, 3, 4].map(i => `
       <button class="psp-btn ${i === state.activeRevealIdx ? 'active' : (i < state.activeRevealIdx ? 'visited' : '')}" onclick="setRevealCard(${i})">
         Ý ${i}/4
@@ -2514,14 +3133,12 @@ function renderStageAndSubtitles() {
     `).join("");
   } else {
     const simPhase = state.activeRevealIdx <= 2 ? state.activeRevealIdx : 2;
-    document.getElementById("stepper-label").textContent = "Vũ đạo chuột 2 Pha (Two-Stage Click):";
     stepperWrap.innerHTML = `
       <button class="psp-btn ${simPhase === 1 ? 'active' : 'visited'}" onclick="setRevealCard(1)">Pha 1: Di chuột & Click nút gốc</button>
       <button class="psp-btn ${simPhase === 2 ? 'active' : ''}" onclick="setRevealCard(2)">Pha 2: Mở Menu & Chọn lệnh</button>
     `;
   }
 
-  // Toggle Theory Stage vs Sim Stage
   const theoryEl = document.getElementById("kudo-theory-stage");
   const simEl = document.getElementById("kudo-sim-stage");
 
@@ -2532,8 +3149,7 @@ function renderStageAndSubtitles() {
     document.getElementById("slide-kicker").textContent = `${chap.code} · BÀI ${lesson.id} · PHẦN ${beat.idx + 1}/6`;
     document.getElementById("slide-title").textContent = beat.title;
 
-    const cardsGrid = document.getElementById("slide-cards-grid");
-    cardsGrid.innerHTML = beat.cards.map((c, idx) => {
+    document.getElementById("slide-cards-grid").innerHTML = beat.cards.map((c, idx) => {
       const order = idx + 1;
       let cls = "k-unreached";
       if (order === state.activeRevealIdx) cls = "k-hl";
@@ -2598,52 +3214,9 @@ function renderStageAndSubtitles() {
     document.getElementById("subtitle-line").textContent = subLine;
   }
 
-  // Update Scrubber progress
   const pct = Math.min(100, Math.round((state.activeRevealIdx / 4) * 100));
   document.getElementById("sub-scrubber-fill").style.width = pct + "%";
   document.getElementById("sub-time-badge").textContent = `00:0${state.activeRevealIdx * 5} / ${beat.dur}`;
-}
-
-function renderPlayerAll() {
-  renderPlayerSidebar();
-  renderStageAndSubtitles();
-}
-
-/* =========================================================================
-   MODAL TÌM KIẾM NHANH 6 CHƯƠNG · 24 BÀI (CTRL + K)
-   ========================================================================= */
-function toggleQuickModal(forceState) {
-  const modal = document.getElementById("quick-modal-backdrop");
-  const next = typeof forceState === "boolean" ? forceState : !modal.classList.contains("open");
-  modal.classList.toggle("open", next);
-  if (next) {
-    renderQuickModalList();
-    setTimeout(() => document.getElementById("quick-modal-input")?.focus(), 50);
-  }
-}
-
-function renderQuickModalList() {
-  const q = (document.getElementById("quick-modal-input")?.value || "").trim().toLowerCase();
-  const body = document.getElementById("quick-modal-body");
-  let html = "";
-  for (const ch of CHAPTERS_DATA) {
-    const matched = ch.lessons.filter(ls => !q || ls.title.toLowerCase().includes(q) || ls.desc.toLowerCase().includes(q));
-    if (!matched.length) continue;
-    html += `
-      <div>
-        <div style="font-size:11.5px;font-weight:800;color:var(--accent-dark);margin-bottom:6px;">${ch.code} — ${ch.title}</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-          ${matched.map(ls => `
-            <div class="tcb-lesson-row ${ls.id === state.activeLessonId ? 'active' : ''}" style="border:1px solid var(--border-main);" onclick="toggleQuickModal(false); selectLessonAndOpenPlayer(${ls.id});">
-              <span><strong>Bài ${ls.id}:</strong> ${ls.title}</span>
-              <span style="font-size:11px;">${ls.dur}</span>
-            </div>
-          `).join("")}
-        </div>
-      </div>
-    `;
-  }
-  body.innerHTML = html || `<div style="padding:20px;text-align:center;color:var(--text-muted);">Không tìm thấy bài học phù hợp.</div>`;
 }
 
 function toggleDemoPlay() {
@@ -2665,30 +3238,15 @@ function scrubTimeline(e) {
   setRevealCard(step);
 }
 
-function openRealCoursewareWindow() {
-  window.location.href = "../antigravity_studio_simulator/index.html";
-}
-
-// Auto-advance progressive reveal every 4.5s when playing so CEO can see live animation
 setInterval(() => {
   if (!state.isPlaying || state.view !== "player") return;
-  if (state.activeRevealIdx < 4) {
-    state.activeRevealIdx++;
-  } else {
-    state.activeRevealIdx = 1;
-  }
+  state.activeRevealIdx = state.activeRevealIdx < 4 ? state.activeRevealIdx + 1 : 1;
   renderStageAndSubtitles();
 }, 4200);
 
-// Keyboard shortcuts
 window.addEventListener("keydown", (e) => {
-  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
-    e.preventDefault();
-    toggleQuickModal();
-  } else if (e.key === "Escape") {
-    toggleQuickModal(false);
-  } else if (e.key === "[" && document.activeElement.tagName !== "INPUT") {
-    setSidebarMode(state.sidebarMode === "cinema" ? "tabs" : "cinema");
+  if (e.key === "[" && document.activeElement.tagName !== "INPUT") {
+    toggleSidebarCollapse();
   } else if (e.key === "ArrowRight" && document.activeElement.tagName !== "INPUT") {
     stepRevealCard(1);
   } else if (e.key === "ArrowLeft" && document.activeElement.tagName !== "INPUT") {
@@ -2696,9 +3254,9 @@ window.addEventListener("keydown", (e) => {
   }
 });
 
-// Khởi chạy lần đầu
-renderAllHubLayouts();
-renderPlayerAll();
+renderSplitHub();
+renderMultiLevelTreeSidebar();
+renderStageAndSubtitles();
 </script>
 </body>
 </html>

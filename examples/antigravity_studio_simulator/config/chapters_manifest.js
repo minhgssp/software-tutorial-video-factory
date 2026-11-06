@@ -16,28 +16,204 @@ window.KUDO_CHAPTERS_MANIFEST = [
         "title": "Tư duy Trợ lý AI trong Thư mục, 2 Giao diện & Cách Mở Dự án Đầu tiên",
         "meta": "7 phần · Thực hành tương tác",
         "filename": "lesson_01.html",
-        "ready": true
+        "ready": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Đối sánh Chat Web vs. Trợ lý AI trên máy",
+            "dur": "00:14",
+            "caption": "Chào mừng anh chị đến với khóa học <strong>Antigravity Basic</strong>. Nhìn vào khung đối sánh trên màn hình, khác biệt lớn nhất là thay vì tải tệp lên trình duyệt <strong>ChatGPT</strong> mỗi ngày, chúng ta đưa trợ lý AI vào làm việc trực tiếp ngay trong thư mục máy tính."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Giao diện Antigravity 2.0 trên màn hình",
+            "dur": "00:11",
+            "caption": "Trên màn hình là phần mềm thứ nhất mang tên <strong>Antigravity 2.0</strong>, trước đây gọi là <strong>Agent Manager</strong>. Giao diện được thiết kế thoáng đãng giúp anh chị khởi tạo hội thoại mới và điều phối nhiều đầu việc cùng lúc."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Quy tắc chọn 5 mô hình AI theo việc",
+            "dur": "00:16",
+            "caption": "Khi nhìn xuống góc dưới khung chat, anh chị thấy bảng chọn 5 mô hình AI. Ta dùng <strong>Gemini 3.8 Flash Medium</strong> cho việc nhẹ cần tốc độ, <strong>Gemini 4 Argon Medium</strong> làm mặc định hàng ngày, và chuyển sang <strong>Claude Sonnet 5.5</strong> hoặc <strong>Claude Opus 5.5</strong> khi lập kế hoạch sâu."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Chọn mô hình mặc định",
+            "dur": "00:11",
+            "caption": "Bây giờ chúng ta vào thực hành theo 3 bước. Trong bối cảnh bắt đầu ngày làm việc mới, <strong>Bước 1</strong> là anh chị bấm vào nút chọn mô hình ở đáy khung chat và xác nhận <strong>Gemini 4 Argon Medium</strong> đang được tích chọn."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Bấm nút Open IDE chuyển không gian",
+            "dur": "00:08",
+            "caption": "Sang <strong>Bước 2</strong>, khi cần soạn thảo hồ sơ và làm việc trực tiếp với thư mục máy tính, anh chị di chuột lên góc trên bên phải và bấm vào nút <strong>Open IDE</strong>."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất màn hình chào mừng Antigravity IDE",
+            "dur": "00:13",
+            "caption": "Ở <strong>Bước 3</strong>, cửa sổ <strong>Antigravity IDE</strong> hiện ra ở trạng thái màn hình chào mừng và đang chờ chúng ta mở thư mục dự án. Vậy làm sao để giải nén học liệu <code>.zip</code> và nạp thư mục vào đây an toàn? Chúng ta sang ngay <strong>Bài 2</strong>."
+          }
+        ]
       },
       {
         "code": "Bài 2",
         "title": "Đồng bộ Ổ cứng 1-1, Phòng tránh Lỗi Thao tác & Chọn 5 Mô hình AI",
         "meta": "7 phần · Thực hành tương tác",
         "filename": "lesson_02.html",
-        "ready": true
+        "ready": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: 3 nguyên tắc Giải nén, Open Folder & Đồng bộ",
+            "dur": "00:15",
+            "caption": "Trước khi nạp học liệu vào màn hình chào mừng của <strong>Antigravity IDE</strong>, anh chị cần nắm vững 3 nguyên tắc trên sơ đồ luồng: Một là phải giải nén tệp <code>.zip</code> bằng <strong>Extract All</strong>; hai là chỉ mở đúng thư mục dự án con; và ba là cơ chế đồng bộ 1-1 với ổ cứng."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Vì sao dùng Open Folder thay vì Open File",
+            "dur": "00:12",
+            "caption": "Nhìn vào trình đơn <strong>File</strong> trên màn hình <strong>Antigravity IDE</strong>, anh chị sẽ thấy hai dòng cạnh nhau. Chúng ta luôn dùng <strong>Open Folder</strong> để mở trọn vẹn thư mục dự án, tuyệt đối không dùng <strong>Open File</strong> mở lẻ tẻ từng tệp."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Cảnh báo khi lỡ tay kéo thả nhầm thư mục",
+            "dur": "00:11",
+            "caption": "Một lưu ý nữa khi thao tác chuột ở cột cây thư mục bên trái là tránh lỡ tay kéo nhầm thư mục này thả vào thư mục khác. Khi thấy bảng cảnh báo hiện ra như trên màn hình, anh chị nhớ bấm ngay nút <strong>Cancel</strong>."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Chọn thư mục đã giải nén",
+            "dur": "00:12",
+            "caption": "Giờ chúng ta thực hành 3 bước nạp học liệu. Ở <strong>Bước 1</strong>, sau khi đã giải nén tệp <code>.zip</code>, trong hộp thoại <strong>Open Folder</strong>, anh chị bấm chọn đúng thư mục <code>antigravity_course_vn</code> rồi nhấn nút <strong>Select folder</strong>."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Kiểm tra đồng bộ bằng Reveal in File Explorer",
+            "dur": "00:11",
+            "caption": "Sang <strong>Bước 2</strong>, toàn bộ cây thư mục dự án đã hiện ra ở cột trái! Để kiểm chứng vị trí tệp thật trên ổ cứng, anh chị nhấp chuột phải vào tệp <code>INDEX.md</code> và chọn dòng <strong>Reveal in File Explorer</strong>."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất lộ trình học trong INDEX.md",
+            "dur": "00:13",
+            "caption": "Ở <strong>Bước 3</strong>, anh chị bấm mở tệp <code>INDEX.md</code> để nghiệm thu toàn bộ lộ trình học tập đã hiển thị rõ ở cột giữa. Sau khi đã mở đúng thư mục, <strong>Bài 3</strong> sẽ giúp anh chị làm chủ hoàn toàn bố cục 3 cột và các phím tắt cứu hộ."
+          }
+        ]
       },
       {
         "code": "Bài 3",
         "title": "Làm chủ Giao diện 3 Cột, Mở Preview Chuột phải & Xử lý Khi AI Dừng chờ",
         "meta": "7 phần · Thực hành tương tác",
         "filename": "lesson_03.html",
-        "ready": true
+        "ready": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Giải phẫu 3 cột & 3 trạng thái AI dừng chờ",
+            "dur": "00:15",
+            "caption": "Khi đã mở thư mục dự án trong <strong>Antigravity IDE</strong>, anh chị chỉ cần nhìn nó như một bàn làm việc gồm 3 ngăn: Ngăn trái đựng hồ sơ, ngăn giữa để đọc tài liệu, và ngăn phải là trợ lý AI. Đồng thời, hãy nhớ 3 cách xử lý khi thấy AI dừng lại chờ lệnh."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Nhận diện nút Stop (■), Tiếp tục và Accept",
+            "dur": "00:12",
+            "caption": "Nhìn sang cột phải trên màn hình thực tế: Khi trợ lý muốn tạo tệp báo cáo mới, nó sẽ dừng lại và hiện nút <strong>Accept</strong> màu xanh. Nếu muốn hủy giữa chừng, anh chị bấm nút hình vuông <code>■</code>, còn nếu mạng ngắt quãng thì gõ chữ <code>Tiếp tục</code>."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Khôi phục nhanh cột trái bằng phím Ctrl + B",
+            "dur": "00:11",
+            "caption": "Rất nhiều anh chị khi đang làm việc vô tình bấm vào biểu tượng hai tệp giấy ở ngoài cùng bên trái khiến cột cây thư mục biến mất. Để lấy lại ngay lập tức, anh chị chỉ cần nhấn tổ hợp phím <kbd>Ctrl + B</kbd>."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Bật chế độ đọc Preview trực quan",
+            "dur": "00:12",
+            "caption": "Chúng ta vào thực hành 3 bước làm chủ giao diện. Giả sử tài liệu ở cột giữa đang hiện nhiều ký hiệu thô, ở <strong>Bước 1</strong>, anh chị bấm vào nút <strong>Preview / Office Viewer</strong> ở góc trên cột giữa để chuyển về giao diện trang giấy quen thuộc."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Gõ câu hỏi tiếng Việt vào khung chat khi quên thao tác",
+            "dur": "00:08",
+            "caption": "Sang <strong>Bước 2</strong>, khi quên bất kỳ thao tác nào trên phần mềm, anh chị hãy gõ câu hỏi bằng tiếng Việt vào ô nhập ở đáy cột phải rồi bấm nút Gửi."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất chỉ dẫn của AI & Chuẩn bị bật Turbo",
+            "dur": "00:14",
+            "caption": "Ở <strong>Bước 3</strong>, trợ lý AI lập tức chỉ dẫn rõ phím tắt <kbd>Ctrl + B</kbd> và nút <strong>Preview</strong> ngay trong khung chat. Vậy làm sao để trợ lý tự động thực thi trơn tru mà không bắt chúng ta bấm nút <strong>Accept</strong> ở từng bước nhỏ? Chúng ta sang ngay <strong>Bài 4</strong>."
+          }
+        ]
       },
       {
         "code": "Bài 4",
         "title": "Bật Quyền Tự chủ Turbo & Bài Thực hành Đầu tiên Với /start-1-1",
         "meta": "7 phần · Thực hành tương tác",
         "filename": "lesson_04.html",
-        "ready": true
+        "ready": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: 4 mức phân quyền & Bối cảnh TaskFlow",
+            "dur": "00:14",
+            "caption": "Ở Bài 3, anh chị đã thấy nếu để mặc định thì AI sẽ dừng lại hỏi xin phép ở từng bước. Lộ trình trên màn hình cho thấy khi làm việc với tài liệu văn phòng trong thư mục riêng, chúng ta nên bật quyền tự chủ <strong>Turbo</strong> để trợ lý chạy một mạch tới khi ra kết quả."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Vị trí cài đặt quyền Turbo trong Settings",
+            "dur": "00:11",
+            "caption": "Trên màn hình cài đặt <strong>Settings</strong> mục <strong>General</strong>, anh chị nhìn vào dòng <strong>This Computer</strong>. Khi chọn <strong>Turbo</strong>, trợ lý sẽ tự động đọc và tạo tệp báo cáo trong thư mục dự án mà không làm gián đoạn mạch làm việc."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Cách chọn lệnh gạch chéo (/) không bị lỗi lặp chữ",
+            "dur": "00:14",
+            "caption": "Khi quay lại <strong>Antigravity IDE</strong> và gõ dấu gạch chéo <code>/start</code>, một bảng gợi ý sẽ bật lên. Anh chị lưu ý kỹ thuật rất quan trọng: Hãy dùng chuột bấm chọn hoặc nhấn phím <kbd>Enter</kbd>, tuyệt đối không bấm phím cách để tránh lỗi nhân đôi tên lệnh."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Bật quyền Turbo trong Settings",
+            "dur": "00:09",
+            "caption": "Chúng ta bắt đầu bài thực hành tổng kết Chương 1. Ở <strong>Bước 1</strong>, anh chị mở <strong>Settings</strong>, vào thẻ <strong>General</strong> và bấm chuyển quyền <strong>This Computer</strong> sang <strong>Turbo</strong>."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Gõ /start và chọn chuẩn lệnh /start-1-1",
+            "dur": "00:09",
+            "caption": "Sang <strong>Bước 2</strong>, anh chị mở tệp <code>1.1_Welcome.md</code> của công ty giả lập <strong>TaskFlow</strong>, chọn lệnh <code>/start-1-1</code> vào ô chat và nhấn nút Gửi."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất AI giảng bài",
+            "dur": "00:14",
+            "caption": "Ở <strong>Bước 3</strong>, ngay lập tức trợ lý AI tự đọc tài liệu bài học và đóng vai giảng viên hướng dẫn anh chị thực hành từng bước. Chúc mừng anh chị đã hoàn thành <strong>Chương 1</strong>! Bây giờ chúng ta bước sang <strong>Chương 2 — Bài 5</strong> để làm chủ định dạng <code>.md</code> và <code>.csv</code>."
+          }
+        ]
       }
     ]
   },
@@ -58,28 +234,204 @@ window.KUDO_CHAPTERS_MANIFEST = [
         "title": "Định dạng Văn bản .md, Bảng Dữ liệu .csv & Tiện ích Office Viewer",
         "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_05.html",
-        "ready": true
+        "ready": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Đối sánh .md, .csv & tiện ích Office Viewer",
+            "dur": "00:15",
+            "caption": "Chào mừng anh chị bước vào <strong>Chương 2</strong>. Khung đối sánh trên màn hình giải thích vì sao khi làm việc với trợ lý AI, chúng ta ưu tiên dùng tệp văn bản <code>.md</code> và bảng số liệu <code>.csv</code>: Chúng cực nhẹ, chuẩn xác và hiển thị đẹp như Word, Excel nhờ tiện ích <strong>Office Viewer</strong>."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: So sánh chế độ Raw và Preview của tệp .md",
+            "dur": "00:13",
+            "caption": "Nhìn vào tệp <code>COMPANY.md</code> đang mở ở cột giữa: Khi bật <strong>Preview / Office Viewer</strong>, anh chị có thanh công cụ in đậm, in nghiêng, kẻ bảng y hệt như Google Docs. Còn khi bấm sang <strong>Raw</strong>, phần mềm sẽ hiện số thứ tự từng dòng."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Kho tiện ích Extensions và Office Viewer",
+            "dur": "00:11",
+            "caption": "Nếu máy tính mới cài đặt chưa có sẵn chế độ xem bảng đẹp, anh chị chỉ cần nhìn sang thanh biểu tượng ngoài cùng bên trái, bấm vào mục <strong>Extensions</strong> có hình bốn ô vuông và cài đặt tiện ích <strong>Office Viewer</strong>."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Kiểm tra tiện ích Office Viewer",
+            "dur": "00:11",
+            "caption": "Chúng ta vào thực hành 3 bước đọc hồ sơ và bảng số liệu. Trong bối cảnh phòng kinh doanh vừa gửi bảng doanh thu, ở <strong>Bước 1</strong>, anh chị bấm vào biểu tượng <strong>Extensions</strong> để xác nhận tiện ích <strong>Office Viewer</strong> đã sẵn sàng."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Mở và đọc bảng tính sales_data.csv trực quan",
+            "dur": "00:12",
+            "caption": "Sang <strong>Bước 2</strong>, anh chị quay lại cột cây thư mục <strong>Explorer</strong> và bấm vào tệp <code>sales_data.csv</code>. Ngay lập tức, toàn bộ dữ liệu doanh thu hiển thị thành bảng kẻ ô rõ nét mà không cần mở Excel."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Chuyển sang Raw xem số dòng",
+            "dur": "00:14",
+            "caption": "Ở <strong>Bước 3</strong>, anh chị mở tệp <code>COMPANY.md</code> và bấm thử nút <strong>Raw / Số dòng</strong> để thấy từng dòng văn bản được đánh số thứ tự. Vậy làm sao để chỉ định chính xác các tệp và dòng văn bản này cho AI xử lý? Chúng ta sang ngay <strong>Bài 6</strong>."
+          }
+        ]
       },
       {
         "code": "Bài 6",
         "title": "Đính kèm Tệp Bằng @, Giao việc Giọng nói (Ctrl+M) & Trích dẫn (Ctrl+L)",
         "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_06.html",
-        "ready": true
+        "ready": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Bộ ba kỹ năng @, Ctrl+M và Ctrl+L",
+            "dur": "00:13",
+            "caption": "Trong <strong>Bài 6</strong>, chúng ta làm chủ bộ ba kỹ năng giao việc nhanh và chuẩn xác nhất cho dân văn phòng: Dùng ký hiệu <code>@</code> để đính kèm tệp, dùng <kbd>Ctrl + M</kbd> để giao việc bằng giọng nói và dùng <kbd>Ctrl + L</kbd> để trích dẫn đúng dòng cần sửa."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Cơ chế gợi ý tệp tự động khi gõ ký hiệu @",
+            "dur": "00:15",
+            "caption": "Nhìn vào khung chat bên phải trên màn hình: Ngay khi anh chị gõ ký hiệu <code>@</code>, phần mềm sẽ liệt kê toàn bộ các tệp có trong thư mục như <code>@COMPANY.md</code> hay <code>@sales_data.csv</code> để anh chị bấm chọn mà không cần gõ tay tên tệp."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Cơ chế thu giọng nói (Ctrl+M) và trích dẫn (Ctrl+L)",
+            "dur": "00:12",
+            "caption": "Đặc biệt, khi đang đọc một tài liệu dài mà chỉ muốn AI viết lại đúng một câu, anh chị chỉ cần bôi đen câu đó. Nút <strong>Quote in Chat</strong> kèm phím tắt <kbd>Ctrl + L</kbd> sẽ hiện ra, tự động chèn đúng số dòng vào khung chat."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Đính kèm tệp @COMPANY.md",
+            "dur": "00:10",
+            "caption": "Chúng ta vào thực hành phối hợp cả 3 kỹ năng. Ở <strong>Bước 1</strong>, trong bối cảnh cần xử lý hồ sơ công ty, anh chị gõ dấu <code>@</code> vào ô chat và bấm chọn <code>@COMPANY.md</code>."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Bật thu âm giọng nói tiếng Việt (Ctrl+M)",
+            "dur": "00:11",
+            "caption": "Sang <strong>Bước 2</strong>, thay vì gõ bàn phím dài dòng, anh chị bấm vào biểu tượng Micro hoặc nhấn <kbd>Ctrl + M</kbd> để đọc yêu cầu bằng tiếng Việt. Thanh sóng âm sẽ chuyển lời nói thành văn bản ngay tức thì."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Bôi đen trích dẫn Ctrl+L",
+            "dur": "00:13",
+            "caption": "Ở <strong>Bước 3</strong>, anh chị bôi đen đoạn văn bản bên phải và nhấn <kbd>Ctrl + L</kbd> để gắn tọa độ dòng vào câu lệnh rồi bấm gửi. Khi đã thuần thục dấu <code>@</code>, chúng ta sang <strong>Bài 7</strong> để tạo hồ sơ cá nhân hóa <code>@troly.md</code>."
+          }
+        ]
       },
       {
         "code": "Bài 7",
         "title": "Xây dựng Hồ sơ Cá nhân hóa @troly.md Để AI Nhớ Phong cách Của Bạn",
         "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_07.html",
-        "ready": true
+        "ready": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Cấu trúc 4 phần của hồ sơ @troly.md",
+            "dur": "00:14",
+            "caption": "Tại sao nhiều người dùng AI thấy câu chữ cứ chung chung, máy móc? Vì trợ lý chưa biết bạn là ai! Trong <strong>Bài 7</strong>, chúng ta thiết lập tệp hồ sơ cá nhân <code>@troly.md</code> gồm 3 khối: Vai trò chủ nhân, Gu văn phong và Danh sách từ cấm kỵ."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Quan sát nội dung tệp @troly.md trong IDE",
+            "dur": "00:10",
+            "caption": "Nhìn vào tệp <code>troly.md</code> đang mở ở cột giữa trên màn hình: Anh chị không cần viết dài, chỉ cần gạch đầu dòng rõ chức vụ, đối tượng đọc báo cáo và quy tắc <em>luôn đưa kết luận lên câu đầu tiên</em>."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Sự khác biệt khi giao việc có đính kèm @troly.md",
+            "dur": "00:12",
+            "caption": "Khi giao việc ở cột phải, anh chị chỉ cần gõ <code>@troly.md</code> đi kèm với tệp dữ liệu như <code>@COMPANY.md</code>. Trợ lý sẽ lấy số liệu từ công ty nhưng viết ra bằng đúng giọng văn của riêng anh chị."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Cập nhật thông tin vào troly.md",
+            "dur": "00:10",
+            "caption": "Chúng ta vào thực hành 3 bước cá nhân hóa trợ lý. Ở <strong>Bước 1</strong>, anh chị bấm mở tệp <code>troly.md</code> ở cột trái và điền chức danh cùng nguyên tắc trình bày ngắn gọn của mình vào."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Gõ lệnh kết hợp @troly.md và @COMPANY.md",
+            "dur": "00:10",
+            "caption": "Sang <strong>Bước 2</strong>, tại ô chat bên phải, anh chị đính kèm <code>@troly.md</code> cùng <code>@COMPANY.md</code>, yêu cầu soạn thông báo Quý 2 rồi nhấn nút Gửi."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất văn bản chuẩn gu",
+            "dur": "00:14",
+            "caption": "Ở <strong>Bước 3</strong>, anh chị nhìn vào cột giữa: Tệp <code>thong_bao_q2.md</code> vừa được tạo ra có ngay phần Kết luận trực diện ở đầu và bảng phân công gọn gàng, không hề có một chữ sáo rỗng nào! Sang <strong>Bài 8</strong>, chúng ta sẽ học cách giữ trí nhớ dài hạn cho dự án."
+          }
+        ]
       },
       {
         "code": "Bài 8",
         "title": "Quản trị Trí nhớ Dự án Dài hạn & Sổ Bàn giao Giữa Các Phiên Chat",
         "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_08.html",
-        "ready": true
+        "ready": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Vòng đời 3 bước bảo toàn trí nhớ dự án",
+            "dur": "00:13",
+            "caption": "Một câu hỏi rất thực tế của dân văn phòng là: Hôm nay làm việc với AI xong, ngày mai mở phiên chat mới thì làm sao để AI nhớ hết các quyết định hôm qua? Quy trình 3 bước trên màn hình với tệp <code>ban_giao_cong_viec.md</code> chính là chìa khóa."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Nhận biết khi nào cần tạo phiên chat mới (+)",
+            "dur": "00:10",
+            "caption": "Nhìn vào cột phải trên màn hình: Khi một luồng trò chuyện đã kéo dài qua hàng chục bước, việc tiếp tục nhồi thêm yêu cầu mới sẽ làm trợ lý bị phân tán. Đó là lúc chúng ta cần chốt sổ bàn giao."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Cấu trúc chuẩn 3 phần của Sổ bàn giao công việc",
+            "dur": "00:11",
+            "caption": "Trên màn hình cột giữa là cấu trúc chuẩn của tệp <code>ban_giao_cong_viec.md</code> do chính AI tự ghi lại: Gồm các hạng mục đã hoàn thành, những con số đã chốt và danh sách việc cần làm tiếp theo."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Ra lệnh cho AI tự ghi Sổ bàn giao",
+            "dur": "00:10",
+            "caption": "Chúng ta thực hành 3 bước bàn giao giữa các ca làm việc. Ở <strong>Bước 1</strong>, trước khi nghỉ chiều, anh chị gõ lệnh yêu cầu trợ lý tổng hợp tiến độ hôm nay vào tệp <code>ban_giao_cong_viec.md</code>."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Mở phiên chat mới và đính kèm @ban_giao_cong_viec.md",
+            "dur": "00:10",
+            "caption": "Sang <strong>Bước 2</strong>, sáng hôm sau khi mở phiên chat mới tinh, anh chị chỉ mất 5 giây gõ <code>@ban_giao_cong_viec.md</code> và bảo trợ lý làm tiếp mục đang dang dở."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất AI nối mạch hoàn hảo",
+            "dur": "00:14",
+            "caption": "Ở <strong>Bước 3</strong>, anh chị thấy trợ lý nhắc lại chính xác chỉ tiêu 30% đã chốt hôm qua và bắt tay làm ngay việc tiếp theo. Vậy làm sao để AI tự động tuân thủ nội quy mà không cần ta gõ <code>@troly.md</code> mỗi lần? Chào mừng anh chị sang <strong>Chương 3 — Bài 9</strong>!"
+          }
+        ]
       }
     ]
   },
@@ -100,28 +452,204 @@ window.KUDO_CHAPTERS_MANIFEST = [
         "title": "Tư duy Quản trị Đầu ra & Kiến trúc Bộ não .agent (Rules, Skills, Workflows)",
         "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_09.html",
-        "ready": true
+        "ready": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Ẩn dụ Căn bếp: Rules, Skills và Workflows",
+            "dur": "00:15",
+            "caption": "Chào mừng anh chị đến với <strong>Chương 3</strong> — trái tim của khóa học. Hãy hình dung thư mục <code>.agent</code> giống như một căn bếp nhà hàng 5 sao gồm 3 ngăn: <strong>Rules</strong> là nội quy vệ sinh luôn phải tuân thủ, <strong>Skills</strong> là sổ công thức nấu từng món, và <strong>Workflows</strong> là thực đơn bấm nút chạy tự động."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Đối chiếu khung chat và tệp sản phẩm đầu ra",
+            "dur": "00:12",
+            "caption": "Trên màn hình làm việc thực tế, anh chị cần thay đổi một thói quen cốt lõi: Khung chat bên phải chỉ là nơi trao đổi ngắn gọn, còn sản phẩm cuối cùng bắt buộc phải xuất thành tệp trong cây thư mục và hiển thị ở cột giữa để nghiệm thu."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Khám phá thư mục .agent trên cây Explorer",
+            "dur": "00:11",
+            "caption": "Nhìn sang cột cây thư mục bên trái, ngay dưới dòng <code>.agent</code>, anh chị sẽ thấy tệp <code>start-1-1.md</code>. Chính tệp văn bản này đã tạo ra lệnh <code>/start-1-1</code> mà anh chị bấm chạy ở cuối Chương 1!"
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Mở kiểm tra tệp workflow mẫu",
+            "dur": "00:10",
+            "caption": "Chúng ta vào thực hành 3 bước khám phá bộ não <code>.agent</code>. Ở <strong>Bước 1</strong>, anh chị nhìn sang cột trái và bấm mở tệp <code>start-1-1.md</code> để xem bên trong một quy trình tự động viết gì."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Gõ dấu / để đối chiếu tệp với danh sách lệnh",
+            "dur": "00:12",
+            "caption": "Sang <strong>Bước 2</strong>, anh chị bấm vào biểu tượng dấu gạch chéo <code>/</code> ở khung chat phải. Anh chị sẽ thấy các lệnh như <code>/plan</code> hay <code>/grill-me</code> hiện ra, tương ứng 1-1 với các tệp trong thư mục <code>.agent</code>."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hỏi AI kiểm tra cấu trúc .agent",
+            "dur": "00:11",
+            "caption": "Ở <strong>Bước 3</strong>, trợ lý AI đã liệt kê rõ ràng cả 3 ngăn <strong>Rules</strong>, <strong>Skills</strong> và <strong>Workflows</strong> trong dự án của chúng ta. Bây giờ, chúng ta bước sang <strong>Bài 10</strong> để tự tay viết Nội quy và Kỹ năng cho phòng ban của mình!"
+          }
+        ]
       },
       {
         "code": "Bài 10",
         "title": "Thiết lập Nội quy Tự động (.agent/rules) & Sổ tay Kỹ năng (.agent/skills)",
         "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_10.html",
-        "ready": true
+        "ready": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Phân biệt Rules (Luôn bật) và Skills (Theo việc)",
+            "dur": "00:14",
+            "caption": "Trong <strong>Bài 10</strong>, chúng ta giải quyết câu hỏi: Cái gì nên đặt vào <strong>Rules</strong> và cái gì nên đặt vào <strong>Skills</strong>? Nguyên tắc rất dễ nhớ: Những quy định ngắn gọn mà câu lệnh nào cũng phải tuân theo thì đặt vào <code>rules/</code>; còn hướng dẫn chuyên môn dài thì đóng gói vào <code>skills/</code>."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Giải phẫu một tệp Nội quy trong .agent/rules/",
+            "dur": "00:15",
+            "caption": "Nhìn vào cột giữa trên màn hình là tệp <code>.agent/rules/quy_chuan_van_phong.md</code>. Nhờ đặt tệp này trong ngăn <code>rules</code>, từ nay anh chị không cần gõ <code>@troly.md</code> nữa mà trợ lý vẫn tự động áp dụng chuẩn ngày tháng và tiền tệ Việt Nam."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Giải phẫu một tệp Kỹ năng trong .agent/skills/",
+            "dur": "00:15",
+            "caption": "Còn đây là tệp <code>SKILL.md</code> nằm trong ngăn <code>.agent/skills/bao-cao-tuan/</code>. Anh chị chú ý phần khung màu cam ở đầu tệp có dòng <code>description</code>: Đây chính là nhãn tên trên gáy sách giúp trợ lý biết khi nào cần rút cuốn kỹ năng này ra dùng."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Yêu cầu AI chuyển @troly.md thành Rule",
+            "dur": "00:09",
+            "caption": "Chúng ta vào thực hành 3 bước tạo Rules và Skills mà không cần tự gõ mã kỹ thuật. Ở <strong>Bước 1</strong>, anh chị chọn tệp <code>troly.md</code> mà chúng ta đã làm ở Chương 2."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Giao lệnh cho AI tự tạo Rule và Skill chuẩn",
+            "dur": "00:13",
+            "caption": "Sang <strong>Bước 2</strong>, điều tuyệt vời nhất của <strong>Antigravity IDE</strong> là anh chị không phải tự tạo thư mục bằng tay: Hãy gõ lệnh bảo trợ lý chuyển quy tắc chung vào <code>.agent/rules/</code> và tạo kỹ năng báo cáo tuần trong <code>.agent/skills/</code>."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất AI tự kích hoạt Rule & Skill mới",
+            "dur": "00:14",
+            "caption": "Ở <strong>Bước 3</strong>, khi anh chị chỉ gõ một câu ngắn gọn <em>Hãy lập báo cáo tuần</em>, hệ thống tự động nạp ngầm cả Nội quy lẫn Kỹ năng chuyên môn để xuất ra báo cáo chuẩn chỉnh. Tiếp theo, ở <strong>Bài 11</strong>, chúng ta sẽ ghép nhiều bước thành một lệnh gạch chéo <code>/</code>."
+          }
+        ]
       },
       {
         "code": "Bài 11",
         "title": "Đóng gói Quy trình Lặp lại Thành Lệnh Gạch chéo (.agent/workflows)",
         "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_11.html",
-        "ready": true
+        "ready": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Sơ đồ 4 bước đóng gói lệnh /workflow",
+            "dur": "00:15",
+            "caption": "Mỗi sáng thứ Hai, anh chị có những việc nào phải làm lặp đi lặp lại không? Trong <strong>Bài 11</strong>, sơ đồ trên màn hình chỉ ra cách đóng gói chuỗi việc đó thành một tệp trong <code>.agent/workflows/</code> để chỉ cần gõ một dấu gạch chéo là trợ lý tự chạy từ đầu đến cuối."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Quan sát cấu trúc tệp workflow trong IDE",
+            "dur": "00:12",
+            "caption": "Nhìn vào cột giữa trên màn hình: Một tệp <code>workflow</code> thực chất không có mã lập trình phức tạp nào cả. Nó chỉ là một văn bản tiếng Việt chia rõ Bước 1 đọc tệp gì, Bước 2 phân tích sao và Bước 3 lưu kết quả vào đâu."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Cơ chế hiển thị lệnh mới trong bảng gạch chéo (/)",
+            "dur": "00:11",
+            "caption": "Ngay khi tệp quy trình được lưu vào thư mục <code>.agent/workflows/</code>, anh chị không cần khởi động lại phần mềm. Chỉ cần gõ dấu gạch chéo <code>/</code> ở ô chat là tên lệnh mới đã sẵn sàng để bấm chạy."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Yêu cầu AI tạo workflow /tong-hop-tuan",
+            "dur": "00:12",
+            "caption": "Chúng ta vào thực hành 3 bước đóng gói quy trình tự động. Ở <strong>Bước 1</strong>, anh chị gõ vào ô chat yêu cầu trợ lý tạo tệp <code>.agent/workflows/tong-hop-tuan.md</code> gồm 3 bước xử lý doanh thu sáng thứ Hai."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Kiểm tra tệp workflow vừa tạo và gõ /tong-hop-tuan",
+            "dur": "00:10",
+            "caption": "Sang <strong>Bước 2</strong>, sau khi tệp kịch bản <code>tong-hop-tuan.md</code> hiện lên ở cột giữa, anh chị chỉ cần gõ đúng một lệnh ngắn gọn <code>/tong-hop-tuan</code> vào ô chat và nhấn Gửi."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất dây chuyền tự chạy 3 bước",
+            "dur": "00:16",
+            "caption": "Ở <strong>Bước 3</strong>, chỉ sau một cú nhấn <kbd>Enter</kbd>, trợ lý đã tự động chạy hết cả 3 bước và xuất ra tệp <code>bao_cao_thu_hai.md</code> hoàn chỉnh. Vậy với những dự án mới hoàn toàn chưa có quy trình sẵn thì sao? Chúng ta sang ngay <strong>Bài 12</strong> với bộ ba lệnh <code>/grill-me</code>, <code>/plan</code> và <code>/learn</code>."
+          }
+        ]
       },
       {
         "code": "Bài 12",
         "title": "Chu trình 3 Lệnh Vàng: /grill-me (Phỏng vấn), /plan (Lập kế hoạch) & /learn (Đúc kết)",
         "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_12.html",
-        "ready": true
+        "ready": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Chu trình 3 lệnh vàng: /grill-me, /plan, /learn",
+            "dur": "00:16",
+            "caption": "Trong bài cuối cùng của <strong>Chương 3 — Bài 12</strong>, chúng ta làm chủ chu trình 3 lệnh vàng giúp giải quyết mọi đề bài khó: Dùng <code>/grill-me</code> để trợ lý phỏng vấn làm rõ yêu cầu, dùng <code>/plan</code> để chốt khung kế hoạch, và dùng <code>/learn</code> để trợ lý tự ghi nhớ bài học vào bộ não <code>.agent</code>."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Cách chọn lệnh /grill-me và /plan trong khung chat",
+            "dur": "00:09",
+            "caption": "Nhìn vào bảng lệnh gạch chéo trên màn hình: Thay vì ra lệnh viết ngay, khi bắt đầu một đề án mới cho công ty, anh chị hãy chọn lệnh <code>/grill-me</code> để kích hoạt chế độ phỏng vấn ngược."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Cơ chế lệnh /learn tự động cập nhật .agent/rules/",
+            "dur": "00:12",
+            "caption": "Và đặc biệt nhất là lệnh <code>/learn</code> trên màn hình: Mỗi khi anh chị nhắc nhở trợ lý điều gì, chỉ cần gõ <code>/learn</code> là trợ lý tự động mở tệp trong <code>.agent/rules/</code> ra ghi thêm quy tắc mới để không bao giờ quên."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Chạy /grill-me cho đề án Đại lý B2B TaskFlow",
+            "dur": "00:13",
+            "caption": "Chúng ta vào thực hành 3 bước với đề án mở rộng đại lý B2B cho công ty <strong>TaskFlow</strong>. Ở <strong>Bước 1</strong>, khi anh chị gõ <code>/grill-me</code>, trợ lý lập tức hỏi ngược 3 câu về đối tượng đại lý, mức chiết khấu và chỉ tiêu số lượng."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Gõ /plan để xuất bản kế hoạch ke_hoach_mo_rong_b2b_q2.md",
+            "dur": "00:14",
+            "caption": "Sang <strong>Bước 2</strong>, sau khi trả lời xong 3 câu hỏi, anh chị gõ lệnh <code>/plan</code>. Ngay lập tức bản kế hoạch 10 đại lý IT với mức chiết khấu 25% được xuất ra tệp <code>ke_hoach_mo_rong_b2b_q2.md</code> sát thực tế 100%."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Chạy /learn đúc kết bài học",
+            "dur": "00:14",
+            "caption": "Ở <strong>Bước 3</strong>, anh chị gõ lệnh <code>/learn</code> để trợ lý ghi nhớ luôn quy chuẩn chiết khấu đại lý vào bộ não <code>.agent</code>. Chúc mừng anh chị đã hoàn thành <strong>Chương 3</strong>! Bây giờ chúng ta bước sang <strong>Chương 4 — Bài 13</strong> để xử lý kho tài liệu lớn và bảng tính dữ liệu."
+          }
+        ]
       }
     ]
   },
@@ -142,28 +670,204 @@ window.KUDO_CHAPTERS_MANIFEST = [
         "title": "Bóc tách Kho Tài liệu Lớn & Tóm tắt Đa tầng Không Tràn Bộ nhớ",
         "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_13.html",
-        "ready": true
+        "ready": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Quy trình 3 tầng bóc tách kho tài liệu lớn",
+            "dur": "00:15",
+            "caption": "Chào mừng anh chị bước vào <strong>Chương 4</strong>. Khi phải xử lý hàng chục biên bản họp hay báo cáo dài hàng trăm trang, nếu anh chị đính kèm tất cả vào một câu lệnh thì AI sẽ đọc lướt rất sơ sài. Sơ đồ 3 tầng trên màn hình giúp chúng ta bóc tách sâu mà không sót một chi tiết nào."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Quan sát kho hồ sơ nhiều tệp trên cây thư mục",
+            "dur": "00:11",
+            "caption": "Nhìn vào cây thư mục bên trái trên màn hình: Khi nhận bàn giao một thư mục dự án có hàng chục tệp như thế này, bước đầu tiên không phải là mở đọc mò từng tệp, mà là bảo trợ lý lập bản đồ tổng quan."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Kỹ thuật gắn trích dẫn nguồn [Tên_tệp#Dòng] khi tóm tắt",
+            "dur": "00:12",
+            "caption": "Trên màn hình cột giữa là chuẩn mực của một bản tóm tắt chuyên nghiệp: Cuối mỗi gạch đầu dòng đều ghi rõ <code>[Nguồn: @COMPANY.md]</code> kèm số dòng để khi sếp hỏi con số này lấy ở đâu, anh chị chỉ ra được ngay lập tức."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Yêu cầu AI quét danh mục hồ sơ",
+            "dur": "00:11",
+            "caption": "Chúng ta vào thực hành 3 bước bóc tách hồ sơ phục vụ họp Hội đồng Quản trị. Ở <strong>Bước 1</strong>, anh chị bấm vào tệp <code>INDEX.md</code> ở cột trái để xác định các cụm tài liệu cần tổng hợp."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Giao lệnh tóm tắt 2 tầng kèm bắt buộc dẫn nguồn",
+            "dur": "00:08",
+            "caption": "Sang <strong>Bước 2</strong>, anh chị đính kèm cụm tệp hồ sơ vào ô chat, yêu cầu trợ lý bóc tách thành 3 mục kèm trích dẫn nguồn chính xác rồi nhấn nút Gửi."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất tệp tom_tat_hdqt.md",
+            "dur": "00:13",
+            "caption": "Ở <strong>Bước 3</strong>, bản tóm tắt trình Hội đồng Quản trị đã hiện ra ở cột giữa với đầy đủ trích dẫn nguồn cho từng con số. Sau khi xử lý xong phần văn bản, chúng ta bước sang <strong>Bài 14</strong> để phân tích bảng số liệu doanh thu <code>sales_data.csv</code>!"
+          }
+        ]
       },
       {
         "code": "Bài 14",
         "title": "Phân tích Bảng tính CSV, Làm sạch Dữ liệu & Trích xuất Insight Kinh doanh",
         "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_14.html",
-        "ready": true
+        "ready": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Quy trình 3 bước Làm sạch, Nhóm gộp & Tìm Insight",
+            "dur": "00:15",
+            "caption": "Trong <strong>Bài 14</strong>, chúng ta biến trợ lý AI thành chuyên viên phân tích dữ liệu kinh doanh. Thay vì phải vật lộn với các hàm bảng tính phức tạp, quy trình 3 bước trên màn hình giúp anh chị làm sạch bảng <code>.csv</code>, nhóm gộp theo từng khu vực và rút ra khuyến nghị hành động ngay lập tức."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Quan sát bảng dữ liệu gốc sales_data.csv trong IDE",
+            "dur": "00:14",
+            "caption": "Nhìn vào bảng <code>sales_data.csv</code> đang mở ở cột giữa: Chúng ta có đầy đủ các cột từ Tháng, Khu vực, Gói dịch vụ cho tới Doanh thu và Tỷ lệ rời bỏ. Việc của chúng ta là giao cho trợ lý kiểm tra độ sạch và tính toán bảng tổng hợp."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Cách viết câu lệnh phân tích số liệu không sai sót",
+            "dur": "00:11",
+            "caption": "Khi viết câu lệnh phân tích ở cột phải, anh chị hãy chia rõ làm 3 ý nhỏ: Một là kiểm tra dữ liệu lỗi, hai là lập bảng có dòng tổng cộng để đối chiếu, và ba là đề xuất hành động cụ thể dựa trên mục tiêu công ty."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Mở kiểm tra bảng sales_data.csv",
+            "dur": "00:08",
+            "caption": "Chúng ta bắt đầu thực hành 3 bước phân tích dữ liệu Quý 1. Ở <strong>Bước 1</strong>, anh chị bấm mở tệp <code>sales_data.csv</code> trên cây thư mục bên trái."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Gửi lệnh phân tích kết hợp @sales_data.csv và @COMPANY.md",
+            "dur": "00:12",
+            "caption": "Sang <strong>Bước 2</strong>, anh chị đính kèm <code>@sales_data.csv</code> và <code>@COMPANY.md</code> vào ô chat, yêu cầu xuất báo cáo ra tệp <code>bao_cao_doanh_thu_q1.md</code> rồi bấm nút Gửi."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất bao_cao_doanh_thu_q1.md",
+            "dur": "00:14",
+            "caption": "Ở <strong>Bước 3</strong>, tệp <code>bao_cao_doanh_thu_q1.md</code> đã hiện ra với bảng số liệu tổng hợp rõ ràng và chỉ ra ngay nguyên nhân khách hàng nhỏ rời bỏ ở tuần đầu tiên. Tiếp theo, ở <strong>Bài 15</strong>, chúng ta sẽ học cách điều phối nhiều trợ lý AI chạy song song cùng lúc!"
+          }
+        ]
       },
       {
         "code": "Bài 15",
         "title": "Phối hợp Nhiều Luồng Công việc Song song Cho Dự án Lớn",
         "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_15.html",
-        "ready": true
+        "ready": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Mô hình điều phối 3 nhánh Trợ lý AI song song",
+            "dur": "00:14",
+            "caption": "Khi cần chuẩn bị gấp một bộ đề án lớn gồm cả Tài chính, Nhân sự và Thị trường, nếu chờ một trợ lý làm lần lượt từng phần thì rất mất thời gian. Trong <strong>Bài 15</strong>, sơ đồ trên màn hình chỉ ra cách phân công 3 nhánh trợ lý chạy song song và ghi ra 3 tệp độc lập."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Quan sát các luồng tác vụ (Threads) trên Antigravity 2.0",
+            "dur": "00:12",
+            "caption": "Nhìn vào cột bên trái của <strong>Antigravity 2.0</strong> trên màn hình: Anh chị có thể mở nhiều luồng hội thoại cùng lúc. Trong khi luồng số 1 đang phân tích doanh thu, chúng ta bấm sang luồng số 2 để giao tiếp việc rà soát nhân sự."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Cách chia tệp đích riêng biệt trong IDE để tránh ghi đè",
+            "dur": "00:11",
+            "caption": "Bảng điều phối ở cột giữa cho thấy nguyên tắc vàng khi chạy nhiều luồng song song: Cả 3 nhánh có thể cùng đọc tệp <code>@COMPANY.md</code>, nhưng khi xuất kết quả thì mỗi nhánh phải ghi vào một tệp có tên riêng biệt."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Kích hoạt luồng công việc song song",
+            "dur": "00:11",
+            "caption": "Chúng ta vào thực hành 3 bước phối hợp nhiều luồng công việc. Ở <strong>Bước 1</strong>, anh chị bấm chọn luồng công việc thứ hai ở cột trái để giao nhiệm vụ rà soát nhân sự và đối thủ song song với luồng phân tích doanh thu."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Ra lệnh hợp nhất kết quả từ 3 tệp thành phần",
+            "dur": "00:09",
+            "caption": "Sang <strong>Bước 2</strong>, khi cả 3 nhánh đều đã báo hoàn thành, anh chị quay về khung chat, đính kèm cả 3 tệp kết quả vừa sinh ra và yêu cầu hợp nhất thành bản đề án tổng thể."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất Đề án Tổng thể",
+            "dur": "00:14",
+            "caption": "Ở <strong>Bước 3</strong>, bản <code>de_an_tong_the_q2.md</code> đã hiện ra đầy đủ cả 3 mảng Tài chính, Nhân sự và Thị trường chỉ trong vài phút. Vậy làm sao để gửi các tệp báo cáo này lên đám mây cho cả phòng cùng làm việc? Chúng ta sang ngay <strong>Bài 16</strong>."
+          }
+        ]
       },
       {
         "code": "Bài 16",
         "title": "Đồng bộ Tài liệu Nhóm Qua GitHub & Sao lưu Google Drive Tự động",
         "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_16.html",
-        "ready": true
+        "ready": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Quy trình 3 bước lưu lịch sử GitHub & đồng bộ Drive",
+            "dur": "00:15",
+            "caption": "Trong bài cuối cùng của <strong>Chương 4 — Bài 16</strong>, chúng ta giải quyết triệt để nỗi khổ gửi tệp qua lại với đủ thứ tên <em>Final_v1, Final_v2</em>. Quy trình 3 bước trên màn hình giúp anh chị dùng tiếng Việt bảo trợ lý đóng dấu phiên bản lên <strong>GitHub</strong> và sao lưu thẳng lên <strong>Google Drive</strong>."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Quan sát trạng thái các tệp mới tạo trước khi đồng bộ",
+            "dur": "00:12",
+            "caption": "Nhìn vào cột giữa trên màn hình: Sau khi hoàn thành báo cáo doanh thu Quý 1 ở Bài 14 và đề án tổng thể ở Bài 15, trợ lý sẽ giúp chúng ta kiểm kê toàn bộ các tệp mới phát sinh để chuẩn bị đẩy lên kho chung."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Giao việc đồng bộ bằng tiếng Việt thay vì gõ lệnh Terminal",
+            "dur": "00:13",
+            "caption": "Anh chị nhìn xuống khung nhỏ phía dưới màn hình: Dân văn phòng không cần tự gõ bất kỳ dòng lệnh kỹ thuật nào. Khi anh chị yêu cầu bằng tiếng Việt ở khung chat, chính trợ lý AI sẽ tự chạy lệnh đóng dấu phiên bản và tải tệp lên <strong>Google Drive</strong>."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Kiểm tra tệp bao_cao_doanh_thu_q1.md",
+            "dur": "00:10",
+            "caption": "Chúng ta vào thực hành 3 bước đồng bộ tài liệu nhóm. Ở <strong>Bước 1</strong>, anh chị mở kiểm tra lại tệp <code>bao_cao_doanh_thu_q1.md</code> ở cột giữa trước khi xuất bản cho toàn công ty."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Gõ lệnh yêu cầu AI lưu phiên bản và đẩy lên Drive",
+            "dur": "00:10",
+            "caption": "Sang <strong>Bước 2</strong>, tại ô chat bên phải, anh chị đính kèm <code>@bao_cao_doanh_thu_q1.md</code>, yêu cầu lưu mốc lịch sử kèm ghi chú rõ ràng và đẩy lên thư mục <strong>Google Drive</strong> rồi nhấn Gửi."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất liên kết đồng bộ",
+            "dur": "00:15",
+            "caption": "Ở <strong>Bước 3</strong>, trợ lý báo cáo đã đóng dấu phiên bản và trả về đúng vị trí tệp trên <strong>Google Drive</strong>. Chúc mừng anh chị đã hoàn thành <strong>Chương 4</strong>! Bây giờ chúng ta bước sang <strong>Chương 5 — Bài 17</strong> để biến dữ liệu khô khan thành các ấn phẩm truyền thông, hình ảnh và slide thuyết trình."
+          }
+        ]
       }
     ]
   },
@@ -184,28 +888,204 @@ window.KUDO_CHAPTERS_MANIFEST = [
         "title": "Khởi tạo Trung tâm Nội dung Đa kênh & Quản lý Giọng văn Thương hiệu",
         "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_17.html",
-        "ready": true
+        "ready": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: 3 trụ cột của Cẩm nang Giọng văn Thương hiệu",
+            "dur": "00:15",
+            "caption": "Chào mừng anh chị bước vào <strong>Chương 5</strong> — nơi chúng ta ứng dụng AI vào truyền thông, thiết kế hình ảnh và làm báo cáo trực quan. Để bài viết không bao giờ mang mùi văn mẫu máy móc, <strong>Bài 17</strong> bắt đầu bằng việc thiết lập tệp Cẩm nang Thương hiệu <code>brand_voice.md</code> với 3 trụ cột trên màn hình."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Quan sát cấu trúc tệp brand_voice.md trong IDE",
+            "dur": "00:12",
+            "caption": "Nhìn vào tệp <code>brand_voice.md</code> ở cột giữa trên màn hình: Bí quyết hay nhất để AI bắt trúng giọng văn thương hiệu là anh chị hãy đặt hai câu ví dụ cạnh nhau — một câu chung chung bị cấm và một câu cụ thể được khuyến khích."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Cách AI rút trích bài viết mẫu để tự lập Brand Voice",
+            "dur": "00:13",
+            "caption": "Nếu doanh nghiệp của anh chị chưa từng viết cẩm nang thương hiệu thì cũng đừng lo: Chỉ cần đính kèm hồ sơ <code>@COMPANY.md</code> hoặc vài bài viết cũ mà sếp tâm đắc nhất, trợ lý AI sẽ tự phân tích và lập ra tệp <code>brand_voice.md</code>."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Mở hồ sơ gốc để trích xuất thương hiệu",
+            "dur": "00:09",
+            "caption": "Chúng ta vào thực hành 3 bước xây dựng trung tâm nội dung. Ở <strong>Bước 1</strong>, anh chị mở tệp <code>COMPANY.md</code> ở cột trái để lấy thông số cốt lõi cho chiến dịch truyền thông Quý 2."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Ra lệnh khởi tạo tệp brand_voice.md chuẩn B2B",
+            "dur": "00:10",
+            "caption": "Sang <strong>Bước 2</strong>, anh chị đính kèm <code>@COMPANY.md</code> và <code>@bao_cao_doanh_thu_q1.md</code> vào ô chat, yêu cầu tạo tệp <code>brand_voice.md</code> rồi nhấn nút Gửi."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất brand_voice.md",
+            "dur": "00:13",
+            "caption": "Ở <strong>Bước 3</strong>, tệp <code>brand_voice.md</code> đã hiện ra với đầy đủ thông điệp chủ đạo, số liệu bảo chứng thực tế và quy tắc kiểm duyệt. Bây giờ chúng ta bước sang <strong>Bài 18</strong> để sản xuất hàng loạt bài viết và chuỗi email từ cẩm nang này!"
+          }
+        ]
       },
       {
         "code": "Bài 18",
         "title": "Tự động hóa Sản xuất Bài viết, Email Chuỗi & Kiểm duyệt Chất lượng",
         "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_18.html",
-        "ready": true
+        "ready": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Dây chuyền 3 chặng sản xuất & kiểm duyệt nội dung",
+            "dur": "00:14",
+            "caption": "Trong <strong>Bài 18</strong>, chúng ta vận hành một tòa soạn thu nhỏ ngay trong <strong>Antigravity IDE</strong>. Sơ đồ 3 chặng trên màn hình giúp anh chị từ một tài liệu gốc chuyển hóa ra bài đăng Website, bài mạng xã hội và chuỗi Email, đồng thời bắt trợ lý đóng vai Tổng biên tập tự gọt giũa câu chữ."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Kỹ thuật ra lệnh 'Viết nháp + Tự biên tập' trong 1 bước",
+            "dur": "00:13",
+            "caption": "Nhìn vào cột giữa trên màn hình: Khi chúng ta yêu cầu trợ lý lập một <strong>Bảng tự kiểm duyệt 3 tiêu chí</strong> ngay bên dưới bài viết, chất lượng câu chữ tăng lên rõ rệt vì trợ lý buộc phải tự rà soát lại từng câu so với tệp <code>@brand_voice.md</code>."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Cấu trúc chuyển hóa 1 nội dung sang 3 định dạng kênh",
+            "dur": "00:11",
+            "caption": "Trên màn hình là hai khung văn bản song song: Cùng xuất phát từ một thông điệp cốt lõi nhưng bài đăng <strong>LinkedIn</strong> được viết giàu tính gợi mở, trong khi bức <strong>Email</strong> gửi Giám đốc lại đi thẳng vào giải pháp và quà tặng thực tế."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Chọn tệp @brand_voice.md",
+            "dur": "00:08",
+            "caption": "Chúng ta vào thực hành 3 bước sản xuất nội dung tự động. Ở <strong>Bước 1</strong>, anh chị kiểm tra tệp <code>brand_voice.md</code> đang mở ở cột giữa."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Gửi lệnh sản xuất 3 kênh kèm bước tự kiểm duyệt",
+            "dur": "00:10",
+            "caption": "Sang <strong>Bước 2</strong>, anh chị đính kèm <code>@brand_voice.md</code> cùng <code>@de_an_tong_the_q2.md</code>, yêu cầu soạn trọn bộ 3 kênh kèm bảng tự kiểm duyệt rồi bấm nút Gửi."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất bộ nội dung sạch lỗi",
+            "dur": "00:14",
+            "caption": "Ở <strong>Bước 3</strong>, trọn bộ bài Blog, bài mạng xã hội và Email chăm sóc khách hàng đã sẵn sàng trong tệp <code>chien_dich_noi_dung_q2.md</code>. Khi đã có phần chữ hoàn hảo, chúng ta bước sang <strong>Bài 19</strong> để tạo bộ hình ảnh minh họa và sơ đồ thông tin đi kèm!"
+          }
+        ]
       },
       {
         "code": "Bài 19",
         "title": "Tạo Hình ảnh Minh họa, Infographic & Ấn phẩm Nhận diện Thương hiệu",
         "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_19.html",
-        "ready": true
+        "ready": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Công thức 4 lớp tạo ảnh minh họa đồng bộ",
+            "dur": "00:14",
+            "caption": "Tại sao nhiều người dùng AI tạo ảnh thấy bức thứ nhất là ảnh chụp, bức thứ hai lại ra hoạt hình rất lệch tông? Trong <strong>Bài 19</strong>, công thức 3 khối cố định trên màn hình giúp anh chị khóa chặt phong cách và bảng màu để cả bộ ấn phẩm đồng nhất 100%."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Quan sát tệp kịch bản thiết kế hình ảnh trong IDE",
+            "dur": "00:10",
+            "caption": "Nhìn vào cột giữa trên màn hình: Khi chuẩn bị bộ ảnh cho chiến dịch Quý 2, chúng ta đóng khung sẵn một dòng <strong>Khóa phong cách cố định</strong> gồm nền giấy kem và màu nhấn cam đất để gắn vào cuối mọi yêu cầu vẽ ảnh."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Xuất trực tiếp sơ đồ Infographic sắc nét ngay trong IDE",
+            "dur": "00:11",
+            "caption": "Và như anh chị thấy trên màn hình cột giữa: Không chỉ viết kịch bản tạo ảnh, trợ lý AI còn có thể dựng trực tiếp tấm <strong>Infographic 3 ngày hội nhập</strong> với màu sắc chuẩn thương hiệu để anh chị đưa thẳng vào bài đăng."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Mở bài viết cần minh họa",
+            "dur": "00:10",
+            "caption": "Chúng ta vào thực hành 3 bước thiết kế ấn phẩm trực quan. Ở <strong>Bước 1</strong>, anh chị mở tệp bài viết <code>chien_dich_noi_dung_q2.md</code> để đối chiếu thông điệp cần vẽ minh họa."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Gửi câu lệnh tạo bộ ảnh và Infographic đồng bộ",
+            "dur": "00:09",
+            "caption": "Sang <strong>Bước 2</strong>, anh chị đính kèm <code>@brand_voice.md</code> và tệp bài viết, yêu cầu dựng tấm <strong>Infographic</strong> theo đúng bảng màu kem và cam đất rồi nhấn Gửi."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất ấn phẩm",
+            "dur": "00:12",
+            "caption": "Ở <strong>Bước 3</strong>, tấm <strong>Infographic</strong> đã hoàn tất sắc nét ngay trên màn hình. Khi đã có đủ số liệu, văn bản và hình ảnh, chúng ta bước sang <strong>Bài 20</strong> để đóng gói tất cả thành bộ Slide thuyết trình và trang Báo cáo Web tương tác!"
+          }
+        ]
       },
       {
         "code": "Bài 20",
         "title": "Xuất bản Slide Thuyết trình (HTML/PPTX) & Bảng điều khiển Báo cáo Web",
         "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_20.html",
-        "ready": true
+        "ready": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Quy trình 3 bước xuất bản Slide & Web Dashboard",
+            "dur": "00:14",
+            "caption": "Trong bài cuối cùng của <strong>Chương 5 — Bài 20</strong>, chúng ta biến các tệp báo cáo đã làm thành bộ Slide thuyết trình cấp cao. Quy trình 3 bước trên màn hình áp dụng nguyên tắc <strong>Tiêu đề Kết luận</strong> và giới hạn dưới 10 dòng mỗi trang để sếp nhìn lướt 3 giây là nắm trọn thông điệp."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Quan sát tiện ích xem Slide ngay trong Antigravity IDE",
+            "dur": "00:14",
+            "caption": "Nhìn vào trang Slide mẫu ở cột giữa trên màn hình: Dòng tiêu đề trên cùng nêu thẳng kết luận số liệu, phía dưới là 3 thẻ thông tin lớn làm nổi bật con số 1,85 tỷ VNĐ, mục tiêu 3 ngày và 10 đại lý mới. Rất thoáng và sang trọng!"
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Cách viết câu lệnh ép AI tuân thủ chuẩn dưới 10 dòng/slide",
+            "dur": "00:12",
+            "caption": "Khi giao việc làm slide ở cột phải, anh chị nhớ ghi rõ 3 ràng buộc vàng: Một là tỷ lệ 16:9 màu kem cam, hai là tiêu đề phải có số liệu kết luận, và ba là mỗi trang tối đa 3 thẻ thông tin dưới 10 dòng."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Chọn tệp đề án gốc cần chuyển thành Slide",
+            "dur": "00:10",
+            "caption": "Chúng ta vào thực hành 3 bước xuất bản bộ Slide báo cáo. Ở <strong>Bước 1</strong>, anh chị mở tệp <code>de_an_tong_the_q2.md</code> để xác nhận 5 nội dung chính cần đưa lên 5 trang trình chiếu."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Gửi lệnh xuất bản bộ Slide HTML/PPTX 5 trang",
+            "dur": "00:08",
+            "caption": "Sang <strong>Bước 2</strong>, anh chị đính kèm tệp đề án và báo cáo doanh thu vào ô chat, yêu cầu xuất bản bộ Slide 5 trang chuẩn <strong>Action Title</strong> rồi nhấn nút Gửi."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất bộ Slide hoàn chỉnh",
+            "dur": "00:15",
+            "caption": "Ở <strong>Bước 3</strong>, bộ Slide 5 trang đã xuất bản hoàn chỉnh, mở bằng bất kỳ máy tính nào cũng đẹp mắt mà không sợ lỗi phông chữ. Chúc mừng anh chị đã hoàn thành <strong>Chương 5</strong>! Bây giờ chúng ta bước vào chặng cuối cùng — <strong>Chương 6 (Bài 21 đến Bài 24)</strong> với 4 tình huống thực chiến toàn diện!"
+          }
+        ]
       }
     ]
   },
@@ -226,28 +1106,204 @@ window.KUDO_CHAPTERS_MANIFEST = [
         "title": "Tình huống 1 — Lập Kế hoạch Chiến lược Từ 0 Đến Bản Thảo Hoàn chỉnh",
         "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_21.html",
-        "ready": true
+        "ready": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Lộ trình 3 giai đoạn nhân bản chiến lược 7 bước",
+            "dur": "00:14",
+            "caption": "Chào mừng anh chị bước vào <strong>Chương 6</strong> với 4 tình huống thực chiến toàn diện. Ở <strong>Bài 21 — Tình huống 1</strong>, chúng ta giải bài toán lập kế hoạch cho một thương hiệu mới tinh là <strong>Giày Bã Mía</strong> bằng cách rút trích bộ khung 7 bước từ dự án thành công mẫu <strong>5balance</strong>."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Quan sát tệp quy trình chiến lược 7 bước trong IDE",
+            "dur": "00:12",
+            "caption": "Nhìn vào tệp <code>08_quy_trinh_lap_ke_hoach_chien_luoc.md</code> đang mở ở cột giữa: Trợ lý đã tách riêng phần khung phương pháp luận 7 bước từ dự án mẫu <strong>5balance</strong> để chuẩn bị phỏng vấn thông số cho dự án <strong>Giày Bã Mía</strong>."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Cách kết hợp khuôn mẫu có sẵn với lệnh /grill-me",
+            "dur": "00:12",
+            "caption": "Khi anh chị đính kèm tệp quy trình 7 bước cùng lệnh <code>/grill-me</code> ở cột phải, trợ lý AI sẽ đóng vai Giám đốc Chiến lược hỏi anh chị từng thông số của đôi giày bã mía để lấp đầy cả 7 bước mà không bị sót mục nào."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Mở tệp khung chiến lược 7 bước",
+            "dur": "00:08",
+            "caption": "Chúng ta bắt đầu thực hành 3 bước của Tình huống 1. Ở <strong>Bước 1</strong>, anh chị bấm mở tệp <code>08_quy_trinh_lap_ke_hoach_chien_luoc.md</code> ở cột trái."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Gửi thông số Giày Bã Mía và kích hoạt lệnh /plan",
+            "dur": "00:11",
+            "caption": "Sang <strong>Bước 2</strong>, sau khi trả lời các câu hỏi về mức giá 890.000 đồng và mục tiêu 500 đôi đặt trước, anh chị gõ lệnh <code>/plan</code> để trợ lý đổ toàn bộ dữ liệu vào khuôn 7 bước."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất Đề án Giày Bã Mía",
+            "dur": "00:13",
+            "caption": "Ở <strong>Bước 3</strong>, toàn bộ kế hoạch chiến lược 7 bước của thương hiệu <strong>Giày Bã Mía</strong> đã hoàn tất từ định vị, giá bán tới điểm hòa vốn. Tiếp theo, ở <strong>Bài 22 — Tình huống 2</strong>, chúng ta sẽ giải quyết bài toán Tự động hóa Tuyển dụng và Đào tạo Nhân sự!"
+          }
+        ]
       },
       {
         "code": "Bài 22",
         "title": "Tình huống 2 — Tự động hóa Tuyển dụng, Chấm CV & Lộ trình Hội nhập (HR)",
         "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_22.html",
-        "ready": true
+        "ready": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Dây chuyền 3 bước tự động hóa tuyển dụng HR",
+            "dur": "00:15",
+            "caption": "Bước sang <strong>Bài 22 — Tình huống Thực chiến 2</strong>, chúng ta giải quyết bài toán mà mọi giám đốc và trưởng phòng đều gặp phải: Tuyển dụng và đào tạo nhân sự mới. Sơ đồ 3 bước trên màn hình giúp anh chị chấm điểm hồ sơ ứng viên khách quan và tạo bộ câu hỏi phỏng vấn sắc bén cho từng người."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Quan sát tệp Thang điểm tiêu chí tuyển dụng trong IDE",
+            "dur": "00:12",
+            "caption": "Nhìn vào cột giữa trên màn hình là tệp <code>jd_truong_nhom_cs.md</code>: Thay vì chỉ bảo AI tìm người giỏi chung chung, chúng ta chia rõ 100 điểm thành 3 tiêu chí định lượng để AI đối chiếu với từng hồ sơ ứng viên."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Bảng xếp hạng ứng viên kèm câu hỏi phỏng vấn xoáy sâu",
+            "dur": "00:11",
+            "caption": "Và kết quả ở cột giữa thật sự ấn tượng: Trợ lý không chỉ chấm điểm xếp hạng 91 trên 100 cho ứng viên số 1, mà còn chuẩn bị sẵn câu hỏi phỏng vấn riêng biệt để anh chị kiểm tra năng lực thực chất của từng người."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Kiểm tra tệp tiêu chí jd_truong_nhom_cs.md",
+            "dur": "00:08",
+            "caption": "Chúng ta vào thực hành 3 bước tự động hóa tuyển dụng. Ở <strong>Bước 1</strong>, anh chị mở kiểm tra tệp tiêu chí <code>jd_truong_nhom_cs.md</code> ở cột giữa."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Gửi lệnh chấm điểm ứng viên và lập lộ trình 30-60-90 ngày",
+            "dur": "00:09",
+            "caption": "Sang <strong>Bước 2</strong>, anh chị đính kèm thang điểm cùng danh sách ứng viên vào ô chat, yêu cầu chấm điểm và lập lộ trình thử việc 30-60-90 ngày rồi nhấn nút Gửi."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất bộ hồ sơ tuyển dụng",
+            "dur": "00:17",
+            "caption": "Ở <strong>Bước 3</strong>, bộ hồ sơ <code>ho_so_tuyen_dung_cs.md</code> đã hoàn tất từ bảng chấm điểm ứng viên đến lộ trình thử việc 30-60-90 ngày. Khi đã chọn được người và mở rộng đại lý, làm sao để rà soát hợp đồng không bị rủi ro pháp lý? Chúng ta sang ngay <strong>Bài 23 — Tình huống 3</strong>!"
+          }
+        ]
       },
       {
         "code": "Bài 23",
         "title": "Tình huống 3 — Xây dựng Trợ lý Nghiên cứu Pháp lý, Hợp đồng & Quy chế",
         "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_23.html",
-        "ready": true
+        "ready": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Cơ chế đối chiếu chéo rà soát rủi ro hợp đồng",
+            "dur": "00:16",
+            "caption": "Trong <strong>Bài 23 — Tình huống Thực chiến 3</strong>, chúng ta ứng dụng trợ lý AI vào một nghiệp vụ đòi hỏi sự tỉ mỉ tuyệt đối: Rà soát hợp đồng kinh tế và quy chế nội bộ. Khung đối sánh trên màn hình chỉ ra cách dùng quy chế chuẩn của công ty để bắt lỗi bản dự thảo do đối tác gửi sang."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Minh họa: Quan sát tệp Quy chế Hợp đồng Chuẩn của công ty",
+            "dur": "00:12",
+            "caption": "Nhìn vào tệp <code>quy_che_hop_dong_chuan.md</code> ở cột giữa: Đây chính là cây thước đo pháp lý của công ty chúng ta, quy định rõ thời hạn công nợ tối đa chỉ là 15 ngày và bắt buộc phải có điều khoản bảo mật dữ liệu khách hàng."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Bảng phát hiện điều khoản bất lợi kèm câu chữ sửa lại",
+            "dur": "00:13",
+            "caption": "Khi đối chiếu với bản hợp đồng do đối tác gửi sang, báo cáo ở cột giữa lập tức gắn cờ Đỏ vào Điều 4.2 vì đối tác lén kéo dài hạn thanh toán lên 45 ngày, đồng thời viết sẵn luôn câu chữ chuẩn để chúng ta gửi lại đàm phán!"
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Mở bản dự thảo hợp đồng đối tác gửi",
+            "dur": "00:08",
+            "caption": "Chúng ta vào thực hành 3 bước rà soát hợp đồng. Ở <strong>Bước 1</strong>, anh chị mở tệp dự thảo <code>hop_dong_dai_ly_du_thao.md</code> vừa nhận được từ đối tác."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Gửi lệnh đối chiếu 1-1 giữa Dự thảo và Quy chế chuẩn",
+            "dur": "00:09",
+            "caption": "Sang <strong>Bước 2</strong>, anh chị đính kèm cả tệp dự thảo của đối tác lẫn tệp quy chế chuẩn của công ty vào ô chat, yêu cầu gắn cờ rủi ro kèm câu chữ sửa đổi rồi nhấn nút Gửi."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Hoàn tất Báo cáo rà soát",
+            "dur": "00:12",
+            "caption": "Ở <strong>Bước 3</strong>, bản báo cáo rà soát đã chỉ rõ cả điều khoản đạt chuẩn lẫn 2 rủi ro mức Đỏ cần sửa ngay trước khi đặt bút ký. Bây giờ, chúng ta cùng bước vào bài học cuối cùng của khóa học — <strong>Bài 24</strong>!"
+          }
+        ]
       },
       {
         "code": "Bài 24",
         "title": "Tình huống 4 — Tổng duyệt Chất lượng Dự án, Bảo mật (.gitignore) & Lộ trình 30 Ngày",
         "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_24.html",
-        "ready": true
+        "ready": true,
+        "beats": [
+          {
+            "idx": 0,
+            "mode": "theory",
+            "title": "1. Tổng quan: Bản đồ 6 Chương & Quy trình tổng duyệt dự án",
+            "dur": "00:15",
+            "caption": "Chào mừng anh chị đến với <strong>Bài 24</strong> — bài học cuối cùng khép lại hành trình <strong>Antigravity Basic</strong>! Trước khi bàn giao bất kỳ dự án lớn nào, chúng ta trang bị hai chốt chặn quan trọng nhất: Đối chiếu chéo số liệu giữa các tệp báo cáo và bảo vệ tài liệu mật bằng tệp <code>.gitignore</code>."
+          },
+          {
+            "idx": 1,
+            "mode": "sim",
+            "title": "2. Quan sát: Toàn bộ danh mục tài sản số hóa sau 6 Chương",
+            "dur": "00:15",
+            "caption": "Nhìn vào cột giữa trên màn hình: Khác hẳn với việc hỏi đáp trên web xong là trôi mất, sau 24 bài học, trong thư mục máy tính của anh chị đã có trọn bộ tài sản từ Bộ não <code>.agent</code>, Báo cáo doanh thu, Chiến dịch nội dung, Bộ Slide cho tới Hồ sơ nhân sự và Pháp lý."
+          },
+          {
+            "idx": 2,
+            "mode": "sim",
+            "title": "3. Kỹ thuật: Đối chiếu chéo số liệu và khóa bảo mật .gitignore",
+            "dur": "00:14",
+            "caption": "Trên màn hình là biên bản tổng duyệt dự án: Trợ lý tự động đối chiếu con số 1,85 tỷ đồng từ bảng <code>sales_data.csv</code> gốc tới tận trang Slide thuyết trình, đồng thời kiểm tra tệp <code>.gitignore</code> để đảm bảo danh sách ứng viên được bảo mật an toàn."
+          },
+          {
+            "idx": 3,
+            "mode": "sim",
+            "title": "4. Bước 1: Yêu cầu AI đối chiếu chéo số liệu toàn dự án",
+            "dur": "00:10",
+            "caption": "Chúng ta bước vào bài thực hành tổng kết khóa học. Ở <strong>Bước 1</strong>, trước khi đóng gói hồ sơ gửi Ban Giám đốc, anh chị đính kèm tệp gốc và yêu cầu trợ lý đối chiếu chéo số liệu toàn bộ dự án."
+          },
+          {
+            "idx": 4,
+            "mode": "sim",
+            "title": "5. Bước 2: Yêu cầu AI lập Lộ trình 30 ngày áp dụng cho bản thân",
+            "dur": "00:12",
+            "caption": "Sang <strong>Bước 2</strong>, sau khi dự án mẫu đã đạt chuẩn kiểm toán, anh chị đính kèm hồ sơ cá nhân <code>@troly.md</code> và yêu cầu trợ lý thiết kế riêng một <strong>Lộ trình 30 ngày</strong> áp dụng ngay vào công việc thật của anh chị."
+          },
+          {
+            "idx": 5,
+            "mode": "sim",
+            "title": "6. Bước 3: Mở xem Lộ trình 30 ngày & Tốt nghiệp Khóa học!",
+            "dur": "00:17",
+            "caption": "Và ở <strong>Bước 3</strong>, tấm bản đồ <code>lo_trinh_30_ngay_cua_toi.md</code> đã hiện ra rõ nét trên màn hình. Chúc mừng anh chị đã hoàn thành trọn vẹn <strong>6 Chương, 24 Bài giảng và 144 Điểm neo thực hành</strong> của khóa học <strong>Antigravity Basic</strong>! Chúc anh chị gặt hái thật nhiều thành tựu đột phá cùng Trợ lý AI của mình!"
+          }
+        ]
       }
     ]
   }

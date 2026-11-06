@@ -18,7 +18,7 @@ body.laser-pointer-active * {
 
 body.kudo-lesson-body {
   display: grid !important;
-  grid-template-columns: var(--kudo-sidebar-width, 315px) minmax(0, 1fr) !important;
+  grid-template-columns: var(--kudo-sidebar-width, 336px) minmax(0, 1fr) !important;
   grid-template-rows: 100vh !important;
   width: 100vw !important;
   max-width: 100vw !important;
@@ -34,10 +34,103 @@ body.kudo-lesson-body {
 /* -------------------------------------------------------------------------
    CỘT TRÁI: SIDEBAR ĐIỀU KHIỂN & DANH SÁCH BÀI GIẢNG NHỎ (#kudo-left-sidebar)
    ------------------------------------------------------------------------- */
+body.kudo-lesson-body.kudo-sidebar-collapsed {
+  grid-template-columns: 0px minmax(0, 1fr) !important;
+}
+body.kudo-lesson-body.kudo-sidebar-collapsed #kudo-left-sidebar {
+  width: 0 !important;
+  border-right: none !important;
+}
+#kudo-expand-sidebar-btn {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  z-index: 9600;
+  background: linear-gradient(135deg, #EA580C, #CB4B16);
+  color: #FFFFFF;
+  border: 1px solid #C2410C;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  font-weight: 800;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+}
+body.kudo-lesson-body.kudo-sidebar-collapsed #kudo-expand-sidebar-btn {
+  display: inline-flex;
+}
+.k-tree-chapter {
+  background: #FFFFFF;
+  border: 1px solid #DDD5C7;
+  border-radius: 9px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.k-tree-chap-head {
+  padding: 8px 11px;
+  background: #EFE9DD;
+  font-size: 12px;
+  font-weight: 800;
+  color: #1E293B;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.k-tree-chap-head:hover {
+  background: #E6DEC8;
+}
+.k-tree-chap-lessons {
+  display: none;
+  flex-direction: column;
+  padding: 5px;
+  gap: 4px;
+}
+.k-tree-chapter.open .k-tree-chap-lessons {
+  display: flex;
+}
+.k-tree-lesson-row {
+  padding: 7px 9px;
+  border-radius: 7px;
+  font-size: 12.8px;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 6px;
+  line-height: 1.35;
+}
+.k-tree-lesson-row:hover {
+  background: #FAF8F5;
+  color: #1E293B;
+}
+.k-tree-lesson-row.active-lesson {
+  background: #FFF7ED;
+  color: #C2410C;
+  font-weight: 800;
+  border: 1px solid #FDBA74;
+}
+.k-tree-beats-sublist {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px 4px 6px 10px;
+  margin-left: 6px;
+  border-left: 2px solid #FDBA74;
+}
+.ksb-lesson-box {
+  display: none !important;
+}
 #kudo-left-sidebar {
   grid-column: 1;
   grid-row: 1;
-  width: var(--kudo-sidebar-width, 315px);
+  width: var(--kudo-sidebar-width, 336px);
   height: 100vh;
   background: var(--kudo-sidebar-bg, #F4EFE6);
   border-right: 1px solid #DDD5C7;
@@ -383,7 +476,7 @@ body.in-iframe .ksb-brand-bar {
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-rows: minmax(0, 1fr) var(--kudo-subtitle-height, 68px);
+  grid-template-rows: minmax(0, 1fr) var(--kudo-subtitle-height, 86px);
   overflow: hidden;
   position: relative;
   background: #EDE6D8;
@@ -456,7 +549,7 @@ body.in-iframe .ksb-brand-bar {
 #kudo-subtitle-strip {
   grid-row: 2;
   width: 100%;
-  height: var(--kudo-subtitle-height, 68px);
+  height: var(--kudo-subtitle-height, 86px);
   z-index: 9450;
   background: #EFE9DD;
   border-top: 1px solid #DDD5C7;
@@ -528,13 +621,13 @@ body.in-iframe .ksb-brand-bar {
   flex: 1;
   background: #FFFFFF;
   color: #1E293B;
-  padding: 8px 16px;
-  border-radius: 10px;
-  border: 1px solid #D6CEC0;
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: 1.5px solid #C8BFA8;
   box-shadow: 0 2px 6px rgba(30, 41, 59, 0.04);
-  font-size: 13.8px;
-  line-height: 1.46;
-  font-weight: 500;
+  font-size: 16.8px;
+  line-height: 1.48;
+  font-weight: 600;
   text-align: left;
   pointer-events: none;
   overflow: hidden;
@@ -608,7 +701,100 @@ body.in-iframe .ksb-brand-bar {
     justify-content: flex-start !important;
     gap: 8px !important;
   }
-  #kudo-left-sidebar {
+  body.kudo-lesson-body.kudo-sidebar-collapsed {
+  grid-template-columns: 0px minmax(0, 1fr) !important;
+}
+body.kudo-lesson-body.kudo-sidebar-collapsed #kudo-left-sidebar {
+  width: 0 !important;
+  border-right: none !important;
+}
+#kudo-expand-sidebar-btn {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  z-index: 9600;
+  background: linear-gradient(135deg, #EA580C, #CB4B16);
+  color: #FFFFFF;
+  border: 1px solid #C2410C;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  font-weight: 800;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+}
+body.kudo-lesson-body.kudo-sidebar-collapsed #kudo-expand-sidebar-btn {
+  display: inline-flex;
+}
+.k-tree-chapter {
+  background: #FFFFFF;
+  border: 1px solid #DDD5C7;
+  border-radius: 9px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.k-tree-chap-head {
+  padding: 8px 11px;
+  background: #EFE9DD;
+  font-size: 12px;
+  font-weight: 800;
+  color: #1E293B;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.k-tree-chap-head:hover {
+  background: #E6DEC8;
+}
+.k-tree-chap-lessons {
+  display: none;
+  flex-direction: column;
+  padding: 5px;
+  gap: 4px;
+}
+.k-tree-chapter.open .k-tree-chap-lessons {
+  display: flex;
+}
+.k-tree-lesson-row {
+  padding: 7px 9px;
+  border-radius: 7px;
+  font-size: 12.8px;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 6px;
+  line-height: 1.35;
+}
+.k-tree-lesson-row:hover {
+  background: #FAF8F5;
+  color: #1E293B;
+}
+.k-tree-lesson-row.active-lesson {
+  background: #FFF7ED;
+  color: #C2410C;
+  font-weight: 800;
+  border: 1px solid #FDBA74;
+}
+.k-tree-beats-sublist {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px 4px 6px 10px;
+  margin-left: 6px;
+  border-left: 2px solid #FDBA74;
+}
+.ksb-lesson-box {
+  display: none !important;
+}
+#kudo-left-sidebar {
     grid-column: 1 !important;
     grid-row: 2 !important;
     width: 100vw !important;
