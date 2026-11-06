@@ -1,11 +1,11 @@
 {
   "id": "b2",
-  "label": "2. [Lý thuyết Kiểu 2] Kỹ thuật ra lệnh 'Viết nháp + Tự biên tập' trong 1 bước",
+  "label": "2. Minh họa: Kỹ thuật ra lệnh 'Viết nháp + Tự biên tập' trong 1 bước",
   "duration": 12.89,
   "pose": 2,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Kỹ thuật Tự Kiểm duyệt (Self-Audit)",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Tự Rà Soát Chất Lượng Bài Viết",
   "pedagogy_title": "Yêu cầu AI đính kèm Bảng kiểm tra Brand Voice ở cuối tệp bài viết",
   "pedagogy_note": "Khi buộc AI phải tích chọn [x] vào bảng kiểm tra ở cuối bài, AI sẽ tự phát hiện và xóa sạch các từ sáo rỗng.",
   "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › chien_dich_noi_dung_q2.md', editorTitle:'✍️ chien_dich_noi_dung_q2.md — Bộ Nội Dung Đa Kênh Đã Kiểm Duyệt', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">BẢNG TỰ KIỂM DUYỆT CỦA TỔNG BIÊN TẬP AI</h3><ul style=\"list-style:none;padding-left:0;font-size:13px;\"><li>✅ <strong>Tiêu chí 1 (Số liệu thật):</strong> Đã trích dẫn đúng mốc giảm thời gian từ 14 ngày xuống 3 ngày và tỷ lệ giữ chân 98,2%.</li><li>✅ <strong>Tiêu chí 2 (Không từ sáo rỗng):</strong> Đã loại bỏ 100% các cụm từ \"kỷ nguyên số\", \"siêu việt\".</li><li>✅ <strong>Tiêu chí 3 (Kêu gọi hành động):</strong> Cả bài đăng LinkedIn và Email đều gắn link dùng thử 14 ngày.</li></ul></div>'});",

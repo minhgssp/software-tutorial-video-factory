@@ -58,6 +58,8 @@ function kudoSyncDomAnchors() {
 
   let spotLeft = sb.left + 8;
   let spotRight = sb.right - 8;
+  let spotTop = sb.top + 8;
+  let spotBottom = sb.bottom - 8;
   if (foundAny) {
     const left = Math.max(Math.round(sb.left + 4), Math.round(minX - pad));
     const top = Math.max(Math.round(sb.top + 3), Math.round(minY - pad));
@@ -65,6 +67,8 @@ function kudoSyncDomAnchors() {
     const bottom = Math.min(Math.round(sb.bottom - 3), Math.round(maxY + pad));
     spotLeft = left;
     spotRight = right;
+    spotTop = top;
+    spotBottom = bottom;
     spot.style.left = left + "px";
     spot.style.top = top + "px";
     spot.style.width = Math.max(36, right - left) + "px";
@@ -74,24 +78,76 @@ function kudoSyncDomAnchors() {
     spot.classList.remove("visible");
   }
 
-  // Định vị thông minh cho #kudo-stage-pedagogy-card tránh đè lên #kudo-spotlight
+  // Định vị thông minh chống va chạm (Collision-Free) cho #kudo-stage-pedagogy-card
   const pCard = document.getElementById("kudo-stage-pedagogy-card");
   if (pCard && pCard.classList.contains("visible")) {
-    const midX = (sb.left + sb.right) / 2;
-    const spotCenterX = foundAny ? (spotLeft + spotRight) / 2 : midX + 100;
-    if (spotCenterX > midX) {
-      // Spotlight đang ở nửa phải -> đặt thẻ Sư phạm ở góc dưới bên trái vùng Stage
-      pCard.style.left = Math.round(sb.left + 14) + "px";
-      pCard.style.right = "auto";
-      pCard.style.bottom = Math.round(window.innerHeight - sb.bottom + 12) + "px";
-      pCard.style.top = "auto";
+    // Co giãn chiều rộng tự động nếu phần trống duy nhất nằm ở cột trái (cây thư mục ~255px)
+    const leftGap = foundAny ? (spotLeft - (sb.left + 10) - 10) : 300;
+    const rightGap = foundAny ? ((sb.right - 12) - spotRight - 10) : 300;
+    if (foundAny && leftGap >= 220 && leftGap < 300 && rightGap < 220) {
+      pCard.style.width = Math.round(leftGap) + "px";
     } else {
-      // Spotlight đang ở nửa trái -> đặt thẻ Sư phạm ở góc dưới bên phải vùng Stage
-      pCard.style.right = "16px";
-      pCard.style.left = "auto";
-      pCard.style.bottom = Math.round(window.innerHeight - sb.bottom + 12) + "px";
-      pCard.style.top = "auto";
+      pCard.style.width = "300px";
     }
+    const cardW = pCard.offsetWidth || 300;
+    const cardH = pCard.offsetHeight || 110;
+    const safeBottomTop = Math.max(sb.top + 44, sb.bottom - cardH - 34); // Luôn nằm trên thanh Status Bar 24px
+    const edCanvas = document.getElementById("editor-canvas");
+    const edRect = (edCanvas && edCanvas.offsetWidth > 0) ? edCanvas.getBoundingClientRect() : null;
+    const edLeft = edRect ? Math.max(sb.left + 12, edRect.left + 14) : (sb.left + 232);
+    const edRight = edRect ? Math.min(sb.right - 14, edRect.right - 14) : (sb.right - 390);
+
+    const obstacles = [];
+    if (foundAny) {
+      obstacles.push({ left: spotLeft - 6, top: spotTop - 6, right: spotRight + 6, bottom: spotBottom + 6, weight: 10 });
+    }
+    ["#ide-chat-input", "#agy2-chat-input", "#ide-popup-menu.show", "#agy2-popup-menu.show", "#kudo-model-popover.show", "#kudo-turbo-popover.show", "#kudo-context-menu.show"].forEach(sel => {
+      const oel = document.querySelector(sel);
+      if (oel) {
+        const r = oel.getBoundingClientRect();
+        if (r.width > 0 && r.height > 0) {
+          obstacles.push({ left: r.left - 6, top: r.top - 6, right: r.right + 6, bottom: r.bottom + 6, weight: 6 });
+        }
+      }
+    });
+
+    const candidates = [
+      { left: edLeft, top: safeBottomTop },
+      { left: Math.max(edLeft, edRight - cardW), top: safeBottomTop },
+      { left: sb.left + 10, top: safeBottomTop },
+      { left: edLeft, top: sb.top + 82 },
+      { left: Math.max(edLeft, edRight - cardW), top: sb.top + 82 },
+      { left: sb.right - cardW - 16, top: sb.top + 48 },
+      { left: sb.left + 10, top: sb.top + 48 },
+      { left: sb.right - cardW - 16, top: safeBottomTop }
+    ];
+
+    let bestCand = candidates[0];
+    let minScore = Infinity;
+    for (let i = 0; i < candidates.length; i++) {
+      const c = candidates[i];
+      const cL = Math.max(sb.left + 10, Math.min(sb.right - cardW - 12, Math.round(c.left)));
+      const cT = Math.max(sb.top + 42, Math.min(safeBottomTop, Math.round(c.top)));
+      const cR = cL + cardW;
+      const cB = cT + cardH;
+      let score = i * 5; // Ưu tiên nhẹ theo thứ tự danh sách nếu không va chạm
+      obstacles.forEach(ob => {
+        const ix = Math.max(0, Math.min(cR, ob.right) - Math.max(cL, ob.left));
+        const iy = Math.max(0, Math.min(cB, ob.bottom) - Math.max(cT, ob.top));
+        if (ix > 0 && iy > 0) {
+          score += (ix * iy) * ob.weight;
+        }
+      });
+      if (score < minScore) {
+        minScore = score;
+        bestCand = { left: cL, top: cT };
+      }
+    }
+
+    pCard.style.left = bestCand.left + "px";
+    pCard.style.top = bestCand.top + "px";
+    pCard.style.right = "auto";
+    pCard.style.bottom = "auto";
   }
 
 

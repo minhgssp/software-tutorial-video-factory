@@ -1,11 +1,11 @@
 {
   "id": "b5",
-  "label": "5. [Thực hành B2/3] Gõ dấu / để đối chiếu tệp với danh sách lệnh",
+  "label": "5. Bước 2: Gõ dấu / để đối chiếu tệp với danh sách lệnh",
   "duration": 11.69,
   "pose": 5,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Đối chiếu Тệp và Lệnh /",
+  "pedagogy_badge": "👆 Thực hành Bước 2/3 · Đối chiếu Tệp và Lệnh /",
   "pedagogy_title": "Bước 2: Bấm nút / trên thanh công cụ chat để xem danh sách Workflows",
   "pedagogy_note": "Mỗi tệp .md đặt trong thư mục .agent/workflows/ đều tự động xuất hiện trong bảng lệnh gạch chéo này.",
   "onEnter": "kudoHidePopovers(); switchToSurface('ide'); openFileInEditor('start-1-1.md'); kudoOpenIdeSlashPopup();",

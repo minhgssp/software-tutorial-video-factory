@@ -1,12 +1,12 @@
 {
   "id": "b4",
-  "label": "4. [Thực hành B1/3] Bối cảnh & Cập nhật thông tin vào troly.md",
+  "label": "4. Bước 1: Cập nhật thông tin vào troly.md",
   "duration": 9.93,
   "pose": 4,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 1/3 · Bối cảnh & Mở tệp",
-  "pedagogy_title": "Bối cảnh: Chuẩn hóa hồ sơ cá nhân để viết thông báo điều hành Quý 2",
+  "pedagogy_badge": "👆 Thực hành Bước 1/3 · Mở tệp",
+  "pedagogy_title": "Chuẩn hóa hồ sơ cá nhân để viết thông báo điều hành Quý 2",
   "pedagogy_note": "Bước 1: Bấm chọn tệp troly.md ở cột cây thư mục bên trái để kiểm tra các nguyên tắc văn phong cá nhân.",
   "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); openFileInEditor('troly.md');",
   "focus_selectors": [

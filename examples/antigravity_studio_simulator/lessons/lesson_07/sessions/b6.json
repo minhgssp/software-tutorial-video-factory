@@ -1,13 +1,13 @@
 {
   "id": "b6",
-  "label": "6. [Thực hành B3/3] Nghiệm thu văn bản chuẩn gu & Tiếp nối Bài 8",
+  "label": "6. Bước 3: Hoàn tất văn bản chuẩn gu",
   "duration": 13.69,
   "pose": 6,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Nghiệm thu & Tiếp nối",
-  "pedagogy_title": "Bước 3: Nghiệm thu tệp thong_bao_q2.md đúng chuẩn văn phong cá nhân",
-  "pedagogy_note": "Nghiệm thu: Tệp thong_bao_q2.md mở đầu bằng Kết luận 3 dòng, có bảng phân công rõ ràng, 0% từ sáo rỗng. Tiếp theo: Bài 8 lập Sổ bàn giao công việc.",
+  "pedagogy_badge": "✅ Thực hành Bước 3/3 · Kết quả hoàn thành",
+  "pedagogy_title": "Bước 3: Kiểm tra kết quả tệp thong_bao_q2.md đúng chuẩn văn phong cá nhân",
+  "pedagogy_note": "Tệp thong_bao_q2.md mở đầu bằng Kết luận 3 dòng, có bảng phân công rõ ràng, 0% từ sáo rỗng.",
   "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'troly.md', breadcrumb:'antigravity_course_vn › thong_bao_q2.md (Mới tạo)', editorTitle:'📄 thong_bao_q2.md — Đã áp dụng chuẩn văn phong @troly.md', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#9a3412;margin-top:0;\">THÔNG BÁO ĐIỀU HÀNH QUÝ 2 — TASKFLOW INC.</h2><div style=\"background:#fff7ed;border-left:4px solid #ea580c;padding:10px 14px;margin-bottom:12px;\"><strong>KẾT LUẬN TRỰC DIỆN:</strong> Quý 2 tập trung giảm 30% tỷ lệ rời bỏ khách hàng (Churn Rate) và hoàn tất cổng tự phục vụ trước ngày 15/05.</div><table style=\"width:100%;border-collapse:collapse;font-size:13px;\"><tr style=\"background:#ffedd5;\"><th style=\"padding:8px;border:1px solid #fed7aa;text-align:left;\">Bộ phận</th><th style=\"padding:8px;border:1px solid #fed7aa;text-align:left;\">Mục tiêu trọng tâm</th><th style=\"padding:8px;border:1px solid #fed7aa;text-align:left;\">Hạn chót</th></tr><tr><td style=\"padding:8px;border:1px solid #fed7aa;\">Sản phẩm (Product)</td><td style=\"padding:8px;border:1px solid #fed7aa;\">Ra mắt Onboarding Checklist tự động</td><td style=\"padding:8px;border:1px solid #fed7aa;\">30/04</td></tr><tr><td style=\"padding:8px;border:1px solid #fed7aa;\">Chăm sóc KH (CS)</td><td style=\"padding:8px;border:1px solid #fed7aa;\">Gọi thăm khám 100% tài khoản doanh nghiệp</td><td style=\"padding:8px;border:1px solid #fed7aa;\">15/05</td></tr></table></div>', userMsg:'@troly.md @COMPANY.md Hãy viết thông báo mục tiêu Quý 2 gửi toàn công ty và lưu thành tệp thong_bao_q2.md', aiMsg:'Đã đối chiếu <code>@troly.md</code> và <code>@COMPANY.md</code>. Tôi đã tạo tệp <code>thong_bao_q2.md</code> mở đầu bằng Kết luận trực diện và trình bày dạng bảng đúng gu của bạn!'});",
   "focus_selectors": [
     "#editor-canvas",

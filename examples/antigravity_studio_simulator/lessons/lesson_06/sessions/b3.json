@@ -1,11 +1,11 @@
 {
   "id": "b3",
-  "label": "3. [Lý thuyết Kiểu 2] Cơ chế thu giọng nói (Ctrl+M) và trích dẫn (Ctrl+L)",
+  "label": "3. Kỹ thuật: Cơ chế thu giọng nói (Ctrl+M) và trích dẫn (Ctrl+L)",
   "duration": 11.53,
   "pose": 3,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Giọng nói & Trích dẫn dòng",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Giọng nói & Trích dẫn dòng",
   "pedagogy_title": "Thanh thu âm giọng nói tiếng Việt (🎙️) và nút Quote in Chat (Ctrl + L)",
   "pedagogy_note": "Khi bôi đen một đoạn văn bản, nút Quote in Chat bật lên kèm số thứ tự dòng (#L7-L8) giúp AI chỉ sửa đúng đoạn đó.",
   "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); kudoActivateQuoteDemo(); kudoShowKeyHud('Bôi đen văn bản + Nhấn <kbd>Ctrl + L</kbd> (Quote in Chat)');",

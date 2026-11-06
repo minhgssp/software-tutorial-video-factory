@@ -1,11 +1,11 @@
 {
   "id": "b5",
-  "label": "5. [Thực hành B2/3] Ra lệnh khởi tạo tệp brand_voice.md chuẩn B2B",
+  "label": "5. Bước 2: Ra lệnh khởi tạo tệp brand_voice.md chuẩn B2B",
   "duration": 10.17,
   "pose": 5,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Khởi tạo brand_voice.md",
+  "pedagogy_badge": "👆 Thực hành Bước 2/3 · Khởi tạo brand_voice.md",
   "pedagogy_title": "Bước 2: Gửi câu lệnh tạo tệp brand_voice.md tại khung chat phải",
   "pedagogy_note": "Yêu cầu AI kết hợp dữ liệu thật từ @bao_cao_doanh_thu_q1.md để đưa vào kho dẫn chứng thương hiệu.",
   "onEnter": "kudoSimScene({surface:'ide', file:'COMPANY.md', clearChat:true, chatInput:'@COMPANY.md @bao_cao_doanh_thu_q1.md Hãy khởi tạo tệp brand_voice.md cho chiến dịch Quý 2, kèm bảng từ vựng nên dùng và kho số liệu chứng minh thực tế.'});",

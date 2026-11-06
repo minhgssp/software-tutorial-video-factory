@@ -1,11 +1,11 @@
 {
   "id": "b5",
-  "label": "5. [Thực hành B2/3] Gửi câu lệnh tạo bộ ảnh và Infographic đồng bộ",
+  "label": "5. Bước 2: Gửi câu lệnh tạo bộ ảnh và Infographic đồng bộ",
   "duration": 8.89,
   "pose": 5,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Ra lệnh Thiết kế Đồng bộ",
+  "pedagogy_badge": "👆 Thực hành Bước 2/3 · Ra lệnh Thiết kế Đồng bộ",
   "pedagogy_title": "Bước 2: Nhập lệnh áp dụng công thức 4 lớp vào khung chat phải",
   "pedagogy_note": "Đính kèm @brand_voice.md và @chien_dich_noi_dung_q2.md để AI xuất tệp infographic_onboarding.html.",
   "onEnter": "kudoSimScene({surface:'ide', clearChat:true, chatInput:'@brand_voice.md @chien_dich_noi_dung_q2.md Hãy áp dụng bảng màu kem #FBF8F3 và cam đất #EA580C để tạo sơ đồ Infographic 3 ngày Onboarding tại tệp infographic_onboarding.html'});",

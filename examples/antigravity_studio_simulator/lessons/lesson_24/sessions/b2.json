@@ -1,14 +1,14 @@
 {
   "id": "b2",
-  "label": "2. [Lý thuyết Kiểu 2] Quan sát toàn bộ gia tài tệp sản phẩm sau 6 Chương",
+  "label": "2. Quan sát: Toàn bộ danh mục tài sản số hóa sau 6 Chương",
   "duration": 15.05,
   "pose": 2,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Tổng duyệt Kho Tài sản Dự án",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Kho Tài sản Dự án",
   "pedagogy_title": "Rà soát danh mục các tệp báo cáo, chiến lược, slide, HR và pháp lý đã tạo",
   "pedagogy_note": "Toàn bộ công việc từ Chương 1 đến Chương 6 đều kết tinh thành các tệp tài sản thực tế nằm ngay ngắn trên ổ cứng.",
-  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › Tổng danh mục Tài sản Dự án', editorTitle:'🗂️ Danh mục Tài sản Đã Khởi tạo Trong Suốt Khóa Học', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">KHO TÀI SẢN SỐ HÓA CỦA BẠN TRONG THƯ MỤC DỰ ÁN</h3><ul><li><strong>Bộ não điều khiển:</strong> <code>@troly.md</code>, <code>.agent/rules/</code>, <code>.agent/skills/</code>, <code>.agent/workflows/</code></li><li><strong>Dữ liệu &amp; Đề án:</strong> <code>bao_cao_doanh_thu_q1.md</code>, <code>de_an_tong_the_q2.md</code>, <code>ban_giao_cong_viec.md</code></li><li><strong>Truyền thông &amp; Slide:</strong> <code>brand_voice.md</code>, <code>chien_dich_noi_dung_q2.md</code>, <code>slide_trinh_hdqt_q2.html</code></li><li><strong>Thực chiến Chuyên sâu:</strong> <code>ke_hoach_giay_ba_mia_2026.md</code>, <code>ho_so_tuyen_dung_cs.md</code>, <code>bao_cao_ra_soat_hop_dong.md</code></li></ul></div>'});",
+  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › Tổng danh mục Tài sản Dự án', editorTitle:'🗂️ Danh mục Tài sản Đã Khởi tạo Trong Suốt Khóa Học', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">KHO TÀI SẢN SỐ HÓA CỦA BẠN TRONG THƯ MỤC DỰ ÁN</h3><ul><li><strong>Bộ não điều khiển:</strong> <code>@troly.md</code>, <code>.agent/rules/</code>, <code>.agent/skills/</code>, <code>.agent/workflows/</code></li><li><strong>Dữ liệu &amp; Đề án:</strong> <code>bao_cao_doanh_thu_q1.md</code>, <code>de_an_tong_the_q2.md</code>, <code>ban_giao_cong_viec.md</code></li><li><strong>Truyền thông &amp; Slide:</strong> <code>brand_voice.md</code>, <code>chien_dich_noi_dung_q2.md</code>, <code>slide_trinh_hdqt_q2.html</code></li><li><strong>Thực chiến &amp; Bảo mật:</strong> <code>ke_hoach_giay_ba_mia_2026.md</code>, <code>ho_so_tuyen_dung_cs.md</code>, <code>bao_cao_ra_soat_hop_dong.md</code>, <code>.gitignore</code></li></ul></div>'});",
   "focus_selectors": [
     "#editor-canvas",
     "#ide-file-tree"

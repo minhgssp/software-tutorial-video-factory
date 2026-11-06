@@ -1,11 +1,11 @@
 {
   "id": "b5",
-  "label": "5. [Thực hành B2/3] Bật thu âm giọng nói tiếng Việt (Ctrl+M)",
+  "label": "5. Bước 2: Bật thu âm giọng nói tiếng Việt (Ctrl+M)",
   "duration": 10.65,
   "pose": 5,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Giao việc bằng Giọng nói",
+  "pedagogy_badge": "👆 Thực hành Bước 2/3 · Giao việc bằng Giọng nói",
   "pedagogy_title": "Bước 2: Nhấn Ctrl + M (hoặc bấm biểu tượng 🎙️) để đọc yêu cầu",
   "pedagogy_note": "Thanh sóng âm màu đỏ hiện lên, tự động chuyển lời nói tiếng Việt của bạn thành câu lệnh hoàn chỉnh trong ô chat.",
   "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); closeSettingsModal(); loadAgy2Thread('main'); simulateVoiceInput('mgr'); kudoShowKeyHud('Nhấn <kbd>Ctrl + M</kbd> để bật thu âm giọng nói');",

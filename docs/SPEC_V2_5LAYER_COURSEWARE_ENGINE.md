@@ -14,7 +14,7 @@
 Bản nâng cấp v2.2 tích hợp thêm **5 Cải Cách Sư Phạm Toàn Khóa (`PROP-261105-04`)**:
 1. **Đồ thị Tiên quyết Không Chu trình & 0% Trùng lặp (`Prerequisite DAG`):** Toàn bộ 24 bài học (`lesson_01.html`..`lesson_24.html`) khai báo tường minh `prerequisites`, `dependents`, `placement_risk`, `continuity_bridge` trong `lesson_meta.json` và hiển thị trực tiếp tại hộp `#ksb-dep-box` trên Sidebar Trái.
 2. **Tách bạch Lý thuyết Kiểu 1 (`theory_type_1` — `b1`):** Slide Hero 100% Trực quan với **4 Bố cục Đồ họa Chuyên biệt** (`.k-layout-flowchart`, `.k-layout-comparison`, `.k-layout-timeline`, `.k-layout-anatomy`), loại bỏ hoàn toàn biểu đồ phần trăm bịa đặt.
-3. **Tách bạch Lý thuyết Kiểu 2 (`theory_type_2` — `b2`, `b3`):** Giảng lý thuyết kỹ thuật/quy trình gắn trực tiếp trên màn hình mô phỏng (`mode: "sim"`) kèm Thẻ Kiến thức Nổi (`#kudo-stage-pedagogy-card`).
+3. **Tách bạch Lý thuyết & Thực hành Không Hộp Nổi Đè Màn hình (`Zero Floating Textbox Overlay` — `PROP-261106-01` Rule 4):** Tuyệt đối cấm tạo hộp chữ nổi (`#kudo-stage-pedagogy-card`) chèn lên trên màn hình phần mềm minh họa gây rối mắt và che khuất nội dung. Mọi nội dung giải thích khái niệm phải tách thành Slide/nhịp độc lập (`One Thing at a Time`), còn khi sang màn hình phần mềm (`mode: "sim"`) chỉ giữ khung viền tiêu điểm (`#kudo-spotlight`), con trỏ chuột (`#kudo-cursor`) và dòng phụ đề giảng viên ở chân trang.
 4. **Thực hành 3 Bước Tiến triển Thực sự (`practice_step` — `b4`, `b5`, `b6`):** Chuỗi 3 bước liên hoàn (`Bước 1/3` chuẩn bị $\to$ `Bước 2/3` thao tác $\to$ `Bước 3/3` nghiệm thu kết quả) có trạng thái màn hình thay đổi thực tế qua từng nhịp.
 5. **144 Tệp Âm thanh Thuyết minh `VieNeu-TTS 48kHz`:** Đồng bộ thời lượng thực cho toàn bộ 24 bài học (`audio/lesson_01..24/b1..b6.mp3`).
 

@@ -1,11 +1,11 @@
 {
   "id": "b5",
-  "label": "5. [Thực hành B2/3] Bấm nút Open IDE chuyển không gian",
+  "label": "5. Bước 2: Bấm nút Open IDE chuyển không gian",
   "duration": 8.49,
   "pose": 5,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Thao tác trực tiếp",
+  "pedagogy_badge": "👆 Thực hành Bước 2/3 · Thao tác trực tiếp",
   "pedagogy_title": "Bước 2: Chuyển từ Antigravity 2.0 sang Antigravity IDE",
   "pedagogy_note": "Nhìn lên góc trên bên phải của thanh tiêu đề giữa và bấm nút Open IDE để mở bàn làm việc chuyên sâu.",
   "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); closeSettingsModal(); resetAgy2NewConv();",

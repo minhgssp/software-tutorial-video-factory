@@ -1,11 +1,11 @@
 {
   "id": "b5",
-  "label": "5. [Thực hành B2/3] Gõ lệnh kết hợp @troly.md và @COMPANY.md",
+  "label": "5. Bước 2: Gõ lệnh kết hợp @troly.md và @COMPANY.md",
   "duration": 9.93,
   "pose": 5,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Đính kèm @troly.md",
+  "pedagogy_badge": "👆 Thực hành Bước 2/3 · Đính kèm @troly.md",
   "pedagogy_title": "Bước 2: Nhập lệnh kèm @troly.md và @COMPANY.md rồi nhấn Gửi",
   "pedagogy_note": "Yêu cầu AI xuất bản thông báo ra tệp mới thong_bao_q2.md tuân thủ nghiêm ngặt quy tắc trong @troly.md.",
   "onEnter": "kudoSimScene({surface:'ide', file:'troly.md', clearChat:true, chatInput:'@troly.md @COMPANY.md Hãy viết thông báo mục tiêu Quý 2 gửi toàn công ty và lưu thành tệp thong_bao_q2.md'});",

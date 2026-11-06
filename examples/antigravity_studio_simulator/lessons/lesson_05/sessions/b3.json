@@ -1,11 +1,11 @@
 {
   "id": "b3",
-  "label": "3. [Lý thuyết Kiểu 2] Kho tiện ích Extensions và Office Viewer",
+  "label": "3. Kỹ thuật: Kho tiện ích Extensions và Office Viewer",
   "duration": 11.29,
   "pose": 3,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Kho Tiện ích Extensions",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Kho Tiện ích Extensions",
   "pedagogy_title": "Cài đặt tiện ích mở rộng trong Extensions (Ctrl + Shift + X)",
   "pedagogy_note": "Tìm từ khóa 'Office Viewer' (tác giả cweijan) và 'Muty PPT Viewer' để xem trực tiếp bảng CSV, Excel, Word và PowerPoint.",
   "onEnter": "kudoHidePopovers(); switchToSurface('ide'); openIdeExtensionsView();",

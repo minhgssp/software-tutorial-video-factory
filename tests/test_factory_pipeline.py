@@ -78,11 +78,11 @@ def test_5layer_course_compiler_and_manifest() -> None:
     tokens_txt = (cdir / "assets" / "css" / "brand_tokens.css").read_text(encoding="utf-8")
     assert "--kudo-bg-cream: #FAF8F5" in tokens_txt and "--kudo-sidebar-width: 315px" in tokens_txt
     overrides_txt = (cdir / "assets" / "css" / "simulator_overrides.css").read_text(encoding="utf-8")
-    assert "#kudo-stage-pedagogy-card" in overrides_txt
-    assert ".k-vh-flow" in overrides_txt
-    assert ".k-vh-compare-grid" in overrides_txt
-    assert ".k-vh-timeline" in overrides_txt
-    assert ".k-vh-anatomy-grid" in overrides_txt
+    assert ".k-layout-comparison" in overrides_txt
+    assert ".k-layout-timeline" in overrides_txt
+    assert ".k-layout-anatomy" in overrides_txt
+    player_txt = (cdir / "assets" / "js" / "player_engine.js").read_text(encoding="utf-8")
+    assert 'pCard.classList.add("visible")' not in player_txt
 
 
 def test_5layer_course_integrity_and_zero_audition_pollution() -> None:

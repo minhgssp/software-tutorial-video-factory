@@ -1,11 +1,11 @@
 {
   "id": "b5",
-  "label": "5. [Thực hành B2/3] Gõ /start và chọn chuẩn lệnh /start-1-1",
+  "label": "5. Bước 2: Gõ /start và chọn chuẩn lệnh /start-1-1",
   "duration": 9.13,
   "pose": 5,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Gọi quy trình học tập",
+  "pedagogy_badge": "👆 Thực hành Bước 2/3 · Gọi quy trình học tập",
   "pedagogy_title": "Bước 2: Mở tệp 1.1_Welcome.md và chọn lệnh /start-1-1",
   "pedagogy_note": "Sau khi chọn /start-1-1 từ bảng gợi ý, kiểm tra ô nhập hiển thị đúng '/start-1-1' rồi bấm nút Gửi (→).",
   "onEnter": "kudoHidePopovers(); closeSettingsModal(); switchToSurface('ide'); openFileInEditor('1.1_Welcome.md'); kudoSelectStartWorkflowReadyToSend();",

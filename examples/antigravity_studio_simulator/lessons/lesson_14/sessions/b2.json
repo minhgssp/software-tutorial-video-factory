@@ -1,11 +1,11 @@
 {
   "id": "b2",
-  "label": "2. [Lý thuyết Kiểu 2] Quan sát bảng dữ liệu gốc sales_data.csv trong IDE",
+  "label": "2. Minh họa: Quan sát bảng dữ liệu gốc sales_data.csv trong IDE",
   "duration": 13.69,
   "pose": 2,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Khảo sát Bảng Dữ liệu Gốc",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Khảo sát Bảng Dữ liệu Gốc",
   "pedagogy_title": "Đọc cấu trúc các cột của tệp sales_data.csv bằng Office Viewer",
   "pedagogy_note": "Quan sát các cột: Tháng, Khu vực, Gói sản phẩm (Enterprise/SMB), Doanh thu và Tỷ lệ rời bỏ (Churn Rate).",
   "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); setEditorMode('wysiwyg'); openFileInEditor('sales_data.csv');",

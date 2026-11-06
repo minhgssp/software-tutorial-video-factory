@@ -1,11 +1,11 @@
 {
   "id": "b2",
-  "label": "2. [Lý thuyết Kiểu 2] Quan sát tiện ích xem Slide ngay trong Antigravity IDE",
+  "label": "2. Minh họa: Quan sát tiện ích xem Slide ngay trong Antigravity IDE",
   "duration": 13.53,
   "pose": 2,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Xem Slide Ngay Trong IDE",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Xem Slide Ngay Trong IDE",
   "pedagogy_title": "Kết hợp tiện ích Muty PPT Viewer và chế độ xem trước Slide HTML",
   "pedagogy_note": "Bạn có thể duyệt từng trang Slide báo cáo ngay tại cột giữa của Antigravity IDE mà không cần chuyển cửa sổ.",
   "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › slide_trinh_hdqt_q2.html (Slide 1/5)', editorTitle:'📽️ slide_trinh_hdqt_q2.html — Bộ Slide Thuyết Trình HĐQT (16:9)', editorHtml:'<div style=\"padding:20px;background:#fbf8f3;border:2px solid #ea580c;border-radius:12px;\"><div style=\"display:flex;justify-content:space-between;font-size:11px;font-weight:800;color:#9a3412;\"><span>SLIDE 01 / 05 · BÁO CÁO HỘI ĐỒNG QUẢN TRỊ</span><span>TASKFLOW INC. · Q2/2026</span></div><h2 style=\"color:#1c1917;margin:8px 0 14px 0;font-size:19px;\">Gói Enterprise đóng góp 68,1% doanh thu Q1; Quý 2 tập trung giảm 30% Churn nhóm SMB</h2><div style=\"display:grid;grid-template-columns:repeat(3,1fr);gap:10px;\"><div style=\"background:#fff;padding:12px;border-radius:8px;border:1px solid #fed7aa;\"><div style=\"font-size:11px;color:#9a3412;font-weight:700;\">DOANH THU QUÝ 1</div><div style=\"font-size:20px;font-weight:900;color:#15803d;margin:4px 0;\">1,85 Tỷ VNĐ</div><div style=\"font-size:12px;\">Hoàn thành 104% kế hoạch</div></div><div style=\"background:#fff;padding:12px;border-radius:8px;border:1px solid #fed7aa;\"><div style=\"font-size:11px;color:#9a3412;font-weight:700;\">TRỌNG TÂM QUÝ 2</div><div style=\"font-size:20px;font-weight:900;color:#ea580c;margin:4px 0;\">14 ngày &rarr; 3 ngày</div><div style=\"font-size:12px;\">Tự động hóa Onboarding</div></div><div style=\"background:#fff;padding:12px;border-radius:8px;border:1px solid #fed7aa;\"><div style=\"font-size:11px;color:#9a3412;font-weight:700;\">MỞ RỘNG ĐẠI LÝ</div><div style=\"font-size:20px;font-weight:900;color:#1d4ed8;margin:4px 0;\">+10 Đại lý IT</div><div style=\"font-size:12px;\">Chiết khấu 25% năm đầu</div></div></div></div>'});",

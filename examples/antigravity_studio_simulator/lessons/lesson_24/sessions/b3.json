@@ -1,20 +1,20 @@
 {
   "id": "b3",
-  "label": "3. [Lý thuyết Kiểu 2] Cơ chế lệnh /audit kiểm tra chéo số liệu giữa các tệp",
-  "duration": 13.45,
+  "label": "3. Kỹ thuật: Đối chiếu chéo số liệu và khóa bảo mật .gitignore",
+  "duration": 14.25,
   "pose": 3,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Cơ chế Thanh tra Độc lập (/audit)",
-  "pedagogy_title": "Lệnh /audit đối chiếu số liệu từ bảng CSV gốc tới tận trang Slide cuối cùng",
-  "pedagogy_note": "Thanh tra AI kiểm tra 3 lớp: (1) Khớp số liệu gốc, (2) Tuân thủ .agent/rules/, (3) Đầy đủ trích dẫn nguồn.",
-  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › bien_ban_audit_du_an.md', editorTitle:'🔍 bien_ban_audit_du_an.md — Biên Bản Kiểm Toán Độc Lập', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#15803d;margin-top:0;\">BIÊN BẢN KIỂM TOÁN CHẤT LƯỢNG ĐỘC LẬP (/AUDIT)</h3><table style=\"width:100%;border-collapse:collapse;font-size:13px;\"><tr style=\"background:#ecfdf5;\"><th style=\"padding:7px;border:1px solid #6ee7b7;text-align:left;\">Hạng mục kiểm toán</th><th style=\"padding:7px;border:1px solid #6ee7b7;text-align:left;\">Đối chiếu chéo</th><th style=\"padding:7px;border:1px solid #6ee7b7;text-align:center;\">Kết quả</th></tr><tr><td style=\"padding:7px;border:1px solid #6ee7b7;\">1. Độ khớp số liệu Doanh thu Q1</td><td style=\"padding:7px;border:1px solid #6ee7b7;\"><code>sales_data.csv</code> &harr; <code>slide_trinh_hdqt_q2.html</code> (1,85 tỷ VNĐ)</td><td style=\"padding:7px;border:1px solid #6ee7b7;text-align:center;font-weight:700;color:#15803d;\">100% Khớp</td></tr><tr><td style=\"padding:7px;border:1px solid #6ee7b7;\">2. Chỉ tiêu giảm Churn Rate</td><td style=\"padding:7px;border:1px solid #6ee7b7;\"><code>COMPANY.md</code> &harr; <code>ho_so_tuyen_dung_cs.md</code> (6,2% &rarr; 4,3%)</td><td style=\"padding:7px;border:1px solid #6ee7b7;text-align:center;font-weight:700;color:#15803d;\">100% Khớp</td></tr><tr><td style=\"padding:7px;border:1px solid #6ee7b7;\">3. Quy chuẩn Văn phong &amp; Pháp lý</td><td style=\"padding:7px;border:1px solid #6ee7b7;\"><code>.agent/rules/</code> &amp; <code>quy_che_hop_dong_chuan.md</code></td><td style=\"padding:7px;border:1px solid #6ee7b7;text-align:center;font-weight:700;color:#15803d;\">Đạt chuẩn</td></tr></table></div>'});",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Đối chiếu Chéo & Bảo mật",
+  "pedagogy_title": "Kiểm tra độ khớp số liệu từ bảng CSV gốc tới trang Slide và cấu hình .gitignore",
+  "pedagogy_note": "Đảm bảo 3 tiêu chuẩn trước khi trình ký: (1) Khớp số liệu gốc, (2) Đúng quy chuẩn .agent/rules/, (3) Đã ẩn tệp mật trong .gitignore.",
+  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › bien_ban_nghiem_thu_du_an.md', editorTitle:'🔍 bien_ban_nghiem_thu_du_an.md — Biên Bản Đối Chiếu & Bảo Mật', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#15803d;margin-top:0;\">BIÊN BẢN TỔNG DUYỆT CHẤT LƯỢNG &amp; BẢO MẬT DỰ ÁN</h3><table style=\"width:100%;border-collapse:collapse;font-size:13px;\"><tr style=\"background:#ecfdf5;\"><th style=\"padding:7px;border:1px solid #6ee7b7;text-align:left;\">Hạng mục kiểm tra</th><th style=\"padding:7px;border:1px solid #6ee7b7;text-align:left;\">Tệp đối chiếu</th><th style=\"padding:7px;border:1px solid #6ee7b7;text-align:center;\">Kết quả</th></tr><tr><td style=\"padding:7px;border:1px solid #6ee7b7;\">1. Độ khớp số liệu Doanh thu Q1</td><td style=\"padding:7px;border:1px solid #6ee7b7;\"><code>sales_data.csv</code> &harr; <code>slide_trinh_hdqt_q2.html</code> (1,85 tỷ VNĐ)</td><td style=\"padding:7px;border:1px solid #6ee7b7;text-align:center;font-weight:700;color:#15803d;\">100% Khớp</td></tr><tr><td style=\"padding:7px;border:1px solid #6ee7b7;\">2. Chỉ tiêu giảm Churn Rate</td><td style=\"padding:7px;border:1px solid #6ee7b7;\"><code>COMPANY.md</code> &harr; <code>ho_so_tuyen_dung_cs.md</code> (6,2% &rarr; 4,3%)</td><td style=\"padding:7px;border:1px solid #6ee7b7;text-align:center;font-weight:700;color:#15803d;\">100% Khớp</td></tr><tr><td style=\"padding:7px;border:1px solid #6ee7b7;\">3. Bảo mật hồ sơ nhạy cảm</td><td style=\"padding:7px;border:1px solid #6ee7b7;\">Đã thêm <code>danh_sach_ung_vien.csv</code> vào <code>.gitignore</code></td><td style=\"padding:7px;border:1px solid #6ee7b7;text-align:center;font-weight:700;color:#15803d;\">An toàn</td></tr></table></div>'});",
   "focus_selectors": [
     "#editor-canvas"
   ],
   "cursor_selector": "#editor-canvas",
-  "cursor_label": "Biên bản /audit đối chiếu chéo số liệu 100% khớp",
-  "caption": "Trên màn hình là biên bản do lệnh <code>/audit</code> xuất ra: Nó tự động đối chiếu con số 1,85 tỷ đồng từ bảng <code>sales_data.csv</code> gốc tới tận trang Slide thuyết trình và xác nhận toàn bộ các tệp đều khớp nhau 100%.",
+  "cursor_label": "Biên bản đối chiếu chéo số liệu 100% khớp & an toàn",
+  "caption": "Trên màn hình là biên bản tổng duyệt dự án: Trợ lý tự động đối chiếu con số 1,85 tỷ đồng từ bảng <code>sales_data.csv</code> gốc tới tận trang Slide thuyết trình, đồng thời kiểm tra tệp <code>.gitignore</code> để đảm bảo danh sách ứng viên được bảo mật an toàn.",
   "audio_src": "audio/lesson_24/b3.mp3",
-  "audio_duration": 12.8
+  "audio_duration": 13.6
 }

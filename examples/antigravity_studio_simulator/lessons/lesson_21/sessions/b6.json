@@ -1,13 +1,13 @@
 {
   "id": "b6",
-  "label": "6. [Thực hành B3/3] Nghiệm thu Đề án Giày Bã Mía & Sang Bài 22",
+  "label": "6. Bước 3: Hoàn tất Đề án Giày Bã Mía",
   "duration": 13.05,
   "pose": 6,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Nghiệm thu Case Study 1",
-  "pedagogy_title": "Bước 3: Nghiệm thu bản kế hoạch 7 bước ke_hoach_giay_ba_mia_2026.md",
-  "pedagogy_note": "Nghiệm thu: Đề án Giày Bã Mía hoàn chỉnh cả 7 bước. Tiếp theo: Bài 22 (Tình huống 2) Tự động hóa Tuyển dụng & Nhân sự (HR).",
+  "pedagogy_badge": "✅ Thực hành Bước 3/3 · Hoàn thành Case Study 1",
+  "pedagogy_title": "Bước 3: Kiểm tra kết quả bản kế hoạch 7 bước ke_hoach_giay_ba_mia_2026.md",
+  "pedagogy_note": "Đề án Giày Bã Mía hoàn chỉnh cả 7 bước.",
   "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › ke_hoach_giay_ba_mia_2026.md (Hoàn tất 7 Bước)', editorTitle:'🌱 ke_hoach_giay_ba_mia_2026.md — Kế Hoạch Chiến Lược Giày Bã Mía', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#15803d;margin-top:0;\">KẾ HOẠCH CHIẾN LƯỢC 7 BƯỚC — THƯƠNG HIỆU GIÀY BÃ MÍA</h2><ol><li><strong>Định vị &amp; USP:</strong> Giày siêu nhẹ kháng nước từ sợi bã mía Việt Nam, phân hủy sinh học.</li><li><strong>Chân dung khách hàng:</strong> Nhân sự văn phòng 22-35 tuổi tại Hà Nội &amp; TP.HCM.</li><li><strong>Chiến lược giá:</strong> 890.000 VNĐ/đôi (Combo 2 đôi: 1.650.000 VNĐ).</li><li><strong>Chiến dịch Ra mắt:</strong> Pre-order 500 đôi đầu tiên trong 30 ngày.</li><li><strong>Điểm hòa vốn:</strong> Đạt tại mốc 1.200 đôi tiêu thụ.</li></ol></div>', userMsg:'@08_quy_trinh_lap_ke_hoach_chien_luoc.md /plan Xuất bản kế hoạch 7 bước vào ke_hoach_giay_ba_mia_2026.md', aiMsg:'Đã hoàn tất nhân bản khung chiến lược 7 bước từ 5balance sang đề án mới tại <code>ke_hoach_giay_ba_mia_2026.md</code>!'});",
   "focus_selectors": [
     "#editor-canvas",

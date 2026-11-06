@@ -1,13 +1,13 @@
 {
   "id": "b6",
-  "label": "6. [Thực hành B3/3] Nghiệm thu AI giảng bài & Chuyển sang Chương 2",
+  "label": "6. Bước 3: Hoàn tất AI giảng bài",
   "duration": 14.15,
   "pose": 6,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Nghiệm thu Chương 1",
+  "pedagogy_badge": "✅ Thực hành Bước 3/3 · Hoàn thành Chương 1",
   "pedagogy_title": "Bước 3: Trợ lý AI tự động đọc giáo trình và dẫn dắt thực hành từng bước",
-  "pedagogy_note": "Nghiệm thu: AI phản hồi kịch bản tương tác Module 1.1 tại khung chat phải. Tiếp theo: Chương 2 (Bài 5) làm chủ định dạng .md, .csv & Office Viewer.",
+  "pedagogy_note": "AI phản hồi kịch bản tương tác Module 1.1 tại khung chat phải.",
   "onEnter": "kudoHidePopovers(); switchToSurface('ide'); kudoRunStart11ExecutedDemo();",
   "focus_selectors": [
     "#ide-chat-messages",

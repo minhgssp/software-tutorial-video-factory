@@ -1,13 +1,13 @@
 {
   "id": "b6",
-  "label": "6. [Thực hành B3/3] Bôi đen trích dẫn Ctrl+L & Tiếp nối Bài 7",
+  "label": "6. Bước 3: Bôi đen trích dẫn Ctrl+L",
   "duration": 12.65,
   "pose": 6,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Trích dẫn & Nghiệm thu",
+  "pedagogy_badge": "👆 Thực hành Bước 3/3 · Trích dẫn & Nghiệm thu",
   "pedagogy_title": "Bước 3: Bôi đen đoạn văn cần sửa và nhấn Ctrl + L",
-  "pedagogy_note": "Nghiệm thu: Ô chat nhận chính xác tọa độ dòng @0.1_Introduction.md#L7-L8. Tiếp theo: Bài 7 xây dựng hồ sơ cá nhân @troly.md.",
+  "pedagogy_note": "Ô chat nhận chính xác tọa độ dòng @0.1_Introduction.md#L7-L8.",
   "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); kudoActivateQuoteDemo();",
   "focus_selectors": [
     "#kudo-quote-highlight",

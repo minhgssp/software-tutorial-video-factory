@@ -1,12 +1,12 @@
 {
   "id": "b4",
-  "label": "4. [Thực hành B1/3] Bối cảnh & Mở bài viết cần minh họa",
+  "label": "4. Bước 1: Mở bài viết cần minh họa",
   "duration": 9.61,
   "pose": 4,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 1/3 · Chọn bài viết cần minh họa",
-  "pedagogy_title": "Bối cảnh: Cần tạo bộ ảnh bìa và Infographic cho bài viết ở Bài 18",
+  "pedagogy_badge": "👆 Thực hành Bước 1/3 · Chọn bài viết cần minh họa",
+  "pedagogy_title": "Cần tạo bộ ảnh bìa và Infographic cho bài viết ở Bài 18",
   "pedagogy_note": "Bước 1: Mở tệp chien_dich_noi_dung_q2.md để xác định các ý chính cần chuyển thành hình ảnh.",
   "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › chien_dich_noi_dung_q2.md', editorTitle:'📝 chien_dich_noi_dung_q2.md — Xác định các điểm cần minh họa', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">ĐANG CHỌN NỘI DUNG CẦN MINH HỌA</h3><p>Cần thiết kế: (1) Ảnh bìa Blog tỷ lệ 16:9 và (2) Sơ đồ Infographic 3 ngày Onboarding đồng bộ tông màu kem - cam đất.</p></div>'});",
   "focus_selectors": [

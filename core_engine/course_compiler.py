@@ -230,19 +230,25 @@ class CourseIntegrityAuditor:
             if "body.in-iframe .ksb-brand-bar" not in sidebar_css:
                 errors.append("Missing 'body.in-iframe .ksb-brand-bar' anti-duplication rule in player_sidebar_layout.css")
 
-        # 3b. Verify Stage Pedagogy Card & 4 Theory Type 1 Visual Layouts in simulator_overrides.css
+        # 3b. Verify Zero Floating Textbox Overlay (PROP-261106-01 Rule 4) & 4 Theory Visual Layouts
         overrides_css_path = root / "assets" / "css" / "simulator_overrides.css"
         if overrides_css_path.exists():
             overrides_css = overrides_css_path.read_text(encoding="utf-8", errors="ignore")
             for required_token in (
-                "#kudo-stage-pedagogy-card",
-                ".k-vh-flow",
-                ".k-vh-compare-grid",
-                ".k-vh-timeline",
-                ".k-vh-anatomy-grid",
+                ".k-layout-comparison",
+                ".k-layout-timeline",
+                ".k-layout-anatomy",
             ):
                 if required_token not in overrides_css:
-                    warnings.append(f"Missing visual pedagogy rule '{required_token}' in simulator_overrides.css")
+                    warnings.append(f"Missing visual layout rule '{required_token}' in simulator_overrides.css")
+
+        player_js_path = root / "assets" / "js" / "player_engine.js"
+        if player_js_path.exists():
+            player_js = player_js_path.read_text(encoding="utf-8", errors="ignore")
+            if 'pCard.classList.add("visible")' in player_js:
+                errors.append(
+                    "Violation of PROP-261106-01 Rule 4: Floating pedagogy textbox overlay (pCard.classList.add('visible')) is forbidden on simulation screens; split into independent slides/beats instead."
+                )
 
         # 4. Verify lessons, pedagogical metadata, slides, sessions, and audio references
         manifest_path = root / "config" / "course_manifest.json"

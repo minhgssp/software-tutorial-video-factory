@@ -6,14 +6,14 @@
   "chapter_number": 4,
   "chapter_code": "CHƯƠNG 4",
   "chapter_title": "Xử lý Dữ liệu, Bảng tính & Phối hợp Đội nhóm",
-  "title": "Điều phối Đa Tác nhân (Sub-Agents) Chạy Song song Cho Dự án Lớn",
-  "short_title": "Điều phối Đa Tác nhân Song song",
-  "pill_label": "Bài 15 · Đa Tác nhân Song song",
-  "description": "Nhân gấp 3 tốc độ xử lý công việc bằng cách chia một dự án lớn thành nhiều nhánh độc lập và điều phối các Trợ lý con (Sub-Agents / Parallel Threads) làm việc đồng thời trên Antigravity 2.0 và IDE.",
+  "title": "Phối hợp Nhiều Luồng Công việc Song song Cho Dự án Lớn",
+  "short_title": "Phối hợp Đa Luồng Song song",
+  "pill_label": "Bài 15 · Đa Luồng Song song",
+  "description": "Nhân gấp 3 tốc độ xử lý công việc bằng cách chia một dự án lớn thành nhiều nhánh độc lập và điều phối các luồng Trợ lý AI song song (Multi-Threads) làm việc đồng thời trên Antigravity 2.0 và IDE.",
   "prerequisites": "Bài 13 (Bóc tách tài liệu) & Bài 14 (Phân tích bảng tính CSV).",
-  "dependents": "Bài 16 (Đồng bộ toàn bộ kết quả của đội ngũ Sub-Agents lên GitHub và Google Drive).",
+  "dependents": "Bài 16 (Đồng bộ toàn bộ kết quả của các luồng công việc song song lên GitHub và Google Drive).",
   "placement_risk": "0% Rủi ro — Học viên đã thành thạo việc giao 1 nhiệm vụ đơn lẻ trước khi học cách tách 3 nhiệm vụ chạy song song.",
-  "continuity_bridge": "Sau khi tạo ra nhiều tệp báo cáo từ các Sub-Agents ở Bài 15, Bài 16 sẽ hướng dẫn cách đồng bộ và sao lưu toàn bộ kho kết quả này lên đám mây cho đồng nghiệp.",
+  "continuity_bridge": "Sau khi tạo ra nhiều tệp báo cáo từ các luồng chạy song song ở Bài 15, Bài 16 sẽ hướng dẫn cách đồng bộ và sao lưu toàn bộ kho kết quả này lên đám mây cho đồng nghiệp.",
   "slide_ids": [
     "s1"
   ],
@@ -26,6 +26,6 @@
     "b6"
   ],
   "beats_count": 6,
-  "total_duration_sec": 71.6,
-  "duration_formatted": "01:12"
+  "total_duration_sec": 71.3,
+  "duration_formatted": "01:11"
 }

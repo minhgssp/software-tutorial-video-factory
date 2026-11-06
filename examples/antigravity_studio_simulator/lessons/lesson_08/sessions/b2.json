@@ -1,11 +1,11 @@
 {
   "id": "b2",
-  "label": "2. [Lý thuyết Kiểu 2] Nhận biết khi nào cần tạo phiên chat mới (+)",
+  "label": "2. Minh họa: Nhận biết khi nào cần tạo phiên chat mới (+)",
   "duration": 10.49,
   "pose": 2,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Quản lý Phiên Chat (Threads)",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Quản lý Phiên Chat (Threads)",
   "pedagogy_title": "Cách đóng phiên chat cũ đã dài và mở phiên chat mới sạch sẽ",
   "pedagogy_note": "Mỗi khi chuyển sang một đầu việc mới hoặc cuối ngày làm việc, hãy yêu cầu AI ghi sổ bàn giao trước khi mở phiên mới.",
   "onEnter": "kudoSimScene({surface:'ide', file:'COMPANY.md', userMsg:'Tổng hợp toàn bộ các việc chúng ta đã làm từ sáng đến giờ', aiMsg:'Luồng hội thoại hiện tại đã trải qua 18 bước xử lý. Để bộ nhớ luôn sắc bén, bạn nên chốt kết quả vào tệp <code>ban_giao_cong_viec.md</code> trên ổ cứng!'});",

@@ -1,13 +1,13 @@
 {
   "id": "b6",
-  "label": "6. [Thực hành B3/3] Nghiệm thu liên kết đồng bộ & Chuyển sang Chương 5",
+  "label": "6. Bước 3: Hoàn tất liên kết đồng bộ",
   "duration": 14.85,
   "pose": 6,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Nghiệm thu Chương 4",
+  "pedagogy_badge": "✅ Thực hành Bước 3/3 · Hoàn thành Chương 4",
   "pedagogy_title": "Bước 3: Nhận biên bản xác nhận mã phiên bản GitHub và đường dẫn Google Drive",
-  "pedagogy_note": "Nghiệm thu: Tài liệu đã an toàn trên cả GitHub lẫn Google Drive. Tiếp theo: Chương 5 (Bài 17) sản xuất Nội dung, Hình ảnh, Slide & Báo cáo Web.",
+  "pedagogy_note": "Tài liệu đã an toàn trên cả GitHub lẫn Google Drive.",
   "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › Xác nhận Đồng bộ Đám mây', editorTitle:'☁️ Biên bản Đồng bộ GitHub & Google Drive Thành công', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#15803d;margin-top:0;\">✅ ĐỒNG BỘ HOÀN TẤT 100%</h2><ul><li><strong>Tệp đã đồng bộ:</strong> <code>bao_cao_doanh_thu_q1.md</code></li><li><strong>Mã mốc lịch sử (Git Commit):</strong> <code>#8f4a2c1</code> — <em>\"Chốt báo cáo doanh thu Quý 1\"</em></li><li><strong>Vị trí Google Drive:</strong> <code>Drive / TaskFlow_2026 / Bao_Cao_HDQT / bao_cao_doanh_thu_q1.md</code></li></ul></div>', userMsg:'@bao_cao_doanh_thu_q1.md Hãy lưu mốc lịch sử phiên bản và tải tệp này lên Google Drive Ban Giám đốc.', aiMsg:'Đã hoàn tất! Tệp <code>bao_cao_doanh_thu_q1.md</code> đã được lưu mốc phiên bản trên GitHub và đồng bộ lên Google Drive Ban Giám đốc.'});",
   "focus_selectors": [
     "#editor-canvas",

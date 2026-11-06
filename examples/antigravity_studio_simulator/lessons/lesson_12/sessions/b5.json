@@ -1,11 +1,11 @@
 {
   "id": "b5",
-  "label": "5. [Thực hành B2/3] Gõ /plan để xuất bản kế hoạch ke_hoach_mo_rong_b2b_q2.md",
+  "label": "5. Bước 2: Gõ /plan để xuất bản kế hoạch ke_hoach_mo_rong_b2b_q2.md",
   "duration": 14.4,
   "pose": 5,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Lập bản vẽ với /plan",
+  "pedagogy_badge": "👆 Thực hành Bước 2/3 · Lập bản vẽ với /plan",
   "pedagogy_title": "Bước 2: Sau khi chốt thông số, gõ lệnh /plan để AI lập kế hoạch chi tiết",
   "pedagogy_note": "AI kết hợp thông tin từ @COMPANY.md và câu trả lời của bạn để tạo tệp ke_hoach_mo_rong_b2b_q2.md.",
   "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › ke_hoach_mo_rong_b2b_q2.md (Bản kế hoạch /plan)', editorTitle:'🗺️ ke_hoach_mo_rong_b2b_q2.md — Bản Kế Hoạch Chờ Duyệt', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#9a3412;margin-top:0;\">KẾ HOẠCH MỞ RỘNG 10 ĐẠI LÝ IT B2B QUÝ 2 — TASKFLOW INC.</h2><ul><li><strong>Mục tiêu:</strong> Ký mới 10 đối tác tư vấn IT trước 30/06/2026.</li><li><strong>Chính sách hoa hồng:</strong> Chiết khấu 25% doanh thu gói Enterprise năm đầu.</li><li><strong>Lộ trình 3 giai đoạn:</strong> Tuần 1-2 (Bộ kit bán hàng) &rarr; Tuần 3-6 (Hội thảo đối tác) &rarr; Tuần 7-12 (Đào tạo &amp; Ký kết).</li></ul></div>', userMsg:'/plan Hãy lập bản kế hoạch mở rộng đại lý vào tệp ke_hoach_mo_rong_b2b_q2.md', aiMsg:'Đã hoàn tất bản kế hoạch tại <code>ke_hoach_mo_rong_b2b_q2.md</code> theo đúng 3 thông số bạn vừa chốt!'});",

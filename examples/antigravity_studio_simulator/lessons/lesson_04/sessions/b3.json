@@ -1,11 +1,11 @@
 {
   "id": "b3",
-  "label": "3. [Lý thuyết Kiểu 2] Cách chọn lệnh gạch chéo (/) không bị lỗi lặp chữ",
+  "label": "3. Kỹ thuật: Cách chọn lệnh gạch chéo (/) không bị lỗi lặp chữ",
   "duration": 14.25,
   "pose": 3,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Kỹ thuật gọi Lệnh Gạch chéo (/)",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Kỹ thuật gọi Lệnh Gạch chéo (/)",
   "pedagogy_title": "Tránh bẫy phím cách (Spacebar) khi bảng gợi ý lệnh / đang mở",
   "pedagogy_note": "Gõ /start -> Dùng chuột click hoặc nhấn phím Enter/Tab để chọn /start-1-1. Không bấm phím Space để tránh bị nhân đôi thành /start-1-1-1.",
   "onEnter": "kudoHidePopovers(); closeSettingsModal(); switchToSurface('ide'); openFileInEditor('1.1_Welcome.md'); kudoOpenStartWorkflowPopup();",

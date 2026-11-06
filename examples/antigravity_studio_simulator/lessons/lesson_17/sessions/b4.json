@@ -1,12 +1,12 @@
 {
   "id": "b4",
-  "label": "4. [Thực hành B1/3] Bối cảnh & Mở hồ sơ gốc để trích xuất thương hiệu",
+  "label": "4. Bước 1: Mở hồ sơ gốc để trích xuất thương hiệu",
   "duration": 9.21,
   "pose": 4,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 1/3 · Bối cảnh & Chọn tài liệu gốc",
-  "pedagogy_title": "Bối cảnh: Chuẩn bị chiến dịch ra mắt tính năng Onboarding 3 ngày của TaskFlow",
+  "pedagogy_badge": "👆 Thực hành Bước 1/3 · Chọn tài liệu gốc",
+  "pedagogy_title": "Chuẩn bị chiến dịch ra mắt tính năng Onboarding 3 ngày của TaskFlow",
   "pedagogy_note": "Bước 1: Mở tệp COMPANY.md ở cột trái để kiểm tra thông điệp cốt lõi của sản phẩm.",
   "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); openFileInEditor('COMPANY.md');",
   "focus_selectors": [

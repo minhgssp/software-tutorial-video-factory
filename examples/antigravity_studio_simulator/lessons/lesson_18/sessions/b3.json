@@ -1,11 +1,11 @@
 {
   "id": "b3",
-  "label": "3. [Lý thuyết Kiểu 2] Cấu trúc chuyển hóa 1 nội dung sang 3 định dạng kênh",
+  "label": "3. Kỹ thuật: Cấu trúc chuyển hóa 1 nội dung sang 3 định dạng kênh",
   "duration": 11.29,
   "pose": 3,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Đa Kênh Hóa (Repurposing)",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Chuyển Hóa Nội Dung Đa Kênh",
   "pedagogy_title": "Quan sát sự khác biệt bố cục giữa Bài LinkedIn và Email B2B",
   "pedagogy_note": "Cùng một thông điệp 'Onboarding 3 ngày', nhưng bài mạng xã hội mở đầu bằng câu hỏi gây tò mò, còn Email mở đầu bằng lợi ích trực tiếp cho người nhận.",
   "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › chien_dich_noi_dung_q2.md (Chi tiết 2 kênh)', editorTitle:'📱 Đối sánh Bài đăng LinkedIn vs. Email Gửi Giám đốc', editorHtml:'<div style=\"padding:16px;display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:13px;\"><div style=\"background:#fff7ed;border:1px solid #fed7aa;padding:12px;border-radius:8px;\"><strong style=\"color:#9a3412;\">1. BÀI ĐĂNG LINKEDIN / FACEBOOK</strong><p>Vì sao nhân viên mới mất tới 14 ngày vẫn chưa bắt nhịp được quy trình phòng ban?</p><p>Tại TaskFlow, chúng tôi rút ngắn con số này xuống đúng <strong>3 ngày</strong> nhờ danh mục hướng dẫn tự động...</p></div><div style=\"background:#f0fdf4;border:1px solid #bbf7d0;padding:12px;border-radius:8px;\"><strong style=\"color:#15803d;\">2. EMAIL GỬI CEO DOANH NGHIỆP SMB</strong><p><strong>Tiêu đề:</strong> Giải pháp giảm 30% tỷ lệ nghỉ việc tháng đầu cho đội ngũ 50 nhân sự</p><p>Kính gửi Anh/Chị, gửi tặng Anh/Chị bộ khung bàn giao công việc trong 3 ngày đã áp dụng thành công...</p></div></div>'});",

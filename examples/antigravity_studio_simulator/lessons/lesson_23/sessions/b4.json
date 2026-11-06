@@ -1,12 +1,12 @@
 {
   "id": "b4",
-  "label": "4. [Thực hành B1/3] Bối cảnh & Mở bản dự thảo hợp đồng đối tác gửi",
+  "label": "4. Bước 1: Mở bản dự thảo hợp đồng đối tác gửi",
   "duration": 8.09,
   "pose": 4,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 1/3 · Kiểm tra Dự thảo Hợp đồng",
-  "pedagogy_title": "Bối cảnh: Đại lý Sao Việt gửi bản dự thảo hợp đồng cần ký gấp chiều nay",
+  "pedagogy_badge": "👆 Thực hành Bước 1/3 · Kiểm tra Dự thảo Hợp đồng",
+  "pedagogy_title": "Đại lý Sao Việt gửi bản dự thảo hợp đồng cần ký gấp chiều nay",
   "pedagogy_note": "Bước 1: Mở tệp hop_dong_dai_ly_du_thao.md ở cột giữa để chuẩn bị rà soát chéo.",
   "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › hop_dong_dai_ly_du_thao.md', editorTitle:'📄 hop_dong_dai_ly_du_thao.md — Dự Thảo Do Đối Tác Gửi', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">DỰ THẢO HỢP ĐỒNG ĐẠI LÝ PHÂN PHỐI (ĐỐI TÁC SOẠN)</h3><p><strong>Điều 3.1:</strong> Mức chiết khấu đại lý năm đầu là 25%.</p><p><strong>Điều 4.2 (Dòng 28):</strong> Bên B thanh toán công nợ cho Bên A trong vòng 45 ngày kể từ ngày kết thúc quý.</p></div>'});",
   "focus_selectors": [

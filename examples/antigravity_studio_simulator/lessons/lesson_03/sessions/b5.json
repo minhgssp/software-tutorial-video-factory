@@ -1,13 +1,13 @@
 {
   "id": "b5",
-  "label": "5. [Thực hành B2/3] Gõ câu hỏi tiếng Việt vào khung chat khi quên thao tác",
+  "label": "5. Bước 2: Gõ câu hỏi tiếng Việt vào khung chat khi quên thao tác",
   "duration": 8.41,
   "pose": 5,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Hỏi trực tiếp Trợ lý AI",
+  "pedagogy_badge": "👆 Thực hành Bước 2/3 · Hỏi trực tiếp Trợ lý AI",
   "pedagogy_title": "Bước 2: Nhập câu hỏi bằng tiếng Việt vào ô chat phải rồi bấm Gửi (→)",
-  "pedagogy_note": "Khi quên phím tắt mở lại cột trái hoặc chế độ xem đẹp, hãy gõ câu hỏi vào ô nhập #ide-chat-input và nhấn Gửi.",
+  "pedagogy_note": "Khi quên phím tắt mở lại cột trái hoặc chế độ xem đẹp, hãy gõ câu hỏi vào ô nhập tin nhắn ở cột phải và nhấn Gửi.",
   "onEnter": "kudoSimScene({surface:'ide', file:'0.1_Introduction.md', clearChat:true, chatInput:'Tôi lỡ tay bấm tắt mất cột cây thư mục bên trái, làm sao để mở lại nhanh và xem tệp Markdown cho dễ đọc?'});",
   "focus_selectors": [
     "#ide-chat-input",

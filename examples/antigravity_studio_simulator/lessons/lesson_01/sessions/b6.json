@@ -1,13 +1,13 @@
 {
   "id": "b6",
-  "label": "6. [Thực hành B3/3] Nghiệm thu màn hình chào mừng Antigravity IDE",
+  "label": "6. Bước 3: Hoàn tất màn hình chào mừng Antigravity IDE",
   "duration": 12.81,
   "pose": 6,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Nghiệm thu & Tiếp nối",
+  "pedagogy_badge": "✅ Thực hành Bước 3/3 · Kết quả hoàn thành",
   "pedagogy_title": "Bước 3: Màn hình chào mừng Antigravity IDE sẵn sàng nhận thư mục",
-  "pedagogy_note": "Nghiệm thu: Cửa sổ Antigravity IDE mở ra ở màn hình Welcome (chưa mở thư mục). Tiếp theo: Bài 2 học giải nén .zip & bấm Open Folder.",
+  "pedagogy_note": "Cửa sổ Antigravity IDE mở ra ở màn hình Welcome (chưa mở thư mục).",
   "onEnter": "kudoHidePopovers(); switchToSurface('ide'); showIdeWelcomeScreen();",
   "focus_selectors": [
     "#ide-left-sidebar",

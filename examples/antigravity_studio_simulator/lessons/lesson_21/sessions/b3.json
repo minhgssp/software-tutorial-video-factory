@@ -1,11 +1,11 @@
 {
   "id": "b3",
-  "label": "3. [Lý thuyết Kiểu 2] Cách kết hợp khuôn mẫu có sẵn với lệnh /grill-me",
+  "label": "3. Kỹ thuật: Cách kết hợp khuôn mẫu có sẵn với lệnh /grill-me",
   "duration": 11.53,
   "pose": 3,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Phỏng vấn Theo Khuôn 7 Bước",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Phỏng vấn Theo Khuôn 7 Bước",
   "pedagogy_title": "AI dựa vào 7 bước trong tệp mẫu để đặt câu hỏi phỏng vấn người dùng",
   "pedagogy_note": "Nhờ có tệp mẫu đính kèm bằng @, lệnh /grill-me không hỏi lan man mà hỏi xoáy đúng 7 mảnh ghép còn thiếu của dự án Giày Bã Mía.",
   "onEnter": "kudoRunGrillAndPlanDemo();",

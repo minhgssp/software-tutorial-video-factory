@@ -1,14 +1,14 @@
 {
   "id": "b5",
-  "label": "5. [Thực hành B2/3] Yêu cầu AI lập Lộ trình 30 ngày áp dụng cho bản thân",
+  "label": "5. Bước 2: Yêu cầu AI lập Lộ trình 30 ngày áp dụng cho bản thân",
   "duration": 11.93,
   "pose": 5,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Lập Lộ trình 30 Ngày Ứng dụng",
+  "pedagogy_badge": "👆 Thực hành Bước 2/3 · Lập Lộ trình 30 Ngày",
   "pedagogy_title": "Bước 2: Nhờ AI dựa trên @troly.md để thiết kế kế hoạch 30 ngày áp dụng thực tế",
   "pedagogy_note": "Biến kiến thức trong khóa học thành thói quen hàng ngày tại doanh nghiệp của bạn thông qua tệp lo_trinh_30_ngay_cua_toi.md.",
-  "onEnter": "kudoSimScene({surface:'ide', clearChat:true, chatInput:'@troly.md @bien_ban_audit_du_an.md Hãy lập giúp tôi Lộ trình 30 ngày ứng dụng Antigravity IDE vào công việc thực tế hàng ngày và lưu tại lo_trinh_30_ngay_cua_toi.md'});",
+  "onEnter": "kudoSimScene({surface:'ide', clearChat:true, chatInput:'@troly.md @bien_ban_nghiem_thu_du_an.md Hãy lập giúp tôi Lộ trình 30 ngày ứng dụng Antigravity IDE vào công việc thực tế hàng ngày và lưu tại lo_trinh_30_ngay_cua_toi.md'});",
   "focus_selectors": [
     "#ide-chat-input",
     "#ide-send-btn"

@@ -1,11 +1,11 @@
 {
   "id": "b2",
-  "label": "2. [Lý thuyết Kiểu 2] Quan sát kho hồ sơ nhiều tệp trên cây thư mục",
+  "label": "2. Minh họa: Quan sát kho hồ sơ nhiều tệp trên cây thư mục",
   "duration": 10.65,
   "pose": 2,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Quản lý Kho Hồ sơ Lớn",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Quản lý Kho Hồ sơ Lớn",
   "pedagogy_title": "Đối diện với thư mục chứa nhiều tệp tài liệu chiến lược & vận hành",
   "pedagogy_note": "Quan sát cột trái gồm COMPANY.md, INDEX.md, các Module và bảng dữ liệu: Cần lập bản đồ mục lục trước khi đọc sâu.",
   "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); openFileInEditor('INDEX.md');",

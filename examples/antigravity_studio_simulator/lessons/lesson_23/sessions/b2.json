@@ -1,11 +1,11 @@
 {
   "id": "b2",
-  "label": "2. [Lý thuyết Kiểu 2] Quan sát tệp Quy chế Hợp đồng Chuẩn của công ty",
+  "label": "2. Minh họa: Quan sát tệp Quy chế Hợp đồng Chuẩn của công ty",
   "duration": 11.77,
   "pose": 2,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Danh mục Bảo vệ Pháp lý (Checklist)",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Danh mục Bảo vệ Pháp lý (Checklist)",
   "pedagogy_title": "4 chốt chặn bắt buộc trong tệp quy_che_hop_dong_chuan.md",
   "pedagogy_note": "Mọi hợp đồng đại lý của TaskFlow phải đảm bảo: Hạn thanh toán tối đa 15 ngày, Chiết khấu không quá 25% và bắt buộc có điều khoản Bảo mật NDA.",
   "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › quy_che_hop_dong_chuan.md', editorTitle:'⚖️ quy_che_hop_dong_chuan.md — Chốt Chặn Pháp Lý TaskFlow', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">CHỐT CHẶN BẮT BUỘC KHI KÝ HỢP ĐỒNG ĐẠI LÝ B2B</h3><ol><li><strong>Thời hạn thanh toán công nợ:</strong> Tối đa <strong>15 ngày làm việc</strong> kể từ ngày xuất hóa đơn (Cấm chấp nhận 45-60 ngày).</li><li><strong>Mức chiết khấu đại lý:</strong> Tối đa <strong>25%</strong> doanh thu năm đầu tiên.</li><li><strong>Bảo mật dữ liệu (NDA):</strong> Bắt buộc có điều khoản phạt vi phạm nếu làm lộ danh sách khách hàng.</li></ol></div>'});",

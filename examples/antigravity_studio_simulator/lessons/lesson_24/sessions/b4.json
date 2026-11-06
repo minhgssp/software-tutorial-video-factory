@@ -1,21 +1,21 @@
 {
   "id": "b4",
-  "label": "4. [Thực hành B1/3] Bối cảnh & Kích hoạt lệnh /audit kiểm toán toàn dự án",
-  "duration": 9.85,
+  "label": "4. Bước 1: Yêu cầu AI đối chiếu chéo số liệu toàn dự án",
+  "duration": 10.49,
   "pose": 4,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 1/3 · Chạy Kiểm toán Độc lập (/audit)",
-  "pedagogy_title": "Bối cảnh: Tổng nghiệm thu toàn bộ hồ sơ dự án trước khi trình Hội đồng Quản trị",
-  "pedagogy_note": "Bước 1: Nhập lệnh /audit vào khung chat phải để yêu cầu rà soát chéo toàn bộ các tệp đã tạo.",
-  "onEnter": "kudoSimScene({surface:'ide', clearChat:true, chatInput:'/audit Hãy kiểm toán độc lập toàn bộ các tệp báo cáo, đề án, slide và hợp đồng trong dự án so với @COMPANY.md và @sales_data.csv, xuất biên bản vào bien_ban_audit_du_an.md'});",
+  "pedagogy_badge": "👆 Thực hành Bước 1/3 · Đối chiếu Chéo Số liệu",
+  "pedagogy_title": "Bước 1: Nhập câu lệnh rà soát chéo các tệp báo cáo trước khi trình Hội đồng Quản trị",
+  "pedagogy_note": "Đính kèm @COMPANY.md và @sales_data.csv để AI kiểm tra độ khớp số liệu của toàn bộ các tệp đã tạo.",
+  "onEnter": "kudoSimScene({surface:'ide', clearChat:true, chatInput:'@COMPANY.md @sales_data.csv Hãy đối chiếu chéo toàn bộ các tệp báo cáo, đề án, slide và hợp đồng trong dự án, đồng thời kiểm tra tệp .gitignore và xuất biên bản vào bien_ban_nghiem_thu_du_an.md'});",
   "focus_selectors": [
     "#ide-chat-input",
     "#ide-send-btn"
   ],
   "cursor_selector": "#ide-send-btn",
-  "cursor_label": "Bước 1: Gõ lệnh /audit kiểm toán toàn bộ dự án",
-  "caption": "Chúng ta bước vào bài thực hành tổng kết khóa học. Ở <strong>Bước 1</strong>, trước khi đóng gói hồ sơ gửi Ban Giám đốc, anh chị gõ lệnh <code>/audit</code> vào ô chat để kích hoạt quy trình thanh tra độc lập.",
+  "cursor_label": "Bước 1: Gửi lệnh đối chiếu chéo toàn bộ dự án",
+  "caption": "Chúng ta bước vào bài thực hành tổng kết khóa học. Ở <strong>Bước 1</strong>, trước khi đóng gói hồ sơ gửi Ban Giám đốc, anh chị đính kèm tệp gốc và yêu cầu trợ lý đối chiếu chéo số liệu toàn bộ dự án.",
   "audio_src": "audio/lesson_24/b4.mp3",
-  "audio_duration": 9.2
+  "audio_duration": 9.84
 }

@@ -1,13 +1,13 @@
 {
   "id": "b6",
-  "label": "6. [Thực hành B3/3] Nghiệm thu AI nối mạch hoàn hảo & Sang Chương 3",
+  "label": "6. Bước 3: Hoàn tất AI nối mạch hoàn hảo",
   "duration": 14.41,
   "pose": 6,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Nghiệm thu Chương 2",
+  "pedagogy_badge": "✅ Thực hành Bước 3/3 · Hoàn thành Chương 2",
   "pedagogy_title": "Bước 3: Trợ lý AI nhớ chính xác chỉ tiêu 30% hôm qua và chạy tiếp việc mới",
-  "pedagogy_note": "Nghiệm thu: Không mất 1% ngữ cảnh nào giữa các ngày. Tiếp theo: Chương 3 (Bài 9) xây dựng Bộ não .agent tự động hóa!",
+  "pedagogy_note": "Không mất 1% ngữ cảnh nào giữa các ngày.",
   "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › ban_giao_cong_viec.md (Đã cập nhật Ca 2)', editorTitle:'📒 ban_giao_cong_viec.md — Đã nối mạch thành công', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#15803d;margin-top:0;\">✅ ĐÃ KHÔI PHỤC NGỮ CẢNH &amp; HOÀN TẤT HẠNG MỤC TIẾP THEO</h2><p><strong>Ngữ cảnh nhận diện từ Ca 1:</strong> Mục tiêu giảm Churn Rate 30% (về mức 4.3%).</p><p><strong>Kết quả thực thi Ca 2:</strong> Đã đối chiếu <code>sales_data.csv</code> và phát hiện nhóm khách hàng SMB cần ưu tiên chăm sóc đầu tiên.</p></div>', userMsg:'@ban_giao_cong_viec.md @sales_data.csv Hãy đọc sổ bàn giao hôm qua và thực hiện ngay mục việc cần làm tiếp theo.', aiMsg:'Đã đọc <code>@ban_giao_cong_viec.md</code>! Tôi ghi nhớ chỉ tiêu giảm Churn Rate 30% đã chốt hôm qua và vừa hoàn tất bước phân tích <code>@sales_data.csv</code> tiếp theo cho bạn.'});",
   "focus_selectors": [
     "#ide-chat-messages",

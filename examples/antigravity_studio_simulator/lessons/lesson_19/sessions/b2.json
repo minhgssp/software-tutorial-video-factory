@@ -1,14 +1,14 @@
 {
   "id": "b2",
-  "label": "2. [Lý thuyết Kiểu 2] Quan sát tệp kịch bản thiết kế hình ảnh trong IDE",
+  "label": "2. Minh họa: Quan sát tệp kịch bản thiết kế hình ảnh trong IDE",
   "duration": 10.01,
   "pose": 2,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Khóa Phong cách Thiết kế",
-  "pedagogy_title": "Cấu trúc phần Khóa Phong cách (Style Lock) dùng chung cho mọi bức ảnh",
-  "pedagogy_note": "Mọi bức ảnh trong chiến dịch đều dùng chung hậu tố: 'Phong cách Editorial Flat Illustration, nền kem #FBF8F3, điểm nhấn cam #EA580C'.",
-  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › kich_ban_hinh_anh_q2.md', editorTitle:'🎨 kich_ban_hinh_anh_q2.md — Bộ Kịch Bản Hình Ảnh Đồng Bộ', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">KHÓA PHONG CÁCH CỐ ĐỊNH (STYLE LOCK)</h3><div style=\"background:#fff7ed;border:1px solid #fed7aa;padding:10px;border-radius:6px;font-size:13px;margin-bottom:10px;\"><strong>Hậu tố cố định cho mọi bức ảnh:</strong> <em>\"Phong cách minh họa phẳng Editorial ấm áp, nền giấy kem #FBF8F3, màu nhấn cam đất #EA580C và xanh đậm #1E293B, bố cục thoáng sạch.\"</em></div><ul><li><strong>Ảnh 1 (Banner Blog):</strong> So sánh 14 ngày bàn giao thủ công vs. 3 ngày tự động.</li><li><strong>Ảnh 2 (Infographic LinkedIn):</strong> Sơ đồ 3 bước Onboarding nhân sự mới.</li></ul></div>'});",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Khóa Phong cách Thiết kế",
+  "pedagogy_title": "Cấu trúc phần Khóa cố định phong cách & bảng màu dùng chung cho mọi bức ảnh",
+  "pedagogy_note": "Mọi bức ảnh trong chiến dịch đều dùng chung hậu tố: 'Phong cách minh họa phẳng hiện đại, nền kem #FBF8F3, điểm nhấn cam #EA580C'.",
+  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › kich_ban_hinh_anh_q2.md', editorTitle:'🎨 kich_ban_hinh_anh_q2.md — Bộ Kịch Bản Hình Ảnh Đồng Bộ', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">KHÓA PHONG CÁCH CỐ ĐỊNH</h3><div style=\"background:#fff7ed;border:1px solid #fed7aa;padding:10px;border-radius:6px;font-size:13px;margin-bottom:10px;\"><strong>Hậu tố cố định cho mọi bức ảnh:</strong> <em>\"Phong cách minh họa phẳng Editorial ấm áp, nền giấy kem #FBF8F3, màu nhấn cam đất #EA580C và xanh đậm #1E293B, bố cục thoáng sạch.\"</em></div><ul><li><strong>Ảnh 1 (Banner Blog):</strong> So sánh 14 ngày bàn giao thủ công vs. 3 ngày tự động.</li><li><strong>Ảnh 2 (Infographic LinkedIn):</strong> Sơ đồ 3 bước Onboarding nhân sự mới.</li></ul></div>'});",
   "focus_selectors": [
     "#editor-canvas"
   ],

@@ -1,12 +1,12 @@
 {
   "id": "b4",
-  "label": "4. [Thực hành B1/3] Bối cảnh & Bật chế độ đọc Preview trực quan",
+  "label": "4. Bước 1: Bật chế độ đọc Preview trực quan",
   "duration": 12.17,
   "pose": 4,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 1/3 · Bối cảnh & Chế độ đọc",
-  "pedagogy_title": "Bối cảnh: Tài liệu đang hiển thị mã thô khó đọc, cần chuyển sang chế độ văn bản đẹp",
+  "pedagogy_badge": "👆 Thực hành Bước 1/3 · Chế độ đọc",
+  "pedagogy_title": "Tài liệu đang hiển thị mã thô khó đọc, cần chuyển sang chế độ văn bản đẹp",
   "pedagogy_note": "Bước 1: Nhìn lên góc trên bên phải của cột giữa và bấm nút 👁️ Preview / Office Viewer.",
   "onEnter": "kudoHidePopovers(); switchToSurface('ide'); openFileInEditor('0.1_Introduction.md'); setEditorMode('wysiwyg');",
   "focus_selectors": [

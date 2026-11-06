@@ -1,13 +1,13 @@
 {
   "id": "b6",
-  "label": "6. [Thực hành B3/3] Nghiệm thu bộ nội dung sạch lỗi & Sang Bài 19",
+  "label": "6. Bước 3: Hoàn tất bộ nội dung sạch lỗi",
   "duration": 13.85,
   "pose": 6,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Nghiệm thu & Tiếp nối",
-  "pedagogy_title": "Bước 3: Nghiệm thu tệp chien_dich_noi_dung_q2.md đạt 100% tiêu chí",
-  "pedagogy_note": "Nghiệm thu: Cả 3 kênh đều sắc gọn, có số liệu thật và bảng kiểm duyệt đạt 3/3. Tiếp theo: Bài 19 tạo hình ảnh minh họa & infographic đi kèm!",
+  "pedagogy_badge": "✅ Thực hành Bước 3/3 · Kết quả hoàn thành",
+  "pedagogy_title": "Bước 3: Kiểm tra kết quả tệp chien_dich_noi_dung_q2.md đạt 100% tiêu chí",
+  "pedagogy_note": "Cả 3 kênh đều sắc gọn, có số liệu thật và bảng kiểm duyệt đạt 3/3.",
   "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › chien_dich_noi_dung_q2.md (Hoàn tất 3 kênh)', editorTitle:'✅ chien_dich_noi_dung_q2.md — Đã qua kiểm duyệt Tổng biên tập', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#15803d;margin-top:0;\">BỘ NỘI DUNG CHIẾN DỊCH QUÝ 2 — ĐẠT CHUẨN 3/3 TIÊU CHÍ</h2><p><strong>1. Bài Blog Website:</strong> <em>\"Bí quyết rút ngắn 78% thời gian bàn giao việc cho nhân sự mới (Từ 14 ngày xuống 3 ngày)\"</em></p><p><strong>2. Bài LinkedIn / Facebook:</strong> Bố cục 5 dòng ngắn gọn, trích dẫn số liệu giữ chân 98,2% khách hàng Enterprise.</p><p><strong>3. Email chăm sóc SMB:</strong> Tặng kèm mẫu Checklist bàn giao tự động + Link trải nghiệm 14 ngày.</p></div>', userMsg:'@brand_voice.md @de_an_tong_the_q2.md Hãy soạn trọn bộ nội dung Quý 2 và lưu vào chien_dich_noi_dung_q2.md', aiMsg:'Đã hoàn tất soạn thảo và tự kiểm duyệt cả 3 kênh tại tệp <code>chien_dich_noi_dung_q2.md</code>!'});",
   "focus_selectors": [
     "#editor-canvas",

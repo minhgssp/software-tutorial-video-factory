@@ -1,12 +1,12 @@
 {
   "id": "b4",
-  "label": "4. [Thực hành B1/3] Bối cảnh & Chạy /grill-me cho đề án Đại lý B2B TaskFlow",
+  "label": "4. Bước 1: Chạy /grill-me cho đề án Đại lý B2B TaskFlow",
   "duration": 12.81,
   "pose": 4,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 1/3 · Phỏng vấn với /grill-me",
-  "pedagogy_title": "Bối cảnh: Cần mở rộng mạng lưới Đại lý B2B Quý 2 cho TaskFlow Inc.",
+  "pedagogy_badge": "👆 Thực hành Bước 1/3 · Phỏng vấn với /grill-me",
+  "pedagogy_title": "Cần mở rộng mạng lưới Đại lý B2B Quý 2 cho TaskFlow Inc.",
   "pedagogy_note": "Bước 1: Gõ /grill-me kèm đề bài mở rộng đại lý B2B để AI đặt 3 câu hỏi làm rõ thông số.",
   "onEnter": "kudoSimScene({surface:'ide', file:'COMPANY.md', userMsg:'/grill-me Tôi muốn mở rộng kênh đại lý phân phối phần mềm TaskFlow B2B trong Quý 2.', aiMsg:'<strong>Chế độ /grill-me kích hoạt:</strong> Trước khi lập kế hoạch, xin bạn chốt nhanh 3 thông số cốt lõi:<br>1. <strong>Quy mô đại lý mục tiêu:</strong> Nhắm tới công ty tư vấn IT hay đại lý thiết bị văn phòng?<br>2. <strong>Mức chiết khấu tối đa:</strong> Ngân sách cho phép chia sẻ bao nhiêu % doanh thu năm đầu?<br>3. <strong>Chỉ tiêu số lượng:</strong> Cần ký mới bao nhiêu đại lý trong Quý 2?', chatInput:'1. Công ty tư vấn IT; 2. Chiết khấu 25% năm đầu; 3. Ký mới 10 đại lý'});",
   "focus_selectors": [

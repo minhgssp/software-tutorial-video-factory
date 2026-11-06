@@ -1,12 +1,12 @@
 {
   "id": "b4",
-  "label": "4. [Thực hành B1/3] Bối cảnh & Mở kiểm tra bảng sales_data.csv",
+  "label": "4. Bước 1: Mở kiểm tra bảng sales_data.csv",
   "duration": 8.25,
   "pose": 4,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 1/3 · Bối cảnh & Mở bảng CSV",
-  "pedagogy_title": "Bối cảnh: Tổng kết doanh thu Quý 1 và tìm nguyên nhân khách hàng rời bỏ",
+  "pedagogy_badge": "👆 Thực hành Bước 1/3 · Mở bảng CSV",
+  "pedagogy_title": "Tổng kết doanh thu Quý 1 và tìm nguyên nhân khách hàng rời bỏ",
   "pedagogy_note": "Bước 1: Bấm chọn tệp sales_data.csv trên cây thư mục để hiển thị bảng số liệu ở cột giữa.",
   "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); openFileInEditor('sales_data.csv');",
   "focus_selectors": [

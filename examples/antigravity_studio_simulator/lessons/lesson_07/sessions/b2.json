@@ -1,11 +1,11 @@
 {
   "id": "b2",
-  "label": "2. [Lý thuyết Kiểu 2] Quan sát nội dung tệp @troly.md trong IDE",
+  "label": "2. Minh họa: Quan sát nội dung tệp @troly.md trong IDE",
   "duration": 10.17,
   "pose": 2,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Giải phẫu tệp @troly.md",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Giải phẫu tệp @troly.md",
   "pedagogy_title": "Cách trình bày tệp @troly.md rõ ràng bằng các tiêu đề Markdown",
   "pedagogy_note": "Mở tệp troly.md ở cột giữa để xem cách khai báo Thông tin chủ nhân, Nguyên tắc trình bày và Điều cấm kỵ.",
   "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); setEditorMode('wysiwyg'); openFileInEditor('troly.md');",

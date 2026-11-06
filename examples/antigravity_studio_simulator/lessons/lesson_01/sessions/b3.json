@@ -1,11 +1,11 @@
 {
   "id": "b3",
-  "label": "3. [Lý thuyết Kiểu 2] Quy tắc chọn 5 mô hình AI theo việc",
+  "label": "3. Kỹ thuật: Quy tắc chọn 5 mô hình AI theo việc",
   "duration": 16.11,
   "pose": 3,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Kỹ thuật chọn Mô hình",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Kỹ thuật chọn Mô hình",
   "pedagogy_title": "Chọn đúng mô hình AI cho từng độ khó công việc",
   "pedagogy_note": "Flash (nhanh, việc nhẹ) · Argon Medium (mặc định hàng ngày) · Claude Sonnet/Opus 5.5 (lập kế hoạch & phân tích sâu).",
   "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); closeSettingsModal(); resetAgy2NewConv(); kudoOpenModelPopover();",

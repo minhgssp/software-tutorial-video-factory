@@ -1,11 +1,11 @@
 {
   "id": "b5",
-  "label": "5. [Thực hành B2/3] Gửi lệnh xuất bản bộ Slide HTML/PPTX 5 trang",
+  "label": "5. Bước 2: Gửi lệnh xuất bản bộ Slide HTML/PPTX 5 trang",
   "duration": 8.33,
   "pose": 5,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Xuất bản Bộ Slide 5 Trang",
+  "pedagogy_badge": "👆 Thực hành Bước 2/3 · Xuất bản Bộ Slide 5 Trang",
   "pedagogy_title": "Bước 2: Nhập lệnh tạo tệp slide_trinh_hdqt_q2.html tại khung chat",
   "pedagogy_note": "Đính kèm @de_an_tong_the_q2.md và @bao_cao_doanh_thu_q1.md rồi bấm Gửi.",
   "onEnter": "kudoSimScene({surface:'ide', clearChat:true, chatInput:'@de_an_tong_the_q2.md @bao_cao_doanh_thu_q1.md Hãy xuất bản bộ Slide thuyết trình 5 trang chuẩn Action Title (dưới 10 dòng/trang) vào tệp slide_trinh_hdqt_q2.html'});",

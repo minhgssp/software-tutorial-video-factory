@@ -169,15 +169,19 @@ def sfx_cues_around_speech(plan):
 KP.sfx_cues = sfx_cues_around_speech
 
 # Force pure FM procedural synthesis in mgaudio when FLAC sample packs are not present
-KSamples._index = lambda: {}
-KSamples.instrument = lambda *a, **kw: None
-KSamples.kit = lambda *a, **kw: None
+if KSamples is not None:
+    KSamples._index = lambda: {}
+    KSamples.instrument = lambda *a, **kw: None
+    KSamples.kit = lambda *a, **kw: None
 
 # Set macro-pause `//` to 520ms (clear breath between major thoughts) while keeping pace=1.02
-VTTS.LONG_PAUSE_MS = 700  # giữa hai ý lớn
-VTTS.load = lambda: __import__("vieneu").Vieneu()
 SHOT_GAP_MS = 900
-_orig_plan_spans = VTTS.plan_spans
+if VTTS is not None:
+    VTTS.LONG_PAUSE_MS = 700  # giữa hai ý lớn
+    VTTS.load = lambda: __import__("vieneu").Vieneu()
+    _orig_plan_spans = VTTS.plan_spans
+else:
+    _orig_plan_spans = None
 
 
 def _plan_spans_with_holds(performance, clean):
@@ -196,7 +200,8 @@ def _plan_spans_with_holds(performance, clean):
     return spans
 
 
-VTTS.plan_spans = _plan_spans_with_holds
+if VTTS is not None:
+    VTTS.plan_spans = _plan_spans_with_holds
 import av  # noqa: E402
 _orig_av_open = av.open
 

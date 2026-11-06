@@ -1,13 +1,13 @@
 {
   "id": "b6",
-  "label": "6. [Thực hành B3/3] Nghiệm thu chỉ dẫn của AI & Chuẩn bị bật Turbo",
+  "label": "6. Bước 3: Hoàn tất chỉ dẫn của AI & Chuẩn bị bật Turbo",
   "duration": 14.01,
   "pose": 6,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Nghiệm thu & Tiếp nối",
+  "pedagogy_badge": "✅ Thực hành Bước 3/3 · Kết quả hoàn thành",
   "pedagogy_title": "Bước 3: Nhận hướng dẫn chi tiết tại chỗ từ Trợ lý AI",
-  "pedagogy_note": "Nghiệm thu: AI chỉ dẫn ngay phím Ctrl+B và nút Preview. Tiếp theo: Bài 4 bật quyền tự chủ Turbo & chạy bài tập /start-1-1.",
+  "pedagogy_note": "AI chỉ dẫn ngay phím Ctrl+B và nút Preview.",
   "onEnter": "kudoRunAskAiWhenStuckDemo();",
   "focus_selectors": [
     "#ide-chat-messages",

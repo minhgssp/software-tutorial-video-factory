@@ -1,11 +1,11 @@
 {
   "id": "b2",
-  "label": "2. [Lý thuyết Kiểu 2] Giao diện Antigravity 2.0 trên màn hình",
+  "label": "2. Minh họa: Giao diện Antigravity 2.0 trên màn hình",
   "duration": 11.45,
   "pose": 2,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Gắn màn hình",
+  "pedagogy_badge": "💡 Điểm cần lưu ý trên màn hình",
   "pedagogy_title": "Cấu trúc cửa sổ điều phối Antigravity 2.0 (Agent Manager)",
   "pedagogy_note": "Cột trái quản lý các cuộc hội thoại và dự án, cột giữa là khung trao đổi trung tâm, góc trên phải có nút Open IDE.",
   "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); closeSettingsModal(); resetAgy2NewConv(); document.getElementById('agy2-right-pane').classList.add('collapsed');",

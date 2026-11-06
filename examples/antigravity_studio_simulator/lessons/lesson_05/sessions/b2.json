@@ -1,11 +1,11 @@
 {
   "id": "b2",
-  "label": "2. [Lý thuyết Kiểu 2] So sánh chế độ Raw và Preview của tệp .md",
+  "label": "2. Minh họa: So sánh chế độ Raw và Preview của tệp .md",
   "duration": 12.89,
   "pose": 2,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Hai góc nhìn của tệp .md",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Hai góc nhìn của tệp .md",
   "pedagogy_title": "Chuyển đổi giữa Raw (Mã nguồn có số dòng) và Preview / Office Viewer",
   "pedagogy_note": "Nút Preview hiển thị văn bản đẹp như Google Docs; nút Raw hiển thị số thứ tự từng dòng để trích dẫn chính xác.",
   "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); openFileInEditor('COMPANY.md'); setEditorMode('wysiwyg');",

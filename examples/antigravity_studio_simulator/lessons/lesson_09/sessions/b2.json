@@ -1,11 +1,11 @@
 {
   "id": "b2",
-  "label": "2. [Lý thuyết Kiểu 2] Đối chiếu khung chat và tệp sản phẩm đầu ra",
+  "label": "2. Minh họa: Đối chiếu khung chat và tệp sản phẩm đầu ra",
   "duration": 11.53,
   "pose": 2,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Nghiệm thu Tệp Đầu ra",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Nghiệm thu Tệp Đầu ra",
   "pedagogy_title": "Khung chat phải chỉ là nơi giao việc; Cột giữa mới là bàn nghiệm thu sản phẩm",
   "pedagogy_note": "Khi AI báo đã hoàn thành, hãy bấm vào tệp mới sinh ra ở cây thư mục trái để kiểm tra chất lượng thực tế.",
   "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); setEditorMode('wysiwyg'); openFileInEditor('1.2_QuickStart.md');",

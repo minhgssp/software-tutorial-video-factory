@@ -1,7 +1,7 @@
 {
   "id": "b1",
-  "label": "1. [Lý thuyết Kiểu 1] Bản đồ tổng kết 6 Chương & Nguyên tắc Kiểm toán /audit",
-  "duration": 15.05,
+  "label": "1. Tổng quan: Bản đồ 6 Chương & Quy trình tổng duyệt dự án",
+  "duration": 14.59,
   "pose": 1,
   "mode": "theory",
   "pedagogy_type": "theory_type_1",
@@ -12,7 +12,7 @@
     "s1_c3",
     "s1_call"
   ],
-  "caption": "Chào mừng anh chị đến với <strong>Bài 24</strong> — bài học cuối cùng khép lại hành trình <strong>Antigravity Basic</strong>! Để không bao giờ rơi vào cảnh trợ lý vừa đá bóng vừa thổi còi, chúng ta trang bị mảnh ghép quan trọng nhất: Quy trình Kiểm toán Độc lập bằng lệnh <code>/audit</code> trước khi bàn giao bất kỳ dự án nào.",
+  "caption": "Chào mừng anh chị đến với <strong>Bài 24</strong> — bài học cuối cùng khép lại hành trình <strong>Antigravity Basic</strong>! Trước khi bàn giao bất kỳ dự án lớn nào, chúng ta trang bị hai chốt chặn quan trọng nhất: Đối chiếu chéo số liệu giữa các tệp báo cáo và bảo vệ tài liệu mật bằng tệp <code>.gitignore</code>.",
   "audio_src": "audio/lesson_24/b1.mp3",
-  "audio_duration": 14.4
+  "audio_duration": 13.94
 }

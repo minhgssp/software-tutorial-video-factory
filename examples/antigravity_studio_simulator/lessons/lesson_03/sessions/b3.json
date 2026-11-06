@@ -1,11 +1,11 @@
 {
   "id": "b3",
-  "label": "3. [Lý thuyết Kiểu 2] Khôi phục nhanh cột trái bằng phím Ctrl + B",
+  "label": "3. Kỹ thuật: Khôi phục nhanh cột trái bằng phím Ctrl + B",
   "duration": 10.57,
   "pose": 3,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Phím tắt Cứu hộ Giao diện",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Phím tắt Cứu hộ Giao diện",
   "pedagogy_title": "Bật/tắt nhanh cột cây thư mục Explorer bằng tổ hợp phím Ctrl + B",
   "pedagogy_note": "Khi cần mở rộng không gian đọc tài liệu hoặc lỡ tay bấm ẩn cột trái, nhấn Ctrl + B hoặc bấm biểu tượng 2 tệp giấy.",
   "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); openFileInEditor('0.1_Introduction.md'); kudoShowKeyHud('Nhấn <kbd>Ctrl + B</kbd> để Bật / Tắt nhanh cột cây thư mục bên trái');",

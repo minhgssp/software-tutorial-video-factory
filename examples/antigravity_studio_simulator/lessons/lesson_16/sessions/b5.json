@@ -1,11 +1,11 @@
 {
   "id": "b5",
-  "label": "5. [Thực hành B2/3] Gõ lệnh yêu cầu AI lưu phiên bản và đẩy lên Drive",
+  "label": "5. Bước 2: Gõ lệnh yêu cầu AI lưu phiên bản và đẩy lên Drive",
   "duration": 10.33,
   "pose": 5,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Ra lệnh Lưu Mốc & Sao lưu",
+  "pedagogy_badge": "👆 Thực hành Bước 2/3 · Ra lệnh Lưu Mốc & Sao lưu",
   "pedagogy_title": "Bước 2: Nhập yêu cầu lưu lịch sử GitHub và đồng bộ Google Drive vào ô chat",
   "pedagogy_note": "Ghi rõ nội dung ghi chú phiên bản để sau này nhìn lại biết ngay mốc tài liệu này gồm những gì.",
   "onEnter": "kudoSimScene({surface:'ide', clearChat:true, chatInput:'@bao_cao_doanh_thu_q1.md Hãy lưu mốc lịch sử phiên bản với ghi chú \"Chốt báo cáo doanh thu Quý 1\" và tải tệp này lên thư mục Google Drive Ban Giám đốc.'});",

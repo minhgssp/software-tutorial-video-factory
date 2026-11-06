@@ -1,11 +1,11 @@
 {
   "id": "b2",
-  "label": "2. [Lý thuyết Kiểu 2] Nhận diện nút Stop (■), Tiếp tục và Accept",
+  "label": "2. Minh họa: Nhận diện nút Stop (■), Tiếp tục và Accept",
   "duration": 11.85,
   "pose": 2,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · 3 Trạng thái Điều khiển AI",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · 3 Trạng thái Điều khiển AI",
   "pedagogy_title": "Quan sát trực tiếp nút Accept, ô gõ Tiếp tục và nút ■ trên khung chat",
   "pedagogy_note": "Nút Accept màu xanh dùng để duyệt bước tạo tệp; nút ■ dùng để dừng; ô nhập gõ 'Tiếp tục' khi AI ngắt quãng.",
   "onEnter": "kudoRunThreeStuckStatesDemo();",

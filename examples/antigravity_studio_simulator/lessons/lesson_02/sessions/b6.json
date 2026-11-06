@@ -1,13 +1,13 @@
 {
   "id": "b6",
-  "label": "6. [Thực hành B3/3] Nghiệm thu lộ trình học trong INDEX.md",
+  "label": "6. Bước 3: Hoàn tất lộ trình học trong INDEX.md",
   "duration": 12.65,
   "pose": 6,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Nghiệm thu & Tiếp nối",
+  "pedagogy_badge": "✅ Thực hành Bước 3/3 · Kết quả hoàn thành",
   "pedagogy_title": "Bước 3: Mở tệp bản đồ khóa học INDEX.md ở cột giữa",
-  "pedagogy_note": "Nghiệm thu: Cột trái hiện đủ cây thư mục Module_0..Module_6, cột giữa hiển thị bản đồ INDEX.md. Tiếp theo: Bài 3 học điều khiển 3 cột & phím cứu hộ.",
+  "pedagogy_note": "Cột trái hiện đủ cây thư mục Module_0..Module_6, cột giữa hiển thị bản đồ INDEX.md.",
   "onEnter": "kudoHidePopovers(); closeWinFolderDialog(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); setEditorMode('wysiwyg'); openFileInEditor('INDEX.md');",
   "focus_selectors": [
     "#ide-file-tree",

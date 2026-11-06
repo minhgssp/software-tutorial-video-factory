@@ -9,7 +9,7 @@
   "title": "Tự động hóa Sản xuất Bài viết, Email Chuỗi & Kiểm duyệt Chất lượng",
   "short_title": "Sản xuất Bài viết & Email Chuỗi",
   "pill_label": "Bài 18 · Bài viết & Email Chuỗi",
-  "description": "Áp dụng mô hình 'Tòa soạn AI 2 bước': Từ 1 tài liệu chuyên môn gốc, tự động chuyển hóa thành Bài chuyên sâu Website, Bài đăng mạng xã hội và Chuỗi 3 Email chăm sóc khách hàng, kèm bước tự chấm điểm kiểm duyệt.",
+  "description": "Áp dụng mô hình 'Bộ phận Nội dung AI 2 bước': Từ 1 tài liệu chuyên môn gốc, tự động chuyển hóa thành Bài chuyên sâu Website, Bài đăng mạng xã hội và Chuỗi 3 Email chăm sóc khách hàng, kèm bước tự chấm điểm kiểm duyệt.",
   "prerequisites": "Bài 17 (Đã có tệp brand_voice.md và kho số liệu thực tế từ bao_cao_doanh_thu_q1.md).",
   "dependents": "Bài 19 (Tạo bộ ảnh minh họa đi kèm cho chính các bài viết vừa xuất bản ở Bài 18).",
   "placement_risk": "0% Rủi ro — Học viên tách bạch rõ bước Viết nháp và bước Kiểm duyệt (Editorial Review) nên bài viết luôn sắc sảo.",

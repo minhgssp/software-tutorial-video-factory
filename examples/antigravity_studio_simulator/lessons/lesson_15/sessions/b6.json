@@ -1,14 +1,14 @@
 {
   "id": "b6",
-  "label": "6. [Thực hành B3/3] Nghiệm thu Đề án Tổng thể & Tiếp nối Bài 16",
+  "label": "6. Bước 3: Hoàn tất Đề án Tổng thể",
   "duration": 13.53,
   "pose": 6,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Nghiệm thu & Tiếp nối",
-  "pedagogy_title": "Bước 3: Nghiệm thu tệp de_an_tong_the_q2.md kết tinh từ 3 nhánh song song",
-  "pedagogy_note": "Nghiệm thu: Đề án hoàn chỉnh cả Tài chính, Nhân sự và Thị trường. Tiếp theo: Bài 16 đồng bộ tài liệu nhóm qua GitHub & Google Drive.",
-  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › de_an_tong_the_q2.md (Hợp nhất từ 3 Sub-Agents)', editorTitle:'🏆 de_an_tong_the_q2.md — Đề Án Tổng Thể Quý 2 TaskFlow', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#15803d;margin-top:0;\">ĐỀ ÁN TỔNG THỂ QUÝ 2/2026 — TASKFLOW INC.</h2><ul><li><strong>Phần I — Tài chính (Từ Sub-Agent #1):</strong> Giữ vững đà tăng trưởng gói Enterprise (1,26 tỷ VNĐ) và giảm Churn nhóm SMB từ 6,2% xuống 4,3%.</li><li><strong>Phần II — Nhân sự (Từ Sub-Agent #2):</strong> Bổ sung 2 chuyên viên Customer Success chuyên trách hỗ trợ khách hàng mới trong 7 ngày đầu.</li><li><strong>Phần III — Cạnh tranh (Từ Sub-Agent #3):</strong> Tung gói dùng thử 14 ngày có sẵn mẫu quy trình tự động.</li></ul></div>', userMsg:'@bao_cao_doanh_thu_q1.md @de_xuat_nhan_su_q2.md @bang_doi_sanh_doi_thu.md Hãy hợp nhất kết quả thành de_an_tong_the_q2.md', aiMsg:'Đã hợp nhất thành công kết quả của 3 nhánh Sub-Agents vào tệp <code>de_an_tong_the_q2.md</code>!'});",
+  "pedagogy_badge": "✅ Thực hành Bước 3/3 · Kết quả hoàn thành",
+  "pedagogy_title": "Bước 3: Kiểm tra kết quả tệp de_an_tong_the_q2.md kết tinh từ 3 nhánh song song",
+  "pedagogy_note": "Đề án hoàn chỉnh cả Tài chính, Nhân sự và Thị trường.",
+  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › de_an_tong_the_q2.md (Hợp nhất từ 3 nhánh)', editorTitle:'🏆 de_an_tong_the_q2.md — Đề Án Tổng Thể Quý 2 TaskFlow', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#15803d;margin-top:0;\">ĐỀ ÁN TỔNG THỂ QUÝ 2/2026 — TASKFLOW INC.</h2><ul><li><strong>Phần I — Tài chính (Từ Nhánh #1):</strong> Giữ vững đà tăng trưởng gói Enterprise (1,26 tỷ VNĐ) và giảm Churn nhóm SMB từ 6,2% xuống 4,3%.</li><li><strong>Phần II — Nhân sự (Từ Nhánh #2):</strong> Bổ sung 2 chuyên viên Customer Success chuyên trách hỗ trợ khách hàng mới trong 7 ngày đầu.</li><li><strong>Phần III — Cạnh tranh (Từ Nhánh #3):</strong> Tung gói dùng thử 14 ngày có sẵn mẫu quy trình tự động.</li></ul></div>', userMsg:'@bao_cao_doanh_thu_q1.md @de_xuat_nhan_su_q2.md @bang_doi_sanh_doi_thu.md Hãy hợp nhất kết quả thành de_an_tong_the_q2.md', aiMsg:'Đã hợp nhất thành công kết quả của 3 nhánh công việc vào tệp <code>de_an_tong_the_q2.md</code>!'});",
   "focus_selectors": [
     "#editor-canvas",
     "#ide-chat-messages"

@@ -1,13 +1,13 @@
 {
   "id": "b6",
-  "label": "6. [Thực hành B3/3] Chuyển sang Raw xem số dòng & Tiếp nối Bài 6",
+  "label": "6. Bước 3: Chuyển sang Raw xem số dòng",
   "duration": 14.49,
   "pose": 6,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Nghiệm thu & Tiếp nối",
+  "pedagogy_badge": "✅ Thực hành Bước 3/3 · Kết quả hoàn thành",
   "pedagogy_title": "Bước 3: Bấm nút </> Raw / Số dòng để kiểm tra cấu trúc gốc",
-  "pedagogy_note": "Nghiệm thu: Nắm vững 2 chế độ Preview và Raw của .md/.csv. Tiếp theo: Bài 6 học đính kèm @, giọng nói Ctrl+M và trích dẫn Ctrl+L.",
+  "pedagogy_note": "Nắm vững 2 chế độ Preview và Raw của .md/.csv.",
   "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); openFileInEditor('COMPANY.md'); setEditorMode('raw');",
   "focus_selectors": [
     "#pill-raw",

@@ -1,11 +1,11 @@
 {
   "id": "b2",
-  "label": "2. [Lý thuyết Kiểu 2] Cơ chế gợi ý tệp tự động khi gõ ký hiệu @",
+  "label": "2. Minh họa: Cơ chế gợi ý tệp tự động khi gõ ký hiệu @",
   "duration": 14.89,
   "pose": 2,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Đính kèm Tệp bằng @",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Đính kèm Tệp bằng @",
   "pedagogy_title": "Bảng gợi ý tệp thông minh khi gõ dấu @ trong khung chat",
   "pedagogy_note": "Phần mềm tự động quét toàn bộ thư mục đang mở và liệt kê các tệp (@COMPANY.md, @sales_data.csv, @troly.md) để chọn ngay.",
   "onEnter": "kudoHidePopovers(); switchToSurface('ide'); openFileInEditor('COMPANY.md'); kudoOpenIdeMentionPopup();",

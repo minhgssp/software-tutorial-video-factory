@@ -1,11 +1,11 @@
 {
   "id": "b5",
-  "label": "5. [Thực hành B2/3] Gửi lệnh đối chiếu 1-1 giữa Dự thảo và Quy chế chuẩn",
+  "label": "5. Bước 2: Gửi lệnh đối chiếu 1-1 giữa Dự thảo và Quy chế chuẩn",
   "duration": 9.45,
   "pose": 5,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Ra lệnh Đối chiếu Pháp lý",
+  "pedagogy_badge": "👆 Thực hành Bước 2/3 · Ra lệnh Đối chiếu Pháp lý",
   "pedagogy_title": "Bước 2: Đính kèm @hop_dong_dai_ly_du_thao.md và @quy_che_hop_dong_chuan.md",
   "pedagogy_note": "Yêu cầu AI tìm các điều khoản trái quy chế, các điều khoản bị thiếu và xuất ra bao_cao_ra_soat_hop_dong.md.",
   "onEnter": "kudoSimScene({surface:'ide', clearChat:true, chatInput:'@hop_dong_dai_ly_du_thao.md @quy_che_hop_dong_chuan.md Hãy đối chiếu 1-1 bản dự thảo với quy chế chuẩn, gắn cờ Đỏ/Vàng kèm số dòng và viết câu chữ đề xuất sửa đổi vào tệp bao_cao_ra_soat_hop_dong.md'});",

@@ -1,11 +1,11 @@
 {
   "id": "b2",
-  "label": "2. [Lý thuyết Kiểu 2] Quan sát các luồng tác vụ (Threads) trên Antigravity 2.0",
+  "label": "2. Minh họa: Quan sát các luồng tác vụ (Threads) trên Antigravity 2.0",
   "duration": 12.25,
   "pose": 2,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Quản lý Đa Luồng (Multi-Threads)",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Quản lý Đa Luồng (Multi-Threads)",
   "pedagogy_title": "Theo dõi nhiều luồng công việc đang chạy ở cột trái Antigravity 2.0",
   "pedagogy_note": "Mỗi dòng trong mục Conversation / Threads ở cột trái là một chuyên viên AI đang xử lý một nhiệm vụ riêng.",
   "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); closeSettingsModal(); loadAgy2Thread('main');",

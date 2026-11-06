@@ -1,11 +1,11 @@
 {
   "id": "b5",
-  "label": "5. [Thực hành B2/3] Gửi lệnh sản xuất 3 kênh kèm bước tự kiểm duyệt",
+  "label": "5. Bước 2: Gửi lệnh sản xuất 3 kênh kèm bước tự kiểm duyệt",
   "duration": 10.17,
   "pose": 5,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Ra lệnh Sản xuất & Kiểm duyệt",
+  "pedagogy_badge": "👆 Thực hành Bước 2/3 · Ra lệnh Sản xuất & Kiểm duyệt",
   "pedagogy_title": "Bước 2: Đính kèm @brand_voice.md và @de_an_tong_the_q2.md vào ô chat",
   "pedagogy_note": "Yêu cầu AI viết 1 bài Blog, 1 bài LinkedIn, 1 Email B2B, tự kiểm duyệt theo Brand Voice và lưu vào chien_dich_noi_dung_q2.md.",
   "onEnter": "kudoSimScene({surface:'ide', clearChat:true, chatInput:'@brand_voice.md @de_an_tong_the_q2.md Hãy soạn trọn bộ nội dung Quý 2 gồm: (1) Bài Blog 500 từ, (2) Bài đăng LinkedIn, (3) Email gửi khách hàng SMB; sau đó tự kiểm duyệt theo Brand Voice và lưu vào chien_dich_noi_dung_q2.md'});",

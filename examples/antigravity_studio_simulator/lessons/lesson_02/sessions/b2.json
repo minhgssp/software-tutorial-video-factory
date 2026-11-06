@@ -1,11 +1,11 @@
 {
   "id": "b2",
-  "label": "2. [Lý thuyết Kiểu 2] Vì sao dùng Open Folder thay vì Open File",
+  "label": "2. Minh họa: Vì sao dùng Open Folder thay vì Open File",
   "duration": 11.53,
   "pose": 2,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Quy trình Mở Dự án",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Quy trình Mở Dự án",
   "pedagogy_title": "Khác biệt giữa Open File (mở lẻ) và Open Folder (mở trọn dự án)",
   "pedagogy_note": "Open Folder nạp toàn bộ cấu trúc thư mục và bộ não .agent để trợ lý AI hiểu đầy đủ ngữ cảnh công việc.",
   "onEnter": "kudoHidePopovers(); switchToSurface('ide'); showIdeWelcomeScreen(); closeWinFolderDialog(); document.getElementById('ide-file-dropdown').classList.add('show');",

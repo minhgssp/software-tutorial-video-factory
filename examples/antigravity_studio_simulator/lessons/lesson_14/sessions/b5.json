@@ -1,11 +1,11 @@
 {
   "id": "b5",
-  "label": "5. [Thực hành B2/3] Gửi lệnh phân tích kết hợp @sales_data.csv và @COMPANY.md",
+  "label": "5. Bước 2: Gửi lệnh phân tích kết hợp @sales_data.csv và @COMPANY.md",
   "duration": 11.69,
   "pose": 5,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Chạy Phân tích Đa chiều",
+  "pedagogy_badge": "👆 Thực hành Bước 2/3 · Chạy Phân tích Đa chiều",
   "pedagogy_title": "Bước 2: Nhập lệnh phân tích @sales_data.csv đối chiếu với @COMPANY.md",
   "pedagogy_note": "Yêu cầu xuất kết quả ra tệp bao_cao_doanh_thu_q1.md để chuẩn bị đồng bộ cho đội nhóm ở các bài sau.",
   "onEnter": "kudoSimScene({surface:'ide', file:'sales_data.csv', clearChat:true, chatInput:'@sales_data.csv @COMPANY.md Hãy làm sạch dữ liệu, lập bảng tổng hợp doanh thu Quý 1 theo phân khúc và lưu báo cáo phân tích vào tệp bao_cao_doanh_thu_q1.md'});",

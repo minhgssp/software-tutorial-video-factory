@@ -1,11 +1,11 @@
 {
   "id": "b3",
-  "label": "3. [Lý thuyết Kiểu 2] Giải phẫu một tệp Kỹ năng trong .agent/skills/",
+  "label": "3. Kỹ thuật: Giải phẫu một tệp Kỹ năng trong .agent/skills/",
   "duration": 14.84,
   "pose": 3,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Cấu trúc Tệp SKILL.md",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Cấu trúc Tệp SKILL.md",
   "pedagogy_title": "Phần khai báo Description ở đầu tệp SKILL.md giúp AI tự nhận biết",
   "pedagogy_note": "Khi người dùng yêu cầu viết báo cáo tuần, AI đọc dòng description thấy khớp mới mở toàn bộ tệp SKILL.md ra thực hiện.",
   "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'.agent › skills › bao-cao-tuan › SKILL.md', editorTitle:'🧠 .agent/skills/bao-cao-tuan/SKILL.md — Kỹ Năng Chuyên Môn', editorHtml:'<div style=\"padding:16px;\"><pre style=\"background:#fff7ed;border:1px solid #fed7aa;padding:10px;border-radius:6px;font-size:12px;\">---\nname: bao-cao-tuan\ndescription: Kích hoạt khi người dùng yêu cầu tổng hợp Báo cáo tuần phòng Kinh doanh hoặc Vận hành.\n---</pre><h3 style=\"color:#9a3412;\">Quy chuẩn Bố cục Báo cáo Tuần TaskFlow</h3><ul><li><strong>Phần 1:</strong> Bảng đối chiếu KPI Kế hoạch vs. Thực đạt.</li><li><strong>Phần 2:</strong> 3 Điểm nghẽn lớn nhất cần Giám đốc tháo gỡ.</li><li><strong>Phần 3:</strong> Kế hoạch hành động tuần tới kèm người phụ trách.</li></ul></div>'});",

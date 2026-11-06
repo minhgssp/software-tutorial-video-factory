@@ -1,11 +1,11 @@
 {
   "id": "b5",
-  "label": "5. [Thực hành B2/3] Kiểm tra tệp workflow vừa tạo và gõ /tong-hop-tuan",
+  "label": "5. Bước 2: Kiểm tra tệp workflow vừa tạo và gõ /tong-hop-tuan",
   "duration": 10.49,
   "pose": 5,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Gọi lệnh /tong-hop-tuan",
+  "pedagogy_badge": "👆 Thực hành Bước 2/3 · Gọi lệnh /tong-hop-tuan",
   "pedagogy_title": "Bước 2: Kiểm tra tệp kịch bản ở cột giữa và gõ /tong-hop-tuan vào ô chat",
   "pedagogy_note": "Tệp tong-hop-tuan.md đã sẵn sàng; giờ bạn chỉ cần gõ /tong-hop-tuan và bấm Gửi.",
   "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'.agent › workflows › tong-hop-tuan.md', editorTitle:'⚡ .agent/workflows/tong-hop-tuan.md — Quy Trình Tự Động', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">WORKFLOW: /tong-hop-tuan</h3><ol><li><strong>Bước 1:</strong> Đọc dữ liệu mới nhất từ <code>@sales_data.csv</code>.</li><li><strong>Bước 2:</strong> Kích hoạt kỹ năng <code>bao-cao-tuan</code> và nội quy văn phòng.</li><li><strong>Bước 3:</strong> Xuất báo cáo hoàn chỉnh ra tệp <code>bao_cao_thu_hai.md</code>.</li></ol></div>', clearChat:true, chatInput:'/tong-hop-tuan'});",

@@ -272,12 +272,7 @@ function kudoApplyBeat(idx) {
 
   const depBox = document.getElementById("ksb-dep-box");
   if (depBox) {
-    if (KUDO_SPEC.prerequisites || KUDO_SPEC.dependents) {
-      depBox.style.display = "block";
-      depBox.innerHTML = `<div><strong>Tiên quyết:</strong> ${KUDO_SPEC.prerequisites || "Không"}</div><div style="margin-top:2px;"><strong>Mở đường:</strong> ${KUDO_SPEC.dependents || "Thực hành nâng cao"}</div>`;
-    } else {
-      depBox.style.display = "none";
-    }
+    depBox.style.display = "none";
   }
 
   document.getElementById("kudo-subtitle-box").innerHTML = `<span class="sub-speaker">▶</span>${beat.caption}`;
@@ -329,18 +324,10 @@ function kudoApplyBeat(idx) {
     });
   } else {
     stage.classList.add("hidden-stage");
+    // PROP-261106-01 Rule 4: Tuyệt đối không hiển thị hộp thoại nổi (#kudo-stage-pedagogy-card) đè lên màn hình minh họa.
     if (pCard) {
-      if (beat.pedagogy_title || beat.pedagogy_note) {
-        pCard.classList.toggle("practice-mode", beat.pedagogy_type === "practice_step");
-        pCard.innerHTML = `
-          <div class="k-spc-badge">${beat.pedagogy_badge || (beat.pedagogy_type === "practice_step" ? "🛠️ Hướng dẫn Thực hành Từng bước" : "📘 Lý thuyết Kiểu 2 · Gắn màn hình")}</div>
-          <div class="k-spc-title">${beat.pedagogy_title || beat.label}</div>
-          <div class="k-spc-note">${beat.pedagogy_note || ""}</div>
-        `;
-        pCard.classList.add("visible");
-      } else {
-        pCard.classList.remove("visible");
-      }
+      pCard.classList.remove("visible");
+      pCard.style.display = "none";
     }
 
     if (beat.onEnter) {

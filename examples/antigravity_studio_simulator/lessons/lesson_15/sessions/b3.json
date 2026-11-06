@@ -1,20 +1,20 @@
 {
   "id": "b3",
-  "label": "3. [Lý thuyết Kiểu 2] Cách chia tệp đích riêng biệt trong IDE để tránh ghi đè",
-  "duration": 11.13,
+  "label": "3. Kỹ thuật: Cách chia tệp đích riêng biệt trong IDE để tránh ghi đè",
+  "duration": 11.29,
   "pose": 3,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Phân tách Tệp Đầu ra",
-  "pedagogy_title": "Quy định tên tệp đầu ra riêng cho từng Sub-Agent",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Phân tách Tệp Đầu ra",
+  "pedagogy_title": "Quy định tên tệp đầu ra riêng cho từng nhánh công việc",
   "pedagogy_note": "Nhánh 1 -> bao_cao_doanh_thu_q1.md; Nhánh 2 -> de_xuat_nhan_su_q2.md; Nhánh 3 -> bang_doi_sanh_doi_thu.md.",
-  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › Bảng điều phối 3 Sub-Agents', editorTitle:'⚡ Trạng thái 3 Nhánh Trợ lý AI Đang Chạy Song Song', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">BẢNG PHÂN CÔNG ĐA TÁC NHÂN (PARALLEL SUB-AGENTS)</h3><table style=\"width:100%;border-collapse:collapse;font-size:13px;\"><tr style=\"background:#ffedd5;\"><th style=\"padding:8px;border:1px solid #fed7aa;text-align:left;\">Nhánh Trợ lý</th><th style=\"padding:8px;border:1px solid #fed7aa;text-align:left;\">Tệp Đầu vào (Đọc)</th><th style=\"padding:8px;border:1px solid #fed7aa;text-align:left;\">Tệp Đầu ra (Ghi riêng)</th><th style=\"padding:8px;border:1px solid #fed7aa;text-align:left;\">Trạng thái</th></tr><tr><td style=\"padding:8px;border:1px solid #fed7aa;\">Sub-Agent #1 (Tài chính)</td><td style=\"padding:8px;border:1px solid #fed7aa;\"><code>@sales_data.csv</code></td><td style=\"padding:8px;border:1px solid #fed7aa;\"><code>bao_cao_doanh_thu_q1.md</code></td><td style=\"padding:8px;border:1px solid #fed7aa;color:#15803d;font-weight:700;\">✅ Hoàn thành</td></tr><tr><td style=\"padding:8px;border:1px solid #fed7aa;\">Sub-Agent #2 (Nhân sự)</td><td style=\"padding:8px;border:1px solid #fed7aa;\"><code>@COMPANY.md</code></td><td style=\"padding:8px;border:1px solid #fed7aa;\"><code>de_xuat_nhan_su_q2.md</code></td><td style=\"padding:8px;border:1px solid #fed7aa;color:#15803d;font-weight:700;\">✅ Hoàn thành</td></tr><tr><td style=\"padding:8px;border:1px solid #fed7aa;\">Sub-Agent #3 (Thị trường)</td><td style=\"padding:8px;border:1px solid #fed7aa;\"><code>@COMPANY.md</code></td><td style=\"padding:8px;border:1px solid #fed7aa;\"><code>bang_doi_sanh_doi_thu.md</code></td><td style=\"padding:8px;border:1px solid #fed7aa;color:#15803d;font-weight:700;\">✅ Hoàn thành</td></tr></table></div>'});",
+  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › Bảng điều phối 3 Nhánh Song song', editorTitle:'⚡ Trạng thái 3 Nhánh Trợ lý AI Đang Chạy Song Song', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">BẢNG PHÂN CÔNG 3 NHÁNH TRỢ LÝ CHẠY SONG SONG</h3><table style=\"width:100%;border-collapse:collapse;font-size:13px;\"><tr style=\"background:#ffedd5;\"><th style=\"padding:8px;border:1px solid #fed7aa;text-align:left;\">Nhánh Trợ lý</th><th style=\"padding:8px;border:1px solid #fed7aa;text-align:left;\">Tệp Đầu vào (Đọc)</th><th style=\"padding:8px;border:1px solid #fed7aa;text-align:left;\">Tệp Đầu ra (Ghi riêng)</th><th style=\"padding:8px;border:1px solid #fed7aa;text-align:left;\">Trạng thái</th></tr><tr><td style=\"padding:8px;border:1px solid #fed7aa;\">Nhánh #1 (Tài chính)</td><td style=\"padding:8px;border:1px solid #fed7aa;\"><code>@sales_data.csv</code></td><td style=\"padding:8px;border:1px solid #fed7aa;\"><code>bao_cao_doanh_thu_q1.md</code></td><td style=\"padding:8px;border:1px solid #fed7aa;color:#15803d;font-weight:700;\">✅ Hoàn thành</td></tr><tr><td style=\"padding:8px;border:1px solid #fed7aa;\">Nhánh #2 (Nhân sự)</td><td style=\"padding:8px;border:1px solid #fed7aa;\"><code>@COMPANY.md</code></td><td style=\"padding:8px;border:1px solid #fed7aa;\"><code>de_xuat_nhan_su_q2.md</code></td><td style=\"padding:8px;border:1px solid #fed7aa;color:#15803d;font-weight:700;\">✅ Hoàn thành</td></tr><tr><td style=\"padding:8px;border:1px solid #fed7aa;\">Nhánh #3 (Thị trường)</td><td style=\"padding:8px;border:1px solid #fed7aa;\"><code>@COMPANY.md</code></td><td style=\"padding:8px;border:1px solid #fed7aa;\"><code>bang_doi_sanh_doi_thu.md</code></td><td style=\"padding:8px;border:1px solid #fed7aa;color:#15803d;font-weight:700;\">✅ Hoàn thành</td></tr></table></div>'});",
   "focus_selectors": [
     "#editor-canvas"
   ],
   "cursor_selector": "#editor-canvas",
   "cursor_label": "3 nhánh ghi ra 3 tệp riêng biệt, không bao giờ đè nhau",
-  "caption": "Bảng điều phối ở cột giữa cho thấy nguyên tắc vàng khi chạy đa tác nhân: Cả 3 nhánh có thể cùng đọc tệp <code>@COMPANY.md</code>, nhưng khi xuất kết quả thì mỗi nhánh phải ghi vào một tệp có tên riêng biệt.",
+  "caption": "Bảng điều phối ở cột giữa cho thấy nguyên tắc vàng khi chạy nhiều luồng song song: Cả 3 nhánh có thể cùng đọc tệp <code>@COMPANY.md</code>, nhưng khi xuất kết quả thì mỗi nhánh phải ghi vào một tệp có tên riêng biệt.",
   "audio_src": "audio/lesson_15/b3.mp3",
-  "audio_duration": 10.48
+  "audio_duration": 10.64
 }

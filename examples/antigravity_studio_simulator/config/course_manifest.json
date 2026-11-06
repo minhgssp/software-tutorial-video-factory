@@ -200,7 +200,7 @@
     "prerequisites": "Bài 5 (Biết soạn thảo tệp .md) & Bài 6 (Biết dùng ký hiệu @ để đính kèm tệp vào câu lệnh).",
     "dependents": "Bài 8 (Kết hợp @troly.md khi lập sổ bàn giao), Bài 9 (Nâng cấp từ @troly.md lên .agent/rules/ tự động).",
     "placement_risk": "0% Rủi ro — Học viên bắt đầu cá nhân hóa AI bằng một tệp @troly.md đơn giản ngoài thư mục gốc trước khi bước vào kiến trúc .agent/ ở Chương 3.",
-    "continuity_bridge": "Sau khi có hồ sơ cá nhân @troly.md ở Bài 7, Bài 8 sẽ hướng dẫn cách tạo Sổ bàn giao công việc (Project Memory) để AI không bao giờ quên tiến độ dự án qua các ngày làm việc.",
+    "continuity_bridge": "Sau khi có hồ sơ cá nhân @troly.md ở Bài 7, Bài 8 sẽ hướng dẫn cách tạo Sổ bàn giao công việc (Hồ sơ gốc của dự án) để AI không bao giờ quên tiến độ dự án qua các ngày làm việc.",
     "slide_ids": [
       "s1"
     ],
@@ -384,7 +384,7 @@
     "pill_label": "Bài 13 · Bóc tách Tài liệu Lớn",
     "description": "Chiến lược đọc và bóc tách các báo cáo dài hàng trăm trang hoặc hàng chục tệp biên bản họp bằng kỹ thuật lập Bản đồ Mục lục (Index-First) và Tóm tắt Đa tầng mà không làm tràn bộ nhớ AI.",
     "prerequisites": "Chương 2 (Đính kèm @) & Chương 3 (Đóng gói quy trình xử lý tài liệu chuẩn).",
-    "dependents": "Bài 14 (Đối chiếu báo cáo chữ với bảng số liệu CSV), Bài 15 (Chia nhỏ kho tài liệu cho nhiều Sub-Agent xử lý song song).",
+    "dependents": "Bài 14 (Đối chiếu báo cáo chữ với bảng số liệu CSV), Bài 15 (Chia nhỏ kho tài liệu cho nhiều nhánh xử lý song song).",
     "placement_risk": "0% Rủi ro — Học viên học cách xử lý tài liệu văn bản quy mô lớn trước khi chuyển sang xử lý bảng số liệu CSV ở Bài 14.",
     "continuity_bridge": "Sau khi bóc tách xong kho tài liệu văn bản ở Bài 13, Bài 14 sẽ hướng dẫn cách phân tích và làm sạch bảng số liệu kinh doanh .csv đi kèm.",
     "slide_ids": [
@@ -417,7 +417,7 @@
     "prerequisites": "Bài 5 (Biết mở xem tệp .csv bằng Office Viewer) & Bài 13 (Kỹ thuật bóc tách hồ sơ có dẫn nguồn).",
     "dependents": "Bài 15 (Phối hợp phân tích dữ liệu & nghiên cứu thị trường), Bài 16 (Đồng bộ báo cáo doanh thu bao_cao_doanh_thu_q1.md lên GitHub/Drive).",
     "placement_risk": "0% Rủi ro — Học viên thao tác trực tiếp trên tệp sales_data.csv có sẵn trong bộ học liệu và xuất ra tệp bao_cao_doanh_thu_q1.md dùng xuyên suốt tới Bài 16.",
-    "continuity_bridge": "Sau khi phân tích thành công một bảng dữ liệu ở Bài 14, Bài 15 sẽ hướng dẫn cách gọi nhiều trợ lý con (Sub-Agents) chạy song song khi có hàng loạt bảng dữ liệu và báo cáo cần xử lý cùng lúc.",
+    "continuity_bridge": "Sau khi phân tích thành công một bảng dữ liệu ở Bài 14, Bài 15 sẽ hướng dẫn cách gọi nhiều nhánh trợ lý AI chạy song song khi có hàng loạt bảng dữ liệu và báo cáo cần xử lý cùng lúc.",
     "slide_ids": [
       "s1"
     ],
@@ -441,14 +441,14 @@
     "chapter_number": 4,
     "chapter_code": "CHƯƠNG 4",
     "chapter_title": "Xử lý Dữ liệu, Bảng tính & Phối hợp Đội nhóm",
-    "title": "Điều phối Đa Tác nhân (Sub-Agents) Chạy Song song Cho Dự án Lớn",
-    "short_title": "Điều phối Đa Tác nhân Song song",
-    "pill_label": "Bài 15 · Đa Tác nhân Song song",
-    "description": "Nhân gấp 3 tốc độ xử lý công việc bằng cách chia một dự án lớn thành nhiều nhánh độc lập và điều phối các Trợ lý con (Sub-Agents / Parallel Threads) làm việc đồng thời trên Antigravity 2.0 và IDE.",
+    "title": "Phối hợp Nhiều Luồng Công việc Song song Cho Dự án Lớn",
+    "short_title": "Phối hợp Đa Luồng Song song",
+    "pill_label": "Bài 15 · Đa Luồng Song song",
+    "description": "Nhân gấp 3 tốc độ xử lý công việc bằng cách chia một dự án lớn thành nhiều nhánh độc lập và điều phối các luồng Trợ lý AI song song (Multi-Threads) làm việc đồng thời trên Antigravity 2.0 và IDE.",
     "prerequisites": "Bài 13 (Bóc tách tài liệu) & Bài 14 (Phân tích bảng tính CSV).",
-    "dependents": "Bài 16 (Đồng bộ toàn bộ kết quả của đội ngũ Sub-Agents lên GitHub và Google Drive).",
+    "dependents": "Bài 16 (Đồng bộ toàn bộ kết quả của các luồng công việc song song lên GitHub và Google Drive).",
     "placement_risk": "0% Rủi ro — Học viên đã thành thạo việc giao 1 nhiệm vụ đơn lẻ trước khi học cách tách 3 nhiệm vụ chạy song song.",
-    "continuity_bridge": "Sau khi tạo ra nhiều tệp báo cáo từ các Sub-Agents ở Bài 15, Bài 16 sẽ hướng dẫn cách đồng bộ và sao lưu toàn bộ kho kết quả này lên đám mây cho đồng nghiệp.",
+    "continuity_bridge": "Sau khi tạo ra nhiều tệp báo cáo từ các luồng chạy song song ở Bài 15, Bài 16 sẽ hướng dẫn cách đồng bộ và sao lưu toàn bộ kho kết quả này lên đám mây cho đồng nghiệp.",
     "slide_ids": [
       "s1"
     ],
@@ -461,8 +461,8 @@
       "b6"
     ],
     "beats_count": 6,
-    "total_duration_sec": 71.6,
-    "duration_formatted": "01:12"
+    "total_duration_sec": 71.3,
+    "duration_formatted": "01:11"
   },
   {
     "lesson_slug": "lesson_16",
@@ -537,7 +537,7 @@
     "title": "Tự động hóa Sản xuất Bài viết, Email Chuỗi & Kiểm duyệt Chất lượng",
     "short_title": "Sản xuất Bài viết & Email Chuỗi",
     "pill_label": "Bài 18 · Bài viết & Email Chuỗi",
-    "description": "Áp dụng mô hình 'Tòa soạn AI 2 bước': Từ 1 tài liệu chuyên môn gốc, tự động chuyển hóa thành Bài chuyên sâu Website, Bài đăng mạng xã hội và Chuỗi 3 Email chăm sóc khách hàng, kèm bước tự chấm điểm kiểm duyệt.",
+    "description": "Áp dụng mô hình 'Bộ phận Nội dung AI 2 bước': Từ 1 tài liệu chuyên môn gốc, tự động chuyển hóa thành Bài chuyên sâu Website, Bài đăng mạng xã hội và Chuỗi 3 Email chăm sóc khách hàng, kèm bước tự chấm điểm kiểm duyệt.",
     "prerequisites": "Bài 17 (Đã có tệp brand_voice.md và kho số liệu thực tế từ bao_cao_doanh_thu_q1.md).",
     "dependents": "Bài 19 (Tạo bộ ảnh minh họa đi kèm cho chính các bài viết vừa xuất bản ở Bài 18).",
     "placement_risk": "0% Rủi ro — Học viên tách bạch rõ bước Viết nháp và bước Kiểm duyệt (Editorial Review) nên bài viết luôn sắc sảo.",
@@ -632,7 +632,7 @@
     "pill_label": "Bài 21 · Case 1: Chiến lược 7 Bước",
     "description": "Thực chiến bài toán 'Đứng trên vai người khổng lồ': Phỏng vấn một chuyên gia có dự án thành công mẫu (Thương hiệu 5balance), rút trích bộ khung chiến lược 7 bước và nhân bản sang dự án mới tinh (Giày Thời trang Bền vững từ Bã Mía).",
     "prerequisites": "Toàn bộ Chương 1..5 (Đặc biệt là kỹ thuật bóc tách hồ sơ mẫu, bộ não .agent và chu trình /grill-me -> /plan).",
-    "dependents": "Bài 22 (Case Study Tuyển dụng HR), Bài 23 (Case Study Pháp lý), Bài 24 (Tổng kết & Kiểm toán /audit).",
+    "dependents": "Bài 22 (Case Study Tuyển dụng HR), Bài 23 (Case Study Pháp lý), Bài 24 (Tổng duyệt & Khóa sổ dự án).",
     "placement_risk": "0% Rủi ro — Đây là Case Study thực chiến độc lập số 1 của Chương 6 (sử dụng bài toán 5balance -> Giày Bã Mía), hoàn toàn không trùng lặp với bài tập TaskFlow B2B ở Bài 12.",
     "continuity_bridge": "Sau khi hoàn thành Tình huống Chiến lược Kinh doanh ở Bài 21, Bài 22 sẽ đưa chúng ta sang Tình huống Quản trị Nhân sự & Tuyển dụng tự động.",
     "slide_ids": [
@@ -694,9 +694,9 @@
     "pill_label": "Bài 23 · Case 3: Hợp đồng & Pháp lý",
     "description": "Biến Trợ lý AI thành Chuyên viên Rà soát Rủi ro Hợp đồng: Đối chiếu dự thảo hợp đồng đối tác gửi với Danh mục Điều khoản Bảo vệ (Legal Checklist) của công ty, phát hiện các điều khoản bất lợi và đề xuất câu chữ sửa đổi.",
     "prerequisites": "Bài 6 (Trích dẫn dòng #L), Bài 10 (Thiết lập Rules/Skills kiểm duyệt) & Bài 13 (Bóc tách tài liệu có dẫn nguồn).",
-    "dependents": "Bài 24 (Tình huống 4 — Tổng kết, Kiểm toán Chất lượng Độc lập /audit & Lộ trình Mở rộng).",
+    "dependents": "Bài 24 (Tình huống 4 — Tổng duyệt Chất lượng Dự án, Bảo mật .gitignore & Lộ trình 30 Ngày).",
     "placement_risk": "0% Rủi ro — Nhấn mạnh nguyên tắc AI chỉ đối chiếu dựa trên văn bản quy chế chính thức được nạp vào thư mục, tuyệt đối không tự suy diễn luật bên ngoài.",
-    "continuity_bridge": "Sau khi hoàn thành Tình huống Rà soát Hợp đồng ở Bài 23, Bài 24 sẽ khép lại toàn bộ khóa học bằng Tình huống Kiểm toán Chất lượng Độc lập (/audit) và xây dựng Hệ điều hành Cá nhân hóa.",
+    "continuity_bridge": "Sau khi hoàn thành Tình huống Rà soát Hợp đồng ở Bài 23, Bài 24 sẽ khép lại toàn bộ khóa học bằng Tình huống Tổng duyệt Chất lượng Dự án, Bảo mật .gitignore và Lộ trình 30 Ngày ứng dụng.",
     "slide_ids": [
       "s1"
     ],
@@ -720,13 +720,13 @@
     "chapter_number": 6,
     "chapter_code": "CHƯƠNG 6",
     "chapter_title": "4 Tình huống Thực chiến Toàn diện (Case Studies)",
-    "title": "Tình huống 4 — Tổng kết, Kiểm toán Chất lượng (/audit) & Mở rộng Hệ thống",
-    "short_title": "Case Study 4: Kiểm toán /audit & Tổng kết",
-    "pill_label": "Bài 24 · Case 4: Kiểm toán /audit",
-    "description": "Mảnh ghép hoàn thiện năng lực Quản trị AI Chuyên nghiệp: Sử dụng quy trình Kiểm toán Độc lập (/audit) để rà soát chéo toàn bộ sản phẩm trong thư mục dự án trước khi nghiệm thu bàn giao, và thiết lập Lộ trình 30 ngày áp dụng vào công việc thực tế.",
+    "title": "Tình huống 4 — Tổng duyệt Chất lượng Dự án, Bảo mật (.gitignore) & Lộ trình 30 Ngày",
+    "short_title": "Case Study 4: Tổng duyệt & Lộ trình 30 Ngày",
+    "pill_label": "Bài 24 · Tổng duyệt & Tốt nghiệp",
+    "description": "Mảnh ghép hoàn thiện năng lực Quản trị AI Chuyên nghiệp: Đối chiếu chéo số liệu giữa các tệp báo cáo trước khi bàn giao, thiết lập tệp .gitignore để bảo mật tài liệu nhạy cảm và lập Lộ trình 30 ngày áp dụng thực tế.",
     "prerequisites": "Toàn bộ Bài 1 đến Bài 23 (Đã hoàn thành đầy đủ các tệp sản phẩm Chiến lược, Dữ liệu, Nội dung, Slide, HR và Pháp lý).",
     "dependents": "Áp dụng trực tiếp vào công việc hàng ngày tại doanh nghiệp của học viên sau khi tốt nghiệp khóa Antigravity Basic.",
-    "placement_risk": "0% Rủi ro — Bài tổng kết khép kín vòng tròn quản trị: Từ Khởi tạo (Chương 1) -> Dữ liệu (Chương 2) -> Bộ não .agent (Chương 3) -> Đội nhóm (Chương 4) -> Xuất bản (Chương 5) -> Thực chiến & Kiểm toán /audit (Chương 6).",
+    "placement_risk": "0% Rủi ro — Bài tổng kết khép kín vòng tròn quản trị: Từ Khởi tạo (Chương 1) -> Dữ liệu (Chương 2) -> Bộ não .agent (Chương 3) -> Đội nhóm (Chương 4) -> Xuất bản (Chương 5) -> Thực chiến & Tổng duyệt bàn giao (Chương 6).",
     "continuity_bridge": "Hoàn thành Bài 24, học viên chính thức tốt nghiệp khóa học Antigravity Basic với trọn bộ công cụ và quy trình sẵn sàng vận hành ngay trong công việc thực tế!",
     "slide_ids": [
       "s1"
@@ -740,7 +740,7 @@
       "b6"
     ],
     "beats_count": 6,
-    "total_duration_sec": 82.5,
-    "duration_formatted": "01:22"
+    "total_duration_sec": 83.5,
+    "duration_formatted": "01:24"
   }
 ]

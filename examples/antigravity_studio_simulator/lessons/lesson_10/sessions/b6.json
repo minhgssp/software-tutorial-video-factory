@@ -1,13 +1,13 @@
 {
   "id": "b6",
-  "label": "6. [Thực hành B3/3] Nghiệm thu AI tự kích hoạt Rule & Skill mới",
+  "label": "6. Bước 3: Hoàn tất AI tự kích hoạt Rule & Skill mới",
   "duration": 14.17,
   "pose": 6,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Nghiệm thu & Tiếp nối",
+  "pedagogy_badge": "✅ Thực hành Bước 3/3 · Kết quả hoàn thành",
   "pedagogy_title": "Bước 3: Thử gõ lệnh không cần @troly.md, AI vẫn tự áp dụng cả Rule lẫn Skill",
-  "pedagogy_note": "Nghiệm thu: AI tự nạp Rule văn phòng + Skill báo cáo tuần. Tiếp theo: Bài 11 đóng gói quy trình nhiều bước thành lệnh /workflow.",
+  "pedagogy_note": "AI tự nạp Rule văn phòng + Skill báo cáo tuần.",
   "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › bao_cao_tuan_01.md (Tự động áp dụng Rule + Skill)', editorTitle:'📊 bao_cao_tuan_01.md — Đã kích hoạt ngầm Rule & Skill', editorHtml:'<div style=\"padding:16px;\"><div style=\"background:#ecfdf5;border:1px solid #6ee7b7;padding:8px 12px;border-radius:6px;margin-bottom:10px;font-size:12px;color:#065f46;\">⚡ <strong>Hệ thống .agent đã tự động nạp:</strong> <code>rules/quy_chuan_van_phong.md</code> + <code>skills/bao-cao-tuan/SKILL.md</code></div><h3 style=\"color:#9a3412;margin-top:0;\">BÁO CÁO TUẦN 1 THÁNG 04/2026 — PHÒNG KINH DOANH</h3><p><strong>Kết luận trực diện:</strong> Doanh thu tuần đạt 485.000.000 VNĐ (vượt 8% kế hoạch tuần).</p></div>', userMsg:'Hãy lập báo cáo tuần 1 tháng 4 từ bảng @sales_data.csv', aiMsg:'Tôi đã tự động áp dụng <strong>Nội quy văn phòng</strong> (chuẩn VNĐ, DD/MM/YYYY) và <strong>Kỹ năng Báo cáo tuần</strong> để xuất tệp <code>bao_cao_tuan_01.md</code> cho bạn mà không cần bạn đính kèm lại quy tắc!'});",
   "focus_selectors": [
     "#editor-canvas",

@@ -1,11 +1,11 @@
 {
   "id": "b3",
-  "label": "3. [Lý thuyết Kiểu 2] Cách viết câu lệnh phân tích số liệu không sai sót",
+  "label": "3. Kỹ thuật: Cách viết câu lệnh phân tích số liệu không sai sót",
   "duration": 11.37,
   "pose": 3,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Kỹ thuật Giao việc Phân tích Số liệu",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Kỹ thuật Giao việc Phân tích Số liệu",
   "pedagogy_title": "Yêu cầu AI hiển thị cả Bảng tổng hợp lẫn Dòng kiểm tra tổng cộng (Total Check)",
   "pedagogy_note": "Bí quyết để AI tính toán chính xác là yêu cầu trình bày từng dòng thành phần trước khi ghi dòng Tổng cộng ở cuối bảng.",
   "onEnter": "kudoSimScene({surface:'ide', file:'sales_data.csv', clearChat:true, chatInput:'@sales_data.csv @COMPANY.md Hãy: (1) Kiểm tra dữ liệu trùng/thiếu, (2) Lập bảng tổng hợp doanh thu Quý 1 theo Gói sản phẩm kèm dòng Tổng cộng đối chiếu, (3) Đề xuất 3 hành động cho Quý 2 vào tệp bao_cao_doanh_thu_q1.md'});",

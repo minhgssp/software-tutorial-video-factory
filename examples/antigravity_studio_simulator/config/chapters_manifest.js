@@ -5,37 +5,37 @@ window.KUDO_CHAPTERS_MANIFEST = [
     "title": "Khởi động Chuẩn & Làm chủ Giao diện",
     "subtitle": "Chuyển từ hỏi đáp trên web sang làm việc cùng Trợ lý AI trực tiếp trong thư mục máy tính an toàn",
     "status": "ready",
-    "status_label": "Đã sẵn sàng · 4 Bài · 24 Điểm neo",
+    "status_label": "Đã sẵn sàng · 4 Bài · 28 Phần",
     "lessons_count": 4,
-    "beats_count": 24,
-    "duration_label": "4 bài giảng · 24 điểm neo tương tác",
+    "beats_count": 28,
+    "duration_label": "4 bài giảng · 28 phần tương tác",
     "default_lesson": "lesson_01.html",
     "lessons": [
       {
         "code": "Bài 1",
-        "title": "Tư duy Trợ lý AI trên Máy tính & 2 Phần mềm Cốt lõi",
-        "meta": "6 phần · Đối sánh trực quan",
+        "title": "Tư duy Trợ lý AI trong Thư mục, 2 Giao diện & Cách Mở Dự án Đầu tiên",
+        "meta": "7 phần · Thực hành tương tác",
         "filename": "lesson_01.html",
         "ready": true
       },
       {
         "code": "Bài 2",
-        "title": "Chuẩn bị Học liệu: Giải nén .zip, Mở Thư mục & An toàn Ổ cứng",
-        "meta": "6 phần · Sơ đồ luồng",
+        "title": "Đồng bộ Ổ cứng 1-1, Phòng tránh Lỗi Thao tác & Chọn 5 Mô hình AI",
+        "meta": "7 phần · Thực hành tương tác",
         "filename": "lesson_02.html",
         "ready": true
       },
       {
         "code": "Bài 3",
-        "title": "Làm chủ Giao diện 3 Cột, Phím Cứu hộ & Xử lý Khi AI Dừng chờ",
-        "meta": "6 phần · Giải phẫu UI",
+        "title": "Làm chủ Giao diện 3 Cột, Mở Preview Chuột phải & Xử lý Khi AI Dừng chờ",
+        "meta": "7 phần · Thực hành tương tác",
         "filename": "lesson_03.html",
         "ready": true
       },
       {
         "code": "Bài 4",
         "title": "Bật Quyền Tự chủ Turbo & Bài Thực hành Đầu tiên Với /start-1-1",
-        "meta": "6 phần · Lộ trình 4 cấp",
+        "meta": "7 phần · Thực hành tương tác",
         "filename": "lesson_04.html",
         "ready": true
       }
@@ -45,39 +45,39 @@ window.KUDO_CHAPTERS_MANIFEST = [
     "chapter_number": 2,
     "code": "CHƯƠNG 2",
     "title": "Định dạng Dữ liệu, Ký hiệu @ & Hồ sơ Cá nhân hóa",
-    "subtitle": "Làm chủ tệp văn bản .md, bảng số liệu .csv, đính kèm @, giọng nói Ctrl+M và hồ sơ @troly.md",
+    "subtitle": "Làm chủ tệp văn bản .md, bảng số liệu .csv, đính kèm @, giọng nói Ctrl+M và hồ sơ cá nhân @troly.md",
     "status": "ready",
-    "status_label": "Đã sẵn sàng · 4 Bài · 24 Điểm neo",
+    "status_label": "Đã sẵn sàng · 4 Bài · 24 Phần",
     "lessons_count": 4,
     "beats_count": 24,
-    "duration_label": "4 bài giảng · 24 điểm neo tương tác",
+    "duration_label": "4 bài giảng · 24 phần tương tác",
     "default_lesson": "lesson_05.html",
     "lessons": [
       {
         "code": "Bài 5",
         "title": "Định dạng Văn bản .md, Bảng Dữ liệu .csv & Tiện ích Office Viewer",
-        "meta": "6 phần · Đối sánh định dạng",
+        "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_05.html",
         "ready": true
       },
       {
         "code": "Bài 6",
         "title": "Đính kèm Tệp Bằng @, Giao việc Giọng nói (Ctrl+M) & Trích dẫn (Ctrl+L)",
-        "meta": "6 phần · Sơ đồ 3 kênh",
+        "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_06.html",
         "ready": true
       },
       {
         "code": "Bài 7",
-        "title": "Tạo Hồ sơ Trợ lý Cá nhân @troly.md & Xây dựng Ban bệ Nhân sự Ảo",
-        "meta": "6 phần · Giải phẫu hồ sơ",
+        "title": "Xây dựng Hồ sơ Cá nhân hóa @troly.md Để AI Nhớ Phong cách Của Bạn",
+        "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_07.html",
         "ready": true
       },
       {
         "code": "Bài 8",
-        "title": "Quản trị Hội thoại Dài: Bàn giao Ca ban_giao_cong_viec.md & /compact",
-        "meta": "6 phần · Chu trình giao ca",
+        "title": "Quản trị Trí nhớ Dự án Dài hạn & Sổ Bàn giao Giữa Các Phiên Chat",
+        "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_08.html",
         "ready": true
       }
@@ -89,37 +89,37 @@ window.KUDO_CHAPTERS_MANIFEST = [
     "title": "Thiết lập Bộ não .agent & Chu trình Cộng tác",
     "subtitle": "Xây dựng nội quy Rules, đóng gói chuyên môn vào Skills, tạo lệnh Workflows và chu trình 3 lệnh vàng",
     "status": "ready",
-    "status_label": "Đã sẵn sàng · 4 Bài · 24 Điểm neo",
+    "status_label": "Đã sẵn sàng · 4 Bài · 24 Phần",
     "lessons_count": 4,
     "beats_count": 24,
-    "duration_label": "4 bài giảng · 24 điểm neo tương tác",
+    "duration_label": "4 bài giảng · 24 phần tương tác",
     "default_lesson": "lesson_09.html",
     "lessons": [
       {
         "code": "Bài 9",
-        "title": "Kiến trúc Bộ ba .agent (Rules, Skills, Workflows) & Thiết lập Rules",
-        "meta": "6 phần · Giải phẫu .agent",
+        "title": "Tư duy Quản trị Đầu ra & Kiến trúc Bộ não .agent (Rules, Skills, Workflows)",
+        "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_09.html",
         "ready": true
       },
       {
         "code": "Bài 10",
-        "title": "Giải phẫu Skills Chuyên môn (viet-chuyen-nghiep) & Kho skills.sh",
-        "meta": "6 phần · Sơ đồ nạp Skill",
+        "title": "Thiết lập Nội quy Tự động (.agent/rules) & Sổ tay Kỹ năng (.agent/skills)",
+        "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_10.html",
         "ready": true
       },
       {
         "code": "Bài 11",
-        "title": "Thiết kế Biểu mẫu (Templates), Quy trình Workflows (/) & Lệnh /buildflow",
-        "meta": "6 phần · Luồng đóng gói",
+        "title": "Đóng gói Quy trình Lặp lại Thành Lệnh Gạch chéo (.agent/workflows)",
+        "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_11.html",
         "ready": true
       },
       {
         "code": "Bài 12",
-        "title": "Chu trình Cộng tác 3 Lệnh Vàng: Hỏi ngược /grill-me, /plan & /learn",
-        "meta": "6 phần · Chu trình 3 bước",
+        "title": "Chu trình 3 Lệnh Vàng: /grill-me (Phỏng vấn), /plan (Lập kế hoạch) & /learn (Đúc kết)",
+        "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_12.html",
         "ready": true
       }
@@ -128,40 +128,40 @@ window.KUDO_CHAPTERS_MANIFEST = [
   {
     "chapter_number": 4,
     "code": "CHƯƠNG 4",
-    "title": "Ứng dụng Văn phòng Thực chiến",
-    "subtitle": "Tự động nghiên cứu Web với /browser, phân tích bảng tính doanh thu, nhân bản giọng văn và xuất Slide",
+    "title": "Xử lý Dữ liệu Lớn, Bảng tính CSV & Phối hợp Đội nhóm",
+    "subtitle": "Bóc tách kho tài liệu lớn có dẫn nguồn, phân tích bảng tính .csv, chạy đa luồng song song và đồng bộ GitHub/Drive",
     "status": "ready",
-    "status_label": "Đã sẵn sàng · 4 Bài · 24 Điểm neo",
+    "status_label": "Đã sẵn sàng · 4 Bài · 24 Phần",
     "lessons_count": 4,
     "beats_count": 24,
-    "duration_label": "4 bài giảng · 24 điểm neo tương tác",
+    "duration_label": "4 bài giảng · 24 phần tương tác",
     "default_lesson": "lesson_13.html",
     "lessons": [
       {
         "code": "Bài 13",
-        "title": "Tự động Nghiên cứu Thị trường & Đối thủ Trên Web Với /browser",
-        "meta": "6 phần · Luồng lướt Web",
+        "title": "Bóc tách Kho Tài liệu Lớn & Tóm tắt Đa tầng Không Tràn Bộ nhớ",
+        "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_13.html",
         "ready": true
       },
       {
         "code": "Bài 14",
-        "title": "Phân tích Bảng tính Kinh doanh (@sales_data.csv) & Báo cáo Điều hành",
-        "meta": "6 phần · Giải phẫu KPI",
+        "title": "Phân tích Bảng tính CSV, Làm sạch Dữ liệu & Trích xuất Insight Kinh doanh",
+        "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_14.html",
         "ready": true
       },
       {
         "code": "Bài 15",
-        "title": "Nhân bản Giọng văn Cá nhân (Style Cloning), Minh họa & Landing Page",
-        "meta": "6 phần · Sơ đồ DNA",
+        "title": "Phối hợp Nhiều Luồng Công việc Song song Cho Dự án Lớn",
+        "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_15.html",
         "ready": true
       },
       {
         "code": "Bài 16",
-        "title": "Thiết kế Slide Thuyết trình Từ Báo cáo: Xuất .pptx & Đồng bộ Phông chữ",
-        "meta": "6 phần · Lộ trình 2 pha",
+        "title": "Đồng bộ Tài liệu Nhóm Qua GitHub & Sao lưu Google Drive Tự động",
+        "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_16.html",
         "ready": true
       }
@@ -170,40 +170,40 @@ window.KUDO_CHAPTERS_MANIFEST = [
   {
     "chapter_number": 5,
     "code": "CHƯƠNG 5",
-    "title": "Tự động hóa Chuyên sâu & Quản trị Tri thức",
-    "subtitle": "Tổ chức kho tài liệu P.A.R.A, phối hợp đa trợ lý /teamwork, tự động hóa Word/Excel và hẹn giờ /schedule",
+    "title": "Sản xuất Nội dung Đa kênh, Hình ảnh, Slide & Báo cáo Web",
+    "subtitle": "Khóa chặt giọng văn thương hiệu brand_voice.md, sản xuất bài viết đa kênh, vẽ Infographic và xuất bản Slide 16:9",
     "status": "ready",
-    "status_label": "Đã sẵn sàng · 4 Bài · 24 Điểm neo",
+    "status_label": "Đã sẵn sàng · 4 Bài · 24 Phần",
     "lessons_count": 4,
     "beats_count": 24,
-    "duration_label": "4 bài giảng · 24 điểm neo tương tác",
+    "duration_label": "4 bài giảng · 24 phần tương tác",
     "default_lesson": "lesson_17.html",
     "lessons": [
       {
         "code": "Bài 17",
-        "title": "Tổ chức Kho Tài liệu Theo Mô hình P.A.R.A & Chống Bịa Số liệu",
-        "meta": "6 phần · Giải phẫu 4 ngăn",
+        "title": "Khởi tạo Trung tâm Nội dung Đa kênh & Quản lý Giọng văn Thương hiệu",
+        "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_17.html",
         "ready": true
       },
       {
         "code": "Bài 18",
-        "title": "Phối hợp Đa Trợ lý (/teamwork), Mục tiêu Dài hạn (/goal) & Kiểm duyệt",
-        "meta": "6 phần · Luồng đa trợ lý",
+        "title": "Tự động hóa Sản xuất Bài viết, Email Chuỗi & Kiểm duyệt Chất lượng",
+        "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_18.html",
         "ready": true
       },
       {
         "code": "Bài 19",
-        "title": "Tự động hóa Word (.docx Chuẩn NĐ 30) & Excel (.xlsx Công thức Sống)",
-        "meta": "6 phần · Đối sánh Office",
+        "title": "Tạo Hình ảnh Minh họa, Infographic & Ấn phẩm Nhận diện Thương hiệu",
+        "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_19.html",
         "ready": true
       },
       {
         "code": "Bài 20",
-        "title": "Hẹn giờ Tự động hóa Định kỳ Với Automations (/schedule) & Công cụ Tĩnh",
-        "meta": "6 phần · Chu trình hẹn giờ",
+        "title": "Xuất bản Slide Thuyết trình (HTML/PPTX) & Bảng điều khiển Báo cáo Web",
+        "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_20.html",
         "ready": true
       }
@@ -212,40 +212,40 @@ window.KUDO_CHAPTERS_MANIFEST = [
   {
     "chapter_number": 6,
     "code": "CHƯƠNG 6",
-    "title": "4 Tình huống Đa ngành, Bảo mật & Điều khiển Từ xa",
-    "subtitle": "Thực chiến Chiến lược 7 bước, Tuyển dụng 120 CV ẩn danh, Thiết kế đa phương tiện và Remote Control",
+    "title": "4 Tình huống Thực chiến Toàn diện (Case Studies)",
+    "subtitle": "Thực chiến Lập kế hoạch chiến lược 7 bước, Tuyển dụng nhân sự HR, Rà soát rủi ro Hợp đồng và Tổng duyệt dự án",
     "status": "ready",
-    "status_label": "Đã sẵn sàng · 4 Bài · 24 Điểm neo",
+    "status_label": "Đã sẵn sàng · 4 Bài · 24 Phần",
     "lessons_count": 4,
     "beats_count": 24,
-    "duration_label": "4 bài giảng · 24 điểm neo tương tác",
+    "duration_label": "4 bài giảng · 24 phần tương tác",
     "default_lesson": "lesson_21.html",
     "lessons": [
       {
         "code": "Bài 21",
-        "title": "Tình huống 1 (Chiến lược): Nhân bản Quy trình 7 Bước Sang Giày Bã Mía",
-        "meta": "6 phần · Sơ đồ 7 bước",
+        "title": "Tình huống 1 — Lập Kế hoạch Chiến lược Từ 0 Đến Bản Thảo Hoàn chỉnh",
+        "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_21.html",
         "ready": true
       },
       {
         "code": "Bài 22",
-        "title": "Tình huống 2 (Nhân sự & Pháp chế): Sàng lọc 120 CV Ẩn danh & Hợp đồng",
-        "meta": "6 phần · Luồng 5 bước HR",
+        "title": "Tình huống 2 — Tự động hóa Tuyển dụng, Chấm CV & Lộ trình Hội nhập (HR)",
+        "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_22.html",
         "ready": true
       },
       {
         "code": "Bài 23",
-        "title": "Tình huống 3 (Đa định dạng): Bản tin Giá vàng, Nội thất & Google Stitch",
-        "meta": "6 phần · Giải phẫu đa kênh",
+        "title": "Tình huống 3 — Xây dựng Trợ lý Nghiên cứu Pháp lý, Hợp đồng & Quy chế",
+        "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_23.html",
         "ready": true
       },
       {
         "code": "Bài 24",
-        "title": "Bảo vệ Bí kíp (.gitignore), So sánh Công cụ & Điều khiển Qua Điện thoại",
-        "meta": "6 phần · Tổng kết khóa",
+        "title": "Tình huống 4 — Tổng duyệt Chất lượng Dự án, Bảo mật (.gitignore) & Lộ trình 30 Ngày",
+        "meta": "6 phần · Thực hành tương tác",
         "filename": "lesson_24.html",
         "ready": true
       }

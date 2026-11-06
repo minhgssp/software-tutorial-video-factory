@@ -1,20 +1,20 @@
 {
   "id": "b6",
-  "label": "6. [Thực hành B3/3] Nghiệm thu tệp tom_tat_hdqt.md & Tiếp nối Bài 14",
+  "label": "6. Bước 3: Hoàn tất tệp tom_tat_hdqt.md",
   "duration": 13.37,
   "pose": 6,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 3/3 · Nghiệm thu & Tiếp nối",
-  "pedagogy_title": "Bước 3: Nghiệm thu bản tóm tắt Hội đồng Quản trị có trích dẫn dòng 100%",
-  "pedagogy_note": "Nghiệm thu: Tệp tom_tat_hdqt.md súc tích, rõ nguồn gốc từng con số. Tiếp theo: Bài 14 phân tích sâu bảng số liệu sales_data.csv.",
+  "pedagogy_badge": "✅ Thực hành Bước 3/3 · Kết quả hoàn thành",
+  "pedagogy_title": "Bước 3: Kiểm tra kết quả bản tóm tắt Hội đồng Quản trị có trích dẫn dòng 100%",
+  "pedagogy_note": "Tệp tom_tat_hdqt.md súc tích, rõ nguồn gốc từng con số.",
   "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › tom_tat_hdqt.md (Đã kiểm chứng nguồn)', editorTitle:'📑 tom_tat_hdqt.md — Báo Cáo Tóm Tắt Trình HĐQT', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#9a3412;margin-top:0;\">TÓM TẮT ĐIỀU HÀNH TRÌNH HỘI ĐỒNG QUẢN TRỊ</h2><ol><li><strong>Quy mô vận hành:</strong> 45 nhân sự tại 3 khối Kỹ thuật, Kinh doanh, CS <em>[Nguồn: @COMPANY.md#L3-L6]</em>.</li><li><strong>Điểm nghẽn cần xử lý:</strong> Thời gian hướng dẫn khách hàng mới (Onboarding) đang mất 14 ngày <em>[Nguồn: @COMPANY.md#L14-L16]</em>.</li><li><strong>Mục tiêu ưu tiên:</strong> Rút ngắn thời gian Onboarding xuống còn 3 ngày bằng cổng tự động <em>[Nguồn: @1.1_Welcome.md#L9-L12]</em>.</li></ol></div>', userMsg:'@COMPANY.md @1.1_Welcome.md Hãy bóc tách hồ sơ công ty thành 3 mục, gắn trích dẫn [Nguồn] và lưu vào tom_tat_hdqt.md', aiMsg:'Đã hoàn tất bóc tách 2 tầng và lưu tại <code>tom_tat_hdqt.md</code>! Toàn bộ 100% số liệu đều có nhãn <code>[Nguồn]</code> để bạn đối chiếu tức thì.'});",
   "focus_selectors": [
     "#editor-canvas",
     "#ide-chat-messages"
   ],
   "cursor_selector": "#editor-canvas",
-  "cursor_label": "Bước 3: Nghiệm thu tom_tat_hdqt.md có dẫn nguồn đầy đủ",
+  "cursor_label": "Bước 3: Hoàn tất tom_tat_hdqt.md có dẫn nguồn đầy đủ",
   "caption": "Ở <strong>Bước 3</strong>, bản tóm tắt trình Hội đồng Quản trị đã hiện ra ở cột giữa với đầy đủ trích dẫn nguồn cho từng con số. Sau khi xử lý xong phần văn bản, chúng ta bước sang <strong>Bài 14</strong> để phân tích bảng số liệu doanh thu <code>sales_data.csv</code>!",
   "audio_src": "audio/lesson_13/b6.mp3",
   "audio_duration": 12.72

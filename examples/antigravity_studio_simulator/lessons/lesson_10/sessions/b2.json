@@ -1,14 +1,14 @@
 {
   "id": "b2",
-  "label": "2. [Lý thuyết Kiểu 2] Giải phẫu một tệp Nội quy trong .agent/rules/",
+  "label": "2. Minh họa: Giải phẫu một tệp Nội quy trong .agent/rules/",
   "duration": 14.57,
   "pose": 2,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Cấu trúc Tệp Rule",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Cấu trúc Tệp Rule",
   "pedagogy_title": "Quan sát tệp .agent/rules/quy_chuan_van_phong.md trên màn hình",
   "pedagogy_note": "Gồm 3 gạch đầu dòng ngắn gọn: Chuẩn ngày tháng DD/MM/YYYY, đơn vị VNĐ và câu đầu tiên luôn là kết luận.",
-  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'.agent › rules › quy_chuan_van_phong.md', editorTitle:'📏 .agent/rules/quy_chuan_van_phong.md — Nội Quy Tự Động', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#9a3412;margin-top:0;\">NỘI QUY VĂN PHÒNG BẮT BUỘC (ALWAYS-ON RULE)</h2><ol><li><strong>Định dạng thời gian &amp; tiền tệ:</strong> Luôn dùng chuẩn ngày <code>DD/MM/YYYY</code> và đơn vị <code>VNĐ</code> (phân cách hàng nghìn bằng dấu chấm).</li><li><strong>Cấu trúc báo cáo:</strong> Câu đầu tiên luôn là kết luận trực diện; ưu tiên bảng biểu đối chiếu.</li><li><strong>Bảo toàn sự thật:</strong> Tuyệt đối không tự suy diễn số liệu phần trăm nếu tài liệu gốc không cung cấp.</li></ol></div>'});",
+  "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'.agent › rules › quy_chuan_van_phong.md', editorTitle:'📏 .agent/rules/quy_chuan_van_phong.md — Nội Quy Tự Động', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#9a3412;margin-top:0;\">NỘI QUY VĂN PHÒNG BẮT BUỘC</h2><ol><li><strong>Định dạng thời gian &amp; tiền tệ:</strong> Luôn dùng chuẩn ngày <code>DD/MM/YYYY</code> và đơn vị <code>VNĐ</code> (phân cách hàng nghìn bằng dấu chấm).</li><li><strong>Cấu trúc báo cáo:</strong> Câu đầu tiên luôn là kết luận trực diện; ưu tiên bảng biểu đối chiếu.</li><li><strong>Bảo toàn sự thật:</strong> Tuyệt đối không tự suy diễn số liệu phần trăm nếu tài liệu gốc không cung cấp.</li></ol></div>'});",
   "focus_selectors": [
     "#editor-canvas"
   ],

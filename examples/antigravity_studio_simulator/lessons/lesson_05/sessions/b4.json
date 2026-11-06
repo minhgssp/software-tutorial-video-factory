@@ -1,12 +1,12 @@
 {
   "id": "b4",
-  "label": "4. [Thực hành B1/3] Bối cảnh & Kiểm tra tiện ích Office Viewer",
+  "label": "4. Bước 1: Kiểm tra tiện ích Office Viewer",
   "duration": 11.21,
   "pose": 4,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 1/3 · Bối cảnh & Cài đặt",
-  "pedagogy_title": "Bối cảnh: Phòng kinh doanh gửi bảng doanh thu sales_data.csv cần đọc ngay",
+  "pedagogy_badge": "👆 Thực hành Bước 1/3 · Cài đặt",
+  "pedagogy_title": "Phòng kinh doanh gửi bảng doanh thu sales_data.csv cần đọc ngay",
   "pedagogy_note": "Bước 1: Bấm biểu tượng Extensions ở thanh trái, chọn Office Viewer và xác nhận trạng thái đã cài đặt (Installed).",
   "onEnter": "kudoHidePopovers(); switchToSurface('ide'); openIdeExtensionsView(); kudoShowKeyHud('Phím tắt mở nhanh Extensions: <kbd>Ctrl + Shift + X</kbd>');",
   "focus_selectors": [

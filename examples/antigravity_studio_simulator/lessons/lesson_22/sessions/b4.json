@@ -1,12 +1,12 @@
 {
   "id": "b4",
-  "label": "4. [Thực hành B1/3] Bối cảnh & Kiểm tra tệp tiêu chí jd_truong_nhom_cs.md",
+  "label": "4. Bước 1: Kiểm tra tệp tiêu chí jd_truong_nhom_cs.md",
   "duration": 8.17,
   "pose": 4,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 1/3 · Khóa Thang Điểm Tuyển dụng",
-  "pedagogy_title": "Bối cảnh: Cần tuyển gấp Trưởng nhóm CS để thực hiện mục tiêu Quý 2",
+  "pedagogy_badge": "👆 Thực hành Bước 1/3 · Khóa Thang Điểm Tuyển dụng",
+  "pedagogy_title": "Cần tuyển gấp Trưởng nhóm CS để thực hiện mục tiêu Quý 2",
   "pedagogy_note": "Bước 1: Mở kiểm tra tệp jd_truong_nhom_cs.md để đảm bảo đủ 3 tiêu chí chấm điểm.",
   "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › jd_truong_nhom_cs.md', editorTitle:'📋 jd_truong_nhom_cs.md — Kiểm tra Thang điểm 100', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">ĐANG CHỌN THANG ĐIỂM: jd_truong_nhom_cs.md</h3><p>Sẵn sàng đối chiếu với danh sách hồ sơ ứng viên tại <code>@danh_sach_ung_vien.csv</code>.</p></div>'});",
   "focus_selectors": [

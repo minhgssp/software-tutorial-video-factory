@@ -1,11 +1,11 @@
 {
   "id": "b5",
-  "label": "5. [Thực hành B2/3] Mở và đọc bảng tính sales_data.csv trực quan",
+  "label": "5. Bước 2: Mở và đọc bảng tính sales_data.csv trực quan",
   "duration": 11.53,
   "pose": 5,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Đọc bảng dữ liệu .csv",
+  "pedagogy_badge": "👆 Thực hành Bước 2/3 · Đọc bảng dữ liệu .csv",
   "pedagogy_title": "Bước 2: Quay lại Explorer và bấm mở tệp sales_data.csv",
   "pedagogy_note": "Nhờ Office Viewer, tệp .csv hiển thị thành bảng kẻ ô sắc nét gồm cột Sản phẩm, Doanh thu, Chi phí và Trạng thái.",
   "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); setEditorMode('wysiwyg'); openFileInEditor('sales_data.csv');",

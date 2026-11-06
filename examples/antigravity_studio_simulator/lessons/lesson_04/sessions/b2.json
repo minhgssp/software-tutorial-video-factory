@@ -1,11 +1,11 @@
 {
   "id": "b2",
-  "label": "2. [Lý thuyết Kiểu 2] Vị trí cài đặt quyền Turbo trong Settings",
+  "label": "2. Minh họa: Vị trí cài đặt quyền Turbo trong Settings",
   "duration": 11.29,
   "pose": 2,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Phân quyền This Computer",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Phân quyền This Computer",
   "pedagogy_title": "Bảng thiết lập quyền tự chủ (Settings -> General -> This Computer)",
   "pedagogy_note": "4 tùy chọn: Request Review, Default, Auto (Preview) và Turbo (Run all commands without restrictions).",
   "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); openSettingsModal('general'); kudoOpenTurboPopover();",

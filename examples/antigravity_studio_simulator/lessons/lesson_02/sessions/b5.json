@@ -1,11 +1,11 @@
 {
   "id": "b5",
-  "label": "5. [Thực hành B2/3] Kiểm tra đồng bộ bằng Reveal in File Explorer",
+  "label": "5. Bước 2: Kiểm tra đồng bộ bằng Reveal in File Explorer",
   "duration": 10.65,
   "pose": 5,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 2/3 · Thao tác đối chiếu ổ cứng",
+  "pedagogy_badge": "👆 Thực hành Bước 2/3 · Thao tác đối chiếu ổ cứng",
   "pedagogy_title": "Bước 2: Chuột phải vào INDEX.md chọn Reveal in File Explorer",
   "pedagogy_note": "Cây thư mục dự án đã hiện ra ở cột trái! Nhấp chuột phải vào INDEX.md để đối chiếu vị trí tệp thật trên máy tính.",
   "onEnter": "kudoHidePopovers(); closeWinFolderDialog(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); openFileInEditor('INDEX.md'); kudoOpenExplorerContextMenu(\"[data-file='INDEX.md']\");",

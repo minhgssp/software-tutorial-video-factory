@@ -1,11 +1,11 @@
 {
   "id": "b2",
-  "label": "2. [Lý thuyết Kiểu 2] Cách chọn lệnh /grill-me và /plan trong khung chat",
+  "label": "2. Minh họa: Cách chọn lệnh /grill-me và /plan trong khung chat",
   "duration": 9.37,
   "pose": 2,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Bảng Lệnh Chiến lược (/)",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Bảng Lệnh Chiến lược (/)",
   "pedagogy_title": "Quan sát nhóm lệnh /grill-me, /plan và /learn trong bảng gợi ý",
   "pedagogy_note": "Gõ dấu / trong khung chat để mở danh sách các quy trình tư vấn và lập kế hoạch có sẵn.",
   "onEnter": "kudoHidePopovers(); switchToSurface('ide'); openFileInEditor('COMPANY.md'); kudoOpenIdeSlashPopup();",

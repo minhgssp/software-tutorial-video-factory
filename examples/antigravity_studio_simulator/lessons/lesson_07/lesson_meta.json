@@ -13,7 +13,7 @@
   "prerequisites": "Bài 5 (Biết soạn thảo tệp .md) & Bài 6 (Biết dùng ký hiệu @ để đính kèm tệp vào câu lệnh).",
   "dependents": "Bài 8 (Kết hợp @troly.md khi lập sổ bàn giao), Bài 9 (Nâng cấp từ @troly.md lên .agent/rules/ tự động).",
   "placement_risk": "0% Rủi ro — Học viên bắt đầu cá nhân hóa AI bằng một tệp @troly.md đơn giản ngoài thư mục gốc trước khi bước vào kiến trúc .agent/ ở Chương 3.",
-  "continuity_bridge": "Sau khi có hồ sơ cá nhân @troly.md ở Bài 7, Bài 8 sẽ hướng dẫn cách tạo Sổ bàn giao công việc (Project Memory) để AI không bao giờ quên tiến độ dự án qua các ngày làm việc.",
+  "continuity_bridge": "Sau khi có hồ sơ cá nhân @troly.md ở Bài 7, Bài 8 sẽ hướng dẫn cách tạo Sổ bàn giao công việc (Hồ sơ gốc của dự án) để AI không bao giờ quên tiến độ dự án qua các ngày làm việc.",
   "slide_ids": [
     "s1"
   ],

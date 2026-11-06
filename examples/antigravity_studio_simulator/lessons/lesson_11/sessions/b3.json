@@ -1,11 +1,11 @@
 {
   "id": "b3",
-  "label": "3. [Lý thuyết Kiểu 2] Cơ chế hiển thị lệnh mới trong bảng gạch chéo (/)",
+  "label": "3. Kỹ thuật: Cơ chế hiển thị lệnh mới trong bảng gạch chéo (/)",
   "duration": 11.05,
   "pose": 3,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Kích hoạt Lệnh Gạch chéo",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Kích hoạt Lệnh Gạch chéo",
   "pedagogy_title": "Tệp vừa lưu trong .agent/workflows/ lập tức xuất hiện khi gõ dấu /",
   "pedagogy_note": "Không cần khởi động lại phần mềm: Lưu tệp xong là gõ dấu / gọi chạy được ngay.",
   "onEnter": "kudoHidePopovers(); switchToSurface('ide'); kudoOpenIdeSlashPopup();",

@@ -1,11 +1,11 @@
 {
   "id": "b3",
-  "label": "3. [Lý thuyết Kiểu 2] Cảnh báo khi lỡ tay kéo thả nhầm thư mục",
+  "label": "3. Kỹ thuật: Cảnh báo khi lỡ tay kéo thả nhầm thư mục",
   "duration": 10.97,
   "pose": 3,
   "mode": "sim",
   "pedagogy_type": "theory_type_2",
-  "pedagogy_badge": "📘 Lý thuyết Kiểu 2 · Phòng tránh lỗi thao tác chuột",
+  "pedagogy_badge": "💡 Điểm cần lưu ý · Phòng tránh lỗi thao tác chuột",
   "pedagogy_title": "Xử lý hộp thoại cảnh báo di chuyển nhầm thư mục (Are you sure you want to move...)",
   "pedagogy_note": "Khi dùng chuột ở cột trái, nếu lỡ kéo thư mục này vào thư mục khác, hãy bấm Cancel ngay để bảo toàn cấu trúc.",
   "onEnter": "kudoHidePopovers(); closeIdeMenus(); switchToSurface('ide'); openMoveWarnModal();",

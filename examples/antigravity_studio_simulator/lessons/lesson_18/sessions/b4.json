@@ -1,12 +1,12 @@
 {
   "id": "b4",
-  "label": "4. [Thực hành B1/3] Bối cảnh & Chọn tệp @brand_voice.md",
+  "label": "4. Bước 1: Chọn tệp @brand_voice.md",
   "duration": 7.61,
   "pose": 4,
   "mode": "sim",
   "pedagogy_type": "practice_step",
-  "pedagogy_badge": "🛠️ Thực hành Bước 1/3 · Chuẩn bị Nguồn Chất liệu",
-  "pedagogy_title": "Bối cảnh: Sản xuất bộ nội dung truyền thông tuần đầu Quý 2",
+  "pedagogy_badge": "👆 Thực hành Bước 1/3 · Chuẩn bị Nguồn Chất liệu",
+  "pedagogy_title": "Sản xuất bộ nội dung truyền thông tuần đầu Quý 2",
   "pedagogy_note": "Bước 1: Mở tệp brand_voice.md vừa tạo ở Bài 17 để làm thước đo chuẩn mực cho toàn bộ bài viết.",
   "onEnter": "kudoSimScene({surface:'ide', breadcrumb:'antigravity_course_vn › brand_voice.md', editorTitle:'🎙️ brand_voice.md — Nguồn chuẩn mực giọng văn', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">ĐANG CHỌN TỆP NGUỒN: brand_voice.md</h3><p>Sẵn sàng kết hợp cùng <code>@de_an_tong_the_q2.md</code> để sản xuất trọn bộ nội dung đa kênh.</p></div>'});",
   "focus_selectors": [
