@@ -1083,10 +1083,13 @@
     font-size: 12.5px;
   }
   .sim-exp-header {
-    font-size: 11px;
+    font-size: 10.5px;
     font-weight: 800;
     color: #858585;
     margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .sim-file-row {
     padding: 6px 8px;
@@ -1217,11 +1220,14 @@
   #demo-cursor {
     position: absolute;
     pointer-events: none;
-    transition: all 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: all 0.38s cubic-bezier(0.22, 1, 0.36, 1);
     z-index: 90;
     display: flex;
-    align-items: center;
-    gap: 6px;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  #demo-cursor .cursor-tag {
+    margin-top: 14px;
   }
   .cursor-ripple {
     position: absolute;
@@ -1465,11 +1471,11 @@
           <div><span style="color:#4ADE80;font-weight:700;">● Màn hình sạch 100% (Không chèn hộp thoại đè lên hình)</span></div>
         </div>
 
-        <div class="sim-workspace-grid">
+        <div class="sim-workspace-grid" id="sim-workspace-canvas">
           <div class="sim-explorer">
             <div class="sim-exp-header">EXPLORER: ANTIGRAVITY_COURSE_VN</div>
             <div class="sim-file-row"><span>📂</span> <span>Module_0_Introduction</span></div>
-            <div class="sim-file-row active"><span>M↓</span> <span>0.1_Introduction.md</span></div>
+            <div class="sim-file-row active" id="sim-target-file"><span>M↓</span> <span>0.1_Introduction.md</span></div>
             <div class="sim-file-row"><span>📊</span> <span>sales_q1_2026.csv</span></div>
             <div class="sim-file-row"><span>⚙️</span> <span>AGENTS.md</span></div>
             <div class="sim-file-row"><span>📁</span> <span>skills/</span></div>
@@ -1477,7 +1483,7 @@
 
           <div class="sim-editor-center">
             <div class="sim-tabs-bar">
-              <div class="sim-tab">
+              <div class="sim-tab" id="sim-target-tab">
                 <span style="color:#38BDF8;">M↓</span>
                 <span>0.1_Introduction.md</span>
                 <span style="opacity:0.5;">×</span>
@@ -1488,7 +1494,7 @@
             </div>
 
             <div class="sim-context-menu" id="sim-context-menu">
-              <div class="scm-item active">
+              <div class="scm-item active" id="sim-target-preview">
                 <span>Open Preview</span>
                 <span style="opacity:0.8;font-family:var(--font-mono);font-size:10.5px;">Ctrl+Shift+V</span>
               </div>
@@ -1519,10 +1525,10 @@
               Đã nạp bối cảnh thư mục <code>antigravity_course_vn</code>. Nhấp chuột phải vào thẻ tệp để bật chế độ xem đẹp (Preview).
             </div>
 
-            <div class="sim-input-box">
+            <div class="sim-input-box" id="sim-target-input">
               <div style="font-size:12px;color:#94A3B8;">Ask anything, @ to mention, / for workflows...</div>
               <div style="display:flex;justify-content:space-between;align-items:center;">
-                <span class="sim-model-pill">Gemini 4 Argon Medium ▾</span>
+                <span class="sim-model-pill" id="sim-target-model">Gemini 4 Argon Medium ▾</span>
                 <span style="background:#EA580C;color:#fff;padding:3px 9px;border-radius:5px;font-size:11px;font-weight:800;">🛡️ Turbo</span>
               </div>
             </div>
@@ -3104,6 +3110,38 @@ function setRevealCard(idx) {
   renderStageAndSubtitles();
 }
 
+function anchorDemoSpotlightAndCursor(targetSelector, labelText) {
+  const canvas = document.getElementById("sim-workspace-canvas");
+  const spot = document.getElementById("demo-spotlight");
+  const cur = document.getElementById("demo-cursor");
+  const curTag = document.getElementById("demo-cursor-tag");
+  const target = document.querySelector(targetSelector);
+  if (!canvas || !spot || !cur || !curTag || !target) return;
+
+  const cr = canvas.getBoundingClientRect();
+  const tr = target.getBoundingClientRect();
+  if (tr.width <= 0 || tr.height <= 0) return;
+
+  const pad = 3;
+  const top = Math.max(4, Math.round(tr.top - cr.top - pad));
+  const left = Math.max(4, Math.round(tr.left - cr.left - pad));
+  const width = Math.round(tr.width + pad * 2);
+  const height = Math.round(tr.height + pad * 2);
+
+  spot.style.top = top + "px";
+  spot.style.left = left + "px";
+  spot.style.width = width + "px";
+  spot.style.height = height + "px";
+
+  // Neo mũi tên chuột ở sát mép phải dưới của phần tử mục tiêu để KHÔNG đè lên chữ tên tệp
+  const cursorLeft = Math.min(Math.round(cr.width - 36), Math.round(left + width - 14));
+  const cursorTop = Math.min(Math.round(cr.height - 36), Math.round(top + height - 6));
+
+  cur.style.left = cursorLeft + "px";
+  cur.style.top = cursorTop + "px";
+  curTag.textContent = labelText;
+}
+
 function renderStageAndSubtitles() {
   const { chap, lesson } = findLessonAndChap(state.activeLessonId);
   const beats = getBeatsForLesson(lesson, chap);
@@ -3180,35 +3218,46 @@ function renderStageAndSubtitles() {
     const cur = document.getElementById("demo-cursor");
     const curTag = document.getElementById("demo-cursor-tag");
 
+    let targetSelector = "#sim-target-file";
+    let labelText = "Kiểm tra tệp 0.1_Introduction.md trên cây thư mục";
+
     if (beat.simType === "preview_click") {
       if (phase === 1) {
         ctxMenu.classList.remove("open");
-        spot.style.cssText = "top:2px;left:235px;width:176px;height:34px;";
-        cur.style.cssText = "top:18px;left:335px;";
-        curTag.textContent = "Pha 1 (0.0s-2.0s): Nhấp chuột phải vào thẻ 0.1_Introduction.md";
+        targetSelector = "#sim-target-tab";
+        labelText = "Pha 1 (0.0s-2.0s): Nhấp chuột phải vào thẻ 0.1_Introduction.md";
       } else {
         ctxMenu.classList.add("open");
-        spot.style.cssText = "top:44px;left:342px;width:246px;height:38px;";
-        cur.style.cssText = "top:58px;left:470px;";
-        curTag.textContent = "Pha 2 (2.0s+): Chọn Open Preview (Ctrl+Shift+V)";
+        // Neo menu chuột phải ngay dưới thẻ #sim-target-tab
+        const tabEl = document.getElementById("sim-target-tab");
+        const edEl = document.querySelector(".sim-editor-center");
+        if (tabEl && edEl) {
+          const tr = tabEl.getBoundingClientRect();
+          const er = edEl.getBoundingClientRect();
+          ctxMenu.style.left = Math.max(8, Math.round(tr.left - er.left + 12)) + "px";
+          ctxMenu.style.top = Math.round(tr.bottom - er.top + 4) + "px";
+        }
+        targetSelector = "#sim-target-preview";
+        labelText = "Pha 2 (2.0s+): Chọn Open Preview (Ctrl+Shift+V)";
       }
     } else if (beat.simType === "model_select") {
       ctxMenu.classList.remove("open");
       if (phase === 1) {
-        spot.style.cssText = "bottom:12px;right:120px;width:205px;height:34px;";
-        cur.style.cssText = "bottom:22px;right:140px;";
-        curTag.textContent = "Pha 1: Bấm chọn mô hình Gemini 4 Argon Medium";
+        targetSelector = "#sim-target-model";
+        labelText = "Pha 1: Bấm chọn mô hình Gemini 4 Argon Medium";
       } else {
-        spot.style.cssText = "bottom:48px;right:16px;width:310px;height:44px;";
-        cur.style.cssText = "bottom:62px;right:95px;";
-        curTag.textContent = "Pha 2: Gõ @sales_q1_2026.csv vào khung lệnh";
+        targetSelector = "#sim-target-input";
+        labelText = "Pha 2: Gõ @sales_q1_2026.csv vào khung lệnh";
       }
     } else {
       ctxMenu.classList.remove("open");
-      spot.style.cssText = "top:62px;left:8px;width:214px;height:34px;";
-      cur.style.cssText = "top:76px;left:135px;";
-      curTag.textContent = "Kiểm tra tệp 0.1_Introduction.md trên cây thư mục";
+      targetSelector = "#sim-target-file";
+      labelText = "Kiểm tra tệp 0.1_Introduction.md trên cây thư mục";
     }
+
+    requestAnimationFrame(() => {
+      anchorDemoSpotlightAndCursor(targetSelector, labelText);
+    });
 
     const subLine = beat.subtitles[Math.min(phase - 1, beat.subtitles.length - 1)];
     document.getElementById("subtitle-line").textContent = subLine;
@@ -3243,6 +3292,10 @@ setInterval(() => {
   state.activeRevealIdx = state.activeRevealIdx < 4 ? state.activeRevealIdx + 1 : 1;
   renderStageAndSubtitles();
 }, 4200);
+
+window.addEventListener("resize", () => {
+  if (state.view === "player") renderStageAndSubtitles();
+});
 
 window.addEventListener("keydown", (e) => {
   if (e.key === "[" && document.activeElement.tagName !== "INPUT") {

@@ -3,13 +3,37 @@
    Các hàm kịch bản tương tác trên phần mềm mô phỏng Antigravity 2.0 & Antigravity IDE.
    ========================================================================= */
 function kudoHidePopovers() {
-  const ids = ["kudo-model-popover", "kudo-turbo-popover", "agy2-quote-btn", "kudo-context-menu", "kudo-key-hud"];
+  const ids = ["kudo-model-popover", "kudo-turbo-popover", "agy2-quote-btn", "kudo-context-menu", "kudo-tab-context-menu", "kudo-key-hud"];
   ids.forEach(id => {
     const el = document.getElementById(id);
     if (el) el.classList.remove("show");
   });
   const idePop = document.getElementById("ide-popup-menu");
   if (idePop) idePop.classList.remove("visible");
+  const fileDrop = document.getElementById("ide-file-dropdown");
+  if (fileDrop) fileDrop.classList.remove("open", "show");
+}
+
+function kudoTriggerClickRipple(x, y) {
+  const cur = document.getElementById("kudo-cursor");
+  let rx = x, ry = y;
+  if (typeof rx !== "number" || typeof ry !== "number") {
+    if (cur && cur.classList.contains("visible")) {
+      const r = cur.getBoundingClientRect();
+      rx = Math.round(r.left + 4);
+      ry = Math.round(r.top + 4);
+    } else {
+      return;
+    }
+  }
+  const ring = document.createElement("div");
+  ring.className = "kudo-click-ripple-ring";
+  ring.style.left = rx + "px";
+  ring.style.top = ry + "px";
+  document.body.appendChild(ring);
+  setTimeout(() => {
+    if (ring && ring.parentNode) ring.parentNode.removeChild(ring);
+  }, 620);
 }
 
 function kudoShowKeyHud(html) {
@@ -25,10 +49,24 @@ function kudoGetStageBounds() {
   return stage.getBoundingClientRect();
 }
 
-function kudoOpenModelPopover() {
-  const pill = document.getElementById("agy2-model-pill");
+function kudoOpenModelPopover(targetSelector) {
   const pop = document.getElementById("kudo-model-popover");
-  if (!pill || !pop) return;
+  if (!pop) return;
+  let sel = targetSelector || pop.getAttribute("data-anchor-sel") || "";
+  let pill = sel ? document.querySelector(sel) : null;
+  if (!pill || pill.offsetWidth <= 0) {
+    const ideSurf = document.getElementById("surface-ide");
+    if (ideSurf && ideSurf.classList.contains("active")) {
+      pill = document.getElementById("ide-model-select");
+      sel = "#ide-model-select";
+    } else {
+      pill = document.getElementById("agy2-model-pill");
+      sel = "#agy2-model-pill";
+    }
+  }
+  if (!pill) pill = document.getElementById("agy2-model-pill") || document.getElementById("ide-model-select");
+  if (!pill) return;
+  pop.setAttribute("data-anchor-sel", sel);
   pop.classList.add("show");
   const sb = kudoGetStageBounds();
   const r = pill.getBoundingClientRect();
@@ -40,10 +78,46 @@ function kudoOpenModelPopover() {
   pop.style.top = top + "px";
 }
 
-function kudoOpenTurboPopover() {
+function kudoSetTurboPopoverState(mode) {
+  const pill = document.getElementById("set-pill-this-computer");
+  const rDef = document.getElementById("ktp-default");
+  const rTur = document.getElementById("ktp-turbo");
+  const isTurbo = (mode === "turbo");
+  if (pill) {
+    pill.innerHTML = isTurbo ? "Turbo &#9662;" : "Default &#9662;";
+    pill.style.borderColor = isTurbo ? "#EA580C" : "";
+    pill.style.background = isTurbo ? "#FFF1E6" : "";
+    pill.style.color = isTurbo ? "#9A3412" : "";
+    pill.style.fontWeight = isTurbo ? "700" : "";
+  }
+  if (rDef) {
+    rDef.classList.toggle("active", !isTurbo);
+    const oldCk = rDef.querySelector(".ktp-check");
+    if (!isTurbo && !oldCk) {
+      const sp = document.createElement("span");
+      sp.className = "ktp-check";
+      sp.style.cssText = "color:#64748B; font-weight:800;";
+      sp.textContent = "✓";
+      rDef.appendChild(sp);
+    } else if (isTurbo && oldCk) {
+      oldCk.remove();
+    }
+  }
+  if (rTur) {
+    rTur.classList.toggle("active", isTurbo);
+    const ck = rTur.querySelector("span[style*='16a34a'], .ktp-turbo-ck");
+    if (ck) {
+      ck.classList.add("ktp-turbo-ck");
+      ck.style.display = isTurbo ? "inline" : "none";
+    }
+  }
+}
+
+function kudoOpenTurboPopover(mode) {
   const pill = document.getElementById("set-pill-this-computer");
   const pop = document.getElementById("kudo-turbo-popover");
   if (!pill || !pop) return;
+  if (mode) kudoSetTurboPopoverState(mode);
   pop.classList.add("show");
   const sb = kudoGetStageBounds();
   const r = pill.getBoundingClientRect();
@@ -164,7 +238,7 @@ function kudoRunStart11ExecutedDemo() {
 }
 
 function kudoOpenExplorerContextMenu(targetSelector) {
-  const el = document.querySelector(targetSelector);
+  const el = document.querySelector(targetSelector || "[data-file='INDEX.md']");
   const menu = document.getElementById("kudo-context-menu");
   if (!el || !menu) return;
   menu.classList.add("show");
@@ -174,6 +248,23 @@ function kudoOpenExplorerContextMenu(targetSelector) {
   const mh = menu.offsetHeight || 150;
   const left = Math.max(sb.left + 8, Math.min(sb.right - mw - 12, Math.round(r.right - 20)));
   const top = Math.max(sb.top + 8, Math.min(sb.bottom - mh - 8, Math.round(r.top + 6)));
+  menu.style.left = left + "px";
+  menu.style.top = top + "px";
+}
+
+function kudoOpenTabContextMenu(targetSelector) {
+  const sel = targetSelector || "#editor-tabs-list .editor-tab";
+  const el = document.querySelector(sel);
+  const menu = document.getElementById("kudo-tab-context-menu");
+  if (!el || !menu) return;
+  menu.setAttribute("data-anchor-sel", sel);
+  menu.classList.add("show");
+  const sb = kudoGetStageBounds();
+  const r = el.getBoundingClientRect();
+  const mw = menu.offsetWidth || 256;
+  const mh = menu.offsetHeight || 310;
+  const left = Math.max(sb.left + 12, Math.min(sb.right - mw - 12, Math.round(r.left + 10)));
+  const top = Math.max(sb.top + 8, Math.min(sb.bottom - mh - 8, Math.round(r.bottom + 4)));
   menu.style.left = left + "px";
   menu.style.top = top + "px";
 }
@@ -289,20 +380,21 @@ function kudoRunAskAiWhenStuckDemo() {
   switchToSurface("ide");
   const sendBtn = document.getElementById("ide-send-btn");
   if (sendBtn) sendBtn.textContent = "→";
+  setEditorMode("wysiwyg");
   openFileInEditor("0.1_Introduction.md");
   const msgBox = document.getElementById("ide-chat-messages");
   msgBox.innerHTML = `
-    <div class="msg-user">Tôi mới dùng phần mềm nên lúc nãy lỡ tay bấm tắt mất cột cây thư mục bên trái, làm sao để mở lại nhanh và xem tệp Markdown cho dễ đọc?</div>
+    <div class="msg-user">Tôi mới dùng phần mềm nên lúc nãy lỡ tay bấm tắt mất cột cây thư mục bên trái, làm sao để mở lại nhanh và bật chế độ xem đẹp (Preview) cho tệp Markdown?</div>
     <div class="msg-ai">
       <div class="progress-card">
         <div class="progress-card-title"><span>Hướng dẫn thao tác tại chỗ</span><span>Done ✓</span></div>
         <div class="progress-step">💡 Kiểm tra bố cục cửa sổ Antigravity IDE hiện tại</div>
-        <div class="progress-step">✓ Trạng thái hiện tại: Cột cây thư mục bên trái và chế độ <strong>Preview / Office Viewer</strong> đã được bật sẵn sàng</div>
+        <div class="progress-step">✓ Trạng thái hiện tại: Cột cây thư mục bên trái và chế độ <strong>Open Preview (Ctrl+Shift+V)</strong> đã được bật sẵn sàng</div>
       </div>
       <p><strong>Cách mở lại ngay trong 2 giây:</strong></p>
       <ul style="margin-left:18px; line-height:1.6;">
         <li>Nhấn tổ hợp phím <kbd>Ctrl + B</kbd> (hoặc bấm biểu tượng 2 tệp giấy ở thanh ngoài cùng bên trái) để bật lại cột cây thư mục.</li>
-        <li>Để xem tệp <code>.md</code> trực quan như Google Docs, bạn nhìn lên góc trên bên phải của khung giữa và bấm nút <strong>👁️ Preview / Office Viewer</strong>.</li>
+        <li>Để xem tệp <code>.md</code> trực quan như Google Docs, bạn <strong>nhấp chuột phải vào thanh tiêu đề Tab của tệp ở cột giữa</strong> và chọn dòng <strong>Open Preview</strong> (hoặc nhấn phím tắt <kbd>Ctrl + Shift + V</kbd>).</li>
       </ul>
     </div>`;
   document.getElementById("ide-chat-input").value = "";

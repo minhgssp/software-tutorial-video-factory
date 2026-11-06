@@ -115,23 +115,47 @@
   transition: opacity 0.36s ease, filter 0.36s ease, transform 0.36s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+.k-step-item {
+  transition: opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+              filter 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.35s ease,
+              box-shadow 0.35s ease;
+}
+
 .k-step-item.k-unreached {
-  opacity: 0.16 !important;
-  filter: grayscale(80%) !important;
-  transform: scale(0.985) !important;
+  opacity: 0.08 !important;
+  filter: blur(1.5px) grayscale(85%) !important;
+  transform: translateY(8px) scale(0.985) !important;
+  pointer-events: none !important;
 }
 .k-step-item.k-visited {
-  opacity: 0.52 !important;
-  filter: grayscale(10%) !important;
-  transform: scale(0.995) !important;
+  opacity: 0.74 !important;
+  filter: none !important;
+  transform: translateY(0) scale(1) !important;
+  border-color: #CBD5E1 !important;
+  background: #FFFFFF !important;
 }
 .k-step-item.k-hl {
   opacity: 1 !important;
   filter: none !important;
-  border-color: #CB4B16 !important;
-  box-shadow: 0 0 0 4px rgba(203, 75, 22, 0.20), 0 10px 26px rgba(203, 75, 22, 0.14) !important;
-  transform: translateY(-2px) !important;
+  border-color: #EA580C !important;
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.20), 0 10px 26px rgba(234, 88, 12, 0.16) !important;
+  transform: translateY(-2px) scale(1) !important;
   background: #FFFDF9 !important;
+}
+
+.k-cmp-illus-svg {
+  width: 100%;
+  height: auto;
+  max-height: 64px;
+  display: block;
+  margin-top: 4px;
+}
+
+.ide-dropdown.open,
+.ide-dropdown.show {
+  display: block !important;
 }
 
 /* Spotlight Focus Box */
@@ -197,8 +221,61 @@
   word-break: break-word;
   line-height: 1.45;
 }
-#ide-popup-menu .popup-item strong {
-  white-space: nowrap;
+.agent-input-wrapper,
+.agy2-input-Dock {
+  position: relative !important;
+}
+#ide-popup-menu {
+  bottom: calc(100% + 6px) !important;
+  left: 10px !important;
+  right: 10px !important;
+  background: #FFFFFF !important;
+  border: 1.5px solid #EA580C !important;
+  border-radius: 10px !important;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.18) !important;
+  padding: 5px !important;
+  z-index: 9115 !important;
+}
+#agy2-popup-menu {
+  bottom: calc(100% + 8px) !important;
+  background: #FFFFFF !important;
+  border: 1.5px solid #EA580C !important;
+  border-radius: 10px !important;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.18) !important;
+  padding: 5px !important;
+  z-index: 9115 !important;
+}
+#ide-popup-menu .popup-item,
+#agy2-popup-menu .popup-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  gap: 12px !important;
+  padding: 7px 10px !important;
+  border-radius: 7px !important;
+  margin: 2px 0 !important;
+  line-height: 1.4 !important;
+  color: #1E293B !important;
+}
+#ide-popup-menu .popup-item:first-of-type,
+#agy2-popup-menu .popup-item:first-of-type {
+  background: #FFF1E6 !important;
+  border: 1.5px solid #EA580C !important;
+  color: #9A3412 !important;
+}
+#ide-popup-menu .popup-item strong,
+#agy2-popup-menu .popup-item strong {
+  white-space: nowrap !important;
+  min-width: 104px !important;
+  flex-shrink: 0 !important;
+  color: #C2410C !important;
+  font-family: var(--kudo-font-mono) !important;
+  font-weight: 800 !important;
+}
+.kudo-typing-active {
+  border-color: #EA580C !important;
+  box-shadow: 0 0 0 2px rgba(234, 88, 12, 0.22) !important;
+  background: #FFFDF9 !important;
 }
 
 /* Popovers */
@@ -305,6 +382,80 @@
   height: 1px;
   background: #334155;
   margin: 4px 0;
+}
+
+/* Tab Context Menu (Light Theme matching Antigravity IDE Tab Right-Click) */
+#kudo-tab-context-menu {
+  position: fixed;
+  z-index: 9125;
+  width: 256px;
+  background: #FAF8F5;
+  color: #1E293B;
+  border: 1.5px solid #CBD5E1;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.24);
+  font-size: 12px;
+  font-family: var(--kudo-font-sans);
+  display: none;
+}
+#kudo-tab-context-menu.show {
+  display: block;
+}
+.k-tcm-row {
+  padding: 5px 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #1E293B;
+}
+.k-tcm-row.disabled {
+  color: #94A3B8;
+}
+.k-tcm-row.active {
+  background: #EFECE6;
+  border: 1.5px solid #EA580C;
+  color: #9A3412;
+  font-weight: 700;
+}
+.k-tcm-kbd {
+  font-size: 11px;
+  color: #64748B;
+}
+.k-tcm-row.active .k-tcm-kbd {
+  color: #9A3412;
+  font-weight: 700;
+}
+.k-tcm-sep {
+  height: 1px;
+  background: #E2E8F0;
+  margin: 4px 0;
+}
+
+/* 2-Phase Click Ripple Effect */
+.kudo-click-ripple-ring {
+  position: fixed;
+  z-index: 9295;
+  width: 14px;
+  height: 14px;
+  margin-left: -7px;
+  margin-top: -7px;
+  border-radius: 50%;
+  border: 3px solid #EA580C;
+  background: rgba(234, 88, 12, 0.28);
+  pointer-events: none !important;
+  animation: kudoClickRippleAnim 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes kudoClickRippleAnim {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3.4);
+    opacity: 0;
+  }
 }
 
 @media (max-width: 900px) {
@@ -615,5 +766,141 @@
 
 /* Ẩn hộp Tiên quyết / Mở đường nội bộ khỏi thanh bên của học viên */
 #ksb-dep-box {
+  display: none !important;
+}
+
+
+/* === V3.1 WARM CREAM, LARGE SUBTITLES & COLLAPSIBLE MULTI-LEVEL TREE SIDEBAR === */
+:root {
+  --kudo-bg-main: #FAF8F5 !important;
+  --kudo-bg-sidebar: #F4EFE6 !important;
+  --kudo-border: #E5DEC9 !important;
+}
+body.kudo-lesson-body {
+  background: #FAF8F5 !important;
+}
+#kudo-left-sidebar {
+  background: #F4EFE6 !important;
+  border-right: 1.5px solid #E5DEC9 !important;
+  transition: width 0.22s cubic-bezier(0.4, 0, 0.2, 1), min-width 0.22s cubic-bezier(0.4, 0, 0.2, 1), transform 0.22s ease !important;
+}
+body.kudo-sidebar-collapsed #kudo-left-sidebar {
+  width: 0px !important;
+  min-width: 0px !important;
+  border-right: none !important;
+  overflow: hidden !important;
+}
+#kudo-expand-sidebar-btn {
+  display: none;
+  position: fixed;
+  top: 8px;
+  left: 10px;
+  z-index: 99999;
+  background: #FAF8F5;
+  border: 1.5px solid #D5CCB8;
+  color: #1C1917;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(28, 25, 23, 0.1);
+}
+#kudo-expand-sidebar-btn:hover {
+  border-color: #EA580C;
+  color: #C2410C;
+  background: #FFF7ED;
+}
+body.kudo-sidebar-collapsed #kudo-expand-sidebar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+/* Phụ đề lớn (16.8px, cao 86px) */
+#kudo-bottom-strip {
+  height: 86px !important;
+  min-height: 86px !important;
+  max-height: 86px !important;
+  background: #FAF8F5 !important;
+  border-top: 1.5px solid #E5DEC9 !important;
+  padding: 0 20px !important;
+}
+#kudo-subtitle-box {
+  font-size: 16.8px !important;
+  line-height: 1.48 !important;
+  font-weight: 600 !important;
+  color: #1C1917 !important;
+  background: #FFFFFF !important;
+  border: 1.5px solid #E5DEC9 !important;
+  padding: 10px 18px !important;
+  border-radius: 12px !important;
+}
+/* Cây mục lục đa cấp trong Sidebar */
+.k-tree-chapter {
+  border: 1px solid #E5DEC9;
+  border-radius: 9px;
+  background: #FAF8F5;
+  margin-bottom: 6px;
+  overflow: hidden;
+}
+.k-tree-chap-head {
+  padding: 7px 10px;
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #57534E;
+  background: #EDE6D6;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+.k-tree-chap-lessons {
+  display: none;
+  padding: 4px;
+  flex-direction: column;
+  gap: 3px;
+}
+.k-tree-chapter.open .k-tree-chap-lessons {
+  display: flex;
+}
+.k-tree-lesson-row {
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #57534E;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+.k-tree-lesson-row:hover {
+  background: #FFFFFF;
+  color: #1C1917;
+}
+.k-tree-lesson-row.active-lesson {
+  background: #FFF7ED;
+  color: #9A3412;
+  font-weight: 800;
+  border: 1px solid #FDBA74;
+}
+.k-tree-beats-sublist {
+  padding: 4px 0 4px 10px;
+  margin-left: 8px;
+  border-left: 2px solid #FDBA74;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+/* Trải phẳng 100% các thẻ lý thuyết trên slide (1 thẻ / 1 hàng dọc) */
+.k-slide-grid-2,
+.k-slide-grid-3 {
+  grid-template-columns: 1fr !important;
+  gap: 10px !important;
+}
+/* PROP-261106-01 Rule 4: Cấm hộp thoại nổi trên màn hình minh họa */
+#kudo-stage-pedagogy-card {
   display: none !important;
 }

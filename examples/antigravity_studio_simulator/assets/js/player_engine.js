@@ -1,13 +1,12 @@
 /* =========================================================================
    assets/js/player_engine.js
-   Động cơ Điều Khiển Bài Giảng Tương Tác (Audio-Driven Master Clock v2):
-   1. Bố cục Sidebar Trái (#kudo-left-sidebar) chứa thanh điều khiển & danh sách phần nhỏ.
-   2. Nút âm thanh hiển thị trực diện: "🔇 Tắt tiếng" (khi đang mở) / "🔊 Bật tiếng" (khi đang tắt).
-   3. Chốt chặn cứng Audio-First Lock: Khi đang bật tiếng, tuyệt đối KHÔNG tự động chuyển cảnh
-      hoặc kết thúc bài khi giọng đọc chưa kết thúc (vp.ended !== true).
-      Chỉ sau khi vp.ended === true mới đếm 0.60s nghỉ lấy hơi rồi chuyển sang phần tiếp theo.
-   4. Khi bấm "🔊 Bật tiếng", lập tức đồng bộ kudoBeatElapsed = vp.currentTime để không bao giờ
-      xảy ra tình trạng hình chạy trước tiếng làm cắt cụt đuôi câu nói.
+   Động cơ Điều Khiển Bài Giảng Tương Tác (Audio-Driven Master Clock v3.1):
+   1. Bố cục Sidebar Trái (#kudo-left-sidebar) dạng Cây Đa Cấp (Chương ▸ Bài ▸ Phần nhỏ)
+      kèm nút « Ẩn [ / ☰ Hiện mục lục [ (phím tắt [).
+   2. Kịch bản Thực hành 2 Pha (kudoSyncBeatChoreography: Pha 1 Di chuột & Click nút gốc -> Pha 2 Mở Menu & Chọn lệnh).
+   3. Progressive Reveal cho Slide Lý thuyết (kudoUpdateTheoryProgressiveReveal).
+   4. Chốt chặn cứng PROP-261106-01 Rule 4: Tuyệt đối không hiển thị hộp thoại nổi (#kudo-stage-pedagogy-card)
+      đè lên màn hình minh họa.
    ========================================================================= */
 let kudoCurrentBeatIdx = 0;
 let kudoIsPlaying = true;
@@ -107,7 +106,6 @@ function kudoToggleMute() {
     if (vp) {
       vp.muted = false;
       vp.playbackRate = kudoSpeed;
-      // Đồng bộ lại đồng hồ cảnh đúng bằng vị trí thực của âm thanh để không bị cắt sớm
       kudoBeatElapsed = vp.currentTime || 0;
       kudoPostSpeechElapsed = 0;
       if (kudoIsPlaying) {
@@ -128,8 +126,6 @@ function kudoToggleMute() {
 document.addEventListener("click", (ev) => {
   if (ev.target && (ev.target.id === "kp-mute-btn" || ev.target.closest("#kp-mute-btn"))) return;
   if (ev.target && (ev.target.id === "kp-cursor-btn" || ev.target.closest("#kp-cursor-btn"))) return;
-  // Nếu học viên chủ động click tương tác bên trong khu vực mô phỏng (#kudo-stage-viewport),
-  // lập tức ẩn con trỏ giả lập và nhãn gợi ý để không che khuất vùng đang thao tác
   if (ev.target && ev.target.closest("#kudo-stage-viewport") && window.kudoActiveAnchorBeat && window.kudoActiveAnchorBeat.mode === "sim") {
     window.kudoUserInteractedInSim = true;
     const cur = document.getElementById("kudo-cursor");
@@ -318,10 +314,9 @@ function kudoOnSegmentClick(idx, ev) {
   }
   const seg = document.getElementById(`kp-seg-${idx}`);
   if (!seg || !ev) return;
-  const rect = seg.getBoundingClientRect();
-  if (!rect || rect.width <= 0) return;
-  const clientX = (typeof ev.clientX === "number" && ev.clientX > 0) ? ev.clientX : rect.left;
-  const ratio = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
+  const r = seg.getBoundingClientRect();
+  if (r.width <= 0) return;
+  const ratio = Math.max(0, Math.min(0.98, (ev.clientX - r.left) / r.width));
   const curBeat = KUDO_SPEC.beats[kudoCurrentBeatIdx];
   const curDur = kudoGetEffectiveBeatDuration(curBeat);
   const targetSec = ratio * curDur;
@@ -337,6 +332,275 @@ function kudoOnSegmentClick(idx, ev) {
   kudoUpdateClockUi();
 }
 
+function kudoUpdateTheoryProgressiveReveal() {
+  if (!window.KUDO_SPEC) return;
+  const beat = KUDO_SPEC.beats[kudoCurrentBeatIdx];
+  if (!beat || beat.mode !== "theory") return;
+  const slideBox = document.getElementById("kudo-slide-box");
+  if (!slideBox) return;
+  const stepItems = Array.from(slideBox.querySelectorAll(".k-step-item"));
+  if (!stepItems.length) return;
+
+  const curDur = Math.max(4, kudoGetEffectiveBeatDuration(beat) - 0.65);
+  const ratio = Math.max(0, Math.min(1, kudoBeatElapsed / curDur));
+  const hlList = Array.isArray(beat.hl) ? beat.hl : (beat.hl ? [beat.hl] : []);
+
+  const hasHero = slideBox.querySelector("#s1_hero") !== null;
+  const isPart1Split = hlList.includes("s1_c1") && !hlList.includes("s1_c2");
+  const isPart2Split = hlList.includes("s1_c2") && !hlList.includes("s1_c1");
+
+  let activeIds = [];
+  let visitedIds = [];
+
+  if (isPart1Split && hasHero) {
+    if (ratio < 0.38) {
+      activeIds = ["s1_hero"];
+      visitedIds = [];
+    } else {
+      activeIds = ["s1_c1"];
+      visitedIds = ["s1_hero"];
+    }
+  } else if (isPart2Split && hasHero) {
+    if (ratio < 0.36) {
+      activeIds = ["s1_c2"];
+      visitedIds = ["s1_hero", "s1_c1"];
+    } else if (ratio < 0.68) {
+      activeIds = ["s1_c3"];
+      visitedIds = ["s1_hero", "s1_c1", "s1_c2"];
+    } else {
+      activeIds = ["s1_c3", "s1_call"];
+      visitedIds = ["s1_hero", "s1_c1", "s1_c2"];
+    }
+  } else if (hasHero && stepItems.length >= 5) {
+    if (ratio < 0.22) {
+      activeIds = ["s1_hero"];
+      visitedIds = [];
+    } else if (ratio < 0.48) {
+      activeIds = ["s1_c1"];
+      visitedIds = ["s1_hero"];
+    } else if (ratio < 0.74) {
+      activeIds = ["s1_c2"];
+      visitedIds = ["s1_hero", "s1_c1"];
+    } else {
+      activeIds = ["s1_c3", "s1_call"];
+      visitedIds = ["s1_hero", "s1_c1", "s1_c2"];
+    }
+  } else if (hlList.length > 0) {
+    activeIds = hlList;
+  }
+
+  let maxActiveOrder = 1;
+  activeIds.forEach(hid => {
+    const tel = document.getElementById(hid);
+    if (tel) {
+      const ord = parseInt(tel.getAttribute("data-order") || "1", 10);
+      if (ord > maxActiveOrder) maxActiveOrder = ord;
+    }
+  });
+
+  stepItems.forEach(el => {
+    const ord = parseInt(el.getAttribute("data-order") || "1", 10);
+    el.classList.remove("k-hl", "k-visited", "k-unreached");
+    if (activeIds.includes(el.id)) {
+      el.classList.add("k-hl");
+    } else if (visitedIds.includes(el.id) || ord < maxActiveOrder) {
+      el.classList.add("k-visited");
+    } else {
+      el.classList.add("k-unreached");
+    }
+  });
+}
+
+function kudoRunPhase1Setup(beat) {
+  window.kudoTypingTargetEl = null;
+  window.kudoTypingFullText = "";
+  window.kudoPhase2TargetRippleFired = false;
+  window.kudoLastSimSceneCfg = null;
+  if (beat.onEnterPhase1) {
+    try { eval(beat.onEnterPhase1); } catch (e) { console.error(e); }
+    return;
+  }
+  if (beat.pre_click_selector) {
+    if (beat.onEnter) {
+      try { eval(beat.onEnter); } catch (e) { console.error(e); }
+    }
+    const preSel = String(beat.pre_click_selector || "");
+    const curSel = String(beat.cursor_selector || "");
+    const cfg = window.kudoLastSimSceneCfg || {};
+    const ta1 = document.getElementById("ide-chat-input");
+    const ta2 = document.getElementById("agy2-chat-input");
+    const fullChat = ta1 ? ta1.value : "";
+
+    const dfMatch = (preSel + " " + curSel).match(/\[data-file=['"]([^'"]+)['"]\]/);
+    if (dfMatch && dfMatch[1] && typeof kudoEnsureTreeFileVisible === "function") {
+      kudoEnsureTreeFileVisible(dfMatch[1], Boolean(cfg.activeTreeFile || cfg.editorHtml));
+    }
+
+    if (preSel.includes("#ide-popup-menu") || cfg.popupMode) {
+      if (typeof kudoOpenDynamicPopup === "function") {
+        kudoOpenDynamicPopup(cfg.popupMode || (fullChat.trim().startsWith("/") ? "slash" : "mention"), fullChat);
+      }
+      return;
+    }
+
+    try { kudoHidePopovers(); } catch (e) {}
+
+    if (preSel.includes("[data-file=") && curSel === "#editor-canvas") {
+      const fname = dfMatch ? dfMatch[1] : "tệp dữ liệu";
+      const canvas = document.getElementById("editor-canvas");
+      if (canvas) {
+        canvas.innerHTML = `<div style="padding:36px 28px;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:#64748B;text-align:center;background:#FAF8F5;"><div style="font-size:28px;margin-bottom:10px;">📂</div><div style="font-size:14px;font-weight:700;color:#1E293B;margin-bottom:6px;">Đang chọn tệp <code style="color:#EA580C;background:#FFF7ED;padding:2px 6px;border-radius:4px;">${fname}</code> ở Cây thư mục bên trái</div><div style="font-size:12.5px;color:#64748B;">Nhấp chuột vào tên tệp để mở toàn bộ nội dung tại khung soạn thảo cột giữa...</div></div>`;
+      }
+      return;
+    }
+
+    if (preSel === "#act-btn-extensions" || preSel === "#act-btn-git") {
+      if (typeof switchIdeSidebarMode === "function") switchIdeSidebarMode("explorer");
+      return;
+    }
+
+    if (preSel === "#ide-send-btn" && (curSel === "#editor-canvas" || curSel === "#ide-chat-messages" || curSel === "#ide-bottom-terminal")) {
+      if (ta1 && cfg.userMsg && !cfg.chatInput) {
+        ta1.value = String(cfg.userMsg).replace(/<[^>]+>/g, "");
+      }
+      const msgBox = document.getElementById("ide-chat-messages");
+      if (msgBox && cfg.aiMsg) {
+        msgBox.innerHTML = `<div style="padding:14px;color:#64748B;font-size:12.5px;font-style:italic;">⏳ Nhấp nút Gửi (→) bên dưới để Trợ lý AI bắt đầu xử lý yêu cầu...</div>`;
+      }
+      const term = document.getElementById("ide-bottom-terminal");
+      if (term && cfg.showTerminal) {
+        term.style.display = "none";
+      }
+      return;
+    }
+
+    if (ta1 && preSel === "#ide-chat-input") ta1.value = "";
+    if (ta2 && preSel === "#agy2-chat-input") ta2.value = "";
+  }
+}
+
+function kudoCapturePhase2Setup(beat) {
+  window.kudoTypingTargetEl = null;
+  window.kudoTypingFullText = "";
+  window.kudoPhase2TargetRippleFired = false;
+  window.kudoLastSimSceneCfg = null;
+  if (beat.onEnter) {
+    try { eval(beat.onEnter); } catch (e) { console.error(e); }
+  }
+  const preSel = String(beat.pre_click_selector || "");
+  const curSel = String(beat.cursor_selector || "");
+  const dfMatch = (preSel + " " + curSel).match(/\[data-file=['"]([^'"]+)['"]\]/);
+  if (dfMatch && dfMatch[1] && typeof kudoEnsureTreeFileVisible === "function") {
+    const cfg = window.kudoLastSimSceneCfg || {};
+    kudoEnsureTreeFileVisible(dfMatch[1], Boolean(cfg.activeTreeFile || cfg.editorHtml));
+  }
+  if (preSel.includes("#ide-popup-menu") && !curSel.includes("#ide-popup-menu")) {
+    const pop = document.getElementById("ide-popup-menu");
+    if (pop) pop.classList.remove("visible");
+  }
+  if (beat.cursor_selector === "#ktp-turbo") {
+    kudoSetTurboPopoverState("default");
+  }
+  const ideSurf = document.getElementById("surface-ide");
+  const isIde = ideSurf && ideSurf.classList.contains("active");
+  const ta = isIde ? document.getElementById("ide-chat-input") : document.getElementById("agy2-chat-input");
+  if (ta && ta.value && ta.value.trim().length > 0) {
+    const onEnterStr = String(beat.onEnter || "");
+    if (onEnterStr.includes("chatInput") || onEnterStr.includes("chat-input") || onEnterStr.includes("Popup") || preSel.includes("chat-input") || preSel.includes("#ide-popup-menu")) {
+      window.kudoTypingTargetEl = ta;
+      window.kudoTypingFullText = ta.value;
+    }
+  }
+}
+
+function kudoSyncBeatChoreography() {
+  if (!window.KUDO_SPEC) return;
+  const beat = KUDO_SPEC.beats[kudoCurrentBeatIdx];
+  if (!beat || beat.mode !== "sim") return;
+
+  const hasPhase1 = Boolean(beat.onEnterPhase1 || beat.pre_click_selector);
+  const phase1SplitSec = hasPhase1 ? (typeof beat.choreo_split_sec === "number" ? beat.choreo_split_sec : 1.85) : 0;
+  const rippleSec = Math.max(0.75, phase1SplitSec - 0.55);
+
+  if (hasPhase1 && kudoBeatElapsed < phase1SplitSec) {
+    if (!window.kudoInChoreoPhase1 || window.kudoChoreoPhase2Applied) {
+      window.kudoInChoreoPhase1 = true;
+      window.kudoChoreoPhase2Applied = false;
+      window.kudoChoreoRippleFired = false;
+      kudoRunPhase1Setup(beat);
+      requestAnimationFrame(() => {
+        kudoSyncDomAnchors();
+      });
+    } else if (kudoBeatElapsed >= rippleSec && !window.kudoChoreoRippleFired) {
+      window.kudoChoreoRippleFired = true;
+      if (typeof kudoTriggerClickRipple === "function") {
+        kudoTriggerClickRipple();
+      }
+    }
+    return;
+  }
+
+  if (window.kudoInChoreoPhase1 || !window.kudoChoreoPhase2Applied) {
+    window.kudoInChoreoPhase1 = false;
+    window.kudoChoreoPhase2Applied = true;
+    if (hasPhase1 && !window.kudoChoreoRippleFired && typeof kudoTriggerClickRipple === "function") {
+      window.kudoChoreoRippleFired = true;
+      kudoTriggerClickRipple();
+    }
+    kudoCapturePhase2Setup(beat);
+    requestAnimationFrame(() => {
+      kudoSyncDomAnchors();
+      setTimeout(kudoSyncDomAnchors, 50);
+    });
+  }
+
+  const p2Elapsed = Math.max(0, kudoBeatElapsed - phase1SplitSec);
+  const ta = window.kudoTypingTargetEl;
+  const fullText = window.kudoTypingFullText || "";
+  if (ta && fullText.length > 0) {
+    const typeDur = Math.min(1.8, Math.max(0.7, fullText.length * 0.045));
+    if (p2Elapsed < typeDur) {
+      const nChars = Math.max(1, Math.ceil((p2Elapsed / typeDur) * fullText.length));
+      ta.value = fullText.slice(0, nChars);
+      ta.classList.add("kudo-typing-active");
+    } else {
+      if (ta.value !== fullText) ta.value = fullText;
+      ta.classList.remove("kudo-typing-active");
+    }
+  }
+
+  const targetClickSec = (ta && fullText.length > 0) ? 1.85 : 1.35;
+  if (p2Elapsed >= targetClickSec && !window.kudoPhase2TargetRippleFired) {
+    window.kudoPhase2TargetRippleFired = true;
+    if (beat.cursor_selector === "#ktp-turbo") {
+      kudoSetTurboPopoverState("turbo");
+    }
+    if (typeof kudoTriggerClickRipple === "function") {
+      kudoTriggerClickRipple();
+    }
+    kudoSyncDomAnchors();
+  }
+}
+
+window.kudoAdvanceToChoreoPhase2 = function() {
+  if (!window.KUDO_SPEC) return;
+  const beat = KUDO_SPEC.beats[kudoCurrentBeatIdx];
+  if (!beat || beat.mode !== "sim") return;
+  window.kudoInChoreoPhase1 = false;
+  window.kudoChoreoPhase2Applied = true;
+  window.kudoPhase2TargetRippleFired = true;
+  if (beat.onEnter) {
+    try { eval(beat.onEnter); } catch (e) {}
+  }
+  if (beat.cursor_selector === "#ktp-turbo") {
+    kudoSetTurboPopoverState("turbo");
+  }
+  if (window.kudoTypingTargetEl) {
+    window.kudoTypingTargetEl.classList.remove("kudo-typing-active");
+  }
+  kudoSyncDomAnchors();
+};
+
 function kudoApplyBeat(idx) {
   if (!window.KUDO_SPEC || idx < 0 || idx >= KUDO_SPEC.beats.length) return;
   kudoCurrentBeatIdx = idx;
@@ -346,6 +610,9 @@ function kudoApplyBeat(idx) {
   window.kudoUserInteractedInSim = false;
   const beat = KUDO_SPEC.beats[idx];
   window.kudoActiveAnchorBeat = beat;
+  window.kudoInChoreoPhase1 = Boolean(beat.mode === "sim" && (beat.onEnterPhase1 || beat.pre_click_selector));
+  window.kudoChoreoPhase2Applied = false;
+  window.kudoChoreoRippleFired = false;
 
   document.getElementById("kudo-lesson-code").textContent = (KUDO_SPEC.chapter_code ? KUDO_SPEC.chapter_code + " · " : "") + KUDO_SPEC.code;
   document.getElementById("kudo-lesson-title").textContent = KUDO_SPEC.title;
@@ -376,33 +643,9 @@ function kudoApplyBeat(idx) {
     cur.classList.remove("visible");
     if (pCard) pCard.classList.remove("visible");
 
-
     const slideHtml = KUDO_SPEC.slides[beat.slide] || "";
     slideBox.innerHTML = slideHtml;
-
-    const hlList = Array.isArray(beat.hl)
-      ? beat.hl
-      : (beat.hl ? [beat.hl] : (beat.focus_selectors || []).map(s => s.replace(/^#/, "")));
-    let maxActiveOrder = 1;
-    hlList.forEach(hid => {
-      const tel = document.getElementById(hid);
-      if (tel) {
-        const ord = parseInt(tel.getAttribute("data-order") || "1", 10);
-        if (ord > maxActiveOrder) maxActiveOrder = ord;
-      }
-    });
-
-    slideBox.querySelectorAll(".k-step-item").forEach(el => {
-      const ord = parseInt(el.getAttribute("data-order") || "1", 10);
-      el.classList.remove("k-hl", "k-visited", "k-unreached");
-      if (hlList.includes(el.id)) {
-        el.classList.add("k-hl");
-      } else if (ord < maxActiveOrder) {
-        el.classList.add("k-visited");
-      } else {
-        el.classList.add("k-unreached");
-      }
-    });
+    kudoUpdateTheoryProgressiveReveal();
   } else {
     stage.classList.add("hidden-stage");
     // PROP-261106-01 Rule 4: Tuyệt đối không hiển thị hộp thoại nổi (#kudo-stage-pedagogy-card) đè lên màn hình minh họa.
@@ -411,12 +654,11 @@ function kudoApplyBeat(idx) {
       pCard.style.display = "none";
     }
 
-    if (beat.onEnter) {
-      try {
-        eval(beat.onEnter);
-      } catch (e) {
-        console.error(e);
-      }
+    if (beat.onEnterPhase1 || beat.pre_click_selector) {
+      kudoRunPhase1Setup(beat);
+    } else {
+      window.kudoChoreoPhase2Applied = true;
+      kudoCapturePhase2Setup(beat);
     }
 
     requestAnimationFrame(() => {
@@ -471,6 +713,12 @@ function kudoUpdateClockUi() {
   const pct = Math.min(100, (kudoBeatElapsed / curDur) * 100);
   const fill = document.getElementById(`kp-fill-${kudoCurrentBeatIdx}`);
   if (fill) fill.style.width = pct.toFixed(1) + "%";
+
+  if (curBeat && curBeat.mode === "theory") {
+    kudoUpdateTheoryProgressiveReveal();
+  } else if (curBeat && curBeat.mode === "sim") {
+    kudoSyncBeatChoreography();
+  }
 }
 
 function kudoAdvanceOrFinish() {
@@ -501,20 +749,17 @@ function kudoStartLoop() {
     const hasActiveVoice = Boolean(vp && curBeat.audio_src && !kudoIsMuted && !kudoAutoplayBlocked && !vp.error);
 
     if (hasActiveVoice) {
-      // KHI ĐANG BẬT TIẾNG: Thẻ <audio> là Đồng hồ chủ (Audio-Driven Master Clock) duy nhất!
       const realAudioDur = (Number.isFinite(vp.duration) && vp.duration > 0)
         ? vp.duration
         : (curBeat.audio_duration || Math.max(1, curBeat.duration - 0.65));
 
       if (!vp.ended) {
-        // Giọng thuyết minh vẫn đang nói -> Đồng bộ trực tiếp với vp.currentTime và CẤM chuyển cảnh
         kudoBeatElapsed = vp.currentTime || 0;
         kudoPostSpeechElapsed = 0;
         if (rig) rig.classList.toggle("speaking", !vp.paused);
         kudoUpdateClockUi();
         return;
       } else {
-        // Giọng thuyết minh đã đọc xong 100% câu -> Ẩn ngay con chuột & tip, khép môi nhân vật và nghỉ 0.60s
         if (rig) rig.classList.remove("speaking");
         if (!window.kudoSpeechCompletedForBeat) {
           window.kudoSpeechCompletedForBeat = true;
@@ -531,7 +776,6 @@ function kudoStartLoop() {
       }
     }
 
-    // KHI ĐANG TẮT TIẾNG HOẶC CHỜ MỞ KHÓA AUTOPLAY: Đếm theo thời lượng chuẩn
     const voiceDur = curBeat.audio_duration || Math.max(1, curBeat.duration - 0.65);
     kudoBeatElapsed += 0.1 * kudoSpeed;
     if (rig) {
@@ -605,38 +849,37 @@ window.addEventListener("resize", () => {
 });
 
 window.addEventListener("keydown", (ev) => {
-  const tag = (ev.target && ev.target.tagName) ? ev.target.tagName.toUpperCase() : "";
-  if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || (ev.target && ev.target.isContentEditable)) return;
+  if (ev.target && (ev.target.tagName === "INPUT" || ev.target.tagName === "TEXTAREA" || ev.target.tagName === "SELECT")) return;
   if (ev.code === "Space") {
     ev.preventDefault();
     kudoTogglePlay();
-  } else if (ev.code === "ArrowLeft") {
-    ev.preventDefault();
-    kudoPrevBeat();
   } else if (ev.code === "ArrowRight") {
     ev.preventDefault();
     kudoNextBeat();
-  } else if (ev.code === "KeyM" && !ev.ctrlKey && !ev.metaKey && !ev.altKey) {
+  } else if (ev.code === "ArrowLeft") {
+    ev.preventDefault();
+    kudoPrevBeat();
+  } else if (ev.code === "KeyM") {
     ev.preventDefault();
     kudoToggleMute();
-  } else if (ev.code === "KeyC" && !ev.ctrlKey && !ev.metaKey && !ev.altKey) {
+  } else if (ev.code === "KeyC") {
     ev.preventDefault();
     kudoToggleCursorMode();
-  } else if (ev.key === "[" && !ev.ctrlKey && !ev.metaKey && !ev.altKey) {
+  } else if (ev.key === "[") {
     ev.preventDefault();
     kudoToggleSidebarCollapse();
   }
 });
 
 window.addEventListener("DOMContentLoaded", () => {
-  if (typeof liveAnimMode !== "undefined") liveAnimMode = false;
   kudoMountSurfacesIntoStage();
   kudoApplyBrandAndLessonSelector();
   kudoUpdateMuteUi();
   kudoUpdateCursorBtnUi();
-  setTimeout(() => {
-    kudoRenderTimelineBar();
-    kudoApplyBeat(0);
-    kudoStartLoop();
-  }, 120);
+  kudoRenderTimelineBar();
+  const params = new URLSearchParams(window.location.search);
+  const startBeat = parseInt(params.get("beat") || "0", 10);
+  const validStart = (!isNaN(startBeat) && window.KUDO_SPEC && startBeat >= 0 && startBeat < KUDO_SPEC.beats.length) ? startBeat : 0;
+  kudoApplyBeat(validStart);
+  kudoStartLoop();
 });
