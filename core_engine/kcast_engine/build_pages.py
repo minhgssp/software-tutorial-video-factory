@@ -32,7 +32,7 @@ RUNS = ROOT / "runs"
 FONTS_CSS = "file:///C:/Users/user/kudo/engines/screencast/fonts/fonts.css"
 
 # Tên thương hiệu / công cụ không được xuất hiện (whitelabel)
-BANNED = ["bidv", "agribank", "vietcombank", "vietinbank", "vpbank", "techcombank", "mb bank", "hà nam", "lâm đồng",
+BANNED = ["FinBank", "agribank", "vietcombank", "vietinbank", "vpbank", "techcombank", "mb bank", "Đơn vị Doanh nghiệp", "lâm đồng",
           "antigravity", "claude", "chatgpt", "gemini", "codex", "grok", "digisource", "modernform", "greenhome",
           "openai", "google", "microsoft", "anthropic"]
 

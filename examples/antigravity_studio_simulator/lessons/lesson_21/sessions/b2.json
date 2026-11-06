@@ -7,7 +7,7 @@
   "pedagogy_type": "theory_type_2",
   "pedagogy_badge": "💡 Điểm cần lưu ý · Giải phẫu Khung Chiến lược 7 Bước",
   "pedagogy_title": "Quan sát tệp 08_quy_trinh_lap_ke_hoach_chien_luoc.md trên màn hình",
-  "pedagogy_note": "Trợ lý AI đọc hồ sơ mẫu 5balance nhưng lọc bỏ toàn bộ dữ liệu cũ, chỉ giữ lại 7 tiêu đề khung để làm khuôn đúc cho dự án mới.",
+  "pedagogy_note": "Trợ lý AI đọc hồ sơ mẫu demo_sales_analytics nhưng lọc bỏ toàn bộ dữ liệu cũ, chỉ giữ lại 7 tiêu đề khung để làm khuôn đúc cho dự án mới.",
   "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); setEditorMode('wysiwyg'); openFileInEditor('08_quy_trinh_lap_ke_hoach_chien_luoc.md');",
   "focus_selectors": [
     "#ide-file-tree",
@@ -15,7 +15,7 @@
   ],
   "cursor_selector": "[data-file='08_quy_trinh_lap_ke_hoach_chien_luoc.md']",
   "cursor_label": "Tệp khung chiến lược 7 bước tại cột giữa",
-  "caption": "Nhìn vào tệp <code>08_quy_trinh_lap_ke_hoach_chien_luoc.md</code> đang mở ở cột giữa: Trợ lý đã tách riêng phần khung phương pháp luận 7 bước từ dự án mẫu <strong>5balance</strong> để chuẩn bị phỏng vấn thông số cho dự án <strong>Giày Bã Mía</strong>.",
+  "caption": "Nhìn vào tệp <code>08_quy_trinh_lap_ke_hoach_chien_luoc.md</code> đang mở ở cột giữa: Trợ lý đã tách riêng phần khung phương pháp luận 7 bước từ dự án mẫu <strong>demo_sales_analytics</strong> để chuẩn bị phỏng vấn thông số cho dự án <strong>Giày Bã Mía</strong>.",
   "audio_src": "audio/lesson_21/b2.mp3",
   "audio_duration": 11.28
 }

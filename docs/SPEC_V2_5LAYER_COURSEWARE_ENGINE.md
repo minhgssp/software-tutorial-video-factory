@@ -9,7 +9,7 @@
 
 ## 1. Hợp Đồng Đối Soát Tệp Đích & Số Đo Định Lượng (`TARGET_FILE` Parity Contract — `[WHAT]`)
 
-Đặc tả này quy định nâng cấp kho mã nguồn [`C:\Github\software-tutorial-video-factory`](file:///C:/Github/software-tutorial-video-factory/README.md#L1-L40) từ kiến trúc HTML đơn khối (`6.731 dòng`, `290KB/bài`) sang **Kiến trúc Giáo án Tương tác 5 Lớp Toàn Khóa (`53KB/bài`, giảm `85%` dung lượng mỗi trang bài học, tổng cộng `6 Chương · 24 Bài giảng`, `144 phần nhỏ / micro-beats` (`b1`..`b6`), `~1.750 giây` thời lượng thuyết minh `48kHz`)** dựa trên chuẩn vàng tại [`Module_6_Live_Masterclass_06/html_video_demos/index.html`](file:///c:/commandcenter/06_Academy_Group/02_Course_Hub/Cohorts_HoctapTech/Antigravity_Basic/antigravity_course_vn/Module_6_Live_Masterclass_06/html_video_demos/index.html#L1-L120).
+Đặc tả này quy định nâng cấp kho mã nguồn [`C:\Github\software-tutorial-video-factory`](file:///C:/Github/software-tutorial-video-factory/README.md#L1-L40) từ kiến trúc HTML đơn khối (`6.731 dòng`, `290KB/bài`) sang **Kiến trúc Giáo án Tương tác 5 Lớp Toàn Khóa (`53KB/bài`, giảm `85%` dung lượng mỗi trang bài học, tổng cộng `6 Chương · 24 Bài giảng`, `144 phần nhỏ / micro-beats` (`b1`..`b6`), `~1.750 giây` thời lượng thuyết minh `48kHz`)** dựa trên chuẩn vàng tại [`Module_6_Live_Masterclass_06/html_video_demos/index.html`](file:///C:/Workspace/ProjectHub/06_Academy_Group/02_Course_Hub/Cohorts_SoftwareAcademy/Antigravity_Basic/antigravity_course_vn/Module_6_Live_Masterclass_06/html_video_demos/index.html#L1-L120).
 
 Bản nâng cấp v2.2 tích hợp thêm **5 Cải Cách Sư Phạm Toàn Khóa (`PROP-261105-04`)**:
 1. **Đồ thị Tiên quyết Không Chu trình & 0% Trùng lặp (`Prerequisite DAG`):** Toàn bộ 24 bài học (`lesson_01.html`..`lesson_24.html`) khai báo tường minh `prerequisites`, `dependents`, `placement_risk`, `continuity_bridge` trong `lesson_meta.json` và hiển thị trực tiếp tại hộp `#ksb-dep-box` trên Sidebar Trái.
@@ -173,5 +173,5 @@ Module `core_engine/course_compiler.py` cung cấp 3 class Python chuẩn xác:
 
 1. **Khuyến nghị (Verdict):** **CHẤP THUẬN ĐẶC TẢ `SPEC-03` (CONDITIONAL PASS)** làm chuẩn đối chiếu cơ học cho toàn bộ quá trình nâng cấp v2.0.
 2. **Điều kiện Ràng buộc (Conditions):** Mọi tệp trong danh sách `TARGET_FILE` phải tồn tại đầy đủ và vượt qua kiểm tra `run_audit.py parity` ở mức `100.0/100.0`.
-3. **Chủ sở hữu Xác minh (Verification Owner):** `@AI_FactoryArchitect` (`/glob-factory-architect`) & `@AuditArbiter` (`/audit`) báo cáo kết quả lên **CEO Hoàng Đức Minh**.
+3. **Chủ sở hữu Xác minh (Verification Owner):** `@AI_FactoryArchitect` (`/glob-factory-architect`) & `@AuditArbiter` (`/audit`) báo cáo kết quả lên **Giảng viên / Chủ nhiệm Dự án**.
 4. **Thước đo Kiểm chứng Cơ học (Verification Metrics):** `run_audit.py pdca` đạt `100.0/100.0`, `run_audit.py parity` đạt `100.0/100.0`, `pytest` đạt `100% PASS`.

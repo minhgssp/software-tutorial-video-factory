@@ -12,9 +12,9 @@
   "focus_selectors": [
     "#agy2-left-sb",
     "#th-main",
-    "#th-5balance"
+    "#th-demo_sales_analytics"
   ],
-  "cursor_selector": "#th-5balance",
+  "cursor_selector": "#th-demo_sales_analytics",
   "cursor_label": "Chuyển đổi nhanh giữa các luồng công việc song song",
   "caption": "Nhìn vào cột bên trái của <strong>Antigravity 2.0</strong> trên màn hình: Anh chị có thể mở nhiều luồng hội thoại cùng lúc. Trong khi luồng số 1 đang phân tích doanh thu, chúng ta bấm sang luồng số 2 để giao tiếp việc rà soát nhân sự.",
   "audio_src": "audio/lesson_15/b2.mp3",

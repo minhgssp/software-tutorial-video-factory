@@ -70,9 +70,9 @@ def test_5layer_course_compiler_and_manifest() -> None:
     assert course_res["total_duration_sec"] > 1500.0
     assert Path(course_res["manifest_js"]).exists()
     assert (cdir / "config" / "chapters_manifest.js").exists()
-    assert (cdir / "BAI_HOC_DAT_TEN_VA_THIET_KE_MUC_LUC_KHOA_HOC.md").exists()
-    assert (cdir / "BAO_CAO_AUDIT_DOC_LAP_5_NGUYEN_TAC_KHOA_HOC.md").exists()
-    assert (cdir / "CURRICULUM_DAG_24_LESSONS_MATRIX.md").exists()
+    assert (cdir.parent / "saas_workflow_process_demo" / "index.html").exists()
+    assert (cdir.parent.parent / "docs" / "INSTALLATION_AND_VIENEU_SETUP.md").exists()
+    assert (cdir.parent.parent / ".agents" / "skills" / "vieneu-tts-voice" / "SKILL.md").exists()
     index_txt = (cdir / "index.html").read_text(encoding="utf-8")
     assert 'id="home-view"' in index_txt and 'id="player-view"' in index_txt
     tokens_txt = (cdir / "assets" / "css" / "brand_tokens.css").read_text(encoding="utf-8")
@@ -124,7 +124,7 @@ def test_repo_harvest_and_simulator_scaffold(tmp_path: Path) -> None:
     res_path = generate_simulator_scaffold(bp, out_html)
     assert res_path.exists()
 
-    audit_res = audit_html_simulator(res_path, forbidden_terms=["C20_Viettel_Product_Manager", "New Way Edu"])
+    audit_res = audit_html_simulator(res_path, forbidden_terms=["C20_TelecomCorp_Product_Manager", "New Way Edu"])
     assert audit_res["passed"] is True, f"Audit failed: {audit_res['violations']}"
     assert audit_res["js_syntax_ok"] is True
 
@@ -137,18 +137,18 @@ def test_antigravity_studio_simulator_passes_audit() -> None:
 
     res = audit_html_simulator(
         sim_path,
-        forbidden_terms=["C20_Viettel_Product_Manager", "Viettel", "New Way Edu"],
+        forbidden_terms=["C20_TelecomCorp_Product_Manager", "TelecomCorp", "New Way Edu"],
         require_laser_cursor=True,
     )
     assert res["passed"] is True, f"Flagship simulator failed audit: {res['violations']}"
     assert res["line_count"] > 3500
 
 
-def test_scene_builder_and_hanam_spec_audit(tmp_path: Path) -> None:
-    """Verify compiling BIDV Hà Nam JSON specs into 6-archetype HTML pages and running the Rubric + SyncGate auditor."""
+def test_scene_builder_and_enterprise_spec_audit(tmp_path: Path) -> None:
+    """Verify compiling FinBank Đơn vị Doanh nghiệp JSON specs into 6-archetype HTML pages and running the Rubric + SyncGate auditor."""
     candidates = [
-        ROOT_DIR / "examples" / "hanam_16x9_course" / "specs" / "B01_SaiLamThuongGap.json",
-        ROOT_DIR / "simulators" / "hanam_ai_course" / "specs" / "B01_SaiLamThuongGap.json",
+        ROOT_DIR / "examples" / "enterprise_16x9_course" / "specs" / "B01_SaiLamThuongGap.json",
+        ROOT_DIR / "simulators" / "enterprise_ai_course" / "specs" / "B01_SaiLamThuongGap.json",
     ]
     spec_path = next((p for p in candidates if p.exists()), None)
     assert spec_path is not None, "B01_SaiLamThuongGap.json must exist"

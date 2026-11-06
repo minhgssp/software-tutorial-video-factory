@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stage">
+  <svg id="bg" width="1920" height="1080"></svg>
+  <svg id="scene" width="1920" height="1080"></svg>
+  <div id="panel">
+    <div id="hdr"><span class="t1" id="h1"></span><span class="t2" id="h2"></span>
+      <span class="tick mono"><span class="dot" id="tdot"></span><span id="ticker"></span></span><span class="btn mono" id="hbtn"></span></div>
+    <div id="frame"></div>
+    <div id="left">
+      <div id="act" class="mono"></div>
+      <div id="title"><span id="ti1"></span><span id="ti2"></span></div>
+      <div id="steps"></div>
+    </div>
+    <div id="card">
+      <div class="hd mono"><span class="lab" id="cardLab"></span><span class="qid" id="qid"></span></div>
+      <div id="q"></div><div id="lines"></div>
+    </div>
+    <div id="ledger">
+      <div class="hd mono"><span id="ledLab"></span><span>Newest first</span></div>
+      <div id="cols" class="mono"></div>
+      <div id="rows"></div>
+    </div>
+    <div id="brand"></div>
+    <div id="sheet" class="mono"></div>
+    <div id="ov"></div>
+  </div>
+</div>
+<!-- story.js = topic data + event hooks; engine.js = generic isometric factory (pure seek(t)); page.js = reelcrew render contract -->
+<script src="story.js"></script>
+<script src="engine.js"></script>
+<script src="page.js"></script>
+</body></html>

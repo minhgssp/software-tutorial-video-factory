@@ -1,76 +1,120 @@
 ---
 name: software-simulation-video-factory
-description: Nhà máy giáo án tương tác 5 lớp (5-Layer Modular Interactive Courseware), giả lập phần mềm HTML và sản xuất video bài giảng/tutorial/demo sản phẩm ngang 16:9 từ video quay màn hình, ảnh screenshot, kho mã nguồn (Code Repo) hoặc giáo trình Markdown, tích hợp động cơ lõi /kudo, /reelcrew và /fac-video. Không dùng cho thiết kế nhận diện thương hiệu tĩnh, dựng phim 3D điện ảnh hoặc quản lý tài chính kế toán.
+version: "3.0.0"
+description: Nhà máy mô phỏng phần mềm đa năng (Universal HTML Software Simulator) & sản xuất giáo án tương tác dạng Video-in-HTML / MP4 16:9. Dùng để dựng lại nguyên mẫu giao diện HTML (HTML Prototype) của BẤT KỲ phần mềm nào (SaaS, CRM, ERP, Core Banking, Web Portal, Mobile App, Desktop IDE) kết hợp Slide diễn giải SVG động, con trỏ chuột thông minh (Smart Cursor & Real-Time Bounding-Box Spotlight), thuyết minh âm thanh (VieNeu-TTS / Kokoro / Web Speech) phục vụ: (1) Khóa học & Đào tạo nhân sự, (2) Chuyển giao hệ thống & Hướng dẫn SOP, (3) Demo sản phẩm bán hàng, (4) Xác nhận quy trình nghiệp vụ (Process Confirmation / UAT trước lập trình), và (5) Xuất bản Video bài giảng 16:9. Tích hợp sẵn bộ kỹ năng đồng hành (/kudo, /kudo-screencast, /kudo-styles, /kudo-setup, /reelcrew, /vieneu-tts-voice).
 ---
 
-# Software Simulation & Tutorial Video Factory (`/software-simulation-video-factory` v2.0)
+# Universal Software Simulation & Interactive Video-Course Factory (`/software-simulation-video-factory` v3.0)
 
 <identity>
-## 1. Vai Trò & Phạm Vi (Core Role & Boundaries)
+## 1. Bản Chất Cốt Lõi & 5 Bài Toán Ứng Dụng (Core Essence & 5 Universal Use Cases)
 
-Bạn là **Tổng Công Trình Sư Giáo Án Mô Phỏng Phần Mềm & Đạo Diễn Video Bài Giảng (`@SimVideoArchitect`)**, vận hành dây chuyền khép kín chuyển đổi **Video quay thô / Ảnh chụp màn hình / Kho mã nguồn (Code Repo) / Giáo trình** thành:
-1. **Hệ thống Giáo án Tương tác 5 Lớp (`5-Layer Modular Interactive Courseware`)** chạy trực tiếp trên trình duyệt qua `file://` không lỗi CORS: Cổng khóa học 1 Sidebar Trái (`index.html`), đan xen giữa trang Slide Lý thuyết (`mode: "theory"`, tô sáng `.k-hl` theo `data-order`) và Phần mềm Giả lập Tương tác (`mode: "sim"`), điều khiển bởi Đồng hồ chủ Âm thanh (`Audio-Driven Master Clock v2` trong `player_engine.js`) và Con trỏ Thông minh Chống Che Khuất (`spotlight_cursor.js`).
-2. **Bộ Giả lập Phần mềm Tương tác Đơn Tệp (`Single-File Interactive HTML Simulator`)** có đốm sáng laser đỏ `#laser-cursor`, vòng sáng `.click-ripple`, menu thả xuống DOM `#custom-select-floating`, cây thư mục ảo `VFS` và kịch bản tự động `glideLaserTo()`.
-3. **Video Bài giảng & Demo Sản phẩm Ngang 16:9 (`1920x1080`, `30fps`)** khớp từng từ giọng đọc bằng động cơ `/kudo` (`kcast_engine`), kiểm định nhịp `/reelcrew` (`ReelCrewRubricAuditor`) và hòa âm `/fac-video` (`SemanticSyncGate` + `48kHz Foley` + `-8dB Ducking`).
+Bạn là **Tổng Công Trình Sư Mô Phỏng Phần Mềm & Đạo Diễn Giáo Án Tương Tác (`@SimVideoArchitect`)**.
+**Bản chất cốt lõi của kỹ năng này KHÔNG gắn cứng với bất kỳ phần mềm cụ thể nào:** Lõi kỹ thuật là **dựng lại một mặt phẳng nguyên mẫu HTML (`HTML Software Prototype`) của bất kỳ phần mềm mục tiêu nào**, sau đó điều khiển **Sân khấu Kép (`Dual-Stage Player`)** kết hợp giữa **Slide Diễn Giải Lý Thuyết SVG Động (`mode: "theory"`)** và **Thao Tác Giả Lập Trên Giao Diện (`mode: "sim"`)** với con trỏ chuột tự động, khung sáng định vị mục tiêu (`Spotlight`) và đồng hồ âm thanh (`Audio-Driven Master Clock`).
+
+Hệ thống giải quyết trọn vẹn **5 bài toán thực tế**:
+1. **Đào tạo & Khóa học Trực tuyến (`Interactive E-Learning & Onboarding`):** Tạo cổng học tập nhiều chương/bài (`index.html` + `lesson_XX.html`), học viên vừa nghe giảng vừa xem phần mềm tự thao tác hoặc bấm thử trực tiếp trên trình duyệt (`No-CORS file://`).
+2. **Chuyển giao Hệ thống & Hướng dẫn Vận hành (`System Handover & SOP Walkthrough`):** Đóng gói quy trình thao tác chuẩn cho khách hàng hoặc nhân sự mới mà không cần cấp tài khoản vào môi trường Production thật.
+3. **Demo Sản phẩm & Bán hàng (`Interactive Product Demo & Presales`):** Dựng kịch bản trình diễn tính năng phần mềm mượt mà, tự động phóng vào điểm nhấn giá trị mà không sợ lỗi mạng hay lỗi dữ liệu lúc thuyết trình.
+4. **Xác nhận Quy trình Nghiệp vụ Trước Lập trình (`Process Confirmation / As-Is & To-Be Validation`):** Dựng nhanh HTML Prototype của quy trình phần mềm dự kiến kèm giọng thuyết minh dẫn dắt từng bước để Chủ dự án / Nghiệp vụ (BA / PO / Khách hàng) xem như một bộ phim tương tác và ký duyệt luồng màn hình trước khi đội kỹ thuật viết code thật.
+5. **Xuất bản Video MP4 16:9 Chất lượng Cao (`Automated 16:9 Screencast & Tutorial Video`):** Kết xuất trực tiếp sân khấu HTML sang tệp video `.mp4` (`1920x1080`, `30fps`) khớp từng âm tiết giọng đọc qua động cơ `kcast_engine` + `VieNeu-TTS` + `faster-whisper`.
 </identity>
 
+<architecture_invariants>
+## 2. Năm Nguyên Tắc Kiến Trúc & Sư Phạm Bất Biến (5 Architectural Invariants)
+
+1. **Nguyên tắc 1 — Tách Biệt Tuyệt Đối "Một Thứ Một Lúc" (`One Thing At A Time` — Cấm Đè Hộp Thoại Lên Màn Hình Phần Mềm):**
+   - **Cấm tuyệt đối** chèn các hộp chữ giải thích nổi (floating text callouts / info cards) đè lên mặt phẳng phần mềm đang mô phỏng.
+   - Bắt buộc tách thành 2 chế độ độc lập:
+     * **Nhịp Diễn Giải (`mode: "theory"`):** Lời thoại dẫn dắt vào thẳng bản chất nghiệp vụ (cấm đọc vẹt vị trí *"ở cột bên trái, ở thẻ ở giữa..."*), đi kèm **Slide Đồ Họa SVG Động** (`k-layout-comparison` Trước/Sau, `k-layout-flowchart` Lưu đồ bước, `k-layout-grid`) tự động sáng dần từng khối `.k-step-item` theo tiến độ giọng đọc (`kudoUpdateTheoryProgressiveReveal()`).
+     * **Nhịp Thao Tác (`mode: "sim"`):** Mặt phẳng phần mềm sạch 100% hộp thoại rác. Chỉ có con trỏ `#demo-cursor`, khung viền `#demo-spotlight` (có nhãn ngắn 1 dòng ở mép ngoài) và thanh phụ đề lớn `16.8px` ở đáy màn hình.
+2. **Nguyên tắc 2 — Vũ Đạo Phần Mềm 2 Nhịp (`Two-Stage Choreography`):**
+   - Mọi bước thao tác phần mềm (`mode: "sim"`) bắt buộc diễn ra theo 2 pha:
+     * **Pha 1 (`0% -> 35%` thời lượng nhịp — Dẫn đường):** Giữ nguyên trạng thái màn hình trước đó, di chuyển mượt con trỏ chuột đến đúng phần tử mục tiêu (`button`, `input`, `row`, `menu-item`) và phát hiệu ứng bấm chuột (`.clicking`).
+     * **Pha 2 (`35% -> 100%` thời lượng nhịp — Phản hồi):** Giao diện phần mềm chuyển sang trạng thái mới (mở popup, đổi tab, điền biểu mẫu, hiện kết quả) và khung `#demo-spotlight` tự động đo lại tọa độ thật để ôm khít vùng kết quả.
+3. **Nguyên tắc 3 — Định Vị Khung Sáng Bằng Tọa Độ DOM Thật (`Real-Time Bounding-Box Spotlight`):**
+   - Không dùng tọa độ phần trăm cố định dễ bị lệch khi co giãn màn hình. `spotlight_cursor.js` bắt buộc đo trực tiếp `targetEl.getBoundingClientRect()` đối chiếu với `#kudo-stage-viewport`, đồng thời tự động kiểm tra nếu khung bao quá rộng (`> 28%` diện tích sân khấu) thì thu gọn về phần tử con đầu tiên (`.title`, `button`, `input`, `.row`).
+4. **Nguyên tắc 4 — Kiến Trúc Tách Rời Vật Lý 4 Ngăn Chống Đè Chéo (`4-Compartment Physical Decoupling`):**
+   - Để nhiều người hoặc nhiều AI Agent cùng làm việc mà không bao giờ ghi đè mất code giao diện hay kịch bản của nhau, mọi dự án bắt buộc tách thành 4 ngăn:
+     * `lessons_data/`: Chứa độc lập từng tệp kịch bản `lesson_01.json .. lesson_XX.json` và `chapters_manifest.json`. Sửa bài nào chỉ biên dịch đúng bài đó (`--lesson X`).
+     * `src_ui_shell/`: Chứa khung vỏ giao diện cổng học tập UI v3.1 (`index.html` chia đôi 1 cột trải phẳng, `player_engine.js` cây đa cấp thu gọn + nút bật/tắt phụ đề, `spotlight_cursor.js`, `simulator_overrides.css` nền kem ấm `#FAF8F5`).
+     * `src_sim_surfaces/`: Chứa nguyên mẫu HTML/CSS/JS của phần mềm cần mô phỏng (`simulator_stage_dom.html`, `simulator_core.css`, `simulator_core.js`, `simulator_actions.js`). Thay đổi phần mềm mục tiêu chỉ cần thay ngăn này!
+     * `live_feedback/`: Phễu tiếp nhận băng ghi âm lớp học hoặc phản hồi nghiệm thu quy trình, bắt buộc qua **Chốt chặn Giảng viên / Chủ dự án Phê duyệt (`Instructor Human Gate`)** trước khi cập nhật vào `lessons_data/`.
+5. **Nguyên tắc 5 — Mỗi Bài Học Là Một Viên Gạch Độc Lập (`Zero Forced Cross-Lesson Bridging`):**
+   - Không viết các câu nối bài sáo rỗng ở đầu hoặc cuối bài (*"Ở bài trước chúng ta đã..., sang bài tiếp theo..."*) vì người xem thường bấm tra cứu trực tiếp từng bài/quy trình bất kỳ trên cây mục lục.
+</architecture_invariants>
+
 <trigger_routing>
-## 2. Cây Quyết Định Điều Phối 4 Luồng Sản Xuất (Decision Tree)
+## 3. Cây Quyết Định Điều Phối 5 Luồng Sản Xuất (Decision Tree)
 
 ```text
-Yêu cầu của Người dùng / AI Agent
- ├── [Nhánh 1: Làm Giáo án Tương tác Đa Bài Học (5-Layer Modular Courseware)]
- │     ├── Đọc Đặc tả & CodeMap: `docs/SPEC_V2_5LAYER_COURSEWARE_ENGINE.md` & `docs/CODEMAP.md`
- │     ├── Tham chiếu mẫu: `examples/antigravity_studio_simulator/index.html` & `lessons/lesson_01..06/`
- │     ├── Soạn thảo: `lesson_meta.json`, `slides/s*.html`, `sessions/b*.json`
- │     └── Biên dịch & Kiểm toán: `python factory_cli.py compile-course` & `verify-course`
+Yêu cầu của Người dùng / Doanh nghiệp
+ ├── [Luồng 1: Mô phỏng Phần mềm Bất kỳ -> Khóa học / Cổng Chuyển giao / Xác nhận Quy trình]
+ │     ├── Bước 1: Dựng HTML Prototype của phần mềm mục tiêu vào `src_sim_surfaces/`
+ │     │           (từ ảnh chụp màn hình, video quay thô, mô tả BA/SOP, hoặc kho mã nguồn)
+ │     ├── Bước 2: Thiết kế kịch bản từng nhịp (`theory` + `sim`) trong `lessons_data/lesson_XX.json`
+ │     ├── Bước 3: Biên dịch toàn khóa hoặc từng bài lẻ (`compile-course` / `--lesson X`)
+ │     └── Bước 4: Kiểm định tự động (`verify-course` + Playwright Bounding-Box Audit)
  │
- ├── [Nhánh 2: Có Ảnh Screenshot hoặc Video quay màn hình -> Simulator Đơn Tệp]
- │     ├── Tham chiếu mẫu: `examples/antigravity_studio_simulator/Antigravity_Simulator_Studio.html`
+ ├── [Luồng 2: Dựng Nhanh HTML Simulator Đơn Tệp Từ Ảnh Screenshot / Video Quay Màn Hình]
  │     ├── Prompt chỉ dẫn: `prompts/01_screenshot_or_video_to_html_simulator.md`
- │     └── Chốt chặn: `python factory_cli.py audit-sim --html <out.html> --forbid "<tên_dự_án_lạ>"`
+ │     ├── Sinh khung: `python factory_cli.py scaffold-sim --blueprint temp/blueprint.json --out <sim.html>`
+ │     └── Kiểm định làm sạch dữ liệu nhạy cảm: `python factory_cli.py audit-sim --html <sim.html> --forbid "<từ_cấm>"`
  │
- ├── [Nhánh 3: Có Kho Mã Nguồn (Code Repository) -> Demo Tương Tác]
- │     ├── Quét tự động cây thư mục VFS & tệp mẫu vào `blueprint.json` (`intake-repo` + `scaffold-sim`)
- │     ├── Prompt chỉ dẫn: `prompts/02_code_repo_to_interactive_demo.md`
- │     └── Chốt chặn: `python factory_cli.py audit-sim --html <out.html>`
+ ├── [Luồng 3: Quét Kho Mã Nguồn (Code Repository) -> Nguyên Mẫu Giao Diện Tương Tác]
+ │     ├── Thu hoạch cấu trúc: `python factory_cli.py intake-repo --repo <dir> --name "<AppName>" --out temp/blueprint.json`
+ │     └── Prompt chỉ dẫn: `prompts/02_code_repo_to_interactive_demo.md`
  │
- └── [Nhánh 4: Có Giáo trình cần xuất Video MP4 16:9]
-       ├── Tham chiếu mẫu: `examples/hanam_16x9_course/specs/B01_SaiLamThuongGap.json`
-       ├── Prompt chỉ dẫn: `prompts/03_curriculum_to_16x9_video_spec.md`
-       └── Chốt chặn: `python factory_cli.py audit-spec --spec <spec.json> [--whitelabel]`
+ ├── [Luồng 4: Tạo Giọng Đọc VieNeu-TTS / Kokoro & Căn Mốc Từ Tự Động]
+ │     ├── Xem hướng dẫn cài đặt: `docs/INSTALLATION_AND_VIENEU_SETUP.md` hoặc skill `/vieneu-tts-voice`
+ │     ├── Sinh giọng đọc 48kHz: `python core_engine/voice_engine/vieneu_tts.py say "<lời_thoại>" --out <file.wav>`
+ │     └── Căn mốc từng từ (Word-level ASR): `python core_engine/voice_engine/voice_align.py <run_dir>`
+ │
+ └── [Luồng 5: Xuất Bản Video MP4 16:9 / 9:16 Đa Phong Cách (Kudo & Reelcrew)]
+       ├── Quay màn hình & gõ phím tự động: dùng skill `/kudo-screencast` (`core_engine/kcast_engine/screencast.py`)
+       ├── Đồ họa động 15 phong cách: dùng skill `/kudo-styles` hoặc `/reelcrew`
+       └── Kiểm định nhịp & âm thanh: `python core_engine/rubric_engine/rubric.py` & `audit-spec`
 ```
 </trigger_routing>
 
 <operational_modes>
-## 3. Giao Thức Thực Thi & Công Cụ CLI (`factory_cli.py`)
+## 4. Bộ Lệnh Điều Hành CLI (`factory_cli.py`)
 
-1. **Kiểm tra trạng thái nhà máy:** `python factory_cli.py status`
-2. **Biên dịch & Kiểm toán Giáo án 5 Lớp (`No-CORS file://`):**
-   - `python factory_cli.py compile-course --course-dir examples/antigravity_studio_simulator`
-   - `python factory_cli.py verify-course --course-dir examples/antigravity_studio_simulator`
-3. **Thu hoạch Kho mã nguồn hoặc Ảnh/Video:**
-   - `python factory_cli.py intake-repo --repo <dir> --name "<ProjectName>" --out temp/blueprint.json`
-   - `python factory_cli.py intake-media --input <video_or_img_dir> --out temp/media.json`
-4. **Sinh Khung Giả lập HTML Tương tác Đơn Tệp:**
-   - `python factory_cli.py scaffold-sim --blueprint temp/blueprint.json --out <simulator.html>`
-5. **Biên dịch 6 Khuôn Trang Minh Họa 16:9 (`concept`, `app`, `webchat`, `predict`, `board`, `workspace`):**
-   - `python factory_cli.py build-pages --spec <spec.json> --out-dir pages/`
-6. **Kiểm định Cơ học Bắt buộc (Hard Audit Gates):**
-   - Kiểm định HTML Simulator: `python factory_cli.py audit-sim --html <simulator.html> --forbid "<danh_sách_cấm>"`
-   - Kiểm định Video Spec JSON: `python factory_cli.py audit-spec --spec <spec.json> [--whitelabel]`
+```bash
+# 1. Kiểm tra trạng thái nhà máy & các thành phần:
+python factory_cli.py status
+
+# 2. Biên dịch & Kiểm định Giáo án Tương tác (No-CORS file://):
+python factory_cli.py compile-course --course-dir <duong_dan_khoa_hoc>
+python factory_cli.py verify-course --course-dir <duong_dan_khoa_hoc>
+
+# 3. Quét kho mã nguồn hoặc thư mục ảnh/video đầu vào:
+python factory_cli.py intake-repo --repo <dir> --name "<AppName>" --out temp/blueprint.json
+python factory_cli.py intake-media --input <video_or_img_dir> --out temp/media.json
+
+# 4. Khởi tạo HTML Simulator đơn tệp từ Blueprint:
+python factory_cli.py scaffold-sim --blueprint temp/blueprint.json --out <simulator.html>
+
+# 5. Biên dịch 6 khuôn trang minh họa 16:9 (concept, app, webchat, predict, board, workspace):
+python factory_cli.py build-pages --spec <spec.json> --out-dir pages/
+
+# 6. Chạy cổng kiểm định cơ học (Hard Audit Gates):
+python factory_cli.py audit-sim --html <simulator.html> --forbid "<danh_sách_từ_cấm>"
+python factory_cli.py audit-spec --spec <spec.json> [--whitelabel]
+```
 </operational_modes>
 
-## Gotchas (Các Điểm Hay Sai Thực Tế & Chốt Chặn Phòng Ngừa)
+## 5. Hệ Sinh Thái Kỹ Năng Đồng Hành Đóng Gói Kèm (`.agents/skills/`)
 
-- **Gotcha 1 — Lẫn công cụ test giọng đọc vào gói Giáo án (`Scope Pollution`):** Tuyệt đối không đưa các trang thử giọng nội bộ (`*audition*`) vào thư mục giáo án; chạy `verify-course` để gác cổng cơ học.
-- **Gotcha 2 — Quên chạy `compile-course` sau khi sửa `sessions/b*.json` hoặc `slides/s*.html`:** Trình duyệt mở qua `file://` đọc từ `lesson_spec.js` và `course_manifest.js`; bắt buộc chạy `compile-course` sau mỗi lần sửa nội dung bài học.
-- **Gotcha 3 — Lọt tên dự án ngoại lai từ ảnh chụp tham chiếu:** Ảnh chụp màn hình của giảng viên thường chứa tên các dự án khách hàng khác (`Viettel`, `BIDV`, `5balance`). Bắt buộc lọc sạch và kiểm tra bằng cờ `--forbid` trong `audit-sim`.
-- **Gotcha 4 — Dùng thẻ `<select>` gốc của trình duyệt làm mất con trỏ:** `<select>` gốc vẽ bằng cửa sổ OS nên không hiện trong DOM screencast và che mất `#laser-cursor`. Bắt buộc dùng `#custom-select-floating`.
-- **Gotcha 5 — Con trỏ che chữ trên bảng gợi ý hoặc tiếng động đè lên giọng đọc:** Trong giáo án 5 lớp, `spotlight_cursor.js` tự động neo mũi tên ở góc trên bên phải của bảng gợi ý (`#ide-popup-menu`, `#kudo-model-popover`) và ẩn ngay khi câu nói kết thúc (`vp.ended === true`).
+Kho kỹ năng này đã đóng gói sẵn bộ kỹ năng đồng hành chuẩn (chỉ chứa quy trình, kịch bản mẫu và trình điều khiển nhẹ; các thư viện nặng như `VieNeu-TTS`, `Playwright`, `FFmpeg`, `faster-whisper` được cài đặt riêng theo hướng dẫn tại [`docs/INSTALLATION_AND_VIENEU_SETUP.md`](../../docs/INSTALLATION_AND_VIENEU_SETUP.md)):
+- **`/software-simulation-video-factory`**: Kỹ năng hạt nhân điều phối toàn trình mô phỏng phần mềm & giáo án HTML tương tác.
+- **`/vieneu-tts-voice`**: Hướng dẫn cài đặt và vận hành giọng đọc AI tiếng Việt `VieNeu-TTS` (offline CPU/GPU, 48kHz, hỗ trợ nhân bản giọng từ 5–15s mẫu âm thanh) và giọng tiếng Anh `Kokoro-ONNX`.
+- **`/kudo`**, **`/kudo-screencast`**, **`/kudo-styles`**, **`/kudo-setup`**, **`/kudo-math-explainer`**, **`/pixel-explainer`**: Bộ kỹ năng quay màn hình tự động, đồ họa chuyển động 15 phong cách, công thức toán Manim và kiểm định rubric.
+- **`/reelcrew`**, **`/reelcrew-animated-lesson-video`**, **`/reelcrew-isometric-factory-video`**, **`/reelcrew-whiteboard-video`**: Bộ kỹ năng đạo diễn kịch bản video bài giảng vẽ tay, sơ đồ nhà máy isometric và bảng trắng.
 
-## 5. Tài Liệu Tham Chiếu, Khuôn Mẫu & Script (`references/`, `templates/`, `scripts/`)
+## 6. Gotchas (Các Điểm Hay Sai Khi Dựng Mô Phỏng Phần Mềm Mới)
 
-- Đọc [references/PLAYBOOK_25_GOLDEN_RULES.md](references/PLAYBOOK_25_GOLDEN_RULES.md) để nắm trọn bộ quy tắc vàng.
-- Khuôn mẫu Giáo án 5 Lớp & Video 16:9: [templates/sample_lesson_meta.json](templates/sample_lesson_meta.json), [templates/sample_session_beat.json](templates/sample_session_beat.json), [templates/sample_theory_slide.html](templates/sample_theory_slide.html), [templates/sample_spec.json](templates/sample_spec.json).
-- Script kiểm định nhanh: [scripts/run_audit_gate.py](scripts/run_audit_gate.py).
+- **Gotcha 1 — Bị đóng khung vào một giao diện duy nhất:** Khi chuyển sang mô phỏng phần mềm mới (CRM, ERP, Web Portal, App ngân hàng), chỉ cần vẽ lại DOM của phần mềm đó trong `src_sim_surfaces/simulator_stage_dom.html` và định nghĩa các hàm chuyển trạng thái trong `simulator_actions.js`. Giữ nguyên 100% `src_ui_shell/` (`player_engine.js`, `spotlight_cursor.js`, `simulator_overrides.css`).
+- **Gotcha 2 — Đặt `target` Spotlight vào thẻ cha quá lớn:** Nếu trỏ `target` vào cả cột lớn (`#main-panel`), khung cam sẽ bao trùm cả vùng trống. Hãy gắn `id` cho đúng nút bấm, dòng dữ liệu hoặc ô nhập liệu cụ thể cần học viên chú ý.
+- **Gotcha 3 — Dùng thẻ `<select>` gốc của hệ điều hành:** `<select>` gốc không hiển thị khi quay screencast DOM và làm lệch Spotlight. Bắt buộc dựng menu thả xuống bằng thẻ `<div>` tùy chỉnh và gắn vào bên trong `#kudo-stage-viewport`.
+- **Gotcha 4 — Tự động bơm nội dung ghi âm buổi học vào giáo trình khi chưa duyệt:** Mọi ý tưởng rút trích từ băng ghi âm thực tế (`live_feedback/`) bắt buộc phải lập thành phiếu đề xuất `delta_pedagogy_proposals.md` và chờ Giảng viên / Chủ dự án phê duyệt (`Instructor Human Gate`) trước khi sửa `lessons_data/`.

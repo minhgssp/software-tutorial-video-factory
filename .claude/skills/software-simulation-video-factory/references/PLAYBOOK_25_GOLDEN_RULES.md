@@ -1,6 +1,6 @@
 # Cẩm Nang Đúc Kết: 25 Quy Tắc Vàng Về Giả Lập Phần Mềm & Sản Xuất Video Bài Giảng (`05_DISTILLED_PLAYBOOK_SOFTWARE_SIMULATION_AND_VIDEO.md`)
 
-> *Đúc kết hợp nhất từ thực chiến **Khóa Antigravity Basic (`SP_261104_01`)** và **Khóa AI Thực Chiến BIDV Hà Nam (`SP_261030_04`)**, kết hợp kỷ luật kỹ thuật của `/kudo`, `/reelcrew` và `/fac-video`.*
+> *Đúc kết hợp nhất từ thực chiến **Khóa Antigravity Basic (`SP_261104_01`)** và **Khóa AI Thực Chiến FinBank Đơn vị Doanh nghiệp (`SP_261030_04`)**, kết hợp kỷ luật kỹ thuật của `/kudo`, `/reelcrew` và `/fac-video`.*
 
 ---
 
@@ -15,7 +15,7 @@
 4. **Cây thư mục ảo (`Virtual File System - VFS`) phản ánh 1:1 bối cảnh khóa học:**
    - Bộ giả lập phải có kho dữ liệu `VFS` lưu nội dung thật của các tệp trong bài học để khi bấm vào bất kỳ tệp nào trên cây thư mục Explorer, khung soạn thảo ở giữa đều mở đúng nội dung tệp đó.
 5. **Chống lọt tên dự án ngoại lai từ ảnh chụp tham chiếu (Anti-Context Contamination):**
-   - Khi lấy ảnh chụp màn hình của giảng viên làm mẫu dựng giao diện, ảnh chụp thường chứa tên các dự án khác mà giảng viên đang làm (ví dụ `C20_Viettel_Product_Manager`, `BIDV`, `5balance`). Bắt buộc phải lọc sạch và thay thế 100% bằng đúng tên dự án chuẩn của khóa học đang dạy (ví dụ `antigravity_course_vn`).
+   - Khi lấy ảnh chụp màn hình của giảng viên làm mẫu dựng giao diện, ảnh chụp thường chứa tên các dự án khác mà giảng viên đang làm (ví dụ `C20_TelecomCorp_Product_Manager`, `FinBank`, `demo_sales_analytics`). Bắt buộc phải lọc sạch và thay thế 100% bằng đúng tên dự án chuẩn của khóa học đang dạy (ví dụ `antigravity_course_vn`).
 6. **Mô phỏng trọn vẹn cả Cửa sổ Hệ điều hành & Hộp thoại cảnh báo:**
    - Những thao tác người mới hay lúng túng nhất nằm ở ranh giới giữa Phần mềm và Hệ điều hành (ví dụ: bấm `File -> Open Folder` hiện cửa sổ Windows 11 File Explorer màu tối, hoặc vô tình kéo thả nhầm thư mục hiện hộp thoại cảnh báo `Are you sure you want to move...`). Hãy dựng các hộp thoại này bằng DOM ngay trong trang giả lập.
 7. **Mô phỏng trạng thái "Đang suy nghĩ & Đang thực thi" của AI Agent:**

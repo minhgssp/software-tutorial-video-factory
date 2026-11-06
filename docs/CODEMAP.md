@@ -85,7 +85,7 @@ software-tutorial-video-factory/
 │   │   ├── assets/                                 # Lớp 2 & 3: css/, js/, avatar/, templates/
 │   │   ├── lessons/                                # Lớp 4: lesson_01..24/ (lesson_meta.json, slides/*.html, sessions/*.json, lesson_spec.js)
 │   │   └── audio/                                  # Tệp giọng giảng thực tế 48kHz (lesson_01..24/b1..b6.mp3 — 144 tệp MP3)
-│   └── hanam_16x9_course/                          # Mẫu chuẩn vàng 2: Dây chuyền Video 16:9 Đa Khuôn (Khóa BIDV Hà Nam)
+│   └── enterprise_16x9_course/                          # Mẫu chuẩn vàng 2: Dây chuyền Video 16:9 Đa Khuôn (Khóa FinBank Đơn vị Doanh nghiệp)
 │       ├── scripts/                                # build_pages.py, run_kudo_16x9.py, remux_sfx.py
 │       └── specs/                                  # B01_SaiLamThuongGap.json, B02_BaCapDoLamViecAI.json, BRIEF_AGY_VIET_SPEC.md
 ├── prompts/                                        # 4 mẫu Prompt chuyên biệt cho từng chặng sản xuất của AI Agent

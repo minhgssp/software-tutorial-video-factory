@@ -3,7 +3,7 @@
 """
 Declarative 6-Archetype 16:9 HTML Scene Compiler (`core_engine/scene_builder.py`)
 
-Ported & Generalized from the BIDV Hà Nam Course Engine (`build_pages.py` — `SP_261030_04`)
+Ported & Generalized from the FinBank Đơn vị Doanh nghiệp Course Engine (`build_pages.py` — `SP_261030_04`)
 and `/kudo` Widescreen 16:9 Stage:
   - Compiles declarative JSON video specs (`specs/videos/<VIDEO_ID>.json`) into standalone
     HTML pages (`pages/<VIDEO_ID>/<shot_id>.html`) ready for `/kudo` Playwright CDP capture.

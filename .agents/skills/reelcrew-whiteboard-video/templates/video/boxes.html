@@ -1,0 +1,24 @@
+<!doctype html>
+<!--
+  whiteboard-video page: every scene's line art (scenes/<scene>.png|.jpg) drawn region by region by the engine
+  (whiteboard.js) in the order and at the times of scenes/<scene>.annotation.json; timeline.js (build-timeline.py)
+  lists the scenes and the options; page.js gives `reelcrew render` its contract. No audio tags (mix-audio.py makes
+  the sound), no library, nothing from the network.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Whiteboard video: numbered boxes</title>
+    <style>
+      html, body { margin: 0; padding: 0; background: #f6f1e3; overflow: hidden; }
+      canvas { display: block; }
+    </style>
+  </head>
+  <body>
+    <script>window.BOXES = true; // numbered boxes over each scene's full image (stills before the render)</script>
+    <canvas id="wb"></canvas>
+    <script src="timeline.js"></script>
+    <script src="whiteboard.js"></script>
+    <script src="page.js"></script>
+  </body>
+</html>

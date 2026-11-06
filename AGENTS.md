@@ -24,7 +24,7 @@ When working in this repository to build **5-Layer Modular Interactive Coursewar
      - Must strip 100% of unrelated project names from reference screenshots (`--forbid`).
 
 3. **Pipeline C — From Lecture / Curriculum to 16:9 Voice-Synced Video:**
-   - Read [`prompts/03_curriculum_to_16x9_video_spec.md`](prompts/03_curriculum_to_16x9_video_spec.md) and [`examples/hanam_16x9_course/specs/BRIEF_AGY_VIET_SPEC.md`](examples/hanam_16x9_course/specs/BRIEF_AGY_VIET_SPEC.md).
+   - Read [`prompts/03_curriculum_to_16x9_video_spec.md`](prompts/03_curriculum_to_16x9_video_spec.md) and [`examples/enterprise_16x9_course/specs/BRIEF_AGY_VIET_SPEC.md`](examples/enterprise_16x9_course/specs/BRIEF_AGY_VIET_SPEC.md).
    - Audit the spec mechanically: `python factory_cli.py audit-spec --spec <spec.json> [--whitelabel]`.
    - Compile the 6-archetype HTML pages: `python factory_cli.py build-pages --spec <spec.json> --out-dir pages/`.
 
@@ -33,5 +33,5 @@ When working in this repository to build **5-Layer Modular Interactive Coursewar
 Never declare any courseware, simulator, or video spec finished until all mechanical checks pass with `0` errors:
 - `python factory_cli.py verify-course --course-dir examples/antigravity_studio_simulator` -> `status: PASS`
 - `python factory_cli.py audit-sim --html examples/antigravity_studio_simulator/Antigravity_Simulator_Studio.html` -> `passed: true`
-- `python factory_cli.py audit-spec --spec examples/hanam_16x9_course/specs/B01_SaiLamThuongGap.json` -> `passed: true`
+- `python factory_cli.py audit-spec --spec examples/enterprise_16x9_course/specs/B01_SaiLamThuongGap.json` -> `passed: true`
 - `pytest tests/ -v` -> `100% PASS`

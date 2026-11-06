@@ -56,11 +56,11 @@ PROTECTED_VI_COMPOUNDS = {
 }
 
 WHITELABEL_FORBIDDEN_BRANDS = {
-    "bidv",
+    "FinBank",
     "agribank",
     "vietcombank",
     "vietinbank",
-    "hà nam",
+    "Đơn vị Doanh nghiệp",
     "lâm đồng",
     "chatgpt",
     "openai",

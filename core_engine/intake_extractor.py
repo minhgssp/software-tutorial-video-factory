@@ -358,7 +358,7 @@ def generate_simulator_scaffold(
     Generate a complete, self-contained Single-File Interactive HTML Software Simulator
     from a `blueprint` dict (produced by `harvest_code_repository` or `analyze_screenshots`).
 
-    Includes all mandatory Golden Rules from the Antigravity & BIDV Hà Nam courses:
+    Includes all mandatory Golden Rules from the Antigravity & FinBank Đơn vị Doanh nghiệp courses:
       - Soft red glowing laser dot (`#laser-cursor`, 18px, `.hovering-target`, `.click-ripple`)
       - Zero native `<select>` elements (uses `#custom-select-floating` DOM dropdown)
       - Virtual File System (`VFS`) bound to the target project's real files

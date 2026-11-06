@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="fonts/fonts.css">
+<meta charset="utf-8">
+<title>Lesson Video</title>
+<style>html,body{margin:0;background:#111}canvas{display:block;width:100vw;height:auto}</style>
+</head>
+<body>
+<canvas id="c" width="1920" height="1080"></canvas>
+<script src="timeline.js"></script>
+<script src="engine.js"></script>
+<script src="kit.js"></script>
+<script src="scenes.js"></script>
+<script>
+// Deterministic player: renderFrame(t) draws scene + bilingual subtitles at time t (seconds).
+const TL = window.TIMELINE, DUR = TL.total;
+const SUBF = '"Be Vietnam Pro","Helvetica Neue",Arial,sans-serif'; // fonts/: every Vietnamese letter at every weight
+// Scenes without a drawing fn yet render a placeholder, so the timeline can be previewed while scenes are written.
+const placeholder = id => (u, b) => { paperBG(); label(id, 960, 420, { size: 90, c: INK }); b.forEach((t, i) => label(`beat ${i} @ ${t.toFixed(1)}s`, 960, 540 + i * 50, { size: 34, c: u >= t ? RED : '#8A7F72' })); };
+const SCENES = TL.scenes.map((s, i) => [s.start, s.start + s.dur, SCENE_FNS[s.id] || (s.id === 'thumb' ? thumbScene : placeholder(s.id)), i ? 'fade' : null, .4, s]);
+
+function drawScene(i, t) { const s = SCENES[i]; GA = 1; SC = 1; LWM = 1; ctx.save(); s[2](t - s[0], s[5].beats, s[5].dur); ctx.restore(); }
+
+function wrap(txt, maxW) { const out = []; let cur = '';
+  for (const w of txt.split(' ')) { const t = cur ? cur + ' ' + w : w; if (ctx.measureText(t).width > maxW && cur) { out.push(cur); cur = w; } else cur = t; }
+  if (cur) out.push(cur); return out; }
+// Subtitles from timeline.js: TL.sub_langs[0] = main white line, [1] = smaller yellow line (optional).
+function subtitles(t) {
+  const s = TL.subs.filter(x => t >= x.start - .12 && t < x.end + .35).pop(); if (!s) return;
+  const a = prog(t, s.start - .12, s.start + .08) * (1 - prog(t, s.end + .2, s.end + .35));
+  const styles = [['600 42px', 52, '#FFFFFF'], ['500 35px', 44, '#FFD166']];
+  const rows = (TL.sub_langs || ['en', 'vi']).slice(0, 2).map((lg, i) => { ctx.font = `${styles[i][0]} ${SUBF}`; return { st: styles[i], lines: wrap(s[lg] || '', 1600) }; });
+  ctx.save(); ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  let w = 0, h = 34; rows.forEach(r => { ctx.font = `${r.st[0]} ${SUBF}`; r.lines.forEach(l => w = Math.max(w, ctx.measureText(l).width)); h += r.lines.length * r.st[1]; });
+  const y0 = 1058 - h; w += 80;
+  ctx.globalAlpha = a * .78; ctx.fillStyle = '#17141F'; ctx.beginPath(); ctx.roundRect(960 - w / 2, y0, w, h, 22); ctx.fill();
+  ctx.globalAlpha = a; let y = y0 + 17;
+  rows.forEach(r => { ctx.font = `${r.st[0]} ${SUBF}`; ctx.fillStyle = r.st[2]; for (const l of r.lines) { y += r.st[1] / 2; ctx.fillText(l, 960, y); y += r.st[1] / 2; } });
+  ctx.restore();
+}
+
+// Channel watermark (top-right, above the scene art; skipped when empty).
+function watermark(txt) { if (!txt) return; ctx.save(); ctx.font = `34px ${FONT}`; ctx.textBaseline = 'middle';
+  const tw = ctx.measureText(txt).width, x = W - 44 - tw, y = 56;
+  ctx.globalAlpha = .5; ctx.fillStyle = '#17141F'; ctx.beginPath(); ctx.roundRect(x - 20, y - 26, tw + 40, 52, 26); ctx.fill();
+  ctx.globalAlpha = .92; ctx.fillStyle = '#FFFFFF'; ctx.fillText(txt, x, y + 2); ctx.restore(); }
+
+function renderFrame(t, capture = true) {
+  T = t; B = Math.floor(t * 8); ctx = mainCtx;
+  let i = SCENES.findIndex(s => t >= s[0] && t < s[1]); if (i < 0) i = SCENES.length - 1;
+  const s = SCENES[i], tp = s[3] ? prog(t, s[0], s[0] + s[4]) : 1;
+  if (i > 0 && tp < 1) {
+    drawScene(i - 1, t);
+    ctx = bufCtx; ctx.clearRect(0, 0, W, H); drawScene(i, t); ctx = mainCtx;
+    ctx.save(); ctx.globalAlpha = eio(tp); ctx.drawImage(buf, 0, 0); ctx.restore();
+  } else drawScene(i, t);
+  const v = ctx.createRadialGradient(W / 2, H / 2, H * .45, W / 2, H / 2, H * 1.05); v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(0,0,0,.16)'); ctx.fillStyle = v; ctx.fillRect(0, 0, W, H);
+  subtitles(t);
+  watermark(TL.watermark);
+  return capture ? main.toDataURL('image/jpeg', .93) : null;
+}
+window.renderFrame = renderFrame;
+// Standalone thumbnail frame (used by thumbnail.py via reelcrew render --thumb).
+window.renderThumb = () => { ctx = mainCtx; T = 0; B = 0; GA = 1; SC = 1; LWM = 1; ctx.save(); thumbScene(0); ctx.restore(); watermark(TL.watermark); return main.toDataURL('image/jpeg', .95); };
+
+window.READY = false; // `reelcrew render` waits for true (undefined would count as ready as soon as the HTML has loaded)
+TEX_D = makeTex(false); TEX_L = makeTex(true);
+Promise.all([document.fonts.load(`46px ${FONT}`), ...[400, 600, 700, 800].map((w) => document.fonts.load(`${w} 40px "Be Vietnam Pro"`))]).then(() => { window.READY = true;
+  const q = new URLSearchParams(location.search);
+  if (!q.has('render')) { const t0 = performance.now() - (+q.get('t') || 0) * 1000; const loop = () => { renderFrame(((performance.now() - t0) / 1000) % DUR, false); requestAnimationFrame(loop); }; loop(); } });
+</script>
+</body>
+</html>

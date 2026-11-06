@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universal Software Simulator Demo — Đào tạo, Chuyển giao & Xác nhận Quy trình (CRM / ERP / Portal)</title>
+  <style>
+    :root {
+      --bg-cream: #FAF8F5;
+      --bg-card: #FFFFFF;
+      --bg-subtle: #F3EFEA;
+      --border-warm: #E6DFD5;
+      --text-main: #2C2520;
+      --text-muted: #6E655F;
+      --accent: #D95D39;
+      --accent-soft: rgba(217, 93, 57, 0.12);
+      --green: #1F7A4C;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-cream);
+      color: var(--text-main);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    header.top-bar {
+      height: 54px;
+      background: #F4EFE6;
+      border-bottom: 1px solid var(--border-warm);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 18px;
+      flex-shrink: 0;
+    }
+    .brand-group { display: flex; align-items: center; gap: 10px; }
+    .btn {
+      border: 1px solid #DCD3C6;
+      background: #FFF;
+      color: var(--text-main);
+      padding: 6px 13px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .btn:hover { border-color: var(--accent); color: var(--accent); }
+    .btn.primary { background: var(--accent); color: #FFF; border-color: var(--accent); }
+    .workspace { display: flex; flex: 1; min-height: 0; }
+    aside.tree-sidebar {
+      width: 300px;
+      background: #F4EFE6;
+      border-right: 1px solid var(--border-warm);
+      display: flex;
+      flex-direction: column;
+      padding: 12px;
+      overflow-y: auto;
+      transition: width 0.2s ease, padding 0.2s ease, opacity 0.2s ease;
+    }
+    body.sidebar-collapsed aside.tree-sidebar {
+      width: 0; padding: 0; overflow: hidden; opacity: 0; border-right: none;
+    }
+    .tree-group {
+      background: #FFF;
+      border: 1px solid var(--border-warm);
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .tree-group-title {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .tree-step {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 9px;
+      border-radius: 7px;
+      font-size: 12.5px;
+      cursor: pointer;
+      color: var(--text-muted);
+      margin-bottom: 3px;
+    }
+    .tree-step:hover { background: var(--bg-subtle); color: var(--text-main); }
+    .tree-step.active {
+      background: #FFF3E8;
+      color: var(--accent);
+      font-weight: 700;
+      border-left: 3px solid var(--accent);
+    }
+    main.stage-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 14px 18px;
+      min-width: 0;
+      gap: 12px;
+    }
+    .viewport {
+      flex: 1;
+      background: #FFF;
+      border: 1px solid var(--border-warm);
+      border-radius: 14px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 8px 24px rgba(44,37,32,0.05);
+    }
+    /* MODE 1: THEORY SLIDE (1-Column Stacked Flat Cards) */
+    .theory-view {
+      padding: 28px 42px;
+      overflow-y: auto;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .theory-badge {
+      display: inline-block;
+      align-self: flex-start;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 99px;
+    }
+    .theory-card {
+      background: var(--bg-cream);
+      border: 1px solid var(--border-warm);
+      border-radius: 12px;
+      padding: 16px 20px;
+      transition: all 0.25s;
+    }
+    .theory-card.focused {
+      border: 2px solid var(--accent);
+      background: #FFFDF9;
+      box-shadow: 0 6px 18px rgba(217, 93, 57, 0.12);
+    }
+    /* MODE 2: GENERIC SAAS / ERP SOFTWARE PROTOTYPE SURFACE */
+    .sim-view {
+      display: none;
+      height: 100%;
+      flex-direction: row;
+      background: #F8FAFC;
+      color: #1E293B;
+    }
+    .saas-nav {
+      width: 210px;
+      background: #0F172A;
+      color: #E2E8F0;
+      padding: 16px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .saas-logo {
+      font-size: 14px;
+      font-weight: 800;
+      color: #FFF;
+      padding: 6px 10px 14px;
+      border-bottom: 1px solid #1E293B;
+      margin-bottom: 6px;
+    }
+    .saas-nav-item {
+      padding: 9px 12px;
+      border-radius: 7px;
+      font-size: 13px;
+      cursor: pointer;
+      color: #94A3B8;
+    }
+    .saas-nav-item.active { background: #1E293B; color: #FFF; font-weight: 700; }
+    .saas-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 18px 22px;
+      gap: 14px;
+      overflow: hidden;
+    }
+    .saas-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #FFF;
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: 1px solid #E2E8F0;
+    }
+    .saas-table-card {
+      background: #FFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 10px;
+      padding: 14px;
+      flex: 1;
+    }
+    table.saas-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    table.saas-table th, table.saas-table td {
+      text-align: left; padding: 10px 12px; border-bottom: 1px solid #F1F5F9;
+    }
+    table.saas-table tr.selected-row { background: #FFF7ED; }
+    .status-pill {
+      display: inline-block; padding: 3px 9px; border-radius: 99px; font-size: 11.5px; font-weight: 700;
+    }
+    .status-pending { background: #FEF3C7; color: #B45309; }
+    .status-approved { background: #DCFCE7; color: #15803D; }
+    /* REAL-TIME BOUNDING-BOX SPOTLIGHT & CURSOR */
+    #demo-spotlight {
+      position: absolute;
+      border: 3px solid var(--accent);
+      border-radius: 10px;
+      box-shadow: 0 0 0 4px rgba(217, 93, 57, 0.22);
+      pointer-events: none;
+      transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+      z-index: 40;
+      display: none;
+    }
+    #demo-spotlight-label {
+      position: absolute;
+      top: -30px;
+      left: 0;
+      background: var(--accent);
+      color: #FFF;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+    #demo-cursor {
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      pointer-events: none;
+      transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      z-index: 50;
+      display: none;
+    }
+    /* CAPTION & TRANSPORT BAR */
+    .caption-bar {
+      background: #FFFDF9;
+      border: 1px solid var(--border-warm);
+      border-left: 5px solid var(--accent);
+      border-radius: 10px;
+      padding: 12px 18px;
+      font-size: 16.8px;
+      line-height: 1.55;
+      font-weight: 500;
+    }
+    body.hide-captions .caption-bar { display: none; }
+    .transport-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #F4EFE6;
+      border: 1px solid var(--border-warm);
+      border-radius: 10px;
+      padding: 8px 14px;
+    }
+  </style>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="brand-group">
+      <button class="btn" onclick="document.body.classList.toggle('sidebar-collapsed')">☰ Ẩn / Hiện Mục lục</button>
+      <strong style="font-size:15px;">Universal Software Simulator — Đào Tạo, Chuyển Giao & Xác Nhận Quy Trình (BA/UAT)</strong>
+    </div>
+    <div style="display:flex; gap:8px;">
+      <button class="btn" id="cc-btn" onclick="toggleCaptions()">📝 Phụ đề tự động: BẬT</button>
+    </div>
+  </header>
+
+  <div class="workspace">
+    <aside class="tree-sidebar">
+      <div class="tree-group">
+        <div class="tree-group-title">Luồng Nghiệp Vụ Mẫu: Phê Duyệt Đơn Hàng ERP</div>
+        <div class="tree-step active" onclick="goBeat(0)">1. [Slide] Xác nhận quy trình As-Is vs To-Be</div>
+        <div class="tree-step" onclick="goBeat(1)">2. [Sim] Lọc danh sách hồ sơ chờ duyệt</div>
+        <div class="tree-step" onclick="goBeat(2)">3. [Sim] Kiểm tra hạn mức & Bấm Phê duyệt</div>
+        <div class="tree-step" onclick="goBeat(3)">4. [Slide] Tổng kết bàn giao quy trình chuẩn</div>
+      </div>
+    </aside>
+
+    <main class="stage-col">
+      <div class="viewport" id="kudo-stage-viewport">
+        <!-- THEORY VIEW -->
+        <div class="theory-view" id="theory-stage">
+          <span class="theory-badge" id="theory-badge">PHẦN 1 · XÁC NHẬN QUY TRÌNH NGHIỆP VỤ (PROCESS CONFIRMATION)</span>
+          <h2 id="theory-title" style="font-size:24px;">Chuẩn hóa Quy trình Phê duyệt Đơn hàng 3 Bước trên Hệ thống ERP</h2>
+          <div class="theory-card focused" id="t-card-1">
+            <strong>Bước 1 — Tự động phân luồng hồ sơ chờ duyệt:</strong> Hệ thống gom toàn bộ yêu cầu vượt hạn mức về một hàng đợi duy nhất, giúp người duyệt không phải tìm kiếm thủ công qua email.
+          </div>
+          <div class="theory-card" id="t-card-2">
+            <strong>Bước 2 — Đối chiếu công nợ & Phê duyệt 1 chạm:</strong> Màn hình hiển thị trực tiếp tỷ lệ công nợ ngay cạnh nút Phê duyệt, giúp ra quyết định chính xác và lưu vết kiểm toán tự động.
+          </div>
+        </div>
+
+        <!-- SIMULATOR VIEW (GENERIC SAAS / ERP WEB APP) -->
+        <div class="sim-view" id="sim-stage">
+          <div class="saas-nav">
+            <div class="saas-logo">⚡ FlowERP Portal</div>
+            <div class="saas-nav-item">📊 Tổng quan hệ thống</div>
+            <div class="saas-nav-item active" id="nav-approval-queue">📥 Hàng đợi Phê duyệt (3)</div>
+            <div class="saas-nav-item">📁 Hồ sơ Khách hàng</div>
+            <div class="saas-nav-item">⚙️ Cấu hình Quy trình</div>
+          </div>
+          <div class="saas-main">
+            <div class="saas-header">
+              <div>
+                <strong style="font-size:15px;">Danh sách Đề nghị Phê duyệt Đơn hàng</strong>
+                <div style="font-size:12px; color:#64748B;">Môi trường Nguyên mẫu HTML phục vụ Đào tạo & Nghiệm thu Quy trình (UAT)</div>
+              </div>
+              <div style="display:flex; gap:8px;">
+                <button class="btn" id="btn-filter-high-value">🔍 Lọc đơn > 500 Triệu</button>
+                <button class="btn primary" id="btn-approve-order">✓ Phê duyệt Đơn #ORD-2048</button>
+              </div>
+            </div>
+            <div class="saas-table-card">
+              <table class="saas-table">
+                <thead>
+                  <tr><th>Mã Đơn</th><th>Đơn vị đề nghị</th><th>Giá trị</th><th>Đối chiếu hạn mức</th><th>Trạng thái</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="selected-row" id="row-ord-2048">
+                    <td><strong>#ORD-2048</strong></td>
+                    <td>Chi nhánh Miền Bắc</td>
+                    <td>680.000.000 ₫</td>
+                    <td>Đạt chuẩn (Tỷ lệ đảm bảo 135%)</td>
+                    <td><span class="status-pill status-pending" id="status-ord-2048">Chờ phê duyệt</span></td>
+                  </tr>
+                  <tr>
+                    <td>#ORD-2049</td>
+                    <td>Chi nhánh Miền Nam</td>
+                    <td>120.000.000 ₫</td>
+                    <td>Trong hạn mức tự động</td>
+                    <td><span class="status-pill status-approved">Đã duyệt tự động</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- REAL-TIME BOUNDING BOX SPOTLIGHT & CURSOR -->
+        <div id="demo-spotlight"><div id="demo-spotlight-label">Mục tiêu thao tác</div></div>
+        <div id="demo-cursor">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+            <path d="M4 2L20 11L13 13L16 20L13 21L10 14L4 19V2Z" fill="#D95D39" stroke="#FFFFFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="caption-bar" id="caption-box">
+        Trước khi đi vào thao tác trên phần mềm, chúng ta cùng xác nhận lại quy trình phê duyệt đơn hàng chuẩn gồm 2 bước tự động hóa trên cổng FlowERP.
+      </div>
+
+      <div class="transport-bar">
+        <div style="display:flex; gap:8px;">
+          <button class="btn" onclick="prevBeat()">⏮ Nhịp trước</button>
+          <button class="btn primary" onclick="nextBeat()">Nhịp tiếp theo ⏭</button>
+        </div>
+        <div id="beat-indicator" style="font-size:13px; font-weight:700; color:var(--text-muted);">Nhịp 1 / 4 · Chế độ: Slide Diễn giải (Theory)</div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const BEATS = [
+      {
+        mode: 'theory',
+        badge: 'PHẦN 1 · XÁC NHẬN QUY TRÌNH NGHIỆP VỤ (PROCESS CONFIRMATION)',
+        title: 'Chuẩn hóa Quy trình Phê duyệt Đơn hàng 2 Bước trên Hệ thống ERP',
+        focusCard: 't-card-1',
+        caption: 'Trước khi đi vào thao tác trên phần mềm, chúng ta cùng xác nhận lại quy trình phê duyệt đơn hàng chuẩn gồm 2 bước tự động hóa trên cổng FlowERP.'
+      },
+      {
+        mode: 'sim',
+        target: '#btn-filter-high-value',
+        label: 'Bước 1: Bấm bộ lọc đơn hàng vượt hạn mức',
+        approved: false,
+        caption: 'Trên màn hình nguyên mẫu phần mềm FlowERP, bước đầu tiên người duyệt bấm vào nút Lọc đơn trên 500 triệu để tập trung vào các hồ sơ trọng yếu.'
+      },
+      {
+        mode: 'sim',
+        target: '#btn-approve-order',
+        label: 'Bước 2: Bấm Phê duyệt Đơn #ORD-2048',
+        approved: true,
+        caption: 'Sau khi kiểm tra cột Đối chiếu hạn mức đạt 135%, chúng ta bấm nút Phê duyệt Đơn #ORD-2048. Trạng thái lập tức chuyển sang Đã phê duyệt màu xanh.'
+      },
+      {
+        mode: 'theory',
+        badge: 'PHẦN 4 · NGHIỆM THU & BÀN GIAO QUY TRÌNH (HANDOVER)',
+        title: 'Hoàn tất Xác nhận Luồng Màn hình & Sẵn sàng Chuyển giao Đào tạo',
+        focusCard: 't-card-2',
+        caption: 'Như vậy chỉ với một nguyên mẫu HTML gọn nhẹ kết hợp con trỏ thông minh và thuyết minh, cả đội dự án và người dùng cuối đều nắm rõ quy trình thực tế.'
+      }
+    ];
+    let currentBeat = 0;
+
+    function positionSpotlightOnElement(selector, labelText) {
+      const vp = document.getElementById('kudo-stage-viewport');
+      const sp = document.getElementById('demo-spotlight');
+      const cur = document.getElementById('demo-cursor');
+      const lbl = document.getElementById('demo-spotlight-label');
+      const el = document.querySelector(selector);
+      if (!el || !vp) return;
+      const vpRect = vp.getBoundingClientRect();
+      const r = el.getBoundingClientRect();
+      const pad = 6;
+      sp.style.display = 'block';
+      sp.style.left = (r.left - vpRect.left - pad) + 'px';
+      sp.style.top = (r.top - vpRect.top - pad) + 'px';
+      sp.style.width = (r.width + pad * 2) + 'px';
+      sp.style.height = (r.height + pad * 2) + 'px';
+      lbl.textContent = labelText || '';
+      cur.style.display = 'block';
+      cur.style.left = (r.left - vpRect.left + r.width * 0.65) + 'px';
+      cur.style.top = (r.top - vpRect.top + r.height * 0.65) + 'px';
+    }
+
+    function goBeat(idx) {
+      currentBeat = Math.max(0, Math.min(BEATS.length - 1, idx));
+      const b = BEATS[currentBeat];
+      document.querySelectorAll('.tree-step').forEach((el, i) => el.classList.toggle('active', i === currentBeat));
+      document.getElementById('caption-box').textContent = b.caption;
+      document.getElementById('beat-indicator').textContent = `Nhịp ${currentBeat + 1} / ${BEATS.length} · Chế độ: ${b.mode === 'theory' ? 'Slide Diễn giải (Theory)' : 'Mô phỏng Phần mềm (Sim)'}`;
+
+      const theoryEl = document.getElementById('theory-stage');
+      const simEl = document.getElementById('sim-stage');
+      const sp = document.getElementById('demo-spotlight');
+      const cur = document.getElementById('demo-cursor');
+
+      if (b.mode === 'theory') {
+        theoryEl.style.display = 'flex';
+        simEl.style.display = 'none';
+        sp.style.display = 'none';
+        cur.style.display = 'none';
+        document.getElementById('theory-badge').textContent = b.badge;
+        document.getElementById('theory-title').textContent = b.title;
+        document.getElementById('t-card-1').classList.toggle('focused', b.focusCard === 't-card-1');
+        document.getElementById('t-card-2').classList.toggle('focused', b.focusCard === 't-card-2');
+      } else {
+        theoryEl.style.display = 'none';
+        simEl.style.display = 'flex';
+        const st = document.getElementById('status-ord-2048');
+        if (b.approved) {
+          st.textContent = 'Đã phê duyệt';
+          st.className = 'status-pill status-approved';
+        } else {
+          st.textContent = 'Chờ phê duyệt';
+          st.className = 'status-pill status-pending';
+        }
+        requestAnimationFrame(() => positionSpotlightOnElement(b.target, b.label));
+      }
+    }
+
+    function nextBeat() { goBeat((currentBeat + 1) % BEATS.length); }
+    function prevBeat() { goBeat((currentBeat - 1 + BEATS.length) % BEATS.length); }
+    function toggleCaptions() {
+      const hidden = document.body.classList.toggle('hide-captions');
+      document.getElementById('cc-btn').textContent = hidden ? '📝 Phụ đề tự động: TẮT' : '📝 Phụ đề tự động: BẬT';
+    }
+    window.addEventListener('resize', () => {
+      if (BEATS[currentBeat].mode === 'sim') positionSpotlightOnElement(BEATS[currentBeat].target, BEATS[currentBeat].label);
+    });
+  </script>
+</body>
+</html>

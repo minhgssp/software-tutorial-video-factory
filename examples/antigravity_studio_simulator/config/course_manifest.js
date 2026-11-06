@@ -630,10 +630,10 @@ window.KUDO_COURSE_MANIFEST = [
     "title": "Tình huống 1 — Lập Kế hoạch Chiến lược Từ 0 Đến Bản Thảo Hoàn chỉnh",
     "short_title": "Case Study 1: Kế hoạch Chiến lược",
     "pill_label": "Bài 21 · Case 1: Chiến lược 7 Bước",
-    "description": "Thực chiến bài toán 'Đứng trên vai người khổng lồ': Phỏng vấn một chuyên gia có dự án thành công mẫu (Thương hiệu 5balance), rút trích bộ khung chiến lược 7 bước và nhân bản sang dự án mới tinh (Giày Thời trang Bền vững từ Bã Mía).",
+    "description": "Thực chiến bài toán 'Đứng trên vai người khổng lồ': Phỏng vấn một chuyên gia có dự án thành công mẫu (Thương hiệu demo_sales_analytics), rút trích bộ khung chiến lược 7 bước và nhân bản sang dự án mới tinh (Giày Thời trang Bền vững từ Bã Mía).",
     "prerequisites": "Toàn bộ Chương 1..5 (Đặc biệt là kỹ thuật bóc tách hồ sơ mẫu, bộ não .agent và chu trình /grill-me -> /plan).",
     "dependents": "Bài 22 (Case Study Tuyển dụng HR), Bài 23 (Case Study Pháp lý), Bài 24 (Tổng duyệt & Khóa sổ dự án).",
-    "placement_risk": "0% Rủi ro — Đây là Case Study thực chiến độc lập số 1 của Chương 6 (sử dụng bài toán 5balance -> Giày Bã Mía), hoàn toàn không trùng lặp với bài tập TaskFlow B2B ở Bài 12.",
+    "placement_risk": "0% Rủi ro — Đây là Case Study thực chiến độc lập số 1 của Chương 6 (sử dụng bài toán demo_sales_analytics -> Giày Bã Mía), hoàn toàn không trùng lặp với bài tập TaskFlow B2B ở Bài 12.",
     "continuity_bridge": "Sau khi hoàn thành Tình huống Chiến lược Kinh doanh ở Bài 21, Bài 22 sẽ đưa chúng ta sang Tình huống Quản trị Nhân sự & Tuyển dụng tự động.",
     "slide_ids": [
       "s1"

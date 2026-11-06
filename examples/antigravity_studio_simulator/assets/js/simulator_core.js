@@ -172,7 +172,7 @@ Nếu **Workflow** là quy trình từng bước để nấu xong một món ăn
       type: "md",
       content: `# Hồ sơ trợ lý cá nhân (@troly.md)
 
-Em là **Trợ lý tổng hợp báo cáo và chuẩn hóa quy trình** của anh Hoàng Đức Minh.
+Em là **Trợ lý tổng hợp báo cáo và chuẩn hóa quy trình** của anh Chuyên gia Đào tạo.
 * Báo cáo tài chính phải chỉ rõ 3 sản phẩm lợi nhuận cao nhất và 2 sản phẩm cần cắt giảm.
 * Khi làm bài thuyết trình: Xuất cấu trúc HTML sạch để chuyển sang Google Slides chỉnh sửa linh hoạt.`
     },
@@ -280,8 +280,8 @@ TF-05,Tien Ich Lich Ca Nhan,Q1/2026,12000,15500,-3500,-29.2%`
             <li><strong>2 danh mục cần cắt giảm:</strong> <code>Module báo cáo cũ</code> (-6,000 USD) và <code>Tiện ích lịch cá nhân</code> (-3,500 USD).</li>
           </ul>
         </div>`;
-    } else if (threadId === "5balance") {
-      const item = document.getElementById("th-5balance");
+    } else if (threadId === "demo_sales_analytics") {
+      const item = document.getElementById("th-demo_sales_analytics");
       if (item) item.classList.add("active");
       heading.textContent = "Khởi nghiệp giày bã mía (Sbalance)";
       openAgy2RightPane("08_quy_trinh_lap_ke_hoach_chien_luoc.md");

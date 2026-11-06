@@ -1,0 +1,248 @@
+{
+  "slug": "trust-your-ai-agents",
+  "title": "Trust Your AI Agents",
+  "watermark": "",
+  "narration": {
+    "lang": "en",
+    "engine": "elevenlabs",
+    "voice": "TX3LPaxmHKxFdv7VOQHJ"
+  },
+  "subtitles": [
+    "en",
+    "vi"
+  ],
+  "first_lead": 2.6,
+  "sfx_dir": "audio/sfx",
+  "music": [
+    {
+      "id": "bed-upbeat",
+      "prompt": "Upbeat energetic electronic pop instrumental, bouncy synth plucks, punchy drums, claps, 120 bpm, playful and motivating, for a fun animated tech explainer video"
+    },
+    {
+      "id": "bed-upbeat-2",
+      "prompt": "Upbeat energetic electronic pop instrumental, bouncy synth plucks, punchy drums, claps, 120 bpm, bright positive groove, fun animated tech explainer, no vocals"
+    }
+  ],
+  "thumbnail_intro": 0,
+  "thumbnail": {
+    "lines": [
+      "TRUST",
+      "YOUR AI"
+    ],
+    "tag": "5 layers of trust"
+  },
+  "scenes": [
+    {
+      "id": "s1-hook",
+      "visual": "Paper world. Mascot walks in, a mountain of 2,000 PR cards pops up. Big question: how?",
+      "lines": [
+        {
+          "en": "One engineer shipped two thousand pull requests in a single month.",
+          "vi": "Một kỹ sư đã đưa hai nghìn pull request lên production chỉ trong một tháng."
+        },
+        {
+          "en": "Not by typing faster, but by letting a team of AI agents do the work.",
+          "vi": "Không phải nhờ gõ nhanh hơn, mà nhờ để một đội AI agent làm việc thay."
+        },
+        {
+          "en": "The secret word is: trust.",
+          "vi": "Từ khóa bí mật là: niềm tin."
+        }
+      ]
+    },
+    {
+      "id": "s2-kitchen",
+      "visual": "Kitchen: mascot wearing chef hat, small robot cooks at stations. Labels: Head chef = you, Line cooks = agents, Kitchen = your setup.",
+      "lines": [
+        {
+          "en": "Think of it like a Michelin kitchen, not a factory.",
+          "vi": "Hãy hình dung nó như một căn bếp Michelin, chứ không phải nhà máy."
+        },
+        {
+          "en": "You are the head chef. Your AI agents are the line cooks.",
+          "vi": "Bạn là bếp trưởng. Các AI agent là những đầu bếp phụ."
+        },
+        {
+          "en": "You no longer chop every onion, but you still own the final dish.",
+          "vi": "Bạn không còn tự thái từng củ hành, nhưng món ăn cuối cùng vẫn là trách nhiệm của bạn."
+        },
+        {
+          "en": "So your real job is setting up the kitchen: the tools, the training, the rules.",
+          "vi": "Vì vậy việc chính của bạn là sắp xếp căn bếp: dụng cụ, huấn luyện và quy tắc."
+        }
+      ]
+    },
+    {
+      "id": "s3-ladder",
+      "visual": "Trust meter / ladder. Left: mascot babysitting 3 bots with sweat. Right: 100 bots but pile of slop PRs with red X. Meter rises.",
+      "lines": [
+        {
+          "en": "Most people start here: one to five agents, and you babysit every single chat.",
+          "vi": "Đa số bắt đầu ở đây: một đến năm agent, và bạn phải trông chừng từng cuộc chat."
+        },
+        {
+          "en": "If you spawn a hundred agents without trust, you just get a hundred messy pull requests.",
+          "vi": "Nếu bạn tạo ra một trăm agent khi chưa có niềm tin, bạn chỉ nhận về một trăm pull request lộn xộn."
+        },
+        {
+          "en": "So the real question is: how do you make your agents trustworthy?",
+          "vi": "Vậy câu hỏi thật sự là: làm sao để agent của bạn đáng tin cậy?"
+        }
+      ]
+    },
+    {
+      "id": "s4-verify",
+      "visual": "Robot runs an app window, performance graph with hotspot, magnifier. Then two boxes: CLI + Feature map. A vague screenshot with ??? becomes a map pin.",
+      "lines": [
+        {
+          "en": "Step one: verification. Teach the agent to run your app and check its own work.",
+          "vi": "Bước một: kiểm chứng. Dạy agent tự chạy ứng dụng và tự kiểm tra kết quả của mình."
+        },
+        {
+          "en": "A good verification skill has two parts. First, a command line tool, so every run is repeatable.",
+          "vi": "Một kỹ năng kiểm chứng tốt có hai phần. Thứ nhất, một công cụ dòng lệnh, để mọi lần chạy đều lặp lại được."
+        },
+        {
+          "en": "Second, a feature map: a guide to every screen and button in your app.",
+          "vi": "Thứ hai, một bản đồ tính năng: hướng dẫn tới mọi màn hình và nút bấm trong ứng dụng."
+        },
+        {
+          "en": "Example: a user sends a tiny screenshot with three question marks. With the map, the agent knows exactly where to look.",
+          "vi": "Ví dụ: người dùng gửi một ảnh chụp nhỏ kèm ba dấu hỏi. Nhờ bản đồ, agent biết chính xác phải tìm ở đâu."
+        }
+      ]
+    },
+    {
+      "id": "s5-skills",
+      "visual": "Bookshelf of playbooks: Debugging, Features, Prototyping. Senior mascot hands a book to a robot; robot gets a graduation cap.",
+      "lines": [
+        {
+          "en": "Verification proves the code works. But is it good code?",
+          "vi": "Kiểm chứng chứng minh code chạy được. Nhưng đó có phải là code tốt không?"
+        },
+        {
+          "en": "That is where skills come in: playbooks that teach agents to work like senior engineers.",
+          "vi": "Đó là lúc cần đến skill: những cẩm nang dạy agent làm việc như kỹ sư có kinh nghiệm."
+        },
+        {
+          "en": "Debugging, building features, prototyping. Your best engineers write it down once, and every agent learns it.",
+          "vi": "Gỡ lỗi, xây tính năng, làm prototype. Kỹ sư giỏi nhất viết ra một lần, và mọi agent đều học được."
+        }
+      ]
+    },
+    {
+      "id": "s6-layers",
+      "visual": "Pyramid of five layers stacking in: Codebase, Static analysis, Rules & skills, Review bot, Style guide. Arrow: stronger at bottom.",
+      "lines": [
+        {
+          "en": "Now, the five layers of trust. The lower the layer, the stronger the guarantee.",
+          "vi": "Giờ là năm tầng của niềm tin. Tầng càng thấp, sự đảm bảo càng mạnh."
+        },
+        {
+          "en": "At the base: the codebase itself. Design it so the mistake is simply impossible.",
+          "vi": "Ở đáy: chính codebase. Thiết kế sao cho lỗi đó đơn giản là không thể xảy ra."
+        },
+        {
+          "en": "Next: static analysis. Linters, compiler checks and CI catch the error automatically.",
+          "vi": "Tiếp theo: phân tích tĩnh. Linter, trình biên dịch và CI tự động bắt lỗi."
+        },
+        {
+          "en": "Then rules, skills and review bots: helpful guidance, but agents can forget them.",
+          "vi": "Rồi đến rule, skill và bot review: chỉ dẫn hữu ích, nhưng agent có thể quên."
+        },
+        {
+          "en": "And at the top, a style guide that only humans enforce. That will never keep up.",
+          "vi": "Và trên cùng là style guide chỉ con người mới thực thi được. Cách đó sẽ không bao giờ theo kịp."
+        }
+      ]
+    },
+    {
+      "id": "s7-garden",
+      "visual": "Garden: code plants. One weed (a hacky workaround comment) spreads to many. Mascot gardener with shears pulls weeds, puts up a fence labeled lint rule.",
+      "lines": [
+        {
+          "en": "Here is the key insight: your codebase is the agent's memory. Agents copy whatever patterns they see.",
+          "vi": "Đây là điểm mấu chốt: codebase chính là trí nhớ của agent. Agent sao chép mọi khuôn mẫu mà nó thấy."
+        },
+        {
+          "en": "One small hacky workaround can spread like a weed, all over the code in just a few weeks.",
+          "vi": "Một cách chữa cháy nhỏ có thể lan như cỏ dại, khắp codebase chỉ trong vài tuần."
+        },
+        {
+          "en": "Real example: agents used code comments as excuses to patch problems instead of fixing them. So the team banned comments entirely.",
+          "vi": "Ví dụ thật: agent dùng comment trong code làm cớ để vá tạm thay vì sửa tận gốc. Nên cả nhóm đã cấm hẳn comment."
+        },
+        {
+          "en": "Every team needs a gardener. Remove tech debt, keep one clear path, and turn every bad pattern into a lint rule.",
+          "vi": "Mỗi nhóm cần một người làm vườn. Dọn nợ kỹ thuật, giữ một lối đi rõ ràng, và biến mọi mẫu xấu thành một lint rule."
+        }
+      ]
+    },
+    {
+      "id": "s8-framework",
+      "visual": "Two roads: a smooth highway labeled 'easy path = right path' and a blocked shortcut. Robot rolls along highway. Two rooms: main thread and UI thread with a gate, 60 fps meter.",
+      "lines": [
+        {
+          "en": "Agents love shortcuts. So build a framework where the easy path is the right path.",
+          "vi": "Agent rất thích đi đường tắt. Vậy hãy xây một framework mà đường dễ nhất cũng là đường đúng."
+        },
+        {
+          "en": "For example, slow code is simply not allowed to be imported into the UI thread, so the app stays smooth at sixty frames per second.",
+          "vi": "Ví dụ, code chậm không được phép import vào luồng giao diện, nhờ vậy ứng dụng luôn mượt ở sáu mươi khung hình mỗi giây."
+        },
+        {
+          "en": "It feels strict for humans, but even an agent with very little context writes good code by default.",
+          "vi": "Con người sẽ thấy nó khắt khe, nhưng ngay cả agent có rất ít ngữ cảnh cũng viết code tốt theo mặc định."
+        }
+      ]
+    },
+    {
+      "id": "s9-outer-loop",
+      "visual": "Hub bot in center connected to icons: chat, alert bell, error bug, database. Alert fires, bot spawns cloud agents that return a PR with a green check.",
+      "lines": [
+        {
+          "en": "Finally, the outer loop. Connect your agent bot to chat, error alerts, and monitoring tools.",
+          "vi": "Cuối cùng là vòng lặp bên ngoài. Kết nối bot agent với chat, cảnh báo lỗi và công cụ giám sát."
+        },
+        {
+          "en": "When an alert fires, the bot starts cloud agents on its own. They reproduce the bug and open a pull request.",
+          "vi": "Khi có cảnh báo, bot tự khởi động các cloud agent. Chúng tái hiện lỗi và mở pull request."
+        },
+        {
+          "en": "Your code, rules and skills all compound, and the whole team moves faster.",
+          "vi": "Code, rule và skill của bạn cộng dồn sức mạnh, và cả nhóm tiến nhanh hơn."
+        }
+      ]
+    },
+    {
+      "id": "s10-recap",
+      "visual": "Back to paper world. Mascot with checklist: 1 codebase, 2 static analysis, 3 rules & skills. Robots dance, trust meter full. Title card.",
+      "lines": [
+        {
+          "en": "So next time you correct your agent, ask: which layer can stop this mistake forever?",
+          "vi": "Vậy lần tới khi bạn sửa lỗi cho agent, hãy hỏi: tầng nào có thể chặn lỗi này mãi mãi?"
+        },
+        {
+          "en": "Fix it in the code first, then a lint rule, then a skill.",
+          "vi": "Sửa trong code trước, rồi đến lint rule, rồi đến skill."
+        },
+        {
+          "en": "Build that trust, and your agents can finally run free.",
+          "vi": "Xây dựng được niềm tin đó, và các agent của bạn cuối cùng có thể tự do vận hành."
+        }
+      ]
+    }
+  ],
+  "publish": {
+    "youtube_title": "",
+    "hook": "",
+    "summary": "",
+    "points": [],
+    "takeaway": "",
+    "steps": [],
+    "credit": "",
+    "hashtags": [],
+    "fb_hook": "",
+    "fb_points": []
+  }
+}

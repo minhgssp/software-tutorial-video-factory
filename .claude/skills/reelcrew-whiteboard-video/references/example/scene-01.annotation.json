@@ -1,0 +1,29 @@
+{
+  "sceneId": "scene-01",
+  "canvas": { "width": 1672, "height": 941 },
+  "storyBasis": "A farmer plants a seed, rain makes it sprout, years later a big tree shades the village.",
+  "sceneDurationMs": 11000,
+  "elements": [
+    {
+      "id": "farmer", "label": "Farmer planting", "sequence": 1, "narrativeRole": "setting and key figure",
+      "subtitle": "Một người nông dân gieo một hạt giống nhỏ.", "type": "character",
+      "region": { "x": 40, "y": 260, "width": 500, "height": 620 },
+      "reveal": { "direction": "top_to_bottom", "startMs": 400, "durationMs": 3200, "maskPaddingPx": 22, "protectedRegions": [] },
+      "handPath": { "start": [290, 270], "end": [290, 870], "easing": "easeInOut" }
+    },
+    {
+      "id": "sprout", "label": "Rain and sprout", "sequence": 2, "narrativeRole": "action: the change",
+      "subtitle": "Mưa rơi xuống, mầm cây nhú lên khỏi đất.", "type": "structure",
+      "region": { "x": 520, "y": 160, "width": 480, "height": 720 },
+      "reveal": { "direction": "top_to_bottom", "startMs": 3800, "durationMs": 3400, "maskPaddingPx": 22, "protectedRegions": [] },
+      "handPath": { "start": [760, 170], "end": [760, 870], "easing": "easeInOut" }
+    },
+    {
+      "id": "tree", "label": "Big tree and village", "sequence": 3, "narrativeRole": "result",
+      "subtitle": "Nhiều năm sau, cây lớn che bóng mát cho cả làng.", "type": "structure",
+      "region": { "x": 980, "y": 60, "width": 660, "height": 840 },
+      "reveal": { "direction": "top_to_bottom", "startMs": 7400, "durationMs": 3500, "maskPaddingPx": 22, "protectedRegions": [] },
+      "handPath": { "start": [1310, 70], "end": [1310, 890], "easing": "easeInOut" }
+    }
+  ]
+}

@@ -17,9 +17,9 @@ Usage Examples:
   python factory_cli.py intake-repo --repo . --out temp/blueprint.json
   python factory_cli.py intake-media --input examples/ --out temp/media_blueprint.json
   python factory_cli.py scaffold-sim --blueprint temp/blueprint.json --out temp/simulator.html
-  python factory_cli.py build-pages --spec examples/hanam_16x9_course/specs/B01_SaiLamThuongGap.json --out-dir temp/pages
-  python factory_cli.py audit-sim --html examples/antigravity_studio_simulator/Antigravity_Simulator_Studio.html --forbid Viettel,BIDV
-  python factory_cli.py audit-spec --spec examples/hanam_16x9_course/specs/B01_SaiLamThuongGap.json --whitelabel
+  python factory_cli.py build-pages --spec examples/enterprise_16x9_course/specs/B01_SaiLamThuongGap.json --out-dir temp/pages
+  python factory_cli.py audit-sim --html examples/antigravity_studio_simulator/Antigravity_Simulator_Studio.html --forbid TelecomCorp,FinBank
+  python factory_cli.py audit-spec --spec examples/enterprise_16x9_course/specs/B01_SaiLamThuongGap.json --whitelabel
 """
 
 from __future__ import annotations
@@ -72,10 +72,10 @@ def cmd_status() -> int:
         "examples": {
             "antigravity_5layer_courseware_hub": (sim_dir / "index.html").exists(),
             "antigravity_studio_simulator": (sim_dir / "Antigravity_Simulator_Studio.html").exists(),
-            "hanam_16x9_course_specs": sorted(
-                p.name for p in (ROOT_DIR / "examples" / "hanam_16x9_course" / "specs").glob("*.json")
+            "enterprise_16x9_course_specs": sorted(
+                p.name for p in (ROOT_DIR / "examples" / "enterprise_16x9_course" / "specs").glob("*.json")
             )
-            if (ROOT_DIR / "examples" / "hanam_16x9_course" / "specs").exists()
+            if (ROOT_DIR / "examples" / "enterprise_16x9_course" / "specs").exists()
             else [],
         },
     }

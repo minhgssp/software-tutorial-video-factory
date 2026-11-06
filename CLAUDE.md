@@ -9,7 +9,7 @@ Please read [`AGENTS.md`](AGENTS.md), [`docs/CODEMAP.md`](docs/CODEMAP.md), [`do
 - `python factory_cli.py intake-repo --repo <dir> --out temp/blueprint.json`
 - `python factory_cli.py intake-media --input <video_or_img_dir> --out temp/media.json`
 - `python factory_cli.py scaffold-sim --blueprint temp/blueprint.json --out temp/simulator.html`
-- `python factory_cli.py build-pages --spec examples/hanam_16x9_course/specs/B01_SaiLamThuongGap.json --out-dir temp/pages`
-- `python factory_cli.py audit-sim --html examples/antigravity_studio_simulator/Antigravity_Simulator_Studio.html --forbid Viettel,BIDV`
-- `python factory_cli.py audit-spec --spec examples/hanam_16x9_course/specs/B01_SaiLamThuongGap.json --whitelabel`
+- `python factory_cli.py build-pages --spec examples/enterprise_16x9_course/specs/B01_SaiLamThuongGap.json --out-dir temp/pages`
+- `python factory_cli.py audit-sim --html examples/antigravity_studio_simulator/Antigravity_Simulator_Studio.html --forbid TelecomCorp,FinBank`
+- `python factory_cli.py audit-spec --spec examples/enterprise_16x9_course/specs/B01_SaiLamThuongGap.json --whitelabel`
 - `pytest tests/ -v`

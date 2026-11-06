@@ -1,0 +1,7 @@
+/* Be Vietnam Pro (SIL Open Font License 1.1, OFL.txt): every Vietnamese letter at every weight. Kept next to the page
+   so the render needs no network and no system font (a system font missing a letter like Ố falls back to another
+   font for that letter alone, and the word looks broken). */
+@font-face { font-family: "Be Vietnam Pro"; font-weight: 100 450; src: url("BeVietnamPro-Regular.ttf") format("truetype"); }
+@font-face { font-family: "Be Vietnam Pro"; font-weight: 451 650; src: url("BeVietnamPro-SemiBold.ttf") format("truetype"); }
+@font-face { font-family: "Be Vietnam Pro"; font-weight: 651 750; src: url("BeVietnamPro-Bold.ttf") format("truetype"); }
+@font-face { font-family: "Be Vietnam Pro"; font-weight: 751 1000; src: url("BeVietnamPro-ExtraBold.ttf") format("truetype"); }

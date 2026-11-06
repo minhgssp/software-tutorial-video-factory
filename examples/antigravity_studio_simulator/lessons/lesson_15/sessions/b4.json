@@ -8,13 +8,13 @@
   "pedagogy_badge": "👆 Thực hành Bước 1/3 · Phân việc cho các Nhánh",
   "pedagogy_title": "Cần hoàn tất cả Báo cáo nhân sự lẫn Đối sánh thị trường trong 10 phút",
   "pedagogy_note": "Bước 1: Mở giao diện quản lý luồng trên Antigravity 2.0 để kiểm tra các nhánh tác vụ đang hoạt động.",
-  "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); closeSettingsModal(); loadAgy2Thread('5balance');",
+  "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); closeSettingsModal(); loadAgy2Thread('demo_sales_analytics');",
   "focus_selectors": [
     "#agy2-left-sb",
-    "#th-5balance",
+    "#th-demo_sales_analytics",
     "#agy2-chat-stream"
   ],
-  "cursor_selector": "#th-5balance",
+  "cursor_selector": "#th-demo_sales_analytics",
   "cursor_label": "Bước 1: Kiểm tra luồng tác vụ thứ hai trên Antigravity 2.0",
   "caption": "Chúng ta vào thực hành 3 bước phối hợp nhiều luồng công việc. Ở <strong>Bước 1</strong>, anh chị bấm chọn luồng công việc thứ hai ở cột trái để giao nhiệm vụ rà soát nhân sự và đối thủ song song với luồng phân tích doanh thu.",
   "audio_src": "audio/lesson_15/b4.mp3",

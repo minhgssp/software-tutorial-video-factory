@@ -3,7 +3,7 @@
 Tài liệu này ghi nhận **4 cải tiến cốt lõi** được đúc kết từ quá trình đối sánh và nâng cấp đồng bộ giữa 3 dự án đang áp dụng quy trình Mô phỏng Phần mềm Tương tác & Học viện Trực tuyến:
 1. **Nhà máy Gốc (`C:\Github\software-tutorial-video-factory` & `SP_261104_06`)**
 2. **Khóa học `Antigravity Basic` (`SP_261104_01`)**
-3. **Khóa học `BIDV 0,5 Ngày — Làm Chủ Trợ Lý AI Trong Không Gian Làm Việc Số` (`SP_261027_04`)**
+3. **Khóa học `FinBank 0,5 Ngày — Làm Chủ Trợ Lý AI Trong Không Gian Làm Việc Số` (`SP_261027_04`)**
 
 ---
 
@@ -44,11 +44,11 @@ Bổ sung các kịch bản mô phỏng thao tác phần mềm sát thực tế 
 
 ---
 
-## 4. Chuẩn Hóa Nâng Cấp Dự Án BIDV (`SP_261027_04`) Lên Kiến Trúc 3 Ngăn Độc Lập
+## 4. Chuẩn Hóa Nâng Cấp Dự Án FinBank (`SP_261027_04`) Lên Kiến Trúc 3 Ngăn Độc Lập
 
-- Trước đây script [`temp/run_once_build_bidv_05day_html_sim.py`](file:///c:/commandcenter/SPRINTS/SP_261027_04_BIDV_AgileAcademy_2Courses_WorkspaceKWSR_And_ZaloAgentOS_RM/temp/run_once_build_bidv_05day_html_sim.py) của BIDV import trực tiếp biến nội bộ từ `build_modular_course.py` của `Antigravity Basic`, dẫn đến nguy cơ gãy phụ thuộc hoặc ghi đè chéo.
-- Hiện tại dự án BIDV đã có bộ 3 ngăn độc lập ngay tại `course_01_bidv_caugiay_workspace_kwsr/`:
-  * `lessons_data/` (12 tệp `lesson_01.json .. lesson_12.json` với 84 điểm neo chuẩn nghiệp vụ Ngân hàng BIDV).
+- Trước đây script [`temp/run_once_build_FinBank_05day_html_sim.py`](file:///C:/Workspace/ProjectHub/SPRINTS/SP_261027_04_FinBank_AgileAcademy_2Courses_WorkspaceKWSR_And_ZaloAgentOS_RM/temp/run_once_build_FinBank_05day_html_sim.py) của FinBank import trực tiếp biến nội bộ từ `build_modular_course.py` của `Antigravity Basic`, dẫn đến nguy cơ gãy phụ thuộc hoặc ghi đè chéo.
+- Hiện tại dự án FinBank đã có bộ 3 ngăn độc lập ngay tại `course_01_FinBank_caugiay_workspace_kwsr/`:
+  * `lessons_data/` (12 tệp `lesson_01.json .. lesson_12.json` với 84 điểm neo chuẩn nghiệp vụ Ngân hàng FinBank).
   * `src_ui_shell/` (Giao diện UI v3.1 nền kem ấm, cổng mục lục 1 cột trải phẳng, cây đa cấp thu gọn, đo tâm điểm thật `getBoundingClientRect()`).
-  * `src_sim_surfaces/` (Mặt phẳng giả lập đã làm sạch dữ liệu cá nhân, chuẩn hóa `BIDV_CauGiay_Workspace`).
-- Hỗ trợ chạy cả chế độ toàn khóa (`python temp/run_once_build_bidv_05day_html_sim.py`) lẫn chế độ sửa lẻ từng bài (`python temp/run_once_build_bidv_05day_html_sim.py --lesson 1`) mà không bao giờ làm mất bản chỉnh sửa giao diện.
+  * `src_sim_surfaces/` (Mặt phẳng giả lập đã làm sạch dữ liệu cá nhân, chuẩn hóa `Enterprise_Digital_Workspace`).
+- Hỗ trợ chạy cả chế độ toàn khóa (`python temp/run_once_build_FinBank_05day_html_sim.py`) lẫn chế độ sửa lẻ từng bài (`python temp/run_once_build_FinBank_05day_html_sim.py --lesson 1`) mà không bao giờ làm mất bản chỉnh sửa giao diện.
