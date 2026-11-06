@@ -1,0 +1,191 @@
+{
+  "lesson_slug": "lesson_01",
+  "filename": "lesson_01.html",
+  "legacy_alias": "lesson_01_chatbot_vs_agent.html",
+  "code": "BÀI 1",
+  "chapter_number": 1,
+  "chapter_code": "CHƯƠNG 1",
+  "chapter_title": "Khởi động Chuẩn & Làm chủ Giao diện",
+  "title": "Tư duy Trợ lý AI trong Thư mục, 2 Giao diện & Cách Mở Dự án Đầu tiên",
+  "short_title": "Tư duy AI, 2 Giao diện & Mở Dự án",
+  "pill_label": "Bài 1 · Tư duy, 2 Giao diện & Mở Dự án",
+  "description": "Hiểu rõ sự khác biệt giữa hỏi đáp trên trình duyệt web và Trợ lý AI làm việc trực tiếp trong thư mục máy tính; nhận diện 2 giao diện Antigravity 2.0 & Antigravity IDE, màn hình chào mừng Welcome, giải nén học liệu .zip và bấm Open Folder mở dự án đầu tiên.",
+  "prerequisites": "Không yêu cầu kiến thức nền tảng (Bài mở đầu toàn khóa).",
+  "dependents": "Bài 2 (Kiểm chứng đồng bộ ổ cứng 1-1 & chọn 5 mô hình AI bên trong dự án vừa mở), Bài 3 (Làm chủ giao diện 3 cột & mở Preview), Bài 4 (Bật quyền tự chủ Turbo).",
+  "placement_risk": "0% Rủi ro — Giải thích rõ 2 giao diện phần mềm, màn hình chào mừng Welcome Screen và thực hành giải nén .zip + Open Folder ngay trong Bài 1 để bước vào bàn làm việc 3 cột.",
+  "continuity_bridge": "Hoàn tất giải nén .zip và bấm Open Folder mở thành công thư mục dự án antigravity_course_vn trên bàn làm việc 3 cột.",
+  "slides": {
+    "s1": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 1 · BÀI 1 · LÝ THUYẾT PHẦN 1</span>\n        <span class=\"k-slide-step\">Đặt vấn đề &amp; Đối sánh thực tế</span>\n      </div>\n      <div class=\"k-slide-h1\">Tại sao hỏi đáp AI trên trình duyệt web vẫn khiến dân văn phòng tốn sức copy-paste?</div>\n      <div class=\"k-slide-sub\">Phân biệt rõ ranh giới giữa một công cụ trò chuyện cách ly trên mạng và một người trợ lý ngồi ngay trong thư mục hồ sơ của bạn.</div>\n    </div>\n    <div class=\"k-visual-hero-box k-layout-comparison k-step-item k-hl\" id=\"s1_step1\" data-order=\"1\">\n      <div class=\"k-cmp-col k-cmp-before\">\n        <div class=\"k-cmp-badge-old\">❌ CÁCH CŨ · HỎI ĐÁP TRÊN TRÌNH DUYỆT WEB</div>\n        <div class=\"k-cmp-main\">Bạn phải làm \"người vận chuyển văn bản\" thủ công</div>\n        <div class=\"k-cmp-sub\">AI trên web bị ngăn cách hoàn toàn với ổ cứng máy tính</div>\n        <svg class=\"k-cmp-illus-svg\" viewBox=\"0 0 380 76\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <rect x=\"6\" y=\"8\" width=\"132\" height=\"60\" rx=\"8\" fill=\"#FFFFFF\" stroke=\"#F97316\" stroke-width=\"1.5\"/>\n          <text x=\"72\" y=\"26\" text-anchor=\"middle\" fill=\"#9A3412\" font-size=\"11\" font-weight=\"800\">🌐 Web Chat AI</text>\n          <text x=\"72\" y=\"42\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"9.5\">Cách ly khỏi máy tính</text>\n          <text x=\"72\" y=\"57\" text-anchor=\"middle\" fill=\"#DC2626\" font-size=\"9\" font-weight=\"700\">✕ Đóng tab = Mất mạch</text>\n          <path d=\"M144 26 H226\" stroke=\"#EA580C\" stroke-width=\"1.6\" stroke-dasharray=\"3 3\"/>\n          <text x=\"185\" y=\"20\" text-anchor=\"middle\" fill=\"#C2410C\" font-size=\"9\" font-weight=\"700\">1. Tải tệp lẻ lên ➔</text>\n          <path d=\"M226 50 H144\" stroke=\"#EA580C\" stroke-width=\"1.6\" stroke-dasharray=\"3 3\"/>\n          <text x=\"185\" y=\"63\" text-anchor=\"middle\" fill=\"#C2410C\" font-size=\"9\" font-weight=\"700\">⬅ 2. Tô đen copy-paste</text>\n          <rect x=\"232\" y=\"8\" width=\"142\" height=\"60\" rx=\"8\" fill=\"#FFF7ED\" stroke=\"#CBD5E1\" stroke-width=\"1.5\"/>\n          <text x=\"303\" y=\"26\" text-anchor=\"middle\" fill=\"#334155\" font-size=\"11\" font-weight=\"800\">💻 Ổ cứng Cá nhân</text>\n          <text x=\"303\" y=\"42\" text-anchor=\"middle\" fill=\"#64748B\" font-size=\"9.5\">📄 Báo_cáo · Hợp_đồng</text>\n          <text x=\"303\" y=\"57\" text-anchor=\"middle\" fill=\"#9A3412\" font-size=\"9\" font-weight=\"700\">Phải tự lưu &amp; căn chỉnh</text>\n        </svg>\n      </div>\n      <div class=\"k-cmp-arrow\">➔</div>\n      <div class=\"k-cmp-col k-cmp-after\">\n        <div class=\"k-cmp-badge-new\">✅ TƯ DUY MỚI · TRỢ LÝ AI TRONG THƯ MỤC</div>\n        <div class=\"k-cmp-main\">Trợ lý ngồi trực tiếp trong tủ hồ sơ trên máy</div>\n        <div class=\"k-cmp-sub\">Tự đọc tài liệu gốc &amp; xuất ra tệp hoàn chỉnh tại chỗ</div>\n        <svg class=\"k-cmp-illus-svg\" viewBox=\"0 0 380 76\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <rect x=\"6\" y=\"6\" width=\"368\" height=\"64\" rx=\"10\" fill=\"#DCFCE7\" stroke=\"#22C55E\" stroke-width=\"1.8\"/>\n          <text x=\"190\" y=\"23\" text-anchor=\"middle\" fill=\"#14532D\" font-size=\"11\" font-weight=\"800\">📁 Thư mục Dự án trên Máy tính (antigravity_course_vn)</text>\n          <rect x=\"18\" y=\"30\" width=\"156\" height=\"32\" rx=\"6\" fill=\"#FFFFFF\" stroke=\"#86EFAC\"/>\n          <text x=\"96\" y=\"44\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"9.8\" font-weight=\"700\">📄 Hồ sơ mẫu &amp; Số liệu</text>\n          <text x=\"96\" y=\"56\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"9\">AI tự đọc trực tiếp 100%</text>\n          <path d=\"M180 46 H204\" stroke=\"#16A34A\" stroke-width=\"2\"/>\n          <rect x=\"210\" y=\"30\" width=\"152\" height=\"32\" rx=\"6\" fill=\"#16A34A\"/>\n          <text x=\"286\" y=\"44\" text-anchor=\"middle\" fill=\"#FFFFFF\" font-size=\"9.8\" font-weight=\"800\">🤖 Trợ lý Antigravity</text>\n          <text x=\"286\" y=\"56\" text-anchor=\"middle\" fill=\"#DCFCE7\" font-size=\"9\">Tự tạo &amp; lưu tệp kết quả</text>\n        </svg>\n      </div>\n    </div>\n    <div class=\"k-grid-3\" style=\"grid-template-columns: 1fr 1fr;\">\n      <div class=\"k-card k-step-item k-unreached\" id=\"s1_step2\" data-order=\"2\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">NỖI ĐAU VĂN PHÒNG · VẬN CHUYỂN THỦ CÔNG</span>\n        </div>\n        <h3>Giải thích lại từ đầu &amp; đứt mạch khi đóng trình duyệt</h3>\n        <p>Khi dùng AI trên trình duyệt web, mỗi lần soạn báo cáo bạn phải tải từng tệp lẻ lên mạng, kể lại bối cảnh công ty, rồi tô đen từng đoạn chữ dán ngược về Word. Hễ tắt trình duyệt là mọi quy trình trôi mất.</p>\n        <div class=\"k-card-mini-note\">❌ Tốn thời gian copy-paste · Không có tệp lưu sẵn trên ổ cứng</div>\n      </div>\n      <div class=\"k-card k-step-item k-unreached\" id=\"s1_step3\" data-order=\"3\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#DCFCE7; color:#15803D; border:1px solid #86EFAC;\">BƯỚC NGOẶT · ĐẶT AI VÀO TRONG THƯ MỤC</span>\n        </div>\n        <h3>Tự đọc toàn bộ tài liệu mẫu &amp; bàn giao bằng tệp thật</h3>\n        <p>Thay vì mang hồ sơ đi hỏi qua cửa sổ web, Antigravity đưa người trợ lý vào ngồi ngay trong thư mục dự án trên ổ cứng. Trợ lý tự tra cứu quy định, đọc bảng biểu và cất báo cáo hoàn chỉnh vào đúng ngăn tủ.</p>\n        <div class=\"k-card-mini-note\">✅ Nghiệm thu bằng tệp thật trên máy · Tích lũy tài sản lâu dài</div>\n      </div>\n    </div>\n    ",
+    "s2": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 1 · BÀI 1 · LÝ THUYẾT PHẦN 2</span>\n        <span class=\"k-slide-step\">Kiến trúc 2 Giao diện &amp; Quy trình Mở Dự án</span>\n      </div>\n      <div class=\"k-slide-h1\">Bộ đôi 2 cửa sổ Antigravity và quy tắc Giải nén .zip trước khi bấm Open Folder</div>\n      <div class=\"k-slide-sub\">Nhận diện rõ vai trò của phòng điều phối Antigravity 2.0, bàn làm việc Antigravity IDE và thao tác mở căn phòng hồ sơ đầu tiên.</div>\n    </div>\n    <div class=\"k-visual-hero-box k-layout-flowchart k-step-item k-hl\" id=\"s2_step1\" data-order=\"1\">\n      <div class=\"k-viz-header\">\n        <span class=\"k-viz-badge\">🪟 BỘ ĐÔI 2 CỬA SỔ SONG HÀNH</span>\n        <span class=\"k-viz-title\">Từ Phòng điều phối hội thoại (Antigravity 2.0) sang Bàn làm việc hồ sơ 3 ngăn (Antigravity IDE)</span>\n      </div>\n      <svg class=\"k-flow-svg\" viewBox=\"0 0 860 96\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect x=\"12\" y=\"8\" width=\"256\" height=\"80\" rx=\"12\" fill=\"#EFF6FF\" stroke=\"#60A5FA\" stroke-width=\"2\"/>\n        <text x=\"140\" y=\"32\" text-anchor=\"middle\" fill=\"#1D4ED8\" font-size=\"12.5\" font-weight=\"800\">1. ANTIGRAVITY 2.0 (MANAGER)</text>\n        <text x=\"140\" y=\"54\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"13.5\" font-weight=\"700\">Phòng điều phối cuộc trò chuyện</text>\n        <text x=\"140\" y=\"74\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"11.5\">Giao việc nhanh · Bấm nút Open IDE ➔</text>\n        <path d=\"M274 48 H306\" stroke=\"#0284C7\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n        <polygon points=\"303,42 315,48 303,54\" fill=\"#0284C7\"/>\n        <rect x=\"320\" y=\"8\" width=\"240\" height=\"80\" rx=\"12\" fill=\"#FFF7ED\" stroke=\"#FB923C\" stroke-width=\"2\"/>\n        <text x=\"440\" y=\"32\" text-anchor=\"middle\" fill=\"#9A3412\" font-size=\"12.5\" font-weight=\"800\">2. MÀN HÌNH CHÀO MỪNG</text>\n        <text x=\"440\" y=\"54\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"13.5\" font-weight=\"700\">Cổng chờ chọn phòng hồ sơ</text>\n        <text x=\"440\" y=\"74\" text-anchor=\"middle\" fill=\"#C2410C\" font-size=\"11.5\">Giải nén .zip ➔ Bấm Open Folder</text>\n        <path d=\"M566 48 H598\" stroke=\"#16A34A\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n        <polygon points=\"595,42 607,48 595,54\" fill=\"#16A34A\"/>\n        <rect x=\"612\" y=\"8\" width=\"236\" height=\"80\" rx=\"12\" fill=\"#DCFCE7\" stroke=\"#4ADE80\" stroke-width=\"2\"/>\n        <text x=\"730\" y=\"32\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"12.5\" font-weight=\"800\">3. ANTIGRAVITY IDE (3 NGĂN)</text>\n        <text x=\"730\" y=\"54\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"13.5\" font-weight=\"700\">Bàn làm việc chuyên sâu</text>\n        <text x=\"730\" y=\"74\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"11.5\">Cây thư mục · Trình đọc · Trợ lý AI</text>\n      </svg>\n    </div>\n    <div class=\"k-grid-3\" style=\"grid-template-columns: 1fr 1fr;\">\n      <div class=\"k-card k-step-item k-unreached\" id=\"s2_step2\" data-order=\"2\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#E0F2FE; color:#0369A1; border:1px solid #7DD3FC;\">NGUYÊN TẮC 1 · GIẢI NÉN HỌC LIỆU (.ZIP)</span>\n        </div>\n        <h3>Luôn bấm Extract All trước khi đưa vào phần mềm</h3>\n        <p>Tệp <code>.zip</code> tải về giống như một thùng hàng còn đang dán băng dính kín. Bạn cần nhấp chuột phải chọn <strong>Extract All</strong> để bung ra thành thư mục thường thì Trợ lý AI mới mở khóa vào đọc và ghi tệp mới được.</p>\n        <div class=\"k-card-mini-note\">📦 Chuột phải vào .zip ➔ Extract All ➔ Có thư mục antigravity_course_vn</div>\n      </div>\n      <div class=\"k-card k-step-item k-unreached\" id=\"s2_step3\" data-order=\"3\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#DCFCE7; color:#15803D; border:1px solid #86EFAC;\">NGUYÊN TẮC 2 · CHỌN ĐÚNG OPEN FOLDER</span>\n        </div>\n        <h3>Mở đúng căn phòng dự án con, không mở cả ổ đĩa C:</h3>\n        <p>Tại màn hình chào mừng của Antigravity IDE, luôn chọn <strong>Open Folder</strong> và trỏ đúng vào thư mục dự án <code>antigravity_course_vn</code> vừa giải nén, tuyệt đối không chọn lẻ một tệp hay chọn toàn bộ màn hình Desktop.</p>\n        <div class=\"k-card-mini-note\">📂 File ➔ Open Folder ➔ Chọn antigravity_course_vn ➔ Select folder</div>\n      </div>\n    </div>\n    ",
+    "s_outro": "\n    <div class=\"k-Visual-Outro\">\n      <h3>Tổng kết &amp; Ghi nhớ cốt lõi Bài 1</h3>\n      <ul>\n        <li><strong>Tư duy cốt lõi:</strong> Đặt Trợ lý AI ngồi trực tiếp trong thư mục dự án trên máy tính để tự đọc tài liệu gốc và xuất ra tệp hoàn chỉnh.</li>\n        <li><strong>Bộ đôi 2 giao diện:</strong> Antigravity 2.0 để điều phối hội thoại nhanh và Antigravity IDE để làm việc chuyên sâu với hồ sơ.</li>\n        <li><strong>Quy trình mở dự án chuẩn:</strong> Giải nén tệp <code>.zip</code> bằng <strong>Extract All</strong> ➔ Chọn <strong>File &gt; Open Folder</strong> ➔ Mở đúng thư mục <code>antigravity_course_vn</code>.</li>\n      </ul>\n    </div>\n    "
+  },
+  "beats": [
+    {
+      "id": "b1",
+      "label": "1. Lý thuyết (Phần 1): Hạn chế khi hỏi đáp rời rạc trên trình duyệt Web",
+      "duration": 35.56,
+      "pose": 1,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s1",
+      "slide_id": "s1",
+      "hl": [
+        "s1_step1",
+        "s1_step2",
+        "s1_step3"
+      ],
+      "caption": "Chào mừng anh chị đến với khóa học <strong>Antigravity Basic</strong>. Mục tiêu đầu tiên của chúng ta là thay đổi hoàn toàn cách phối hợp với trí tuệ nhân tạo trong công việc văn phòng. Lâu nay, khi dùng <strong>ChatGPT</strong> hay <strong>Claude</strong> trên trình duyệt web, trợ lý AI nằm cách biệt trên mạng nên hoàn toàn không nhìn thấy tủ hồ sơ trong máy tính của anh chị. Mỗi lần cần tổng hợp báo cáo, anh chị lại phải làm người vận chuyển thủ công: Tự tay tải từng tệp lẻ lên web, giải thích lại bối cảnh từ đầu, rồi tô đen từng đoạn chữ dán ngược về máy. Với <strong>Antigravity</strong>, chúng ta đặt trợ lý AI ngồi ngay bên trong thư mục dự án để tự đọc tài liệu mẫu và tạo ra tệp kết quả hoàn chỉnh trên ổ cứng.",
+      "audio_src": "audio/lesson_01/b1.mp3",
+      "audio_duration": 34.91
+    },
+    {
+      "id": "b2",
+      "label": "2. Lý thuyết (Phần 2): Trợ lý AI trong thư mục ổ cứng & Bộ đôi 2 giao diện",
+      "duration": 32.41,
+      "pose": 2,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s2",
+      "slide_id": "s2",
+      "hl": [
+        "s2_step1",
+        "s2_step2",
+        "s2_step3"
+      ],
+      "caption": "Để giúp anh chị làm việc thuận tiện nhất, phần mềm được thiết kế gồm bộ đôi hai cửa sổ đi kèm nhau: Thứ nhất là cửa sổ <strong>Antigravity 2.0</strong> đóng vai trò phòng điều phối các cuộc trò chuyện, và thứ hai là <strong>Antigravity IDE</strong> đóng vai trò bàn làm việc chuyên sâu với hồ sơ. Lần đầu tiên mở bàn làm việc, phần mềm sẽ dừng ở cổng chào mừng để chờ anh chị chỉ định căn phòng dữ liệu. Trước khi mở, anh chị nhớ nguyên tắc vàng: Luôn nhấp chuột phải vào tệp học liệu <code>.zip</code> chọn <strong>Extract All</strong> để tháo băng dính thùng hàng ra thành thư mục thường, sau đó dùng lệnh <strong>Open Folder</strong> mở đúng thư mục dự án <code>antigravity_course_vn</code>.",
+      "audio_src": "audio/lesson_01/b2.mp3",
+      "audio_duration": 31.76
+    },
+    {
+      "id": "b3",
+      "label": "3. Nhận diện giao diện 1: Cửa sổ điều phối Antigravity 2.0 (Agent Manager)",
+      "duration": 25.48,
+      "pose": 3,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Giao diện 1/2 · Cửa sổ Điều phối",
+      "pedagogy_title": "Cấu trúc cửa sổ Antigravity 2.0 (Agent Manager) & Nút Open IDE",
+      "pedagogy_note": "Cột trái quản lý danh sách dự án và các cuộc hội thoại; khung giữa là nơi trao đổi công việc; góc trên bên phải có nút Open IDE để mở sang bàn làm việc 3 cột.",
+      "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); closeSettingsModal(); resetAgy2NewConv(); document.getElementById('agy2-right-pane').classList.add('collapsed');",
+      "focus_selectors": [
+        "#agy2-left-sb",
+        ".agy2-center-header",
+        "#agy2-open-ide-btn"
+      ],
+      "cursor_selector": "#agy2-open-ide-btn",
+      "cursor_label": "Nút Open IDE chuyển sang giao diện bàn làm việc 3 cột",
+      "caption": "Bây giờ anh chị nhìn trực tiếp lên màn hình phần mềm. Đây là giao diện thứ nhất mang tên <strong>Antigravity 2.0</strong>, hay còn gọi là <strong>Agent Manager</strong>. Không gian này được thiết kế thoáng đãng như một phòng điều hành: Cột bên trái liệt kê các dự án và các luồng hội thoại đang chạy, còn khung lớn ở giữa là nơi anh chị nhắn tin giao việc nhanh. Khi cần mở hồ sơ chi tiết trên máy tính, anh chị nhìn lên góc trên bên phải sẽ thấy nút <strong>Open IDE</strong> dùng để chuyển sang giao diện bàn làm việc thứ hai.",
+      "audio_src": "audio/lesson_01/b3.mp3",
+      "audio_duration": 24.83
+    },
+    {
+      "id": "b4",
+      "label": "4. Nhận diện giao diện 2: Bấm Open IDE sang màn hình Chào mừng (Welcome)",
+      "duration": 27.81,
+      "pose": 4,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Giao diện 2/2 · Màn hình Chào mừng (Welcome)",
+      "pedagogy_title": "Bấm Open IDE ➔ Hiện màn hình Chào mừng chờ chọn thư mục (Open Folder)",
+      "pedagogy_note": "Pha 1: Di chuột bấm nút Open IDE ở góc trên phải -> Pha 2: Cửa sổ Antigravity IDE mở ra ở màn hình Welcome với nút Open Folder. Nhớ giải nén tệp .zip (Extract All) trước khi mở!",
+      "onEnterPhase1": "kudoHidePopovers(); switchToSurface('mgr'); closeSettingsModal(); resetAgy2NewConv(); document.getElementById('agy2-right-pane').classList.add('collapsed');",
+      "pre_focus_selectors": [
+        ".agy2-center-header",
+        "#agy2-open-ide-btn"
+      ],
+      "pre_cursor_selector": "#agy2-open-ide-btn",
+      "pre_cursor_label": "Click nút Open IDE ở góc trên phải",
+      "onEnter": "kudoHidePopovers(); closeIdeMenus(); closeWinFolderDialog(); switchToSurface('ide'); showIdeWelcomeScreen();",
+      "focus_selectors": [
+        ".ide-welcome-wrap",
+        ".ide-btn-open-folder"
+      ],
+      "cursor_selector": ".ide-btn-open-folder",
+      "cursor_label": "Màn hình Chào mừng yêu cầu chọn Open Folder để vào dự án",
+      "caption": "Khi anh chị bấm vào nút <strong>Open IDE</strong> để mở giao diện thứ hai là <strong>Antigravity IDE</strong>, lần đầu tiên màn hình sẽ chưa hiện ba cột làm việc ngay, mà dừng ở màn hình chào mừng với nút <strong>Open Folder</strong> ở chính giữa như thế này. Lý do rất tự nhiên: Trợ lý AI cần biết hôm nay mình sẽ ngồi làm việc trong căn phòng hồ sơ nào trên ổ cứng. Anh chị lưu ý trước khi bấm <strong>Open Folder</strong>, mình phải nhấp chuột phải vào tệp học liệu <code>.zip</code> tải về và chọn <strong>Extract All</strong> để giải nén ra thư mục thường, tuyệt đối không mở trực tiếp tệp đang nén.",
+      "audio_src": "audio/lesson_01/b4.mp3",
+      "audio_duration": 27.16
+    },
+    {
+      "id": "b5",
+      "label": "5. Thực hành Bước 1/3: Bấm trình đơn File ➔ Chọn dòng Open Folder",
+      "duration": 20.89,
+      "pose": 5,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 1/3 · Mở trình đơn File",
+      "pedagogy_title": "Bước 1: Di chuột lên góc trên trái bấm chữ File ➔ Chọn dòng Open Folder...",
+      "pedagogy_note": "Pha 1: Di chuột lên góc trên bên trái và click vào chữ File -> Pha 2: Trình đơn xổ xuống, di chuột chọn dòng Open Folder (không chọn Open File).",
+      "onEnterPhase1": "kudoHidePopovers(); closeIdeMenus(); closeWinFolderDialog(); switchToSurface('ide'); showIdeWelcomeScreen();",
+      "pre_focus_selectors": [
+        "#ide-menu-file-btn"
+      ],
+      "pre_cursor_selector": "#ide-menu-file-btn",
+      "pre_cursor_label": "Bước 1: Click chuột vào trình đơn File ở góc trên trái",
+      "onEnter": "kudoHidePopovers(); switchToSurface('ide'); showIdeWelcomeScreen(); closeWinFolderDialog(); document.getElementById('ide-file-dropdown').classList.add('open');",
+      "focus_selectors": [
+        "#ide-menu-file-btn",
+        "#ide-file-dropdown"
+      ],
+      "cursor_selector": "#ide-file-dropdown .dd-row:nth-child(7)",
+      "cursor_label": "Chọn dòng Open Folder... (Không chọn Open File)",
+      "caption": "Bây giờ chúng ta thực hành ba bước để mở dự án đầu tiên. Sau khi đã giải nén bộ học liệu trên máy tính, ở <strong>Bước 1</strong>, anh chị nhìn theo con trỏ chuột di chuyển lên góc trên bên trái, nhấp vào chữ <strong>File</strong> để mở bảng trình đơn, rồi đưa chuột xuống chọn dòng <strong>Open Folder</strong>. Anh chị nhớ mình luôn chọn <strong>Open Folder</strong> để mở trọn vẹn cả thư mục dự án, tuyệt đối không chọn <strong>Open File</strong> mở lẻ từng tệp.",
+      "audio_src": "audio/lesson_01/b5.mp3",
+      "audio_duration": 20.24
+    },
+    {
+      "id": "b6",
+      "label": "6. Thực hành Bước 2/3: Chọn thư mục antigravity_course_vn đã giải nén",
+      "duration": 24.05,
+      "pose": 6,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 2/3 · Chọn đúng thư mục dự án",
+      "pedagogy_title": "Bước 2: Chọn thư mục antigravity_course_vn trong hộp thoại rồi bấm Select folder",
+      "pedagogy_note": "Pha 1: Click vào dòng Open Folder... -> Pha 2: Hộp thoại Windows mở ra, chọn đúng thư mục dự án con antigravity_course_vn đã giải nén rồi nhấn Select folder.",
+      "onEnterPhase1": "kudoHidePopovers(); switchToSurface('ide'); showIdeWelcomeScreen(); closeWinFolderDialog(); document.getElementById('ide-file-dropdown').classList.add('open');",
+      "pre_focus_selectors": [
+        "#ide-file-dropdown"
+      ],
+      "pre_cursor_selector": "#ide-file-dropdown .dd-row:nth-child(7)",
+      "pre_cursor_label": "Click vào dòng Open Folder...",
+      "onEnter": "kudoHidePopovers(); closeIdeMenus(); switchToSurface('ide'); showIdeWelcomeScreen(); openWinFolderDialog();",
+      "focus_selectors": [
+        "#win-open-folder-modal .win-dialog"
+      ],
+      "cursor_selector": "#win-btn-select-folder",
+      "cursor_label": "Bước 2: Chọn antigravity_course_vn -> Bấm Select folder",
+      "caption": "Sang <strong>Bước 2</strong>, ngay sau khi bấm <strong>Open Folder</strong>, hộp thoại chọn thư mục của máy tính hiện ra. Tại đây có một nguyên tắc an toàn rất quan trọng: Anh chị chỉ bấm chọn đúng vào thư mục dự án con có tên là <code>antigravity_course_vn</code> vừa giải nén, tuyệt đối không chọn cả ổ đĩa <code>C:</code> hay toàn bộ màn hình <strong>Desktop</strong> chứa hàng vạn tệp cá nhân. Sau khi tên thư mục <code>antigravity_course_vn</code> đã hiện ở ô bên dưới, anh chị bấm vào nút <strong>Select folder</strong>.",
+      "audio_src": "audio/lesson_01/b6.mp3",
+      "audio_duration": 23.4
+    },
+    {
+      "id": "b7",
+      "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+      "duration": 26.03,
+      "pose": 7,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "✅ Thực hành Bước 3/3 · Tổng kết & Nghiệm thu",
+      "pedagogy_title": "Bước 3: Bấm Select folder ➔ Bàn làm việc 3 cột hiện ra cùng bản đồ INDEX.md",
+      "pedagogy_note": "Pha 1: Click nút Select folder -> Pha 2: Cột trái hiện cây thư mục antigravity_course_vn, cột giữa mở bản đồ INDEX.md, và cột phải hiện khung chat Trợ lý AI!",
+      "onEnterPhase1": "kudoHidePopovers(); closeIdeMenus(); switchToSurface('ide'); showIdeWelcomeScreen(); openWinFolderDialog();",
+      "pre_focus_selectors": [
+        "#win-open-folder-modal .win-dialog"
+      ],
+      "pre_cursor_selector": "#win-btn-select-folder",
+      "pre_cursor_label": "Click nút Select folder để nạp dự án",
+      "onEnter": "kudoHidePopovers(); closeIdeMenus(); closeWinFolderDialog(); switchToSurface('ide'); openWorkspaceByName('antigravity_course_vn'); setEditorMode('wysiwyg'); openFileInEditor('INDEX.md');",
+      "focus_selectors": [
+        "#ide-left-sidebar",
+        "#editor-canvas",
+        "#ide-right-agent"
+      ],
+      "cursor_selector": "[data-file='INDEX.md']",
+      "cursor_label": "Bước 3: Đã vào bàn làm việc 3 cột — Cây thư mục & INDEX.md hiện rõ!",
+      "caption": "Và ở <strong>Bước 3</strong>, ngay sau cú nhấp chuột vào nút <strong>Select folder</strong>, màn hình chào mừng đã biến mất để mở ra bàn làm việc ba cột hoàn chỉnh! Nhìn sang cột bên trái, anh chị thấy toàn bộ cây thư mục <code>antigravity_course_vn</code> đã hiện ra; cột ở giữa đang mở sẵn tệp bản đồ <code>INDEX.md</code>; và cột bên phải là khung chat của trợ lý AI. Như vậy, anh chị đã nắm vững sự khác biệt của trợ lý AI trong thư mục, phân biệt rõ bộ đôi hai giao diện và tự tay mở thành công căn phòng dự án đầu tiên trên máy tính của mình.",
+      "audio_src": "audio/lesson_01/b7.mp3",
+      "audio_duration": 25.38
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "lesson_slug": "lesson_24",
+  "filename": "lesson_24.html",
+  "legacy_alias": "",
+  "code": "BÀI 24",
+  "chapter_number": 6,
+  "chapter_code": "CHƯƠNG 6",
+  "chapter_title": "4 Tình huống Thực chiến Toàn diện (Case Studies)",
+  "title": "Tình huống 4 — Tổng duyệt Chất lượng Dự án, Bảo mật (.gitignore) & Lộ trình 30 Ngày",
+  "short_title": "Case Study 4: Tổng duyệt & Lộ trình 30 Ngày",
+  "pill_label": "Bài 24 · Tổng duyệt & Tốt nghiệp",
+  "description": "Mảnh ghép hoàn thiện năng lực Quản trị AI Chuyên nghiệp: Đối chiếu chéo số liệu giữa các tệp báo cáo trước khi bàn giao, thiết lập tệp .gitignore để bảo mật tài liệu nhạy cảm và lập Lộ trình 30 ngày áp dụng thực tế.",
+  "prerequisites": "Toàn bộ Bài 1 đến Bài 23 (Đã hoàn thành đầy đủ các tệp sản phẩm Chiến lược, Dữ liệu, Nội dung, Slide, HR và Pháp lý).",
+  "dependents": "Áp dụng trực tiếp vào công việc hàng ngày tại doanh nghiệp của học viên sau khi tốt nghiệp khóa Antigravity Basic.",
+  "placement_risk": "0% Rủi ro — Bài tổng kết khép kín vòng tròn quản trị: Từ Khởi tạo (Chương 1) -> Dữ liệu (Chương 2) -> Bộ não .agent (Chương 3) -> Đội nhóm (Chương 4) -> Xuất bản (Chương 5) -> Thực chiến & Tổng duyệt bàn giao (Chương 6).",
+  "continuity_bridge": "Hoàn thành Bài 24, học viên đã nắm vững quy trình kiểm toán đối chiếu chéo số liệu toàn dự án, khóa bảo mật .gitignore và sở hữu Lộ trình 30 ngày ứng dụng thực tế.",
+  "slides": {
+    "s1": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 6 · BÀI 24 · TÌNH HUỐNG THỰC CHIẾN 4</span>\n        <span class=\"k-slide-step\">Hai chốt chặn bắt buộc trước khi bàn giao bất kỳ dự án lớn nào</span>\n      </div>\n      <div class=\"k-slide-h1\">Kiểm toán Đối chiếu Chéo số liệu 100% &amp; Khóa bảo mật bằng <code>.gitignore</code></div>\n      <div class=\"k-slide-sub\">Đảm bảo không một con số nào trên Slide bị lệch so với bảng gốc và không một tệp nhạy cảm nào bị lộ lên đám mây.</div>\n    </div>\n    <div style=\"display:flex; flex-direction:column; gap:10px; margin-top:6px;\">\n      <div class=\"k-visual-hero-box k-step-item k-hl\" id=\"s1_step1\" data-order=\"1\" style=\"padding:12px 16px;\">\n        <div class=\"k-viz-header\" style=\"margin-bottom:6px;\">\n          <span class=\"k-viz-badge\">🔍 CƠ CHẾ KIỂM TOÁN CHÉO TOÀN DỰ ÁN</span>\n          <span class=\"k-viz-title\">Rà soát dây chuyền từ Bảng dữ liệu gốc (.csv) qua Đề án (.md) tới trang Slide cuối cùng (.html)</span>\n        </div>\n        <svg viewBox=\"0 0 840 74\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%; height:auto;\">\n          <rect x=\"8\" y=\"8\" width=\"248\" height=\"58\" rx=\"10\" fill=\"#FFF7ED\" stroke=\"#FB923C\" stroke-width=\"1.5\"/>\n          <text x=\"132\" y=\"29\" text-anchor=\"middle\" fill=\"#9A3412\" font-size=\"11.5\" font-weight=\"800\">1. BẢNG GỐC (@sales_data.csv)</text>\n          <text x=\"132\" y=\"48\" text-anchor=\"middle\" fill=\"#334155\" font-size=\"11\">Doanh thu Q1: 1.850.000.000 VNĐ</text>\n          <path d=\"M262 37 H294\" stroke=\"#15803D\" stroke-width=\"2.5\" stroke-linecap=\"round\"/>\n          <polygon points=\"290,32 300,37 290,42\" fill=\"#15803D\"/>\n          <rect x=\"306\" y=\"8\" width=\"248\" height=\"58\" rx=\"10\" fill=\"#EFF6FF\" stroke=\"#60A5FA\" stroke-width=\"1.5\"/>\n          <text x=\"430\" y=\"29\" text-anchor=\"middle\" fill=\"#1D4ED8\" font-size=\"11.5\" font-weight=\"800\">2. HỒ SƠ (@de_an_tong_the_q2.md)</text>\n          <text x=\"430\" y=\"48\" text-anchor=\"middle\" fill=\"#334155\" font-size=\"11\">Churn SMB: Giảm từ 6,2% ➔ 4,3%</text>\n          <path d=\"M560 37 H592\" stroke=\"#15803D\" stroke-width=\"2.5\" stroke-linecap=\"round\"/>\n          <polygon points=\"588,32 598,37 588,42\" fill=\"#15803D\"/>\n          <rect x=\"604\" y=\"8\" width=\"228\" height=\"58\" rx=\"10\" fill=\"#DCFCE7\" stroke=\"#4ADE80\" stroke-width=\"1.5\"/>\n          <text x=\"718\" y=\"29\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"11.5\" font-weight=\"800\">3. BIÊN BẢN NGHIỆM THU</text>\n          <text x=\"718\" y=\"48\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"11\">Xác nhận khớp 100% ở mọi tệp ✓</text>\n        </svg>\n      </div>\n      <div class=\"k-grid-2\" style=\"display:grid; grid-template-columns:1fr 1fr; gap:10px;\">\n        <div class=\"k-card k-step-item k-unreached\" id=\"s1_step2\" data-order=\"2\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">CHỐT CHẶN 1 · ĐỐI CHIẾU CHÉO SỐ LIỆU</span>\n          </div>\n          <h3>Loại bỏ 100% lỗi lệch số giữa các báo cáo</h3>\n          <p>Nhờ AI quét đồng thời tệp CSV, tệp nội dung truyền thông và tệp Slide thuyết trình để lập bảng xác nhận độ khớp trước giờ họp Hội đồng Quản trị.</p>\n        </div>\n        <div class=\"k-card k-step-item k-unreached\" id=\"s1_step3\" data-order=\"3\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#E0F2FE; color:#0369A1; border:1px solid #7DD3FC;\">CHỐT CHẶN 2 · LÁ CHẮN BẢO MẬT .GITIGNORE</span>\n          </div>\n          <h3>Giữ riêng tệp nhạy cảm trên ổ cứng cá nhân</h3>\n          <p>Ghi tên các tệp mật như <code>bang_luong_noi_bo.csv</code> và <code>danh_sach_ung_vien.csv</code> vào <code>.gitignore</code> để hệ thống tự động chặn đẩy lên GitHub.</p>\n        </div>\n      </div>\n    </div>\n    ",
+    "s2": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 6 · BÀI 24 · HÀNH TRÌNH SAU TỐT NGHIỆP</span>\n        <span class=\"k-slide-step\">Bản đồ Hành động 30 Ngày Làm chủ Antigravity IDE trong Công việc Thật</span>\n      </div>\n      <div class=\"k-slide-h1\">Biến toàn bộ kỹ năng đã học thành Hệ thống Tự động hóa của riêng bạn</div>\n      <div class=\"k-slide-sub\">Lộ trình 4 tuần rõ ràng để chuyển giao từ dự án mẫu trong khóa học sang công việc thực tế tại doanh nghiệp.</div>\n    </div>\n    <div style=\"display:flex; flex-direction:column; gap:10px; margin-top:6px;\">\n      <div class=\"k-grid-2\" style=\"display:grid; grid-template-columns:1fr 1fr; gap:10px;\">\n        <div class=\"k-card k-step-item k-hl\" id=\"s2_step1\" data-order=\"1\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">TUẦN 1 &amp; 2 · XÂY NỀN TẢNG &amp; BỘ NÃO .AGENT</span>\n          </div>\n          <h3>Khởi tạo thư mục việc thật và đóng gói 3 quy trình</h3>\n          <p>Tuần 1 thiết lập thư mục dự án, bật quyền Turbo và viết tệp <code>@troly.md</code>. Tuần 2 cài đặt nội quy <code>.agent/rules/</code> và 3 lệnh <code>/workflow</code> dùng hàng tuần.</p>\n        </div>\n        <div class=\"k-card k-step-item k-unreached\" id=\"s2_step2\" data-order=\"2\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#DCFCE7; color:#15803D; border:1px solid #86EFAC;\">TUẦN 3 &amp; 4 · XUẤT BẢN &amp; NHÂN RỘNG ĐỘI NHÓM</span>\n          </div>\n          <h3>Vận hành chu trình Đề án — Slide và chia sẻ qua GitHub</h3>\n          <p>Tuần 3 áp dụng <code>/grill-me ➔ /plan ➔ /learn</code> cho báo cáo thật. Tuần 4 đồng bộ bộ kỹ năng <code>.agent/skills/</code> cho cả phòng ban và khóa bảo mật <code>.gitignore</code>.</p>\n        </div>\n      </div>\n      <div class=\"k-visual-hero-box k-step-item k-unreached\" id=\"s2_step3\" data-order=\"3\" style=\"padding:12px 16px;\">\n        <div class=\"k-viz-header\" style=\"margin-bottom:6px;\">\n          <span class=\"k-viz-badge\">🎓 TỔNG KẾT NĂNG LỰC QUẢN TRỊ AI</span>\n          <span class=\"k-viz-title\">Ba nguyên tắc vàng đồng hành cùng bạn trong mọi dự án văn phòng</span>\n        </div>\n        <svg viewBox=\"0 0 840 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%; height:auto;\">\n          <rect x=\"6\" y=\"6\" width=\"268\" height=\"48\" rx=\"8\" fill=\"#FFF7ED\" stroke=\"#FDBA74\" stroke-width=\"1.5\"/>\n          <text x=\"140\" y=\"26\" text-anchor=\"middle\" fill=\"#9A3412\" font-size=\"11.5\" font-weight=\"800\">1. Giao việc có Ngữ cảnh (@ &amp; #L)</text>\n          <text x=\"140\" y=\"43\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"10.5\">Luôn chỉ rõ tệp nguồn, không hỏi suông</text>\n          <rect x=\"286\" y=\"6\" width=\"268\" height=\"48\" rx=\"8\" fill=\"#EFF6FF\" stroke=\"#93C5FD\" stroke-width=\"1.5\"/>\n          <text x=\"420\" y=\"26\" text-anchor=\"middle\" fill=\"#1D4ED8\" font-size=\"11.5\" font-weight=\"800\">2. Tích lũy Trí nhớ (.agent &amp; /learn)</text>\n          <text x=\"420\" y=\"43\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"10.5\">Biến kinh nghiệm cá nhân thành tài sản số</text>\n          <rect x=\"566\" y=\"6\" width=\"268\" height=\"48\" rx=\"8\" fill=\"#DCFCE7\" stroke=\"#86EFAC\" stroke-width=\"1.5\"/>\n          <text x=\"700\" y=\"26\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"11.5\" font-weight=\"800\">3. Kiểm toán &amp; Bảo mật (.gitignore)</text>\n          <text x=\"700\" y=\"43\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"10.5\">100% số liệu khớp, 100% dữ liệu mật an toàn</text>\n        </svg>\n      </div>\n    </div>\n    "
+  },
+  "beats": [
+    {
+      "id": "b1",
+      "label": "1. Lý thuyết (Phần 1): Hai chốt chặn khóa sổ — Đối chiếu chéo số liệu & Bảo mật .gitignore",
+      "duration": 27.94,
+      "pose": 1,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s1",
+      "hl": [
+        "s1_step1",
+        "s1_step2",
+        "s1_step3"
+      ],
+      "caption": "Trước khi đóng gói một bộ hồ sơ dự án lớn để trình ký Ban Giám đốc hoặc gửi cho khách hàng, người quản lý chuyên nghiệp luôn thực hiện hai chốt chặn kiểm toán cuối cùng. Thứ nhất là yêu cầu trợ lý AI đối chiếu chéo số liệu xuyên suốt từ bảng <code>@sales_data.csv</code> gốc, qua bản đề án chữ cho tới trang Slide thuyết trình để đảm bảo không một con số nào bị vênh nhau. Thứ hai là khai báo tên các tệp nhạy cảm như bảng lương hay danh sách ứng viên vào tệp <code>.gitignore</code> để giữ an toàn tuyệt đối trên máy cá nhân.",
+      "audio_src": "audio/lesson_24/b1.mp3",
+      "audio_duration": 27.29,
+      "slide_id": "s1"
+    },
+    {
+      "id": "b2",
+      "label": "2. Lý thuyết (Phần 2): Bản đồ Hành động 30 ngày đưa Antigravity IDE vào công việc thật",
+      "duration": 23.58,
+      "pose": 2,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s2",
+      "hl": [
+        "s2_step1",
+        "s2_step2",
+        "s2_step3"
+      ],
+      "caption": "Sau khi hoàn thành việc kiểm toán và khóa bảo mật cho dự án, bước quan trọng nhất là chuyển hóa toàn bộ kỹ năng thành thói quen làm việc hàng ngày thông qua <strong>Lộ trình 30 ngày</strong> chia làm 4 tuần cụ thể: Tuần một khởi tạo thư mục công việc thật và hồ sơ <code>@troly.md</code>; tuần hai đóng gói các nội quy và lệnh <code>/workflow</code> lặp lại; tuần ba áp dụng chu trình lập đề án và xuất bản Slide; và tuần bốn nhân rộng bộ kỹ năng cho cả phòng ban.",
+      "audio_src": "audio/lesson_24/b2.mp3",
+      "audio_duration": 22.93,
+      "slide_id": "s2"
+    },
+    {
+      "id": "b3",
+      "label": "3. Quan sát: Toàn bộ danh mục tài sản số hóa sau 6 Chương",
+      "duration": 15.25,
+      "pose": 3,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Kho Tài sản Dự án",
+      "pedagogy_title": "Rà soát danh mục các tệp báo cáo, chiến lược, slide, HR và pháp lý đã tạo",
+      "pedagogy_note": "Toàn bộ công việc từ Chương 1 đến Chương 6 đều kết tinh thành các tệp tài sản thực tế nằm ngay ngắn trên ổ cứng.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'INDEX.md', breadcrumb:'antigravity_course_vn › INDEX.md (Tổng danh mục Tài sản Dự án)', editorTitle:'🗂️ INDEX.md — Danh mục Tài sản Đã Khởi tạo Trong Suốt Khóa Học', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">KHO TÀI SẢN SỐ HÓA CỦA BẠN TRONG THƯ MỤC DỰ ÁN</h3><ul><li><strong>Bộ não điều khiển:</strong> <code>@troly.md</code>, <code>.agent/rules/</code>, <code>.agent/skills/</code>, <code>.agent/workflows/</code></li><li><strong>Dữ liệu &amp; Đề án:</strong> <code>bao_cao_doanh_thu_q1.md</code>, <code>de_an_tong_the_q2.md</code>, <code>ban_giao_cong_viec.md</code></li><li><strong>Truyền thông &amp; Slide:</strong> <code>brand_voice.md</code>, <code>chien_dich_noi_dung_q2.md</code>, <code>slide_trinh_hdqt_q2.html</code></li><li><strong>Thực chiến &amp; Bảo mật:</strong> <code>ke_hoach_giay_ba_mia_2026.md</code>, <code>ho_so_tuyen_dung_cs.md</code>, <code>bao_cao_ra_soat_hop_dong.md</code>, <code>.gitignore</code></li></ul></div>'});",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas"
+      ],
+      "pre_click_selector": "[data-file='INDEX.md']",
+      "pre_click_label": "Nhấp chọn tệp INDEX.md ở cây thư mục trái",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Trọn bộ tệp tài sản thực tế trên ổ cứng sau 24 bài học",
+      "caption": "Nhìn vào cột giữa trên màn hình: Khác hẳn với việc hỏi đáp trên web xong là trôi mất, sau 24 bài học, trong thư mục máy tính của anh chị đã có trọn bộ tài sản từ Bộ não <code>.agent</code>, Báo cáo doanh thu, Chiến dịch nội dung, Bộ Slide cho tới Hồ sơ nhân sự và Pháp lý.",
+      "audio_src": "audio/lesson_24/b3.mp3",
+      "audio_duration": 14.6
+    },
+    {
+      "id": "b4",
+      "label": "4. Kỹ thuật: Bảng kiểm toán đối chiếu chéo số liệu và khóa bảo mật .gitignore",
+      "duration": 17.46,
+      "pose": 4,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Bảng Kiểm Toán Đối Chiếu Chéo",
+      "pedagogy_title": "Bảng đối chiếu chéo toàn dự án (Cross-File Verification Matrix) & Bảo mật .gitignore",
+      "pedagogy_note": "Kiểm tra số liệu gốc 1.850.000.000 VNĐ khớp 100% giữa sales_data.csv và slide_trinh_hdqt_q2.html, đồng thời khóa danh sách ứng viên trong .gitignore.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'bien_ban_nghiem_thu_du_an.md', breadcrumb:'antigravity_course_vn › bien_ban_nghiem_thu_du_an.md', editorTitle:'🔍 bien_ban_nghiem_thu_du_an.md — Bảng Kiểm Toán Đối Chiếu Chéo', editorHtml:\"<div style=\\\"padding:14px 16px;font-family:system-ui,-apple-system,sans-serif;\\\"><div style=\\\"display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;\\\"><strong style=\\\"color:#15803d;font-size:13.5px;\\\">🔍 BẢNG KIỂM TOÁN ĐỐI CHIẾU CHÉO TOÀN DỰ ÁN (VERIFICATION MATRIX)</strong><span style=\\\"background:#dcfce7;color:#166534;border:1px solid #86efac;font-size:11px;font-weight:800;padding:2px 9px;border-radius:99px;\\\">Độ tin cậy: 100% ✓</span></div><table style=\\\"width:100%;border-collapse:collapse;font-size:12px;margin-bottom:10px;\\\"><tr style=\\\"background:#ecfdf5;color:#065f46;\\\"><th style=\\\"padding:7px 8px;border:1px solid #6ee7b7;text-align:left;\\\">Tệp kiểm tra</th><th style=\\\"padding:7px 8px;border:1px solid #6ee7b7;text-align:left;\\\">Số liệu gốc đối chiếu</th><th style=\\\"padding:7px 8px;border:1px solid #6ee7b7;text-align:center;\\\">Độ khớp</th><th style=\\\"padding:7px 8px;border:1px solid #6ee7b7;text-align:left;\\\">Trạng thái Bảo mật .gitignore</th></tr><tr><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;\\\"><code>sales_data.csv</code> &harr; <code>slide_trinh_hdqt_q2.html</code></td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;font-weight:700;color:#0f172a;\\\">1.850.000.000 VNĐ (Doanh thu Q1)</td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;text-align:center;font-weight:800;color:#15803d;\\\">100% Khớp ✓</td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;color:#166534;\\\">Công khai nội bộ HĐQT ✓</td></tr><tr style=\\\"background:#f8fafc;\\\"><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;\\\"><code>COMPANY.md</code> &harr; <code>ho_so_tuyen_dung_cs.md</code></td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;font-weight:700;color:#0f172a;\\\">Giảm Churn SMB: 6,2% &rarr; 4,3%</td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;text-align:center;font-weight:800;color:#15803d;\\\">100% Khớp ✓</td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;font-weight:700;color:#15803d;\\\">Đã khóa danh sách ứng viên ✓</td></tr><tr><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;\\\"><code>quy_che_hop_dong_chuan.md</code> &harr; <code>bao_cao_ra_soat_hop_dong.md</code></td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;font-weight:700;color:#0f172a;\\\">Công nợ ≤ 15 ngày · Trần phạt 8%</td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;text-align:center;font-weight:800;color:#15803d;\\\">100% Khớp ✓</td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;font-weight:700;color:#15803d;\\\">Đã khóa phụ lục hợp đồng mật ✓</td></tr></table><div style=\\\"background:#fff7ed;border:1px solid #fdba74;border-radius:8px;padding:7px 10px;font-size:12px;color:#9a3412;\\\">🛡️ <strong>Cấu hình <code>.gitignore</code> đang bật:</strong> Tự động chặn đẩy <code>danh_sach_ung_vien.csv</code> và <code>bang_luong_noi_bo.csv</code> lên đám mây GitHub.</div></div>\"});",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas"
+      ],
+      "pre_click_selector": "[data-file='bien_ban_nghiem_thu_du_an.md']",
+      "pre_click_label": "Nhấp chọn tệp bien_ban_nghiem_thu_du_an.md ở cây thư mục trái",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Bảng kiểm toán đối chiếu chéo số liệu 100% khớp & bảo mật .gitignore",
+      "caption": "Trên màn hình là tệp <code>bien_ban_nghiem_thu_du_an.md</code> với bảng kiểm toán đối chiếu chéo toàn dự án: Con số doanh thu gốc <strong>1.850.000.000 VNĐ</strong> khớp 100% từ bảng <code>sales_data.csv</code> tới trang Slide thuyết trình, và trạng thái bảo mật <code>.gitignore</code> đã khóa chặt danh sách ứng viên.",
+      "audio_src": "audio/lesson_24/b4.mp3",
+      "audio_duration": 16.81
+    },
+    {
+      "id": "b5",
+      "label": "5. Bước 1: Mở kiểm tra Biên bản nghiệm thu đối chiếu chéo toàn dự án",
+      "duration": 12.57,
+      "pose": 5,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 1/3 · Kiểm tra Biên bản Nghiệm thu",
+      "pedagogy_title": "Bước 1: Mở tệp bien_ban_nghiem_thu_du_an.md để xác nhận 100% độ khớp số liệu trước khi trình ký",
+      "pedagogy_note": "Nhấp chọn bien_ban_nghiem_thu_du_an.md ở cây thư mục trái để kiểm tra bảng đối chiếu chéo và trạng thái .gitignore.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'bien_ban_nghiem_thu_du_an.md', breadcrumb:'antigravity_course_vn › bien_ban_nghiem_thu_du_an.md', editorTitle:'🔍 bien_ban_nghiem_thu_du_an.md — Xác Nhận Độ Khớp 100% Trước Bàn Giao', editorHtml:\"<div style=\\\"padding:14px 16px;font-family:system-ui,-apple-system,sans-serif;\\\"><div style=\\\"display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;\\\"><strong style=\\\"color:#15803d;font-size:13.5px;\\\">🔍 BẢNG KIỂM TOÁN ĐỐI CHIẾU CHÉO TOÀN DỰ ÁN (VERIFICATION MATRIX)</strong><span style=\\\"background:#dcfce7;color:#166534;border:1px solid #86efac;font-size:11px;font-weight:800;padding:2px 9px;border-radius:99px;\\\">Độ tin cậy: 100% ✓</span></div><table style=\\\"width:100%;border-collapse:collapse;font-size:12px;margin-bottom:10px;\\\"><tr style=\\\"background:#ecfdf5;color:#065f46;\\\"><th style=\\\"padding:7px 8px;border:1px solid #6ee7b7;text-align:left;\\\">Tệp kiểm tra</th><th style=\\\"padding:7px 8px;border:1px solid #6ee7b7;text-align:left;\\\">Số liệu gốc đối chiếu</th><th style=\\\"padding:7px 8px;border:1px solid #6ee7b7;text-align:center;\\\">Độ khớp</th><th style=\\\"padding:7px 8px;border:1px solid #6ee7b7;text-align:left;\\\">Trạng thái Bảo mật .gitignore</th></tr><tr><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;\\\"><code>sales_data.csv</code> &harr; <code>slide_trinh_hdqt_q2.html</code></td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;font-weight:700;color:#0f172a;\\\">1.850.000.000 VNĐ (Doanh thu Q1)</td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;text-align:center;font-weight:800;color:#15803d;\\\">100% Khớp ✓</td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;color:#166534;\\\">Công khai nội bộ HĐQT ✓</td></tr><tr style=\\\"background:#f8fafc;\\\"><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;\\\"><code>COMPANY.md</code> &harr; <code>ho_so_tuyen_dung_cs.md</code></td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;font-weight:700;color:#0f172a;\\\">Giảm Churn SMB: 6,2% &rarr; 4,3%</td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;text-align:center;font-weight:800;color:#15803d;\\\">100% Khớp ✓</td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;font-weight:700;color:#15803d;\\\">Đã khóa danh sách ứng viên ✓</td></tr><tr><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;\\\"><code>quy_che_hop_dong_chuan.md</code> &harr; <code>bao_cao_ra_soat_hop_dong.md</code></td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;font-weight:700;color:#0f172a;\\\">Công nợ ≤ 15 ngày · Trần phạt 8%</td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;text-align:center;font-weight:800;color:#15803d;\\\">100% Khớp ✓</td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;font-weight:700;color:#15803d;\\\">Đã khóa phụ lục hợp đồng mật ✓</td></tr></table><div style=\\\"background:#fff7ed;border:1px solid #fdba74;border-radius:8px;padding:7px 10px;font-size:12px;color:#9a3412;\\\">🛡️ <strong>Cấu hình <code>.gitignore</code> đang bật:</strong> Tự động chặn đẩy <code>danh_sach_ung_vien.csv</code> và <code>bang_luong_noi_bo.csv</code> lên đám mây GitHub.</div></div>\"});",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas"
+      ],
+      "pre_click_selector": "[data-file='bien_ban_nghiem_thu_du_an.md']",
+      "pre_click_label": "Nhấp chọn tệp bien_ban_nghiem_thu_du_an.md ở cây thư mục trái",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Bước 1: Xác nhận biên bản nghiệm thu khớp 100% số liệu",
+      "caption": "Chúng ta bước vào bài thực hành tổng kết khóa học. Ở <strong>Bước 1</strong>, trước khi đóng gói hồ sơ gửi Ban Giám đốc, anh chị nhấp mở tệp <code>bien_ban_nghiem_thu_du_an.md</code> trên cây thư mục trái để xác nhận mọi con số đã khớp 100%.",
+      "audio_src": "audio/lesson_24/b5.mp3",
+      "audio_duration": 11.92
+    },
+    {
+      "id": "b6",
+      "label": "6. Bước 2: Yêu cầu AI lập Lộ trình 30 ngày áp dụng cho bản thân",
+      "duration": 13.69,
+      "pose": 6,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 2/3 · Lập Lộ trình 30 Ngày",
+      "pedagogy_title": "Bước 2: Chọn @troly.md và @bien_ban_nghiem_thu_du_an.md từ bảng gợi ý @ để lập kế hoạch 30 ngày",
+      "pedagogy_note": "Biến kiến thức trong khóa học thành thói quen hàng ngày tại doanh nghiệp của bạn thông qua tệp lo_trinh_30_ngay_cua_toi.md.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'bien_ban_nghiem_thu_du_an.md', editorTitle:'🔍 bien_ban_nghiem_thu_du_an.md — Xác Nhận Độ Khớp 100% Trước Bàn Giao', editorHtml:\"<div style=\\\"padding:14px 16px;font-family:system-ui,-apple-system,sans-serif;\\\"><div style=\\\"display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;\\\"><strong style=\\\"color:#15803d;font-size:13.5px;\\\">🔍 BẢNG KIỂM TOÁN ĐỐI CHIẾU CHÉO TOÀN DỰ ÁN (VERIFICATION MATRIX)</strong><span style=\\\"background:#dcfce7;color:#166534;border:1px solid #86efac;font-size:11px;font-weight:800;padding:2px 9px;border-radius:99px;\\\">Độ tin cậy: 100% ✓</span></div><table style=\\\"width:100%;border-collapse:collapse;font-size:12px;margin-bottom:10px;\\\"><tr style=\\\"background:#ecfdf5;color:#065f46;\\\"><th style=\\\"padding:7px 8px;border:1px solid #6ee7b7;text-align:left;\\\">Tệp kiểm tra</th><th style=\\\"padding:7px 8px;border:1px solid #6ee7b7;text-align:left;\\\">Số liệu gốc đối chiếu</th><th style=\\\"padding:7px 8px;border:1px solid #6ee7b7;text-align:center;\\\">Độ khớp</th><th style=\\\"padding:7px 8px;border:1px solid #6ee7b7;text-align:left;\\\">Trạng thái Bảo mật .gitignore</th></tr><tr><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;\\\"><code>sales_data.csv</code> &harr; <code>slide_trinh_hdqt_q2.html</code></td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;font-weight:700;color:#0f172a;\\\">1.850.000.000 VNĐ (Doanh thu Q1)</td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;text-align:center;font-weight:800;color:#15803d;\\\">100% Khớp ✓</td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;color:#166534;\\\">Công khai nội bộ HĐQT ✓</td></tr><tr style=\\\"background:#f8fafc;\\\"><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;\\\"><code>COMPANY.md</code> &harr; <code>ho_so_tuyen_dung_cs.md</code></td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;font-weight:700;color:#0f172a;\\\">Giảm Churn SMB: 6,2% &rarr; 4,3%</td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;text-align:center;font-weight:800;color:#15803d;\\\">100% Khớp ✓</td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;font-weight:700;color:#15803d;\\\">Đã khóa danh sách ứng viên ✓</td></tr><tr><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;\\\"><code>quy_che_hop_dong_chuan.md</code> &harr; <code>bao_cao_ra_soat_hop_dong.md</code></td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;font-weight:700;color:#0f172a;\\\">Công nợ ≤ 15 ngày · Trần phạt 8%</td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;text-align:center;font-weight:800;color:#15803d;\\\">100% Khớp ✓</td><td style=\\\"padding:7px 8px;border:1px solid #a7f3d0;font-weight:700;color:#15803d;\\\">Đã khóa phụ lục hợp đồng mật ✓</td></tr></table><div style=\\\"background:#fff7ed;border:1px solid #fdba74;border-radius:8px;padding:7px 10px;font-size:12px;color:#9a3412;\\\">🛡️ <strong>Cấu hình <code>.gitignore</code> đang bật:</strong> Tự động chặn đẩy <code>danh_sach_ung_vien.csv</code> và <code>bang_luong_noi_bo.csv</code> lên đám mây GitHub.</div></div>\", popupMode:'mention', clearChat:true, chatInput:'@troly.md @bien_ban_nghiem_thu_du_an.md Hãy lập giúp tôi Lộ trình 30 ngày ứng dụng Antigravity IDE vào công việc thực tế hàng ngày và lưu tại lo_trinh_30_ngay_cua_toi.md'});",
+      "focus_selectors": [
+        "#ide-popup-menu",
+        "#ide-chat-input",
+        "#ide-send-btn"
+      ],
+      "pre_click_selector": "#ide-popup-menu .popup-item",
+      "pre_click_label": "Chọn tệp đính kèm từ bảng gợi ý @",
+      "cursor_selector": "#ide-send-btn",
+      "cursor_label": "Bước 2: Khởi tạo Lộ trình 30 ngày ứng dụng thực tế",
+      "caption": "Sang <strong>Bước 2</strong>, sau khi dự án mẫu đã đạt chuẩn kiểm toán, anh chị chọn đính kèm hồ sơ cá nhân <code>@troly.md</code> từ bảng gợi ý <code>@</code> và yêu cầu trợ lý thiết kế riêng một <strong>Lộ trình 30 ngày</strong> áp dụng ngay vào công việc thật của anh chị.",
+      "audio_src": "audio/lesson_24/b6.mp3",
+      "audio_duration": 13.04
+    },
+    {
+      "id": "b7",
+      "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+      "duration": 18.25,
+      "pose": 7,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "🎓 Thực hành Bước 3/3 · Tốt nghiệp Antigravity Basic",
+      "pedagogy_title": "Bước 3: Nghiệm thu Bản đồ Hành động 30 ngày tại lo_trinh_30_ngay_cua_toi.md",
+      "pedagogy_note": "Chúc mừng bạn đã hoàn thành trọn vẹn khóa học Antigravity Basic (6 Chương · 24 Bài giảng · 4 Tuần hành động)!",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'lo_trinh_30_ngay_cua_toi.md', breadcrumb:'antigravity_course_vn › lo_trinh_30_ngay_cua_toi.md (Tốt nghiệp!)', editorTitle:'🎓 lo_trinh_30_ngay_cua_toi.md — Chứng Nhận & Bản Đồ Hành Động 30 Ngày', editorHtml:\"<div style=\\\"padding:14px 16px;background:#fbf8f3;border:2px solid #ea580c;border-radius:12px;font-family:system-ui,-apple-system,sans-serif;\\\"><div style=\\\"display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;\\\"><div><span style=\\\"background:#ea580c;color:#fff;font-size:10.5px;font-weight:800;padding:3px 9px;border-radius:99px;margin-right:8px;\\\">🎓 CHỨNG NHẬN TỐT NGHIỆP</span><strong style=\\\"color:#9a3412;font-size:14px;\\\">BẢN ĐỒ HÀNH ĐỘNG 30 NGÀY LÀM CHỦ ANTIGRAVITY IDE</strong></div><span style=\\\"font-size:11.5px;font-weight:800;color:#15803d;\\\">24/24 Bài hoàn tất ✓</span></div><div style=\\\"display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12px;line-height:1.45;\\\"><div style=\\\"background:#ffffff;border:1px solid #fed7aa;border-left:4px solid #ea580c;border-radius:8px;padding:8px 10px;\\\"><strong style=\\\"color:#9a3412;\\\">📅 TUẦN 1 · KHỞI TẠO KHÔNG GIAN SỐ:</strong><br/>Tạo thư mục công việc thật trên máy, bật quyền <code>Turbo</code> và hoàn thiện hồ sơ cá nhân <code>@troly.md</code>.</div><div style=\\\"background:#ffffff;border:1px solid #bae6fd;border-left:4px solid #0284c7;border-radius:8px;padding:8px 10px;\\\"><strong style=\\\"color:#0369a1;\\\">📅 TUẦN 2 · XÂY BỘ NÃO .AGENT:</strong><br/>Thiết lập nội quy <code>.agent/rules/</code> và đóng gói 3 việc lặp lại hàng tuần thành lệnh <code>/workflow</code>.</div><div style=\\\"background:#ffffff;border:1px solid #bbf7d0;border-left:4px solid #16a34a;border-radius:8px;padding:8px 10px;\\\"><strong style=\\\"color:#15803d;\\\">📅 TUẦN 3 · CHU TRÌNH ĐỀ ÁN &amp; SLIDE:</strong><br/>Áp dụng <code>/grill-me &rarr; /plan &rarr; /learn</code> cho báo cáo tuần và xuất bản bộ Slide Web 16:9.</div><div style=\\\"background:#ffffff;border:1px solid #ddd6fe;border-left:4px solid #7c3aed;border-radius:8px;padding:8px 10px;\\\"><strong style=\\\"color:#6d28d9;\\\">📅 TUẦN 4 · NHÂN RỘNG TOÀN PHÒNG BAN:</strong><br/>Chia sẻ bộ kỹ năng <code>.agent/skills/</code> qua GitHub và kiểm toán bảo mật bằng <code>.gitignore</code>.</div></div></div>\", userMsg:'@troly.md @bien_ban_nghiem_thu_du_an.md Hãy lập Lộ trình 30 ngày ứng dụng tại lo_trinh_30_ngay_cua_toi.md', aiMsg:'Chúc mừng bạn đã hoàn thành trọn vẹn 24 bài giảng của khóa học <strong>Antigravity Basic</strong>! Bản đồ hành động 4 tuần tại <code>lo_trinh_30_ngay_cua_toi.md</code> đã sẵn sàng đồng hành cùng bạn.'});",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas",
+        "#ide-chat-messages"
+      ],
+      "pre_click_selector": "#ide-send-btn",
+      "pre_click_label": "Bước 3: Nhấp nút Gửi để xuất Lộ trình 30 ngày & Tốt nghiệp!",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "🎓 Chúc mừng tốt nghiệp khóa học Antigravity Basic!",
+      "caption": "Và ở <strong>Bước 3</strong>, tấm bản đồ hành động bốn tuần <code>lo_trinh_30_ngay_cua_toi.md</code> cùng biên bản nghiệm thu khớp 100% số liệu đã hoàn tất ngay ngắn trên màn hình. Anh chị đã nắm trọn quy trình kiểm toán chéo, bảo mật dữ liệu bằng <code>.gitignore</code> và lộ trình 30 ngày để áp dụng ngay Trợ lý AI vào công việc thực tế hàng ngày tại doanh nghiệp!",
+      "audio_src": "audio/lesson_24/b7.mp3",
+      "audio_duration": 17.6
+    }
+  ]
+}

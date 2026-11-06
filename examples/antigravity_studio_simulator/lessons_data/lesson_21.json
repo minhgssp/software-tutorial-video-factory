@@ -1,0 +1,177 @@
+{
+  "lesson_slug": "lesson_21",
+  "filename": "lesson_21.html",
+  "legacy_alias": "lesson_06_lap_ke_hoach_chien_luoc_7_buoc.html",
+  "code": "BÀI 21",
+  "chapter_number": 6,
+  "chapter_code": "CHƯƠNG 6",
+  "chapter_title": "4 Tình huống Thực chiến Toàn diện (Case Studies)",
+  "title": "Tình huống 1 — Lập Kế hoạch Chiến lược Từ 0 Đến Bản Thảo Hoàn chỉnh",
+  "short_title": "Case Study 1: Kế hoạch Chiến lược",
+  "pill_label": "Bài 21 · Case 1: Chiến lược 7 Bước",
+  "description": "Thực chiến bài toán 'Đứng trên vai người khổng lồ': Phỏng vấn một chuyên gia có dự án thành công mẫu (Thương hiệu 5balance), rút trích bộ khung chiến lược 7 bước và nhân bản sang dự án mới tinh (Giày Thời trang Bền vững từ Bã Mía).",
+  "prerequisites": "Toàn bộ Chương 1..5 (Đặc biệt là kỹ thuật bóc tách hồ sơ mẫu, bộ não .agent và chu trình /grill-me -> /plan).",
+  "dependents": "Bài 22 (Case Study Tuyển dụng HR), Bài 23 (Case Study Pháp lý), Bài 24 (Tổng duyệt & Khóa sổ dự án).",
+  "placement_risk": "0% Rủi ro — Đây là Case Study thực chiến độc lập số 1 của Chương 6 (sử dụng bài toán 5balance -> Giày Bã Mía), hoàn toàn không trùng lặp với bài tập TaskFlow B2B ở Bài 12.",
+  "continuity_bridge": "Hoàn thành Bài 21, học viên đã nắm vững phương pháp giải mã hồ sơ mẫu thành công để nhân bản sang bản kế hoạch chiến lược 7 bước cho dự án mới.",
+  "slides": {
+    "s1": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 6 · BÀI 21 · TÌNH HUỐNG THỰC CHIẾN 1</span>\n        <span class=\"k-slide-step\">Phương pháp \"Đứng trên vai người khổng lồ\" trong Lập kế hoạch</span>\n      </div>\n      <div class=\"k-slide-h1\">Giải mã hồ sơ thành công mẫu để rút trích Khuôn chiến lược 7 bước</div>\n      <div class=\"k-slide-sub\">Thay vì ngồi trước trang giấy trắng, hãy để AI lọc lấy bộ khung phương pháp luận từ một dự án đã thắng lợi.</div>\n    </div>\n    <div style=\"display:flex; flex-direction:column; gap:10px; margin-top:6px;\">\n      <div class=\"k-visual-hero-box k-step-item k-hl\" id=\"s1_step1\" data-order=\"1\" style=\"padding:12px 16px;\">\n        <div class=\"k-viz-header\" style=\"margin-bottom:6px;\">\n          <span class=\"k-viz-badge\">🔄 CƠ CHẾ RÚT TRÍCH &amp; NHÂN BẢN CHIẾN LƯỢC</span>\n          <span class=\"k-viz-title\">Tách bỏ dữ liệu cũ của dự án 5balance — Giữ lại bộ khung 7 bước để đúc dự án Giày Bã Mía</span>\n        </div>\n        <svg viewBox=\"0 0 840 76\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%; height:auto;\">\n          <rect x=\"8\" y=\"8\" width=\"248\" height=\"60\" rx=\"10\" fill=\"#FFF7ED\" stroke=\"#FB923C\" stroke-width=\"1.5\"/>\n          <text x=\"132\" y=\"30\" text-anchor=\"middle\" fill=\"#9A3412\" font-size=\"11.5\" font-weight=\"800\">1. HỒ SƠ MẪU (5BALANCE)</text>\n          <text x=\"132\" y=\"50\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"11\">Dự án thực phẩm dinh dưỡng đã thành công</text>\n          <path d=\"M262 38 H294\" stroke=\"#EA580C\" stroke-width=\"2.5\" stroke-linecap=\"round\"/>\n          <polygon points=\"290,33 300,38 290,43\" fill=\"#EA580C\"/>\n          <rect x=\"306\" y=\"8\" width=\"248\" height=\"60\" rx=\"10\" fill=\"#EFF6FF\" stroke=\"#60A5FA\" stroke-width=\"2\"/>\n          <text x=\"430\" y=\"30\" text-anchor=\"middle\" fill=\"#1D4ED8\" font-size=\"11.5\" font-weight=\"800\">2. KHUÔN CHIẾN LƯỢC 7 BƯỚC</text>\n          <text x=\"430\" y=\"50\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"11\">Lọc lấy cấu trúc tiêu đề &amp; công thức tính</text>\n          <path d=\"M560 38 H592\" stroke=\"#15803D\" stroke-width=\"2.5\" stroke-linecap=\"round\"/>\n          <polygon points=\"588,33 598,38 588,43\" fill=\"#15803D\"/>\n          <rect x=\"604\" y=\"8\" width=\"228\" height=\"60\" rx=\"10\" fill=\"#DCFCE7\" stroke=\"#4ADE80\" stroke-width=\"1.5\"/>\n          <text x=\"718\" y=\"30\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"11.5\" font-weight=\"800\">3. ĐỀ ÁN MỚI (GIÀY BÃ MÍA)</text>\n          <text x=\"718\" y=\"50\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"11\">Đổ thông số mới vào 7 bước hoàn chỉnh</text>\n        </svg>\n      </div>\n      <div class=\"k-grid-2\" style=\"display:grid; grid-template-columns:1fr 1fr; gap:10px;\">\n        <div class=\"k-card k-step-item k-unreached\" id=\"s1_step2\" data-order=\"2\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">BƯỚC 1 &amp; 2 · CHÂN DUNG &amp; NỖI ĐAU</span>\n          </div>\n          <h3>Xác định đúng tệp khách hàng mục tiêu</h3>\n          <p>Nhắm tới giới trẻ văn phòng 22–35 tuổi yêu lối sống xanh nhưng luôn e ngại các sản phẩm tái chế dễ thấm nước và nhanh bong đế.</p>\n        </div>\n        <div class=\"k-card k-step-item k-unreached\" id=\"s1_step3\" data-order=\"3\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#DCFCE7; color:#15803D; border:1px solid #86EFAC;\">BƯỚC 3 · LỢI THẾ ĐỘC QUYỀN (USP)</span>\n          </div>\n          <h3>Định vị giá trị khác biệt không thể sao chép</h3>\n          <p>Sử dụng sợi bã mía Việt Nam kháng nước tự nhiên, trọng lượng nhẹ gấp đôi và đế cao su sinh học bền bỉ suốt 3 năm sử dụng.</p>\n        </div>\n      </div>\n    </div>\n    ",
+    "s2": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 6 · BÀI 21 · QUY TRÌNH PHỎNG VẤN &amp; LẬP ĐỀ ÁN</span>\n        <span class=\"k-slide-step\">Kết hợp Khuôn 7 bước với Chu trình <code>/grill-me</code> ➔ <code>/plan</code></span>\n      </div>\n      <div class=\"k-slide-h1\">Để AI phỏng vấn xoáy sâu từng thông số rồi tự động xuất bản bản kế hoạch gọi vốn</div>\n      <div class=\"k-slide-sub\">Không một dòng nào bị sao chép máy móc từ dự án cũ — Toàn bộ con số đều bám sát bài toán kinh doanh mới của bạn.</div>\n    </div>\n    <div style=\"display:flex; flex-direction:column; gap:10px; margin-top:6px;\">\n      <div class=\"k-grid-2\" style=\"display:grid; grid-template-columns:1fr 1fr; gap:10px;\">\n        <div class=\"k-card k-step-item k-hl\" id=\"s2_step1\" data-order=\"1\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#E0F2FE; color:#0369A1; border:1px solid #7DD3FC;\">BƯỚC 4 &amp; 5 · DÙNG /GRILL-ME CHỐT PHỄU BÁN HÀNG</span>\n          </div>\n          <h3>Hỏi xoáy để khóa mức giá và chiến dịch ra mắt</h3>\n          <p>AI dựa vào khuôn mẫu để hỏi bạn về giá bán lẻ (chốt 890.000 VNĐ/đôi, combo 2 đôi 1.650.000 VNĐ) và mục tiêu đặt trước 500 đôi tháng đầu.</p>\n        </div>\n        <div class=\"k-card k-step-item k-unreached\" id=\"s2_step2\" data-order=\"2\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#DCFCE7; color:#15803D; border:1px solid #86EFAC;\">BƯỚC 6 &amp; 7 · DÙNG /PLAN TÍNH ĐIỂM HÒA VỐN</span>\n          </div>\n          <h3>Hoàn tất bài toán tài chính và quản trị rủi ro</h3>\n          <p>Từ chi phí sản xuất và giá bán đã chốt, lệnh <code>/plan</code> tính ra điểm hòa vốn tại mốc 1.200 đôi kèm phương án bao tiêu nguyên liệu bã mía.</p>\n        </div>\n      </div>\n      <div class=\"k-visual-hero-box k-step-item k-unreached\" id=\"s2_step3\" data-order=\"3\" style=\"padding:12px 16px;\">\n        <div class=\"k-viz-header\" style=\"margin-bottom:6px;\">\n          <span class=\"k-viz-badge\">⚡ HIỆU QUẢ THỰC CHIẾN</span>\n          <span class=\"k-viz-title\">Rút ngắn thời gian lập đề án chiến lược mới từ 2 tuần xuống còn 20 phút</span>\n        </div>\n        <svg viewBox=\"0 0 840 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%; height:auto;\">\n          <rect x=\"6\" y=\"6\" width=\"268\" height=\"48\" rx=\"8\" fill=\"#FFF7ED\" stroke=\"#FDBA74\" stroke-width=\"1.5\"/>\n          <text x=\"140\" y=\"26\" text-anchor=\"middle\" fill=\"#9A3412\" font-size=\"11.5\" font-weight=\"800\">📂 @08_quy_trinh_lap_ke_hoach.md</text>\n          <text x=\"140\" y=\"43\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"10.5\">Khuôn 7 bước chuẩn mực làm điểm tựa</text>\n          <rect x=\"286\" y=\"6\" width=\"268\" height=\"48\" rx=\"8\" fill=\"#EFF6FF\" stroke=\"#93C5FD\" stroke-width=\"1.5\"/>\n          <text x=\"420\" y=\"26\" text-anchor=\"middle\" fill=\"#1D4ED8\" font-size=\"11.5\" font-weight=\"800\">💬 Phỏng vấn /grill-me &amp; /plan</text>\n          <text x=\"420\" y=\"43\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"10.5\">Khai thác triệt để ý tưởng của chủ dự án</text>\n          <rect x=\"566\" y=\"6\" width=\"268\" height=\"48\" rx=\"8\" fill=\"#DCFCE7\" stroke=\"#86EFAC\" stroke-width=\"1.5\"/>\n          <text x=\"700\" y=\"26\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"11.5\" font-weight=\"800\">🌱 ke_hoach_giay_ba_mia_2026.md</text>\n          <text x=\"700\" y=\"43\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"10.5\">Sẵn sàng trình nhà đầu tư &amp; đội ngũ</text>\n        </svg>\n      </div>\n    </div>\n    "
+  },
+  "beats": [
+    {
+      "id": "b1",
+      "label": "1. Lý thuyết (Phần 1): Phương pháp giải mã dự án mẫu thành Khuôn chiến lược 7 bước",
+      "duration": 21.65,
+      "pose": 1,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s1",
+      "hl": [
+        "s1_step1",
+        "s1_step2",
+        "s1_step3"
+      ],
+      "caption": "Khi bắt tay lập kế hoạch kinh doanh cho một sản phẩm hoàn toàn mới, cách thông minh nhất là đứng trên vai người khổng lồ. Thay vì ngồi trước trang giấy trắng, anh chị hãy đưa cho AI một bộ hồ sơ dự án đã thành công thực tế — chẳng hạn thương hiệu <strong>5balance</strong> — để trợ lý lọc bỏ toàn bộ dữ liệu cũ và rút trích ra cái khung phương pháp luận 7 bước, từ phân tích chân dung khách hàng, nỗi đau thị trường cho tới định vị lợi thế độc quyền.",
+      "audio_src": "audio/lesson_21/b1.mp3",
+      "audio_duration": 21.0,
+      "slide_id": "s1"
+    },
+    {
+      "id": "b2",
+      "label": "2. Lý thuyết (Phần 2): Kết hợp Khuôn 7 bước với chu trình /grill-me và /plan",
+      "duration": 24.78,
+      "pose": 2,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s2",
+      "hl": [
+        "s2_step1",
+        "s2_step2",
+        "s2_step3"
+      ],
+      "caption": "Sau khi đã có chiếc khuôn 7 bước làm điểm tựa, chúng ta kết hợp với lệnh <code>/grill-me</code> để trợ lý đóng vai Giám đốc Chiến lược hỏi xoáy từng thông số của dự án mới là <strong>Giày Thời trang Bền vững từ Bã Mía</strong>. Khi anh chị trả lời xong mức giá bán lẻ 890.000 đồng và mục tiêu đặt trước 500 đôi, lệnh <code>/plan</code> sẽ tự động tính toán điểm hòa vốn ở đôi giày thứ 1.200 cùng phương án bao tiêu nguyên liệu, hoàn tất bản đề án gọi vốn chỉ trong hai mươi phút.",
+      "audio_src": "audio/lesson_21/b2.mp3",
+      "audio_duration": 24.13,
+      "slide_id": "s2"
+    },
+    {
+      "id": "b3",
+      "label": "3. Minh họa: Quan sát tệp quy trình chiến lược 7 bước trong IDE",
+      "duration": 11.69,
+      "pose": 3,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Giải phẫu Khung Chiến lược 7 Bước",
+      "pedagogy_title": "Quan sát tệp 08_quy_trinh_lap_ke_hoach_chien_luoc.md trên màn hình",
+      "pedagogy_note": "Trợ lý AI đọc hồ sơ mẫu 5balance nhưng lọc bỏ toàn bộ dữ liệu cũ, chỉ giữ lại 7 tiêu đề khung để làm khuôn đúc cho dự án mới.",
+      "onEnter": "kudoSimScene({surface:'ide', file:'08_quy_trinh_lap_ke_hoach_chien_luoc.md', activeTreeFile:'08_quy_trinh_lap_ke_hoach_chien_luoc.md'});",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas"
+      ],
+      "pre_click_selector": "[data-file='08_quy_trinh_lap_ke_hoach_chien_luoc.md']",
+      "pre_click_label": "Nhấp chọn tệp 08_quy_trinh_lap_ke_hoach_chien_luoc.md ở cây thư mục trái",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Tệp khung chiến lược 7 bước tại cột giữa",
+      "caption": "Nhìn vào tệp <code>08_quy_trinh_lap_ke_hoach_chien_luoc.md</code> đang mở ở cột giữa: Trợ lý đã tách riêng phần khung phương pháp luận 7 bước từ dự án mẫu <strong>5balance</strong> để chuẩn bị phỏng vấn thông số cho dự án <strong>Giày Bã Mía</strong>.",
+      "audio_src": "audio/lesson_21/b3.mp3",
+      "audio_duration": 11.04
+    },
+    {
+      "id": "b4",
+      "label": "4. Kỹ thuật: Cách kết hợp khuôn mẫu có sẵn với lệnh /grill-me",
+      "duration": 11.85,
+      "pose": 4,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Phỏng vấn Theo Khuôn 7 Bước",
+      "pedagogy_title": "AI dựa vào 7 bước trong tệp mẫu để đặt câu hỏi phỏng vấn người dùng",
+      "pedagogy_note": "Nhờ có tệp mẫu đính kèm bằng @, lệnh /grill-me không hỏi lan man mà hỏi xoáy đúng 7 mảnh ghép còn thiếu của dự án Giày Bã Mía.",
+      "onEnter": "kudoSimScene({surface:'ide', file:'08_quy_trinh_lap_ke_hoach_chien_luoc.md', activeTreeFile:'08_quy_trinh_lap_ke_hoach_chien_luoc.md'}); kudoRunGrillAndPlanDemo();",
+      "focus_selectors": [
+        "#editor-canvas",
+        "#ide-chat-messages",
+        "#ide-chat-input"
+      ],
+      "pre_click_selector": "#ide-send-btn",
+      "pre_click_label": "Nhấp gửi lệnh /grill-me để AI phỏng vấn theo khung 7 bước",
+      "cursor_selector": "#ide-chat-messages",
+      "cursor_label": "AI phỏng vấn theo đúng khung 7 bước chiến lược",
+      "caption": "Khi anh chị đính kèm tệp quy trình 7 bước cùng lệnh <code>/grill-me</code> ở cột phải, trợ lý AI sẽ đóng vai Giám đốc Chiến lược hỏi anh chị từng thông số của đôi giày bã mía để lấp đầy cả 7 bước mà không bị sót mục nào.",
+      "audio_src": "audio/lesson_21/b4.mp3",
+      "audio_duration": 11.2
+    },
+    {
+      "id": "b5",
+      "label": "5. Bước 1: Mở tệp khung chiến lược 7 bước",
+      "duration": 10.41,
+      "pose": 5,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 1/3 · Nạp Khuôn Mẫu 7 Bước",
+      "pedagogy_title": "Khởi nghiệp dự án Giày Bã Mía, cần bản kế hoạch gọi vốn trong 30 phút",
+      "pedagogy_note": "Bước 1: Bấm mở tệp 08_quy_trinh_lap_ke_hoach_chien_luoc.md trên cây thư mục bên trái.",
+      "onEnter": "kudoSimScene({surface:'ide', file:'08_quy_trinh_lap_ke_hoach_chien_luoc.md', activeTreeFile:'08_quy_trinh_lap_ke_hoach_chien_luoc.md'});",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas"
+      ],
+      "pre_click_selector": "[data-file='08_quy_trinh_lap_ke_hoach_chien_luoc.md']",
+      "pre_click_label": "Nhấp chọn tệp 08_quy_trinh_lap_ke_hoach_chien_luoc.md ở cây thư mục trái",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Bước 1: Mở tệp 08_quy_trinh_lap_ke_hoach_chien_luoc.md",
+      "caption": "Chúng ta bắt đầu thực hành 3 bước của Tình huống 1. Ở <strong>Bước 1</strong>, anh chị nhấp chọn tệp <code>08_quy_trinh_lap_ke_hoach_chien_luoc.md</code> ở cây thư mục trái để hiển thị khuôn mẫu 7 bước tại cột giữa.",
+      "audio_src": "audio/lesson_21/b5.mp3",
+      "audio_duration": 9.76
+    },
+    {
+      "id": "b6",
+      "label": "6. Bước 2: Gửi thông số Giày Bã Mía và kích hoạt lệnh /plan",
+      "duration": 12.01,
+      "pose": 6,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 2/3 · Chốt thông số & Chạy /plan",
+      "pedagogy_title": "Bước 2: Chọn tệp từ bảng gợi ý @ và gõ /plan để xuất bản đề án",
+      "pedagogy_note": "Cung cấp giá bán 890.000đ, mục tiêu Pre-order 500 đôi và yêu cầu lưu ra tệp ke_hoach_giay_ba_mia_2026.md.",
+      "onEnter": "kudoSimScene({surface:'ide', file:'08_quy_trinh_lap_ke_hoach_chien_luoc.md', activeTreeFile:'08_quy_trinh_lap_ke_hoach_chien_luoc.md', popupMode:'mention', clearChat:true, chatInput:'@08_quy_trinh_lap_ke_hoach_chien_luoc.md /plan Dự án Giày Bã Mía: Giá bán 890.000 VNĐ/đôi, khách hàng trẻ 22-35 tuổi, mục tiêu Pre-order 500 đôi tháng đầu. Hãy xuất bản kế hoạch 7 bước vào ke_hoach_giay_ba_mia_2026.md'});",
+      "focus_selectors": [
+        "#ide-popup-menu",
+        "#ide-chat-input",
+        "#ide-send-btn"
+      ],
+      "pre_click_selector": "#ide-popup-menu .popup-item",
+      "pre_click_label": "Chọn tệp đính kèm từ bảng gợi ý @",
+      "cursor_selector": "#ide-send-btn",
+      "cursor_label": "Bước 2: Gửi thông số Giày Bã Mía + lệnh /plan",
+      "caption": "Sang <strong>Bước 2</strong>, sau khi chọn tệp quy trình từ bảng gợi ý <code>@</code> và nhập mức giá 890.000 đồng cùng mục tiêu 500 đôi đặt trước, anh chị gõ lệnh <code>/plan</code> để trợ lý đổ toàn bộ dữ liệu vào khuôn 7 bước.",
+      "audio_src": "audio/lesson_21/b6.mp3",
+      "audio_duration": 11.36
+    },
+    {
+      "id": "b7",
+      "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+      "duration": 19.5,
+      "pose": 7,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "✅ Thực hành Bước 3/3 · Hoàn thành Case Study 1",
+      "pedagogy_title": "Bước 3: Nghiệm thu bản Kế hoạch Chiến lược 7 bước hoàn chỉnh ke_hoach_giay_ba_mia_2026.md",
+      "pedagogy_note": "Đề án Giày Bã Mía hoàn chỉnh cả 7 bước xuất hiện trên cây thư mục và cột giữa.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'ke_hoach_giay_ba_mia_2026.md', breadcrumb:'antigravity_course_vn › ke_hoach_giay_ba_mia_2026.md (Hoàn tất 7 Bước)', editorTitle:'🌱 ke_hoach_giay_ba_mia_2026.md — Kế Hoạch Chiến Lược Giày Bã Mía', editorHtml:\"<div style=\\\"padding:16px;font-family:system-ui,-apple-system,sans-serif;\\\"><div style=\\\"display:flex;align-items:center;justify-content:space-between;background:#f0fdf4;border:1px solid #86efac;border-radius:10px;padding:10px 14px;margin-bottom:12px;\\\"><div><span style=\\\"background:#16a34a;color:#fff;font-size:11px;font-weight:800;padding:3px 8px;border-radius:99px;margin-right:8px;\\\">HOÀN TẤT 7/7 BƯỚC</span><strong style=\\\"color:#14532d;font-size:14px;\\\">ĐỀ ÁN CHIẾN LƯỢC THƯƠNG HIỆU GIÀY BÃ MÍA 2026</strong></div><span style=\\\"font-size:12px;color:#15803d;font-weight:700;\\\">Khuôn gốc: 5balance</span></div><div style=\\\"display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12.5px;line-height:1.45;\\\"><div style=\\\"background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:8px 10px;\\\"><strong style=\\\"color:#9a3412;\\\">Bước 1–2 · Chân dung &amp; Nỗi đau:</strong><br/>Nhân sự văn phòng 22–35 tuổi tại Hà Nội &amp; TP.HCM; xóa nỗi sợ giày sinh học nhanh hỏng.</div><div style=\\\"background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:8px 10px;\\\"><strong style=\\\"color:#9a3412;\\\">Bước 3 · Định vị Độc quyền (USP):</strong><br/>Sợi bã mía Việt Nam kháng nước nhẹ gấp đôi, đế cao su sinh học bền bỉ 3 năm.</div><div style=\\\"background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:8px 10px;\\\"><strong style=\\\"color:#1d4ed8;\\\">Bước 4–5 · Giá &amp; Phễu Ra mắt:</strong><br/>Giá bán lẻ <strong>890.000 VNĐ/đôi</strong> (Combo 2 đôi: 1.650.000 VNĐ); Pre-order 500 đôi tháng đầu.</div><div style=\\\"background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:8px 10px;\\\"><strong style=\\\"color:#15803d;\\\">Bước 6–7 · Điểm Hòa vốn &amp; Dự phòng:</strong><br/>Hòa vốn tại mốc <strong>1.200 đôi</strong>; ký hợp đồng bao tiêu 2 nhà máy đường Tây Ninh.</div></div></div>\", userMsg:'@08_quy_trinh_lap_ke_hoach_chien_luoc.md /plan Xuất bản kế hoạch 7 bước vào ke_hoach_giay_ba_mia_2026.md', aiMsg:'Đã hoàn tất nhân bản khung chiến lược 7 bước từ 5balance sang đề án mới tại <code>ke_hoach_giay_ba_mia_2026.md</code>!'});",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas",
+        "#ide-chat-messages"
+      ],
+      "pre_click_selector": "#ide-send-btn",
+      "pre_click_label": "Bước 3: Nhấp nút Gửi để xuất bản ke_hoach_giay_ba_mia_2026.md",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Bước 3: Hoàn tất Đề án Chiến lược Giày Bã Mía!",
+      "caption": "Ở <strong>Bước 3</strong>, toàn bộ bản kế hoạch chiến lược 7 bước của thương hiệu <strong>Giày Bã Mía</strong> tại tệp <code>ke_hoach_giay_ba_mia_2026.md</code> đã hoàn tất trọn vẹn từ định vị khách hàng, chiến lược giá bán tới điểm hòa vốn 1.200 đôi. Với phương pháp rút trích khuôn mẫu kết hợp phỏng vấn sâu này, anh chị có thể tự tin xây dựng đề án chiến lược cho bất kỳ lĩnh vực kinh doanh mới nào!",
+      "audio_src": "audio/lesson_21/b7.mp3",
+      "audio_duration": 18.85
+    }
+  ]
+}

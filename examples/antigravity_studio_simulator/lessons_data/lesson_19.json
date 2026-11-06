@@ -1,0 +1,174 @@
+{
+  "lesson_slug": "lesson_19",
+  "filename": "lesson_19.html",
+  "legacy_alias": "",
+  "code": "BÀI 19",
+  "chapter_number": 5,
+  "chapter_code": "CHƯƠNG 5",
+  "chapter_title": "Sản xuất Nội dung, Thiết kế Slide & Báo cáo Trực quan",
+  "title": "Tạo Hình ảnh Minh họa, Infographic & Ấn phẩm Nhận diện Thương hiệu",
+  "short_title": "Tạo Ảnh Minh họa & Infographic",
+  "pill_label": "Bài 19 · Ảnh Minh họa & Infographic",
+  "description": "Áp dụng công thức 4 thành phần (Chủ thể + Bối cảnh + Phong cách + Bảng màu thương hiệu) để tạo hình ảnh minh họa bài viết, sơ đồ Infographic và biểu ngữ truyền thông đồng bộ sắc màu doanh nghiệp.",
+  "prerequisites": "Bài 17 (Cẩm nang thương hiệu brand_voice.md) & Bài 18 (Đã có bài viết chien_dich_noi_dung_q2.md cần ảnh minh họa).",
+  "dependents": "Bài 20 (Đưa hình ảnh và biểu đồ trực quan vào bộ Slide thuyết trình và Báo cáo Web).",
+  "placement_risk": "0% Rủi ro — Học viên học cách khóa chặt Bảng màu & Phong cách cố định nên bộ ảnh sinh ra không bị lệch tông nhau.",
+  "continuity_bridge": "Hoàn thành Bài 19, học viên đã nắm vững công thức khóa phong cách và bảng màu để tạo bộ ấn phẩm hình ảnh, sơ đồ Infographic SVG đồng bộ nhận diện thương hiệu.",
+  "slides": {
+    "s1": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 5 · BÀI 19 · NGUYÊN LÝ ĐỒNG BỘ HÌNH ẢNH</span>\n        <span class=\"k-slide-step\">Vì sao ảnh minh họa AI vẽ ra hay bị \"mỗi bức một kiểu\"?</span>\n      </div>\n      <div class=\"k-slide-h1\">Công thức Khóa Phong cách: Thay đổi Chủ thể nhưng giữ cố định Bảng màu &amp; Nét vẽ</div>\n      <div class=\"k-slide-sub\">Bí quyết để 10 bức ảnh và sơ đồ trong toàn chiến dịch nhìn thống nhất như do một họa sĩ thiết kế riêng.</div>\n    </div>\n    <div style=\"display:flex; flex-direction:column; gap:10px; margin-top:6px;\">\n      <div class=\"k-visual-hero-box k-step-item k-hl\" id=\"s1_step1\" data-order=\"1\" style=\"padding:12px 16px;\">\n        <div class=\"k-viz-header\" style=\"margin-bottom:6px;\">\n          <span class=\"k-viz-badge\">🎨 CẤU TRÚC LỆNH THIẾT KẾ ĐỒNG BỘ</span>\n          <span class=\"k-viz-title\">Tách câu lệnh hình ảnh thành Phần biến đổi (Chủ thể) và Phần khóa cứng (Thương hiệu)</span>\n        </div>\n        <svg viewBox=\"0 0 840 76\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%; height:auto;\">\n          <rect x=\"8\" y=\"8\" width=\"255\" height=\"60\" rx=\"10\" fill=\"#EFF6FF\" stroke=\"#60A5FA\" stroke-width=\"1.5\"/>\n          <text x=\"135\" y=\"30\" text-anchor=\"middle\" fill=\"#1D4ED8\" font-size=\"11.5\" font-weight=\"800\">1. PHẦN THAY ĐỔI THEO BÀI</text>\n          <text x=\"135\" y=\"50\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"11\">Chủ thể &amp; Tình huống minh họa</text>\n          <text x=\"282\" y=\"42\" text-anchor=\"middle\" fill=\"#EA580C\" font-size=\"20\" font-weight=\"900\">+</text>\n          <rect x=\"300\" y=\"8\" width=\"255\" height=\"60\" rx=\"10\" fill=\"#FFF7ED\" stroke=\"#FB923C\" stroke-width=\"2\"/>\n          <text x=\"427\" y=\"30\" text-anchor=\"middle\" fill=\"#9A3412\" font-size=\"11.5\" font-weight=\"800\">2. KHÓA PHONG CÁCH CỐ ĐỊNH</text>\n          <text x=\"427\" y=\"50\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"11\">Minh họa phẳng Editorial · Thoáng sạch</text>\n          <text x=\"574\" y=\"42\" text-anchor=\"middle\" fill=\"#EA580C\" font-size=\"20\" font-weight=\"900\">+</text>\n          <rect x=\"592\" y=\"8\" width=\"240\" height=\"60\" rx=\"10\" fill=\"#FEFCE8\" stroke=\"#FACC15\" stroke-width=\"2\"/>\n          <text x=\"712\" y=\"30\" text-anchor=\"middle\" fill=\"#A16207\" font-size=\"11.5\" font-weight=\"800\">3. KHÓA MÃ MÀU THƯƠNG HIỆU</text>\n          <text x=\"712\" y=\"50\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"11\">Nền kem #FBF8F3 · Cam đất #EA580C</text>\n        </svg>\n      </div>\n      <div class=\"k-grid-2\" style=\"display:grid; grid-template-columns:1fr 1fr; gap:10px;\">\n        <div class=\"k-card k-step-item k-unreached\" id=\"s1_step2\" data-order=\"2\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">THÀNH PHẦN BIẾN ĐỔI · CHỦ THỂ</span>\n          </div>\n          <h3>Thể hiện sát nội dung từng bài viết</h3>\n          <p>Ví dụ bức 1 vẽ cảnh bàn giao việc thủ công chồng chất giấy tờ; bức 2 vẽ lộ trình hội nhập 3 ngày gọn gàng trên bảng điều khiển.</p>\n        </div>\n        <div class=\"k-card k-step-item k-unreached\" id=\"s1_step3\" data-order=\"3\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#DCFCE7; color:#15803D; border:1px solid #86EFAC;\">THÀNH PHẦN CỐ ĐỊNH · NHẬN DIỆN</span>\n          </div>\n          <h3>Lưu sẵn hậu tố màu sắc vào <code>@brand_voice.md</code></h3>\n          <p>Mọi ấn phẩm xuất ra đều giữ nguyên nền giấy kem ấm áp, điểm nhấn cam đất và xanh đậm, nhìn từ xa đã nhận ra ngay thương hiệu TaskFlow.</p>\n        </div>\n      </div>\n    </div>\n    ",
+    "s2": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 5 · BÀI 19 · ỨNG DỤNG VĂN PHÒNG ĐẮT GIÁ</span>\n        <span class=\"k-slide-step\">Biến Quy trình Chữ thành Sơ đồ Infographic SVG/HTML Sắc nét</span>\n      </div>\n      <div class=\"k-slide-h1\">Xuất bản trực tiếp Poster Infographic &amp; Bộ biểu tượng không cần phần mềm đồ họa</div>\n      <div class=\"k-slide-sub\">Phóng to không bao giờ vỡ nét, sửa số liệu trên hình chỉ bằng một dòng lệnh trong tích tắc.</div>\n    </div>\n    <div style=\"display:flex; flex-direction:column; gap:10px; margin-top:6px;\">\n      <div class=\"k-grid-2\" style=\"display:grid; grid-template-columns:1fr 1fr; gap:10px;\">\n        <div class=\"k-card k-step-item k-hl\" id=\"s2_step1\" data-order=\"1\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#E0F2FE; color:#0369A1; border:1px solid #7DD3FC;\">ỨNG DỤNG 1 · POSTER INFOGRAPHIC SVG</span>\n          </div>\n          <h3>Trực quan hóa quy trình phức tạp thành 3 cột rõ ràng</h3>\n          <p>Yêu cầu AI dựng tệp <code>infographic_onboarding.html</code> trình bày lộ trình Ngày 1, Ngày 2, Ngày 3 kèm con số nổi bật \"Tiết kiệm 78% thời gian\".</p>\n        </div>\n        <div class=\"k-card k-step-item k-unreached\" id=\"s2_step2\" data-order=\"2\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">ỨNG DỤNG 2 · ẢNH BÌA &amp; BIỂU TƯỢNG BÁO CÁO</span>\n          </div>\n          <h3>Nâng tầm thẩm mỹ cho tài liệu nội bộ và bài đăng</h3>\n          <p>Tạo đồng bộ ảnh bìa tỷ lệ 16:9 cho Website, ảnh vuông 1:1 cho mạng xã hội và hệ thống nhãn biểu tượng (icons) trang nhã cho báo cáo quý.</p>\n        </div>\n      </div>\n      <div class=\"k-visual-hero-box k-step-item k-unreached\" id=\"s2_step3\" data-order=\"3\" style=\"padding:12px 16px;\">\n        <div class=\"k-viz-header\" style=\"margin-bottom:6px;\">\n          <span class=\"k-viz-badge\">✨ ƯU ĐIỂM VƯỢT TRỘI CỦA INFOGRAPHIC VECTOR (SVG/HTML)</span>\n          <span class=\"k-viz-title\">So với ảnh tĩnh thông thường, sơ đồ do Trợ lý AI dựng bằng mã SVG/HTML mang lại 3 lợi thế lớn</span>\n        </div>\n        <svg viewBox=\"0 0 840 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%; height:auto;\">\n          <rect x=\"6\" y=\"6\" width=\"268\" height=\"48\" rx=\"8\" fill=\"#FFF7ED\" stroke=\"#FDBA74\" stroke-width=\"1.5\"/>\n          <text x=\"140\" y=\"26\" text-anchor=\"middle\" fill=\"#9A3412\" font-size=\"11.5\" font-weight=\"800\">1. Không bao giờ sai chính tả tiếng Việt</text>\n          <text x=\"140\" y=\"43\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"10.5\">Hiển thị chuẩn xác 100% dấu câu và thuật ngữ</text>\n          <rect x=\"286\" y=\"6\" width=\"268\" height=\"48\" rx=\"8\" fill=\"#EFF6FF\" stroke=\"#93C5FD\" stroke-width=\"1.5\"/>\n          <text x=\"420\" y=\"26\" text-anchor=\"middle\" fill=\"#1D4ED8\" font-size=\"11.5\" font-weight=\"800\">2. Sắc nét tuyệt đối trên màn hình lớn</text>\n          <text x=\"420\" y=\"43\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"10.5\">Trình chiếu phòng họp hay in ấn đều rõ nét</text>\n          <rect x=\"566\" y=\"6\" width=\"268\" height=\"48\" rx=\"8\" fill=\"#DCFCE7\" stroke=\"#86EFAC\" stroke-width=\"1.5\"/>\n          <text x=\"700\" y=\"26\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"11.5\" font-weight=\"800\">3. Cập nhật số liệu trong 3 giây</text>\n          <text x=\"700\" y=\"43\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"10.5\">Đổi con số mới không cần vẽ lại từ đầu</text>\n        </svg>\n      </div>\n    </div>\n    "
+  },
+  "beats": [
+    {
+      "id": "b1",
+      "label": "1. Lý thuyết (Phần 1): Công thức khóa Phong cách & Bảng màu thương hiệu",
+      "duration": 22.86,
+      "pose": 1,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s1",
+      "hl": [
+        "s1_step1",
+        "s1_step2",
+        "s1_step3"
+      ],
+      "caption": "Khi dùng AI tạo hình ảnh minh họa cho bài viết hay báo cáo, rắc rối lớn nhất là mỗi bức ảnh sinh ra lại mang một nét vẽ và tông màu hoàn toàn xa lạ nhau. Để mười bức ảnh trong cùng một chiến dịch nhìn thống nhất như do một họa sĩ duy nhất thực hiện, anh chị hãy tách câu lệnh thành hai phần: Chỉ thay đổi phần mô tả chủ thể theo từng bài, còn khóa cố định hoàn toàn phần phong cách minh họa phẳng và mã màu thương hiệu như nền kem ấm cùng sắc cam đất.",
+      "audio_src": "audio/lesson_19/b1.mp3",
+      "audio_duration": 22.21,
+      "slide_id": "s1"
+    },
+    {
+      "id": "b2",
+      "label": "2. Lý thuyết (Phần 2): Xuất bản Sơ đồ Infographic SVG & Bộ biểu tượng sắc nét",
+      "duration": 23.22,
+      "pose": 2,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s2",
+      "hl": [
+        "s2_step1",
+        "s2_step2",
+        "s2_step3"
+      ],
+      "caption": "Đặc biệt đối với dân văn phòng, ứng dụng đắt giá nhất là nhờ trợ lý AI chuyển hóa các quy trình chữ dài dòng thành tấm <strong>Poster Infographic</strong> hoặc bộ biểu tượng dưới định dạng vector SVG và HTML ngay trong không gian làm việc. Cách làm này mang lại ba lợi thế vượt trội: Không bao giờ bị lỗi phông chữ tiếng Việt, phóng to lên màn hình hội trường không hề vỡ nét và có thể sửa lại bất kỳ con số thống kê nào chỉ trong vài giây.",
+      "audio_src": "audio/lesson_19/b2.mp3",
+      "audio_duration": 22.57,
+      "slide_id": "s2"
+    },
+    {
+      "id": "b3",
+      "label": "3. Minh họa: Quan sát tệp kịch bản thiết kế hình ảnh trong IDE",
+      "duration": 10.57,
+      "pose": 2,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Khóa Phong cách Thiết kế",
+      "pedagogy_title": "Cấu trúc phần Khóa cố định phong cách & bảng màu dùng chung cho mọi bức ảnh",
+      "pedagogy_note": "Mọi bức ảnh trong chiến dịch đều dùng chung hậu tố: 'Phong cách minh họa phẳng hiện đại, nền kem #FBF8F3, điểm nhấn cam #EA580C'.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'kich_ban_hinh_anh_q2.md', breadcrumb:'antigravity_course_vn › kich_ban_hinh_anh_q2.md', editorTitle:'🎨 kich_ban_hinh_anh_q2.md — Bộ Kịch Bản Hình Ảnh Đồng Bộ', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">KHÓA PHONG CÁCH CỐ ĐỊNH</h3><div style=\"background:#fff7ed;border:1px solid #fed7aa;padding:10px;border-radius:6px;font-size:13px;margin-bottom:10px;\"><strong>Hậu tố cố định cho mọi bức ảnh:</strong> <em>\"Phong cách minh họa phẳng Editorial ấm áp, nền giấy kem #FBF8F3, màu nhấn cam đất #EA580C và xanh đậm #1E293B, bố cục thoáng sạch.\"</em></div><ul><li><strong>Ảnh 1 (Banner Blog):</strong> So sánh 14 ngày bàn giao thủ công vs. 3 ngày tự động.</li><li><strong>Ảnh 2 (Infographic LinkedIn):</strong> Sơ đồ 3 bước Onboarding nhân sự mới.</li></ul></div>'});",
+      "focus_selectors": [
+        "#editor-canvas",
+        "#ide-file-tree"
+      ],
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Khóa cố định Phong cách + Bảng màu cho toàn bộ chiến dịch",
+      "caption": "Nhìn vào cột giữa trên màn hình: Khi chuẩn bị bộ ảnh cho chiến dịch Quý 2, chúng ta đóng khung sẵn một dòng <strong>Khóa phong cách cố định</strong> gồm nền giấy kem và màu nhấn cam đất để gắn vào cuối mọi yêu cầu vẽ ảnh.",
+      "pre_click_selector": "[data-file='kich_ban_hinh_anh_q2.md']",
+      "pre_click_label": "Nhấp chọn tệp kich_ban_hinh_anh_q2.md ở cây thư mục trái",
+      "audio_src": "audio/lesson_19/b3.mp3",
+      "audio_duration": 9.92
+    },
+    {
+      "id": "b4",
+      "label": "4. Kỹ thuật: Xem trực tiếp Poster Infographic SVG 3 cột ngay trong IDE",
+      "duration": 15.33,
+      "pose": 3,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Thiết kế Infographic Trực quan",
+      "pedagogy_title": "Trợ lý AI tự động dựng Poster Infographic SVG 3 cột màu cam/xanh/vàng",
+      "pedagogy_note": "Không cần mở phần mềm đồ họa: AI dựng ngay tấm Infographic trực quan có biểu tượng SVG và thống kê 14 ngày ➔ 3 ngày (Tiết kiệm 78%).",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'infographic_onboarding.html', breadcrumb:'antigravity_course_vn › infographic_onboarding.html', editorTitle:'🖼️ infographic_onboarding.html — Visual SVG Infographic Poster', editorHtml:'<div style=\"padding:16px;background:#fbf8f3;border:2px solid #ea580c;border-radius:12px;box-shadow:0 4px 12px rgba(234,88,12,0.08);\"><div style=\"display:flex;justify-content:space-between;align-items:center;border-bottom:1.5px dashed #fdba74;padding-bottom:10px;margin-bottom:12px;\"><div><div style=\"font-size:10px;font-weight:800;color:#ea580c;letter-spacing:0.08em;\">VISUAL SVG INFOGRAPHIC POSTER · TASKFLOW Q2/2026</div><h3 style=\"color:#1c1917;margin:3px 0 0 0;font-size:16px;\">Lộ Trình Hội Nhập Tự Động: 14 ngày ➔ 3 ngày</h3></div><div style=\"background:#ea580c;color:#fff;padding:6px 12px;border-radius:8px;text-align:right;\"><div style=\"font-size:15px;font-weight:900;\">Tiết kiệm 78%</div><div style=\"font-size:10px;opacity:0.9;\">thời gian đào tạo</div></div></div><div style=\"display:grid;grid-template-columns:repeat(3,1fr);gap:10px;\"><div style=\"background:#fff7ed;border:1.5px solid #fb923c;border-radius:10px;padding:12px;text-align:center;\"><svg width=\"36\" height=\"36\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2\" style=\"margin:0 auto 6px;display:block;\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"M7 8h10M7 12h6\"/></svg><div style=\"font-size:11px;font-weight:800;color:#c2410c;\">CỘT 1 · NGÀY 01</div><div style=\"font-size:13px;font-weight:800;color:#1e293b;margin:4px 0;\">Nạp Bối Cảnh</div><div style=\"font-size:11px;color:#475569;\">Đọc <code>@COMPANY.md</code> &amp; bản đồ mục lục dự án</div></div><div style=\"background:#eff6ff;border:1.5px solid #60a5fa;border-radius:10px;padding:12px;text-align:center;\"><svg width=\"36\" height=\"36\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\" style=\"margin:0 auto 6px;display:block;\"><polygon points=\"13 2 3 14 12 14 11 22 21 10 12 10 13 2\"/></svg><div style=\"font-size:11px;font-weight:800;color:#1d4ed8;\">CỘT 2 · NGÀY 02</div><div style=\"font-size:13px;font-weight:800;color:#1e293b;margin:4px 0;\">Thực Thi Mẫu</div><div style=\"font-size:11px;color:#475569;\">Chạy quy trình chuẩn trong <code>.agent/workflows</code></div></div><div style=\"background:#fefce8;border:1.5px solid #facc15;border-radius:10px;padding:12px;text-align:center;\"><svg width=\"36\" height=\"36\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ca8a04\" stroke-width=\"2\" style=\"margin:0 auto 6px;display:block;\"><path d=\"M22 11.08V12a10 10 0 1 1-5.93-9.14\"/><polyline points=\"22 4 12 14.01 9 11.01\"/></svg><div style=\"font-size:11px;font-weight:800;color:#a16207;\">CỘT 3 · NGÀY 03</div><div style=\"font-size:13px;font-weight:800;color:#1e293b;margin:4px 0;\">Tự Chủ 100%</div><div style=\"font-size:11px;color:#475569;\">Xuất bản báo cáo đầu tiên đạt chuẩn thương hiệu</div></div></div></div>'});",
+      "focus_selectors": [
+        "#editor-canvas",
+        "#ide-file-tree"
+      ],
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Poster Infographic trực quan 3 cột với biểu tượng SVG",
+      "caption": "Và như anh chị thấy trên màn hình cột giữa: Không chỉ viết chữ, trợ lý AI dựng trực tiếp một tấm <strong>Poster Infographic</strong> thật sự với 3 cột màu cam, xanh, vàng, biểu tượng SVG sắc nét và con số thống kê lớn <code>14 ngày ➔ 3 ngày</code>, tiết kiệm 78% thời gian đào tạo!",
+      "pre_click_selector": "[data-file='infographic_onboarding.html']",
+      "pre_click_label": "Nhấp chọn tệp infographic_onboarding.html ở cây thư mục trái",
+      "audio_src": "audio/lesson_19/b4.mp3",
+      "audio_duration": 14.68
+    },
+    {
+      "id": "b5",
+      "label": "5. Bước 1: Mở bài viết chien_dich_noi_dung_q2.md cần minh họa",
+      "duration": 10.57,
+      "pose": 4,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 1 · Chọn bài viết cần minh họa",
+      "pedagogy_title": "Cần tạo bộ ảnh bìa và Infographic cho bài viết ở Bài 18",
+      "pedagogy_note": "Bước 1: Mở tệp chien_dich_noi_dung_q2.md ở cây thư mục trái để xác định các ý chính cần chuyển thành hình ảnh.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'chien_dich_noi_dung_q2.md', breadcrumb:'antigravity_course_vn › chien_dich_noi_dung_q2.md', editorTitle:'📝 chien_dich_noi_dung_q2.md — Xác định các điểm cần minh họa', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">ĐANG CHỌN NỘI DUNG CẦN MINH HỌA</h3><p>Cần thiết kế: (1) Ảnh bìa Blog tỷ lệ 16:9 và (2) Sơ đồ Infographic 3 ngày Onboarding đồng bộ tông màu kem - cam đất.</p></div>'});",
+      "focus_selectors": [
+        "#editor-canvas",
+        "#ide-file-tree"
+      ],
+      "cursor_selector": "[data-file='chien_dich_noi_dung_q2.md']",
+      "cursor_label": "Bước 1: Kiểm tra nội dung cần minh họa hình ảnh",
+      "caption": "Chúng ta vào thực hành 3 bước thiết kế ấn phẩm trực quan. Ở <strong>Bước 1</strong>, anh chị nhấp mở tệp bài viết <code>chien_dich_noi_dung_q2.md</code> ở cây thư mục trái để đối chiếu thông điệp cần vẽ minh họa.",
+      "pre_click_selector": "[data-file='chien_dich_noi_dung_q2.md']",
+      "pre_click_label": "Nhấp chọn tệp chien_dich_noi_dung_q2.md ở cây thư mục trái",
+      "audio_src": "audio/lesson_19/b5.mp3",
+      "audio_duration": 9.92
+    },
+    {
+      "id": "b6",
+      "label": "6. Bước 2: Gửi câu lệnh tạo bộ ảnh và Infographic đồng bộ",
+      "duration": 10.09,
+      "pose": 5,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 2 · Ra lệnh Thiết kế Đồng bộ",
+      "pedagogy_title": "Bước 2: Nhập lệnh áp dụng công thức 4 lớp vào khung chat phải",
+      "pedagogy_note": "Đính kèm @brand_voice.md và @chien_dich_noi_dung_q2.md để AI xuất tệp infographic_onboarding.html.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'chien_dich_noi_dung_q2.md', clearChat:true, popupMode:'mention', chatInput:'@brand_voice.md @chien_dich_noi_dung_q2.md Hãy áp dụng bảng màu kem #FBF8F3 và cam đất #EA580C để tạo sơ đồ Infographic 3 ngày Onboarding tại tệp infographic_onboarding.html'});",
+      "focus_selectors": [
+        "#ide-chat-input",
+        "#ide-send-btn"
+      ],
+      "cursor_selector": "#ide-send-btn",
+      "cursor_label": "Bước 2: Nhấn Gửi để AI dựng Infographic thương hiệu",
+      "caption": "Sang <strong>Bước 2</strong>, anh chị đính kèm <code>@brand_voice.md</code> và tệp bài viết từ bảng gợi ý, yêu cầu dựng tấm <strong>Infographic</strong> theo đúng bảng màu kem và cam đất rồi nhấn Gửi.",
+      "pre_click_selector": "#ide-popup-menu .popup-item",
+      "pre_click_label": "Chọn tệp đính kèm từ bảng gợi ý @",
+      "audio_src": "audio/lesson_19/b6.mp3",
+      "audio_duration": 9.44
+    },
+    {
+      "id": "b7",
+      "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+      "duration": 18.56,
+      "pose": 6,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "✅ Thực hành Bước 3 · Kết quả hoàn thành",
+      "pedagogy_title": "Bước 3: Nghiệm thu tấm Poster Infographic SVG 3 cột sắc nét chuẩn màu thương hiệu",
+      "pedagogy_note": "Đã có đủ Bài viết + Poster Infographic 3 cột đồng bộ.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'infographic_onboarding.html', breadcrumb:'antigravity_course_vn › infographic_onboarding.html (Hoàn tất)', editorTitle:'🖼️ infographic_onboarding.html — Nghiệm thu Ấn phẩm Infographic Trực quan', editorHtml:'<div style=\"padding:16px;background:#fbf8f3;border:2px solid #ea580c;border-radius:12px;box-shadow:0 4px 12px rgba(234,88,12,0.08);\"><div style=\"display:flex;justify-content:space-between;align-items:center;border-bottom:1.5px dashed #fdba74;padding-bottom:10px;margin-bottom:12px;\"><div><div style=\"font-size:10px;font-weight:800;color:#ea580c;letter-spacing:0.08em;\">VISUAL SVG INFOGRAPHIC POSTER · TASKFLOW Q2/2026</div><h3 style=\"color:#1c1917;margin:3px 0 0 0;font-size:16px;\">Lộ Trình Hội Nhập Tự Động: 14 ngày ➔ 3 ngày</h3></div><div style=\"background:#ea580c;color:#fff;padding:6px 12px;border-radius:8px;text-align:right;\"><div style=\"font-size:15px;font-weight:900;\">Tiết kiệm 78%</div><div style=\"font-size:10px;opacity:0.9;\">thời gian đào tạo</div></div></div><div style=\"display:grid;grid-template-columns:repeat(3,1fr);gap:10px;\"><div style=\"background:#fff7ed;border:1.5px solid #fb923c;border-radius:10px;padding:12px;text-align:center;\"><svg width=\"36\" height=\"36\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2\" style=\"margin:0 auto 6px;display:block;\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"M7 8h10M7 12h6\"/></svg><div style=\"font-size:11px;font-weight:800;color:#c2410c;\">CỘT 1 · NGÀY 01</div><div style=\"font-size:13px;font-weight:800;color:#1e293b;margin:4px 0;\">Nạp Bối Cảnh</div><div style=\"font-size:11px;color:#475569;\">Đọc <code>@COMPANY.md</code> &amp; bản đồ mục lục dự án</div></div><div style=\"background:#eff6ff;border:1.5px solid #60a5fa;border-radius:10px;padding:12px;text-align:center;\"><svg width=\"36\" height=\"36\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\" style=\"margin:0 auto 6px;display:block;\"><polygon points=\"13 2 3 14 12 14 11 22 21 10 12 10 13 2\"/></svg><div style=\"font-size:11px;font-weight:800;color:#1d4ed8;\">CỘT 2 · NGÀY 02</div><div style=\"font-size:13px;font-weight:800;color:#1e293b;margin:4px 0;\">Thực Thi Mẫu</div><div style=\"font-size:11px;color:#475569;\">Chạy quy trình chuẩn trong <code>.agent/workflows</code></div></div><div style=\"background:#fefce8;border:1.5px solid #facc15;border-radius:10px;padding:12px;text-align:center;\"><svg width=\"36\" height=\"36\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ca8a04\" stroke-width=\"2\" style=\"margin:0 auto 6px;display:block;\"><path d=\"M22 11.08V12a10 10 0 1 1-5.93-9.14\"/><polyline points=\"22 4 12 14.01 9 11.01\"/></svg><div style=\"font-size:11px;font-weight:800;color:#a16207;\">CỘT 3 · NGÀY 03</div><div style=\"font-size:13px;font-weight:800;color:#1e293b;margin:4px 0;\">Tự Chủ 100%</div><div style=\"font-size:11px;color:#475569;\">Xuất bản báo cáo đầu tiên đạt chuẩn thương hiệu</div></div></div></div>', userMsg:'@brand_voice.md @chien_dich_noi_dung_q2.md Hãy tạo sơ đồ Infographic 3 ngày Onboarding tại tệp infographic_onboarding.html', aiMsg:'Đã hoàn tất thiết kế Poster SVG <code>infographic_onboarding.html</code> đồng bộ tuyệt đối với bảng màu thương hiệu của bạn!'});",
+      "focus_selectors": [
+        "#editor-canvas",
+        "#ide-chat-messages"
+      ],
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Bước 3: Hoàn tất Poster Infographic chuẩn màu thương hiệu!",
+      "caption": "Ở <strong>Bước 3</strong>, tấm <strong>Poster Infographic</strong> ba cột với biểu tượng SVG sắc nét và con số thống kê tiết kiệm 78% thời gian đào tạo đã hiện lên hoàn chỉnh ngay trên màn hình. Giờ đây, anh chị có thể tự tay thiết kế mọi sơ đồ quy trình và ấn phẩm minh họa đồng bộ nhận diện thương hiệu mà không cần phụ thuộc vào phần mềm đồ họa phức tạp!",
+      "pre_click_selector": "#ide-send-btn",
+      "pre_click_label": "Bước 3: Nhấp nút Gửi để AI dựng Infographic thương hiệu",
+      "audio_src": "audio/lesson_19/b7.mp3",
+      "audio_duration": 17.91
+    }
+  ]
+}

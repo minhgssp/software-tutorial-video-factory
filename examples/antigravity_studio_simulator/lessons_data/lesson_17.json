@@ -1,0 +1,174 @@
+{
+  "lesson_slug": "lesson_17",
+  "filename": "lesson_17.html",
+  "legacy_alias": "",
+  "code": "BÀI 17",
+  "chapter_number": 5,
+  "chapter_code": "CHƯƠNG 5",
+  "chapter_title": "Sản xuất Nội dung, Thiết kế Slide & Báo cáo Trực quan",
+  "title": "Khởi tạo Trung tâm Nội dung Đa kênh & Quản lý Giọng văn Thương hiệu",
+  "short_title": "Trung tâm Nội dung & Brand Voice",
+  "pill_label": "Bài 17 · Nội dung & Thương hiệu",
+  "description": "Thiết lập tệp Cẩm nang Giọng văn Thương hiệu (brand_voice.md) và Chân dung Khách hàng mục tiêu để mọi bài viết Website, Facebook, LinkedIn và Email do AI soạn ra đều đồng nhất một bản sắc.",
+  "prerequisites": "Chương 3 (Biết thiết lập Rules/Skills) & Chương 4 (Đã có báo cáo dữ liệu bao_cao_doanh_thu_q1.md làm chất liệu thực tế).",
+  "dependents": "Bài 18 (Sản xuất chuỗi bài viết & email từ brand_voice.md), Bài 19 (Thiết kế ảnh minh họa đồng bộ nhận diện thương hiệu).",
+  "placement_risk": "0% Rủi ro — Học viên khóa chặt Giọng văn Thương hiệu ở Bài 17 trước khi sản xuất hàng loạt bài viết ở Bài 18.",
+  "continuity_bridge": "Hoàn thành Bài 17, học viên đã thiết lập xong Cẩm nang Giọng văn Thương hiệu chuẩn mực làm kim chỉ nam cho mọi ấn phẩm truyền thông của doanh nghiệp.",
+  "slides": {
+    "s1": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 5 · BÀI 17 · ĐẶT VẤN ĐỀ</span>\n        <span class=\"k-slide-step\">Vì sao cần khóa chặt Giọng văn Thương hiệu?</span>\n      </div>\n      <div class=\"k-slide-h1\">Tệp <code>brand_voice.md</code> — Chiếc mỏ neo giữ chuẩn bản sắc doanh nghiệp trên mọi kênh</div>\n      <div class=\"k-slide-sub\">Chấm dứt cảnh hôm nay AI viết khô khan như văn bản hành chính, ngày mai lại sáo rỗng kiểu \"văn mẫu đại trà\".</div>\n    </div>\n    <div style=\"display:flex; flex-direction:column; gap:10px; margin-top:6px;\">\n      <div class=\"k-visual-hero-box k-step-item k-hl\" id=\"s1_step1\" data-order=\"1\" style=\"padding:12px 16px;\">\n        <div class=\"k-viz-header\" style=\"margin-bottom:8px;\">\n          <span class=\"k-viz-badge\">⚖️ ĐỐI SÁNH THỰC TẾ</span>\n          <span class=\"k-viz-title\">Viết bài tự phát không có chuẩn mực vs. Viết bài có Cẩm nang Thương hiệu</span>\n        </div>\n        <svg viewBox=\"0 0 840 94\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%; height:auto;\">\n          <rect x=\"6\" y=\"6\" width=\"386\" height=\"82\" rx=\"10\" fill=\"#FEF2F2\" stroke=\"#FCA5A5\" stroke-width=\"1.5\"/>\n          <text x=\"24\" y=\"28\" fill=\"#B91C1C\" font-size=\"12\" font-weight=\"800\">❌ KHI CHƯA CÓ BRAND_VOICE.MD (LỆCH TÔNG)</text>\n          <text x=\"24\" y=\"50\" fill=\"#7F1D1D\" font-size=\"11.5\">• Bài Website: \"Siêu phẩm đột phá hàng đầu kỷ nguyên số...\"</text>\n          <text x=\"24\" y=\"70\" fill=\"#7F1D1D\" font-size=\"11.5\">• Bài Facebook: Giọng bông đùa, xưng hô loạn xạ (Mình/Bạn - Tôi)</text>\n          <path d=\"M402 47 H438\" stroke=\"#EA580C\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n          <polygon points=\"434,41 446,47 434,53\" fill=\"#EA580C\"/>\n          <rect x=\"454\" y=\"6\" width=\"380\" height=\"82\" rx=\"10\" fill=\"#F0FDF4\" stroke=\"#86EFAC\" stroke-width=\"1.5\"/>\n          <text x=\"472\" y=\"28\" fill=\"#15803D\" font-size=\"12\" font-weight=\"800\">✅ KHI ĐÍNH KÈM @BRAND_VOICE.MD (ĐỒNG NHẤT)</text>\n          <text x=\"472\" y=\"50\" fill=\"#14532D\" font-size=\"11.5\">• Nhất quán xưng hô: \"TaskFlow — Anh/Chị\" trên mọi điểm chạm</text>\n          <text x=\"472\" y=\"70\" fill=\"#14532D\" font-size=\"11.5\">• Luôn mở đầu bằng số liệu thật: \"Rút ngắn bàn giao từ 14 xuống 3 ngày\"</text>\n        </svg>\n      </div>\n      <div class=\"k-grid-2\" style=\"display:grid; grid-template-columns:1fr 1fr; gap:10px;\">\n        <div class=\"k-card k-step-item k-unreached\" id=\"s1_step2\" data-order=\"2\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">TRỤ CỘT 1 · ĐỊNH VỊ CÁ TÍNH</span>\n          </div>\n          <h3>Khóa chặt 3 tính từ cốt lõi &amp; cách xưng hô</h3>\n          <p>Quy định rõ giọng điệu Thực chiến · Đáng tin cậy · Tôn trọng thời gian người đọc. Câu văn ngắn gọn, đi thẳng vào giải pháp quản trị.</p>\n        </div>\n        <div class=\"k-card k-step-item k-unreached\" id=\"s1_step3\" data-order=\"3\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#DCFCE7; color:#15803D; border:1px solid #86EFAC;\">TRỤ CỘT 2 · TỪ VỰNG KHUYÊN DÙNG</span>\n          </div>\n          <h3>Danh sách từ nên dùng và từ cấm kỵ tuyệt đối</h3>\n          <p>Cấm các mỹ từ phóng đại sáo rỗng; bắt buộc thay bằng con số đo lường được từ báo cáo kinh doanh thực tế của doanh nghiệp.</p>\n        </div>\n      </div>\n    </div>\n    ",
+    "s2": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 5 · BÀI 17 · MÔ HÌNH TƯ DUY</span>\n        <span class=\"k-slide-step\">Bản đồ Nỗi đau Khách hàng &amp; Tòa soạn Nội dung</span>\n      </div>\n      <div class=\"k-slide-h1\">Kết hợp Bản đồ Nỗi đau Độc giả với Kho số liệu Bảo chứng thực tế</div>\n      <div class=\"k-slide-sub\">Để mỗi bài viết xuất xưởng vừa chạm đúng trăn trở của khách hàng, vừa có dẫn chứng thuyết phục ngay lập tức.</div>\n    </div>\n    <div style=\"display:flex; flex-direction:column; gap:10px; margin-top:6px;\">\n      <div class=\"k-grid-2\" style=\"display:grid; grid-template-columns:1fr 1fr; gap:10px;\">\n        <div class=\"k-card k-step-item k-hl\" id=\"s2_step1\" data-order=\"1\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#E0F2FE; color:#0369A1; border:1px solid #7DD3FC;\">MẢNH GHÉP 1 · CHÂN DUNG &amp; NỖI ĐAU</span>\n          </div>\n          <h3>Viết trúng vấn đề người đọc đang trăn trở</h3>\n          <p>Khai báo rõ khách hàng mục tiêu là Giám đốc doanh nghiệp vừa và nhỏ đang đau đầu vì mất tới 14 ngày đào tạo nhân sự mới mà vẫn sai quy trình.</p>\n          <div class=\"k-card-mini-note\">🎯 Chạm đúng nỗi đau ngay từ 2 câu mở đầu</div>\n        </div>\n        <div class=\"k-card k-step-item k-unreached\" id=\"s2_step2\" data-order=\"2\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">MẢNH GHÉP 2 · CẶP CÂU ĐỐI CHIẾU MẪU</span>\n          </div>\n          <h3>Dạy AI bằng cặp ví dụ Sai giọng vs. Chuẩn giọng</h3>\n          <p>Đặt trực tiếp câu bị cấm cạnh câu mẫu chuẩn mực ngay trong tệp <code>brand_voice.md</code> để Trợ lý AI bắt nhịp chính xác văn phong công ty.</p>\n          <div class=\"k-card-mini-note\">✍️ Cách huấn luyện giọng văn nhanh gấp 5 lần mô tả lý thuyết</div>\n        </div>\n      </div>\n      <div class=\"k-visual-hero-box k-step-item k-unreached\" id=\"s2_step3\" data-order=\"3\" style=\"padding:12px 16px;\">\n        <div class=\"k-viz-header\" style=\"margin-bottom:6px;\">\n          <span class=\"k-viz-badge\">🔗 CÔNG THỨC KẾT HỢP NGUỒN</span>\n          <span class=\"k-viz-title\">Tổ chức thư mục như Tòa soạn thu nhỏ: Giọng văn chuẩn + Số liệu thật</span>\n        </div>\n        <svg viewBox=\"0 0 840 66\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%; height:auto;\">\n          <rect x=\"8\" y=\"8\" width=\"240\" height=\"50\" rx=\"8\" fill=\"#FFF7ED\" stroke=\"#FB923C\" stroke-width=\"1.5\"/>\n          <text x=\"128\" y=\"30\" text-anchor=\"middle\" fill=\"#9A3412\" font-size=\"12\" font-weight=\"800\">🎙️ @brand_voice.md</text>\n          <text x=\"128\" y=\"47\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"11\">Giữ chuẩn giọng điệu &amp; từ vựng</text>\n          <text x=\"274\" y=\"38\" text-anchor=\"middle\" fill=\"#EA580C\" font-size=\"20\" font-weight=\"900\">+</text>\n          <rect x=\"300\" y=\"8\" width=\"240\" height=\"50\" rx=\"8\" fill=\"#EFF6FF\" stroke=\"#60A5FA\" stroke-width=\"1.5\"/>\n          <text x=\"420\" y=\"30\" text-anchor=\"middle\" fill=\"#1D4ED8\" font-size=\"12\" font-weight=\"800\">📊 @bao_cao_doanh_thu_q1.md</text>\n          <text x=\"420\" y=\"47\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"11\">Cung cấp số liệu giữ chân 98,2%</text>\n          <text x=\"566\" y=\"38\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"18\" font-weight=\"900\">➔</text>\n          <rect x=\"592\" y=\"8\" width=\"240\" height=\"50\" rx=\"8\" fill=\"#DCFCE7\" stroke=\"#4ADE80\" stroke-width=\"1.5\"/>\n          <text x=\"712\" y=\"30\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"12\" font-weight=\"800\">🏆 Bài viết B2B Sắc bén</text>\n          <text x=\"712\" y=\"47\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"11\">Đúng cá tính, giàu sức thuyết phục</text>\n        </svg>\n      </div>\n    </div>\n    "
+  },
+  "beats": [
+    {
+      "id": "b1",
+      "label": "1. Lý thuyết (Phần 1): Vì sao phải khóa chặt Giọng văn Thương hiệu?",
+      "duration": 22.62,
+      "pose": 1,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s1",
+      "hl": [
+        "s1_step1",
+        "s1_step2",
+        "s1_step3"
+      ],
+      "caption": "Khi nhờ AI viết bài truyền thông, nỗi khổ lớn nhất của dân văn phòng là mỗi ngày AI lại viết một kiểu: hôm nay khô cứng như công văn, ngày mai lại sáo rỗng kiểu văn mẫu đại trà. Để một trăm bài đăng trên Website, Facebook hay Email đều mang đúng cá tính doanh nghiệp, chúng ta cần thiết lập tệp Cẩm nang Thương hiệu <code>brand_voice.md</code> làm chiếc mỏ neo cố định cách xưng hô, ba tính từ định vị cốt lõi và danh mục từ vựng khuyên dùng.",
+      "audio_src": "audio/lesson_17/b1.mp3",
+      "audio_duration": 21.97,
+      "slide_id": "s1"
+    },
+    {
+      "id": "b2",
+      "label": "2. Lý thuyết (Phần 2): Bản đồ nỗi đau khách hàng & Công thức kết hợp nguồn",
+      "duration": 22.85,
+      "pose": 2,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s2",
+      "hl": [
+        "s2_step1",
+        "s2_step2",
+        "s2_step3"
+      ],
+      "caption": "Bên cạnh giọng điệu, một bài viết muốn chạm tới người đọc phải gãi đúng chỗ ngứa của họ. Vì vậy trong tệp <code>brand_voice.md</code>, anh chị cần ghi rõ bản đồ nỗi đau của khách hàng mục tiêu — chẳng hạn nỗi trăn trở mất tới 14 ngày đào tạo nhân viên mới — kèm theo cặp câu ví dụ đối lập giữa cách viết sai và cách viết chuẩn. Khi kết hợp tệp cẩm nang này với báo cáo số liệu thật, mọi bài viết xuất xưởng đều vừa đúng chất riêng vừa giàu sức thuyết phục.",
+      "audio_src": "audio/lesson_17/b2.mp3",
+      "audio_duration": 22.2,
+      "slide_id": "s2"
+    },
+    {
+      "id": "b3",
+      "label": "3. Minh họa: Quan sát cấu trúc tệp brand_voice.md trong IDE",
+      "duration": 11.53,
+      "pose": 2,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Giải phẫu Tệp Brand Voice",
+      "pedagogy_title": "Cách khai báo Tính cách, Độc giả và Cặp câu Mẫu (Nên viết vs. Không nên viết)",
+      "pedagogy_note": "Mẹo hiệu quả nhất để dạy giọng văn cho AI là đưa ra 2 ví dụ đối lập: Câu viết sai giọng ( ❌ ) và Câu viết chuẩn giọng ( ✅ ).",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'brand_voice.md', breadcrumb:'antigravity_course_vn › brand_voice.md', editorTitle:'🎙️ brand_voice.md — Cẩm Nang Giọng Văn Thương Hiệu TaskFlow', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#9a3412;margin-top:0;\">CẨM NANG GIỌNG VĂN THƯƠNG HIỆU — TASKFLOW INC.</h2><ul><li><strong>Tính cách cốt lõi:</strong> Thực chiến, Đáng tin cậy, Tôn trọng thời gian của người đọc.</li><li><strong>Khách hàng mục tiêu:</strong> CEO &amp; Trưởng phòng Vận hành doanh nghiệp 20-200 nhân sự.</li></ul><div style=\"background:#fef2f2;border-left:4px solid #ef4444;padding:8px 12px;margin-bottom:8px;font-size:13px;\">❌ <strong>Cấm viết chung chung:</strong> \"TaskFlow là giải pháp công nghệ đột phá hàng đầu kỷ nguyên số.\"</div><div style=\"background:#ecfdf5;border-left:4px solid #10b981;padding:8px 12px;font-size:13px;\">✅ <strong>Luôn viết bằng con số thật:</strong> \"TaskFlow giúp doanh nghiệp 50 nhân sự rút ngắn thời gian bàn giao việc từ 14 ngày xuống còn 3 ngày.\"</div></div>'});",
+      "focus_selectors": [
+        "#editor-canvas",
+        "#ide-file-tree"
+      ],
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Dạy AI bằng cặp ví dụ ❌ Không nên viết và ✅ Nên viết",
+      "caption": "Nhìn vào tệp <code>brand_voice.md</code> ở cột giữa trên màn hình: Bí quyết hay nhất để AI bắt trúng giọng văn thương hiệu là anh chị hãy đặt hai câu ví dụ cạnh nhau — một câu chung chung bị cấm và một câu cụ thể được khuyến khích.",
+      "pre_click_selector": "[data-file='brand_voice.md']",
+      "pre_click_label": "Nhấp chọn tệp brand_voice.md ở cây thư mục trái",
+      "audio_src": "audio/lesson_17/b3.mp3",
+      "audio_duration": 10.88
+    },
+    {
+      "id": "b4",
+      "label": "4. Kỹ thuật: Cách AI rút trích bài viết mẫu để tự lập Brand Voice",
+      "duration": 12.89,
+      "pose": 3,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Trích xuất Giọng văn Tự động",
+      "pedagogy_title": "Đưa 2-3 bài viết tâm đắc nhất của bạn để AI tự phân tích quy luật giọng văn",
+      "pedagogy_note": "Nếu công ty chưa có sẵn cẩm nang thương hiệu, hãy nhờ AI đọc @COMPANY.md và các bài viết cũ để tự đúc kết thành brand_voice.md.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'COMPANY.md', file:'COMPANY.md', clearChat:true, popupMode:'mention', chatInput:'@COMPANY.md @troly.md Hãy phân tích hồ sơ công ty và đúc kết tệp brand_voice.md gồm: 3 tính từ thương hiệu, nỗi đau khách hàng SMB và 3 cặp câu mẫu (Cấm viết vs. Nên viết).'});",
+      "focus_selectors": [
+        "#ide-chat-input",
+        "#editor-canvas"
+      ],
+      "cursor_selector": "#ide-send-btn",
+      "cursor_label": "Nhờ AI tự đúc kết brand_voice.md từ tài liệu sẵn có",
+      "caption": "Nếu doanh nghiệp của anh chị chưa từng viết cẩm nang thương hiệu thì cũng đừng lo: Chỉ cần đính kèm hồ sơ <code>@COMPANY.md</code> hoặc vài bài viết cũ mà sếp tâm đắc nhất, trợ lý AI sẽ tự phân tích và lập ra tệp <code>brand_voice.md</code>.",
+      "pre_click_selector": "#ide-popup-menu .popup-item",
+      "pre_click_label": "Chọn tệp đính kèm từ bảng gợi ý @",
+      "audio_src": "audio/lesson_17/b4.mp3",
+      "audio_duration": 12.24
+    },
+    {
+      "id": "b5",
+      "label": "5. Bước 1: Mở hồ sơ gốc COMPANY.md để trích xuất thương hiệu",
+      "duration": 9.85,
+      "pose": 4,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 1 · Chọn tài liệu gốc",
+      "pedagogy_title": "Chuẩn bị chiến dịch ra mắt tính năng Onboarding 3 ngày của TaskFlow",
+      "pedagogy_note": "Bước 1: Mở tệp COMPANY.md ở cột trái để kiểm tra thông điệp cốt lõi của sản phẩm.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'COMPANY.md', file:'COMPANY.md', clearChat:true});",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas"
+      ],
+      "cursor_selector": "[data-file='COMPANY.md']",
+      "cursor_label": "Bước 1: Mở tệp COMPANY.md làm gốc thông điệp",
+      "caption": "Chúng ta vào thực hành 3 bước xây dựng trung tâm nội dung. Ở <strong>Bước 1</strong>, anh chị mở tệp <code>COMPANY.md</code> ở cột trái để lấy thông số cốt lõi cho chiến dịch truyền thông Quý 2.",
+      "pre_click_selector": "[data-file='COMPANY.md']",
+      "pre_click_label": "Nhấp chọn tệp COMPANY.md ở cây thư mục trái",
+      "audio_src": "audio/lesson_17/b5.mp3",
+      "audio_duration": 9.2
+    },
+    {
+      "id": "b6",
+      "label": "6. Bước 2: Ra lệnh khởi tạo tệp brand_voice.md chuẩn B2B",
+      "duration": 9.69,
+      "pose": 5,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 2 · Khởi tạo brand_voice.md",
+      "pedagogy_title": "Bước 2: Gửi câu lệnh tạo tệp brand_voice.md tại khung chat phải",
+      "pedagogy_note": "Yêu cầu AI kết hợp dữ liệu thật từ @bao_cao_doanh_thu_q1.md để đưa vào kho dẫn chứng thương hiệu.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'COMPANY.md', file:'COMPANY.md', clearChat:true, popupMode:'mention', chatInput:'@COMPANY.md @bao_cao_doanh_thu_q1.md Hãy khởi tạo tệp brand_voice.md cho chiến dịch Quý 2, kèm bảng từ vựng nên dùng và kho số liệu chứng minh thực tế.'});",
+      "focus_selectors": [
+        "#ide-chat-input",
+        "#ide-send-btn"
+      ],
+      "cursor_selector": "#ide-send-btn",
+      "cursor_label": "Bước 2: Nhấn Gửi để tạo tệp brand_voice.md",
+      "caption": "Sang <strong>Bước 2</strong>, anh chị đính kèm <code>@COMPANY.md</code> và <code>@bao_cao_doanh_thu_q1.md</code> vào ô chat, yêu cầu tạo tệp <code>brand_voice.md</code> rồi nhấn nút Gửi.",
+      "pre_click_selector": "#ide-popup-menu .popup-item",
+      "pre_click_label": "Chọn tệp đính kèm từ bảng gợi ý @",
+      "audio_src": "audio/lesson_17/b6.mp3",
+      "audio_duration": 9.04
+    },
+    {
+      "id": "b7",
+      "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+      "duration": 15.98,
+      "pose": 6,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "✅ Thực hành Bước 3 · Kết quả hoàn thành",
+      "pedagogy_title": "Bước 3: Nghiệm thu tệp brand_voice.md hoàn chỉnh với kho số liệu và quy tắc kiểm duyệt",
+      "pedagogy_note": "Đã khóa chặt giọng văn thương hiệu TaskFlow.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'brand_voice.md', breadcrumb:'antigravity_course_vn › brand_voice.md (Đã khởi tạo)', editorTitle:'🎙️ brand_voice.md — Đã sẵn sàng cho Bộ phận Nội dung AI', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#15803d;margin-top:0;\">✅ ĐÃ KHỞI TẠO CẨM NANG THƯƠNG HIỆU TASKFLOW</h2><ul><li><strong>Thông điệp chủ đạo Quý 2:</strong> Rút ngắn thời gian hội nhập nhân sự mới từ 14 ngày xuống 3 ngày.</li><li><strong>Số liệu bảo chứng (Từ Báo cáo Q1):</strong> Tỷ lệ giữ chân khách hàng Enterprise đạt 98,2% (Churn chỉ 1,8%).</li><li><strong>Quy tắc kiểm duyệt:</strong> Mọi bài viết phải mở đầu bằng câu hỏi chạm nỗi đau quản lý và kết thúc bằng lời mời dùng thử 14 ngày.</li></ul></div>', userMsg:'@COMPANY.md @bao_cao_doanh_thu_q1.md Hãy khởi tạo tệp brand_voice.md cho chiến dịch Quý 2.', aiMsg:'Đã tạo xong <code>brand_voice.md</code>! Từ giờ mọi bài viết và email của bạn sẽ luôn nhất quán 100% với giọng văn này.'});",
+      "focus_selectors": [
+        "#editor-canvas",
+        "#ide-chat-messages"
+      ],
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Bước 3: Hoàn tất tệp brand_voice.md chuẩn mực!",
+      "caption": "Ở <strong>Bước 3</strong>, tệp <code>brand_voice.md</code> đã hoàn tất với đầy đủ thông điệp chủ đạo, số liệu bảo chứng tỷ lệ giữ chân 98,2% và quy tắc kiểm duyệt rõ ràng. Từ nay, anh chị đã có một cuốn cẩm nang chuẩn mực giúp trợ lý AI giữ vững bản sắc thương hiệu của doanh nghiệp trong mọi văn bản!",
+      "pre_click_selector": "#ide-send-btn",
+      "pre_click_label": "Bước 3: Nhấp nút Gửi để khởi tạo tệp brand_voice.md",
+      "audio_src": "audio/lesson_17/b7.mp3",
+      "audio_duration": 15.33
+    }
+  ]
+}

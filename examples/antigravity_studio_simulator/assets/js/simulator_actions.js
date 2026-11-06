@@ -45,7 +45,7 @@ function kudoShowKeyHud(html) {
 
 function kudoGetStageBounds() {
   const stage = document.getElementById("kudo-stage-viewport");
-  if (!stage) return { top: 0, bottom: window.innerHeight - 68, left: 280, right: window.innerWidth };
+  if (!stage) return { top: 0, bottom: window.innerHeight - 112, left: 315, right: window.innerWidth };
   return stage.getBoundingClientRect();
 }
 
@@ -129,6 +129,118 @@ function kudoOpenTurboPopover(mode) {
   pop.style.top = top + "px";
 }
 
+function kudoEnsureTreeFileVisible(fileName, isNewBadge) {
+  if (!fileName) return;
+  const cleanName = String(fileName).replace(/^.*›\s*/, "").replace(/\s*\(.*$/, "").trim();
+  if (!cleanName) return;
+  const container = document.getElementById("ide-file-tree");
+  if (!container) return;
+  if (!container.innerHTML.trim() && typeof renderFileTree === "function") {
+    renderFileTree();
+  }
+  container.querySelectorAll(".tree-file.active").forEach(el => el.classList.remove("active"));
+  let targetEl = container.querySelector(`.tree-file[data-file="${cleanName}"]`);
+  if (targetEl) {
+    let p = targetEl.parentElement;
+    while (p && p.id !== "ide-file-tree") {
+      if (p.classList.contains("collapsed")) {
+        p.classList.remove("collapsed");
+        const prev = p.previousElementSibling;
+        if (prev && prev.classList.contains("tree-folder")) {
+          prev.innerHTML = prev.innerHTML.replace("› 📁", "⌄ 📂");
+        }
+      }
+      p = p.parentElement;
+    }
+    targetEl.classList.add("active");
+    try { targetEl.scrollIntoView({ block: "nearest" }); } catch (e) {}
+    return;
+  }
+  const rootChildren = container.querySelector(".tree-children") || container;
+  let badgeHtml = '<span class="md-badge">M↓</span>';
+  if (cleanName.endsWith(".csv")) badgeHtml = '<span class="csv-badge">📊</span>';
+  else if (cleanName.endsWith(".html")) badgeHtml = '<span class="html-badge">&lt;/&gt;</span>';
+  const row = document.createElement("div");
+  row.className = "tree-file active kudo-dynamic-tree-file";
+  row.setAttribute("data-file", cleanName);
+  row.style.cssText = "display:flex;align-items:center;gap:6px;background:rgba(234,88,12,0.12);border-left:3px solid #EA580C;padding:4px 8px;border-radius:4px;margin:2px 0;";
+  const newTag = (isNewBadge !== false)
+    ? '<span style="font-size:9px;font-weight:800;padding:1px 5px;border-radius:4px;background:#DCFCE7;color:#166534;border:1px solid #86EFAC;margin-left:auto;">MỚI</span>'
+    : '';
+  row.innerHTML = `${badgeHtml} <span style="flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700;color:#9A3412;">${cleanName}</span>${newTag}`;
+  rootChildren.insertBefore(row, rootChildren.firstChild);
+  try { row.scrollIntoView({ block: "nearest" }); } catch (e) {}
+}
+
+function kudoOpenGitSidebarView() {
+  const expPane = document.getElementById("ide-sb-explorer-view");
+  const extPane = document.getElementById("ide-sb-extensions-view");
+  if (expPane) expPane.style.display = "flex";
+  if (extPane) extPane.style.display = "none";
+  document.querySelectorAll(".activity-bar .act-icon").forEach(ic => ic.classList.remove("active"));
+  const gitBtn = document.getElementById("act-btn-git");
+  if (gitBtn) gitBtn.classList.add("active");
+  const tree = document.getElementById("ide-file-tree");
+  if (tree) {
+    tree.innerHTML = `
+      <div style="padding:8px 10px;background:#FFF7ED;border-bottom:1px solid #FED7AA;font-size:11.5px;font-weight:800;color:#9A3412;display:flex;justify-content:space-between;align-items:center;">
+        <span>QUẢN LÝ PHIÊN BẢN (GIT &amp; DRIVE)</span>
+        <span style="background:#EA580C;color:#FFF;padding:1px 6px;border-radius:99px;font-size:10px;">3 thay đổi</span>
+      </div>
+      <div style="padding:6px 8px;display:flex;flex-direction:column;gap:4px;">
+        <div class="tree-file active" data-file="bao_cao_doanh_thu_q1.md" style="display:flex;align-items:center;gap:6px;padding:5px 8px;background:rgba(234,88,12,0.1);border-radius:5px;">
+          <span class="md-badge">M↓</span>
+          <span style="flex:1;font-weight:700;font-size:12px;">bao_cao_doanh_thu_q1.md</span>
+          <span style="color:#16A34A;font-weight:800;font-size:11px;" title="Untracked / Tệp mới">U</span>
+        </div>
+        <div class="tree-file" data-file="de_an_tong_the_q2.md" style="display:flex;align-items:center;gap:6px;padding:5px 8px;">
+          <span class="md-badge">M↓</span>
+          <span style="flex:1;font-size:12px;">de_an_tong_the_q2.md</span>
+          <span style="color:#16A34A;font-weight:800;font-size:11px;" title="Untracked / Tệp mới">U</span>
+        </div>
+        <div class="tree-file" data-file="quy_chuan_van_phong.md" style="display:flex;align-items:center;gap:6px;padding:5px 8px;">
+          <span class="md-badge">M↓</span>
+          <span style="flex:1;font-size:12px;">quy_chuan_van_phong.md</span>
+          <span style="color:#D97706;font-weight:800;font-size:11px;" title="Modified / Đã cập nhật">M</span>
+        </div>
+      </div>
+    `;
+  }
+}
+
+function kudoOpenDynamicPopup(mode, chatText) {
+  const pop = document.getElementById("ide-popup-menu");
+  const ta = document.getElementById("ide-chat-input");
+  if (!pop) return;
+  const txt = String(chatText || "").trim();
+  if (mode === "slash" || txt.startsWith("/")) {
+    const m = txt.match(/^(\/[a-zA-Z0-9_-]+)/);
+    const cmd = m ? m[1] : "/tong-hop-tuan";
+    pop.innerHTML = `
+      <div class="popup-header">ACTIONS &amp; WORKFLOWS (CHỌN TỪ DANH SÁCH RỒI NHẤN ENTER)</div>
+      <div class="popup-item" style="background:#FFF7ED;border-left:3px solid #EA580C;"><strong>${cmd}</strong><span>Quy trình tự động hóa đã đóng gói trong .agent/workflows/</span></div>
+      <div class="popup-item"><strong>/grill-me</strong><span>Phỏng vấn ngược làm rõ thông tin còn thiếu trước khi lập kế hoạch</span></div>
+      <div class="popup-item"><strong>/plan</strong><span>Lập kế hoạch thực thi từng bước trước khi tạo tệp</span></div>
+      <div class="popup-item"><strong>/learn</strong><span>Đúc kết kinh nghiệm và lưu quy chuẩn mới vào .agent/rules/</span></div>
+    `;
+    pop.classList.add("visible");
+    if (ta) ta.value = cmd.slice(0, Math.min(6, cmd.length));
+  } else {
+    const matches = Array.from(txt.matchAll(/@([a-zA-Z0-9_.-]+)/g)).map(x => x[1]);
+    const primary = matches[0] || "COMPANY.md";
+    const second = matches[1] || (primary === "COMPANY.md" ? "sales_data.csv" : "COMPANY.md");
+    const third = "troly.md";
+    pop.innerHTML = `
+      <div class="popup-header">FILES &amp; FOLDERS (GÕ @ ĐỂ ĐÍNH KÈM TỆP TRONG THƯ MỤC)</div>
+      <div class="popup-item" style="background:#FFF7ED;border-left:3px solid #EA580C;"><strong>@${primary}</strong><span>Tệp dữ liệu ngữ cảnh trong thư mục dự án antigravity_course_vn</span></div>
+      <div class="popup-item"><strong>@${second}</strong><span>Tài liệu đối chiếu số liệu &amp; hồ sơ dự án</span></div>
+      <div class="popup-item"><strong>@${third}</strong><span>Hồ sơ cá nhân hóa &amp; quy chuẩn văn phong của bạn</span></div>
+    `;
+    pop.classList.add("visible");
+    if (ta) ta.value = "@" + primary.slice(0, Math.min(5, primary.length));
+  }
+}
+
 function kudoOpenIdeMentionPopup() {
   const ta = document.getElementById("ide-chat-input");
   if (!ta) return;
@@ -145,6 +257,7 @@ function kudoOpenIdeSlashPopup() {
 
 function kudoSimScene(cfg) {
   if (!cfg) return;
+  window.kudoLastSimSceneCfg = cfg;
   kudoHidePopovers();
   if (typeof closeIdeMenus === "function") closeIdeMenus();
   if (typeof closeMoveWarnModal === "function") closeMoveWarnModal();
@@ -152,11 +265,21 @@ function kudoSimScene(cfg) {
   if (typeof closeSettingsModal === "function") closeSettingsModal();
   switchToSurface(cfg.surface || "ide");
   if (cfg.surface !== "mgr") {
-    switchIdeSidebarMode("explorer");
+    if (cfg.sidebarMode === "git") {
+      kudoOpenGitSidebarView();
+    } else if (cfg.sidebarMode === "extensions") {
+      if (typeof openIdeExtensionsView === "function") openIdeExtensionsView();
+    } else {
+      switchIdeSidebarMode("explorer");
+    }
   }
   if (cfg.file && typeof openFileInEditor === "function") {
     setEditorMode(cfg.editorMode || "wysiwyg");
     openFileInEditor(cfg.file);
+  }
+  const treeTarget = cfg.activeTreeFile || cfg.file || (cfg.breadcrumb && cfg.breadcrumb.includes("›") ? cfg.breadcrumb.split("›").pop().replace(/\(.*$/, "").trim() : "");
+  if (treeTarget && (treeTarget.endsWith(".md") || treeTarget.endsWith(".csv") || treeTarget.endsWith(".html") || treeTarget.endsWith(".json"))) {
+    kudoEnsureTreeFileVisible(treeTarget, Boolean(cfg.activeTreeFile || cfg.editorHtml));
   }
   if (cfg.breadcrumb) {
     const bc = document.getElementById("editor-breadcrumbs");
@@ -253,8 +376,16 @@ function kudoOpenExplorerContextMenu(targetSelector) {
 }
 
 function kudoOpenTabContextMenu(targetSelector) {
-  const sel = targetSelector || "#editor-tabs-list .editor-tab";
-  const el = document.querySelector(sel);
+  let sel = "#editor-tabs-list .editor-tab.active";
+  let el = null;
+  if (targetSelector && (targetSelector.startsWith("#") || targetSelector.startsWith(".") || targetSelector.startsWith("["))) {
+    sel = targetSelector;
+    try { el = document.querySelector(sel); } catch (e) {}
+  }
+  if (!el) {
+    el = document.querySelector("#editor-tabs-list .editor-tab.active") || document.querySelector("#editor-tabs-list .editor-tab");
+    sel = "#editor-tabs-list .editor-tab.active";
+  }
   const menu = document.getElementById("kudo-tab-context-menu");
   if (!el || !menu) return;
   menu.setAttribute("data-anchor-sel", sel);

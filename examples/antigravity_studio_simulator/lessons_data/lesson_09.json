@@ -1,0 +1,177 @@
+{
+  "lesson_slug": "lesson_09",
+  "filename": "lesson_09.html",
+  "legacy_alias": "lesson_03_nghiem_thu_file_va_kien_truc_agent.html",
+  "code": "BÀI 9",
+  "chapter_number": 3,
+  "chapter_code": "CHƯƠNG 3",
+  "chapter_title": "Thiết kế Bộ não .agent & Tự động hóa Quy trình",
+  "title": "Tư duy Quản trị Đầu ra & Kiến trúc Bộ não .agent (Rules, Skills, Workflows)",
+  "short_title": "Kiến trúc .agent: Rules, Skills, Workflows",
+  "pill_label": "Bài 9 · Kiến trúc Bộ não .agent",
+  "description": "Chuyển dịch từ thói quen chỉ đọc câu trả lời trên khung chat sang nghiệm thu tệp sản phẩm thật trên ổ cứng; hiểu rõ ẩn dụ 'Căn bếp Nhà hàng' cho 3 ngăn Rules, Skills và Workflows trong thư mục .agent.",
+  "prerequisites": "Đã hiểu cách hoạt động của tệp @troly.md và lệnh gạch chéo /start-1-1.",
+  "dependents": "Thiết kế Rules & Skills, Đóng gói Workflows, Chu trình /grill-me, /plan, /learn.",
+  "placement_risk": "0% Rủi ro — Học viên hiểu ngay mối liên hệ thực tế khi khám phá thư mục .agent.",
+  "continuity_bridge": "Nắm vững bức tranh tổng thể 3 ngăn Rules, Skills và Workflows của thư mục .agent cùng tiêu chuẩn nghiệm thu tệp sản phẩm thật trên ổ cứng.",
+  "slides": {
+    "s1": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 3 · BÀI 9 · ĐẶT VẤN ĐỀ</span>\n        <span class=\"k-slide-step\">Tư duy Quản trị Đầu ra</span>\n      </div>\n      <div class=\"k-slide-h1\">Chuyển dịch từ đọc chữ trên khung hội thoại sang Nghiệm thu Tệp Sản phẩm Thật</div>\n      <div class=\"k-slide-sub\">Thiết lập thư mục <code>.agent</code> như một Căn bếp Nhà hàng 5 sao để chuẩn hóa mọi sản phẩm đầu ra trong văn phòng.</div>\n    </div>\n    <div style=\"display:flex; flex-direction:column; gap:12px;\">\n      <div class=\"k-visual-hero-box k-layout-comparison k-step-item k-hl\" id=\"s1_step1\" data-order=\"1\">\n        <div class=\"k-cmp-col k-cmp-before\">\n          <div class=\"k-cmp-badge-old\">❌ THÓI QUEN CŨ · ĐỌC CHỮ TRÔI QUA CHAT</div>\n          <div class=\"k-cmp-main\">Trả lời trên khung chat rồi tự Copy-Paste thủ công</div>\n          <div class=\"k-cmp-sub\">Dễ sót ý, lệch định dạng, mỗi lần hỏi lại phải nhắc lại từ đầu</div>\n        </div>\n        <div class=\"k-cmp-arrow\">➔</div>\n        <div class=\"k-cmp-col k-cmp-after\">\n          <div class=\"k-cmp-badge-new\">✅ TƯ DUY QUẢN TRỊ · NGHIỆM THU TỆP THẬT</div>\n          <div class=\"k-cmp-main\">AI xuất thẳng tệp sản phẩm (.md, .csv, .html) vào dự án</div>\n          <div class=\"k-cmp-sub\">Lưu trữ bền vững trên ổ cứng, mở ra kiểm duyệt và dùng được ngay</div>\n        </div>\n      </div>\n      <div class=\"k-card k-step-item k-unreached\" id=\"s1_step2\" data-order=\"2\" style=\"padding:12px 16px;\">\n        <div style=\"display:flex; align-items:center; justify-content:space-between; gap:16px;\">\n          <div style=\"flex:1;\">\n            <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">BẢNG ĐỐI CHIẾU THỰC TẾ VĂN PHÒNG</span>\n            <h3 style=\"margin:6px 0 4px;\">Khác biệt giữa Người mới hỏi đáp và Người quản lý nghiệm thu</h3>\n            <p style=\"margin:0; font-size:12.5px; color:#475569;\">Thay vì coi AI là nơi trò chuyện ngẫu hứng, người quản lý coi AI là nhân sự thực thi có bàn giao hồ sơ rõ ràng: Giao việc ngắn gọn — Nghiệm thu bằng tệp hoàn chỉnh.</p>\n          </div>\n          <svg viewBox=\"0 0 320 68\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:300px; height:auto; flex-shrink:0; background:#FFF7ED; border:1px solid #FED7AA; border-radius:8px; padding:4px;\">\n            <rect x=\"8\" y=\"8\" width=\"136\" height=\"52\" rx=\"6\" fill=\"#FFFFFF\" stroke=\"#FB923C\" stroke-width=\"1.5\"/>\n            <text x=\"76\" y=\"28\" text-anchor=\"middle\" fill=\"#9A3412\" font-size=\"10.5\" font-weight=\"800\">💬 Giao việc ngắn gọn</text>\n            <text x=\"76\" y=\"46\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"9.5\">Nêu mục tiêu &amp; tên tệp đích</text>\n            <path d=\"M150 34 H170\" stroke=\"#EA580C\" stroke-width=\"2.5\" stroke-linecap=\"round\"/>\n            <polygon points=\"168,29 176,34 168,39\" fill=\"#EA580C\"/>\n            <rect x=\"180\" y=\"8\" width=\"132\" height=\"52\" rx=\"6\" fill=\"#F0FDF4\" stroke=\"#4ADE80\" stroke-width=\"1.5\"/>\n            <text x=\"246\" y=\"28\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"10.5\" font-weight=\"800\">📄 Tệp sản phẩm thật</text>\n            <text x=\"246\" y=\"46\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"9.5\">Nằm sẵn trong thư mục</text>\n          </svg>\n        </div>\n      </div>\n      <div class=\"k-callout k-step-item k-unreached\" id=\"s1_step3\" data-order=\"3\">\n        <span>🍳</span>\n        <div><strong>Ẩn dụ Căn bếp Nhà hàng 5 sao (<code>.agent/</code>):</strong> Để mỗi đĩa thức ăn (tệp sản phẩm) dọn ra luôn đồng đều chuẩn vị, căn bếp <code>.agent</code> sắp xếp sẵn Nội quy bếp, Kệ sổ tay công thức và Thực đơn tự động.</div>\n      </div>\n    </div>\n    ",
+    "s2": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 3 · BÀI 9 · KIẾN TRÚC BỘ NÃO</span>\n        <span class=\"k-slide-step\">Giải mã 3 ngăn .agent</span>\n      </div>\n      <div class=\"k-slide-h1\">Ba ngăn phối hợp nhịp nhàng bên trong thư mục .agent: Rules, Skills và Workflows</div>\n      <div class=\"k-slide-sub\">Mỗi ngăn đảm nhận đúng một vai trò giúp Trợ lý AI vừa giữ kỷ luật 100%, vừa nhẹ bộ nhớ, vừa tự động hóa quy trình.</div>\n    </div>\n    <div class=\"k-grid-3\" style=\"margin-top:8px;\">\n      <div class=\"k-card k-step-item k-hl\" id=\"s2_step1\" data-order=\"1\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">1 · .AGENT/RULES/ (NỘI QUY BẾP)</span>\n          <span class=\"k-illus-badge\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#EA580C\" stroke-width=\"2\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"3\"/><path d=\"M8 10h8M8 14h5\"/></svg></span>\n        </div>\n        <h3>Bảng nội quy dán ngay cửa bếp</h3>\n        <p>Chứa các quy định chung về xưng hô, định dạng ngày tháng, đơn vị tiền tệ và bảo mật. AI tự động đọc ngầm và tuân thủ 100% trong mọi câu lệnh.</p>\n        <svg viewBox=\"0 0 240 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%; height:auto; margin-top:6px;\">\n          <rect x=\"2\" y=\"4\" width=\"236\" height=\"40\" rx=\"6\" fill=\"#FFF7ED\" stroke=\"#FDBA74\"/>\n          <text x=\"120\" y=\"22\" text-anchor=\"middle\" fill=\"#9A3412\" font-size=\"10\" font-weight=\"800\">📏 Luôn bật tự động 100% thời gian</text>\n          <text x=\"120\" y=\"36\" text-anchor=\"middle\" fill=\"#C2410C\" font-size=\"9\">Không cần gõ đính kèm thủ công</text>\n        </svg>\n      </div>\n      <div class=\"k-card k-step-item k-unreached\" id=\"s2_step2\" data-order=\"2\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#E0F2FE; color:#0369A1; border:1px solid #7DD3FC;\">2 · .AGENT/SKILLS/ (CÔNG THỨC MÓN)</span>\n          <span class=\"k-illus-badge\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#0284C7\" stroke-width=\"2\"><path d=\"M12 2L2 7l10 5 10-5-10-5z\"/><path d=\"M2 17l10 5 10-5M2 12l10 5 10-5\"/></svg></span>\n        </div>\n        <h3>Kệ sổ tay công thức chuyên sâu</h3>\n        <p>Đóng gói hướng dẫn nghiệp vụ chi tiết (báo cáo tài chính, sàng lọc nhân sự, soạn email). Chỉ khi gặp đúng món việc đó AI mới mở ra xem.</p>\n        <svg viewBox=\"0 0 240 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%; height:auto; margin-top:6px;\">\n          <rect x=\"2\" y=\"4\" width=\"236\" height=\"40\" rx=\"6\" fill=\"#F0F9FF\" stroke=\"#7DD3FC\"/>\n          <text x=\"120\" y=\"22\" text-anchor=\"middle\" fill=\"#0369A1\" font-size=\"10\" font-weight=\"800\">🧠 Chỉ mở khi gặp đúng nghiệp vụ</text>\n          <text x=\"120\" y=\"36\" text-anchor=\"middle\" fill=\"#0284C7\" font-size=\"9\">Giữ bộ nhớ AI luôn nhẹ và sắc bén</text>\n        </svg>\n      </div>\n      <div class=\"k-card k-step-item k-unreached\" id=\"s2_step3\" data-order=\"3\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#DCFCE7; color:#15803D; border:1px solid #86EFAC;\">3 · .AGENT/WORKFLOWS/ (THỰC ĐƠN /)</span>\n          <span class=\"k-illus-badge\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#16A34A\" stroke-width=\"2\"><path d=\"M22 11.08V12a10 10 0 1 1-5.93-9.14\"/><polyline points=\"22 4 12 14.01 9 11.01\"/></svg></span>\n        </div>\n        <h3>Dây chuyền tự động bằng lệnh /</h3>\n        <p>Đóng gói quy trình lặp đi lặp lại nhiều bước thành một lệnh gạch chéo <code>/</code> duy nhất để chạy tuần tự từ khâu đọc dữ liệu đến khi xuất tệp.</p>\n        <svg viewBox=\"0 0 240 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%; height:auto; margin-top:6px;\">\n          <rect x=\"2\" y=\"4\" width=\"236\" height=\"40\" rx=\"6\" fill=\"#F0FDF4\" stroke=\"#86EFAC\"/>\n          <text x=\"120\" y=\"22\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"10\" font-weight=\"800\">⚡ Gõ 1 lệnh / — Chạy trọn gói A-Z</text>\n          <text x=\"120\" y=\"36\" text-anchor=\"middle\" fill=\"#16A34A\" font-size=\"9\">Chuẩn hóa quy trình cho cả phòng ban</text>\n        </svg>\n      </div>\n    </div>\n    "
+  },
+  "beats": [
+    {
+      "id": "b1",
+      "label": "1. Lý thuyết (Phần 1): Tư duy nghiệm thu tệp sản phẩm thật & Ẩn dụ Căn bếp Nhà hàng",
+      "duration": 27.47,
+      "pose": 1,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s1",
+      "slide_id": "s1",
+      "hl": [
+        "s1_step1",
+        "s1_step2",
+        "s1_step3"
+      ],
+      "caption": "Khi ứng dụng AI vào công việc văn phòng, bước chuyển mình quan trọng nhất là thay đổi thói quen nghiệm thu: Người mới thường chỉ đọc câu trả lời trôi qua trên khung hội thoại rồi lại mất công sao chép thủ công, trong khi người quản lý chuyên nghiệp luôn yêu cầu AI xuất ra tệp sản phẩm hoàn chỉnh nằm sẵn trong thư mục dự án. Để làm được điều đó một cách tự động, chúng ta thiết lập thư mục <code>.agent</code> đóng vai trò như một căn bếp nhà hàng năm sao, nơi mọi quy chuẩn từ nội quy chung, công thức nấu nướng đến thực đơn phục vụ đều được sắp xếp ngăn nắp.",
+      "audio_src": "audio/lesson_09/b1.mp3",
+      "audio_duration": 26.82
+    },
+    {
+      "id": "b2",
+      "label": "2. Lý thuyết (Phần 2): Giải mã 3 ngăn Rules (Nội quy), Skills (Kỹ năng) và Workflows (Quy trình)",
+      "duration": 34.19,
+      "pose": 2,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s2",
+      "slide_id": "s2",
+      "hl": [
+        "s2_step1",
+        "s2_step2",
+        "s2_step3"
+      ],
+      "caption": "Bên trong căn bếp <code>.agent</code> được chia thành ba ngăn phối hợp nhịp nhàng với nhau. Ngăn thứ nhất là <code>.agent/rules/</code>, giống như bảng nội quy dán ngay cửa bếp: Mọi quy định về xưng hô, định dạng ngày tháng và bảo mật đặt tại đây đều được AI tự động tuân thủ một trăm phần trăm. Ngăn thứ hai là <code>.agent/skills/</code>, đóng vai trò kệ sổ tay công thức chuyên sâu, chỉ khi nào chế biến đúng món báo cáo tài chính hay tuyển dụng thì AI mới mở ra xem để bộ nhớ luôn nhẹ nhàng. Và ngăn thứ ba là <code>.agent/workflows/</code>, nơi đóng gói các quy trình nhiều bước thành một lệnh gạch chéo <code>/</code> giúp chạy trọn gói từ đầu đến cuối.",
+      "audio_src": "audio/lesson_09/b2.mp3",
+      "audio_duration": 33.54
+    },
+    {
+      "id": "b3",
+      "label": "3. Minh họa: Đối chiếu khung chat và tệp sản phẩm đầu ra",
+      "duration": 12.09,
+      "pose": 3,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Nghiệm thu Tệp Đầu ra",
+      "pedagogy_title": "Khung chat phải chỉ là nơi giao việc; Cột giữa mới là bàn nghiệm thu sản phẩm",
+      "pedagogy_note": "Khi AI báo đã hoàn thành, hãy bấm vào tệp mới sinh ra ở cây thư mục trái để kiểm tra chất lượng thực tế.",
+      "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); setEditorMode('wysiwyg'); openFileInEditor('1.2_QuickStart.md');",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas",
+        "#ide-chat-messages"
+      ],
+      "pre_click_selector": "[data-file='1.2_QuickStart.md']",
+      "pre_click_label": "Nhấp chọn tệp 1.2_QuickStart.md ở cây thư mục trái",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Nghiệm thu sản phẩm trực tiếp tại cột giữa",
+      "caption": "Trên màn hình làm việc thực tế, anh chị cần thay đổi một thói quen cốt lõi: Khung chat bên phải chỉ là nơi trao đổi ngắn gọn, còn sản phẩm cuối cùng bắt buộc phải xuất thành tệp trong cây thư mục và hiển thị ở cột giữa để nghiệm thu.",
+      "audio_src": "audio/lesson_09/b3.mp3",
+      "audio_duration": 11.44
+    },
+    {
+      "id": "b4",
+      "label": "4. Kỹ thuật: Khám phá thư mục .agent trên cây Explorer",
+      "duration": 11.13,
+      "pose": 4,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Cấu trúc Thư mục .agent",
+      "pedagogy_title": "Quan sát 3 thư mục con rules/, skills/, workflows/ bên trong .agent",
+      "pedagogy_note": "Mỗi tệp .md bên trong .agent/workflows/ chính là một lệnh gạch chéo / hiển thị khi bạn gõ trong khung chat.",
+      "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); openFileInEditor('start-1-1.md');",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas"
+      ],
+      "pre_click_selector": "[data-file='start-1-1.md']",
+      "pre_click_label": "Nhấp chọn tệp start-1-1.md ở cây thư mục trái",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Tệp .agent/workflows/start-1-1.md tạo ra lệnh /start-1-1",
+      "caption": "Nhìn sang cột cây thư mục bên trái, ngay dưới dòng <code>.agent</code>, anh chị bấm vào tệp <code>start-1-1.md</code>. Chính tệp văn bản ở cột giữa này đã tạo ra lệnh <code>/start-1-1</code> mà anh chị bấm chạy ở cuối Chương 1!",
+      "audio_src": "audio/lesson_09/b4.mp3",
+      "audio_duration": 10.48
+    },
+    {
+      "id": "b5",
+      "label": "5. Bước 1: Mở kiểm tra tệp workflow mẫu start-1-1.md",
+      "duration": 10.89,
+      "pose": 5,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 1/3 · Khảo sát .agent",
+      "pedagogy_title": "Tìm hiểu cách khóa học đóng gói quy trình tự động trong .agent",
+      "pedagogy_note": "Bước 1: Tại cột cây thư mục bên trái, bấm mở tệp start-1-1.md bên trong nhánh .agent/workflows.",
+      "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); openFileInEditor('start-1-1.md'); setEditorMode('raw');",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas"
+      ],
+      "pre_click_selector": "[data-file='start-1-1.md']",
+      "pre_click_label": "Nhấp chọn tệp start-1-1.md ở cây thư mục trái",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Bước 1: Xem cấu trúc kịch bản bên trong start-1-1.md",
+      "caption": "Chúng ta vào thực hành 3 bước khám phá bộ não <code>.agent</code>. Ở <strong>Bước 1</strong>, anh chị nhìn sang cột trái và bấm chọn tệp <code>start-1-1.md</code> để xem bên trong một quy trình tự động viết những chỉ dẫn gì ở cột giữa.",
+      "audio_src": "audio/lesson_09/b5.mp3",
+      "audio_duration": 10.24
+    },
+    {
+      "id": "b6",
+      "label": "6. Bước 2: Gõ dấu / để đối chiếu tệp với danh sách lệnh",
+      "duration": 13.37,
+      "pose": 6,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 2/3 · Đối chiếu Tệp và Lệnh /",
+      "pedagogy_title": "Bước 2: Gõ dấu / trong ô chat để xem danh sách Workflows tự động",
+      "pedagogy_note": "Mỗi tệp .md đặt trong thư mục .agent/workflows/ đều tự động xuất hiện trong bảng lệnh gạch chéo này.",
+      "onEnter": "kudoSimScene({surface:'ide', file:'start-1-1.md', activeTreeFile:'start-1-1.md', popupMode:'slash', clearChat:true, chatInput:'/start-1-1'});",
+      "focus_selectors": [
+        "#ide-popup-menu",
+        "#ide-chat-input",
+        "#ide-send-btn"
+      ],
+      "pre_click_selector": "#ide-popup-menu .popup-item",
+      "pre_click_label": "Chọn tệp/lệnh từ bảng gợi ý tự động",
+      "cursor_selector": "#ide-send-btn",
+      "cursor_label": "Bước 2: Kiểm tra danh sách lệnh / tương ứng",
+      "caption": "Sang <strong>Bước 2</strong>, anh chị gõ dấu gạch chéo <code>/</code> ở ô chat bên phải. Bảng gợi ý lập tức hiện ra các lệnh như <code>/start-1-1</code>, <code>/plan</code> hay <code>/grill-me</code>, tương ứng 1-1 với các tệp trong thư mục <code>.agent/workflows/</code>.",
+      "audio_src": "audio/lesson_09/b6.mp3",
+      "audio_duration": 12.72
+    },
+    {
+      "id": "b7",
+      "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+      "duration": 16.59,
+      "pose": 1,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "✅ Thực hành Bước 3/3 · Kết quả hoàn thành",
+      "pedagogy_title": "Bước 3: Yêu cầu AI liệt kê các Rules, Skills và Workflows hiện có",
+      "pedagogy_note": "Hiểu rõ 3 ngăn Rules, Skills và Workflows của bộ não .agent.",
+      "onEnter": "kudoSimScene({surface:'ide', file:'start-1-1.md', activeTreeFile:'start-1-1.md', userMsg:'Hãy kiểm tra thư mục .agent của dự án hiện tại và tóm tắt giúp tôi các ngăn Rules, Skills, Workflows đang có.', aiMsg:'Báo cáo kiểm tra bộ não <code>.agent/</code> của dự án:<br>• <strong>Rules (Nội quy luôn bật):</strong> Quy chuẩn tiếng Việt văn phòng &amp; bảo mật dữ liệu.<br>• <strong>Skills (Kỹ năng chuyên môn):</strong> Phân tích CSV, lập kế hoạch chiến lược, thiết kế slide.<br>• <strong>Workflows (Lệnh /):</strong> <code>/start-1-1</code>, <code>/grill-me</code>, <code>/plan</code>, <code>/learn</code>.'});",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#ide-chat-messages",
+        "#editor-canvas"
+      ],
+      "pre_click_selector": "[data-file='start-1-1.md']",
+      "pre_click_label": "Nhấp chọn tệp start-1-1.md ở cây thư mục trái",
+      "cursor_selector": "#ide-chat-messages",
+      "cursor_label": "Bước 3: AI tóm tắt 3 ngăn của bộ não .agent",
+      "caption": "Ở <strong>Bước 3</strong>, trợ lý AI đã rà soát toàn bộ dự án và liệt kê rõ ràng cả ba ngăn <strong>Rules</strong>, <strong>Skills</strong> và <strong>Workflows</strong> hiện có. Nắm vững cấu trúc bộ não <code>.agent</code> cùng nguyên tắc nghiệm thu bằng tệp sản phẩm thật chính là nền tảng cốt lõi giúp anh chị quản trị chất lượng công việc nhất quán và chuyên nghiệp mỗi ngày.",
+      "audio_src": "audio/lesson_09/b7.mp3",
+      "audio_duration": 15.94
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "lesson_slug": "lesson_16",
+  "filename": "lesson_16.html",
+  "legacy_alias": "",
+  "code": "BÀI 16",
+  "chapter_number": 4,
+  "chapter_code": "CHƯƠNG 4",
+  "chapter_title": "Xử lý Dữ liệu, Bảng tính & Phối hợp Đội nhóm",
+  "title": "Đồng bộ Tài liệu Nhóm Qua GitHub & Sao lưu Google Drive Tự động",
+  "short_title": "Đồng bộ GitHub & Google Drive",
+  "pill_label": "Bài 16 · Đồng bộ GitHub & Drive",
+  "description": "Xóa bỏ cảnh gửi file qua lại trên Zalo/Email với tên 'Bao_cao_final_v2_sua_lan_3': Học cách nhờ Trợ lý AI lưu mốc lịch sử phiên bản (Git/GitHub) và đồng bộ trực tiếp lên thư mục Google Drive của công ty.",
+  "prerequisites": "Đã tạo ra tệp báo cáo bao_cao_doanh_thu_q1.md và de_an_tong_the_q2.md trên ổ cứng.",
+  "dependents": "Bảo vệ an toàn tuyệt đối cho kho tài liệu dự án và chia sẻ tức thì cho toàn công ty.",
+  "placement_risk": "0% Rủi ro — Dân văn phòng không cần thuộc câu lệnh Git khó nhớ vì chỉ cần ra lệnh bằng tiếng Việt cho Trợ lý AI thực hiện trọn gói.",
+  "continuity_bridge": "Làm chủ quy trình đóng dấu mốc lịch sử phiên bản trên GitHub và đồng bộ tự động lên Google Drive bằng câu lệnh tiếng Việt tự nhiên.",
+  "slides": {
+    "s1": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 4 · BÀI 16 · ĐẶT VẤN ĐỀ</span>\n        <span class=\"k-slide-step\">Quản trị Phiên bản Tài liệu</span>\n      </div>\n      <div class=\"k-slide-h1\">Tạm biệt nỗi ám ảnh 'Báo_cáo_Final_v3_Sửa_cuối': Hộp đen Lịch sử Phiên bản</div>\n      <div class=\"k-slide-sub\">Kết hợp sức mạnh lưu vết từng dòng chỉnh sửa của Git/GitHub với sự tiện lợi khi chia sẻ trên Google Drive.</div>\n    </div>\n    <div style=\"display:flex; flex-direction:column; gap:12px;\">\n      <div class=\"k-visual-hero-box k-layout-comparison k-step-item k-hl\" id=\"s1_step1\" data-order=\"1\">\n        <div class=\"k-cmp-col k-cmp-before\">\n          <div class=\"k-cmp-badge-old\">❌ CÁCH LƯU THỦ CÔNG · NHẦM LẪN PHIÊN BẢN</div>\n          <div class=\"k-cmp-main\">Bao_cao_v1.md, Bao_cao_final_sua_lan_3.md</div>\n          <div class=\"k-cmp-sub\">Gửi qua lại trên nhóm chat, không biết bản nào mới nhất, lỡ xóa là mất</div>\n        </div>\n        <div class=\"k-cmp-arrow\">➔</div>\n        <div class=\"k-cmp-col k-cmp-after\">\n          <div class=\"k-cmp-badge-new\">✅ QUẢN LÝ PHIÊN BẢN · 1 TÊN TỆP DUY NHẤT</div>\n          <div class=\"k-cmp-main\">Lưu mốc lịch sử bằng GitHub &amp; Đồng bộ Drive</div>\n          <div class=\"k-cmp-sub\">Giữ đúng 1 tệp <code>bao_cao_doanh_thu_q1.md</code>, quay lại bản hôm qua chỉ trong 1 giây</div>\n        </div>\n      </div>\n      <div class=\"k-card k-step-item k-unreached\" id=\"s1_step2\" data-order=\"2\" style=\"padding:12px 16px;\">\n        <div style=\"display:flex; align-items:center; justify-content:space-between; gap:16px;\">\n          <div style=\"flex:1;\">\n            <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">KHÁI NIỆM ĐỜI THƯỜNG · GIT &amp; GITHUB LÀ GÌ?</span>\n            <h3 style=\"margin:6px 0 4px;\">Chiếc hộp đen văn phòng lưu vết từng dòng chỉnh sửa</h3>\n            <p style=\"margin:0; font-size:12.5px; color:#475569;\">Không chỉ dành cho kỹ sư phần mềm: Git đóng vai trò như cỗ máy thời gian ghi nhận chính xác ai đã sửa dòng nào, vào ngày giờ nào kèm nhãn ghi chú rõ ràng.</p>\n          </div>\n          <svg viewBox=\"0 0 290 64\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:270px; height:auto; flex-shrink:0;\">\n            <rect x=\"4\" y=\"6\" width=\"282\" height=\"52\" rx=\"8\" fill=\"#FFF7ED\" stroke=\"#FB923C\" stroke-width=\"1.5\"/>\n            <text x=\"145\" y=\"26\" text-anchor=\"middle\" fill=\"#9A3412\" font-size=\"10.5\" font-weight=\"800\">🕰️ Mốc #8f4a2c1: Chốt báo cáo Quý 1</text>\n            <text x=\"145\" y=\"44\" text-anchor=\"middle\" fill=\"#C2410C\" font-size=\"9.5\">Khôi phục lại bất kỳ bản cũ nào trong 1 giây</text>\n          </svg>\n        </div>\n      </div>\n      <div class=\"k-callout k-step-item k-unreached\" id=\"s1_step3\" data-order=\"3\">\n        <span>☁️</span>\n        <div><strong>Sức mạnh Kép:</strong> GitHub bảo vệ lịch sử từng dòng chữ cho đội dự án, còn Google Drive giúp Sếp và các phòng ban khác mở xem ngay trên điện thoại.</div>\n      </div>\n    </div>\n    ",
+    "s2": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 4 · BÀI 16 · QUY TRÌNH ĐỒNG BỘ</span>\n        <span class=\"k-slide-step\">Ra lệnh bằng Tiếng Việt Tự nhiên</span>\n      </div>\n      <div class=\"k-slide-h1\">Quy trình 3 bước Đóng dấu Phiên bản và Sao lưu Google Drive không cần nhớ mã lệnh</div>\n      <div class=\"k-slide-sub\">Bạn chỉ cần giao việc bằng tiếng Việt, chính Trợ lý AI sẽ tự động thực thi toàn bộ thao tác kỹ thuật ở hậu trường.</div>\n    </div>\n    <div style=\"display:flex; flex-direction:column; gap:12px;\">\n      <div class=\"k-visual-hero-box k-layout-flowchart k-step-item k-hl\" id=\"s2_step1\" data-order=\"1\">\n        <div class=\"k-viz-header\">\n          <span class=\"k-viz-badge\">📊 LỘ TRÌNH 3 CHẶNG ĐỒNG BỘ TÀI LIỆU NHÓM</span>\n          <span class=\"k-viz-title\">Từ tệp trên ổ cứng máy tính lên Kho lưu trữ chung của toàn công ty</span>\n        </div>\n        <svg class=\"k-flow-svg\" viewBox=\"0 0 860 92\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <path d=\"M262 46 H298\" stroke=\"#EA580C\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n          <polygon points=\"295,40 307,46 295,52\" fill=\"#EA580C\"/>\n          <path d=\"M562 46 H598\" stroke=\"#15803D\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n          <polygon points=\"595,40 607,46 595,52\" fill=\"#15803D\"/>\n          <rect x=\"8\" y=\"6\" width=\"252\" height=\"78\" rx=\"12\" fill=\"#FFF7ED\" stroke=\"#FDBA74\" stroke-width=\"2\"/>\n          <text x=\"134\" y=\"30\" text-anchor=\"middle\" fill=\"#9A3412\" font-size=\"12.5\" font-weight=\"800\">CHẶNG 1 · KIỂM TRA TỆP</text>\n          <text x=\"134\" y=\"52\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"13.5\" font-weight=\"700\">Rà soát tệp mới (U) &amp; sửa (M)</text>\n          <text x=\"134\" y=\"71\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"11.5\">Đối chiếu số liệu trước khi lưu</text>\n          <rect x=\"308\" y=\"6\" width=\"252\" height=\"78\" rx=\"12\" fill=\"#FEF3C7\" stroke=\"#F59E0B\" stroke-width=\"2\"/>\n          <text x=\"434\" y=\"30\" text-anchor=\"middle\" fill=\"#B45309\" font-size=\"12.5\" font-weight=\"800\">CHẶNG 2 · ĐÓNG DẤU GITHUB</text>\n          <text x=\"434\" y=\"52\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"13.5\" font-weight=\"700\">Lưu mốc lịch sử (Commit)</text>\n          <text x=\"434\" y=\"71\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"11.5\">Ghi chú rõ nội dung cập nhật</text>\n          <rect x=\"608\" y=\"6\" width=\"244\" height=\"78\" rx=\"12\" fill=\"#DCFCE7\" stroke=\"#4ADE80\" stroke-width=\"2\"/>\n          <text x=\"730\" y=\"30\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"12.5\" font-weight=\"800\">CHẶNG 3 · ĐẨY LÊN DRIVE</text>\n          <text x=\"730\" y=\"52\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"13.5\" font-weight=\"700\">Đồng bộ thư mục đám mây</text>\n          <text x=\"730\" y=\"71\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"11.5\">Ban Giám đốc mở xem tức thì</text>\n        </svg>\n      </div>\n      <div class=\"k-card k-step-item k-unreached\" id=\"s2_step2\" data-order=\"2\" style=\"padding:12px 16px;\">\n        <span class=\"k-card-tag\" style=\"background:#E0F2FE; color:#0369A1; border:1px solid #7DD3FC;\">GIAO VIỆC BẰNG TIẾNG VIỆT · 0% LỆNH KHÓ NHỚ</span>\n        <h3 style=\"margin:6px 0 4px;\">Chỉ cần nói rõ Tệp cần lưu + Ghi chú mốc lịch sử + Thư mục đích</h3>\n        <p style=\"margin:0; font-size:12.5px; color:#475569;\">Ví dụ: <em>\"Hãy lưu mốc lịch sử phiên bản cho tệp <code>@bao_cao_doanh_thu_q1.md</code> với ghi chú Chốt báo cáo doanh thu Quý 1 và tải lên thư mục Google Drive Ban Giám đốc.\"</em></p>\n      </div>\n      <div class=\"k-callout k-step-item k-unreached\" id=\"s2_step3\" data-order=\"3\">\n        <span>🛡️</span>\n        <div><strong>Tiêu chuẩn An toàn Kép:</strong> Mọi báo cáo quan trọng sau khi nghiệm thu đều có bản lưu trên ổ cứng máy tính, mốc lịch sử trên GitHub và bản chia sẻ trên Google Drive.</div>\n      </div>\n    </div>\n    "
+  },
+  "beats": [
+    {
+      "id": "b1",
+      "label": "1. Lý thuyết (Phần 1): Xóa bỏ cảnh đặt tên 'Báo cáo Final sửa lần 3' bằng hộp đen lịch sử GitHub",
+      "duration": 27.58,
+      "pose": 1,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s1",
+      "slide_id": "s1",
+      "hl": [
+        "s1_step1",
+        "s1_step2",
+        "s1_step3"
+      ],
+      "caption": "Trong công việc văn phòng, hầu như ai cũng từng gặp nỗi ám ảnh phải lưu hàng loạt tệp tin với những cái tên rối rắm như <em>Báo cáo Final bản hai sửa lần ba</em>, hoặc gửi tệp qua lại trên nhóm trò chuyện đến mức không biết bản nào mới là số liệu chốt cuối cùng. Để chấm dứt hoàn toàn tình trạng đó, chúng ta sử dụng công cụ quản lý phiên bản Git và GitHub như một chiếc hộp đen văn phòng: Mọi chỉnh sửa trên cùng một tệp duy nhất đều được ghi nhận chính xác ai sửa dòng nào, vào ngày giờ nào, giúp anh chị khôi phục lại bản cũ chỉ trong một giây.",
+      "audio_src": "audio/lesson_16/b1.mp3",
+      "audio_duration": 26.93
+    },
+    {
+      "id": "b2",
+      "label": "2. Lý thuyết (Phần 2): Quy trình 3 bước đóng dấu GitHub & Đồng bộ Google Drive bằng tiếng Việt tự nhiên",
+      "duration": 29.0,
+      "pose": 2,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s2",
+      "slide_id": "s2",
+      "hl": [
+        "s2_step1",
+        "s2_step2",
+        "s2_step3"
+      ],
+      "caption": "Điều tuyệt vời nhất là dân văn phòng không cần phải học thuộc bất kỳ câu lệnh kỹ thuật khô khan nào. Quy trình đồng bộ diễn ra rất nhẹ nhàng qua ba bước: Bước một là kiểm tra lại các tệp mới tạo hoặc vừa chỉnh sửa; bước hai là ra lệnh bằng tiếng Việt để trợ lý AI tự động đóng dấu mốc lịch sử lên GitHub kèm ghi chú rõ ràng; và bước ba là yêu cầu trợ lý đẩy tệp báo cáo <code>bao_cao_doanh_thu_q1.md</code> lên thẳng thư mục Google Drive của công ty. Nhờ vậy, mọi tài liệu quan trọng luôn đạt độ an toàn kép trên cả máy tính, GitHub lẫn đám mây.",
+      "audio_src": "audio/lesson_16/b2.mp3",
+      "audio_duration": 28.35
+    },
+    {
+      "id": "b3",
+      "label": "3. Minh họa: Quan sát trạng thái tệp mới chờ đồng bộ trên Quản lý Phiên bản",
+      "duration": 11.85,
+      "pose": 2,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Kiểm tra Tệp Chờ Đồng bộ",
+      "pedagogy_title": "Quan sát huy hiệu U (Untracked) và M (Modified) trong bảng Quản lý Phiên bản",
+      "pedagogy_note": "Nhấp biểu tượng Quản lý Phiên bản (Git) ở thanh công cụ trái để xem các tệp mới tạo (U - màu xanh lá) và tệp vừa chỉnh sửa (M - màu cam).",
+      "onEnter": "kudoSimScene({surface:'ide', sidebarMode:'git', activeTreeFile:'bao_cao_doanh_thu_q1.md', breadcrumb:'antigravity_course_vn › Source Control & Cloud Sync', editorTitle:'🔄 Quản lý Phiên bản (Source Control Changes & Google Drive Cloud Sync)', editorHtml:'<div style=\"padding:16px;background:#fbf8f3;border:1px solid #fed7aa;border-radius:10px;\"><div style=\"display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;\"><h3 style=\"color:#9a3412;margin:0;font-size:15px;\">🔄 QUẢN LÝ PHIÊN BẢN (SOURCE CONTROL CHANGES &amp; GOOGLE DRIVE CLOUD SYNC)</h3><span style=\"background:#ffedd5;color:#c2410c;padding:3px 10px;border-radius:99px;font-size:11px;font-weight:800;\">3 Changes Pending</span></div><div style=\"background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:10px 12px;margin-bottom:12px;\"><div style=\"display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f1f5f9;font-size:13px;\"><span>📊 <code>bao_cao_doanh_thu_q1.md</code> <em style=\"color:#64748b;font-size:11px;\">(Báo cáo doanh thu Quý 1)</em></span><span style=\"background:#dcfce7;color:#15803d;font-weight:800;padding:2px 8px;border-radius:4px;font-size:11px;border:1px solid #86efac;\">U · Untracked (Tệp mới)</span></div><div style=\"display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f1f5f9;font-size:13px;\"><span>🏆 <code>de_an_tong_the_q2.md</code> <em style=\"color:#64748b;font-size:11px;\">(Đề án hợp nhất 3 nhánh)</em></span><span style=\"background:#dcfce7;color:#15803d;font-weight:800;padding:2px 8px;border-radius:4px;font-size:11px;border:1px solid #86efac;\">U · Untracked (Tệp mới)</span></div><div style=\"display:flex;justify-content:space-between;align-items:center;padding:6px 0;font-size:13px;\"><span>🛡️ <code>.agent/rules/quy_chuan_van_phong.md</code> <em style=\"color:#64748b;font-size:11px;\">(Cập nhật quy tắc)</em></span><span style=\"background:#ffedd5;color:#ea580c;font-weight:800;padding:2px 8px;border-radius:4px;font-size:11px;border:1px solid #fdba74;\">M · Modified (Đã sửa)</span></div></div><div style=\"display:flex;align-items:center;justify-content:space-between;background:#f0fdf4;border:1.5px solid #86efac;padding:10px 14px;border-radius:8px;\"><div style=\"font-size:12px;color:#166534;\"><strong>Đích đồng bộ:</strong> GitHub Repo <code>taskflow-docs</code> &amp; Google Drive <code>/Bao_Cao_HDQT/</code></div><button style=\"background:linear-gradient(135deg,#ea580c,#c2410c);color:#fff;border:none;padding:7px 14px;border-radius:6px;font-size:12px;font-weight:800;cursor:pointer;box-shadow:0 2px 6px rgba(234,88,12,0.25);\">[☁️ Đồng bộ Google Drive &amp; GitHub Commit]</button></div></div>'});",
+      "focus_selectors": [
+        "#editor-canvas",
+        "#ide-file-tree"
+      ],
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Giao diện Quản lý Phiên bản với huy hiệu U (Xanh) và M (Cam)",
+      "caption": "Khi nhấp vào biểu tượng <strong>Quản lý Phiên bản</strong> ở thanh công cụ trái, màn hình hiện rõ các tệp gắn nhãn <code>U</code> màu xanh lá là tệp mới tạo và nhãn <code>M</code> màu cam là tệp vừa sửa, kèm nút đồng bộ lên <strong>Google Drive</strong> và <strong>GitHub</strong>.",
+      "pre_click_selector": "#act-btn-git",
+      "pre_click_label": "Nhấp biểu tượng Quản lý Phiên bản (Git) ở thanh công cụ trái",
+      "audio_src": "audio/lesson_16/b3.mp3",
+      "audio_duration": 11.2
+    },
+    {
+      "id": "b4",
+      "label": "4. Kỹ thuật: Giao việc đồng bộ bằng tiếng Việt thay vì gõ lệnh Terminal",
+      "duration": 12.81,
+      "pose": 3,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Đồng bộ Tự động Bằng Tiếng Việt",
+      "pedagogy_title": "Trợ lý AI tự động thực thi lệnh lưu phiên bản ở cửa sổ Terminal bên dưới",
+      "pedagogy_note": "Bạn chỉ cần ra lệnh ở khung chat phải; AI sẽ tự chạy lệnh đồng bộ ở thanh Terminal phía dưới và báo cáo kết quả.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'bao_cao_doanh_thu_q1.md', showTerminal:true, terminalHtml:'<div style=\"padding:10px;font-family:monospace;font-size:12px;color:#15803d;background:#f8fafc;\">$ git add bao_cao_doanh_thu_q1.md de_an_tong_the_q2.md<br>$ git commit -m \" docs(q1): hoan tat bao cao doanh thu Q1 va de an Q2\"<br>[main 8f4a2c1] docs(q1): hoan tat bao cao doanh thu Q1 va de an Q2 (2 files changed)<br>$ gdrive sync bao_cao_doanh_thu_q1.md &rarr; Thư mục Drive: TaskFlow_Bao_Cao_2026 [OK]</div>', userMsg:'Hãy lưu mốc phiên bản cho tệp bao_cao_doanh_thu_q1.md và đồng bộ lên thư mục Google Drive của phòng.', aiMsg:'Tôi đã tự động đóng dấu phiên bản (Commit <code>8f4a2c1</code>) và tải tệp <code>bao_cao_doanh_thu_q1.md</code> lên Google Drive thành công!'});",
+      "focus_selectors": [
+        "#ide-bottom-terminal",
+        "#ide-chat-messages"
+      ],
+      "cursor_selector": "#ide-bottom-terminal",
+      "cursor_label": "AI tự động chạy lệnh đồng bộ ở khung bên dưới",
+      "caption": "Anh chị nhìn xuống khung nhỏ phía dưới màn hình: Dân văn phòng không cần tự gõ bất kỳ dòng lệnh kỹ thuật nào. Khi anh chị yêu cầu bằng tiếng Việt ở khung chat, chính trợ lý AI sẽ tự chạy lệnh đóng dấu phiên bản và tải tệp lên <strong>Google Drive</strong>.",
+      "pre_click_selector": "#ide-send-btn",
+      "pre_click_label": "Nhấp nút Gửi để AI tự mở Terminal và chạy lệnh đồng bộ",
+      "audio_src": "audio/lesson_16/b4.mp3",
+      "audio_duration": 12.16
+    },
+    {
+      "id": "b5",
+      "label": "5. Bước 1: Mở kiểm tra tệp bao_cao_doanh_thu_q1.md trước khi đồng bộ",
+      "duration": 10.17,
+      "pose": 4,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 1 · Kiểm tra Tệp Trước Khi Gửi",
+      "pedagogy_title": "Cần gửi báo cáo doanh thu Quý 1 lên kho chung cho Ban Giám đốc",
+      "pedagogy_note": "Bước 1: Mở kiểm tra lại tệp bao_cao_doanh_thu_q1.md ở cây thư mục trái để đảm bảo số liệu đã chốt chính xác.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'bao_cao_doanh_thu_q1.md', breadcrumb:'antigravity_course_vn › bao_cao_doanh_thu_q1.md', editorTitle:'📊 bao_cao_doanh_thu_q1.md — Kiểm tra lần cuối trước khi đồng bộ', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">BÁO CÁO DOANH THU QUÝ 1 (BẢN CHỐT)</h3><p>Tổng doanh thu Quý 1: <strong>1.850.000.000 VNĐ</strong> (Enterprise: 68,1% | SMB: 31,9%).</p><p>Trạng thái: Đã kiểm duyệt 100%, sẵn sàng lưu mốc phiên bản và tải lên Google Drive.</p></div>'});",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas"
+      ],
+      "cursor_selector": "[data-file='bao_cao_doanh_thu_q1.md']",
+      "cursor_label": "Bước 1: Xác nhận nội dung bao_cao_doanh_thu_q1.md",
+      "caption": "Chúng ta vào thực hành 3 bước đồng bộ tài liệu nhóm. Ở <strong>Bước 1</strong>, anh chị nhấp chọn tệp <code>bao_cao_doanh_thu_q1.md</code> ở cây thư mục trái để kiểm tra lại trước khi xuất bản cho toàn công ty.",
+      "pre_click_selector": "[data-file='bao_cao_doanh_thu_q1.md']",
+      "pre_click_label": "Nhấp chọn tệp bao_cao_doanh_thu_q1.md ở cây thư mục trái",
+      "audio_src": "audio/lesson_16/b5.mp3",
+      "audio_duration": 9.52
+    },
+    {
+      "id": "b6",
+      "label": "6. Bước 2: Gõ lệnh yêu cầu AI lưu phiên bản và đẩy lên Drive",
+      "duration": 11.13,
+      "pose": 5,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 2 · Ra lệnh Lưu Mốc & Sao lưu",
+      "pedagogy_title": "Bước 2: Nhập yêu cầu lưu lịch sử GitHub và đồng bộ Google Drive vào ô chat",
+      "pedagogy_note": "Ghi rõ nội dung ghi chú phiên bản để sau này nhìn lại biết ngay mốc tài liệu này gồm những gì.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'bao_cao_doanh_thu_q1.md', clearChat:true, popupMode:'mention', chatInput:'@bao_cao_doanh_thu_q1.md Hãy lưu mốc lịch sử phiên bản với ghi chú \"Chốt báo cáo doanh thu Quý 1\" và tải tệp này lên thư mục Google Drive Ban Giám đốc.'});",
+      "focus_selectors": [
+        "#ide-chat-input",
+        "#ide-send-btn"
+      ],
+      "cursor_selector": "#ide-send-btn",
+      "cursor_label": "Bước 2: Nhấn Gửi để AI đồng bộ tự động",
+      "caption": "Sang <strong>Bước 2</strong>, tại ô chat bên phải, anh chị đính kèm <code>@bao_cao_doanh_thu_q1.md</code> từ bảng gợi ý, yêu cầu lưu mốc lịch sử kèm ghi chú rõ ràng và đẩy lên thư mục <strong>Google Drive</strong> rồi nhấn Gửi.",
+      "pre_click_selector": "#ide-popup-menu .popup-item",
+      "pre_click_label": "Chọn tệp đính kèm từ bảng gợi ý @",
+      "audio_src": "audio/lesson_16/b6.mp3",
+      "audio_duration": 10.48
+    },
+    {
+      "id": "b7",
+      "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+      "duration": 15.13,
+      "pose": 6,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "✅ Thực hành Bước 3 · Kết quả hoàn thành",
+      "pedagogy_title": "Bước 3: Nhận biên bản xác nhận mã phiên bản GitHub và đường dẫn Google Drive",
+      "pedagogy_note": "Tài liệu đã an toàn trên cả GitHub lẫn Google Drive.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'bao_cao_doanh_thu_q1.md', breadcrumb:'antigravity_course_vn › Xác nhận Đồng bộ Đám mây', editorTitle:'☁️ Biên bản Đồng bộ GitHub & Google Drive Thành công', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#15803d;margin-top:0;\">✅ ĐỒNG BỘ HOÀN TẤT 100%</h2><ul><li><strong>Tệp đã đồng bộ:</strong> <code>bao_cao_doanh_thu_q1.md</code></li><li><strong>Mã mốc lịch sử (Git Commit):</strong> <code>#8f4a2c1</code> — <em>\"Chốt báo cáo doanh thu Quý 1\"</em></li><li><strong>Vị trí Google Drive:</strong> <code>Drive / TaskFlow_2026 / Bao_Cao_HDQT / bao_cao_doanh_thu_q1.md</code></li></ul></div>', userMsg:'@bao_cao_doanh_thu_q1.md Hãy lưu mốc lịch sử phiên bản và tải tệp này lên Google Drive Ban Giám đốc.', aiMsg:'Đã hoàn tất! Tệp <code>bao_cao_doanh_thu_q1.md</code> đã được lưu mốc phiên bản trên GitHub và đồng bộ lên Google Drive Ban Giám đốc.'});",
+      "focus_selectors": [
+        "#editor-canvas",
+        "#ide-chat-messages"
+      ],
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Bước 3: Đã lưu lịch sử GitHub & đồng bộ Google Drive!",
+      "caption": "Ở <strong>Bước 3</strong>, trợ lý AI đã đóng dấu mốc phiên bản trên <strong>GitHub</strong> và trả về đúng đường dẫn tệp trên <strong>Google Drive</strong> Ban Giám đốc. Kết hợp quản lý lịch sử phiên bản và đồng bộ đám mây bằng tiếng Việt giúp anh chị bảo vệ an toàn tuyệt đối cho mọi tài sản dữ liệu và phối hợp đội nhóm trơn tru.",
+      "pre_click_selector": "#ide-send-btn",
+      "pre_click_label": "Bước 3: Nhấp nút Gửi để lưu mốc GitHub & tải lên Google Drive",
+      "audio_src": "audio/lesson_16/b7.mp3",
+      "audio_duration": 14.48
+    }
+  ]
+}

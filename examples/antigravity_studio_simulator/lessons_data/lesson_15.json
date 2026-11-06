@@ -1,0 +1,176 @@
+{
+  "lesson_slug": "lesson_15",
+  "filename": "lesson_15.html",
+  "legacy_alias": "",
+  "code": "BÀI 15",
+  "chapter_number": 4,
+  "chapter_code": "CHƯƠNG 4",
+  "chapter_title": "Xử lý Dữ liệu, Bảng tính & Phối hợp Đội nhóm",
+  "title": "Phối hợp Nhiều Luồng Công việc Song song Cho Dự án Lớn",
+  "short_title": "Phối hợp Đa Luồng Song song",
+  "pill_label": "Bài 15 · Đa Luồng Song song",
+  "description": "Nhân gấp 3 tốc độ xử lý công việc bằng cách chia một dự án lớn thành nhiều nhánh độc lập và điều phối các luồng Trợ lý AI song song (Multi-Threads) làm việc đồng thời trên Antigravity 2.0 và IDE.",
+  "prerequisites": "Đã thành thạo kỹ thuật bóc tách tài liệu và phân tích bảng tính CSV.",
+  "dependents": "Điều phối các đề án tổng thể đa phòng ban gồm Tài chính, Nhân sự và Thị trường.",
+  "placement_risk": "0% Rủi ro — Học viên tách dự án lớn thành 3 nhánh độc lập tệp đầu ra trước khi hợp nhất.",
+  "continuity_bridge": "Làm chủ kỹ thuật điều phối nhiều luồng Trợ lý AI chạy song song (Đọc chung hồ sơ gốc -> Ghi ra tệp riêng biệt -> Hợp nhất đề án tổng thể).",
+  "slides": {
+    "s1": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 4 · BÀI 15 · ĐẶT VẤN ĐỀ</span>\n        <span class=\"k-slide-step\">Tư duy Trưởng phòng Điều phối</span>\n      </div>\n      <div class=\"k-slide-h1\">Từ 1 trợ lý làm tuần tự mất 3 giờ sang Đội ngũ 3 Chuyên viên AI chạy song song 15 phút</div>\n      <div class=\"k-slide-sub\">Đừng bắt một luồng hội thoại gánh cùng lúc cả Kế toán, Nhân sự lẫn Khảo sát thị trường: Hãy chia việc cho 3 luồng chuyên biệt.</div>\n    </div>\n    <div style=\"display:flex; flex-direction:column; gap:12px;\">\n      <div class=\"k-visual-hero-box k-layout-comparison k-step-item k-hl\" id=\"s1_step1\" data-order=\"1\">\n        <div class=\"k-cmp-col k-cmp-before\">\n          <div class=\"k-cmp-badge-old\">❌ LÀM TUẦN TỰ 1 LUỒNG · CHỜ ĐỢI LÂU</div>\n          <div class=\"k-cmp-main\">1 luồng làm xong Tài chính mới làm tiếp Nhân sự</div>\n          <div class=\"k-cmp-sub\">Tốn gấp 3 lần thời gian, ngữ cảnh hội thoại bị pha trộn giữa số liệu và văn bản</div>\n        </div>\n        <div class=\"k-cmp-arrow\">➔</div>\n        <div class=\"k-cmp-col k-cmp-after\">\n          <div class=\"k-cmp-badge-new\">✅ ĐA LUỒNG SONG SONG · NHÂN 3 TỐC ĐỘ</div>\n          <div class=\"k-cmp-main\">Mở 3 luồng (Multi-Threads) chạy đồng thời</div>\n          <div class=\"k-cmp-sub\">Rút ngắn từ 3 giờ xuống 15 phút, mỗi chuyên viên AI tập trung 100% vào 1 đầu việc</div>\n        </div>\n      </div>\n      <div class=\"k-card k-step-item k-unreached\" id=\"s1_step2\" data-order=\"2\" style=\"padding:12px 16px;\">\n        <div style=\"display:flex; align-items:center; justify-content:space-between; gap:16px;\">\n          <div style=\"flex:1;\">\n            <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">SƠ ĐỒ PHÂN VIỆC 3 NHÁNH CHUYÊN BIỆT</span>\n            <h3 style=\"margin:6px 0 4px;\">Bạn đóng vai Trưởng phòng giao 3 đầu việc chạy cùng lúc</h3>\n            <p style=\"margin:0; font-size:12.5px; color:#475569;\">Nhánh 1 chuyên phân tích bảng số liệu doanh thu; Nhánh 2 chuyên rà soát định biên nhân sự 45 người; và Nhánh 3 chuyên lập bảng đối sánh tính năng với đối thủ cạnh tranh.</p>\n          </div>\n          <svg viewBox=\"0 0 300 72\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:280px; height:auto; flex-shrink:0;\">\n            <rect x=\"4\" y=\"4\" width=\"92\" height=\"64\" rx=\"6\" fill=\"#FFF7ED\" stroke=\"#FB923C\" stroke-width=\"1.5\"/>\n            <text x=\"50\" y=\"26\" text-anchor=\"middle\" fill=\"#9A3412\" font-size=\"9.5\" font-weight=\"800\">📊 NHÁNH 1</text>\n            <text x=\"50\" y=\"42\" text-anchor=\"middle\" fill=\"#334155\" font-size=\"8.5\" font-weight=\"700\">Số liệu Quý 1</text>\n            <text x=\"50\" y=\"56\" text-anchor=\"middle\" fill=\"#C2410C\" font-size=\"8\">Chạy song song</text>\n            <rect x=\"104\" y=\"4\" width=\"92\" height=\"64\" rx=\"6\" fill=\"#EFF6FF\" stroke=\"#60A5FA\" stroke-width=\"1.5\"/>\n            <text x=\"150\" y=\"26\" text-anchor=\"middle\" fill=\"#1D4ED8\" font-size=\"9.5\" font-weight=\"800\">👥 NHÁNH 2</text>\n            <text x=\"150\" y=\"42\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"8.5\" font-weight=\"700\">Định biên Nhân sự</text>\n            <text x=\"150\" y=\"56\" text-anchor=\"middle\" fill=\"#0369A1\" font-size=\"8\">Chạy song song</text>\n            <rect x=\"204\" y=\"4\" width=\"92\" height=\"64\" rx=\"6\" fill=\"#F0FDF4\" stroke=\"#4ADE80\" stroke-width=\"1.5\"/>\n            <text x=\"250\" y=\"26\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"9.5\" font-weight=\"800\">🎯 NHÁNH 3</text>\n            <text x=\"250\" y=\"42\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"8.5\" font-weight=\"700\">Đối sánh Đối thủ</text>\n            <text x=\"250\" y=\"56\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"8\">Chạy song song</text>\n          </svg>\n        </div>\n      </div>\n      <div class=\"k-callout k-step-item k-unreached\" id=\"s1_step3\" data-order=\"3\">\n        <span>⚡</span>\n        <div><strong>Bản chất Đa luồng (Multi-Threads):</strong> Thay vì ngồi đợi từng việc hoàn thành, người quản lý kích hoạt đồng thời cả 3 chuyên viên AI làm việc trong cùng một dự án.</div>\n      </div>\n    </div>\n    ",
+    "s2": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 4 · BÀI 15 · KỶ LUẬT PHỐI HỢP</span>\n        <span class=\"k-slide-step\">3 Nguyên tắc Không Đụng độ</span>\n      </div>\n      <div class=\"k-slide-h1\">Ba nguyên tắc điều phối Đa luồng: Đọc chung hồ sơ gốc — Ghi tệp riêng — Hợp nhất cuối</div>\n      <div class=\"k-slide-sub\">Đảm bảo 3 luồng AI chạy cùng lúc tuyệt đối không ghi đè dữ liệu của nhau mà vẫn thống nhất một giọng văn chuẩn mực.</div>\n    </div>\n    <div class=\"k-grid-3\" style=\"margin-top:8px;\">\n      <div class=\"k-card k-step-item k-hl\" id=\"s2_step1\" data-order=\"1\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">1 · ĐỘC LẬP TỆP ĐẦU RA</span>\n          <span class=\"k-illus-badge\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#EA580C\" stroke-width=\"2\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"3\"/><path d=\"M8 10h8M8 14h5\"/></svg></span>\n        </div>\n        <h3>Mỗi nhánh ghi ra một tệp đích riêng</h3>\n        <p>Quy định rõ Nhánh 1 lưu <code>bao_cao_doanh_thu_q1.md</code>, Nhánh 2 lưu <code>de_xuat_nhan_su_q2.md</code>, Nhánh 3 lưu <code>bang_doi_sanh_doi_thu.md</code>.</p>\n        <div class=\"k-card-mini-note\">🛡️ 0% xung đột hay ghi đè dữ liệu trên ổ cứng</div>\n      </div>\n      <div class=\"k-card k-step-item k-unreached\" id=\"s2_step2\" data-order=\"2\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#E0F2FE; color:#0369A1; border:1px solid #7DD3FC;\">2 · ĐỒNG BỘ HỒ SƠ GỐC</span>\n          <span class=\"k-illus-badge\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#0284C7\" stroke-width=\"2\"><path d=\"M12 2L2 7l10 5 10-5-10-5z\"/><path d=\"M2 17l10 5 10-5M2 12l10 5 10-5\"/></svg></span>\n        </div>\n        <h3>Cùng đọc @COMPANY.md &amp; .agent/rules/</h3>\n        <p>Tuy tách làm 3 luồng riêng nhưng tất cả đều tham chiếu chung hồ sơ gốc của công ty và bộ nội quy văn phòng nên số liệu và văn phong thống nhất 100%.</p>\n        <div class=\"k-card-mini-note\">🎯 3 luồng chạy nhưng chất lượng đồng bộ như 1</div>\n      </div>\n      <div class=\"k-card k-step-item k-unreached\" id=\"s2_step3\" data-order=\"3\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#DCFCE7; color:#15803D; border:1px solid #86EFAC;\">3 · HỢP NHẤT CUỐI CÙNG</span>\n          <span class=\"k-illus-badge\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#16A34A\" stroke-width=\"2\"><path d=\"M22 11.08V12a10 10 0 1 1-5.93-9.14\"/><polyline points=\"22 4 12 14.01 9 11.01\"/></svg></span>\n        </div>\n        <h3>Ghép 3 tệp con thành Đề án Tổng thể</h3>\n        <p>Khi cả 3 nhánh đều báo hoàn tất 100%, bạn dùng 1 câu lệnh đính kèm cả 3 tệp thành phần để tổng hợp thành <code>de_an_tong_the_q2.md</code>.</p>\n        <div class=\"k-card-mini-note\">🏆 Tiết kiệm 70% thời gian lập đề án lớn</div>\n      </div>\n    </div>\n    "
+  },
+  "beats": [
+    {
+      "id": "b1",
+      "label": "1. Lý thuyết (Phần 1): Tư duy Trưởng phòng chia 3 nhánh AI chạy song song rút ngắn thời gian từ 3 giờ xuống 15 phút",
+      "duration": 28.88,
+      "pose": 1,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s1",
+      "slide_id": "s1",
+      "hl": [
+        "s1_step1",
+        "s1_step2",
+        "s1_step3"
+      ],
+      "caption": "Trong thực tế quản lý, một người trưởng phòng giỏi không bao giờ bắt một nhân viên vừa ngồi cộng sổ kế toán, vừa đi khảo sát đối thủ, lại vừa viết quy chế nhân sự nối tiếp nhau mất cả buổi chiều. Thay vì giao việc tuần tự từng món trên một khung hội thoại duy nhất mất hàng giờ chờ đợi, chúng ta có thể đóng vai người điều phối mở ba luồng trợ lý AI chạy đồng thời: Luồng thứ nhất chuyên phân tích số liệu doanh thu, luồng thứ hai đánh giá định biên nhân sự, và luồng thứ ba lập bảng đối sánh đối thủ, giúp rút ngắn thời gian chuẩn bị hồ sơ từ ba giờ xuống chỉ còn mười lăm phút.",
+      "audio_src": "audio/lesson_15/b1.mp3",
+      "audio_duration": 28.23
+    },
+    {
+      "id": "b2",
+      "label": "2. Lý thuyết (Phần 2): Ba nguyên tắc điều phối đa luồng — Độc lập tệp đích, Đồng bộ hồ sơ gốc & Hợp nhất cuối cùng",
+      "duration": 30.94,
+      "pose": 2,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s2",
+      "slide_id": "s2",
+      "hl": [
+        "s2_step1",
+        "s2_step2",
+        "s2_step3"
+      ],
+      "caption": "Để ba luồng trợ lý chạy cùng lúc mà không bao giờ xảy ra hỗn loạn, anh chị cần nắm vững ba nguyên tắc vàng. Nguyên tắc thứ nhất là độc lập tệp đầu ra: Mỗi nhánh bắt buộc phải ghi kết quả vào một tệp đích có tên riêng biệt để không bao giờ ghi đè lên nhau. Nguyên tắc thứ hai là đồng bộ hồ sơ gốc: Cả ba nhánh đều cùng đọc tệp <code>@COMPANY.md</code> và thừa hưởng chung bộ nội quy văn phòng nên giọng văn hoàn toàn thống nhất. Và nguyên tắc thứ ba là hợp nhất cuối cùng: Ngay khi cả ba nhánh báo hoàn thành, anh chị chỉ cần một câu lệnh để ghép ba tệp thành phần thành bản Đề án Tổng thể hoàn chỉnh.",
+      "audio_src": "audio/lesson_15/b2.mp3",
+      "audio_duration": 30.29
+    },
+    {
+      "id": "b3",
+      "label": "3. Minh họa: Quan sát các luồng tác vụ (Threads) trên Antigravity 2.0",
+      "duration": 13.29,
+      "pose": 2,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Quản lý Đa Luồng (Multi-Threads)",
+      "pedagogy_title": "Theo dõi nhiều luồng công việc đang chạy ở cột trái Antigravity 2.0",
+      "pedagogy_note": "Mỗi dòng trong mục Conversation / Threads ở cột trái là một chuyên viên AI đang xử lý một nhiệm vụ riêng.",
+      "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); closeSettingsModal(); loadAgy2Thread('main');",
+      "focus_selectors": [
+        "#agy2-left-sb",
+        "#th-main",
+        "#th-5balance"
+      ],
+      "cursor_selector": "#th-5balance",
+      "cursor_label": "Chuyển đổi nhanh giữa các luồng công việc song song",
+      "caption": "Nhìn vào cột bên trái của <strong>Antigravity 2.0</strong> trên màn hình: Anh chị có thể mở nhiều luồng hội thoại cùng lúc. Trong khi luồng số 1 đang phân tích doanh thu, chúng ta bấm sang luồng số 2 để giao tiếp việc rà soát nhân sự.",
+      "pre_click_selector": "#th-main",
+      "pre_click_label": "Nhấp kiểm tra danh sách luồng công việc ở cột trái",
+      "audio_src": "audio/lesson_15/b3.mp3",
+      "audio_duration": 12.64
+    },
+    {
+      "id": "b4",
+      "label": "4. Kỹ thuật: Bảng điều phối 3 nhánh chạy song song không đụng độ tệp",
+      "duration": 13.05,
+      "pose": 3,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Phân tách Tệp Đầu ra",
+      "pedagogy_title": "Theo dõi tiến độ 3 nhánh thực thi song song trên Bảng Điều Phối Đa Luồng",
+      "pedagogy_note": "Nhánh 1 -> bao_cao_doanh_thu_q1.md; Nhánh 2 -> doi_thu_canh_tranh_q2.md; Nhánh 3 -> ke_hoach_nhan_su_q2.md.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'bao_cao_doanh_thu_q1.md', breadcrumb:'antigravity_course_vn › Bảng Điều Phối Đa Luồng Trực Quan', editorTitle:'⚡ Live Multi-Thread Monitor — Tiến Độ 3 Nhánh Song Song', editorHtml:'<div style=\"padding:16px;background:#fbf8f3;border:1px solid #fed7aa;border-radius:10px;\"><div style=\"display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;\"><h3 style=\"color:#9a3412;margin:0;font-size:15px;\">⚡ BẢNG ĐIỀU PHỐI ĐA LUỒNG TRỰC QUAN (LIVE MULTI-THREAD MONITOR)</h3><span style=\"background:#dcfce7;color:#15803d;padding:3px 10px;border-radius:99px;font-size:11px;font-weight:800;\">3 Luồng Độc Lập · 0 Xung Đột</span></div><div style=\"display:flex;flex-direction:column;gap:10px;\"><div style=\"background:#fff;border:1.5px solid #86efac;border-radius:8px;padding:10px 14px;box-shadow:0 1px 3px rgba(0,0,0,0.04);\"><div style=\"display:flex;justify-content:space-between;font-size:13px;font-weight:700;color:#166534;margin-bottom:6px;\"><span>📊 Nhánh 1: Phân tích Số liệu ➔ <code>bao_cao_doanh_thu_q1.md</code></span><span style=\"color:#15803d;\">[100% Hoàn tất ✓]</span></div><div style=\"width:100%;height:8px;background:#e2e8f0;border-radius:99px;overflow:hidden;\"><div style=\"width:100%;height:100%;background:linear-gradient(90deg,#22c55e,#16a34a);border-radius:99px;\"></div></div></div><div style=\"background:#fff;border:1.5px solid #93c5fd;border-radius:8px;padding:10px 14px;box-shadow:0 1px 3px rgba(0,0,0,0.04);\"><div style=\"display:flex;justify-content:space-between;font-size:13px;font-weight:700;color:#1e40af;margin-bottom:6px;\"><span>🎯 Nhánh 2: Khảo sát Đối thủ ➔ <code>doi_thu_canh_tranh_q2.md</code></span><span style=\"color:#1d4ed8;\">[100% Hoàn tất ✓]</span></div><div style=\"width:100%;height:8px;background:#e2e8f0;border-radius:99px;overflow:hidden;\"><div style=\"width:100%;height:100%;background:linear-gradient(90deg,#3b82f6,#2563eb);border-radius:99px;\"></div></div></div><div style=\"background:#fff;border:1.5px solid #fdba74;border-radius:8px;padding:10px 14px;box-shadow:0 1px 3px rgba(0,0,0,0.04);\"><div style=\"display:flex;justify-content:space-between;font-size:13px;font-weight:700;color:#9a3412;margin-bottom:6px;\"><span>👥 Nhánh 3: Kế hoạch Nhân sự ➔ <code>ke_hoach_nhan_su_q2.md</code></span><span style=\"color:#ea580c;\">[Đang ghi tệp 95%...]</span></div><div style=\"width:100%;height:8px;background:#ffedd5;border-radius:99px;overflow:hidden;\"><div style=\"width:95%;height:100%;background:linear-gradient(90deg,#f97316,#ea580c);border-radius:99px;\"></div></div></div></div></div>'});",
+      "focus_selectors": [
+        "#editor-canvas",
+        "#ide-file-tree"
+      ],
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "3 thẻ tiến độ ngang hiển thị 3 nhánh ghi ra 3 tệp riêng biệt",
+      "caption": "Bảng điều phối đa luồng trực quan ở cột giữa hiển thị rõ 3 thẻ ngang màu sắc kèm thanh tiến độ thực thi: Nhánh 1 và Nhánh 2 đã hoàn tất 100%, còn Nhánh 3 đang ghi tệp đạt 95% mà tuyệt đối không đụng độ dữ liệu.",
+      "pre_click_selector": "[data-file='bao_cao_doanh_thu_q1.md']",
+      "pre_click_label": "Nhấp chọn tệp bao_cao_doanh_thu_q1.md ở cây thư mục trái",
+      "audio_src": "audio/lesson_15/b4.mp3",
+      "audio_duration": 12.4
+    },
+    {
+      "id": "b5",
+      "label": "5. Bước 1: Kích hoạt luồng công việc song song trên Antigravity 2.0",
+      "duration": 11.05,
+      "pose": 4,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 1 · Phân việc cho các Nhánh",
+      "pedagogy_title": "Cần hoàn tất cả Báo cáo nhân sự lẫn Đối sánh thị trường trong 10 phút",
+      "pedagogy_note": "Bước 1: Mở giao diện quản lý luồng trên Antigravity 2.0 để kiểm tra các nhánh tác vụ đang hoạt động.",
+      "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); closeSettingsModal(); loadAgy2Thread('5balance');",
+      "focus_selectors": [
+        "#agy2-left-sb",
+        "#th-5balance",
+        "#agy2-chat-stream"
+      ],
+      "cursor_selector": "#th-5balance",
+      "cursor_label": "Bước 1: Kiểm tra luồng tác vụ thứ hai trên Antigravity 2.0",
+      "caption": "Chúng ta vào thực hành 3 bước phối hợp nhiều luồng công việc. Ở <strong>Bước 1</strong>, anh chị bấm chọn luồng công việc thứ hai ở cột trái để giao nhiệm vụ rà soát nhân sự và đối thủ song song với luồng phân tích doanh thu.",
+      "pre_click_selector": "#th-5balance",
+      "pre_click_label": "Bước 1: Nhấp chuyển sang luồng tác vụ song song thứ hai",
+      "audio_src": "audio/lesson_15/b5.mp3",
+      "audio_duration": 10.4
+    },
+    {
+      "id": "b6",
+      "label": "6. Bước 2: Ra lệnh hợp nhất kết quả từ 3 tệp thành phần",
+      "duration": 9.93,
+      "pose": 5,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 2 · Hợp nhất 3 Tệp Thành phần",
+      "pedagogy_title": "Bước 2: Quay về IDE, đính kèm cả 3 tệp đầu ra để tổng hợp Đề án Quý 2",
+      "pedagogy_note": "Khi cả 3 nhánh đã hoàn tất, dùng dấu @ gọi cả 3 tệp để AI ghép thành bản de_an_tong_the_q2.md.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'COMPANY.md', file:'COMPANY.md', clearChat:true, popupMode:'mention', chatInput:'@bao_cao_doanh_thu_q1.md @de_xuat_nhan_su_q2.md @bang_doi_sanh_doi_thu.md Hãy hợp nhất kết quả của 3 nhóm thành bản Đề án Tổng thể Quý 2 tại tệp de_an_tong_the_q2.md'});",
+      "focus_selectors": [
+        "#ide-chat-input",
+        "#ide-send-btn"
+      ],
+      "cursor_selector": "#ide-send-btn",
+      "cursor_label": "Bước 2: Hợp nhất kết quả của cả 3 nhánh công việc",
+      "caption": "Sang <strong>Bước 2</strong>, khi cả 3 nhánh đều đã báo hoàn thành, anh chị quay về khung chat, chọn đính kèm cả 3 tệp kết quả từ bảng gợi ý <code>@</code> và yêu cầu hợp nhất thành bản đề án tổng thể.",
+      "pre_click_selector": "#ide-popup-menu .popup-item",
+      "pre_click_label": "Chọn tệp đính kèm từ bảng gợi ý @",
+      "audio_src": "audio/lesson_15/b6.mp3",
+      "audio_duration": 9.28
+    },
+    {
+      "id": "b7",
+      "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+      "duration": 17.15,
+      "pose": 6,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "✅ Thực hành Bước 3 · Kết quả hoàn thành",
+      "pedagogy_title": "Bước 3: Kiểm tra kết quả tệp de_an_tong_the_q2.md kết tinh từ 3 nhánh song song",
+      "pedagogy_note": "Đề án hoàn chỉnh cả Tài chính, Nhân sự và Thị trường.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'de_an_tong_the_q2.md', breadcrumb:'antigravity_course_vn › de_an_tong_the_q2.md (Hợp nhất từ 3 nhánh)', editorTitle:'🏆 de_an_tong_the_q2.md — Đề Án Tổng Thể Quý 2 TaskFlow', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#15803d;margin-top:0;\">ĐỀ ÁN TỔNG THỂ QUÝ 2/2026 — TASKFLOW INC.</h2><ul><li><strong>Phần I — Tài chính (Từ Nhánh #1):</strong> Giữ vững đà tăng trưởng gói Enterprise (1,26 tỷ VNĐ) và giảm Churn nhóm SMB từ 6,2% xuống 4,3%.</li><li><strong>Phần II — Nhân sự (Từ Nhánh #2):</strong> Bổ sung 2 chuyên viên Customer Success chuyên trách hỗ trợ khách hàng mới trong 7 ngày đầu.</li><li><strong>Phần III — Cạnh tranh (Từ Nhánh #3):</strong> Tung gói dùng thử 14 ngày có sẵn mẫu quy trình tự động.</li></ul></div>', userMsg:'@bao_cao_doanh_thu_q1.md @de_xuat_nhan_su_q2.md @bang_doi_sanh_doi_thu.md Hãy hợp nhất kết quả thành de_an_tong_the_q2.md', aiMsg:'Đã hợp nhất thành công kết quả của 3 nhánh công việc vào tệp <code>de_an_tong_the_q2.md</code>!'});",
+      "focus_selectors": [
+        "#editor-canvas",
+        "#ide-chat-messages"
+      ],
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Bước 3: Đề án tổng thể hoàn tất nhanh gấp 3 lần!",
+      "caption": "Ở <strong>Bước 3</strong>, bản <code>de_an_tong_the_q2.md</code> đã hiện ra đầy đủ cả ba mảng Tài chính, Nhân sự và Thị trường chỉ trong vài phút. Tuân thủ quy tắc đọc chung hồ sơ gốc, ghi ra các tệp đích riêng biệt rồi hợp nhất cuối cùng giúp anh chị nhân gấp ba tốc độ triển khai các dự án lớn mà không bao giờ xung đột dữ liệu.",
+      "pre_click_selector": "#ide-send-btn",
+      "pre_click_label": "Bước 3: Nhấp nút Gửi để hợp nhất thành de_an_tong_the_q2.md",
+      "audio_src": "audio/lesson_15/b7.mp3",
+      "audio_duration": 16.5
+    }
+  ]
+}

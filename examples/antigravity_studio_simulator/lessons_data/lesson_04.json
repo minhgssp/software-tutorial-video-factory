@@ -1,0 +1,199 @@
+{
+  "lesson_slug": "lesson_04",
+  "filename": "lesson_04.html",
+  "legacy_alias": "lesson_05_taskflow_start_1_1_bay_phim_space.html",
+  "code": "BÀI 4",
+  "chapter_number": 1,
+  "chapter_code": "CHƯƠNG 1",
+  "chapter_title": "Khởi động Chuẩn & Làm chủ Giao diện",
+  "title": "Bật Quyền Tự chủ Turbo & Bài Thực hành Đầu tiên Với /start-1-1",
+  "short_title": "Chế độ Turbo & Lệnh /start-1-1",
+  "pill_label": "Bài 4 · Turbo & /start-1-1",
+  "description": "Hiểu 4 cấp độ phân quyền tự chủ (Request Review, Default, Auto, Turbo), bật chế độ Turbo trong Settings và hoàn thành bài thực hành đầu tiên với lệnh gạch chéo /start-1-1 trong dự án mẫu TaskFlow.",
+  "prerequisites": "Bài 1, Bài 2 & Bài 3 (Đã mở thư mục dự án, làm chủ 3 cột và hiểu vì sao nút Accept xuất hiện khi chưa bật Turbo).",
+  "dependents": "Bài 5..Bài 24 (Toàn bộ các bài thực hành đều chạy mượt nhờ đã bật quyền tự chủ Turbo ở Bài 4).",
+  "placement_risk": "0% Rủi ro — Học viên chỉ làm quen với thao tác gõ dấu / để gọi bài học có sẵn /start-1-1, chưa bị nhồi nhét lý thuyết thiết kế hệ thống .agent phức tạp.",
+  "continuity_bridge": "Hoàn tất bật chế độ tự chủ Turbo trong Settings và kích hoạt thành công quy trình học tương tác /start-1-1 trong bối cảnh công ty mẫu TaskFlow.",
+  "slides": {
+    "s1": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 1 · BÀI 4 · LÝ THUYẾT PHẦN 1</span>\n        <span class=\"k-slide-step\">4 Cấp độ Phân quyền Tự chủ (This Computer)</span>\n      </div>\n      <div class=\"k-slide-h1\">Tại sao nên bật chế độ tự chủ Turbo khi làm việc trong thư mục dự án văn phòng?</div>\n      <div class=\"k-slide-sub\">Giải phóng bạn khỏi việc phải ngồi canh bấm nút Accept duyệt từng bước nhỏ khi AI tổng hợp báo cáo.</div>\n    </div>\n    <div class=\"k-visual-hero-box k-layout-timeline k-step-item k-hl\" id=\"s1_step1\" data-order=\"1\">\n      <div class=\"k-viz-header\">\n        <span class=\"k-viz-badge\">⚙️ 4 NẤC THANG ỦY QUYỀN TRONG SETTINGS</span>\n        <span class=\"k-viz-title\">So sánh mức độ tự chủ của Trợ lý AI trong mục Settings &gt; General &gt; This Computer</span>\n      </div>\n      <div class=\"k-tl-track\">\n        <div class=\"k-tl-step\">\n          <span class=\"k-tl-num\">Mức 1 &amp; 2</span>\n          <strong>REQUEST REVIEW / DEFAULT</strong>\n          <span>Xin phép từng bước · Phải ngồi bấm Accept liên tục</span>\n        </div>\n        <div class=\"k-tl-conn\">──▶</div>\n        <div class=\"k-tl-step\">\n          <span class=\"k-tl-num\">Mức 3</span>\n          <strong>AUTO (PREVIEW)</strong>\n          <span>AI tự đánh giá rủi ro · Đôi lúc vẫn dừng chờ hỏi</span>\n        </div>\n        <div class=\"k-tl-conn\">──▶</div>\n        <div class=\"k-tl-step k-tl-final\">\n          <span class=\"k-tl-num\">Mức 4 · Khuyên dùng</span>\n          <strong>TURBO (TỰ CHỦ 100%)</strong>\n          <span>Chạy liền mạch từ đầu đến cuối · Tự lưu tệp hoàn chỉnh</span>\n        </div>\n      </div>\n    </div>\n    <div class=\"k-grid-3\" style=\"grid-template-columns: 1fr 1fr;\">\n      <div class=\"k-card k-step-item k-unreached\" id=\"s1_step2\" data-order=\"2\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">BẤT TIỆN CỦA MẶC ĐỊNH · NGẮT QUÃNG LIÊN TỤC</span>\n        </div>\n        <h3>Giao việc 5 bước phải ngồi chờ bấm duyệt 5 lần</h3>\n        <p>Ở chế độ <strong>Default</strong>, giống như một nhân viên mới quá rụt rè, cứ mỗi lần đọc tệp hay tạo nháp báo cáo là Trợ lý AI lại dừng hẳn lại chờ bạn bấm nút <strong>Accept</strong>, làm đứt mạch suy nghĩ.</p>\n        <div class=\"k-card-mini-note\">⏳ Mất thời gian trông chừng màn hình ở từng thao tác nhỏ</div>\n      </div>\n      <div class=\"k-card k-step-item k-unreached\" id=\"s1_step3\" data-order=\"3\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#DCFCE7; color:#15803D; border:1px solid #86EFAC;\">ƯU ĐIỂM CỦA TURBO · CHẠY MỘT MẠCH TỚI ĐÍCH</span>\n        </div>\n        <h3>An toàn tuyệt đối khi đã mở đúng thư mục dự án con</h3>\n        <p>Khi bạn chỉ mở thư mục công việc riêng biệt như <code>antigravity_course_vn</code>, việc bật chế độ <strong>Turbo</strong> một lần duy nhất trong <strong>Settings</strong> giúp Trợ lý AI tự động đọc dữ liệu và xuất báo cáo trọn gói.</p>\n        <div class=\"k-card-mini-note\">🚀 Settings ➔ General ➔ This Computer ➔ Chọn Turbo</div>\n      </div>\n    </div>\n    ",
+    "s2": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 1 · BÀI 4 · LÝ THUYẾT PHẦN 2</span>\n        <span class=\"k-slide-step\">Bối cảnh TaskFlow &amp; Kỹ thuật Gọi Lệnh Gạch chéo (/)</span>\n      </div>\n      <div class=\"k-slide-h1\">Đóng vai quản lý tại công ty mẫu TaskFlow và quy tắc tránh bẫy phím cách khi gõ lệnh /</div>\n      <div class=\"k-slide-sub\">Trải nghiệm phương pháp học thực chiến ngay trên hồ sơ doanh nghiệp và kích hoạt bài tập đầu tiên /start-1-1.</div>\n    </div>\n    <div class=\"k-visual-hero-box k-layout-comparison k-step-item k-hl\" id=\"s2_step1\" data-order=\"1\">\n      <div class=\"k-cmp-col k-cmp-after\">\n        <div class=\"k-cmp-badge-new\">🏢 DOANH NGHIỆP GIẢ LẬP · TASKFLOW INC.</div>\n        <div class=\"k-cmp-main\">Quy mô 45 nhân sự với đầy đủ hồ sơ phòng ban</div>\n        <div class=\"k-cmp-sub\">Đóng vai Quản lý Vận hành &amp; Tự động hóa quy trình</div>\n        <svg class=\"k-cmp-illus-svg\" viewBox=\"0 0 380 74\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <rect x=\"6\" y=\"6\" width=\"368\" height=\"62\" rx=\"8\" fill=\"#EFF6FF\" stroke=\"#60A5FA\" stroke-width=\"1.6\"/>\n          <text x=\"190\" y=\"24\" text-anchor=\"middle\" fill=\"#1D4ED8\" font-size=\"11\" font-weight=\"800\">🏢 Hồ sơ Công ty Mẫu: TaskFlow Inc. (COMPANY.md)</text>\n          <text x=\"190\" y=\"42\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"10\" font-weight=\"700\">👥 45 Nhân sự · 📊 Bảng doanh thu · 📋 Quy trình SOP</text>\n          <text x=\"190\" y=\"58\" text-anchor=\"middle\" fill=\"#0369A1\" font-size=\"9.5\" font-weight=\"700\">🎯 Thực hành giải quyết bài toán văn phòng sát thực tế 100%</text>\n        </svg>\n      </div>\n      <div class=\"k-cmp-arrow\">➔</div>\n      <div class=\"k-cmp-col k-cmp-after\">\n        <div class=\"k-cmp-badge-new\">⚡ PHÍM TẮT QUY TRÌNH · DẤU GẠCH CHÉO (/)</div>\n        <div class=\"k-cmp-main\">Gõ /start-1-1 để kích hoạt bài học tương tác</div>\n        <div class=\"k-cmp-sub\">Click chuột hoặc nhấn Enter, tuyệt đối không bấm Space</div>\n        <svg class=\"k-cmp-illus-svg\" viewBox=\"0 0 380 74\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <rect x=\"6\" y=\"6\" width=\"368\" height=\"62\" rx=\"8\" fill=\"#DCFCE7\" stroke=\"#22C55E\" stroke-width=\"1.6\"/>\n          <text x=\"190\" y=\"24\" text-anchor=\"middle\" fill=\"#14532D\" font-size=\"11\" font-weight=\"800\">⌨️ Gõ vào ô chat: /start ➔ Bảng gợi ý bật lên</text>\n          <text x=\"190\" y=\"42\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"10\" font-weight=\"800\">✅ ĐÚNG: Click chuột hoặc nhấn phím Enter / Tab</text>\n          <text x=\"190\" y=\"58\" text-anchor=\"middle\" fill=\"#DC2626\" font-size=\"9.5\" font-weight=\"700\">❌ SAI: Bấm phím cách (Space) gây lỗi nhảy lặp chữ</text>\n        </svg>\n      </div>\n    </div>\n    <div class=\"k-grid-3\" style=\"grid-template-columns: 1fr 1fr;\">\n      <div class=\"k-card k-step-item k-unreached\" id=\"s2_step2\" data-order=\"2\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#E0F2FE; color:#0369A1; border:1px solid #7DD3FC;\">BỐI CẢNH THỰC CHIẾN · TASKFLOW INC.</span>\n        </div>\n        <h3>Học qua tình huống điều hành doanh nghiệp thật</h3>\n        <p>Thay vì học lý thuyết suông, bộ học liệu trang bị sẵn toàn bộ hồ sơ của công ty phần mềm <strong>TaskFlow</strong> quy mô 45 nhân sự. Khi gõ lệnh <code>/start-1-1</code>, chính Trợ lý AI sẽ đóng vai người hướng dẫn đưa bạn đi qua từng nhiệm vụ.</p>\n        <div class=\"k-card-mini-note\">🏢 Có sẵn COMPANY.md, bảng doanh thu, nhân sự và nội quy</div>\n      </div>\n      <div class=\"k-card k-step-item k-unreached\" id=\"s2_step3\" data-order=\"3\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">LƯU Ý KỸ THUẬT · TRÁNH BẪY PHÍM CÁCH (SPACE)</span>\n        </div>\n        <h3>Chọn lệnh trên bảng gợi ý bằng chuột hoặc phím Enter</h3>\n        <p>Khi gõ dấu gạch chéo <code>/start</code>, một danh sách lệnh gợi ý sẽ bật lên. Bạn hãy dùng chuột bấm chọn dòng <code>/start-1-1</code> hoặc nhấn phím <kbd>Enter</kbd>; tuyệt đối không bấm phím dài (Space) để tránh làm tên lệnh bị nhân đôi.</p>\n        <div class=\"k-card-mini-note\">⚡ Gõ /start ➔ Click chọn /start-1-1 ➔ Nhấn Enter gửi đi</div>\n      </div>\n    </div>\n    ",
+    "s_outro": "\n    <div class=\"k-Visual-Outro\">\n      <h3>Tổng kết &amp; Ghi nhớ cốt lõi Bài 4</h3>\n      <ul>\n        <li><strong>Cấp quyền tự chủ Turbo:</strong> Vào <strong>Settings &gt; General &gt; This Computer</strong> chọn <strong>Turbo</strong> để AI làm việc liền mạch từ đầu đến cuối trong thư mục dự án.</li>\n        <li><strong>Gọi quy trình bằng dấu gạch chéo (/):</strong> Gõ <code>/start-1-1</code> để kích hoạt bài học tương tác cùng bối cảnh công ty <strong>TaskFlow Inc.</strong></li>\n        <li><strong>Tránh bẫy phím cách:</strong> Luôn dùng chuột click hoặc nhấn <kbd>Enter</kbd> để chọn lệnh trên bảng gợi ý, tuyệt đối không bấm phím Space.</li>\n      </ul>\n    </div>\n    "
+  },
+  "beats": [
+    {
+      "id": "b1",
+      "label": "1. Lý thuyết (Phần 1): 4 cấp độ phân quyền thực thi & Khi nào bật chế độ Turbo",
+      "duration": 35.33,
+      "pose": 1,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s1",
+      "slide_id": "s1",
+      "hl": [
+        "s1_step1",
+        "s1_step2",
+        "s1_step3"
+      ],
+      "caption": "Chào mừng anh chị đến với <strong>Bài 4</strong>. Mục tiêu của bài học này là giúp anh chị thiết lập quyền tự chủ cao nhất cho trợ lý AI và tự tay khởi chạy bài tập tương tác đầu tiên. Trong phần cài đặt <strong>This Computer</strong> của phần mềm có bốn cấp độ phân quyền: Từ mức kiểm duyệt từng lệnh <strong>Request Review</strong>, mức mặc định <strong>Default</strong>, mức tự cân nhắc <strong>Auto</strong>, cho tới mức tự chủ hoàn toàn là <strong>Turbo</strong>. Nếu để ở mức mặc định, cứ mỗi lần trợ lý muốn tạo tệp nháp hay lưu báo cáo là lại phải dừng chờ anh chị bấm nút duyệt rất mất thời gian. Khi anh chị đã mở đúng thư mục dự án con tách biệt, việc bật chế độ <strong>Turbo</strong> sẽ giúp trợ lý chạy liền mạch một lèo từ đầu đến khi hoàn tất báo cáo.",
+      "audio_src": "audio/lesson_04/b1.mp3",
+      "audio_duration": 34.68
+    },
+    {
+      "id": "b2",
+      "label": "2. Lý thuyết (Phần 2): Bối cảnh công ty mẫu TaskFlow & Quy tắc gõ lệnh gạch chéo (/)",
+      "duration": 34.33,
+      "pose": 2,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s2",
+      "slide_id": "s2",
+      "hl": [
+        "s2_step1",
+        "s2_step2",
+        "s2_step3"
+      ],
+      "caption": "Sau khi bật quyền tự chủ <strong>Turbo</strong>, anh chị sẽ bước ngay vào trải nghiệm thực hành đặc sắc nhất của khóa học. Trong thư mục dự án, chúng tôi đã xây dựng sẵn toàn bộ hồ sơ của một doanh nghiệp giả lập quy mô bốn mươi lăm nhân sự mang tên <strong>TaskFlow</strong>, có đầy đủ số liệu doanh thu, nhân sự và quy trình để anh chị đóng vai người quản lý thực thụ. Để kích hoạt bài tập đầu tiên, chúng ta sử dụng phím tắt dấu gạch chéo <code>/start-1-1</code>. Anh chị đặc biệt lưu ý một mẹo kỹ thuật quan trọng: Khi gõ chữ <code>/start</code> và thấy bảng gợi ý lệnh hiện lên, hãy dùng chuột bấm chọn hoặc nhấn phím <kbd>Enter</kbd>, tuyệt đối không bấm phím cách để tránh làm tên lệnh bị nhảy lặp chữ.",
+      "audio_src": "audio/lesson_04/b2.mp3",
+      "audio_duration": 33.68
+    },
+    {
+      "id": "b3",
+      "label": "3. Minh họa trên màn hình: Bấm nút Settings (⚙️) và mở mục phân quyền This Computer",
+      "duration": 22.17,
+      "pose": 3,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Thao tác Mở Settings · Phân quyền This Computer",
+      "pedagogy_title": "Bấm nút ⚙️ Settings ở góc dưới cột trái ➔ Chọn thẻ General ➔ Mục This Computer",
+      "pedagogy_note": "Pha 1: Di chuột xuống góc dưới cùng bên trái bấm nút ⚙️ Settings -> Pha 2: Bảng Settings mở ra tại thẻ General, bấm vào mục This Computer để xem 4 cấp độ quyền.",
+      "onEnterPhase1": "kudoHidePopovers(); closeSettingsModal(); switchToSurface('mgr'); resetAgy2NewConv();",
+      "pre_focus_selectors": [
+        "#agy2-left-sb",
+        "#agy2-settings-btn"
+      ],
+      "pre_cursor_selector": "#agy2-settings-btn",
+      "pre_cursor_label": "Click vào nút ⚙️ Settings ở góc dưới cột trái",
+      "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); openSettingsModal('general'); kudoOpenTurboPopover();",
+      "focus_selectors": [
+        "#snav-general",
+        "#set-pill-this-computer",
+        "#kudo-turbo-popover"
+      ],
+      "cursor_selector": "#ktp-turbo",
+      "cursor_label": "Mục This Computer mở ra 4 cấp độ quyền (Chọn Turbo)",
+      "caption": "Anh chị hãy quan sát từng bước di chuyển chuột trên màn hình: Đầu tiên, ở cửa sổ <strong>Antigravity 2.0</strong>, chúng ta đưa chuột xuống góc dưới cùng của cột bên trái và nhấp vào biểu tượng bánh răng <strong>Settings</strong>. Ngay khi bảng cài đặt hiện ra ở thẻ <strong>General</strong>, anh chị nhìn sang dòng <strong>This Computer</strong> và bấm vào nút chọn bên phải để mở danh sách bốn cấp độ phân quyền, trong đó dòng cuối cùng chính là chế độ <strong>Turbo</strong>.",
+      "audio_src": "audio/lesson_04/b3.mp3",
+      "audio_duration": 21.52
+    },
+    {
+      "id": "b4",
+      "label": "4. Kỹ thuật trên màn hình: Gõ /start mở bảng gợi ý và tránh bẫy phím cách (Space)",
+      "duration": 21.99,
+      "pose": 4,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Kỹ thuật Gọi Lệnh (/) · Tránh lỗi lặp chữ",
+      "pedagogy_title": "Nhấp vào ô chat ➔ Gõ /start ➔ Dùng chuột click hoặc nhấn Enter chọn /start-1-1",
+      "pedagogy_note": "Pha 1: Bấm chuột vào ô nhập chat ở cột phải -> Pha 2: Gõ /start làm bật bảng gợi ý lệnh, đưa chuột bấm chọn dòng /start-1-1 (không bấm phím Space).",
+      "onEnterPhase1": "kudoHidePopovers(); closeSettingsModal(); switchToSurface('ide'); openWorkspaceByName('antigravity_course_vn'); openFileInEditor('1.1_Welcome.md'); document.getElementById('ide-chat-input').value = '';",
+      "pre_focus_selectors": [
+        "#ide-chat-input"
+      ],
+      "pre_cursor_selector": "#ide-chat-input",
+      "pre_cursor_label": "Click vào ô nhập chat và bắt đầu gõ dấu /",
+      "onEnter": "kudoHidePopovers(); closeSettingsModal(); switchToSurface('ide'); openWorkspaceByName('antigravity_course_vn'); openFileInEditor('1.1_Welcome.md'); kudoOpenStartWorkflowPopup();",
+      "focus_selectors": [
+        "#ide-popup-menu",
+        "#ide-chat-input"
+      ],
+      "cursor_selector": "#ide-popup-menu .popup-item",
+      "cursor_label": "Click chuột hoặc nhấn Enter để chọn /start-1-1",
+      "caption": "Tiếp theo, khi chuyển sang <strong>Antigravity IDE</strong>, anh chị bấm chuột vào ô nhập tin nhắn ở góc dưới bên phải và gõ dấu gạch chéo kèm chữ <code>/start</code>. Lập tức một bảng gợi ý các quy trình có sẵn sẽ bật lên phía trên ô nhập. Tại đây anh chị nhớ quy tắc kỹ thuật: Hãy dùng chuột bấm thẳng vào dòng <code>/start-1-1</code> hoặc nhấn phím <kbd>Enter</kbd>, tuyệt đối không gõ phím cách để tránh làm tên lệnh bị nhảy lặp chữ.",
+      "audio_src": "audio/lesson_04/b4.mp3",
+      "audio_duration": 21.34
+    },
+    {
+      "id": "b5",
+      "label": "5. Thực hành Bước 1/3: Mở Settings và tích chọn quyền tự chủ Turbo",
+      "duration": 16.36,
+      "pose": 5,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 1/3 · Bật Chế độ Turbo",
+      "pedagogy_title": "Bước 1: Bấm vào mục This Computer trong Settings ➔ Tích chọn chế độ Turbo",
+      "pedagogy_note": "Pha 1: Trong bảng Settings -> General, click vào nút chọn bên cạnh This Computer -> Pha 2: Menu xổ xuống, bấm tích chọn dòng Turbo.",
+      "onEnterPhase1": "kudoHidePopovers(); switchToSurface('mgr'); openSettingsModal('general'); document.getElementById('set-pill-this-computer').innerHTML = 'Default &#9662;';",
+      "pre_focus_selectors": [
+        "#set-pill-this-computer"
+      ],
+      "pre_cursor_selector": "#set-pill-this-computer",
+      "pre_cursor_label": "Bước 1: Click vào nút Default ⌄ ở dòng This Computer",
+      "onEnter": "kudoHidePopovers(); switchToSurface('mgr'); openSettingsModal('general'); kudoOpenTurboPopover(); document.getElementById('set-pill-this-computer').innerHTML = 'Turbo &#9662;';",
+      "focus_selectors": [
+        "#set-pill-this-computer",
+        "#kudo-turbo-popover"
+      ],
+      "cursor_selector": "#ktp-turbo",
+      "cursor_label": "Tích chọn dòng Turbo (Đã hiện dấu ✓ màu xanh)",
+      "caption": "Bây giờ chúng ta thực hành trọn vẹn ba bước cuối của Chương 1. Ở <strong>Bước 1</strong>, trong bảng cài đặt <strong>Settings</strong> thẻ <strong>General</strong>, anh chị di chuột bấm vào nút chọn ở dòng <strong>This Computer</strong> đang để <strong>Default</strong>, rồi bấm tích chọn xuống dòng <strong>Turbo</strong> ở cuối bảng. Khi thấy dấu tích màu xanh hiện lên, quyền tự chủ đã được kích hoạt.",
+      "audio_src": "audio/lesson_04/b5.mp3",
+      "audio_duration": 15.71
+    },
+    {
+      "id": "b6",
+      "label": "6. Thực hành Bước 2/3: Chọn lệnh /start-1-1 từ bảng gợi ý và nhấn Gửi",
+      "duration": 16.13,
+      "pose": 6,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 2/3 · Kích hoạt /start-1-1",
+      "pedagogy_title": "Bước 2: Bấm chọn dòng /start-1-1 trên bảng gợi ý rồi nhấn nút Gửi (→)",
+      "pedagogy_note": "Pha 1: Click chuột vào dòng /start-1-1 trên bảng gợi ý -> Pha 2: Lệnh /start-1-1 được điền chuẩn vào ô nhập, bấm nút mũi tên Gửi (→).",
+      "onEnterPhase1": "kudoHidePopovers(); closeSettingsModal(); switchToSurface('ide'); openWorkspaceByName('antigravity_course_vn'); openFileInEditor('1.1_Welcome.md'); kudoOpenStartWorkflowPopup();",
+      "pre_focus_selectors": [
+        "#ide-popup-menu",
+        "#ide-chat-input"
+      ],
+      "pre_cursor_selector": "#ide-popup-menu .popup-item",
+      "pre_cursor_label": "Bước 2: Click chuột chọn dòng /start-1-1",
+      "onEnter": "kudoHidePopovers(); closeSettingsModal(); switchToSurface('ide'); openWorkspaceByName('antigravity_course_vn'); openFileInEditor('1.1_Welcome.md'); kudoSelectStartWorkflowReadyToSend();",
+      "focus_selectors": [
+        "#ide-chat-input",
+        "#ide-send-btn"
+      ],
+      "cursor_selector": "#ide-send-btn",
+      "cursor_label": "Kiểm tra ô nhập hiện '/start-1-1' -> Bấm nút Gửi (→)",
+      "caption": "Sang <strong>Bước 2</strong>, chúng ta quay sang cửa sổ <strong>Antigravity IDE</strong>, gõ <code>/start</code> và dùng chuột bấm chọn dòng <code>/start-1-1</code> trên bảng gợi ý. Ngay khi bảng gợi ý đóng lại và ô nhập hiển thị đúng cụm <code>/start-1-1</code>, anh chị bấm vào nút mũi tên Gửi hoặc nhấn phím <kbd>Enter</kbd>.",
+      "audio_src": "audio/lesson_04/b6.mp3",
+      "audio_duration": 15.48
+    },
+    {
+      "id": "b7",
+      "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+      "duration": 24.89,
+      "pose": 7,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "✅ Thực hành Bước 3/3 · Tổng kết & Nghiệm thu",
+      "pedagogy_title": "Bước 3: Trợ lý AI tự đọc COMPANY.md và chào mừng bạn gia nhập TaskFlow Inc.",
+      "pedagogy_note": "Pha 1: Click nút Gửi (→) -> Pha 2: Nhờ chế độ Turbo, AI tự động đọc tệp quy trình và hồ sơ công ty mà không dừng chờ Accept, sẵn sàng cho bạn gõ 'Tôi sẵn sàng'!",
+      "onEnterPhase1": "kudoHidePopovers(); closeSettingsModal(); switchToSurface('ide'); openWorkspaceByName('antigravity_course_vn'); openFileInEditor('1.1_Welcome.md'); kudoSelectStartWorkflowReadyToSend();",
+      "pre_focus_selectors": [
+        "#ide-chat-input",
+        "#ide-send-btn"
+      ],
+      "pre_cursor_selector": "#ide-send-btn",
+      "pre_cursor_label": "Click nút Gửi (→) để chạy /start-1-1",
+      "onEnter": "kudoHidePopovers(); closeSettingsModal(); switchToSurface('ide'); kudoRunStart11ExecutedDemo();",
+      "focus_selectors": [
+        "#ide-chat-messages",
+        "#editor-canvas"
+      ],
+      "cursor_selector": "#ide-chat-messages",
+      "cursor_label": "Bước 3: AI đã tự động đọc hồ sơ & dẫn dắt bài học!",
+      "caption": "Và ở <strong>Bước 3</strong>, nhờ đã bật chế độ <strong>Turbo</strong>, trợ lý AI tự động đọc ngay tệp kịch bản bài học cùng hồ sơ công ty <code>COMPANY.md</code> mà không hề dừng lại hỏi xin phép! Trên khung chat cột phải, trợ lý chào mừng anh chị gia nhập công ty <strong>TaskFlow</strong> với vai trò Quản lý tự động hóa quy trình, và chỉ chờ anh chị gõ chữ <code>Tôi sẵn sàng</code> để bắt đầu. Như vậy anh chị đã làm chủ trọn vẹn cách phân quyền tự chủ <strong>Turbo</strong> và kỹ thuật gọi quy trình bằng dấu gạch chéo một cách chuẩn xác.",
+      "audio_src": "audio/lesson_04/b7.mp3",
+      "audio_duration": 24.24
+    }
+  ]
+}

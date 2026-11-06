@@ -1,0 +1,178 @@
+{
+  "lesson_slug": "lesson_07",
+  "filename": "lesson_07.html",
+  "legacy_alias": "",
+  "code": "BÀI 7",
+  "chapter_number": 2,
+  "chapter_code": "CHƯƠNG 2",
+  "chapter_title": "Định dạng Dữ liệu, Ký hiệu @ & Hồ sơ Cá nhân hóa",
+  "title": "Xây dựng Hồ sơ Cá nhân hóa @troly.md Để AI Nhớ Phong cách Của Bạn",
+  "short_title": "Hồ sơ Cá nhân hóa @troly.md",
+  "pill_label": "Bài 7 · Hồ sơ @troly.md",
+  "description": "Thiết lập tệp hồ sơ cá nhân @troly.md chứa thông tin vai trò, phong cách hành văn, đối tượng độc giả và các từ cấm kỵ để Trợ lý AI luôn viết đúng ý bạn mà không cần nhắc lại.",
+  "prerequisites": "Bài 5 (Biết soạn thảo tệp .md) & Bài 6 (Biết dùng ký hiệu @ để đính kèm tệp vào câu lệnh).",
+  "dependents": "Bài 8 (Kết hợp @troly.md khi lập sổ bàn giao), Bài 9 (Nâng cấp từ @troly.md lên .agent/rules/ tự động).",
+  "placement_risk": "0% Rủi ro — Học viên bắt đầu cá nhân hóa AI bằng một tệp @troly.md đơn giản ngoài thư mục gốc.",
+  "continuity_bridge": "Hoàn tất xây dựng và kích hoạt tệp hồ sơ cá nhân hóa @troly.md để mọi văn bản do AI soạn thảo đều tuân thủ đúng văn phong của chủ nhân.",
+  "slides": {
+    "s1": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 2 · BÀI 7 · LÝ THUYẾT PHẦN 1</span>\n        <span class=\"k-slide-step\">Ẩn dụ Tấm Danh thiếp &amp; Hồ sơ Chủ nhân (@troly.md)</span>\n      </div>\n      <div class=\"k-slide-h1\">Tệp @troly.md: Bản hướng dẫn thói quen làm việc giúp Trợ lý AI hiểu bạn ngay từ giây đầu tiên</div>\n      <div class=\"k-slide-sub\">Chấm dứt cảnh mỗi lần mở cuộc trò chuyện mới lại phải giới thiệu lại chức vụ, phòng ban và đối tượng nhận báo cáo.</div>\n    </div>\n    <div class=\"k-visual-hero-box k-layout-comparison k-step-item k-hl\" id=\"s1_step1\" data-order=\"1\">\n      <div class=\"k-cmp-col k-cmp-before\">\n        <div class=\"k-cmp-badge-old\">❌ KHI CHƯA CÓ HỒ SƠ CÁ NHÂN HÓA</div>\n        <div class=\"k-cmp-main\">AI viết giọng văn chung chung, sáo rỗng như máy</div>\n        <div class=\"k-cmp-sub\">Mỗi lần giao việc lại phải dặn đi dặn lại từ đầu</div>\n        <svg class=\"k-cmp-illus-svg\" viewBox=\"0 0 380 74\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <rect x=\"6\" y=\"6\" width=\"368\" height=\"62\" rx=\"8\" fill=\"#FFF7ED\" stroke=\"#F97316\" stroke-width=\"1.5\"/>\n          <text x=\"190\" y=\"24\" text-anchor=\"middle\" fill=\"#9A3412\" font-size=\"11\" font-weight=\"800\">🤖 AI không biết bạn là ai &amp; viết cho ai đọc</text>\n          <text x=\"190\" y=\"42\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"9.8\">\"Trong kỷ nguyên chuyển đổi số bùng nổ hiện nay...\"</text>\n          <text x=\"190\" y=\"58\" text-anchor=\"middle\" fill=\"#DC2626\" font-size=\"9.5\" font-weight=\"700\">⚠️ Mất thời gian xóa bỏ câu chữ màu mè, sửa lại xưng hô</text>\n        </svg>\n      </div>\n      <div class=\"k-cmp-arrow\">➔</div>\n      <div class=\"k-cmp-col k-cmp-after\">\n        <div class=\"k-cmp-badge-new\">✅ KHI ĐÍNH KÈM HỒ SƠ @TROLY.MD</div>\n        <div class=\"k-cmp-main\">Tấm danh thiếp định danh vị trí &amp; đối tượng độc giả</div>\n        <div class=\"k-cmp-sub\">AI lập tức nhập vai chuẩn xác như thư ký lâu năm</div>\n        <svg class=\"k-cmp-illus-svg\" viewBox=\"0 0 380 74\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <rect x=\"6\" y=\"6\" width=\"368\" height=\"62\" rx=\"8\" fill=\"#DCFCE7\" stroke=\"#22C55E\" stroke-width=\"1.6\"/>\n          <text x=\"190\" y=\"24\" text-anchor=\"middle\" fill=\"#14532D\" font-size=\"11\" font-weight=\"800\">🪪 Tệp @troly.md: Hồ sơ Cá nhân hóa</text>\n          <text x=\"190\" y=\"42\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"10\" font-weight=\"700\">👤 Trưởng phòng Vận hành · 👥 Độc giả: Ban Giám đốc</text>\n          <text x=\"190\" y=\"58\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"9.5\" font-weight=\"700\">✅ Tự động điều chỉnh tông giọng điều hành gãy gọn</text>\n        </svg>\n      </div>\n    </div>\n    <div class=\"k-grid-3\" style=\"grid-template-columns: 1fr 1fr;\">\n      <div class=\"k-card k-step-item k-unreached\" id=\"s1_step2\" data-order=\"2\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">BẢN CHẤT @TROLY.MD · SỔ TAY THÓI QUEN CỦA SẾP</span>\n        </div>\n        <h3>Trợ lý mới nhận việc luôn cần biết mình đang phục vụ ai</h3>\n        <p>Ngoài đời thực, một thư ký mới vào làm luôn cần một bản ghi chú ngắn về thói quen của người quản lý. Tệp <code>@troly.md</code> đóng vai trò chính là tờ cẩm nang đó, lưu cố định ngay trong thư mục dự án của bạn.</p>\n        <div class=\"k-card-mini-note\">🪪 Viết 1 lần duy nhất · Tái sử dụng cho mọi nhiệm vụ</div>\n      </div>\n      <div class=\"k-card k-step-item k-unreached\" id=\"s1_step3\" data-order=\"3\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#DCFCE7; color:#15803D; border:1px solid #86EFAC;\">PHẦN 1 CỦA HỒ SƠ · VỊ TRÍ &amp; ĐỐI TƯỢNG ĐỘC GIẢ</span>\n        </div>\n        <h3>Xác lập rõ chức danh, phòng ban và người nhận báo cáo</h3>\n        <p>Khi bạn khai báo rõ trong <code>@troly.md</code> mình là Trưởng phòng Vận hành tại TaskFlow và người đọc báo cáo là Ban Giám đốc hoặc toàn thể nhân sự, Trợ lý AI sẽ tự động chọn cách xưng hô và góc nhìn quản trị tương ứng.</p>\n        <div class=\"k-card-mini-note\">🎯 Viết đúng tầm nhìn · Đúng tâm lý người nhận văn bản</div>\n      </div>\n    </div>\n    ",
+    "s2": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 2 · BÀI 7 · LÝ THUYẾT PHẦN 2</span>\n        <span class=\"k-slide-step\">Gu Thẩm mỹ Văn bản &amp; Danh sách Từ Cấm kỵ</span>\n      </div>\n      <div class=\"k-slide-h1\">Định hình cấu trúc trình bày mặc định và bộ lọc loại bỏ 100% từ ngữ sáo rỗng</div>\n      <div class=\"k-slide-sub\">Biến mọi bản nháp của AI thành văn bản sắc gọn, có kết luận trực diện và bảng biểu rõ ràng đúng gu của bạn.</div>\n    </div>\n    <div class=\"k-visual-hero-box k-layout-flowchart k-step-item k-hl\" id=\"s2_step1\" data-order=\"1\">\n      <div class=\"k-viz-header\">\n        <span class=\"k-viz-badge\">✍️ CẤU TRÚC 3 TRỤ CỘT TRONG @TROLY.MD</span>\n        <span class=\"k-viz-title\">Kết hợp @troly.md + @Tài_liệu_công_việc để xuất bản báo cáo chuẩn gu cá nhân</span>\n      </div>\n      <svg class=\"k-flow-svg\" viewBox=\"0 0 860 96\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect x=\"10\" y=\"8\" width=\"256\" height=\"80\" rx=\"12\" fill=\"#FFF7ED\" stroke=\"#FB923C\" stroke-width=\"2\"/>\n        <text x=\"138\" y=\"32\" text-anchor=\"middle\" fill=\"#9A3412\" font-size=\"12.5\" font-weight=\"800\">1. HỒ SƠ CHỦ NHÂN</text>\n        <text x=\"138\" y=\"54\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"13.5\" font-weight=\"700\">Vai trò &amp; Đối tượng đọc</text>\n        <text x=\"138\" y=\"74\" text-anchor=\"middle\" fill=\"#C2410C\" font-size=\"11.5\">Trưởng phòng · Ban Giám đốc</text>\n        <path d=\"M272 48 H302\" stroke=\"#0284C7\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n        <polygon points=\"299,42 311,48 299,54\" fill=\"#0284C7\"/>\n        <rect x=\"316\" y=\"8\" width=\"252\" height=\"80\" rx=\"12\" fill=\"#EFF6FF\" stroke=\"#60A5FA\" stroke-width=\"2\"/>\n        <text x=\"442\" y=\"32\" text-anchor=\"middle\" fill=\"#1D4ED8\" font-size=\"12.5\" font-weight=\"800\">2. GU TRÌNH BÀY MẶC ĐỊNH</text>\n        <text x=\"442\" y=\"54\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"13.5\" font-weight=\"700\">Kết luận 3 dòng + Kẻ bảng</text>\n        <text x=\"442\" y=\"74\" text-anchor=\"middle\" fill=\"#0369A1\" font-size=\"11.5\">Đi thẳng vào trọng tâm</text>\n        <path d=\"M574 48 H604\" stroke=\"#16A34A\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n        <polygon points=\"601,42 613,48 601,54\" fill=\"#16A34A\"/>\n        <rect x=\"618\" y=\"8\" width=\"232\" height=\"80\" rx=\"12\" fill=\"#DCFCE7\" stroke=\"#22C55E\" stroke-width=\"2\"/>\n        <text x=\"734\" y=\"32\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"12.5\" font-weight=\"800\">3. ĐIỀU CẤM KỴ (TABOO)</text>\n        <text x=\"734\" y=\"54\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"13.5\" font-weight=\"700\">Cấm sáo rỗng · Cấm bịa số</text>\n        <text x=\"734\" y=\"74\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"11.5\">100% trung thực với hồ sơ gốc</text>\n      </svg>\n    </div>\n    <div class=\"k-grid-3\" style=\"grid-template-columns: 1fr 1fr;\">\n      <div class=\"k-card k-step-item k-unreached\" id=\"s2_step2\" data-order=\"2\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#E0F2FE; color:#0369A1; border:1px solid #7DD3FC;\">GU THẨM MỸ VĂN BẢN · KẾT LUẬN LÊN ĐẦU</span>\n        </div>\n        <h3>Luôn mở đầu bằng kết luận trực diện và ưu tiên kẻ bảng</h3>\n        <p>Bạn có thể quy định rõ trong <code>@troly.md</code>: Mọi báo cáo bắt buộc mở đầu bằng phần tóm tắt kết luận trong ba dòng, sau đó trình bày các hạng mục phân công dưới dạng bảng biểu đối chiếu thay vì viết thành đoạn văn dài dòng.</p>\n        <div class=\"k-card-mini-note\">📊 Người đọc nắm bắt 100% thông điệp chỉ trong 10 giây</div>\n      </div>\n      <div class=\"k-card k-step-item k-unreached\" id=\"s2_step3\" data-order=\"3\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">DANH SÁCH CẤM KỴ · LOẠI BỎ VĂN PHONG MÁY MÓC</span>\n        </div>\n        <h3>Cấm các lời mở đầu hoa mỹ và cấm tự bịa đặt số liệu</h3>\n        <p>Hãy liệt kê thẳng những cụm từ sáo rỗng bạn không muốn thấy và quy định cấm tuyệt đối việc tự suy diễn phần trăm nếu tài liệu gốc không có. Khi giao việc, chỉ cần gõ <code>@troly.md</code> kèm tệp dữ liệu là AI tuân thủ tức thì.</p>\n        <div class=\"k-card-mini-note\">🚫 Không tốn công biên tập lại · Văn bản dùng được ngay</div>\n      </div>\n    </div>\n    ",
+    "s_outro": "\n    <div class=\"k-Visual-Outro\">\n      <h3>Tổng kết &amp; Ghi nhớ cốt lõi Bài 7</h3>\n      <ul>\n        <li><strong>Tấm danh thiếp @troly.md:</strong> Lưu giữ cố định vai trò, phòng ban và đối tượng độc giả để AI không bao giờ hỏi lại.</li>\n        <li><strong>Định hình gu trình bày:</strong> Quy định rõ cấu trúc mở đầu bằng Kết luận trực diện 3 dòng và ưu tiên trình bày dạng bảng biểu.</li>\n        <li><strong>Danh sách cấm kỵ:</strong> Chặn đứng các từ ngữ sáo rỗng và nghiêm cấm AI tự bịa đặt số liệu ngoài tài liệu gốc.</li>\n      </ul>\n    </div>\n    "
+  },
+  "beats": [
+    {
+      "id": "b1",
+      "label": "1. Lý thuyết (Phần 1): Ẩn dụ tấm danh thiếp @troly.md & Xác lập vị trí chủ nhân",
+      "duration": 29.19,
+      "pose": 1,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s1",
+      "slide_id": "s1",
+      "hl": [
+        "s1_step1",
+        "s1_step2",
+        "s1_step3"
+      ],
+      "caption": "Chào mừng anh chị đến với <strong>Bài 7</strong>. Mục tiêu của bài học này là giúp anh chị xây dựng tệp hồ sơ cá nhân hóa <code>@troly.md</code> để trợ lý AI luôn nhớ rõ phong cách làm việc của riêng anh chị. Giống như một thư ký mới nhận việc luôn cần bản mô tả thói quen của sếp, tệp <code>@troly.md</code> chính là tấm danh thiếp định danh vị trí của anh chị. Trong phần đầu của hồ sơ, anh chị chỉ cần ghi rõ chức danh, phòng ban cùng đối tượng thường xuyên nhận báo cáo như Ban Giám đốc để trợ lý tự động điều chỉnh cách xưng hô và góc nhìn chuẩn xác.",
+      "audio_src": "audio/lesson_07/b1.mp3",
+      "audio_duration": 28.54
+    },
+    {
+      "id": "b2",
+      "label": "2. Lý thuyết (Phần 2): Định hình gu thẩm mỹ văn bản, Danh sách từ cấm & Mẹo ứng dụng",
+      "duration": 28.02,
+      "pose": 2,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s2",
+      "slide_id": "s2",
+      "hl": [
+        "s2_step1",
+        "s2_step2",
+        "s2_step3"
+      ],
+      "caption": "Bên cạnh thông tin chức danh, hai phần quan trọng tiếp theo trong tệp <code>@troly.md</code> là gu trình bày văn bản và danh sách các điều cấm kỵ. Anh chị hãy quy định rõ bố cục mặc định mà mình yêu thích: Luôn mở đầu văn bản bằng kết luận trực diện trong ba dòng và ưu tiên kẻ bảng đối chiếu thay vì viết chữ tràn lan. Đồng thời, hãy liệt kê thẳng các từ ngữ sáo rỗng cấm dùng và nghiêm cấm trợ lý tự bịa số liệu phần trăm. Khi giao việc, chỉ cần đính kèm <code>@troly.md</code> là trợ lý viết đúng ý anh chị ngay từ bản nháp đầu tiên!",
+      "audio_src": "audio/lesson_07/b2.mp3",
+      "audio_duration": 27.37
+    },
+    {
+      "id": "b3",
+      "label": "3. Minh họa: Quan sát nội dung tệp @troly.md trong IDE",
+      "duration": 10.33,
+      "pose": 3,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Giải phẫu tệp @troly.md",
+      "pedagogy_title": "Cách trình bày tệp @troly.md rõ ràng bằng các tiêu đề Markdown",
+      "pedagogy_note": "Mở tệp troly.md ở cột giữa để xem cách khai báo Thông tin chủ nhân, Nguyên tắc trình bày và Điều cấm kỵ.",
+      "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); setEditorMode('wysiwyg'); openFileInEditor('troly.md');",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas"
+      ],
+      "pre_click_selector": "[data-file='troly.md']",
+      "pre_click_label": "Nhấp chọn tệp troly.md ở cây thư mục trái",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Nội dung tệp hồ sơ cá nhân hóa troly.md ở cột giữa",
+      "caption": "Nhìn vào tệp <code>troly.md</code> đang mở ở cột giữa trên màn hình: Anh chị không cần viết dài, chỉ cần gạch đầu dòng rõ chức vụ, đối tượng đọc báo cáo và quy tắc <em>luôn đưa kết luận lên câu đầu tiên</em>.",
+      "audio_src": "audio/lesson_07/b3.mp3",
+      "audio_duration": 9.68
+    },
+    {
+      "id": "b4",
+      "label": "4. Kỹ thuật: Sự khác biệt khi giao việc có đính kèm @troly.md",
+      "duration": 12.17,
+      "pose": 4,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Kích hoạt Hồ sơ Cá nhân",
+      "pedagogy_title": "Đính kèm @troly.md cùng tài liệu công việc trong một câu lệnh",
+      "pedagogy_note": "Khi gõ '@troly.md @COMPANY.md', AI sẽ lấy dữ liệu từ COMPANY.md nhưng trình bày theo đúng phong cách của troly.md.",
+      "onEnter": "kudoSimScene({surface:'ide', file:'troly.md', activeTreeFile:'troly.md', popupMode:'mention', clearChat:true, chatInput:'@troly.md @COMPANY.md Hãy soạn thông báo nội bộ gửi 45 nhân sự về mục tiêu Quý 2 theo đúng văn phong của tôi.'});",
+      "focus_selectors": [
+        "#ide-popup-menu",
+        "#ide-chat-input",
+        "#ide-send-btn"
+      ],
+      "pre_click_selector": "#ide-popup-menu .popup-item",
+      "pre_click_label": "Chọn tệp/lệnh từ bảng gợi ý tự động",
+      "cursor_selector": "#ide-send-btn",
+      "cursor_label": "Kết hợp @troly.md + @COMPANY.md trong ô lệnh",
+      "caption": "Khi giao việc ở cột phải, anh chị chỉ cần chọn <code>@troly.md</code> từ bảng gợi ý đi kèm với tệp dữ liệu như <code>@COMPANY.md</code>. Trợ lý sẽ lấy số liệu từ công ty nhưng viết ra bằng đúng giọng văn của riêng anh chị.",
+      "audio_src": "audio/lesson_07/b4.mp3",
+      "audio_duration": 11.52
+    },
+    {
+      "id": "b5",
+      "label": "5. Bước 1: Mở và kiểm tra thông tin trong tệp troly.md",
+      "duration": 10.89,
+      "pose": 5,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 1/3 · Mở tệp",
+      "pedagogy_title": "Chuẩn hóa hồ sơ cá nhân để viết thông báo điều hành Quý 2",
+      "pedagogy_note": "Bước 1: Bấm chọn tệp troly.md ở cột cây thư mục bên trái để kiểm tra các nguyên tắc văn phong cá nhân.",
+      "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); openFileInEditor('troly.md');",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas"
+      ],
+      "pre_click_selector": "[data-file='troly.md']",
+      "pre_click_label": "Nhấp chọn tệp troly.md ở cây thư mục trái",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Bước 1: Kiểm tra nội dung tệp troly.md tại cột giữa",
+      "caption": "Chúng ta vào thực hành 3 bước cá nhân hóa trợ lý. Ở <strong>Bước 1</strong>, anh chị bấm chọn tệp <code>troly.md</code> ở cây thư mục cột trái để kiểm tra chức danh cùng nguyên tắc trình bày ngắn gọn của mình ở cột giữa.",
+      "audio_src": "audio/lesson_07/b5.mp3",
+      "audio_duration": 10.24
+    },
+    {
+      "id": "b6",
+      "label": "6. Bước 2: Gõ lệnh kết hợp @troly.md và @COMPANY.md",
+      "duration": 9.69,
+      "pose": 6,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 2/3 · Đính kèm @troly.md",
+      "pedagogy_title": "Bước 2: Nhập lệnh kèm @troly.md và @COMPANY.md rồi nhấn Gửi",
+      "pedagogy_note": "Yêu cầu AI xuất bản thông báo ra tệp mới thong_bao_q2.md tuân thủ nghiêm ngặt quy tắc trong @troly.md.",
+      "onEnter": "kudoSimScene({surface:'ide', file:'troly.md', activeTreeFile:'troly.md', popupMode:'mention', clearChat:true, chatInput:'@troly.md @COMPANY.md Hãy viết thông báo mục tiêu Quý 2 gửi toàn công ty và lưu thành tệp thong_bao_q2.md'});",
+      "focus_selectors": [
+        "#ide-popup-menu",
+        "#ide-chat-input",
+        "#ide-send-btn"
+      ],
+      "pre_click_selector": "#ide-popup-menu .popup-item",
+      "pre_click_label": "Chọn tệp/lệnh từ bảng gợi ý tự động",
+      "cursor_selector": "#ide-send-btn",
+      "cursor_label": "Bước 2: Gửi lệnh kèm @troly.md",
+      "caption": "Sang <strong>Bước 2</strong>, tại ô chat bên phải, anh chị chọn <code>@troly.md</code> cùng <code>@COMPANY.md</code> từ bảng gợi ý tự động, yêu cầu soạn thông báo Quý 2 rồi nhấn nút Gửi.",
+      "audio_src": "audio/lesson_07/b6.mp3",
+      "audio_duration": 9.04
+    },
+    {
+      "id": "b7",
+      "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+      "duration": 20.42,
+      "pose": 1,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "✅ Thực hành Bước 3/3 · Tổng kết & Nghiệm thu",
+      "pedagogy_title": "Bước 3: Kiểm tra kết quả tệp thong_bao_q2.md đúng chuẩn văn phong cá nhân",
+      "pedagogy_note": "Tệp thong_bao_q2.md mở đầu bằng Kết luận 3 dòng, có bảng phân công rõ ràng, 0% từ sáo rỗng.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'thong_bao_q2.md', breadcrumb:'antigravity_course_vn › thong_bao_q2.md (Mới tạo)', editorTitle:'📄 thong_bao_q2.md — Đã áp dụng chuẩn văn phong @troly.md', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#9a3412;margin-top:0;\">THÔNG BÁO ĐIỀU HÀNH QUÝ 2 — TASKFLOW INC.</h2><div style=\"background:#fff7ed;border-left:4px solid #ea580c;padding:10px 14px;margin-bottom:12px;\"><strong>KẾT LUẬN TRỰC DIỆN:</strong> Quý 2 tập trung giảm 30% tỷ lệ rời bỏ khách hàng (Churn Rate) và hoàn tất cổng tự phục vụ trước ngày 15/05.</div><table style=\"width:100%;border-collapse:collapse;font-size:13px;\"><tr style=\"background:#ffedd5;\"><th style=\"padding:8px;border:1px solid #fed7aa;text-align:left;\">Bộ phận</th><th style=\"padding:8px;border:1px solid #fed7aa;text-align:left;\">Mục tiêu trọng tâm</th><th style=\"padding:8px;border:1px solid #fed7aa;text-align:left;\">Hạn chót</th></tr><tr><td style=\"padding:8px;border:1px solid #fed7aa;\">Sản phẩm (Product)</td><td style=\"padding:8px;border:1px solid #fed7aa;\">Ra mắt Onboarding Checklist tự động</td><td style=\"padding:8px;border:1px solid #fed7aa;\">30/04</td></tr><tr><td style=\"padding:8px;border:1px solid #fed7aa;\">Chăm sóc KH (CS)</td><td style=\"padding:8px;border:1px solid #fed7aa;\">Gọi thăm khám 100% tài khoản doanh nghiệp</td><td style=\"padding:8px;border:1px solid #fed7aa;\">15/05</td></tr></table></div>', userMsg:'@troly.md @COMPANY.md Hãy viết thông báo mục tiêu Quý 2 gửi toàn công ty và lưu thành tệp thong_bao_q2.md', aiMsg:'Đã đối chiếu <code>@troly.md</code> và <code>@COMPANY.md</code>. Tôi đã tạo tệp <code>thong_bao_q2.md</code> mở đầu bằng Kết luận trực diện và trình bày dạng bảng đúng gu của bạn!'});",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas",
+        "#ide-chat-messages"
+      ],
+      "pre_click_selector": "[data-file='thong_bao_q2.md']",
+      "pre_click_label": "Nhấp chọn tệp thong_bao_q2.md ở cây thư mục trái",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Bước 3: Tệp thong_bao_q2.md chuẩn văn phong @troly.md",
+      "caption": "Ở <strong>Bước 3</strong>, anh chị bấm vào tệp <code>thong_bao_q2.md</code> vừa xuất hiện ở cây thư mục trái: Văn bản có ngay phần Kết luận trực diện ở đầu và bảng phân công gọn gàng, không hề có một chữ sáo rỗng nào! Như vậy anh chị đã biết cách đóng gói phong cách cá nhân vào tệp <code>@troly.md</code> để mọi văn bản do trợ lý soạn ra đều chuẩn gu ngay từ lần đầu tiên.",
+      "audio_src": "audio/lesson_07/b7.mp3",
+      "audio_duration": 19.77
+    }
+  ]
+}

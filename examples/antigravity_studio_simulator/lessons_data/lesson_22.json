@@ -1,0 +1,176 @@
+{
+  "lesson_slug": "lesson_22",
+  "filename": "lesson_22.html",
+  "legacy_alias": "",
+  "code": "BÀI 22",
+  "chapter_number": 6,
+  "chapter_code": "CHƯƠNG 6",
+  "chapter_title": "4 Tình huống Thực chiến Toàn diện (Case Studies)",
+  "title": "Tình huống 2 — Tự động hóa Tuyển dụng, Chấm CV & Lộ trình Hội nhập (HR)",
+  "short_title": "Case Study 2: Tuyển dụng & HR",
+  "pill_label": "Bài 22 · Case 2: Tuyển dụng & HR",
+  "description": "Giải quyết bài toán quá tải của phòng Nhân sự (HR) và Trưởng bộ phận: Xây dựng Thang điểm chấm hồ sơ ứng viên khách quan (Rubric), lọc 20 CV trong 2 phút, tạo Bộ câu hỏi phỏng vấn riêng cho từng người và Lộ trình thử việc 30-60-90 ngày.",
+  "prerequisites": "Chương 2 (Đọc bảng .csv), Chương 3 (Thiết kế Skill chấm điểm) & Bài 21 (Tư duy quy trình thực chiến).",
+  "dependents": "Bài 23 (Tình huống 3 — Rà soát hợp đồng lao động & quy chế pháp lý), Bài 24 (Tổng kết khóa học).",
+  "placement_risk": "0% Rủi ro — Quy trình HR được chia thành 3 bước rõ ràng (Tiêu chí JD -> Bảng chấm điểm CV -> Bộ câu hỏi phỏng vấn) rất gần gũi với mọi cấp quản lý.",
+  "continuity_bridge": "Hoàn thành Bài 22, học viên đã làm chủ quy trình tự động hóa sàng lọc hồ sơ ứng viên theo thang điểm khách quan, tạo bộ câu hỏi phỏng vấn riêng và lập lộ trình thử việc 90 ngày.",
+  "slides": {
+    "s1": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 6 · BÀI 22 · TÌNH HUỐNG THỰC CHIẾN 2</span>\n        <span class=\"k-slide-step\">Giải phóng Phòng Nhân sự &amp; Trưởng bộ phận khỏi cơnác mộng đọc CV</span>\n      </div>\n      <div class=\"k-slide-h1\">Thiết lập Thang điểm Tiêu chí (Rubric 100 điểm) để sàng lọc ứng viên khách quan</div>\n      <div class=\"k-slide-sub\">Mọi hồ sơ ứng viên đều được đo trên cùng một cây thước định lượng rõ ràng, loại bỏ hoàn toàn việc chấm cảm tính.</div>\n    </div>\n    <div style=\"display:flex; flex-direction:column; gap:10px; margin-top:6px;\">\n      <div class=\"k-visual-hero-box k-step-item k-hl\" id=\"s1_step1\" data-order=\"1\" style=\"padding:12px 16px;\">\n        <div class=\"k-viz-header\" style=\"margin-bottom:6px;\">\n          <span class=\"k-viz-badge\">⚖️ ĐỐI SÁNH QUY TRÌNH TUYỂN DỤNG</span>\n          <span class=\"k-viz-title\">Đọc lướt CV thủ công cảm tính vs. Chấm điểm tự động bằng Thang tiêu chí định lượng</span>\n        </div>\n        <svg viewBox=\"0 0 840 78\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%; height:auto;\">\n          <rect x=\"6\" y=\"6\" width=\"388\" height=\"66\" rx=\"10\" fill=\"#FEF2F2\" stroke=\"#FCA5A5\" stroke-width=\"1.5\"/>\n          <text x=\"22\" y=\"27\" fill=\"#B91C1C\" font-size=\"11.5\" font-weight=\"800\">❌ ĐỌC HỒ SƠ THỦ CÔNG (MẤT 3 GIỜ / 20 BẢN CV)</text>\n          <text x=\"22\" y=\"46\" fill=\"#7F1D1D\" font-size=\"11\">• Dễ bị thu hút bởi CV trình bày đẹp nhưng thiếu kinh nghiệm thật</text>\n          <text x=\"22\" y=\"63\" fill=\"#7F1D1D\" font-size=\"11\">• Bỏ sót các khoảng trống nhảy việc liên tục trong lịch sử công tác</text>\n          <path d=\"M402 39 H438\" stroke=\"#EA580C\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n          <polygon points=\"434,33 446,39 434,45\" fill=\"#EA580C\"/>\n          <rect x=\"454\" y=\"6\" width=\"380\" height=\"66\" rx=\"10\" fill=\"#F0FDF4\" stroke=\"#86EFAC\" stroke-width=\"1.5\"/>\n          <text x=\"470\" y=\"27\" fill=\"#15803D\" font-size=\"11.5\" font-weight=\"800\">✅ CHẤM BẰNG THANG ĐIỂM AI (2 PHÚT / 20 BẢN CV)</text>\n          <text x=\"470\" y=\"46\" fill=\"#14532D\" font-size=\"11\">• Chấm từng mục trên thang 100 điểm, xếp hạng Top ứng viên đạt ≥ 80đ</text>\n          <text x=\"470\" y=\"63\" fill=\"#14532D\" font-size=\"11\">• Tự động chỉ ra điểm khuyết và soạn sẵn câu hỏi phỏng vấn riêng</text>\n        </svg>\n      </div>\n      <div class=\"k-grid-2\" style=\"display:grid; grid-template-columns:1fr 1fr; gap:10px;\">\n        <div class=\"k-card k-step-item k-unreached\" id=\"s1_step2\" data-order=\"2\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">TRỌNG SỐ 1 &amp; 2 · CHUYÊN MÔN &amp; THÀNH TÍCH</span>\n          </div>\n          <h3>70 điểm cho Kinh nghiệm B2B và Kết quả thực tế</h3>\n          <p>Trong tệp <code>jd_truong_nhom_cs.md</code>, quy định rõ 40 điểm cho kinh nghiệm phần mềm B2B trên 2 năm và 30 điểm cho thành tích giảm tỷ lệ rời bỏ.</p>\n        </div>\n        <div class=\"k-card k-step-item k-unreached\" id=\"s1_step3\" data-order=\"3\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#DCFCE7; color:#15803D; border:1px solid #86EFAC;\">TRỌNG SỐ 3 · QUẢN LÝ &amp; ĐỘ GẮN BÓ</span>\n          </div>\n          <h3>30 điểm cho Năng lực dẫn dắt đội ngũ</h3>\n          <p>Đánh giá quy mô nhóm từng quản lý (tối thiểu 5 nhân sự) và thời gian gắn bó trung bình trên 18 tháng tại các đơn vị trước đó.</p>\n        </div>\n      </div>\n    </div>\n    ",
+    "s2": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 6 · BÀI 22 · PHỎNG VẤN SÂU &amp; HỘI NHẬP</span>\n        <span class=\"k-slide-step\">Từ Bảng xếp hạng Ứng viên tới Lộ trình Thử việc 30–60–90 Ngày</span>\n      </div>\n      <div class=\"k-slide-h1\">Tự động soạn câu hỏi xoáy vào điểm khuyết và bàn giao KPI 90 ngày đầu tiên</div>\n      <div class=\"k-slide-sub\">Giúp buổi phỏng vấn đi thẳng vào trọng tâm và đưa nhân sự trúng tuyển bắt nhịp công việc ngay từ tuần đầu.</div>\n    </div>\n    <div style=\"display:flex; flex-direction:column; gap:10px; margin-top:6px;\">\n      <div class=\"k-grid-2\" style=\"display:grid; grid-template-columns:1fr 1fr; gap:10px;\">\n        <div class=\"k-card k-step-item k-hl\" id=\"s2_step1\" data-order=\"1\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#E0F2FE; color:#0369A1; border:1px solid #7DD3FC;\">BƯỚC TIẾP THEO 1 · CÂU HỎI KIỂM CHỨNG RIÊNG</span>\n          </div>\n          <h3>Mỗi ứng viên một bộ câu hỏi đo ni đóng giày</h3>\n          <p>Ứng viên mạnh chuyên môn nhưng chưa quản lý nhóm đông sẽ được hỏi bài toán chia ca trực; ứng viên hay nhảy việc sẽ được hỏi sâu về cam kết gắn bó.</p>\n        </div>\n        <div class=\"k-card k-step-item k-unreached\" id=\"s2_step2\" data-order=\"2\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#DCFCE7; color:#15803D; border:1px solid #86EFAC;\">BƯỚC TIẾP THEO 2 · LỘ TRÌNH 30–60–90 NGÀY</span>\n          </div>\n          <h3>Liên kết trực tiếp với mục tiêu tại <code>@COMPANY.md</code></h3>\n          <p>Sau khi chọn được người, AI lập tức xuất bản kế hoạch thử việc 3 tháng có đích đến định lượng rõ ràng, xóa bỏ tình trạng nhân viên mới ngồi chờ việc.</p>\n        </div>\n      </div>\n      <div class=\"k-visual-hero-box k-step-item k-unreached\" id=\"s2_step3\" data-order=\"3\" style=\"padding:12px 16px;\">\n        <div class=\"k-viz-header\" style=\"margin-bottom:6px;\">\n          <span class=\"k-viz-badge\">🗺️ BẢN ĐỒ THỬ VIỆC 90 NGÀY CHUẨN MỰC</span>\n          <span class=\"k-viz-title\">Ba cột mốc đánh giá nhân sự mới rõ ràng ngay trong tệp ho_so_tuyen_dung_cs.md</span>\n        </div>\n        <svg viewBox=\"0 0 840 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%; height:auto;\">\n          <rect x=\"6\" y=\"6\" width=\"268\" height=\"48\" rx=\"8\" fill=\"#FFF7ED\" stroke=\"#FDBA74\" stroke-width=\"1.5\"/>\n          <text x=\"140\" y=\"26\" text-anchor=\"middle\" fill=\"#9A3412\" font-size=\"11.5\" font-weight=\"800\">CỘT MỐC 30 NGÀY ĐẦU</text>\n          <text x=\"140\" y=\"43\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"10.5\">Nắm sản phẩm &amp; chuẩn hóa kịch bản CS</text>\n          <rect x=\"286\" y=\"6\" width=\"268\" height=\"48\" rx=\"8\" fill=\"#EFF6FF\" stroke=\"#93C5FD\" stroke-width=\"1.5\"/>\n          <text x=\"420\" y=\"26\" text-anchor=\"middle\" fill=\"#1D4ED8\" font-size=\"11.5\" font-weight=\"800\">CỘT MỐC 60 NGÀY</text>\n          <text x=\"420\" y=\"43\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"10.5\">Rút ngắn bàn giao khách mới xuống 3 ngày</text>\n          <rect x=\"566\" y=\"6\" width=\"268\" height=\"48\" rx=\"8\" fill=\"#DCFCE7\" stroke=\"#86EFAC\" stroke-width=\"1.5\"/>\n          <text x=\"700\" y=\"26\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"11.5\" font-weight=\"800\">CỘT MỐC 90 NGÀY (PASS THỬ VIỆC)</text>\n          <text x=\"700\" y=\"43\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"10.5\">Giảm tỷ lệ rời bỏ SMB từ 6,2% về 4,3%</text>\n        </svg>\n      </div>\n    </div>\n    "
+  },
+  "beats": [
+    {
+      "id": "b1",
+      "label": "1. Lý thuyết (Phần 1): Xây dựng Thang điểm 100 (Rubric) để sàng lọc hồ sơ khách quan",
+      "duration": 24.43,
+      "pose": 1,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s1",
+      "hl": [
+        "s1_step1",
+        "s1_step2",
+        "s1_step3"
+      ],
+      "caption": "Mỗi đợt tuyển dụng, cả phòng Nhân sự lẫn các Trưởng bộ phận đều mất hàng giờ đọc mỏi mắt từng bản CV mà vẫn dễ bỏ sót người giỏi hoặc chấm điểm theo cảm tính. Để giải quyết triệt để, chúng ta thiết lập tệp tiêu chí <code>jd_truong_nhom_cs.md</code> chia rõ thang 100 điểm thành ba trọng số định lượng: 40 điểm cho kinh nghiệm phần mềm B2B, 30 điểm cho thành tích giữ chân khách hàng có số liệu thật và 30 điểm cho năng lực quản lý đội ngũ.",
+      "audio_src": "audio/lesson_22/b1.mp3",
+      "audio_duration": 23.78,
+      "slide_id": "s1"
+    },
+    {
+      "id": "b2",
+      "label": "2. Lý thuyết (Phần 2): Tạo câu hỏi phỏng vấn xoáy sâu & Lộ trình thử việc 30–60–90 ngày",
+      "duration": 24.55,
+      "pose": 2,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s2",
+      "hl": [
+        "s2_step1",
+        "s2_step2",
+        "s2_step3"
+      ],
+      "caption": "Nhờ có cây thước đo 100 điểm đó, trợ lý AI không chỉ xếp hạng nhanh các ứng viên sáng giá mà còn phát hiện ngay những điểm khuyết trong từng hồ sơ — như chưa từng quản lý nhóm đông hay nhảy việc liên tục — để soạn sẵn bộ câu hỏi phỏng vấn kiểm chứng riêng cho từng người. Hơn thế nữa, ngay khi chọn được ứng viên, AI sẽ đối chiếu với mục tiêu công ty tại <code>@COMPANY.md</code> để xuất bản luôn lộ trình thử việc 30, 60 và 90 ngày rõ ràng.",
+      "audio_src": "audio/lesson_22/b2.mp3",
+      "audio_duration": 23.9,
+      "slide_id": "s2"
+    },
+    {
+      "id": "b3",
+      "label": "3. Minh họa: Quan sát tệp Thang điểm tiêu chí tuyển dụng trong IDE",
+      "duration": 11.85,
+      "pose": 3,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Thang điểm Chấm Hồ sơ Ứng viên",
+      "pedagogy_title": "Cấu trúc tệp tiêu chí tuyển dụng jd_truong_nhom_cs.md",
+      "pedagogy_note": "Để AI không chấm điểm cảm tính, hãy ghi rõ thang 100 điểm chia làm 3 tiêu chí cụ thể.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'jd_truong_nhom_cs.md', breadcrumb:'antigravity_course_vn › jd_truong_nhom_cs.md', editorTitle:'📋 jd_truong_nhom_cs.md — Tiêu Chí Chấm Điểm Ứng Viên (100 Điểm)', editorHtml:\"<div style=\\\"padding:16px;font-family:system-ui,-apple-system,sans-serif;\\\"><div style=\\\"display:flex;align-items:center;justify-content:space-between;background:#fff7ed;border:1px solid #fdba74;border-radius:10px;padding:10px 14px;margin-bottom:12px;\\\"><strong style=\\\"color:#9a3412;font-size:14px;\\\">📋 THANG ĐIỂM TUYỂN DỤNG TRƯỞNG NHÓM CS (RUBRIC 100 ĐIỂM)</strong><span style=\\\"background:#ea580c;color:#fff;font-size:11px;font-weight:800;padding:3px 8px;border-radius:99px;\\\">Ngưỡng Đạt: ≥ 80/100</span></div><table style=\\\"width:100%;border-collapse:collapse;font-size:12.5px;\\\"><tr style=\\\"background:#ffedd5;color:#9a3412;\\\"><th style=\\\"padding:7px 10px;border:1px solid #fed7aa;text-align:left;\\\">Tiêu chí đánh giá</th><th style=\\\"padding:7px 10px;border:1px solid #fed7aa;text-align:center;width:90px;\\\">Trọng số</th><th style=\\\"padding:7px 10px;border:1px solid #fed7aa;text-align:left;\\\">Yêu cầu định lượng bắt buộc</th></tr><tr><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;font-weight:700;\\\">1. Kinh nghiệm CS B2B / SaaS</td><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;text-align:center;font-weight:800;color:#c2410c;\\\">40 điểm</td><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;\\\">Tối thiểu 2 năm quản lý khách hàng doanh nghiệp phần mềm.</td></tr><tr><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;font-weight:700;\\\">2. Thành tích giảm Churn Rate</td><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;text-align:center;font-weight:800;color:#0284c7;\\\">30 điểm</td><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;\\\">Có số liệu thực tế giữ chân khách hàng và tăng tỷ lệ gia hạn.</td></tr><tr><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;font-weight:700;\\\">3. Kỹ năng Quản lý &amp; Xử lý Khủng hoảng</td><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;text-align:center;font-weight:800;color:#15803d;\\\">30 điểm</td><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;\\\">Đã dẫn dắt đội ngũ ≥ 5 người, gắn bó trung bình trên 18 tháng.</td></tr></table></div>\"});",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas"
+      ],
+      "pre_click_selector": "[data-file='jd_truong_nhom_cs.md']",
+      "pre_click_label": "Nhấp chọn tệp jd_truong_nhom_cs.md ở cây thư mục trái",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Thang điểm 100 chia rõ 3 tiêu chí định lượng",
+      "caption": "Nhìn vào cột giữa trên màn hình là tệp <code>jd_truong_nhom_cs.md</code>: Thay vì chỉ bảo AI tìm người giỏi chung chung, chúng ta chia rõ 100 điểm thành 3 tiêu chí định lượng để AI đối chiếu với từng hồ sơ ứng viên.",
+      "audio_src": "audio/lesson_22/b3.mp3",
+      "audio_duration": 11.2
+    },
+    {
+      "id": "b4",
+      "label": "4. Kỹ thuật: Bảng xếp hạng ứng viên kèm câu hỏi phỏng vấn xoáy sâu",
+      "duration": 16.14,
+      "pose": 4,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Bảng Xếp Hạng & Câu Hỏi Xoáy Sâu",
+      "pedagogy_title": "Bảng chấm điểm trực quan (Candidate Scoring Matrix) kèm câu hỏi kiểm chứng",
+      "pedagogy_note": "Hiển thị thanh điểm số Xanh/Vàng/Đỏ cho Nguyễn Minh Tuấn (92đ), Trần Thu Hà (85đ), Lê Hoàng Nam (58đ) và câu hỏi xoáy vào điểm khuyết.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'ket_qua_cham_cv.md', breadcrumb:'antigravity_course_vn › ket_qua_cham_cv.md', editorTitle:'🏆 ket_qua_cham_cv.md — Bảng Xếp Hạng & Chấm Điểm Ứng Viên', editorHtml:\"<div style=\\\"padding:14px 16px;font-family:system-ui,-apple-system,sans-serif;\\\"><div style=\\\"display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;\\\"><h3 style=\\\"color:#9a3412;margin:0;font-size:14px;\\\">🏆 BẢNG XẾP HẠNG &amp; CHẤM ĐIỂM ỨNG VIÊN (CANDIDATE SCORING MATRIX)</h3><span style=\\\"background:#dcfce7;color:#166534;border:1px solid #86efac;font-size:11px;font-weight:800;padding:2px 8px;border-radius:99px;\\\">Đã chấm 3 hồ sơ · Chọn Top 2</span></div><div style=\\\"background:#f0fdf4;border:1px solid #86efac;border-radius:9px;padding:9px 12px;margin-bottom:8px;\\\"><div style=\\\"display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;\\\"><strong style=\\\"color:#14532d;font-size:13px;\\\">1. Nguyễn Minh Tuấn — 92/100 điểm</strong><span style=\\\"background:#16a34a;color:#fff;font-size:10.5px;font-weight:800;padding:2px 8px;border-radius:6px;\\\">[ĐẠT - MỜI PHỎNG VẤN]</span></div><div style=\\\"width:100%;height:7px;background:#dcfce7;border-radius:99px;overflow:hidden;margin-bottom:6px;\\\"><div style=\\\"width:92%;height:100%;background:#16a34a;border-radius:99px;\\\"></div></div><div style=\\\"font-size:12px;color:#1e293b;background:#ffffff;border-left:3px solid #16a34a;padding:5px 8px;border-radius:4px;\\\"><strong>🎯 Câu hỏi phỏng vấn xoáy sâu:</strong> <em>\\\"Bạn từng giảm Churn từ 7% xuống 4% tại công ty SaaS cũ, nhưng chưa quản lý nhóm trên 8 người. Bạn sẽ phân bổ ca trực thế nào cho 10 nhân sự CS?\\\"</em></div></div><div style=\\\"background:#fefce8;border:1px solid #fde047;border-radius:9px;padding:9px 12px;margin-bottom:8px;\\\"><div style=\\\"display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;\\\"><strong style=\\\"color:#854d0e;font-size:13px;\\\">2. Trần Thu Hà — 85/100 điểm</strong><span style=\\\"background:#ca8a04;color:#fff;font-size:10.5px;font-weight:800;padding:2px 8px;border-radius:6px;\\\">[ĐẠT - MỜI PHỎNG VẤN]</span></div><div style=\\\"width:100%;height:7px;background:#fef9c3;border-radius:99px;overflow:hidden;margin-bottom:6px;\\\"><div style=\\\"width:85%;height:100%;background:#eab308;border-radius:99px;\\\"></div></div><div style=\\\"font-size:12px;color:#1e293b;background:#ffffff;border-left:3px solid #eab308;padding:5px 8px;border-radius:4px;\\\"><strong>🎯 Câu hỏi phỏng vấn xoáy sâu:</strong> <em>\\\"Hồ sơ ghi nhận bạn chuyển việc 2 lần trong 16 tháng qua. Đâu là yếu tố giữ chân bạn gắn bó tối thiểu 2 năm cùng TaskFlow?\\\"</em></div></div><div style=\\\"background:#fef2f2;border:1px solid #fca5a5;border-radius:9px;padding:8px 12px;\\\"><div style=\\\"display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;\\\"><strong style=\\\"color:#991b1b;font-size:13px;\\\">3. Lê Hoàng Nam — 58/100 điểm</strong><span style=\\\"background:#dc2626;color:#fff;font-size:10.5px;font-weight:800;padding:2px 8px;border-radius:6px;\\\">[LƯU KHO HỒ SƠ]</span></div><div style=\\\"width:100%;height:7px;background:#fee2e2;border-radius:99px;overflow:hidden;margin-bottom:4px;\\\"><div style=\\\"width:58%;height:100%;background:#ef4444;border-radius:99px;\\\"></div></div><div style=\\\"font-size:11.5px;color:#7f1d1d;\\\">⚠️ <strong>Điểm khuyết:</strong> Mới chỉ có kinh nghiệm CSKH bán lẻ B2C, thiếu kỹ năng vận hành hệ thống phần mềm B2B.</div></div></div>\"});",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas"
+      ],
+      "pre_click_selector": "[data-file='ket_qua_cham_cv.md']",
+      "pre_click_label": "Nhấp chọn tệp ket_qua_cham_cv.md ở cây thư mục trái",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Bảng điểm trực quan Xanh/Vàng/Đỏ kèm câu hỏi phỏng vấn xoáy sâu",
+      "caption": "Và kết quả ở tệp <code>ket_qua_cham_cv.md</code> tại cột giữa vô cùng trực quan: Bảng chấm điểm xếp hạng <strong>Nguyễn Minh Tuấn</strong> 92 điểm và <strong>Trần Thu Hà</strong> 85 điểm ở nhóm mời phỏng vấn, tách riêng <strong>Lê Hoàng Nam</strong> 58 điểm vào kho lưu trữ, kèm theo hộp câu hỏi xoáy thẳng vào điểm khuyết của từng người.",
+      "audio_src": "audio/lesson_22/b4.mp3",
+      "audio_duration": 15.49
+    },
+    {
+      "id": "b5",
+      "label": "5. Bước 1: Kiểm tra tệp tiêu chí jd_truong_nhom_cs.md",
+      "duration": 11.05,
+      "pose": 5,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 1/3 · Khóa Thang Điểm Tuyển dụng",
+      "pedagogy_title": "Cần tuyển gấp Trưởng nhóm CS để thực hiện mục tiêu Quý 2",
+      "pedagogy_note": "Bước 1: Nhấp chọn tệp jd_truong_nhom_cs.md trên cây thư mục trái để kiểm tra đủ 3 tiêu chí chấm điểm.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'jd_truong_nhom_cs.md', breadcrumb:'antigravity_course_vn › jd_truong_nhom_cs.md', editorTitle:'📋 jd_truong_nhom_cs.md — Kiểm tra Thang điểm 100', editorHtml:\"<div style=\\\"padding:16px;font-family:system-ui,-apple-system,sans-serif;\\\"><div style=\\\"display:flex;align-items:center;justify-content:space-between;background:#fff7ed;border:1px solid #fdba74;border-radius:10px;padding:10px 14px;margin-bottom:12px;\\\"><strong style=\\\"color:#9a3412;font-size:14px;\\\">📋 THANG ĐIỂM TUYỂN DỤNG TRƯỞNG NHÓM CS (RUBRIC 100 ĐIỂM)</strong><span style=\\\"background:#ea580c;color:#fff;font-size:11px;font-weight:800;padding:3px 8px;border-radius:99px;\\\">Ngưỡng Đạt: ≥ 80/100</span></div><table style=\\\"width:100%;border-collapse:collapse;font-size:12.5px;\\\"><tr style=\\\"background:#ffedd5;color:#9a3412;\\\"><th style=\\\"padding:7px 10px;border:1px solid #fed7aa;text-align:left;\\\">Tiêu chí đánh giá</th><th style=\\\"padding:7px 10px;border:1px solid #fed7aa;text-align:center;width:90px;\\\">Trọng số</th><th style=\\\"padding:7px 10px;border:1px solid #fed7aa;text-align:left;\\\">Yêu cầu định lượng bắt buộc</th></tr><tr><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;font-weight:700;\\\">1. Kinh nghiệm CS B2B / SaaS</td><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;text-align:center;font-weight:800;color:#c2410c;\\\">40 điểm</td><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;\\\">Tối thiểu 2 năm quản lý khách hàng doanh nghiệp phần mềm.</td></tr><tr><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;font-weight:700;\\\">2. Thành tích giảm Churn Rate</td><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;text-align:center;font-weight:800;color:#0284c7;\\\">30 điểm</td><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;\\\">Có số liệu thực tế giữ chân khách hàng và tăng tỷ lệ gia hạn.</td></tr><tr><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;font-weight:700;\\\">3. Kỹ năng Quản lý &amp; Xử lý Khủng hoảng</td><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;text-align:center;font-weight:800;color:#15803d;\\\">30 điểm</td><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;\\\">Đã dẫn dắt đội ngũ ≥ 5 người, gắn bó trung bình trên 18 tháng.</td></tr></table></div>\"});",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas"
+      ],
+      "pre_click_selector": "[data-file='jd_truong_nhom_cs.md']",
+      "pre_click_label": "Nhấp chọn tệp jd_truong_nhom_cs.md ở cây thư mục trái",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Bước 1: Xác nhận thang điểm jd_truong_nhom_cs.md",
+      "caption": "Chúng ta vào thực hành 3 bước tự động hóa tuyển dụng. Ở <strong>Bước 1</strong>, anh chị nhấp chọn tệp tiêu chí <code>jd_truong_nhom_cs.md</code> ở cây thư mục trái để kiểm tra lại bảng trọng số 100 điểm tại cột giữa.",
+      "audio_src": "audio/lesson_22/b5.mp3",
+      "audio_duration": 10.4
+    },
+    {
+      "id": "b6",
+      "label": "6. Bước 2: Gửi lệnh chấm điểm ứng viên và lập lộ trình 30-60-90 ngày",
+      "duration": 11.13,
+      "pose": 6,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 2/3 · Chấm CV & Lập Lộ trình Thử việc",
+      "pedagogy_title": "Bước 2: Chọn tệp đính kèm từ bảng gợi ý @ (@jd_truong_nhom_cs.md & @danh_sach_ung_vien.csv)",
+      "pedagogy_note": "Yêu cầu AI xếp hạng ứng viên, soạn câu hỏi phỏng vấn và lập lộ trình thử việc 30-60-90 ngày vào tệp ho_so_tuyen_dung_cs.md.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'jd_truong_nhom_cs.md', editorTitle:'📋 jd_truong_nhom_cs.md — Kiểm tra Thang điểm 100', editorHtml:\"<div style=\\\"padding:16px;font-family:system-ui,-apple-system,sans-serif;\\\"><div style=\\\"display:flex;align-items:center;justify-content:space-between;background:#fff7ed;border:1px solid #fdba74;border-radius:10px;padding:10px 14px;margin-bottom:12px;\\\"><strong style=\\\"color:#9a3412;font-size:14px;\\\">📋 THANG ĐIỂM TUYỂN DỤNG TRƯỞNG NHÓM CS (RUBRIC 100 ĐIỂM)</strong><span style=\\\"background:#ea580c;color:#fff;font-size:11px;font-weight:800;padding:3px 8px;border-radius:99px;\\\">Ngưỡng Đạt: ≥ 80/100</span></div><table style=\\\"width:100%;border-collapse:collapse;font-size:12.5px;\\\"><tr style=\\\"background:#ffedd5;color:#9a3412;\\\"><th style=\\\"padding:7px 10px;border:1px solid #fed7aa;text-align:left;\\\">Tiêu chí đánh giá</th><th style=\\\"padding:7px 10px;border:1px solid #fed7aa;text-align:center;width:90px;\\\">Trọng số</th><th style=\\\"padding:7px 10px;border:1px solid #fed7aa;text-align:left;\\\">Yêu cầu định lượng bắt buộc</th></tr><tr><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;font-weight:700;\\\">1. Kinh nghiệm CS B2B / SaaS</td><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;text-align:center;font-weight:800;color:#c2410c;\\\">40 điểm</td><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;\\\">Tối thiểu 2 năm quản lý khách hàng doanh nghiệp phần mềm.</td></tr><tr><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;font-weight:700;\\\">2. Thành tích giảm Churn Rate</td><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;text-align:center;font-weight:800;color:#0284c7;\\\">30 điểm</td><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;\\\">Có số liệu thực tế giữ chân khách hàng và tăng tỷ lệ gia hạn.</td></tr><tr><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;font-weight:700;\\\">3. Kỹ năng Quản lý &amp; Xử lý Khủng hoảng</td><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;text-align:center;font-weight:800;color:#15803d;\\\">30 điểm</td><td style=\\\"padding:7px 10px;border:1px solid #fed7aa;\\\">Đã dẫn dắt đội ngũ ≥ 5 người, gắn bó trung bình trên 18 tháng.</td></tr></table></div>\", popupMode:'mention', clearChat:true, chatInput:'@jd_truong_nhom_cs.md @danh_sach_ung_vien.csv @COMPANY.md Hãy chấm điểm xếp hạng ứng viên, tạo bộ câu hỏi phỏng vấn riêng và lập lộ trình thử việc 30-60-90 ngày vào tệp ho_so_tuyen_dung_cs.md'});",
+      "focus_selectors": [
+        "#ide-popup-menu",
+        "#ide-chat-input",
+        "#ide-send-btn"
+      ],
+      "pre_click_selector": "#ide-popup-menu .popup-item",
+      "pre_click_label": "Chọn tệp đính kèm từ bảng gợi ý @",
+      "cursor_selector": "#ide-send-btn",
+      "cursor_label": "Bước 2: Nhấn Gửi để AI chấm CV & lập lộ trình thử việc",
+      "caption": "Sang <strong>Bước 2</strong>, anh chị chọn đính kèm thang điểm cùng danh sách ứng viên từ bảng gợi ý <code>@</code> vào ô chat, yêu cầu chấm điểm xếp hạng và lập lộ trình thử việc 30-60-90 ngày rồi nhấn nút Gửi.",
+      "audio_src": "audio/lesson_22/b6.mp3",
+      "audio_duration": 10.48
+    },
+    {
+      "id": "b7",
+      "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+      "duration": 21.69,
+      "pose": 7,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "✅ Thực hành Bước 3/3 · Hoàn thành Case Study 2",
+      "pedagogy_title": "Bước 3: Nghiệm thu bộ hồ sơ chấm điểm ứng viên và lộ trình thử việc ho_so_tuyen_dung_cs.md",
+      "pedagogy_note": "Hoàn tất bảng xếp hạng Nguyễn Minh Tuấn (92đ), Trần Thu Hà (85đ), Lê Hoàng Nam (58đ) + câu hỏi phỏng vấn + KPI 90 ngày.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'ho_so_tuyen_dung_cs.md', breadcrumb:'antigravity_course_vn › ho_so_tuyen_dung_cs.md (Hoàn tất HR)', editorTitle:'🤝 ho_so_tuyen_dung_cs.md — Hồ Sơ Tuyển Dụng & Hội Nhập 30-60-90 Ngày', editorHtml:\"<div style=\\\"padding:14px 16px;font-family:system-ui,-apple-system,sans-serif;\\\"><div style=\\\"display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;\\\"><h3 style=\\\"color:#15803d;margin:0;font-size:14px;\\\">🤝 BẢNG CHẤM ĐIỂM ỨNG VIÊN &amp; LỘ TRÌNH HỘI NHẬP 30-60-90 NGÀY</h3><span style=\\\"background:#16a34a;color:#fff;font-size:11px;font-weight:800;padding:2px 8px;border-radius:99px;\\\">Hoàn tất HR</span></div><div style=\\\"display:grid;grid-template-columns:1fr;gap:6px;margin-bottom:8px;\\\"><div style=\\\"background:#f0fdf4;border:1px solid #86efac;border-radius:8px;padding:7px 10px;\\\"><div style=\\\"display:flex;justify-content:space-between;align-items:center;font-size:12.5px;\\\"><strong>1. Nguyễn Minh Tuấn — 92/100 điểm</strong><span style=\\\"background:#16a34a;color:#fff;font-size:10px;font-weight:800;padding:2px 7px;border-radius:5px;\\\">[ĐẠT - MỜI PHỎNG VẤN]</span></div><div style=\\\"width:100%;height:6px;background:#dcfce7;border-radius:99px;margin:4px 0;\\\"><div style=\\\"width:92%;height:100%;background:#16a34a;border-radius:99px;\\\"></div></div><div style=\\\"font-size:11.5px;color:#14532d;\\\">🎯 <strong>Câu hỏi xoáy sâu:</strong> Cách tổ chức ca trực cho đội 10 nhân sự CS B2B và kịch bản gọi cứu vãn khách hàng báo hủy.</div></div><div style=\\\"background:#fefce8;border:1px solid #fde047;border-radius:8px;padding:7px 10px;\\\"><div style=\\\"display:flex;justify-content:space-between;align-items:center;font-size:12.5px;\\\"><strong>2. Trần Thu Hà — 85/100 điểm</strong><span style=\\\"background:#ca8a04;color:#fff;font-size:10px;font-weight:800;padding:2px 7px;border-radius:5px;\\\">[ĐẠT - MỜI PHỎNG VẤN]</span></div><div style=\\\"width:100%;height:6px;background:#fef9c3;border-radius:99px;margin:4px 0;\\\"><div style=\\\"width:85%;height:100%;background:#eab308;border-radius:99px;\\\"></div></div><div style=\\\"font-size:11.5px;color:#854d0e;\\\">🎯 <strong>Câu hỏi xoáy sâu:</strong> Kiểm chứng lý do chuyển việc 2 lần trong 16 tháng và cam kết KPI Quý 2.</div></div><div style=\\\"background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;padding:6px 10px;\\\"><div style=\\\"display:flex;justify-content:space-between;align-items:center;font-size:12px;\\\"><strong>3. Lê Hoàng Nam — 58/100 điểm</strong><span style=\\\"background:#dc2626;color:#fff;font-size:10px;font-weight:800;padding:2px 7px;border-radius:5px;\\\">[LƯU KHO HỒ SƠ]</span></div><div style=\\\"width:100%;height:5px;background:#fee2e2;border-radius:99px;margin-top:4px;\\\"><div style=\\\"width:58%;height:100%;background:#ef4444;border-radius:99px;\\\"></div></div></div></div><div style=\\\"background:#eff6ff;border:1px solid #93c5fd;border-radius:8px;padding:8px 10px;font-size:12px;\\\"><strong style=\\\"color:#1d4ed8;\\\">🗺️ LỘ TRÌNH THỬ VIỆC 30–60–90 NGÀY (DÀNH CHO ỨNG VIÊN TRÚNG TUYỂN):</strong><div style=\\\"margin-top:4px;color:#1e293b;\\\">• <strong>30 ngày:</strong> Chuẩn hóa kịch bản Onboarding khách mới · <strong>60 ngày:</strong> Rút thời gian bàn giao còn 3 ngày · <strong>90 ngày:</strong> Giảm Churn SMB từ 6,2% xuống 4,3%.</div></div></div>\", userMsg:'@jd_truong_nhom_cs.md @danh_sach_ung_vien.csv @COMPANY.md Hãy xuất bộ hồ sơ vào ho_so_tuyen_dung_cs.md', aiMsg:'Đã hoàn tất chấm điểm 3 ứng viên (Nguyễn Minh Tuấn 92/100, Trần Thu Hà 85/100, Lê Hoàng Nam 58/100) kèm câu hỏi xoáy sâu và lộ trình 30-60-90 ngày tại <code>ho_so_tuyen_dung_cs.md</code>!'});",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas",
+        "#ide-chat-messages"
+      ],
+      "pre_click_selector": "#ide-send-btn",
+      "pre_click_label": "Bước 3: Nhấp nút Gửi để hoàn tất ho_so_tuyen_dung_cs.md",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Bước 3: Hoàn tất trọn gói Tuyển dụng & Hội nhập 90 ngày!",
+      "caption": "Ở <strong>Bước 3</strong>, tệp <code>ho_so_tuyen_dung_cs.md</code> đã hiển thị trọn vẹn bảng xếp hạng điểm số của cả ba ứng viên, các câu hỏi phỏng vấn xoáy sâu vào từng điểm khuyết cùng lộ trình thử việc 30–60–90 ngày gắn chặt với KPI giảm tỷ lệ rời bỏ khách hàng. Quy trình này giúp anh chị tiết kiệm 80% thời gian sơ loại hồ sơ và đón nhân sự mới bắt nhịp công việc ngay từ ngày đầu tiên!",
+      "audio_src": "audio/lesson_22/b7.mp3",
+      "audio_duration": 21.04
+    }
+  ]
+}

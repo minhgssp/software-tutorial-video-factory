@@ -1,0 +1,174 @@
+{
+  "lesson_slug": "lesson_20",
+  "filename": "lesson_20.html",
+  "legacy_alias": "",
+  "code": "BÀI 20",
+  "chapter_number": 5,
+  "chapter_code": "CHƯƠNG 5",
+  "chapter_title": "Sản xuất Nội dung, Thiết kế Slide & Báo cáo Trực quan",
+  "title": "Xuất bản Slide Thuyết trình (HTML/PPTX) & Bảng điều khiển Báo cáo Web",
+  "short_title": "Xuất bản Slide & Báo cáo Web",
+  "pill_label": "Bài 20 · Slide & Báo cáo Web",
+  "description": "Biến tệp báo cáo Markdown khô khan thành bộ Slide thuyết trình chuẩn nguyên tắc 'Tiêu đề Hành động' (Action Title, dưới 10 dòng mỗi trang) và trang Bảng điều khiển Web tương tác gửi trực tiếp cho Ban Giám đốc.",
+  "prerequisites": "Bài 14 (Báo cáo doanh thu Quý 1), Bài 18 (Nội dung chiến dịch) & Bài 19 (Thiết kế trực quan).",
+  "dependents": "Chương 6 (Vận dụng toàn bộ kỹ năng từ Chương 1 đến Chương 5 vào 4 Tình huống Thực chiến Toàn diện).",
+  "placement_risk": "0% Rủi ro — Học viên đã có sẵn toàn bộ số liệu và nội dung từ các bài trước nên chỉ tập trung vào kỹ thuật xuất bản Slide và Dashboard.",
+  "continuity_bridge": "Hoàn thành Bài 20, học viên đã làm chủ kỹ năng chuyển hóa văn bản báo cáo thành bộ Slide thuyết trình chuẩn Action Title và trang Báo cáo Web tương tác.",
+  "slides": {
+    "s1": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 5 · BÀI 20 · CHUẨN MỰC SLIDE CẤP CAO</span>\n        <span class=\"k-slide-step\">Tư duy Thiết kế Slide trình Ban Giám đốc &amp; Hội đồng Quản trị</span>\n      </div>\n      <div class=\"k-slide-h1\">Biến báo cáo chữ thành bộ Slide thuyết trình theo nguyên tắc \"Tiêu đề Hành động\"</div>\n      <div class=\"k-slide-sub\">Giúp người nghe nắm bắt trọn vẹn kết luận cốt lõi và con số đắt giá chỉ sau 3 giây nhìn lên màn hình.</div>\n    </div>\n    <div style=\"display:flex; flex-direction:column; gap:10px; margin-top:6px;\">\n      <div class=\"k-visual-hero-box k-step-item k-hl\" id=\"s1_step1\" data-order=\"1\" style=\"padding:12px 16px;\">\n        <div class=\"k-viz-header\" style=\"margin-bottom:6px;\">\n          <span class=\"k-viz-badge\">🎯 ĐỐI SÁNH TIÊU ĐỀ SLIDE</span>\n          <span class=\"k-viz-title\">Sự khác biệt giữa Tiêu đề liệt kê chung chung và Tiêu đề Hành động (Action Title)</span>\n        </div>\n        <svg viewBox=\"0 0 840 82\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%; height:auto;\">\n          <rect x=\"6\" y=\"6\" width=\"388\" height=\"70\" rx=\"10\" fill=\"#FEF2F2\" stroke=\"#FCA5A5\" stroke-width=\"1.5\"/>\n          <text x=\"22\" y=\"27\" fill=\"#B91C1C\" font-size=\"11.5\" font-weight=\"800\">❌ TIÊU ĐỀ CHUNG CHUNG (BẮT SẾP TỰ ĐỌC SỐ LIỆU)</text>\n          <text x=\"22\" y=\"48\" fill=\"#7F1D1D\" font-size=\"12\" font-weight=\"700\">\"Báo cáo tình hình doanh thu Quý 1 năm 2026\"</text>\n          <text x=\"22\" y=\"65\" fill=\"#991B1B\" font-size=\"10.5\">➔ Người xem không biết trọng tâm trang slide muốn nói điều gì</text>\n          <path d=\"M402 41 H438\" stroke=\"#EA580C\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n          <polygon points=\"434,35 446,41 434,47\" fill=\"#EA580C\"/>\n          <rect x=\"454\" y=\"6\" width=\"380\" height=\"70\" rx=\"10\" fill=\"#F0FDF4\" stroke=\"#86EFAC\" stroke-width=\"1.5\"/>\n          <text x=\"470\" y=\"27\" fill=\"#15803D\" font-size=\"11.5\" font-weight=\"800\">✅ TIÊU ĐỀ HÀNH ĐỘNG (ACTION TITLE CÓ SỐ LIỆU)</text>\n          <text x=\"470\" y=\"48\" fill=\"#14532D\" font-size=\"12\" font-weight=\"700\">\"Enterprise chiếm 68,1% doanh thu; Q2 giảm 30% Churn SMB\"</text>\n          <text x=\"470\" y=\"65\" fill=\"#166534\" font-size=\"10.5\">➔ Nêu bật ngay kết luận + con số + định hướng hành động</text>\n        </svg>\n      </div>\n      <div class=\"k-grid-2\" style=\"display:grid; grid-template-columns:1fr 1fr; gap:10px;\">\n        <div class=\"k-card k-step-item k-unreached\" id=\"s1_step2\" data-order=\"2\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">QUY TẮC 1 · MỖI TRANG 1 THÔNG ĐIỆP</span>\n          </div>\n          <h3>Không nhồi nhét nhiều chủ đề vào cùng một trang</h3>\n          <p>Chia đề án tổng thể thành 5 trang rõ rệt: Tổng quan mục tiêu, Cơ cấu doanh thu Q1, Giải pháp Onboarding 3 ngày, Kênh Đại lý B2B và Ngân sách.</p>\n        </div>\n        <div class=\"k-card k-step-item k-unreached\" id=\"s1_step3\" data-order=\"3\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#E0F2FE; color:#0369A1; border:1px solid #7DD3FC;\">QUY TẮC 2 · GIỚI HẠN DƯỚI 10 DÒNG CHỮ</span>\n          </div>\n          <h3>Bố cục tối đa 3 thẻ thông tin kèm biểu đồ trực quan</h3>\n          <p>Ép chặt giới hạn số dòng trong câu lệnh để AI tự tóm lược ý chính thành các thẻ cô đọng, giữ cho màn hình trình chiếu luôn thoáng đãng.</p>\n        </div>\n      </div>\n    </div>\n    ",
+    "s2": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 5 · BÀI 20 · XUẤT BẢN ĐA ĐỊNH DẠNG</span>\n        <span class=\"k-slide-step\">Từ Tệp .md sang Slide Web Tương tác &amp; PowerPoint (.pptx)</span>\n      </div>\n      <div class=\"k-slide-h1\">Một câu lệnh — Xuất bản đồng thời Khung trình chiếu Web 16:9 và tệp PowerPoint</div>\n      <div class=\"k-slide-sub\">Mở trình chiếu mượt mà trên mọi máy tính trong phòng họp mà không bao giờ lo lỗi phông chữ hay lệch khung.</div>\n    </div>\n    <div style=\"display:flex; flex-direction:column; gap:10px; margin-top:6px;\">\n      <div class=\"k-visual-hero-box k-step-item k-hl\" id=\"s2_step1\" data-order=\"1\" style=\"padding:12px 16px;\">\n        <div class=\"k-viz-header\" style=\"margin-bottom:6px;\">\n          <span class=\"k-viz-badge\">⏱️ DÂY CHUYỀN XUẤT BẢN SLIDE</span>\n          <span class=\"k-viz-title\">Ba bước chuyển hóa từ văn bản báo cáo sang bộ Slide hoàn chỉnh</span>\n        </div>\n        <svg viewBox=\"0 0 840 72\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%; height:auto;\">\n          <rect x=\"8\" y=\"8\" width=\"248\" height=\"56\" rx=\"10\" fill=\"#FFF7ED\" stroke=\"#FB923C\" stroke-width=\"1.5\"/>\n          <text x=\"132\" y=\"30\" text-anchor=\"middle\" fill=\"#9A3412\" font-size=\"11.5\" font-weight=\"800\">CHẶNG 1 · NẠP HỒ SƠ GỐC</text>\n          <text x=\"132\" y=\"49\" text-anchor=\"middle\" fill=\"#334155\" font-size=\"11\">@de_an_tong_the_q2.md + Báo cáo Q1</text>\n          <path d=\"M262 36 H294\" stroke=\"#EA580C\" stroke-width=\"2.5\" stroke-linecap=\"round\"/>\n          <polygon points=\"290,31 300,36 290,41\" fill=\"#EA580C\"/>\n          <rect x=\"306\" y=\"8\" width=\"248\" height=\"56\" rx=\"10\" fill=\"#EFF6FF\" stroke=\"#60A5FA\" stroke-width=\"1.5\"/>\n          <text x=\"430\" y=\"30\" text-anchor=\"middle\" fill=\"#1D4ED8\" font-size=\"11.5\" font-weight=\"800\">CHẶNG 2 · DỰNG SLIDE WEB 16:9</text>\n          <text x=\"430\" y=\"49\" text-anchor=\"middle\" fill=\"#334155\" font-size=\"11\">Có biểu đồ SVG &amp; thanh chuyển trang</text>\n          <path d=\"M560 36 H592\" stroke=\"#15803D\" stroke-width=\"2.5\" stroke-linecap=\"round\"/>\n          <polygon points=\"588,31 598,36 588,41\" fill=\"#15803D\"/>\n          <rect x=\"604\" y=\"8\" width=\"228\" height=\"56\" rx=\"10\" fill=\"#DCFCE7\" stroke=\"#4ADE80\" stroke-width=\"1.5\"/>\n          <text x=\"718\" y=\"30\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"11.5\" font-weight=\"800\">CHẶNG 3 · XUẤT TỆP .PPTX</text>\n          <text x=\"718\" y=\"49\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"11\">Tải về chỉnh sửa trên PowerPoint</text>\n        </svg>\n      </div>\n      <div class=\"k-grid-2\" style=\"display:grid; grid-template-columns:1fr 1fr; gap:10px;\">\n        <div class=\"k-card k-step-item k-unreached\" id=\"s2_step2\" data-order=\"2\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#E0F2FE; color:#0369A1; border:1px solid #7DD3FC;\">ĐỊNH DẠNG 1 · SLIDE WEB TỰ CHỨA (.HTML)</span>\n          </div>\n          <h3>Gửi 1 tệp duy nhất mở ngay trên mọi trình duyệt</h3>\n          <p>Tích hợp sẵn danh sách trang thu nhỏ, biểu đồ so sánh tỷ trọng doanh thu sắc nét và chế độ phóng toàn màn hình cực kỳ chuyên nghiệp.</p>\n        </div>\n        <div class=\"k-card k-step-item k-unreached\" id=\"s2_step3\" data-order=\"3\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#DCFCE7; color:#15803D; border:1px solid #86EFAC;\">ĐỊNH DẠNG 2 · ĐỒNG BỘ POWERPOINT (.PPTX)</span>\n          </div>\n          <h3>Đáp ứng quy chuẩn lưu trữ văn phòng truyền thống</h3>\n          <p>Khi đối tác hoặc phòng ban yêu cầu tệp PowerPoint, bạn chỉ cần bấm xuất trực tiếp hoặc nhờ AI chuyển đổi giữ nguyên bố cục 5 trang.</p>\n        </div>\n      </div>\n    </div>\n    "
+  },
+  "beats": [
+    {
+      "id": "b1",
+      "label": "1. Lý thuyết (Phần 1): Nguyên tắc Tiêu đề Hành động (Action Title) & Giới hạn dòng",
+      "duration": 22.26,
+      "pose": 1,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s1",
+      "hl": [
+        "s1_step1",
+        "s1_step2",
+        "s1_step3"
+      ],
+      "caption": "Mỗi khi chuẩn bị bước vào cuộc họp quan trọng, việc ngồi copy từng đoạn chữ từ văn bản sang từng trang trình chiếu tốn hàng giờ đồng hồ mà đôi khi vẫn rối mắt. Để tạo ra bộ Slide thuyết trình cấp cao thuyết phục Ban Giám đốc ngay lập tức, anh chị cần áp dụng nguyên tắc <strong>Action Title</strong>: Tiêu đề của mỗi trang slide không được viết chung chung mà phải là một câu kết luận mang số liệu cụ thể, đồng thời giới hạn toàn trang dưới 10 dòng chữ.",
+      "audio_src": "audio/lesson_20/b1.mp3",
+      "audio_duration": 21.61,
+      "slide_id": "s1"
+    },
+    {
+      "id": "b2",
+      "label": "2. Lý thuyết (Phần 2): Dây chuyền xuất bản Slide Web 16:9 & Đồng bộ PowerPoint",
+      "duration": 22.73,
+      "pose": 2,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s2",
+      "hl": [
+        "s2_step1",
+        "s2_step2",
+        "s2_step3"
+      ],
+      "caption": "Khi đã khóa chặt các quy tắc thiết kế trong câu lệnh, trợ lý AI sẽ tự động đọc hồ sơ đề án gốc để chia khung thông điệp và xuất bản ra hai định dạng tiện lợi. Một là tệp <strong>Slide Web tương tác tỷ lệ 16:9</strong> tích hợp sẵn biểu đồ trực quan, mở mượt mà trên mọi trình duyệt máy tính mà không bao giờ lỗi phông chữ; hai là đồng bộ sang định dạng <strong>PowerPoint</strong> truyền thống để anh chị sẵn sàng gửi báo cáo hoặc trình chiếu trong mọi cuộc họp.",
+      "audio_src": "audio/lesson_20/b2.mp3",
+      "audio_duration": 22.08,
+      "slide_id": "s2"
+    },
+    {
+      "id": "b3",
+      "label": "3. Minh họa: Khung trình chiếu Slide 16:9 trực quan ngay trong IDE",
+      "duration": 18.13,
+      "pose": 2,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Xem Slide Ngay Trong IDE",
+      "pedagogy_title": "Trải nghiệm Khung Trình Chiếu Slide 16:9 (Interactive Slide Deck Previewer)",
+      "pedagogy_note": "Cột nhỏ bên trái liệt kê 3 trang thu nhỏ (Slide 1, Slide 2, Slide 3), khung lớn bên phải hiển thị Slide 16:9 kèm biểu đồ SVG và nút xuất PPTX.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'slide_trinh_hdqt_q2.html', breadcrumb:'antigravity_course_vn › slide_trinh_hdqt_q2.html (Slide Deck Previewer)', editorTitle:'📽️ slide_trinh_hdqt_q2.html — Khung Trình Chiếu Slide 16:9 Thật', editorHtml:'<div style=\"display:grid;grid-template-columns:115px 1fr;gap:12px;padding:12px;background:#f1f5f9;border-radius:10px;border:1px solid #cbd5e1;\"><div style=\"display:flex;flex-direction:column;gap:8px;\"><div style=\"background:#fff7ed;border:2px solid #ea580c;border-radius:6px;padding:6px;cursor:pointer;\"><div style=\"font-size:9px;font-weight:800;color:#ea580c;\">Slide 1 · Đang chọn</div><div style=\"font-size:10px;font-weight:700;color:#1e293b;margin-top:2px;\">Cơ cấu Doanh thu Q1</div></div><div style=\"background:#fff;border:1px solid #cbd5e1;border-radius:6px;padding:6px;opacity:0.85;\"><div style=\"font-size:9px;font-weight:700;color:#64748b;\">Slide 2</div><div style=\"font-size:10px;font-weight:600;color:#334155;margin-top:2px;\">Onboarding 3 ngày</div></div><div style=\"background:#fff;border:1px solid #cbd5e1;border-radius:6px;padding:6px;opacity:0.85;\"><div style=\"font-size:9px;font-weight:700;color:#64748b;\">Slide 3</div><div style=\"font-size:10px;font-weight:600;color:#334155;margin-top:2px;\">Kế hoạch Đại lý Q2</div></div></div><div style=\"background:#fbf8f3;border:2px solid #ea580c;border-radius:10px;padding:14px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 4px 12px rgba(0,0,0,0.06);\"><div><div style=\"display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;\"><span style=\"font-size:10px;font-weight:800;color:#9a3412;letter-spacing:0.06em;\">SLIDE 16:9 · BÁO CÁO HỘI ĐỒNG QUẢN TRỊ Q2/2026</span><button style=\"background:#1e293b;color:#fff;border:none;padding:4px 10px;border-radius:5px;font-size:10px;font-weight:700;cursor:pointer;\">[📥 Xuất PPTX / Trình chiếu Fullscreen]</button></div><h3 style=\"color:#1c1917;margin:0 0 10px 0;font-size:15px;line-height:1.35;\">Action Title: Enterprise chiếm 68,1% doanh thu Q1; Quý 2 tập trung giảm 30% Churn SMB</h3><div style=\"background:#fff;border:1px solid #fed7aa;border-radius:8px;padding:10px;margin-bottom:8px;\"><div style=\"font-size:11px;font-weight:800;color:#9a3412;margin-bottom:6px;\">📊 BIỂU ĐỒ SO SÁNH TỶ TRỌNG DOANH THU QUÝ 1 (TỔNG: 1,85 TỶ VNĐ)</div><svg viewBox=\"0 0 420 58\" style=\"width:100%;height:auto;display:block;\"><text x=\"0\" y=\"18\" fill=\"#1e293b\" font-size=\"11\" font-weight=\"700\">Enterprise</text><rect x=\"75\" y=\"6\" width=\"240\" height=\"16\" rx=\"4\" fill=\"#ea580c\"/><text x=\"322\" y=\"18\" fill=\"#9a3412\" font-size=\"11\" font-weight=\"800\">68,1% (1,26 Tỷ)</text><text x=\"0\" y=\"44\" fill=\"#1e293b\" font-size=\"11\" font-weight=\"700\">Khối SMB</text><rect x=\"75\" y=\"32\" width=\"112\" height=\"16\" rx=\"4\" fill=\"#3b82f6\"/><text x=\"195\" y=\"44\" fill=\"#1d4ed8\" font-size=\"11\" font-weight=\"800\">31,9% (590 Tr)</text></svg></div></div><div style=\"display:flex;justify-content:space-between;font-size:11px;color:#475569;border-top:1px solid #fed7aa;padding-top:6px;\"><span>✅ Chuẩn dưới 10 dòng/slide</span><span>🎯 Tỷ lệ giữ chân Enterprise: 98,2%</span></div></div></div>'});",
+      "focus_selectors": [
+        "#editor-canvas",
+        "#ide-file-tree"
+      ],
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Khung trình chiếu Slide 16:9 có cột chọn trang và biểu đồ SVG",
+      "caption": "Nhìn vào khung trình chiếu Slide ở cột giữa: Bên trái là danh sách 3 trang thu nhỏ <code>Slide 1</code>, <code>Slide 2</code>, <code>Slide 3</code>; bên phải là trang Slide 16:9 chuẩn thương hiệu có Tiêu đề hành động, biểu đồ cột ngang so sánh <code>Enterprise 68,1%</code> với <code>SMB 31,9%</code> và nút xuất PPTX.",
+      "pre_click_selector": "[data-file='slide_trinh_hdqt_q2.html']",
+      "pre_click_label": "Nhấp chọn tệp slide_trinh_hdqt_q2.html ở cây thư mục trái",
+      "audio_src": "audio/lesson_20/b3.mp3",
+      "audio_duration": 17.48
+    },
+    {
+      "id": "b4",
+      "label": "4. Kỹ thuật: Cách viết câu lệnh ép AI tuân thủ chuẩn dưới 10 dòng/slide",
+      "duration": 12.57,
+      "pose": 3,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Kỹ thuật Giao việc Làm Slide",
+      "pedagogy_title": "Quy định rõ số trang, tiêu đề kết luận và giới hạn dòng trong câu lệnh",
+      "pedagogy_note": "Nếu không giới hạn số dòng, AI thường chép nguyên cả trang văn bản dài vào 1 slide. Hãy khóa chặt 'Tối đa 3 thẻ / slide'.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'de_an_tong_the_q2.md', clearChat:true, popupMode:'mention', chatInput:'@de_an_tong_the_q2.md @bao_cao_doanh_thu_q1.md Hãy chuyển hóa đề án thành bộ Slide 5 trang tại tệp slide_trinh_hdqt_q2.html theo quy chuẩn: (1) Tỷ lệ 16:9 nền kem cam, (2) Tiêu đề mỗi trang là 1 câu kết luận có số liệu, (3) Tối đa 3 thẻ thông tin và dưới 10 dòng mỗi trang.'});",
+      "focus_selectors": [
+        "#ide-chat-input",
+        "#editor-canvas"
+      ],
+      "cursor_selector": "#ide-send-btn",
+      "cursor_label": "Khóa chặt 3 tiêu chuẩn thiết kế Slide trong câu lệnh",
+      "caption": "Khi giao việc làm slide ở cột phải, anh chị nhớ ghi rõ 3 ràng buộc vàng: Một là tỷ lệ 16:9 màu kem cam, hai là tiêu đề phải có số liệu kết luận, và ba là mỗi trang tối đa 3 thẻ thông tin dưới 10 dòng.",
+      "pre_click_selector": "#ide-popup-menu .popup-item",
+      "pre_click_label": "Chọn tệp đính kèm từ bảng gợi ý @",
+      "audio_src": "audio/lesson_20/b4.mp3",
+      "audio_duration": 11.92
+    },
+    {
+      "id": "b5",
+      "label": "5. Bước 1: Mở chọn tệp đề án gốc de_an_tong_the_q2.md",
+      "duration": 11.61,
+      "pose": 4,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 1 · Chọn Hồ sơ Làm Slide",
+      "pedagogy_title": "Còn 15 phút nữa bước vào cuộc họp duyệt ngân sách Quý 2",
+      "pedagogy_note": "Bước 1: Mở tệp de_an_tong_the_q2.md ở cây thư mục trái để kiểm tra 3 phần Tài chính, Nhân sự và Thị trường.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'de_an_tong_the_q2.md', breadcrumb:'antigravity_course_vn › de_an_tong_the_q2.md', editorTitle:'🏆 de_an_tong_the_q2.md — Nguồn nội dung làm bộ Slide 5 trang', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">ĐANG CHỌN TỆP NGUỒN: de_an_tong_the_q2.md</h3><p>Chuẩn bị chuyển hóa thành bộ Slide 5 trang: Trang 1 (Tổng quan), Trang 2 (Doanh thu Q1), Trang 3 (Giải pháp Onboarding 3 ngày), Trang 4 (Kênh Đại lý B2B), Trang 5 (Ngân sách &amp; Lộ trình).</p></div>'});",
+      "focus_selectors": [
+        "#editor-canvas",
+        "#ide-file-tree"
+      ],
+      "cursor_selector": "[data-file='de_an_tong_the_q2.md']",
+      "cursor_label": "Bước 1: Kiểm tra bố cục 5 phần của đề án gốc",
+      "caption": "Chúng ta vào thực hành 3 bước xuất bản bộ Slide báo cáo. Ở <strong>Bước 1</strong>, anh chị nhấp mở tệp <code>de_an_tong_the_q2.md</code> ở cây thư mục trái để xác nhận 5 nội dung chính cần đưa lên 5 trang trình chiếu.",
+      "pre_click_selector": "[data-file='de_an_tong_the_q2.md']",
+      "pre_click_label": "Nhấp chọn tệp de_an_tong_the_q2.md ở cây thư mục trái",
+      "audio_src": "audio/lesson_20/b5.mp3",
+      "audio_duration": 10.96
+    },
+    {
+      "id": "b6",
+      "label": "6. Bước 2: Gửi lệnh xuất bản bộ Slide HTML/PPTX 5 trang",
+      "duration": 10.33,
+      "pose": 5,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 2 · Xuất bản Bộ Slide 5 Trang",
+      "pedagogy_title": "Bước 2: Nhập lệnh tạo tệp slide_trinh_hdqt_q2.html tại khung chat",
+      "pedagogy_note": "Đính kèm @de_an_tong_the_q2.md và @bao_cao_doanh_thu_q1.md rồi bấm Gửi.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'de_an_tong_the_q2.md', clearChat:true, popupMode:'mention', chatInput:'@de_an_tong_the_q2.md @bao_cao_doanh_thu_q1.md Hãy xuất bản bộ Slide thuyết trình 5 trang chuẩn Action Title (dưới 10 dòng/trang) vào tệp slide_trinh_hdqt_q2.html'});",
+      "focus_selectors": [
+        "#ide-chat-input",
+        "#ide-send-btn"
+      ],
+      "cursor_selector": "#ide-send-btn",
+      "cursor_label": "Bước 2: Nhấn Gửi để AI dựng trọn bộ 5 trang Slide",
+      "caption": "Sang <strong>Bước 2</strong>, anh chị đính kèm tệp đề án và báo cáo doanh thu từ bảng gợi ý <code>@</code> vào ô chat, yêu cầu xuất bản bộ Slide 5 trang chuẩn <strong>Action Title</strong> rồi nhấn nút Gửi.",
+      "pre_click_selector": "#ide-popup-menu .popup-item",
+      "pre_click_label": "Chọn tệp đính kèm từ bảng gợi ý @",
+      "audio_src": "audio/lesson_20/b6.mp3",
+      "audio_duration": 9.68
+    },
+    {
+      "id": "b7",
+      "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+      "duration": 18.89,
+      "pose": 6,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "✅ Thực hành Bước 3 · Hoàn thành Chương 5",
+      "pedagogy_title": "Bước 3: Nghiệm thu bộ Slide thuyết trình 16:9 hoàn chỉnh kèm biểu đồ trực quan",
+      "pedagogy_note": "Bộ slide_trinh_hdqt_q2.html hoàn tất với biểu đồ SVG và nút Xuất PPTX.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'slide_trinh_hdqt_q2.html', breadcrumb:'antigravity_course_vn › slide_trinh_hdqt_q2.html (Hoàn tất 5/5 Slide)', editorTitle:'📽️ slide_trinh_hdqt_q2.html — Đã sẵn sàng trình chiếu trước HĐQT', editorHtml:'<div style=\"display:grid;grid-template-columns:115px 1fr;gap:12px;padding:12px;background:#f1f5f9;border-radius:10px;border:1px solid #cbd5e1;\"><div style=\"display:flex;flex-direction:column;gap:8px;\"><div style=\"background:#fff7ed;border:2px solid #ea580c;border-radius:6px;padding:6px;cursor:pointer;\"><div style=\"font-size:9px;font-weight:800;color:#ea580c;\">Slide 1 · Đang chọn</div><div style=\"font-size:10px;font-weight:700;color:#1e293b;margin-top:2px;\">Cơ cấu Doanh thu Q1</div></div><div style=\"background:#fff;border:1px solid #cbd5e1;border-radius:6px;padding:6px;opacity:0.85;\"><div style=\"font-size:9px;font-weight:700;color:#64748b;\">Slide 2</div><div style=\"font-size:10px;font-weight:600;color:#334155;margin-top:2px;\">Onboarding 3 ngày</div></div><div style=\"background:#fff;border:1px solid #cbd5e1;border-radius:6px;padding:6px;opacity:0.85;\"><div style=\"font-size:9px;font-weight:700;color:#64748b;\">Slide 3</div><div style=\"font-size:10px;font-weight:600;color:#334155;margin-top:2px;\">Kế hoạch Đại lý Q2</div></div></div><div style=\"background:#fbf8f3;border:2px solid #ea580c;border-radius:10px;padding:14px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 4px 12px rgba(0,0,0,0.06);\"><div><div style=\"display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;\"><span style=\"font-size:10px;font-weight:800;color:#9a3412;letter-spacing:0.06em;\">SLIDE 16:9 · BÁO CÁO HỘI ĐỒNG QUẢN TRỊ Q2/2026</span><button style=\"background:#1e293b;color:#fff;border:none;padding:4px 10px;border-radius:5px;font-size:10px;font-weight:700;cursor:pointer;\">[📥 Xuất PPTX / Trình chiếu Fullscreen]</button></div><h3 style=\"color:#1c1917;margin:0 0 10px 0;font-size:15px;line-height:1.35;\">Action Title: Enterprise chiếm 68,1% doanh thu Q1; Quý 2 tập trung giảm 30% Churn SMB</h3><div style=\"background:#fff;border:1px solid #fed7aa;border-radius:8px;padding:10px;margin-bottom:8px;\"><div style=\"font-size:11px;font-weight:800;color:#9a3412;margin-bottom:6px;\">📊 BIỂU ĐỒ SO SÁNH TỶ TRỌNG DOANH THU QUÝ 1 (TỔNG: 1,85 TỶ VNĐ)</div><svg viewBox=\"0 0 420 58\" style=\"width:100%;height:auto;display:block;\"><text x=\"0\" y=\"18\" fill=\"#1e293b\" font-size=\"11\" font-weight=\"700\">Enterprise</text><rect x=\"75\" y=\"6\" width=\"240\" height=\"16\" rx=\"4\" fill=\"#ea580c\"/><text x=\"322\" y=\"18\" fill=\"#9a3412\" font-size=\"11\" font-weight=\"800\">68,1% (1,26 Tỷ)</text><text x=\"0\" y=\"44\" fill=\"#1e293b\" font-size=\"11\" font-weight=\"700\">Khối SMB</text><rect x=\"75\" y=\"32\" width=\"112\" height=\"16\" rx=\"4\" fill=\"#3b82f6\"/><text x=\"195\" y=\"44\" fill=\"#1d4ed8\" font-size=\"11\" font-weight=\"800\">31,9% (590 Tr)</text></svg></div></div><div style=\"display:flex;justify-content:space-between;font-size:11px;color:#475569;border-top:1px solid #fed7aa;padding-top:6px;\"><span>✅ Chuẩn dưới 10 dòng/slide</span><span>🎯 Tỷ lệ giữ chân Enterprise: 98,2%</span></div></div></div>', userMsg:'@de_an_tong_the_q2.md @bao_cao_doanh_thu_q1.md Hãy xuất bản bộ Slide thuyết trình 5 trang vào tệp slide_trinh_hdqt_q2.html', aiMsg:'Đã hoàn tất xuất bản bộ Slide 16:9 tại <code>slide_trinh_hdqt_q2.html</code> kèm biểu đồ trực quan! Chúc mừng bạn đã làm chủ trọn vẹn Chương 5.'});",
+      "focus_selectors": [
+        "#editor-canvas",
+        "#ide-chat-messages"
+      ],
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Bước 3: Hoàn tất bộ Slide 16:9 trình HĐQT!",
+      "caption": "Ở <strong>Bước 3</strong>, bộ Slide thuyết trình 16:9 tại tệp <code>slide_trinh_hdqt_q2.html</code> đã xuất bản hoàn chỉnh với tiêu đề kết luận sắc bén, biểu đồ so sánh tỷ trọng doanh thu trực quan và nút xuất PowerPoint tiện lợi. Kỹ năng này giúp anh chị biến mọi bản báo cáo dài dòng thành bài thuyết trình đẳng cấp chỉ trong vài phút trước giờ họp!",
+      "pre_click_selector": "#ide-send-btn",
+      "pre_click_label": "Bước 3: Nhấp nút Gửi để xuất bản bộ Slide 5 trang HTML",
+      "audio_src": "audio/lesson_20/b7.mp3",
+      "audio_duration": 18.24
+    }
+  ]
+}

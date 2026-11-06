@@ -1,0 +1,176 @@
+{
+  "lesson_slug": "lesson_10",
+  "filename": "lesson_10.html",
+  "legacy_alias": "",
+  "code": "BÀI 10",
+  "chapter_number": 3,
+  "chapter_code": "CHƯƠNG 3",
+  "chapter_title": "Thiết kế Bộ não .agent & Tự động hóa Quy trình",
+  "title": "Thiết lập Nội quy Tự động (.agent/rules) & Sổ tay Kỹ năng (.agent/skills)",
+  "short_title": "Thiết kế Rules & Skills",
+  "pill_label": "Bài 10 · Thiết kế Rules & Skills",
+  "description": "Phân biệt rõ khi nào nên đặt quy định vào .agent/rules/ (luôn tự động nạp 100% thời gian) và khi nào nên đóng gói thành .agent/skills/ (chỉ nạp khi đúng nghiệp vụ); thực hành tạo Rule và Skill đầu tiên.",
+  "prerequisites": "Đã biết viết quy tắc cá nhân và hiểu tổng quan 3 ngăn của thư mục .agent.",
+  "dependents": "Kết hợp Rules & Skills vào Workflows và dùng lệnh /learn để tự động nâng cấp.",
+  "placement_risk": "0% Rủi ro — Học viên tách bạch rõ ràng phần nội quy chung và phần cẩm nang nghiệp vụ chuyên sâu.",
+  "continuity_bridge": "Làm chủ cách thiết lập Nội quy tự động (.agent/rules) và Sổ tay kỹ năng chuyên sâu (.agent/skills) để AI vừa giữ kỷ luật vừa tối ưu bộ nhớ.",
+  "slides": {
+    "s1": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 3 · BÀI 10 · ĐẶT VẤN ĐỀ</span>\n        <span class=\"k-slide-step\">Quản trị Bộ nhớ Trợ lý AI</span>\n      </div>\n      <div class=\"k-slide-h1\">Tại sao không nên nhồi nhét mọi quy định và biểu mẫu dài vào chung một nơi?</div>\n      <div class=\"k-slide-sub\">Tách bạch giữa Nội quy ngắn gọn dán trên tường (<code>.agent/rules/</code>) và Cẩm nang chuyên môn xếp trên kệ sách (<code>.agent/skills/</code>).</div>\n    </div>\n    <div style=\"display:flex; flex-direction:column; gap:12px;\">\n      <div class=\"k-visual-hero-box k-layout-comparison k-step-item k-hl\" id=\"s1_step1\" data-order=\"1\">\n        <div class=\"k-cmp-col k-cmp-before\">\n          <div class=\"k-cmp-badge-old\">❌ SAI LẦM PHỔ BIẾN · ÔM ĐỒM QUÁ TẢI</div>\n          <div class=\"k-cmp-main\">Nhồi 20 trang biểu mẫu vào Nội quy luôn bật</div>\n          <div class=\"k-cmp-sub\">Hỏi một câu nhỏ AI cũng phải đọc lại cả xấp tài liệu dày, gây loãng sự tập trung</div>\n        </div>\n        <div class=\"k-cmp-arrow\">➔</div>\n        <div class=\"k-cmp-col k-cmp-after\">\n          <div class=\"k-cmp-badge-new\">✅ TƯ DUY ĐÚNG · DÁN TƯỜNG &amp; XẾP KỆ</div>\n          <div class=\"k-cmp-main\">Nội quy ngắn gọn dán tường · Biểu mẫu xếp lên kệ</div>\n          <div class=\"k-cmp-sub\">Luôn nhớ kỷ luật chung 24/7, cần làm nghiệp vụ nào mới rút đúng cuốn sổ tay đó</div>\n        </div>\n      </div>\n      <div class=\"k-card k-step-item k-unreached\" id=\"s1_step2\" data-order=\"2\" style=\"padding:12px 16px;\">\n        <div style=\"display:flex; align-items:center; justify-content:space-between; gap:16px;\">\n          <div style=\"flex:1;\">\n            <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">NGĂN 1 · .AGENT/RULES/ (NỘI QUY LUÔN BẬT)</span>\n            <h3 style=\"margin:6px 0 4px;\">Những quy tắc kỷ luật áp dụng cho 100% công việc</h3>\n            <p style=\"margin:0; font-size:12.5px; color:#475569;\">Viết ngắn gọn dưới 50 dòng cho những chuẩn mực bất biến: Xưng hô lịch sự, định dạng ngày tháng Việt Nam (DD/MM/YYYY), đơn vị tiền tệ VNĐ và tuyệt đối cấm bịa đặt số liệu.</p>\n          </div>\n          <svg viewBox=\"0 0 280 64\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:260px; height:auto; flex-shrink:0;\">\n            <rect x=\"4\" y=\"4\" width=\"272\" height=\"56\" rx=\"8\" fill=\"#FFF7ED\" stroke=\"#FB923C\" stroke-width=\"1.5\"/>\n            <text x=\"140\" y=\"25\" text-anchor=\"middle\" fill=\"#9A3412\" font-size=\"11\" font-weight=\"800\">🛡️ .agent/rules/quy_chuan_van_phong.md</text>\n            <text x=\"140\" y=\"44\" text-anchor=\"middle\" fill=\"#C2410C\" font-size=\"9.5\">Tự động nạp ngầm 100% — Không cần gõ @</text>\n          </svg>\n        </div>\n      </div>\n      <div class=\"k-callout k-step-item k-unreached\" id=\"s1_step3\" data-order=\"3\">\n        <span>📌</span>\n        <div><strong>Giá trị cốt lõi của <code>.agent/rules/</code>:</strong> Mở khung hội thoại mới lên là Trợ lý AI đã tự động thuộc lòng kỷ luật phòng ban mà bạn không cần nhắc lại.</div>\n      </div>\n    </div>\n    ",
+    "s2": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 3 · BÀI 10 · CƠ CHẾ KỸ NĂNG</span>\n        <span class=\"k-slide-step\">Thiết kế Sổ tay .agent/skills/</span>\n      </div>\n      <div class=\"k-slide-h1\">Đóng gói nghiệp vụ chuyên sâu vào .agent/skills/ và Quy tắc phân loại 3 giây</div>\n      <div class=\"k-slide-sub\">Cách AI tự nhận diện đúng đầu việc nhờ nhãn <code>description</code> và nạp biểu mẫu chi tiết đúng lúc cần thiết.</div>\n    </div>\n    <div class=\"k-grid-3\" style=\"margin-top:8px;\">\n      <div class=\"k-card k-step-item k-hl\" id=\"s2_step1\" data-order=\"1\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#E0F2FE; color:#0369A1; border:1px solid #7DD3FC;\">1 · CẤU TRÚC TỆP SKILL.MD</span>\n          <span class=\"k-illus-badge\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#0284C7\" stroke-width=\"2\"><path d=\"M12 2L2 7l10 5 10-5-10-5z\"/><path d=\"M2 17l10 5 10-5M2 12l10 5 10-5\"/></svg></span>\n        </div>\n        <h3>Nhãn tên trên gáy sách (Description)</h3>\n        <p>Đầu mỗi tệp <code>SKILL.md</code> luôn có dòng <code>description</code> mô tả rõ khi nào cần dùng. AI nhìn nhãn này để tự rút đúng cuốn cẩm nang khi bạn giao việc.</p>\n        <div class=\"k-card-mini-note\">🏷️ Ví dụ: Kích hoạt khi cần lập Báo cáo tuần</div>\n      </div>\n      <div class=\"k-card k-step-item k-unreached\" id=\"s2_step2\" data-order=\"2\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#FEF3C7; color:#B45309; border:1px solid #FCD34D;\">2 · NỘI DUNG BÊN TRONG SKILL</span>\n          <span class=\"k-illus-badge\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#D97706\" stroke-width=\"2\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"3\"/><path d=\"M8 10h8M8 14h5\"/></svg></span>\n        </div>\n        <h3>Biểu mẫu &amp; Tiêu chí chuyên môn</h3>\n        <p>Chứa trọn bộ khung dàn ý báo cáo, công thức tính chỉ số KPI, hoặc bảng chấm điểm hồ sơ ứng viên dày nhiều trang mà không lo nặng máy.</p>\n        <div class=\"k-card-mini-note\">📚 Xếp gọn trong .agent/skills/ten-ky-nang/</div>\n      </div>\n      <div class=\"k-card k-step-item k-unreached\" id=\"s2_step3\" data-order=\"3\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#DCFCE7; color:#15803D; border:1px solid #86EFAC;\">3 · QUY TẮC PHÂN LOẠI 3 GIÂY</span>\n          <span class=\"k-illus-badge\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#16A34A\" stroke-width=\"2\"><path d=\"M22 11.08V12a10 10 0 1 1-5.93-9.14\"/><polyline points=\"22 4 12 14.01 9 11.01\"/></svg></span>\n        </div>\n        <h3>Câu hỏi nào cũng cần hay Theo việc mới cần?</h3>\n        <p>Quy định nào <strong>mọi câu lệnh đều phải tuân thủ</strong> &rarr; Đặt vào <code>rules/</code>. Hướng dẫn nào <strong>chỉ nhiệm vụ chuyên biệt mới dùng</strong> &rarr; Đặt vào <code>skills/</code>.</p>\n        <div class=\"k-card-mini-note\">⚖️ Kỷ luật luôn bật — Nghiệp vụ đúng lúc</div>\n      </div>\n    </div>\n    "
+  },
+  "beats": [
+    {
+      "id": "b1",
+      "label": "1. Lý thuyết (Phần 1): Tư duy tách bạch Nội quy dán tường (Rules) và Cẩm nang xếp kệ (Skills)",
+      "duration": 26.5,
+      "pose": 1,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s1",
+      "slide_id": "s1",
+      "hl": [
+        "s1_step1",
+        "s1_step2",
+        "s1_step3"
+      ],
+      "caption": "Hãy hình dung nếu chúng ta bắt một nhân viên mới lúc nào cũng phải ôm khư khư hai mươi cuốn cẩm nang nghiệp vụ dày cộp trên tay, họ sẽ nhanh chóng rối trí và làm việc chậm chạp. Cách quản trị thông minh là tách bạch rõ ràng: Những nội quy chung ngắn gọn áp dụng cho một trăm phần trăm công việc như cách xưng hô, định dạng ngày tháng, đơn vị tiền tệ Việt Nam và nguyên tắc cấm bịa số liệu thì được dán thẳng lên tường tại ngăn <code>.agent/rules/</code> để trợ lý AI tự động ghi nhớ mọi lúc mà không cần nhắc lại.",
+      "audio_src": "audio/lesson_10/b1.mp3",
+      "audio_duration": 25.85
+    },
+    {
+      "id": "b2",
+      "label": "2. Lý thuyết (Phần 2): Cơ chế Sổ tay Kỹ năng (.agent/skills/) & Quy tắc phân loại 3 giây",
+      "duration": 29.75,
+      "pose": 2,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s2",
+      "slide_id": "s2",
+      "hl": [
+        "s2_step1",
+        "s2_step2",
+        "s2_step3"
+      ],
+      "caption": "Ngược lại, những hướng dẫn nghiệp vụ chuyên sâu kèm biểu mẫu chi tiết như cách lập báo cáo tuần hay bảng chấm điểm ứng viên sẽ được đóng gói thành các tệp <code>SKILL.md</code> xếp gọn trên kệ sách <code>.agent/skills/</code>. Mỗi tệp kỹ năng đều có phần mô tả <code>description</code> ở đầu đóng vai trò như nhãn tên trên gáy sách, giúp AI tự nhận biết khi nào cần rút đúng cuốn cẩm nang đó ra dùng. Quy tắc phân loại trong ba giây rất đơn giản: Quy định nào câu lệnh nào cũng cần thì đưa vào <code>rules/</code>, còn nghiệp vụ nào theo đầu việc mới cần thì đưa vào <code>skills/</code>.",
+      "audio_src": "audio/lesson_10/b2.mp3",
+      "audio_duration": 29.1
+    },
+    {
+      "id": "b3",
+      "label": "3. Minh họa: Giải phẫu một tệp Nội quy trong .agent/rules/",
+      "duration": 14.78,
+      "pose": 3,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Cấu trúc Tệp Rule",
+      "pedagogy_title": "Quan sát tệp .agent/rules/quy_chuan_van_phong.md trên màn hình",
+      "pedagogy_note": "Gồm 3 gạch đầu dòng ngắn gọn: Chuẩn ngày tháng DD/MM/YYYY, đơn vị VNĐ và câu đầu tiên luôn là kết luận.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'quy_chuan_van_phong.md', breadcrumb:'.agent › rules › quy_chuan_van_phong.md', editorTitle:'📏 .agent/rules/quy_chuan_van_phong.md — Nội Quy Tự Động', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#9a3412;margin-top:0;\">NỘI QUY VĂN PHÒNG BẮT BUỘC</h2><ol><li><strong>Định dạng thời gian &amp; tiền tệ:</strong> Luôn dùng chuẩn ngày <code>DD/MM/YYYY</code> và đơn vị <code>VNĐ</code> (phân cách hàng nghìn bằng dấu chấm).</li><li><strong>Cấu trúc báo cáo:</strong> Câu đầu tiên luôn là kết luận trực diện; ưu tiên bảng biểu đối chiếu.</li><li><strong>Bảo toàn sự thật:</strong> Tuyệt đối không tự suy diễn số liệu phần trăm nếu tài liệu gốc không cung cấp.</li></ol></div>'});",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas"
+      ],
+      "pre_click_selector": "[data-file='quy_chuan_van_phong.md']",
+      "pre_click_label": "Nhấp chọn tệp quy_chuan_van_phong.md ở cây thư mục trái",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Nội quy ngắn gọn luôn tự động kích hoạt 100%",
+      "caption": "Khi bấm chọn tệp <code>quy_chuan_van_phong.md</code> trên cây thư mục trái, anh chị thấy nội dung hiển thị ở cột giữa. Nhờ đặt tệp này trong ngăn <code>rules</code>, từ nay anh chị không cần gõ <code>@troly.md</code> nữa mà trợ lý vẫn tự động áp dụng chuẩn ngày tháng và tiền tệ Việt Nam.",
+      "audio_src": "audio/lesson_10/b3.mp3",
+      "audio_duration": 14.13
+    },
+    {
+      "id": "b4",
+      "label": "4. Kỹ thuật: Giải phẫu một tệp Kỹ năng trong .agent/skills/",
+      "duration": 12.97,
+      "pose": 4,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Cấu trúc Tệp SKILL.md",
+      "pedagogy_title": "Phần khai báo Description ở đầu tệp SKILL.md giúp AI tự nhận biết",
+      "pedagogy_note": "Khi người dùng yêu cầu viết báo cáo tuần, AI đọc dòng description thấy khớp mới mở toàn bộ tệp SKILL.md ra thực hiện.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'SKILL.md', breadcrumb:'.agent › skills › bao-cao-tuan › SKILL.md', editorTitle:'🧠 .agent/skills/bao-cao-tuan/SKILL.md — Kỹ Năng Chuyên Môn', editorHtml:'<div style=\"padding:16px;\"><pre style=\"background:#fff7ed;border:1px solid #fed7aa;padding:10px;border-radius:6px;font-size:12px;\">---\\nname: bao-cao-tuan\\ndescription: Kích hoạt khi người dùng yêu cầu tổng hợp Báo cáo tuần phòng Kinh doanh hoặc Vận hành.\\n---</pre><h3 style=\"color:#9a3412;\">Quy chuẩn Bố cục Báo cáo Tuần TaskFlow</h3><ul><li><strong>Phần 1:</strong> Bảng đối chiếu KPI Kế hoạch vs. Thực đạt.</li><li><strong>Phần 2:</strong> 3 Điểm nghẽn lớn nhất cần Giám đốc tháo gỡ.</li><li><strong>Phần 3:</strong> Kế hoạch hành động tuần tới kèm người phụ trách.</li></ul></div>'});",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas"
+      ],
+      "pre_click_selector": "[data-file='SKILL.md']",
+      "pre_click_label": "Nhấp chọn tệp SKILL.md ở cây thư mục trái",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Khai báo description ở đầu tệp SKILL.md",
+      "caption": "Tiếp tục bấm mở tệp <code>SKILL.md</code> ở cây thư mục trái, anh chị chú ý phần khung màu cam ở đầu tệp có dòng <code>description</code>: Đây chính là nhãn tên trên gáy sách giúp trợ lý biết chính xác khi nào cần rút cuốn kỹ năng báo cáo tuần này ra dùng.",
+      "audio_src": "audio/lesson_10/b4.mp3",
+      "audio_duration": 12.32
+    },
+    {
+      "id": "b5",
+      "label": "5. Bước 1: Mở tệp @troly.md để chuẩn bị nâng cấp thành Rule",
+      "duration": 11.85,
+      "pose": 5,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 1/3 · Chuyển @troly.md vào Rules",
+      "pedagogy_title": "Muốn AI tự nhớ phong cách cá nhân mà không cần gõ @troly.md",
+      "pedagogy_note": "Bước 1: Mở tệp troly.md ở cột trái để chuẩn bị nâng cấp thành nội quy tự động.",
+      "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); openFileInEditor('troly.md');",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas"
+      ],
+      "pre_click_selector": "[data-file='troly.md']",
+      "pre_click_label": "Nhấp chọn tệp troly.md ở cây thư mục trái",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Bước 1: Kiểm tra tệp troly.md cần nâng cấp thành Rule",
+      "caption": "Chúng ta vào thực hành 3 bước tạo Rules và Skills mà không cần tự gõ mã kỹ thuật. Ở <strong>Bước 1</strong>, anh chị bấm chọn tệp <code>troly.md</code> trên cây thư mục trái để xem lại các nguyên tắc cá nhân đã viết ở Chương 2.",
+      "audio_src": "audio/lesson_10/b5.mp3",
+      "audio_duration": 11.2
+    },
+    {
+      "id": "b6",
+      "label": "6. Bước 2: Giao lệnh cho AI tự tạo Rule và Skill chuẩn",
+      "duration": 15.6,
+      "pose": 6,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 2/3 · Nhờ AI đóng gói Rule & Skill",
+      "pedagogy_title": "Bước 2: Nhập lệnh vào ô chat yêu cầu AI tạo tệp trong .agent/rules/ và .agent/skills/",
+      "pedagogy_note": "Bạn chỉ cần nói bằng tiếng Việt, chính Trợ lý AI sẽ tự tạo đúng thư mục và viết chuẩn cú pháp SKILL.md cho bạn.",
+      "onEnter": "kudoSimScene({surface:'ide', file:'troly.md', activeTreeFile:'troly.md', popupMode:'mention', clearChat:true, chatInput:'@troly.md Hãy chuyển các quy tắc chung vào .agent/rules/quy_chuan_van_phong.md và tạo thêm kỹ năng viết báo cáo tuần tại .agent/skills/bao-cao-tuan/SKILL.md'});",
+      "focus_selectors": [
+        "#ide-popup-menu",
+        "#ide-chat-input",
+        "#ide-send-btn"
+      ],
+      "pre_click_selector": "#ide-popup-menu .popup-item",
+      "pre_click_label": "Chọn tệp/lệnh từ bảng gợi ý tự động",
+      "cursor_selector": "#ide-send-btn",
+      "cursor_label": "Bước 2: Gửi lệnh để AI tự khởi tạo Rule & Skill",
+      "caption": "Sang <strong>Bước 2</strong>, điều tuyệt vời nhất của <strong>Antigravity IDE</strong> là anh chị không phải tự tạo thư mục bằng tay: Hãy chọn <code>@troly.md</code> từ bảng gợi ý và bảo trợ lý chuyển quy tắc chung vào <code>.agent/rules/</code>, đồng thời tạo kỹ năng báo cáo tuần trong <code>.agent/skills/</code>.",
+      "audio_src": "audio/lesson_10/b6.mp3",
+      "audio_duration": 14.95
+    },
+    {
+      "id": "b7",
+      "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+      "duration": 18.57,
+      "pose": 1,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "✅ Thực hành Bước 3/3 · Kết quả hoàn thành",
+      "pedagogy_title": "Bước 3: Thử gõ lệnh không cần @troly.md, AI vẫn tự áp dụng cả Rule lẫn Skill",
+      "pedagogy_note": "AI tự nạp Rule văn phòng + Skill báo cáo tuần để sinh ra bao_cao_tuan_01.md.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'bao_cao_tuan_01.md', breadcrumb:'antigravity_course_vn › bao_cao_tuan_01.md (Tự động áp dụng Rule + Skill)', editorTitle:'📊 bao_cao_tuan_01.md — Đã kích hoạt ngầm Rule & Skill', editorHtml:'<div style=\"padding:16px;\"><div style=\"background:#ecfdf5;border:1px solid #6ee7b7;padding:8px 12px;border-radius:6px;margin-bottom:10px;font-size:12px;color:#065f46;\">⚡ <strong>Hệ thống .agent đã tự động nạp:</strong> <code>rules/quy_chuan_van_phong.md</code> + <code>skills/bao-cao-tuan/SKILL.md</code></div><h3 style=\"color:#9a3412;margin-top:0;\">BÁO CÁO TUẦN 1 THÁNG 04/2026 — PHÒNG KINH DOANH</h3><p><strong>Kết luận trực diện:</strong> Doanh thu tuần đạt 485.000.000 VNĐ (vượt 8% kế hoạch tuần).</p></div>', userMsg:'Hãy lập báo cáo tuần 1 tháng 4 từ bảng @sales_data.csv', aiMsg:'Tôi đã tự động áp dụng <strong>Nội quy văn phòng</strong> (chuẩn VNĐ, DD/MM/YYYY) và <strong>Kỹ năng Báo cáo tuần</strong> để xuất tệp <code>bao_cao_tuan_01.md</code> cho bạn mà không cần bạn đính kèm lại quy tắc!'});",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas",
+        "#ide-chat-messages"
+      ],
+      "pre_click_selector": "[data-file='bao_cao_tuan_01.md']",
+      "pre_click_label": "Nhấp chọn tệp bao_cao_tuan_01.md ở cây thư mục trái",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Bước 3: AI tự động nạp Rule & Skill mà không cần nhắc!",
+      "caption": "Ở <strong>Bước 3</strong>, khi bấm vào tệp <code>bao_cao_tuan_01.md</code> ở cây thư mục trái, anh chị thấy hệ thống đã tự động nạp ngầm cả Nội quy văn phòng lẫn Kỹ năng chuyên môn để xuất ra báo cáo chuẩn chỉnh. Cách phân tầng giữa <code>rules/</code> và <code>skills/</code> giúp trợ lý AI luôn giữ vững kỷ luật chung mà vẫn xử lý sắc bén từng nghiệp vụ chuyên sâu.",
+      "audio_src": "audio/lesson_10/b7.mp3",
+      "audio_duration": 17.92
+    }
+  ]
+}

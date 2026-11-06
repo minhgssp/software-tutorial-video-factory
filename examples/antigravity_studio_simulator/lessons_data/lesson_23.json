@@ -1,0 +1,176 @@
+{
+  "lesson_slug": "lesson_23",
+  "filename": "lesson_23.html",
+  "legacy_alias": "",
+  "code": "BÀI 23",
+  "chapter_number": 6,
+  "chapter_code": "CHƯƠNG 6",
+  "chapter_title": "4 Tình huống Thực chiến Toàn diện (Case Studies)",
+  "title": "Tình huống 3 — Xây dựng Trợ lý Nghiên cứu Pháp lý, Hợp đồng & Quy chế",
+  "short_title": "Case Study 3: Hợp đồng & Pháp lý",
+  "pill_label": "Bài 23 · Case 3: Hợp đồng & Pháp lý",
+  "description": "Biến Trợ lý AI thành Chuyên viên Rà soát Rủi ro Hợp đồng: Đối chiếu dự thảo hợp đồng đối tác gửi với Danh mục Điều khoản Bảo vệ (Legal Checklist) của công ty, phát hiện các điều khoản bất lợi và đề xuất câu chữ sửa đổi.",
+  "prerequisites": "Bài 6 (Trích dẫn dòng #L), Bài 10 (Thiết lập Rules/Skills kiểm duyệt) & Bài 13 (Bóc tách tài liệu có dẫn nguồn).",
+  "dependents": "Bài 24 (Tình huống 4 — Tổng duyệt Chất lượng Dự án, Bảo mật .gitignore & Lộ trình 30 Ngày).",
+  "placement_risk": "0% Rủi ro — Nhấn mạnh nguyên tắc AI chỉ đối chiếu dựa trên văn bản quy chế chính thức được nạp vào thư mục, tuyệt đối không tự suy diễn luật bên ngoài.",
+  "continuity_bridge": "Hoàn thành Bài 23, học viên đã trang bị kỹ năng biến AI thành trợ lý rà soát rủi ro hợp đồng kinh tế dựa trên quy chế chuẩn nội bộ và xuất bảng đối chiếu điều khoản Đỏ / Xanh.",
+  "slides": {
+    "s1": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 6 · BÀI 23 · TÌNH HUỐNG THỰC CHIẾN 3</span>\n        <span class=\"k-slide-step\">Rà soát Hợp đồng Kinh tế &amp; Quy chế Nội bộ an toàn tuyệt đối</span>\n      </div>\n      <div class=\"k-slide-h1\">Nguyên tắc Số 1 trong Pháp lý AI: Luôn đối chiếu dựa trên Quy chế Chuẩn của công ty</div>\n      <div class=\"k-slide-sub\">Tuyệt đối không để AI phán đoán cảm tính — Hãy nạp Danh mục Chốt chặn Pháp lý làm thước đo 1–1.</div>\n    </div>\n    <div style=\"display:flex; flex-direction:column; gap:10px; margin-top:6px;\">\n      <div class=\"k-visual-hero-box k-step-item k-hl\" id=\"s1_step1\" data-order=\"1\" style=\"padding:12px 16px;\">\n        <div class=\"k-viz-header\" style=\"margin-bottom:6px;\">\n          <span class=\"k-viz-badge\">⚖️ CƠ CHẾ ĐỐI CHIẾU PHÁP LÝ 1–1</span>\n          <span class=\"k-viz-title\">Đặt bản Dự thảo của đối tác lên bàn cân cùng Quy chế Hợp đồng Chuẩn của doanh nghiệp</span>\n        </div>\n        <svg viewBox=\"0 0 840 76\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%; height:auto;\">\n          <rect x=\"8\" y=\"8\" width=\"252\" height=\"60\" rx=\"10\" fill=\"#FEF2F2\" stroke=\"#FCA5A5\" stroke-width=\"1.5\"/>\n          <text x=\"134\" y=\"30\" text-anchor=\"middle\" fill=\"#B91C1C\" font-size=\"11.5\" font-weight=\"800\">📄 @hop_dong_dai_ly_du_thao.md</text>\n          <text x=\"134\" y=\"50\" text-anchor=\"middle\" fill=\"#7F1D1D\" font-size=\"11\">Bản đối tác gửi (Tiềm ẩn rủi ro công nợ &amp; phạt)</text>\n          <text x=\"280\" y=\"42\" text-anchor=\"middle\" fill=\"#EA580C\" font-size=\"18\" font-weight=\"900\">⚡</text>\n          <rect x=\"300\" y=\"8\" width=\"252\" height=\"60\" rx=\"10\" fill=\"#FFF7ED\" stroke=\"#FB923C\" stroke-width=\"2\"/>\n          <text x=\"426\" y=\"30\" text-anchor=\"middle\" fill=\"#9A3412\" font-size=\"11.5\" font-weight=\"800\">🛡️ @quy_che_hop_dong_chuan.md</text>\n          <text x=\"426\" y=\"50\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"11\">Thước đo nội bộ (Công nợ ≤15 ngày, Trần 8%)</text>\n          <text x=\"572\" y=\"42\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"18\" font-weight=\"900\">➔</text>\n          <rect x=\"592\" y=\"8\" width=\"240\" height=\"60\" rx=\"10\" fill=\"#DCFCE7\" stroke=\"#4ADE80\" stroke-width=\"1.5\"/>\n          <text x=\"712\" y=\"30\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"11.5\" font-weight=\"800\">✅ Báo cáo Rà soát Đỏ / Xanh</text>\n          <text x=\"712\" y=\"50\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"11\">Khoanh vùng dòng sai &amp; viết lại câu chữ</text>\n        </svg>\n      </div>\n      <div class=\"k-grid-2\" style=\"display:grid; grid-template-columns:1fr 1fr; gap:10px;\">\n        <div class=\"k-card k-step-item k-unreached\" id=\"s1_step2\" data-order=\"2\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#FEF2F2; color:#B91C1C; border:1px solid #FCA5A5;\">RỦI RO 1 · ĐIỀU KHOẢN BẤT LỢI ẨN</span>\n          </div>\n          <h3>Bẫy lãi phạt vượt trần và kéo dài hạn công nợ</h3>\n          <p>Đối tác thường cài cắm mức phạt chậm thanh toán rất nặng (như 0,5%/ngày không giới hạn trần) hoặc kéo dài công nợ lên tới 45–60 ngày.</p>\n        </div>\n        <div class=\"k-card k-step-item k-unreached\" id=\"s1_step3\" data-order=\"3\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">RỦI RO 2 · ĐIỀU KHOẢN BỊ LƯỢC BỎ</span>\n          </div>\n          <h3>Những mục bảo vệ quan trọng bị đối tác \"quên\" ghi</h3>\n          <p>Nguy hiểm hơn cả điều khoản viết sai là những điều khoản bị lược bỏ hoàn toàn như cam kết Bảo mật Dữ liệu Khách hàng (NDA).</p>\n        </div>\n      </div>\n    </div>\n    ",
+    "s2": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 6 · BÀI 23 · KỸ THUẬT BÁO CÁO ĐỐI CHIẾU</span>\n        <span class=\"k-slide-step\">Phân loại 3 mức rủi ro Đỏ - Vàng - Xanh &amp; Soạn sẵn câu chữ đàm phán</span>\n      </div>\n      <div class=\"k-slide-h1\">Không chỉ cảnh báo rủi ro — Yêu cầu AI viết lại điều khoản thay thế đúng Luật Thương mại</div>\n      <div class=\"k-slide-sub\">Giúp Giám đốc và bộ phận pháp chế tiết kiệm 90% thời gian dò từng dòng văn bản trước khi đặt bút ký.</div>\n    </div>\n    <div style=\"display:flex; flex-direction:column; gap:10px; margin-top:6px;\">\n      <div class=\"k-visual-hero-box k-step-item k-hl\" id=\"s2_step1\" data-order=\"1\" style=\"padding:12px 16px;\">\n        <div class=\"k-viz-header\" style=\"margin-bottom:6px;\">\n          <span class=\"k-viz-badge\">🚦 BẢNG PHÂN LOẠI 3 MỨC RỦI RO HỢP ĐỒNG</span>\n          <span class=\"k-viz-title\">Nhìn vào màu cờ biết ngay điều khoản nào bắt buộc phải sửa trước khi ký</span>\n        </div>\n        <svg viewBox=\"0 0 840 64\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%; height:auto;\">\n          <rect x=\"6\" y=\"6\" width=\"268\" height=\"52\" rx=\"8\" fill=\"#FEF2F2\" stroke=\"#EF4444\" stroke-width=\"1.5\"/>\n          <text x=\"20\" y=\"27\" fill=\"#B91C1C\" font-size=\"11.5\" font-weight=\"800\">🚩 CỜ ĐỎ · BẮT BUỘC SỬA ĐỔI</text>\n          <text x=\"20\" y=\"45\" fill=\"#7F1D1D\" font-size=\"10.5\">Trái Luật Thương mại hoặc vượt trần quy chế</text>\n          <rect x=\"286\" y=\"6\" width=\"268\" height=\"52\" rx=\"8\" fill=\"#FEFCE8\" stroke=\"#EAB308\" stroke-width=\"1.5\"/>\n          <text x=\"300\" y=\"27\" fill=\"#A16207\" font-size=\"11.5\" font-weight=\"800\">⚠️ CỜ VÀNG · CẦN ĐÀM PHÁN THÊM</text>\n          <text x=\"300\" y=\"45\" fill=\"#854D0E\" font-size=\"10.5\">Thời hạn thanh toán hoặc chiết khấu chưa tối ưu</text>\n          <rect x=\"566\" y=\"6\" width=\"268\" height=\"52\" rx=\"8\" fill=\"#F0FDF4\" stroke=\"#22C55E\" stroke-width=\"1.5\"/>\n          <text x=\"580\" y=\"27\" fill=\"#15803D\" font-size=\"11.5\" font-weight=\"800\">✅ CỜ XANH · ĐẠT CHUẨN AN TOÀN</text>\n          <text x=\"580\" y=\"45\" fill=\"#166534\" font-size=\"10.5\">Khớp 100% quy chế công ty, giữ nguyên</text>\n        </svg>\n      </div>\n      <div class=\"k-grid-2\" style=\"display:grid; grid-template-columns:1fr 1fr; gap:10px;\">\n        <div class=\"k-card k-step-item k-unreached\" id=\"s2_step2\" data-order=\"2\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">CHUẨN ĐẦU RA 1 · TRÍCH DẪN SỐ DÒNG</span>\n          </div>\n          <h3>Chỉ rõ điều khoản vi phạm nằm ở dòng nào</h3>\n          <p>Yêu cầu AI trích dẫn nguyên văn câu gốc kèm vị trí dòng (ví dụ Điều 4.2 — Dòng 28) để người duyệt mở văn bản đối chiếu được ngay.</p>\n        </div>\n        <div class=\"k-card k-step-item k-unreached\" id=\"s2_step3\" data-order=\"3\">\n          <div class=\"k-card-top-row\">\n            <span class=\"k-card-tag\" style=\"background:#DCFCE7; color:#15803D; border:1px solid #86EFAC;\">CHUẨN ĐẦU RA 2 · VĂN BẢN THAY THẾ</span>\n          </div>\n          <h3>Soạn sẵn câu chữ chặt chẽ để gửi lại đối tác</h3>\n          <p>AI viết sẵn câu đề xuất sửa mức phạt về 0,05%/ngày (tối đa không quá 8% giá trị vi phạm) và bổ sung nguyên vẹn Điều 7 về bảo mật NDA.</p>\n        </div>\n      </div>\n    </div>\n    "
+  },
+  "beats": [
+    {
+      "id": "b1",
+      "label": "1. Lý thuyết (Phần 1): Nguyên tắc đối chiếu Dự thảo hợp đồng với Quy chế chuẩn nội bộ",
+      "duration": 24.36,
+      "pose": 1,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s1",
+      "hl": [
+        "s1_step1",
+        "s1_step2",
+        "s1_step3"
+      ],
+      "caption": "Khi đối tác gửi sang một bản dự thảo hợp đồng kinh tế dày hàng chục trang, những rủi ro lớn nhất thường ẩn nằm ở hai chỗ: Một là các điều khoản phạt chậm thanh toán hoặc hạn công nợ bất lợi cho ta, và hai là những điều khoản bảo vệ quan trọng đã bị đối tác khéo léo lược bỏ. Để rà soát an toàn tuyệt đối mà không để AI suy diễn cảm tính, nguyên tắc cốt lõi là luôn đính kèm tệp <code>@quy_che_hop_dong_chuan.md</code> của công ty làm thước đo đối chiếu một-một.",
+      "audio_src": "audio/lesson_23/b1.mp3",
+      "audio_duration": 23.71,
+      "slide_id": "s1"
+    },
+    {
+      "id": "b2",
+      "label": "2. Lý thuyết (Phần 2): Phân loại rủi ro Đỏ - Vàng - Xanh & Soạn sẵn câu chữ sửa đổi",
+      "duration": 22.12,
+      "pose": 2,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s2",
+      "hl": [
+        "s2_step1",
+        "s2_step2",
+        "s2_step3"
+      ],
+      "caption": "Dựa trên quy chế chuẩn đã nạp, chúng ta yêu cầu trợ lý AI xuất bản báo cáo phân loại theo ba mức cờ Đỏ, Vàng và Xanh. Với những điều khoản cờ Đỏ vi phạm chốt chặn công ty hoặc vượt trần Luật Thương mại, trợ lý sẽ trích dẫn chính xác số dòng trong bản dự thảo, giải thích rõ mức độ rủi ro và đặc biệt là viết sẵn luôn đoạn văn bản đề xuất sửa đổi chặt chẽ để Ban Giám đốc và bộ phận pháp chế dùng đàm phán ngay với đối tác.",
+      "audio_src": "audio/lesson_23/b2.mp3",
+      "audio_duration": 21.47,
+      "slide_id": "s2"
+    },
+    {
+      "id": "b3",
+      "label": "3. Minh họa: Quan sát tệp Quy chế Hợp đồng Chuẩn của công ty",
+      "duration": 14.33,
+      "pose": 3,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Danh mục Bảo vệ Pháp lý (Checklist)",
+      "pedagogy_title": "Chốt chặn bắt buộc trong tệp quy_che_hop_dong_chuan.md",
+      "pedagogy_note": "Mọi hợp đồng đại lý của TaskFlow phải đảm bảo: Hạn thanh toán tối đa 15 ngày, Phạt chậm thanh toán tối đa 8% theo Luật Thương mại và bắt buộc có điều khoản Bảo mật NDA.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'quy_che_hop_dong_chuan.md', breadcrumb:'antigravity_course_vn › quy_che_hop_dong_chuan.md', editorTitle:'⚖️ quy_che_hop_dong_chuan.md — Chốt Chặn Pháp Lý TaskFlow', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">CHỐT CHẶN BẮT BUỘC KHI KÝ HỢP ĐỒNG ĐẠI LÝ B2B</h3><ol><li><strong>Thời hạn thanh toán &amp; Mức phạt:</strong> Tối đa <strong>15 ngày làm việc</strong>; phạt chậm thanh toán 0,05%/ngày và tổng mức phạt <strong>không vượt quá 8%</strong> giá trị phần nghĩa vụ vi phạm theo Luật Thương mại.</li><li><strong>Mức chiết khấu đại lý:</strong> Tối đa <strong>25%</strong> doanh thu năm đầu tiên.</li><li><strong>Bảo mật dữ liệu (NDA):</strong> Bắt buộc có điều khoản phạt vi phạm nếu làm lộ danh sách khách hàng.</li></ol></div>'});",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas"
+      ],
+      "pre_click_selector": "[data-file='quy_che_hop_dong_chuan.md']",
+      "pre_click_label": "Nhấp chọn tệp quy_che_hop_dong_chuan.md ở cây thư mục trái",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "3 chốt chặn pháp lý chuẩn của doanh nghiệp",
+      "caption": "Nhìn vào tệp <code>quy_che_hop_dong_chuan.md</code> ở cột giữa: Đây chính là cây thước đo pháp lý của công ty chúng ta, quy định rõ thời hạn công nợ tối đa chỉ là 15 ngày, mức trần phạt vi phạm không quá 8% và bắt buộc phải có điều khoản bảo mật dữ liệu khách hàng.",
+      "audio_src": "audio/lesson_23/b3.mp3",
+      "audio_duration": 13.68
+    },
+    {
+      "id": "b4",
+      "label": "4. Kỹ thuật: Giao diện đối chiếu điều khoản Đỏ / Xanh kèm câu chữ sửa đổi",
+      "duration": 16.97,
+      "pose": 4,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Đối chiếu Đỏ / Xanh (Legal Redline Diff View)",
+      "pedagogy_title": "Cột trái gạch ngang điều khoản bất lợi (#FEF2F2) — Cột phải đề xuất câu chữ an toàn (#F0FDF4)",
+      "pedagogy_note": "Khoanh vùng Điều 4.2 phạt 0,5%/ngày không giới hạn mức trần và sửa lại thành 0,05%/ngày, tối đa không vượt quá 8% theo Luật Thương mại.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'bao_cao_ra_soat_hop_dong.md', breadcrumb:'antigravity_course_vn › bao_cao_ra_soat_hop_dong.md', editorTitle:'🚩 bao_cao_ra_soat_hop_dong.md — Đối Chiếu Điều Khoản Đỏ / Xanh', editorHtml:\"<div style=\\\"padding:14px 16px;font-family:system-ui,-apple-system,sans-serif;\\\"><div style=\\\"display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;\\\"><strong style=\\\"color:#991b1b;font-size:13.5px;\\\">⚖️ ĐỐI CHIẾU ĐIỀU KHOẢN HỢP ĐỒNG (LEGAL REDLINE DIFF VIEW)</strong><span style=\\\"background:#fef2f2;color:#dc2626;border:1px solid #ef4444;font-size:11px;font-weight:800;padding:3px 9px;border-radius:99px;\\\">[⚠️ RỦI RO CAO - ĐÃ KHOANH VÙNG]</span></div><div style=\\\"display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;\\\"><div style=\\\"background:#FEF2F2;border:2px solid #EF4444;border-radius:10px;padding:10px 12px;\\\"><div style=\\\"font-size:11px;font-weight:800;color:#b91c1c;margin-bottom:6px;\\\">❌ BẢN GỐC ĐỐI TÁC SOẠN (BẤT LỢI - DÒNG 28)</div><p style=\\\"margin:0 0 8px 0;font-size:12.5px;color:#7f1d1d;text-decoration:line-through;line-height:1.5;\\\">Điều 4.2: Phạt chậm thanh toán 0,5%/ngày không giới hạn mức trần; hạn thanh toán công nợ 45 ngày kể từ cuối quý.</p><div style=\\\"font-size:11.5px;color:#991b1b;background:#fee2e2;padding:5px 8px;border-radius:6px;\\\">🚩 <strong>Thiếu sót nghiêm trọng:</strong> Đối tác lược bỏ hoàn toàn Điều khoản Bảo mật Dữ liệu Khách hàng (NDA).</div></div><div style=\\\"background:#F0FDF4;border:2px solid #22C55E;border-radius:10px;padding:10px 12px;\\\"><div style=\\\"font-size:11px;font-weight:800;color:#15803d;margin-bottom:6px;\\\">✅ VĂN BẢN ĐỀ XUẤT SỬA ĐỔI AN TOÀN</div><p style=\\\"margin:0 0 8px 0;font-size:12.5px;color:#14532d;font-weight:600;line-height:1.5;\\\">Điều 4.2 (Đề xuất sửa): Phạt chậm thanh toán 0,05%/ngày, tổng mức phạt tối đa không vượt quá 8% giá trị phần nghĩa vụ vi phạm theo Luật Thương mại; thanh toán trong 15 ngày làm việc.</p><div style=\\\"font-size:11.5px;color:#166534;background:#dcfce7;padding:5px 8px;border-radius:6px;\\\">🛡️ <strong>Bổ sung Điều 7 (NDA):</strong> Cam kết bảo mật tuyệt đối danh sách khách hàng trên hệ thống TaskFlow.</div></div></div><div style=\\\"background:#f8fafc;border:1px solid #cbd5e1;border-radius:8px;padding:7px 10px;font-size:12px;color:#334155;\\\">✔️ <strong>Điều 3.1 (Chiết khấu 25%):</strong> Khớp 100% với <code>@quy_che_hop_dong_chuan.md</code> — Giữ nguyên không cần sửa.</div></div>\"});",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas"
+      ],
+      "pre_click_selector": "[data-file='bao_cao_ra_soat_hop_dong.md']",
+      "pre_click_label": "Nhấp chọn tệp bao_cao_ra_soat_hop_dong.md ở cây thư mục trái",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Giao diện đối chiếu điều khoản Đỏ / Xanh (Legal Redline Diff View)",
+      "caption": "Khi đối chiếu với bản hợp đồng do đối tác gửi sang, giao diện hai cột Đỏ và Xanh ở cột giữa lập tức khoanh vùng rủi ro cao tại <strong>Điều 4.2</strong>: Cột đỏ bên trái gạch ngang mức phạt 0,5%/ngày không giới hạn mức trần, còn cột xanh bên phải viết sẵn câu chữ sửa lại đúng mức trần 8% theo Luật Thương mại!",
+      "audio_src": "audio/lesson_23/b4.mp3",
+      "audio_duration": 16.32
+    },
+    {
+      "id": "b5",
+      "label": "5. Bước 1: Mở bản dự thảo hợp đồng đối tác gửi",
+      "duration": 10.25,
+      "pose": 5,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 1/3 · Kiểm tra Dự thảo Hợp đồng",
+      "pedagogy_title": "Đại lý Sao Việt gửi bản dự thảo hợp đồng cần ký gấp chiều nay",
+      "pedagogy_note": "Bước 1: Nhấp chọn tệp hop_dong_dai_ly_du_thao.md ở cây thư mục trái để mở kiểm tra nội dung.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'hop_dong_dai_ly_du_thao.md', breadcrumb:'antigravity_course_vn › hop_dong_dai_ly_du_thao.md', editorTitle:'📄 hop_dong_dai_ly_du_thao.md — Dự Thảo Do Đối Tác Gửi', editorHtml:\"<div style=\\\"padding:16px;font-family:system-ui,-apple-system,sans-serif;\\\"><div style=\\\"display:flex;align-items:center;justify-content:space-between;background:#fff7ed;border:1px solid #fdba74;border-radius:10px;padding:10px 14px;margin-bottom:12px;\\\"><strong style=\\\"color:#9a3412;font-size:14px;\\\">📄 DỰ THẢO HỢP ĐỒNG ĐẠI LÝ PHÂN PHỐI (BẢN ĐỐI TÁC GỬI)</strong><span style=\\\"background:#dc2626;color:#fff;font-size:11px;font-weight:800;padding:3px 8px;border-radius:99px;\\\">Chưa rà soát pháp lý</span></div><div style=\\\"font-size:13px;line-height:1.6;color:#1e293b;background:#ffffff;border:1px solid #e2e8f0;border-radius:8px;padding:12px;\\\"><p style=\\\"margin:0 0 8px 0;\\\"><strong>Điều 3.1 (Chiết khấu đại lý):</strong> Mức chiết khấu năm đầu tiên dành cho Bên B là 25% trên doanh thu gói phần mềm.</p><p style=\\\"margin:0 0 8px 0;background:#fef2f2;border-left:3px solid #ef4444;padding:6px 8px;\\\"><strong>Điều 4.2 (Dòng 28 — Thanh toán &amp; Phạt vi phạm):</strong> Phạt chậm thanh toán 0,5%/ngày không giới hạn mức trần; thời hạn thanh toán công nợ của Bên B là 45 ngày kể từ ngày kết thúc quý.</p><p style=\\\"margin:0;color:#64748b;\\\"><em>(Lưu ý: Chưa thấy điều khoản quy định về Bảo mật dữ liệu khách hàng NDA trong dự thảo này)</em></p></div></div>\"});",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas"
+      ],
+      "pre_click_selector": "[data-file='hop_dong_dai_ly_du_thao.md']",
+      "pre_click_label": "Nhấp chọn tệp hop_dong_dai_ly_du_thao.md ở cây thư mục trái",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Bước 1: Mở bản dự thảo hop_dong_dai_ly_du_thao.md",
+      "caption": "Chúng ta vào thực hành 3 bước rà soát hợp đồng. Ở <strong>Bước 1</strong>, anh chị nhấp chọn tệp dự thảo <code>hop_dong_dai_ly_du_thao.md</code> ở cây thư mục trái để mở xem nội dung đối tác gửi sang.",
+      "audio_src": "audio/lesson_23/b5.mp3",
+      "audio_duration": 9.6
+    },
+    {
+      "id": "b6",
+      "label": "6. Bước 2: Gửi lệnh đối chiếu 1-1 giữa Dự thảo và Quy chế chuẩn",
+      "duration": 10.81,
+      "pose": 6,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 2/3 · Ra lệnh Đối chiếu Pháp lý",
+      "pedagogy_title": "Bước 2: Chọn đính kèm @hop_dong_dai_ly_du_thao.md và @quy_che_hop_dong_chuan.md từ bảng gợi ý @",
+      "pedagogy_note": "Yêu cầu AI tìm các điều khoản trái quy chế, các điều khoản bị thiếu và xuất bảng đối chiếu Đỏ/Xanh ra bao_cao_ra_soat_hop_dong.md.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'hop_dong_dai_ly_du_thao.md', editorTitle:'📄 hop_dong_dai_ly_du_thao.md — Dự Thảo Do Đối Tác Gửi', editorHtml:\"<div style=\\\"padding:16px;font-family:system-ui,-apple-system,sans-serif;\\\"><div style=\\\"display:flex;align-items:center;justify-content:space-between;background:#fff7ed;border:1px solid #fdba74;border-radius:10px;padding:10px 14px;margin-bottom:12px;\\\"><strong style=\\\"color:#9a3412;font-size:14px;\\\">📄 DỰ THẢO HỢP ĐỒNG ĐẠI LÝ PHÂN PHỐI (BẢN ĐỐI TÁC GỬI)</strong><span style=\\\"background:#dc2626;color:#fff;font-size:11px;font-weight:800;padding:3px 8px;border-radius:99px;\\\">Chưa rà soát pháp lý</span></div><div style=\\\"font-size:13px;line-height:1.6;color:#1e293b;background:#ffffff;border:1px solid #e2e8f0;border-radius:8px;padding:12px;\\\"><p style=\\\"margin:0 0 8px 0;\\\"><strong>Điều 3.1 (Chiết khấu đại lý):</strong> Mức chiết khấu năm đầu tiên dành cho Bên B là 25% trên doanh thu gói phần mềm.</p><p style=\\\"margin:0 0 8px 0;background:#fef2f2;border-left:3px solid #ef4444;padding:6px 8px;\\\"><strong>Điều 4.2 (Dòng 28 — Thanh toán &amp; Phạt vi phạm):</strong> Phạt chậm thanh toán 0,5%/ngày không giới hạn mức trần; thời hạn thanh toán công nợ của Bên B là 45 ngày kể từ ngày kết thúc quý.</p><p style=\\\"margin:0;color:#64748b;\\\"><em>(Lưu ý: Chưa thấy điều khoản quy định về Bảo mật dữ liệu khách hàng NDA trong dự thảo này)</em></p></div></div>\", popupMode:'mention', clearChat:true, chatInput:'@hop_dong_dai_ly_du_thao.md @quy_che_hop_dong_chuan.md Hãy đối chiếu 1-1 bản dự thảo với quy chế chuẩn, khoanh vùng điều khoản rủi ro cao và viết câu chữ đề xuất sửa đổi vào tệp bao_cao_ra_soat_hop_dong.md'});",
+      "focus_selectors": [
+        "#ide-popup-menu",
+        "#ide-chat-input",
+        "#ide-send-btn"
+      ],
+      "pre_click_selector": "#ide-popup-menu .popup-item",
+      "pre_click_label": "Chọn tệp đính kèm từ bảng gợi ý @",
+      "cursor_selector": "#ide-send-btn",
+      "cursor_label": "Bước 2: Nhấn Gửi để AI kiểm toán hợp đồng",
+      "caption": "Sang <strong>Bước 2</strong>, anh chị chọn đính kèm cả tệp dự thảo của đối tác lẫn tệp quy chế chuẩn từ bảng gợi ý <code>@</code> vào ô chat, yêu cầu khoanh vùng rủi ro kèm câu chữ sửa đổi rồi nhấn nút Gửi.",
+      "audio_src": "audio/lesson_23/b6.mp3",
+      "audio_duration": 10.16
+    },
+    {
+      "id": "b7",
+      "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+      "duration": 21.77,
+      "pose": 7,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "✅ Thực hành Bước 3/3 · Hoàn thành Case Study 3",
+      "pedagogy_title": "Bước 3: Nghiệm thu Bảng đối chiếu điều khoản Đỏ / Xanh tại bao_cao_ra_soat_hop_dong.md",
+      "pedagogy_note": "Đã khoanh vùng Điều 4.2 (sửa mức phạt về 0,05%/ngày, trần 8% theo Luật Thương mại, công nợ 15 ngày) và bổ sung Điều 7 NDA.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'bao_cao_ra_soat_hop_dong.md', breadcrumb:'antigravity_course_vn › bao_cao_ra_soat_hop_dong.md (Hoàn tất)', editorTitle:'🛡️ bao_cao_ra_soat_hop_dong.md — Đối Chiếu Điều Khoản Đỏ / Xanh Hoàn Tất', editorHtml:\"<div style=\\\"padding:14px 16px;font-family:system-ui,-apple-system,sans-serif;\\\"><div style=\\\"display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;\\\"><strong style=\\\"color:#991b1b;font-size:13.5px;\\\">⚖️ ĐỐI CHIẾU ĐIỀU KHOẢN HỢP ĐỒNG (LEGAL REDLINE DIFF VIEW)</strong><span style=\\\"background:#fef2f2;color:#dc2626;border:1px solid #ef4444;font-size:11px;font-weight:800;padding:3px 9px;border-radius:99px;\\\">[⚠️ RỦI RO CAO - ĐÃ KHOANH VÙNG]</span></div><div style=\\\"display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;\\\"><div style=\\\"background:#FEF2F2;border:2px solid #EF4444;border-radius:10px;padding:10px 12px;\\\"><div style=\\\"font-size:11px;font-weight:800;color:#b91c1c;margin-bottom:6px;\\\">❌ BẢN GỐC ĐỐI TÁC SOẠN (BẤT LỢI - DÒNG 28)</div><p style=\\\"margin:0 0 8px 0;font-size:12.5px;color:#7f1d1d;text-decoration:line-through;line-height:1.5;\\\">Điều 4.2: Phạt chậm thanh toán 0,5%/ngày không giới hạn mức trần; hạn thanh toán công nợ 45 ngày kể từ cuối quý.</p><div style=\\\"font-size:11.5px;color:#991b1b;background:#fee2e2;padding:5px 8px;border-radius:6px;\\\">🚩 <strong>Thiếu sót nghiêm trọng:</strong> Đối tác lược bỏ hoàn toàn Điều khoản Bảo mật Dữ liệu Khách hàng (NDA).</div></div><div style=\\\"background:#F0FDF4;border:2px solid #22C55E;border-radius:10px;padding:10px 12px;\\\"><div style=\\\"font-size:11px;font-weight:800;color:#15803d;margin-bottom:6px;\\\">✅ VĂN BẢN ĐỀ XUẤT SỬA ĐỔI AN TOÀN</div><p style=\\\"margin:0 0 8px 0;font-size:12.5px;color:#14532d;font-weight:600;line-height:1.5;\\\">Điều 4.2 (Đề xuất sửa): Phạt chậm thanh toán 0,05%/ngày, tổng mức phạt tối đa không vượt quá 8% giá trị phần nghĩa vụ vi phạm theo Luật Thương mại; thanh toán trong 15 ngày làm việc.</p><div style=\\\"font-size:11.5px;color:#166534;background:#dcfce7;padding:5px 8px;border-radius:6px;\\\">🛡️ <strong>Bổ sung Điều 7 (NDA):</strong> Cam kết bảo mật tuyệt đối danh sách khách hàng trên hệ thống TaskFlow.</div></div></div><div style=\\\"background:#f8fafc;border:1px solid #cbd5e1;border-radius:8px;padding:7px 10px;font-size:12px;color:#334155;\\\">✔️ <strong>Điều 3.1 (Chiết khấu 25%):</strong> Khớp 100% với <code>@quy_che_hop_dong_chuan.md</code> — Giữ nguyên không cần sửa.</div></div>\", userMsg:'@hop_dong_dai_ly_du_thao.md @quy_che_hop_dong_chuan.md Hãy xuất báo cáo rà soát vào bao_cao_ra_soat_hop_dong.md', aiMsg:'Đã hoàn tất kiểm toán hợp đồng tại <code>bao_cao_ra_soat_hop_dong.md</code>! Đã khoanh vùng rủi ro cao tại Điều 4.2 và soạn sẵn văn bản sửa đổi an toàn theo Luật Thương mại.'});",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas",
+        "#ide-chat-messages"
+      ],
+      "pre_click_selector": "#ide-send-btn",
+      "pre_click_label": "Bước 3: Nhấp nút Gửi để xuất bao_cao_ra_soat_hop_dong.md",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Bước 3: Hoàn tất bảng đối chiếu Đỏ / Xanh bảo vệ doanh nghiệp!",
+      "caption": "Ở <strong>Bước 3</strong>, bảng đối chiếu điều khoản Đỏ và Xanh trong tệp <code>bao_cao_ra_soat_hop_dong.md</code> đã khoanh vùng chính xác rủi ro tại <strong>Điều 4.2</strong>, đưa mức phạt về trần 8% theo Luật Thương mại, rút hạn công nợ về 15 ngày và bổ sung điều khoản bảo mật dữ liệu khách hàng. Từ nay, trước khi trình ký bất kỳ hợp đồng nào, anh chị luôn có một trợ lý rà soát sơ bộ sắc bén và đáng tin cậy!",
+      "audio_src": "audio/lesson_23/b7.mp3",
+      "audio_duration": 21.12
+    }
+  ]
+}

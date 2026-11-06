@@ -1,0 +1,178 @@
+{
+  "lesson_slug": "lesson_05",
+  "filename": "lesson_05.html",
+  "legacy_alias": "lesson_02_turbo_mode_and_workspace.html",
+  "code": "BÀI 5",
+  "chapter_number": 2,
+  "chapter_code": "CHƯƠNG 2",
+  "chapter_title": "Định dạng Dữ liệu, Ký hiệu @ & Hồ sơ Cá nhân hóa",
+  "title": "Kỹ thuật Soạn thảo Đa Tệp: Chế độ Preview Chuột phải, Chỉnh sửa Bảng .csv & Đọc lướt Hồ sơ Dự án",
+  "short_title": "Kỹ thuật Đa Tệp: Preview, .csv & Office Viewer",
+  "pill_label": "Bài 5 · Đa Tệp .md, .csv & Office Viewer",
+  "description": "Nâng cấp kỹ năng làm việc đa tệp với văn bản .md và bảng dữ liệu .csv: Mở nhanh chế độ Preview bằng menu chuột phải trên thanh Tab, kiểm tra tiện ích Office Viewer và thực hành 3 bước đọc lướt, kiểm tra 400 dòng dữ liệu gốc trên bảng sales_data.csv.",
+  "prerequisites": "Chương 1 (Đã biết mở thư mục dự án và chuyển đổi chế độ xem trong Antigravity IDE).",
+  "dependents": "Bài 6 (Đính kèm tệp @COMPANY.md và @sales_data.csv), Bài 7 (Viết hồ sơ @troly.md), Bài 14 (Phân tích bảng tính CSV).",
+  "placement_risk": "0% Rủi ro — Giải thích bản chất tệp .md và .csv trước khi thực hành đính kèm hoặc chỉnh sửa các tệp này.",
+  "continuity_bridge": "Hoàn tất làm chủ định dạng văn bản .md, bảng dữ liệu .csv, tiện ích Office Viewer và thao tác kiểm tra 400 dòng dữ liệu gốc của sales_data.csv.",
+  "slides": {
+    "s1": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 2 · BÀI 5 · LÝ THUYẾT PHẦN 1</span>\n        <span class=\"k-slide-step\">Bản chất Nguyên liệu Tinh khiết (.md vs Word)</span>\n      </div>\n      <div class=\"k-slide-h1\">Vì sao văn bản .md (Markdown) giúp Trợ lý AI đọc hiểu nhanh và chính xác gấp nhiều lần tệp Word?</div>\n      <div class=\"k-slide-sub\">Loại bỏ hàng ngàn thẻ định dạng ẩn nặng nề để giữ lại 100% cấu trúc tiêu đề và nội dung cốt lõi.</div>\n    </div>\n    <div class=\"k-visual-hero-box k-layout-comparison k-step-item k-hl\" id=\"s1_step1\" data-order=\"1\">\n      <div class=\"k-cmp-col k-cmp-before\">\n        <div class=\"k-cmp-badge-old\">❌ TỆP WORD / EXCEL NẶNG NỀ (.DOCX / .XLSX)</div>\n        <div class=\"k-cmp-main\">Bọc trong hàng ngàn thẻ mã định dạng ẩn</div>\n        <div class=\"k-cmp-sub\">Ô gộp (Merge Cells), màu nền, phông chữ làm nhiễu AI</div>\n        <svg class=\"k-cmp-illus-svg\" viewBox=\"0 0 380 74\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <rect x=\"6\" y=\"6\" width=\"368\" height=\"62\" rx=\"8\" fill=\"#FFF7ED\" stroke=\"#F97316\" stroke-width=\"1.5\"/>\n          <text x=\"190\" y=\"24\" text-anchor=\"middle\" fill=\"#9A3412\" font-size=\"11\" font-weight=\"800\">📦 Tệp .docx / .xlsx (Nhiều lớp vỏ phức tạp)</text>\n          <text x=\"190\" y=\"42\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"9.8\">&lt;w:rPr&gt;&lt;w:b/&gt;&lt;w:color w:val=\"FF0000\"/&gt;... + Ô gộp chéo</text>\n          <text x=\"190\" y=\"58\" text-anchor=\"middle\" fill=\"#DC2626\" font-size=\"9.5\" font-weight=\"700\">⚠️ AI tốn thời gian bóc vỏ &amp; dễ đọc sót dữ liệu</text>\n        </svg>\n      </div>\n      <div class=\"k-cmp-arrow\">➔</div>\n      <div class=\"k-cmp-col k-cmp-after\">\n        <div class=\"k-cmp-badge-new\">✅ TỆP MARKDOWN TINH KHIẾT (.MD)</div>\n        <div class=\"k-cmp-main\">Nguyên liệu đã sơ chế sạch sẽ 100%</div>\n        <div class=\"k-cmp-sub\">Dấu # cho tiêu đề lớn · Dấu * cho danh sách ý chính</div>\n        <svg class=\"k-cmp-illus-svg\" viewBox=\"0 0 380 74\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <rect x=\"6\" y=\"6\" width=\"368\" height=\"62\" rx=\"8\" fill=\"#DCFCE7\" stroke=\"#22C55E\" stroke-width=\"1.6\"/>\n          <text x=\"190\" y=\"24\" text-anchor=\"middle\" fill=\"#14532D\" font-size=\"11\" font-weight=\"800\">📄 Tệp .md (100% Văn bản có cấu trúc mạch lạc)</text>\n          <text x=\"190\" y=\"42\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"10\" font-weight=\"700\"># Mục tiêu Quý 2   |   * Giảm 30% tỷ lệ rời bỏ</text>\n          <text x=\"190\" y=\"58\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"9.5\" font-weight=\"700\">⚡ AI hấp thụ tức thì trong 1 giây · 0% sai lệch</text>\n        </svg>\n      </div>\n    </div>\n    <div class=\"k-grid-3\" style=\"grid-template-columns: 1fr 1fr;\">\n      <div class=\"k-card k-step-item k-unreached\" id=\"s1_step2\" data-order=\"2\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">HẠN CHẾ CỦA FILE NẶNG · VƯỚNG LỚP VỎ ĐỊNH DẠNG</span>\n        </div>\n        <h3>Tệp Word và Excel truyền thống ưu tiên mắt người hơn mắt AI</h3>\n        <p>Một tệp Word hay Excel thông thường giống như thực phẩm còn nguyên vỏ cứng: Bên dưới mặt chữ là hàng ngàn thẻ quy định phông chữ, căn lề và ô gộp phức tạp khiến AI dễ bị phân tán hoặc đọc trượt dòng.</p>\n        <div class=\"k-card-mini-note\">❌ Nặng nề khi xử lý hàng loạt hồ sơ dự án</div>\n      </div>\n      <div class=\"k-card k-step-item k-unreached\" id=\"s1_step3\" data-order=\"3\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#DCFCE7; color:#15803D; border:1px solid #86EFAC;\">SỨC MẠNH CỦA .MD · RÕ RÀNG TỪNG CẤP ĐỘ Ý</span>\n        </div>\n        <h3>Dấu thăng (#) phân tầng tiêu đề, dấu sao (*) liệt kê đầu việc</h3>\n        <p>Định dạng <code>.md</code> giống như nguyên liệu đã sơ chế sạch sẽ: Chỉ dùng ký hiệu dấu thăng để đánh dấu chương mục và dấu sao cho các gạch đầu dòng, giúp Trợ lý AI hiểu chính xác đâu là mục lớn, đâu là chi tiết.</p>\n        <div class=\"k-card-mini-note\">📄 Chuẩn mực lưu trữ nội quy, kế hoạch, báo cáo nội bộ</div>\n      </div>\n    </div>\n    ",
+    "s2": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 2 · BÀI 5 · LÝ THUYẾT PHẦN 2</span>\n        <span class=\"k-slide-step\">Bảng Số liệu .csv &amp; Tiện ích Office Viewer</span>\n      </div>\n      <div class=\"k-slide-h1\">Xử lý hàng vạn dòng số liệu bằng tệp .csv và xem bảng kẻ ô sắc nét với Office Viewer</div>\n      <div class=\"k-slide-sub\">Kết hợp tốc độ tính toán siêu tốc của dữ liệu phân tách bằng dấu phẩy với giao diện bảng biểu quen thuộc.</div>\n    </div>\n    <div class=\"k-visual-hero-box k-layout-flowchart k-step-item k-hl\" id=\"s2_step1\" data-order=\"1\">\n      <div class=\"k-viz-header\">\n        <span class=\"k-viz-badge\">📊 QUY TRÌNH LÀM VIỆC ĐA ĐỊNH DẠNG</span>\n        <span class=\"k-viz-title\">Lưu trữ và phân tích nội bộ bằng .md / .csv ➔ Xuất bản gửi đối tác bằng Word / Excel</span>\n      </div>\n      <svg class=\"k-flow-svg\" viewBox=\"0 0 860 96\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect x=\"10\" y=\"8\" width=\"256\" height=\"80\" rx=\"12\" fill=\"#EFF6FF\" stroke=\"#60A5FA\" stroke-width=\"2\"/>\n        <text x=\"138\" y=\"32\" text-anchor=\"middle\" fill=\"#1D4ED8\" font-size=\"12.5\" font-weight=\"800\">1. BẢNG SỐ LIỆU .CSV</text>\n        <text x=\"138\" y=\"54\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"13.5\" font-weight=\"700\">Ngăn cách cột bằng dấu phẩy</text>\n        <text x=\"138\" y=\"74\" text-anchor=\"middle\" fill=\"#0369A1\" font-size=\"11.5\">400+ dòng doanh thu · 0% lỗi công thức</text>\n        <path d=\"M272 48 H302\" stroke=\"#0284C7\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n        <polygon points=\"299,42 311,48 299,54\" fill=\"#0284C7\"/>\n        <rect x=\"316\" y=\"8\" width=\"252\" height=\"80\" rx=\"12\" fill=\"#FEF3C7\" stroke=\"#F59E0B\" stroke-width=\"2\"/>\n        <text x=\"442\" y=\"32\" text-anchor=\"middle\" fill=\"#B45309\" font-size=\"12.5\" font-weight=\"800\">2. TIỆN ÍCH OFFICE VIEWER</text>\n        <text x=\"442\" y=\"54\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"13.5\" font-weight=\"700\">Hiển thị bảng kẻ ô trực quan</text>\n        <text x=\"442\" y=\"74\" text-anchor=\"middle\" fill=\"#92400E\" font-size=\"11.5\">Chuyển đổi linh hoạt Bảng ⇄ Raw</text>\n        <path d=\"M574 48 H604\" stroke=\"#16A34A\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n        <polygon points=\"601,42 613,48 601,54\" fill=\"#16A34A\"/>\n        <rect x=\"618\" y=\"8\" width=\"232\" height=\"80\" rx=\"12\" fill=\"#DCFCE7\" stroke=\"#22C55E\" stroke-width=\"2\"/>\n        <text x=\"734\" y=\"32\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"12.5\" font-weight=\"800\">3. QUY TẮC VÀNG VĂN PHÒNG</text>\n        <text x=\"734\" y=\"54\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"13.5\" font-weight=\"700\">Nội bộ .md/.csv ➔ Xuất .docx/.xlsx</text>\n        <text x=\"734\" y=\"74\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"11.5\">Tối ưu cho cả AI lẫn đối tác</text>\n      </svg>\n    </div>\n    <div class=\"k-grid-3\" style=\"grid-template-columns: 1fr 1fr;\">\n      <div class=\"k-card k-step-item k-unreached\" id=\"s2_step2\" data-order=\"2\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#E0F2FE; color:#0369A1; border:1px solid #7DD3FC;\">BẢNG TÍNH .CSV &amp; CHẾ ĐỘ RAW</span>\n        </div>\n        <h3>Mỗi dòng là một bản ghi chuẩn, không sợ ẩn dòng</h3>\n        <p>Định dạng <code>.csv</code> lưu từng dòng số liệu ngăn cách bằng dấu phẩy, giúp Trợ lý AI cộng tổng và lọc trùng hàng vạn dòng doanh thu trong chớp mắt. Khi cần kiểm tra tổng số dòng thực tế, bạn chỉ cần bật chế độ <strong>Raw</strong>.</p>\n        <div class=\"k-card-mini-note\">📊 Phù hợp cho bảng doanh thu, danh sách nhân sự, tồn kho</div>\n      </div>\n      <div class=\"k-card k-step-item k-unreached\" id=\"s2_step3\" data-order=\"3\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#DCFCE7; color:#15803D; border:1px solid #86EFAC;\">OFFICE VIEWER &amp; QUY TẮC PHỐI HỢP</span>\n        </div>\n        <h3>Đọc bảng kẻ ô ngay trong phần mềm mà không cần mở Excel</h3>\n        <p>Nhờ tiện ích <strong>Office Viewer</strong> được cài sẵn trong mục <strong>Extensions</strong>, mọi tệp <code>.csv</code> đều hiển thị dạng bảng kẻ ô sắc nét. Quy tắc thông minh nhất là lưu trữ tri thức nội bộ bằng <code>.md</code>, <code>.csv</code> và chỉ xuất ra Word, Excel ở bước cuối cùng.</p>\n        <div class=\"k-card-mini-note\">🧩 Xem đẹp bằng Office Viewer · Kiểm tra gốc bằng nút Raw</div>\n      </div>\n    </div>\n    ",
+    "s_outro": "\n    <div class=\"k-Visual-Outro\">\n      <h3>Tổng kết &amp; Ghi nhớ cốt lõi Bài 5</h3>\n      <ul>\n        <li><strong>Ưu thế của .md và .csv:</strong> Văn bản và số liệu tinh khiết 100%, giúp AI đọc nhanh, không bị nhiễu bởi thẻ định dạng ẩn hay ô gộp phức tạp.</li>\n        <li><strong>Tiện ích Office Viewer:</strong> Giúp xem bảng <code>.csv</code> kẻ ô rõ nét như Excel và chuyển đổi linh hoạt sang chế độ <strong>Raw</strong> để đếm chính xác tổng số dòng.</li>\n        <li><strong>Quy tắc vàng:</strong> Lưu trữ và phân tích dữ liệu nội bộ bằng <code>.md</code> / <code>.csv</code>; xuất thành phẩm cuối cùng ra <code>.docx</code> / <code>.xlsx</code> khi gửi đối tác.</li>\n      </ul>\n    </div>\n    "
+  },
+  "beats": [
+    {
+      "id": "b1",
+      "label": "1. Lý thuyết (Phần 1): Vì sao ưu tiên định dạng .md và .csv tinh khiết?",
+      "duration": 27.4,
+      "pose": 1,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s1",
+      "slide_id": "s1",
+      "hl": [
+        "s1_step1",
+        "s1_step2",
+        "s1_step3"
+      ],
+      "caption": "Chào mừng anh chị đến với <strong>Bài 5</strong>. Mục tiêu của bài học này là giúp anh chị hiểu vì sao dân văn phòng hiện đại luôn ưu tiên định dạng <code>.md</code> và <code>.csv</code> khi làm việc cùng trí tuệ nhân tạo. Các tệp Word và Excel truyền thống vốn chứa hàng ngàn thẻ định dạng ẩn cùng những ô gộp phức tạp khiến AI dễ đọc sót dữ liệu. Ngược lại, định dạng văn bản <code>.md</code> giống như nguyên liệu đã sơ chế sạch sẽ: Chỉ dùng dấu thăng để chia tiêu đề và dấu sao để tạo danh sách, giúp trợ lý nắm bắt toàn bộ cấu trúc hồ sơ tức thì.",
+      "audio_src": "audio/lesson_05/b1.mp3",
+      "audio_duration": 26.75
+    },
+    {
+      "id": "b2",
+      "label": "2. Lý thuyết (Phần 2): Bảng số liệu .csv, tiện ích Office Viewer & Quy tắc vàng",
+      "duration": 27.52,
+      "pose": 2,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s2",
+      "slide_id": "s2",
+      "hl": [
+        "s2_step1",
+        "s2_step2",
+        "s2_step3"
+      ],
+      "caption": "Đối với dữ liệu bảng biểu, định dạng <code>.csv</code> lưu từng dòng bản ghi ngăn cách bằng dấu phẩy, giúp trợ lý AI tính tổng, lọc trùng và phân tích hàng vạn dòng doanh thu cực nhanh mà không bao giờ bị lỗi công thức. Để anh chị vừa giữ được độ tinh khiết của dữ liệu vừa dễ nhìn bằng mắt thường, tiện ích <strong>Office Viewer</strong> trong phần mềm sẽ hiển thị tệp <code>.csv</code> thành bảng kẻ ô sắc nét như Excel. Anh chị hãy áp dụng quy tắc vàng: Lưu trữ tri thức nội bộ bằng <code>.md</code> và <code>.csv</code> để AI xử lý tốt nhất!",
+      "audio_src": "audio/lesson_05/b2.mp3",
+      "audio_duration": 26.87
+    },
+    {
+      "id": "b3",
+      "label": "3. Minh họa: Mở chế độ Preview bằng menu chuột phải trên thanh Tab",
+      "duration": 14.01,
+      "pose": 3,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Menu Chuột phải trên Thanh Tab",
+      "pedagogy_title": "Nhấp chuột phải vào thanh tiêu đề tệp 1.1_Welcome.md và chọn Open Preview",
+      "pedagogy_note": "Khi mở nhiều tệp hồ sơ cùng lúc, nhấp chuột phải vào thanh Tab và chọn Open Preview (Ctrl+Shift+V) để chuyển từ mã gốc sang bản trình bày đẹp.",
+      "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); openFileInEditor('1.1_Welcome.md'); setEditorMode('raw'); kudoOpenTabContextMenu('1.1_Welcome.md');",
+      "focus_selectors": [
+        "#editor-tabs-list",
+        "#kudo-tab-context-menu",
+        "#editor-canvas"
+      ],
+      "pre_click_selector": "#editor-tabs-list .editor-tab.active",
+      "pre_click_label": "Nhấp chuột phải vào thanh tiêu đề tệp 1.1_Welcome.md",
+      "cursor_selector": "#ktcm-open-preview",
+      "cursor_label": "Chọn Open Preview (Ctrl+Shift+V) để xem bản trình bày đẹp",
+      "caption": "Khi mở đọc lướt nhiều hồ sơ dự án như tệp <code>1.1_Welcome.md</code> ở cột giữa, nếu đang ở giao diện mã nguồn có đánh số dòng, anh chị chỉ cần nhấp chuột phải vào thanh tiêu đề tệp phía trên rồi chọn dòng <strong>Open Preview</strong> là văn bản hiển thị đẹp mắt ngay.",
+      "audio_src": "audio/lesson_05/b3.mp3",
+      "audio_duration": 13.36
+    },
+    {
+      "id": "b4",
+      "label": "4. Kỹ thuật: Kiểm tra tiện ích Office Viewer trong kho Extensions",
+      "duration": 12.81,
+      "pose": 4,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Kho Tiện ích Extensions",
+      "pedagogy_title": "Kiểm tra tiện ích Office Viewer trong mục Extensions (Ctrl + Shift + X)",
+      "pedagogy_note": "Tiện ích Office Viewer (của tác giả cweijan) giúp hiển thị tệp .csv thành bảng kẻ ô trực quan như Excel ngay trong cột giữa.",
+      "onEnter": "kudoHidePopovers(); switchToSurface('ide'); openIdeExtensionsView(); kudoShowKeyHud('Phím tắt mở nhanh Extensions: <kbd>Ctrl + Shift + X</kbd>');",
+      "focus_selectors": [
+        "#act-btn-extensions",
+        "#ide-sb-extensions-view",
+        "#editor-canvas"
+      ],
+      "pre_click_selector": "#act-btn-extensions",
+      "pre_click_label": "Nhấp biểu tượng Extensions (4 ô vuông) ở thanh trái",
+      "cursor_selector": "#ide-sb-extensions-view .ext-list-item.selected",
+      "cursor_label": "Tiện ích Office Viewer (cweijan) trong Extensions",
+      "caption": "Để các bảng dữ liệu <code>.csv</code> luôn hiển thị dạng kẻ ô như Excel, anh chị nhìn sang thanh công cụ ngoài cùng bên trái, bấm vào biểu tượng <strong>Extensions</strong> hình bốn ô vuông và xác nhận tiện ích <strong>Office Viewer</strong> đã được cài đặt sẵn sàng.",
+      "audio_src": "audio/lesson_05/b4.mp3",
+      "audio_duration": 12.16
+    },
+    {
+      "id": "b5",
+      "label": "5. Bước 1: Bấm chọn tệp sales_data.csv trên cây thư mục để mở bảng tính",
+      "duration": 14.81,
+      "pose": 5,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 1/3 · Mở bảng tính .csv",
+      "pedagogy_title": "Phòng kinh doanh vừa gửi bảng doanh thu sales_data.csv cần đọc lướt và kiểm tra",
+      "pedagogy_note": "Bước 1: Tại cây thư mục cột trái, nhấp chuột trực tiếp vào tệp sales_data.csv để mở bảng kẻ ô ở cột giữa.",
+      "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); setEditorMode('wysiwyg'); openFileInEditor('sales_data.csv');",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas"
+      ],
+      "pre_click_selector": "[data-file='sales_data.csv']",
+      "pre_click_label": "Nhấp chọn tệp sales_data.csv ở cây thư mục trái",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Bước 1: Đọc bảng tính sales_data.csv hiển thị kẻ ô sắc nét",
+      "caption": "Chúng ta vào thực hành 3 bước kiểm tra bảng dữ liệu doanh thu. Ở <strong>Bước 1</strong>, anh chị nhìn sang cây thư mục cột trái và bấm chọn tệp <code>sales_data.csv</code>. Toàn bộ các cột khu vực, sản phẩm, doanh thu và chi phí lập tức hiện ra rõ nét ở cột giữa.",
+      "audio_src": "audio/lesson_05/b5.mp3",
+      "audio_duration": 14.16
+    },
+    {
+      "id": "b6",
+      "label": "6. Bước 2: Bấm nút Raw kiểm tra cấu trúc dấu phẩy và tổng 400 dòng",
+      "duration": 13.05,
+      "pose": 6,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 2/3 · Kiểm tra dữ liệu gốc",
+      "pedagogy_title": "Bước 2: Bấm nút </> Raw / Số dòng để xem dữ liệu gốc ngăn cách bằng dấu phẩy",
+      "pedagogy_note": "Chế độ Raw hiển thị văn bản thuần túy ngăn cách bằng dấu phẩy và cho phép kiểm tra chính xác quy mô 400 dòng dữ liệu.",
+      "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); openFileInEditor('sales_data.csv'); setEditorMode('raw');",
+      "focus_selectors": [
+        "#pill-raw",
+        "#editor-canvas"
+      ],
+      "pre_click_selector": "#pill-raw",
+      "pre_click_label": "Bước 2: Nhấp nút </> Raw / Số dòng ở góc trên phải",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Bước 2: Quan sát dữ liệu gốc ngăn cách bằng dấu phẩy (400 dòng)",
+      "caption": "Sang <strong>Bước 2</strong>, anh chị bấm vào nút <strong>Raw / Số dòng</strong> ở thanh công cụ phía trên cột giữa. Lúc này bảng kẻ ô chuyển về dạng văn bản gốc ngăn cách bằng dấu phẩy, giúp anh chị kiểm tra nhanh tổng số 400 dòng bản ghi mà không sợ ẩn dòng.",
+      "audio_src": "audio/lesson_05/b6.mp3",
+      "audio_duration": 12.4
+    },
+    {
+      "id": "b7",
+      "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+      "duration": 18.26,
+      "pose": 1,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "✅ Thực hành Bước 3/3 · Tổng kết & Nghiệm thu",
+      "pedagogy_title": "Bước 3: Gõ câu hỏi vào ô chat yêu cầu AI đọc nhanh cấu trúc các cột của @sales_data.csv",
+      "pedagogy_note": "Chọn @sales_data.csv từ bảng gợi ý tự động và yêu cầu AI tóm tắt cấu trúc các cột dữ liệu.",
+      "onEnter": "kudoSimScene({surface:'ide', file:'sales_data.csv', activeTreeFile:'sales_data.csv', popupMode:'mention', clearChat:true, chatInput:'@sales_data.csv Hãy đọc nhanh cấu trúc các cột của bảng dữ liệu này và kiểm tra tổng số dòng bản ghi.'});",
+      "focus_selectors": [
+        "#ide-popup-menu",
+        "#ide-chat-input",
+        "#ide-send-btn"
+      ],
+      "pre_click_selector": "#ide-popup-menu .popup-item",
+      "pre_click_label": "Chọn tệp/lệnh từ bảng gợi ý tự động",
+      "cursor_selector": "#ide-send-btn",
+      "cursor_label": "Bước 3: Gửi câu hỏi yêu cầu AI đọc cấu trúc @sales_data.csv",
+      "caption": "Ở <strong>Bước 3</strong>, anh chị gõ câu hỏi vào ô chat bên phải, chọn <code>@sales_data.csv</code> từ bảng gợi ý và nhấn gửi để trợ lý đọc nhanh cấu trúc các cột. Như vậy anh chị đã nắm vững giá trị của hai định dạng <code>.md</code> và <code>.csv</code>, biết dùng <strong>Office Viewer</strong> để đọc bảng kẻ ô và kiểm tra dữ liệu gốc bằng chế độ <strong>Raw</strong>.",
+      "audio_src": "audio/lesson_05/b7.mp3",
+      "audio_duration": 17.61
+    }
+  ]
+}

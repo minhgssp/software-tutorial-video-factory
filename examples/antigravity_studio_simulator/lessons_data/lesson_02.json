@@ -1,0 +1,198 @@
+{
+  "lesson_slug": "lesson_02",
+  "filename": "lesson_02.html",
+  "legacy_alias": "lesson_06_giai_nen_zip_open_folder_reveal_explorer.html",
+  "code": "BÀI 2",
+  "chapter_number": 1,
+  "chapter_code": "CHƯƠNG 1",
+  "chapter_title": "Khởi động Chuẩn & Làm chủ Giao diện",
+  "title": "Đồng bộ Ổ cứng 1-1, Phòng tránh Lỗi Thao tác & Chọn 5 Mô hình AI",
+  "short_title": "Đồng bộ 1-1 & Chọn 5 Mô hình AI",
+  "pill_label": "Bài 2 · Đồng bộ 1-1 & 5 Mô hình",
+  "description": "Hiểu và kiểm chứng cơ chế đồng bộ 1-1 giữa cây thư mục phần mềm với ổ cứng máy tính (Reveal in File Explorer), phòng tránh lỗi kéo thả nhầm thư mục (Cancel Move) và nắm vững quy tắc chọn 5 mô hình AI khi bắt đầu giao việc.",
+  "prerequisites": "Bài 1 (Đã giải nén .zip và bấm Open Folder mở thư mục antigravity_course_vn vào bàn làm việc 3 cột).",
+  "dependents": "Bài 3 (Làm chủ giao diện 3 cột, mở Preview chuột phải & xử lý khi AI dừng chờ), Bài 4 (Bật quyền tự chủ Turbo & gọi lệnh /start-1-1).",
+  "placement_risk": "0% Rủi ro — Kiểm chứng tệp thật trên máy tính, tránh lỗi kéo nhầm thư mục và chọn mô hình AI ở đáy khung chat.",
+  "continuity_bridge": "Hoàn tất kiểm chứng đồng bộ ổ cứng 1-1 bằng Reveal in File Explorer, phòng tránh lỗi kéo nhầm thư mục và chọn mô hình mặc định Gemini 4 Argon Medium.",
+  "slides": {
+    "s1": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 1 · BÀI 2 · LÝ THUYẾT PHẦN 1</span>\n        <span class=\"k-slide-step\">Nguyên lý Đồng bộ Ổ cứng &amp; An toàn Thao tác</span>\n      </div>\n      <div class=\"k-slide-h1\">Cơ chế tấm gương phản chiếu 1-1 giữa phần mềm và ổ cứng máy tính cá nhân</div>\n      <div class=\"k-slide-sub\">Mọi tệp tin hiển thị trong dự án chính là tệp thật trên máy tính, không phải bản sao ảo trên mạng.</div>\n    </div>\n    <div class=\"k-visual-hero-box k-layout-comparison k-step-item k-hl\" id=\"s1_step1\" data-order=\"1\">\n      <div class=\"k-cmp-col k-cmp-after\">\n        <div class=\"k-cmp-badge-new\">🪟 CÂY THƯ MỤC TRONG PHẦN MỀM</div>\n        <div class=\"k-cmp-main\">Hiển thị trực tiếp thư mục antigravity_course_vn</div>\n        <div class=\"k-cmp-sub\">Chuột phải chọn Reveal in File Explorer để đối chiếu</div>\n        <svg class=\"k-cmp-illus-svg\" viewBox=\"0 0 380 74\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <rect x=\"6\" y=\"6\" width=\"368\" height=\"62\" rx=\"8\" fill=\"#FFFFFF\" stroke=\"#38BDF8\" stroke-width=\"1.6\"/>\n          <text x=\"190\" y=\"24\" text-anchor=\"middle\" fill=\"#0369A1\" font-size=\"11\" font-weight=\"800\">📁 Explorer: antigravity_course_vn</text>\n          <text x=\"190\" y=\"42\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"10\" font-weight=\"700\">📄 INDEX.md · 📄 COMPANY.md · 📊 sales_data.csv</text>\n          <text x=\"190\" y=\"58\" text-anchor=\"middle\" fill=\"#0284C7\" font-size=\"9.5\" font-weight=\"700\">🔍 Reveal in File Explorer (Shift + Alt + R)</text>\n        </svg>\n      </div>\n      <div class=\"k-cmp-arrow\">⇄</div>\n      <div class=\"k-cmp-col k-cmp-after\">\n        <div class=\"k-cmp-badge-new\">💻 WINDOWS FILE EXPLORER (Ổ CỨNG THẬT)</div>\n        <div class=\"k-cmp-main\">Đồng bộ tức thì 1-1 từng chữ, từng tệp báo cáo</div>\n        <div class=\"k-cmp-sub\">Không cần tải xuống (Download) sau khi AI làm xong</div>\n        <svg class=\"k-cmp-illus-svg\" viewBox=\"0 0 380 74\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <rect x=\"6\" y=\"6\" width=\"368\" height=\"62\" rx=\"8\" fill=\"#DCFCE7\" stroke=\"#22C55E\" stroke-width=\"1.6\"/>\n          <text x=\"190\" y=\"24\" text-anchor=\"middle\" fill=\"#14532D\" font-size=\"11\" font-weight=\"800\">💻 C:\\Users\\Ban\\Downloads\\antigravity_course_vn</text>\n          <text x=\"190\" y=\"42\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"10\" font-weight=\"700\">📄 INDEX.md · 📄 COMPANY.md · 📊 sales_data.csv</text>\n          <text x=\"190\" y=\"58\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"9.5\" font-weight=\"700\">✅ Có sẵn trên máy để đính kèm Email / Zalo ngay</text>\n        </svg>\n      </div>\n    </div>\n    <div class=\"k-grid-3\" style=\"grid-template-columns: 1fr 1fr;\">\n      <div class=\"k-card k-step-item k-unreached\" id=\"s1_step2\" data-order=\"2\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#E0F2FE; color:#0369A1; border:1px solid #7DD3FC;\">BẢN CHẤT 1-1 · TẤM GƯƠNG PHẢN CHIẾU</span>\n        </div>\n        <h3>AI tạo tệp trong phần mềm = Có ngay tệp trên ổ cứng</h3>\n        <p>Phần mềm không tạo ra một kho lưu trữ đám mây tách biệt, mà mở trực tiếp ngăn tủ hồ sơ trên máy tính của bạn. Bất kỳ tệp báo cáo nào Trợ lý AI viết xong đều nằm sẵn trong thư mục Windows để bạn gửi đi ngay.</p>\n        <div class=\"k-card-mini-note\">🔍 Kiểm chứng nhanh bằng lệnh Reveal in File Explorer</div>\n      </div>\n      <div class=\"k-card k-step-item k-unreached\" id=\"s1_step3\" data-order=\"3\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">PHÒNG TRÁNH LỖI CHUỘT · CANCEL MOVE</span>\n        </div>\n        <h3>Thấy hộp cảnh báo di chuyển thư mục ➔ Bấm Cancel ngay</h3>\n        <p>Vì phần mềm nối thẳng với ổ cứng thật, khi bấm chuột xem tài liệu mà vô tình giữ chuột quá lâu, bạn dễ kéo nhầm thư mục này thả lồng vào thư mục khác. Hễ thấy hộp hỏi <em>Are you sure you want to move</em>, hãy bấm <strong>Cancel</strong>.</p>\n        <div class=\"k-card-mini-note\">🛡️ Bấm Cancel để giữ nguyên cấu trúc thư mục dự án</div>\n      </div>\n    </div>\n    ",
+    "s2": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 1 · BÀI 2 · LÝ THUYẾT PHẦN 2</span>\n        <span class=\"k-slide-step\">Tháp Phân tầng 5 Mô hình AI</span>\n      </div>\n      <div class=\"k-slide-h1\">Cách chọn đúng \"bộ não\" trong 5 mô hình AI theo độ khó của công việc</div>\n      <div class=\"k-slide-sub\">Phối hợp nhịp nhàng giữa tốc độ phản hồi nhanh, sự ổn định hàng ngày và chiều sâu lập kế hoạch chiến lược.</div>\n    </div>\n    <div class=\"k-visual-hero-box k-layout-flowchart k-step-item k-hl\" id=\"s2_step1\" data-order=\"1\">\n      <div class=\"k-viz-header\">\n        <span class=\"k-viz-badge\">🧠 THÁP 3 NHÓM BỘ NÃO AI</span>\n        <span class=\"k-viz-title\">Quy tắc phân vai 5 mô hình AI có sẵn trong phần mềm cho dân văn phòng</span>\n      </div>\n      <svg class=\"k-flow-svg\" viewBox=\"0 0 860 96\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <rect x=\"10\" y=\"8\" width=\"256\" height=\"80\" rx=\"12\" fill=\"#FEF3C7\" stroke=\"#F59E0B\" stroke-width=\"2\"/>\n        <text x=\"138\" y=\"32\" text-anchor=\"middle\" fill=\"#B45309\" font-size=\"12.5\" font-weight=\"800\">NHÓM 1 · TỐC ĐỘ TỨC THÌ</text>\n        <text x=\"138\" y=\"54\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"13.5\" font-weight=\"700\">Gemini 3.8 Flash Medium</text>\n        <text x=\"138\" y=\"74\" text-anchor=\"middle\" fill=\"#78350F\" font-size=\"11.5\">Dịch nhanh · Tóm tắt ngắn · Tra cứu</text>\n        <path d=\"M272 48 H302\" stroke=\"#16A34A\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n        <polygon points=\"299,42 311,48 299,54\" fill=\"#16A34A\"/>\n        <rect x=\"316\" y=\"8\" width=\"252\" height=\"80\" rx=\"12\" fill=\"#DCFCE7\" stroke=\"#22C55E\" stroke-width=\"2.2\"/>\n        <text x=\"442\" y=\"32\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"12.5\" font-weight=\"800\">NHÓM 2 · MẶC ĐỊNH HÀNG NGÀY ⭐</text>\n        <text x=\"442\" y=\"54\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"13.5\" font-weight=\"700\">Gemini 4 Argon Medium / High</text>\n        <text x=\"442\" y=\"74\" text-anchor=\"middle\" fill=\"#14532D\" font-size=\"11.5\">Cân bằng hoàn hảo · Xử lý 80% việc</text>\n        <path d=\"M574 48 H604\" stroke=\"#0284C7\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n        <polygon points=\"601,42 613,48 601,54\" fill=\"#0284C7\"/>\n        <rect x=\"618\" y=\"8\" width=\"232\" height=\"80\" rx=\"12\" fill=\"#EFF6FF\" stroke=\"#60A5FA\" stroke-width=\"2\"/>\n        <text x=\"734\" y=\"32\" text-anchor=\"middle\" fill=\"#1D4ED8\" font-size=\"12.5\" font-weight=\"800\">NHÓM 3 · CHUYÊN GIA SÂU</text>\n        <text x=\"734\" y=\"54\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"13.5\" font-weight=\"700\">Claude Sonnet / Opus 5.5</text>\n        <text x=\"734\" y=\"74\" text-anchor=\"middle\" fill=\"#1E3A8A\" font-size=\"11.5\">Lập kế hoạch lớn · Viết lách tinh tế</text>\n      </svg>\n    </div>\n    <div class=\"k-grid-3\" style=\"grid-template-columns: 1fr 1fr;\">\n      <div class=\"k-card k-step-item k-unreached\" id=\"s2_step2\" data-order=\"2\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#DCFCE7; color:#15803D; border:1px solid #86EFAC;\">LỰA CHỌN CHỦ LỰC · GEMINI 4 ARGON MEDIUM</span>\n        </div>\n        <h3>Trợ lý đa năng ổn định cho 80% tác vụ văn phòng</h3>\n        <p>Với các công việc thường nhật như đọc tài liệu dự án, tổng hợp báo cáo tuần hay rà soát bảng biểu, hãy luôn đặt mặc định ở <strong>Gemini 4 Argon Medium</strong> để vừa có tốc độ mượt mà vừa bám sát dữ liệu gốc.</p>\n        <div class=\"k-card-mini-note\">✅ Luôn kiểm tra dấu tích ✓ tại Gemini 4 Argon Medium</div>\n      </div>\n      <div class=\"k-card k-step-item k-unreached\" id=\"s2_step3\" data-order=\"3\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#E0F2FE; color:#0369A1; border:1px solid #7DD3FC;\">LINH HOẠT CHUYỂN ĐỔI · FLASH &amp; CLAUDE 5.5</span>\n        </div>\n        <h3>Tăng tốc việc nhỏ với Flash, đào sâu chiến lược với Claude</h3>\n        <p>Khi chỉ cần hỏi nhanh một định nghĩa hay sửa lỗi chính tả ngắn, hãy bật <strong>Gemini 3.8 Flash Medium</strong>. Khi cần thiết kế đề án dài hoặc lập kế hoạch đa bước phức tạp, hãy chuyển sang <strong>Claude Sonnet 5.5</strong> hoặc <strong>Opus 5.5</strong>.</p>\n        <div class=\"k-card-mini-note\">🔄 Đổi mô hình linh hoạt ngay trong cùng một phiên làm việc</div>\n      </div>\n    </div>\n    ",
+    "s_outro": "\n    <div class=\"k-Visual-Outro\">\n      <h3>Tổng kết &amp; Ghi nhớ cốt lõi Bài 2</h3>\n      <ul>\n        <li><strong>Đồng bộ ổ cứng 1-1:</strong> Tệp trong phần mềm chính là tệp thật trên máy tính; kiểm chứng nhanh bằng chuột phải ➔ <strong>Reveal in File Explorer</strong>.</li>\n        <li><strong>An toàn thao tác chuột:</strong> Nếu vô tình giữ chuột kéo nhầm thư mục và thấy bảng hỏi <em>Move</em>, luôn bấm <strong>Cancel</strong> ngay lập tức.</li>\n        <li><strong>Quy tắc chọn 5 mô hình AI:</strong> Đặt <strong>Gemini 4 Argon Medium</strong> làm mặc định hàng ngày, dùng <strong>Flash</strong> cho việc nhanh và <strong>Claude 5.5</strong> cho bài toán chiến lược sâu.</li>\n      </ul>\n    </div>\n    "
+  },
+  "beats": [
+    {
+      "id": "b1",
+      "label": "1. Lý thuyết (Phần 1): Nguyên lý đồng bộ 1-1 giữa phần mềm và ổ cứng máy tính",
+      "duration": 33.9,
+      "pose": 1,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s1",
+      "slide_id": "s1",
+      "hl": [
+        "s1_step1",
+        "s1_step2",
+        "s1_step3"
+      ],
+      "caption": "Chào mừng anh chị đến với <strong>Bài 2</strong>. Mục tiêu của bài học này là giúp anh chị nắm vững cơ chế đồng bộ trực tiếp giữa phần mềm và ổ cứng máy tính, đồng thời chọn đúng bộ não AI trước khi giao việc. Nguyên lý đầu tiên anh chị cần nhớ là cơ chế đồng bộ một một như một tấm gương phản chiếu: Phần mềm không hề tạo ra bản sao ảo trên mạng, mà hiển thị trực tiếp chính thư mục thật trên máy tính <strong>Windows</strong> của anh chị. Bất kỳ tệp báo cáo nào trợ lý tạo ra đều nằm sẵn trên ổ cứng để gửi đi ngay. Cũng vì nối thẳng với ổ cứng thật, nếu anh chị vô tình giữ chuột quá lâu làm bật bảng cảnh báo di chuyển thư mục, hãy luôn bấm <strong>Cancel</strong> để giữ nguyên vị trí hồ sơ.",
+      "audio_src": "audio/lesson_02/b1.mp3",
+      "audio_duration": 33.25
+    },
+    {
+      "id": "b2",
+      "label": "2. Lý thuyết (Phần 2): Phòng tránh kéo nhầm thư mục & Quy tắc chọn 5 mô hình AI",
+      "duration": 36.7,
+      "pose": 2,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s2",
+      "slide_id": "s2",
+      "hl": [
+        "s2_step1",
+        "s2_step2",
+        "s2_step3"
+      ],
+      "caption": "Nguyên lý thứ hai trong bài học hôm nay là cách chọn đúng bộ não trong năm mô hình trí tuệ nhân tạo có sẵn của phần mềm. Anh chị hãy hình dung năm mô hình này giống như ba nhóm nhân sự có sở trường khác nhau trong phòng ban: Nhóm tốc độ cao là <strong>Gemini 3.8 Flash Medium</strong>, chuyên trị các việc nhẹ cần phản hồi tức thì như tóm tắt nhanh hay tra cứu ngắn. Nhóm chủ lực cân bằng hoàn hảo là <strong>Gemini 4 Argon Medium</strong> và <strong>Argon High</strong>, thông minh và ổn định nên ta luôn chọn làm mặc định cho tám mươi phần trăm công việc hàng ngày. Còn khi cần viết chiến lược dài hoặc lập kế hoạch chuyên sâu, anh chị hãy giao cho bộ đôi chuyên gia <strong>Claude Sonnet 5.5</strong> hoặc <strong>Claude Opus 5.5</strong>.",
+      "audio_src": "audio/lesson_02/b2.mp3",
+      "audio_duration": 36.05
+    },
+    {
+      "id": "b3",
+      "label": "3. Lưu ý trên màn hình: Xử lý cảnh báo khi lỡ tay kéo thả nhầm thư mục",
+      "duration": 22.21,
+      "pose": 3,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 An toàn Thao tác · Tránh xáo trộn thư mục",
+      "pedagogy_title": "Khi thấy hộp thoại 'Are you sure you want to move...', hãy bấm Cancel ngay",
+      "pedagogy_note": "Pha 1: Khi bấm chuột ở cột Explorer bên trái mà vô tình giữ chuột kéo nhầm thư mục -> Pha 2: Hộp cảnh báo bật lên, hãy bấm ngay nút Cancel màu xanh.",
+      "onEnterPhase1": "kudoHidePopovers(); closeMoveWarnModal(); closeIdeMenus(); switchToSurface('ide'); openWorkspaceByName('antigravity_course_vn');",
+      "pre_focus_selectors": [
+        "#ide-file-tree"
+      ],
+      "pre_cursor_selector": "[data-file='noi_quy_chung.md']",
+      "pre_cursor_label": "Vô tình giữ chuột kéo nhầm thư mục ở cột trái",
+      "onEnter": "kudoHidePopovers(); closeIdeMenus(); closeWinFolderDialog(); switchToSurface('ide'); openWorkspaceByName('antigravity_course_vn'); openMoveWarnModal();",
+      "focus_selectors": [
+        "#ide-move-warn-modal .warn-dialog"
+      ],
+      "cursor_selector": "#ide-move-warn-modal .warn-dialog button:first-child",
+      "cursor_label": "Bấm Cancel ngay khi thấy hộp thoại cảnh báo Move",
+      "caption": "Anh chị hãy quan sát tình huống thực tế trên màn hình: Khi mới làm quen với cột cây thư mục bên trái, đôi lúc chúng ta bấm chuột hơi mạnh tay nên vô tình kéo cả một thư mục con thả lồng vào bên trong thư mục khác. Ngay lập tức, một hộp thoại cảnh báo có chữ <strong>Are you sure you want to move</strong> sẽ bật lên giữa màn hình. Gặp bảng này, anh chị tuyệt đối không bấm <strong>Move</strong> mà hãy bấm ngay vào nút <strong>Cancel</strong> màu xanh để mọi tệp tin giữ nguyên vị trí ban đầu.",
+      "audio_src": "audio/lesson_02/b3.mp3",
+      "audio_duration": 21.56
+    },
+    {
+      "id": "b4",
+      "label": "4. Kỹ thuật trên màn hình: Mở bảng chọn và phân biệt 5 mô hình AI ở đáy khung chat",
+      "duration": 30.81,
+      "pose": 4,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Kỹ thuật Chọn Bộ não AI · 5 Mô hình",
+      "pedagogy_title": "Bấm nút chọn mô hình ở đáy khung chat ➔ Phân biệt 5 mô hình AI",
+      "pedagogy_note": "Pha 1: Di chuột xuống đáy khung chat cột phải và click vào nút Gemini 4 Argon Medium -> Pha 2: Bảng 5 mô hình bật lên (Argon Medium mặc định, Flash tốc độ cao, Claude lập kế hoạch sâu).",
+      "onEnterPhase1": "kudoHidePopovers(); closeMoveWarnModal(); closeIdeMenus(); switchToSurface('ide'); openWorkspaceByName('antigravity_course_vn'); openFileInEditor('INDEX.md');",
+      "pre_focus_selectors": [
+        "#ide-chat-box-card",
+        "#ide-model-select"
+      ],
+      "pre_cursor_selector": "#ide-model-select",
+      "pre_cursor_label": "Click vào nút chọn mô hình ở đáy khung chat",
+      "onEnter": "kudoHidePopovers(); closeMoveWarnModal(); closeIdeMenus(); switchToSurface('ide'); openWorkspaceByName('antigravity_course_vn'); openFileInEditor('INDEX.md'); kudoOpenModelPopover('#ide-model-select');",
+      "focus_selectors": [
+        "#ide-model-select",
+        "#kudo-model-popover"
+      ],
+      "cursor_selector": "#kmp-argon",
+      "cursor_label": "Bảng chọn 5 mô hình AI ngay tại đáy khung chat",
+      "caption": "Tiếp theo, khi đã có khung làm việc bên trong dự án, anh chị nhìn xuống cạnh dưới của khung chat ở cột phải và bấm vào nút chọn mô hình AI. Khi danh sách năm mô hình bật lên, anh chị áp dụng quy tắc rất dễ nhớ sau đây: Dòng đầu tiên là <strong>Gemini 4 Argon Medium</strong>, vừa thông minh vừa ổn định nên ta luôn để làm mặc định cho phần lớn công việc hàng ngày. Dòng thứ hai là <strong>Gemini 3.8 Flash Medium</strong> dùng khi cần trả lời thật nhanh các việc nhẹ. Còn khi cần viết chiến lược dài hoặc lập kế hoạch sâu, anh chị chuyển sang <strong>Claude Sonnet 5.5</strong> hoặc <strong>Claude Opus 5.5</strong>.",
+      "audio_src": "audio/lesson_02/b4.mp3",
+      "audio_duration": 30.16
+    },
+    {
+      "id": "b5",
+      "label": "5. Thực hành Bước 1/3: Chuột phải vào INDEX.md chọn Reveal in File Explorer",
+      "duration": 19.62,
+      "pose": 5,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 1/3 · Đối chiếu ổ cứng thật",
+      "pedagogy_title": "Bước 1: Chuột phải vào tệp INDEX.md ở cột trái ➔ Chọn Reveal in File Explorer",
+      "pedagogy_note": "Pha 1: Di chuột tới tệp INDEX.md ở cột trái và nhấp chuột phải -> Pha 2: Menu ngữ cảnh hiện ra, bấm chọn dòng Reveal in File Explorer (Shift+Alt+R).",
+      "onEnterPhase1": "kudoHidePopovers(); closeMoveWarnModal(); closeWinFolderDialog(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); openWorkspaceByName('antigravity_course_vn'); openFileInEditor('INDEX.md');",
+      "pre_focus_selectors": [
+        "#ide-file-tree",
+        "[data-file='INDEX.md']"
+      ],
+      "pre_cursor_selector": "[data-file='INDEX.md']",
+      "pre_cursor_label": "Bước 1: Nhấp chuột phải vào tệp INDEX.md ở cột trái",
+      "onEnter": "kudoHidePopovers(); closeMoveWarnModal(); closeWinFolderDialog(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); openWorkspaceByName('antigravity_course_vn'); openFileInEditor('INDEX.md'); kudoOpenExplorerContextMenu(\"[data-file='INDEX.md']\");",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#kudo-context-menu"
+      ],
+      "cursor_selector": "#kcm-reveal-explorer",
+      "cursor_label": "Chọn dòng Reveal in File Explorer (Shift+Alt+R)",
+      "caption": "Giờ chúng ta thực hành ba bước làm chủ thư mục và mô hình AI. Ở <strong>Bước 1</strong>, để tận mắt kiểm chứng tệp trong phần mềm chính là tệp thật trên máy tính, anh chị đưa chuột sang cột cây thư mục bên trái, nhấp chuột phải vào tệp <code>INDEX.md</code>. Khi bảng menu vừa hiện ra, anh chị bấm chọn dòng <strong>Reveal in File Explorer</strong> để mở ngay cửa sổ thư mục <strong>Windows</strong> chứa tệp thật trên ổ cứng.",
+      "audio_src": "audio/lesson_02/b5.mp3",
+      "audio_duration": 18.97
+    },
+    {
+      "id": "b6",
+      "label": "6. Thực hành Bước 2/3: Chọn mô hình mặc định Gemini 4 Argon Medium tại khung chat",
+      "duration": 14.73,
+      "pose": 6,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 2/3 · Thiết lập mô hình AI",
+      "pedagogy_title": "Bước 2: Bấm nút chọn mô hình ở đáy khung chat ➔ Tích chọn Gemini 4 Argon Medium",
+      "pedagogy_note": "Pha 1: Di chuột xuống đáy khung chat click nút chọn mô hình -> Pha 2: Xác nhận dấu tích ✓ đang nằm ở dòng Gemini 4 Argon Medium.",
+      "onEnterPhase1": "kudoHidePopovers(); closeMoveWarnModal(); switchToSurface('ide'); openWorkspaceByName('antigravity_course_vn'); openFileInEditor('INDEX.md'); document.getElementById('ide-chat-input').value = 'Hãy đọc tệp INDEX.md và tóm tắt lộ trình học tập trong thư mục dự án này.';",
+      "pre_focus_selectors": [
+        "#ide-chat-box-card",
+        "#ide-model-select"
+      ],
+      "pre_cursor_selector": "#ide-model-select",
+      "pre_cursor_label": "Bước 2: Click mở bảng chọn mô hình ở đáy khung chat",
+      "onEnter": "kudoHidePopovers(); closeMoveWarnModal(); switchToSurface('ide'); openWorkspaceByName('antigravity_course_vn'); openFileInEditor('INDEX.md'); kudoOpenModelPopover('#ide-model-select'); document.getElementById('ide-chat-input').value = 'Hãy đọc tệp INDEX.md và tóm tắt lộ trình học tập trong thư mục dự án này.';",
+      "focus_selectors": [
+        "#ide-model-select",
+        "#kudo-model-popover"
+      ],
+      "cursor_selector": "#kmp-argon",
+      "cursor_label": "Xác nhận dấu tích ✓ tại Gemini 4 Argon Medium",
+      "caption": "Sang <strong>Bước 2</strong>, anh chị nhìn sang đáy khung chat ở cột bên phải, bấm chuột vào nút chọn mô hình và kiểm tra xem dấu tích đã nằm ở dòng <strong>Gemini 4 Argon Medium</strong> hay chưa. Việc chọn sẵn mô hình mặc định này sẽ giúp trợ lý luôn phản hồi mạch lạc và bám sát ngữ cảnh tài liệu nhất.",
+      "audio_src": "audio/lesson_02/b6.mp3",
+      "audio_duration": 14.08
+    },
+    {
+      "id": "b7",
+      "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+      "duration": 23.16,
+      "pose": 7,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "✅ Thực hành Bước 3/3 · Tổng kết & Nghiệm thu",
+      "pedagogy_title": "Bước 3: Bấm nút Gửi (→) ➔ Trợ lý AI đọc trực tiếp INDEX.md và phản hồi",
+      "pedagogy_note": "Pha 1: Click nút Gửi (→) ở góc dưới khung chat -> Pha 2: Trợ lý AI dùng mô hình Gemini 4 Argon Medium đọc trực tiếp tệp INDEX.md trên ổ cứng và trả lời tóm tắt.",
+      "onEnterPhase1": "kudoHidePopovers(); closeMoveWarnModal(); switchToSurface('ide'); openWorkspaceByName('antigravity_course_vn'); openFileInEditor('INDEX.md'); document.getElementById('ide-chat-input').value = 'Hãy đọc tệp INDEX.md và tóm tắt lộ trình học tập trong thư mục dự án này.';",
+      "pre_focus_selectors": [
+        "#ide-chat-input",
+        "#ide-send-btn"
+      ],
+      "pre_cursor_selector": "#ide-send-btn",
+      "pre_cursor_label": "Click nút Gửi (→) để giao việc đầu tiên",
+      "onEnter": "kudoSimScene({surface:'ide', file:'INDEX.md', editorMode:'wysiwyg', userMsg:'Hãy đọc tệp INDEX.md và tóm tắt lộ trình học tập trong thư mục dự án này.', aiMsg:'<strong>Kết luận:</strong> Đã đọc trực tiếp tệp <code>INDEX.md</code> trong thư mục <code>antigravity_course_vn</code> bằng mô hình <strong>Gemini 4 Argon Medium</strong>:<br>• <strong>Trạng thái ổ cứng:</strong> Đồng bộ 1-1 với máy tính cá nhân.<br>• <strong>Cấu trúc học liệu:</strong> Gồm các thư mục thực hành từ <code>Module_0</code> đến <code>Module_6</code> và kịch bản công ty mẫu <code>TaskFlow</code>.', chatInput:''});",
+      "focus_selectors": [
+        "#editor-canvas",
+        "#ide-chat-messages"
+      ],
+      "cursor_selector": "#ide-chat-messages",
+      "cursor_label": "Bước 3: Trợ lý AI đã đọc tệp thật trong thư mục dự án!",
+      "caption": "Ở <strong>Bước 3</strong>, sau khi bấm nút mũi tên Gửi, anh chị thấy trợ lý AI đã tự đọc trực tiếp tệp <code>INDEX.md</code> ngay trong thư mục và trả lời tóm tắt rõ ràng ở cột bên phải. Như vậy qua bài học này, anh chị đã nắm chắc cách đối chiếu tệp thật trên ổ cứng bằng <strong>Reveal in File Explorer</strong>, biết bấm <strong>Cancel</strong> bảo vệ cấu trúc thư mục khi lỡ kéo nhầm chuột và làm chủ quy tắc chọn năm mô hình AI cho từng nhu cầu công việc.",
+      "audio_src": "audio/lesson_02/b7.mp3",
+      "audio_duration": 22.51
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "lesson_slug": "lesson_08",
+  "filename": "lesson_08.html",
+  "legacy_alias": "",
+  "code": "BÀI 8",
+  "chapter_number": 2,
+  "chapter_code": "CHƯƠNG 2",
+  "chapter_title": "Định dạng Dữ liệu, Ký hiệu @ & Hồ sơ Cá nhân hóa",
+  "title": "Quản trị Trí nhớ Dự án Dài hạn & Sổ Bàn giao Giữa Các Phiên Chat",
+  "short_title": "Trí nhớ Dự án & Sổ Bàn giao",
+  "pill_label": "Bài 8 · Trí nhớ & Bàn giao",
+  "description": "Khắc phục nhược điểm 'quên ngữ cảnh' khi cuộc trò chuyện quá dài bằng quy trình chốt Sổ bàn giao công việc (ban_giao_cong_viec.md) cuối mỗi ca và nạp lại trong 5 giây ở phiên chat mới.",
+  "prerequisites": "Bài 6 (Đính kèm tệp bằng @) & Bài 7 (Cá nhân hóa bằng @troly.md).",
+  "dependents": "Chương 3 (Tự động hóa hoàn toàn việc nạp ngữ cảnh và quy trình bằng kiến trúc .agent/).",
+  "placement_risk": "0% Rủi ro — Giải quyết triệt để nỗi sợ mất lịch sử làm việc khi mở cửa sổ chat mới của học viên.",
+  "continuity_bridge": "Hoàn tất làm chủ quy trình chốt Sổ bàn giao công việc (ban_giao_cong_viec.md) cuối ca và khôi phục 100% ngữ cảnh dự án ở phiên chat mới.",
+  "slides": {
+    "s1": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 2 · BÀI 8 · LÝ THUYẾT PHẦN 1</span>\n        <span class=\"k-slide-step\">Hiện tượng Tràn Bộ nhớ Ngữ cảnh &amp; Nguyên lý Chốt Ca</span>\n      </div>\n      <div class=\"k-slide-h1\">Tại sao một cuộc trò chuyện kéo dài nhiều ngày khiến AI chậm dần và dễ nhầm lẫn số liệu?</div>\n      <div class=\"k-slide-sub\">Hiểu rõ giới hạn bộ nhớ tạm thời của khung chat và cách chuyển trí nhớ dự án xuống ổ cứng máy tính.</div>\n    </div>\n    <div class=\"k-visual-hero-box k-layout-comparison k-step-item k-hl\" id=\"s1_step1\" data-order=\"1\">\n      <div class=\"k-cmp-col k-cmp-before\">\n        <div class=\"k-cmp-badge-old\">❌ CÁCH CŨ · NHỒI NHÉT VÀO 1 LUỒNG CHAT DÀI</div>\n        <div class=\"k-cmp-main\">Tràn bộ nhớ ngữ cảnh sau hàng chục bước hỏi đáp</div>\n        <div class=\"k-cmp-sub\">Tin nhắn cũ gây nhiễu làm AI phản hồi chậm và quên việc</div>\n        <svg class=\"k-cmp-illus-svg\" viewBox=\"0 0 380 74\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <rect x=\"6\" y=\"6\" width=\"368\" height=\"62\" rx=\"8\" fill=\"#FFF7ED\" stroke=\"#F97316\" stroke-width=\"1.5\"/>\n          <text x=\"190\" y=\"24\" text-anchor=\"middle\" fill=\"#9A3412\" font-size=\"11\" font-weight=\"800\">💬 Luồng chat kéo dài 50+ tin nhắn đủ mọi chủ đề</text>\n          <text x=\"190\" y=\"42\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"9.8\">Tin nhắn nháp cũ + Số liệu sửa đi sửa lại chồng chéo</text>\n          <text x=\"190\" y=\"58\" text-anchor=\"middle\" fill=\"#DC2626\" font-size=\"9.5\" font-weight=\"700\">⚠️ AI bắt đầu trả lời lạc đề, xử lý chậm và tốn tài nguyên</text>\n        </svg>\n      </div>\n      <div class=\"k-cmp-arrow\">➔</div>\n      <div class=\"k-cmp-col k-cmp-after\">\n        <div class=\"k-cmp-badge-new\">✅ GIẢI PHÁP · SỔ BÀN GIAO TRÊN Ổ CỨNG</div>\n        <div class=\"k-cmp-main\">Ghi kết quả vào tệp ban_giao_cong_viec.md</div>\n        <div class=\"k-cmp-sub\">Mở phiên chat mới sạch sẽ mà vẫn giữ 100% trí nhớ</div>\n        <svg class=\"k-cmp-illus-svg\" viewBox=\"0 0 380 74\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <rect x=\"6\" y=\"6\" width=\"368\" height=\"62\" rx=\"8\" fill=\"#DCFCE7\" stroke=\"#22C55E\" stroke-width=\"1.6\"/>\n          <text x=\"190\" y=\"24\" text-anchor=\"middle\" fill=\"#14532D\" font-size=\"11\" font-weight=\"800\">📒 Tệp ban_giao_cong_viec.md (Lưu bền vững trên máy)</text>\n          <text x=\"190\" y=\"42\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"10\" font-weight=\"700\">1. Đã hoàn thành · 2. Quyết định đã chốt · 3. Việc làm tiếp</text>\n          <text x=\"190\" y=\"58\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"9.5\" font-weight=\"700\">🚀 Nạp lại trong 5 giây ở phiên chat mới tinh</text>\n        </svg>\n      </div>\n    </div>\n    <div class=\"k-grid-3\" style=\"grid-template-columns: 1fr 1fr;\">\n      <div class=\"k-card k-step-item k-unreached\" id=\"s1_step2\" data-order=\"2\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">NGUYÊN NHÂN · QUÁ TẢI BỘ NHỚ TẠM THỜI</span>\n        </div>\n        <h3>Một bàn làm việc bày bừa cả trăm tờ giấy nháp sẽ dễ nhầm lẫn</h3>\n        <p>Khi bạn giữ nguyên một luồng trò chuyện suốt nhiều ngày để bàn đủ mọi việc, các tin nhắn nháp cũ sẽ làm loãng sự tập trung của Trợ lý AI, khiến tốc độ suy nghĩ chậm đi và dễ lấy nhầm số liệu chưa chốt.</p>\n        <div class=\"k-card-mini-note\">⚠️ Không nên dùng 1 luồng chat duy nhất cho cả tháng</div>\n      </div>\n      <div class=\"k-card k-step-item k-unreached\" id=\"s1_step3\" data-order=\"3\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#DCFCE7; color:#15803D; border:1px solid #86EFAC;\">NGUYÊN LÝ MỚI · CHUYỂN TRÍ NHỚ XUỐNG TỆP THẬT</span>\n        </div>\n        <h3>Khung chat chỉ là phòng họp, tệp trên ổ cứng mới là sổ cái</h3>\n        <p>Thay vì sợ mất lịch sử khi đóng khung chat, trước khi kết thúc ca làm việc, bạn chỉ cần yêu cầu Trợ lý AI đúc kết toàn bộ kết quả đã thống nhất vào một tệp văn bản mang tên <code>ban_giao_cong_viec.md</code>.</p>\n        <div class=\"k-card-mini-note\">📒 Lưu cứng trên máy tính · Không bao giờ trôi mất</div>\n      </div>\n    </div>\n    ",
+    "s2": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 2 · BÀI 8 · LÝ THUYẾT PHẦN 2</span>\n        <span class=\"k-slide-step\">Cấu trúc Sổ Bàn giao 3 Mục &amp; Kỹ thuật Nối Mạch 5 Giây</span>\n      </div>\n      <div class=\"k-slide-h1\">Vòng đời 3 bước bảo toàn trí nhớ dự án và nối mạch công việc chỉ trong 5 giây</div>\n      <div class=\"k-slide-sub\">Bắt đầu mỗi ngày làm việc với một khung chat mới nhẹ nhàng mà Trợ lý AI vẫn nắm rõ từng chỉ tiêu hôm qua.</div>\n    </div>\n    <div class=\"k-visual-hero-box k-layout-timeline k-step-item k-hl\" id=\"s2_step1\" data-order=\"1\">\n      <div class=\"k-viz-header\">\n        <span class=\"k-viz-badge\">⏱️ QUY TRÌNH BÀN GIAO GIỮA CÁC CA LÀM VIỆC</span>\n        <span class=\"k-viz-title\">Ba bước khép kín giúp dự án kéo dài nhiều tuần luôn liền mạch 100%</span>\n      </div>\n      <div class=\"k-tl-track\">\n        <div class=\"k-tl-step\">\n          <span class=\"k-tl-num\">Bước 1 · Cuối ca chiều</span>\n          <strong>CHỐT SỔ BÀN GIAO</strong>\n          <span>AI tự tóm tắt 3 mục vào ban_giao_cong_viec.md</span>\n        </div>\n        <div class=\"k-tl-conn\">──▶</div>\n        <div class=\"k-tl-step\">\n          <span class=\"k-tl-num\">Bước 2 · Đầu ca sáng</span>\n          <strong>MỞ PHIÊN CHAT MỚI (+)</strong>\n          <span>Giải phóng 100% rác ngữ cảnh cũ · AI nhẹ đầu</span>\n        </div>\n        <div class=\"k-tl-conn\">──▶</div>\n        <div class=\"k-tl-step k-tl-final\">\n          <span class=\"k-tl-num\">Bước 3 · Nối mạch 5 giây</span>\n          <strong>GỌI @BAN_GIAO_CONG_VIEC.MD</strong>\n          <span>AI đọc lại sổ bàn giao &amp; làm tiếp ngay mục số 3</span>\n        </div>\n      </div>\n    </div>\n    <div class=\"k-grid-3\" style=\"grid-template-columns: 1fr 1fr;\">\n      <div class=\"k-card k-step-item k-unreached\" id=\"s2_step2\" data-order=\"2\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#E0F2FE; color:#0369A1; border:1px solid #7DD3FC;\">CẤU TRÚC 3 PHẦN · ĐÃ XONG · ĐÃ CHỐT · LÀM TIẾP</span>\n        </div>\n        <h3>Ba hạng mục vàng cần có trong tệp ban_giao_cong_viec.md</h3>\n        <p>Một cuốn sổ bàn giao chuẩn mực do AI tự ghi lại luôn gồm ba phần rõ ràng: Thứ nhất là các tệp báo cáo đã hoàn thành; thứ hai là các con số, chỉ tiêu quan trọng đã chốt; và thứ ba là danh sách việc cần làm tiếp theo.</p>\n        <div class=\"k-card-mini-note\">📋 Ngắn gọn, súc tích · Không chứa tin nhắn nháp dư thừa</div>\n      </div>\n      <div class=\"k-card k-step-item k-unreached\" id=\"s2_step3\" data-order=\"3\">\n        <div class=\"k-card-top-row\">\n          <span class=\"k-card-tag\" style=\"background:#DCFCE7; color:#15803D; border:1px solid #86EFAC;\">KỸ THUẬT NỐI MẠCH · 5 GIÂY KHỞI ĐỘNG CA MỚI</span>\n        </div>\n        <h3>Mở phiên mới (+) và đính kèm @ban_giao_cong_viec.md</h3>\n        <p>Sáng hôm sau, bạn chỉ cần bấm nút dấu cộng mở một luồng trò chuyện mới tinh, gõ <code>@ban_giao_cong_viec.md</code> kèm tệp dữ liệu cần xử lý tiếp. Trợ lý AI sẽ lập tức nhớ toàn bộ quyết định hôm qua và bắt tay vào việc ngay.</p>\n        <div class=\"k-card-mini-note\">⚡ Vừa giữ trọn trí nhớ dự án · Vừa đạt tốc độ phản hồi tối đa</div>\n      </div>\n    </div>\n    ",
+    "s_outro": "\n    <div class=\"k-Visual-Outro\">\n      <h3>Tổng kết &amp; Ghi nhớ cốt lõi Bài 8</h3>\n      <ul>\n        <li><strong>Tránh tràn bộ nhớ ngữ cảnh:</strong> Không kéo dài một luồng chat qua quá nhiều chủ đề; hãy tách mỗi nhiệm vụ lớn thành một phiên riêng.</li>\n        <li><strong>Cấu trúc Sổ bàn giao 3 phần:</strong> Cuối ca yêu cầu AI ghi vào <code>ban_giao_cong_viec.md</code> gồm: Việc đã xong, Quyết định đã chốt và Việc cần làm tiếp.</li>\n        <li><strong>Nối mạch trong 5 giây:</strong> Đầu ca mới mở phiên chat mới và gọi <code>@ban_giao_cong_viec.md</code> để khôi phục 100% tiến độ dự án.</li>\n      </ul>\n    </div>\n    "
+  },
+  "beats": [
+    {
+      "id": "b1",
+      "label": "1. Lý thuyết (Phần 1): Vòng đời 3 bước bảo toàn trí nhớ & Hiện tượng tràn bộ nhớ ngữ cảnh",
+      "duration": 24.48,
+      "pose": 1,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s1",
+      "slide_id": "s1",
+      "hl": [
+        "s1_step1",
+        "s1_step2",
+        "s1_step3"
+      ],
+      "caption": "Chào mừng anh chị đến với <strong>Bài 8</strong>. Mục tiêu của bài học này là giải quyết bài toán làm sao mở một khung trò chuyện mới tinh mà trợ lý AI vẫn nhớ trọn vẹn một trăm phần trăm công việc hôm qua. Trong thực tế, khi một luồng trò chuyện kéo dài qua quá nhiều chủ đề, các tin nhắn nháp cũ sẽ gây nhiễu khiến trợ lý phản hồi chậm và dễ nhầm lẫn số liệu. Giải pháp căn cơ nhất là chuyển trí nhớ từ khung chat tạm thời xuống tệp Sổ bàn giao nằm bền vững trên ổ cứng máy tính.",
+      "audio_src": "audio/lesson_08/b1.mp3",
+      "audio_duration": 23.83
+    },
+    {
+      "id": "b2",
+      "label": "2. Lý thuyết (Phần 2): Tệp Sổ bàn giao ban_giao_cong_viec.md & Kỹ thuật nối mạch 5 giây",
+      "duration": 25.12,
+      "pose": 2,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s2",
+      "slide_id": "s2",
+      "hl": [
+        "s2_step1",
+        "s2_step2",
+        "s2_step3"
+      ],
+      "caption": "Quy trình quản trị trí nhớ dự án dài hạn diễn ra rất gọn nhẹ qua ba bước: Cuối mỗi ca làm việc, anh chị yêu cầu trợ lý AI tự tóm tắt ba mục gồm việc đã xong, quyết định đã chốt và việc cần làm tiếp vào tệp <code>ban_giao_cong_viec.md</code>. Nhờ có cuốn sổ cái này trên ổ cứng, sáng hôm sau khi mở một phiên trò chuyện mới tinh để giải phóng bộ nhớ, anh chị chỉ tốn đúng năm giây gõ <code>@ban_giao_cong_viec.md</code> là trợ lý khôi phục ngay toàn bộ mạch công việc đang dang dở!",
+      "audio_src": "audio/lesson_08/b2.mp3",
+      "audio_duration": 24.47
+    },
+    {
+      "id": "b3",
+      "label": "3. Minh họa: Nhận biết khi nào cần tạo phiên chat mới (+)",
+      "duration": 10.81,
+      "pose": 3,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Quản lý Phiên Chat (Threads)",
+      "pedagogy_title": "Cách đóng phiên chat cũ đã dài và mở phiên chat mới sạch sẽ",
+      "pedagogy_note": "Mỗi khi chuyển sang một đầu việc mới hoặc cuối ngày làm việc, hãy yêu cầu AI ghi sổ bàn giao trước khi mở phiên mới.",
+      "onEnter": "kudoSimScene({surface:'ide', file:'COMPANY.md', activeTreeFile:'COMPANY.md', userMsg:'Tổng hợp toàn bộ các việc chúng ta đã làm từ sáng đến giờ', aiMsg:'Luồng hội thoại hiện tại đã trải qua 18 bước xử lý. Để bộ nhớ luôn sắc bén, bạn nên chốt kết quả vào tệp <code>ban_giao_cong_viec.md</code> trên ổ cứng!'});",
+      "focus_selectors": [
+        "#ide-chat-messages",
+        "#ide-chat-input"
+      ],
+      "pre_click_selector": "#ide-chat-input",
+      "pre_click_label": "Nhấp vào ô chat để kiểm tra độ dài phiên hội thoại",
+      "cursor_selector": "#ide-chat-messages",
+      "cursor_label": "Chốt sổ bàn giao khi luồng hội thoại đã dài",
+      "caption": "Nhìn vào cột phải trên màn hình: Khi một luồng trò chuyện đã kéo dài qua hàng chục bước, việc tiếp tục nhồi thêm yêu cầu mới sẽ làm trợ lý bị phân tán. Đó là lúc chúng ta cần chốt sổ bàn giao.",
+      "audio_src": "audio/lesson_08/b3.mp3",
+      "audio_duration": 10.16
+    },
+    {
+      "id": "b4",
+      "label": "4. Kỹ thuật: Cấu trúc chuẩn 3 phần của Sổ bàn giao công việc",
+      "duration": 12.25,
+      "pose": 4,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Cấu trúc Sổ Bàn Giao",
+      "pedagogy_title": "3 mục bắt buộc trong tệp ban_giao_cong_viec.md",
+      "pedagogy_note": "1. Các tệp đã hoàn thành; 2. Các thông số/quyết định đã chốt; 3. Danh sách việc cần làm tiếp trong ca sau.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'ban_giao_cong_viec.md', breadcrumb:'antigravity_course_vn › ban_giao_cong_viec.md', editorTitle:'📒 ban_giao_cong_viec.md — Sổ Bàn Giao Dự Án', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#9a3412;margin-top:0;\">SỔ BÀN GIAO CÔNG VIỆC — DỰ ÁN TASKFLOW QUÝ 2</h2><h4>1. Hạng mục đã hoàn thành (Done)</h4><ul><li>Đã chuẩn hóa hồ sơ <code>@COMPANY.md</code> và <code>@troly.md</code>.</li><li>Đã ban hành thông báo mục tiêu Quý 2 tại <code>thong_bao_q2.md</code>.</li></ul><h4>2. Quyết định quan trọng đã chốt (Key Decisions)</h4><ul><li>Chỉ tiêu giảm Churn Rate chốt ở mức <strong>30%</strong> (từ 6.2% xuống 4.3%).</li></ul><h4>3. Việc cần làm tiếp ở phiên sau (Next Actions)</h4><ul><li>[ ] Phân tích chi tiết bảng <code>sales_data.csv</code> theo từng khu vực.</li></ul></div>'});",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas"
+      ],
+      "pre_click_selector": "[data-file='ban_giao_cong_viec.md']",
+      "pre_click_label": "Nhấp chọn tệp ban_giao_cong_viec.md ở cây thư mục trái",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "3 mục chuẩn: Đã xong - Đã chốt - Làm tiếp",
+      "caption": "Khi bấm vào tệp <code>ban_giao_cong_viec.md</code> ở cây thư mục trái, anh chị sẽ thấy cấu trúc chuẩn do chính AI tự ghi lại ở cột giữa: Gồm các hạng mục đã hoàn thành, những con số đã chốt và danh sách việc cần làm tiếp theo.",
+      "audio_src": "audio/lesson_08/b4.mp3",
+      "audio_duration": 11.6
+    },
+    {
+      "id": "b5",
+      "label": "5. Bước 1: Ra lệnh cho AI tự ghi Sổ bàn giao cuối ca",
+      "duration": 11.29,
+      "pose": 5,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 1/3 · Lệnh chốt Sổ bàn giao",
+      "pedagogy_title": "Hết giờ làm việc chiều thứ Năm, cần lưu lại toàn bộ tiến độ",
+      "pedagogy_note": "Bước 1: Gõ lệnh yêu cầu AI tổng hợp tiến độ hiện tại từ @COMPANY.md vào tệp ban_giao_cong_viec.md rồi bấm Gửi.",
+      "onEnter": "kudoSimScene({surface:'ide', file:'COMPANY.md', activeTreeFile:'COMPANY.md', popupMode:'mention', clearChat:true, chatInput:'@COMPANY.md Hãy tổng hợp toàn bộ kết quả làm việc hôm nay, các con số đã chốt và việc cần làm ngày mai vào tệp ban_giao_cong_viec.md'});",
+      "focus_selectors": [
+        "#ide-popup-menu",
+        "#ide-chat-input",
+        "#ide-send-btn"
+      ],
+      "pre_click_selector": "#ide-popup-menu .popup-item",
+      "pre_click_label": "Chọn tệp/lệnh từ bảng gợi ý tự động",
+      "cursor_selector": "#ide-send-btn",
+      "cursor_label": "Bước 1: Yêu cầu AI ghi tệp ban_giao_cong_viec.md",
+      "caption": "Chúng ta thực hành 3 bước bàn giao giữa các ca làm việc. Ở <strong>Bước 1</strong>, trước khi nghỉ chiều, anh chị gõ lệnh kèm <code>@COMPANY.md</code> yêu cầu trợ lý tổng hợp tiến độ hôm nay vào tệp <code>ban_giao_cong_viec.md</code>.",
+      "audio_src": "audio/lesson_08/b5.mp3",
+      "audio_duration": 10.64
+    },
+    {
+      "id": "b6",
+      "label": "6. Bước 2: Mở phiên chat mới và đính kèm @ban_giao_cong_viec.md",
+      "duration": 10.81,
+      "pose": 6,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 2/3 · Khôi phục ngữ cảnh ca mới",
+      "pedagogy_title": "Bước 2: Sáng hôm sau mở chat mới và gõ @ban_giao_cong_viec.md",
+      "pedagogy_note": "Đính kèm @ban_giao_cong_viec.md từ bảng gợi ý kèm yêu cầu thực hiện ngay mục việc cần làm tiếp theo.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'ban_giao_cong_viec.md', popupMode:'mention', clearChat:true, chatInput:'@ban_giao_cong_viec.md @sales_data.csv Hãy đọc sổ bàn giao hôm qua và thực hiện ngay mục việc cần làm tiếp theo.'});",
+      "focus_selectors": [
+        "#ide-popup-menu",
+        "#ide-chat-input",
+        "#ide-send-btn"
+      ],
+      "pre_click_selector": "#ide-popup-menu .popup-item",
+      "pre_click_label": "Chọn tệp/lệnh từ bảng gợi ý tự động",
+      "cursor_selector": "#ide-send-btn",
+      "cursor_label": "Bước 2: Nạp lại @ban_giao_cong_viec.md trong 5 giây",
+      "caption": "Sang <strong>Bước 2</strong>, sáng hôm sau khi mở phiên chat mới tinh, anh chị chỉ mất 5 giây chọn <code>@ban_giao_cong_viec.md</code> từ bảng gợi ý tự động và bảo trợ lý làm tiếp mục đang dang dở.",
+      "audio_src": "audio/lesson_08/b6.mp3",
+      "audio_duration": 10.16
+    },
+    {
+      "id": "b7",
+      "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+      "duration": 19.33,
+      "pose": 1,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "✅ Thực hành Bước 3/3 · Tổng kết & Nghiệm thu",
+      "pedagogy_title": "Bước 3: Trợ lý AI nhớ chính xác chỉ tiêu 30% hôm qua và cập nhật kết quả Ca 2",
+      "pedagogy_note": "Không mất 1% ngữ cảnh nào giữa các ngày làm việc.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'ban_giao_cong_viec.md', breadcrumb:'antigravity_course_vn › ban_giao_cong_viec.md (Đã cập nhật Ca 2)', editorTitle:'📒 ban_giao_cong_viec.md — Đã nối mạch thành công', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#15803d;margin-top:0;\">✅ ĐÃ KHÔI PHỤC NGỮ CẢNH &amp; HOÀN TẤT HẠNG MỤC TIẾP THEO</h2><p><strong>Ngữ cảnh nhận diện từ Ca 1:</strong> Mục tiêu giảm Churn Rate 30% (về mức 4.3%).</p><p><strong>Kết quả thực thi Ca 2:</strong> Đã đối chiếu <code>sales_data.csv</code> và phát hiện nhóm khách hàng SMB cần ưu tiên chăm sóc đầu tiên.</p></div>', userMsg:'@ban_giao_cong_viec.md @sales_data.csv Hãy đọc sổ bàn giao hôm qua và thực hiện ngay mục việc cần làm tiếp theo.', aiMsg:'Đã đọc <code>@ban_giao_cong_viec.md</code>! Tôi ghi nhớ chỉ tiêu giảm Churn Rate 30% đã chốt hôm qua và vừa hoàn tất bước phân tích <code>@sales_data.csv</code> tiếp theo cho bạn.'});",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas",
+        "#ide-chat-messages"
+      ],
+      "pre_click_selector": "[data-file='ban_giao_cong_viec.md']",
+      "pre_click_label": "Nhấp chọn tệp ban_giao_cong_viec.md ở cây thư mục trái",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Bước 3: AI nhớ trọn vẹn ngữ cảnh hôm qua!",
+      "caption": "Ở <strong>Bước 3</strong>, bấm vào tệp <code>ban_giao_cong_viec.md</code>, anh chị thấy trợ lý nhắc lại chính xác chỉ tiêu 30% đã chốt hôm qua và hoàn tất ngay việc phân tích dữ liệu tiếp theo. Như vậy anh chị đã làm chủ trọn vẹn kỹ thuật lập Sổ bàn giao công việc trên ổ cứng để giữ trí nhớ dài hạn cho mọi dự án mà không bao giờ lo tràn bộ nhớ khung chat.",
+      "audio_src": "audio/lesson_08/b7.mp3",
+      "audio_duration": 18.68
+    }
+  ]
+}

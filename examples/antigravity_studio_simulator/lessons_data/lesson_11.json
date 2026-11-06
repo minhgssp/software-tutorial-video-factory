@@ -1,0 +1,180 @@
+{
+  "lesson_slug": "lesson_11",
+  "filename": "lesson_11.html",
+  "legacy_alias": "",
+  "code": "BÀI 11",
+  "chapter_number": 3,
+  "chapter_code": "CHƯƠNG 3",
+  "chapter_title": "Thiết kế Bộ não .agent & Tự động hóa Quy trình",
+  "title": "Đóng gói Quy trình Lặp lại Thành Lệnh Gạch chéo (.agent/workflows)",
+  "short_title": "Đóng gói Lệnh /workflows",
+  "pill_label": "Bài 11 · Đóng gói /workflows",
+  "description": "Biến các công việc lặp đi lặp lại hàng ngày/hàng tuần thành một tệp kịch bản trong .agent/workflows/ để bất kỳ ai trong phòng cũng chỉ cần gõ /tên-quy-trình là chạy chuẩn 100%.",
+  "prerequisites": "Hiểu tổng quan .agent và đã biết thiết kế Rules, Skills.",
+  "dependents": "Tự động hóa các quy trình báo cáo định kỳ và phối hợp toàn phòng ban.",
+  "placement_risk": "0% Rủi ro — Học viên tự tay đóng gói quy trình /tong-hop-tuan bằng ngôn ngữ tiếng Việt tự nhiên.",
+  "continuity_bridge": "Đóng gói thành công chuỗi công việc lặp lại hàng tuần thành một lệnh gạch chéo / trong .agent/workflows/ để chuẩn hóa đầu ra cho cả phòng ban.",
+  "slides": {
+    "s1": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 3 · BÀI 11 · ĐẶT VẤN ĐỀ</span>\n        <span class=\"k-slide-step\">Tự động hóa Công việc Lặp lại</span>\n      </div>\n      <div class=\"k-slide-h1\">Biến chuỗi việc lặp đi lặp lại mỗi sáng thứ Hai thành một nút bấm /tong-hop-tuan</div>\n      <div class=\"k-slide-sub\">Xóa bỏ cảnh tuần nào cũng phải gõ lại từng câu lệnh dài dòng: Đóng gói một lần vào <code>.agent/workflows/</code>, dùng mãi mãi.</div>\n    </div>\n    <div style=\"display:flex; flex-direction:column; gap:12px;\">\n      <div class=\"k-visual-hero-box k-layout-comparison k-step-item k-hl\" id=\"s1_step1\" data-order=\"1\">\n        <div class=\"k-cmp-col k-cmp-before\">\n          <div class=\"k-cmp-badge-old\">❌ CÁCH LÀM THỦ CÔNG · NHẮC LẠI MỖI TUẦN</div>\n          <div class=\"k-cmp-main\">Sáng thứ Hai nào cũng gõ lại 4-5 câu lệnh rời rạc</div>\n          <div class=\"k-cmp-sub\">Tốn 30 phút tìm tệp, nhắc lại quy tắc, dễ quên bước kiểm tra chéo</div>\n        </div>\n        <div class=\"k-cmp-arrow\">➔</div>\n        <div class=\"k-cmp-col k-cmp-after\">\n          <div class=\"k-cmp-badge-new\">✅ ĐÓNG GÓI WORKFLOW · 1 NÚT BẤM TỰ ĐỘNG</div>\n          <div class=\"k-cmp-main\">Gõ duy nhất <code>/tong-hop-tuan</code> trong khung hội thoại</div>\n          <div class=\"k-cmp-sub\">AI tự động chạy tuần tự từ đọc dữ liệu đến xuất tệp báo cáo trong 10 giây</div>\n        </div>\n      </div>\n      <div class=\"k-card k-step-item k-unreached\" id=\"s1_step2\" data-order=\"2\" style=\"padding:12px 16px;\">\n        <div style=\"display:flex; align-items:center; justify-content:space-between; gap:16px;\">\n          <div style=\"flex:1;\">\n            <span class=\"k-card-tag\" style=\"background:#FFF1E6; color:#C2410C; border:1px solid #FDBA74;\">CƠ CHẾ ÁNH XẠ TỰ ĐỘNG 1-1</span>\n            <h3 style=\"margin:6px 0 4px;\">Tên tệp trong .agent/workflows/ chính là Tên lệnh gạch chéo /</h3>\n            <p style=\"margin:0; font-size:12.5px; color:#475569;\">Chỉ cần lưu một tệp văn bản đặt tên không dấu nối bằng gạch ngang như <code>tong-hop-tuan.md</code> vào thư mục <code>.agent/workflows/</code>, hệ thống lập tức tạo ra lệnh <code>/tong-hop-tuan</code>.</p>\n          </div>\n          <svg viewBox=\"0 0 310 64\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:290px; height:auto; flex-shrink:0;\">\n            <rect x=\"4\" y=\"6\" width=\"148\" height=\"52\" rx=\"8\" fill=\"#FFF7ED\" stroke=\"#FB923C\" stroke-width=\"1.5\"/>\n            <text x=\"78\" y=\"27\" text-anchor=\"middle\" fill=\"#9A3412\" font-size=\"10\" font-weight=\"800\">📄 tong-hop-tuan.md</text>\n            <text x=\"78\" y=\"44\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"9\">Trong .agent/workflows/</text>\n            <path d=\"M156 32 H174\" stroke=\"#EA580C\" stroke-width=\"2.5\" stroke-linecap=\"round\"/>\n            <polygon points=\"172,27 180,32 172,37\" fill=\"#EA580C\"/>\n            <rect x=\"184\" y=\"6\" width=\"122\" height=\"52\" rx=\"8\" fill=\"#DCFCE7\" stroke=\"#4ADE80\" stroke-width=\"1.5\"/>\n            <text x=\"245\" y=\"27\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"10.5\" font-weight=\"800\">⚡ /tong-hop-tuan</text>\n            <text x=\"245\" y=\"44\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"9\">Gõ / là hiện ngay</text>\n          </svg>\n        </div>\n      </div>\n      <div class=\"k-callout k-step-item k-unreached\" id=\"s1_step3\" data-order=\"3\">\n        <span>🔗</span>\n        <div><strong>Tức thì &amp; Không cần cài đặt:</strong> Ngay khi tệp kịch bản được lưu vào <code>.agent/workflows/</code>, nút bấm lệnh <code>/</code> xuất hiện ngay lập tức mà không cần khởi động lại phần mềm.</div>\n      </div>\n    </div>\n    ",
+    "s2": "\n    <div>\n      <div class=\"k-slide-header\">\n        <span class=\"k-slide-kicker\">CHƯƠNG 3 · BÀI 11 · THIẾT KẾ DÂY CHUYỀN</span>\n        <span class=\"k-slide-step\">Cấu trúc Kịch bản Workflow</span>\n      </div>\n      <div class=\"k-slide-h1\">Viết kịch bản từng bước bằng tiếng Việt và Nhân bản năng suất cho toàn đội ngũ</div>\n      <div class=\"k-slide-sub\">Bất kỳ nhân sự nào trong phòng nhận thư mục dự án cũng chạy được ngay quy trình chuẩn như trưởng phòng.</div>\n    </div>\n    <div style=\"display:flex; flex-direction:column; gap:12px;\">\n      <div class=\"k-visual-hero-box k-layout-flowchart k-step-item k-hl\" id=\"s2_step1\" data-order=\"1\">\n        <div class=\"k-viz-header\">\n          <span class=\"k-viz-badge\">📊 DÂY CHUYỀN 3 BƯỚC TRONG TỆP WORKFLOW</span>\n          <span class=\"k-viz-title\">Viết rõ ràng bằng tiếng Việt như tờ phiếu giao việc cho nhân viên</span>\n        </div>\n        <svg class=\"k-flow-svg\" viewBox=\"0 0 860 92\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <path d=\"M262 46 H298\" stroke=\"#EA580C\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n          <polygon points=\"295,40 307,46 295,52\" fill=\"#EA580C\"/>\n          <path d=\"M562 46 H598\" stroke=\"#15803D\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n          <polygon points=\"595,40 607,46 595,52\" fill=\"#15803D\"/>\n          <rect x=\"8\" y=\"6\" width=\"252\" height=\"78\" rx=\"12\" fill=\"#FFF7ED\" stroke=\"#FDBA74\" stroke-width=\"2\"/>\n          <text x=\"134\" y=\"30\" text-anchor=\"middle\" fill=\"#9A3412\" font-size=\"12.5\" font-weight=\"800\">BƯỚC 1 · ĐỌC ĐẦU VÀO</text>\n          <text x=\"134\" y=\"52\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"13.5\" font-weight=\"700\">Quét tệp dữ liệu tuần</text>\n          <text x=\"134\" y=\"71\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"11.5\">Đọc @sales_data.csv mới nhất</text>\n          <rect x=\"308\" y=\"6\" width=\"252\" height=\"78\" rx=\"12\" fill=\"#FEF3C7\" stroke=\"#F59E0B\" stroke-width=\"2\"/>\n          <text x=\"434\" y=\"30\" text-anchor=\"middle\" fill=\"#B45309\" font-size=\"12.5\" font-weight=\"800\">BƯỚC 2 · ÁP DỤNG SKILL</text>\n          <text x=\"434\" y=\"52\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"13.5\" font-weight=\"700\">Đối chiếu chuẩn phân tích</text>\n          <text x=\"434\" y=\"71\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"11.5\">Nạp kỹ năng bao-cao-tuan</text>\n          <rect x=\"608\" y=\"6\" width=\"244\" height=\"78\" rx=\"12\" fill=\"#DCFCE7\" stroke=\"#4ADE80\" stroke-width=\"2\"/>\n          <text x=\"730\" y=\"30\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"12.5\" font-weight=\"800\">BƯỚC 3 · XUẤT TỆP ĐÍCH</text>\n          <text x=\"730\" y=\"52\" text-anchor=\"middle\" fill=\"#1E293B\" font-size=\"13.5\" font-weight=\"700\">Ghi báo cáo hoàn chỉnh</text>\n          <text x=\"730\" y=\"71\" text-anchor=\"middle\" fill=\"#15803D\" font-size=\"11.5\">Lưu ra bao_cao_thu_hai.md</text>\n        </svg>\n      </div>\n      <div class=\"k-card k-step-item k-unreached\" id=\"s2_step2\" data-order=\"2\" style=\"padding:12px 16px;\">\n        <span class=\"k-card-tag\" style=\"background:#E0F2FE; color:#0369A1; border:1px solid #7DD3FC;\">CHIA SẺ TÀI SẢN QUY TRÌNH CHO ĐỘI NGŨ</span>\n        <h3 style=\"margin:6px 0 4px;\">Nhân sự mới vào phòng cũng làm đúng chuẩn ngay ngày đầu tiên</h3>\n        <p style=\"margin:0; font-size:12.5px; color:#475569;\">Khi bạn bàn giao thư mục dự án cho đồng nghiệp, toàn bộ các lệnh <code>/workflow</code> đã nằm sẵn bên trong. Đồng nghiệp chỉ cần gõ <code>/tong-hop-tuan</code> là ra kết quả đồng nhất 100%.</p>\n      </div>\n      <div class=\"k-callout k-step-item k-unreached\" id=\"s2_step3\" data-order=\"3\">\n        <span>💡</span>\n        <div><strong>Phân biệt cốt lõi:</strong> Kỹ năng (<code>Skill</code>) dạy AI <em>cách làm chuyên sâu một nghiệp vụ</em>; còn Quy trình (<code>Workflow</code>) chỉ huy AI <em>chạy lần lượt Bước 1, Bước 2, Bước 3 từ đầu đến đích</em>.</div>\n      </div>\n    </div>\n    "
+  },
+  "beats": [
+    {
+      "id": "b1",
+      "label": "1. Lý thuyết (Phần 1): Đóng gói chuỗi việc lặp lại thành nút bấm & Cơ chế Tên tệp là Tên lệnh",
+      "duration": 30.57,
+      "pose": 1,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s1",
+      "slide_id": "s1",
+      "hl": [
+        "s1_step1",
+        "s1_step2",
+        "s1_step3"
+      ],
+      "caption": "Trong công việc văn phòng, có những chuỗi thao tác cứ lặp đi lặp lại đều đặn mỗi sáng thứ Hai như mở bảng doanh số, đối chiếu chỉ tiêu rồi soạn báo cáo giao ban. Thay vì tuần nào cũng phải gõ lại từng câu lệnh rời rạc, chúng ta có thể đóng gói toàn bộ quy trình đó thành một nút bấm tự động trong ngăn <code>.agent/workflows/</code>. Cơ chế hoạt động cực kỳ trực quan: Tên tệp văn bản chính là tên lệnh gạch chéo, nghĩa là khi anh chị lưu tệp tên <code>tong-hop-tuan.md</code> thì trong khung hội thoại lập tức xuất hiện lệnh <code>/tong-hop-tuan</code> sẵn sàng kích hoạt ngay.",
+      "audio_src": "audio/lesson_11/b1.mp3",
+      "audio_duration": 29.92
+    },
+    {
+      "id": "b2",
+      "label": "2. Lý thuyết (Phần 2): Kịch bản 3 bước bằng tiếng Việt, Nhân bản cho đội ngũ & Phân biệt Skill với Workflow",
+      "duration": 28.37,
+      "pose": 2,
+      "mode": "theory",
+      "pedagogy_type": "theory_type_1",
+      "slide": "s2",
+      "slide_id": "s2",
+      "hl": [
+        "s2_step1",
+        "s2_step2",
+        "s2_step3"
+      ],
+      "caption": "Để viết một tệp quy trình, anh chị không cần biết bất kỳ mã lập trình nào mà chỉ cần liệt kê bằng tiếng Việt như viết phiếu giao việc: Bước một đọc tệp dữ liệu nào, bước hai áp dụng kỹ năng phân tích gì, và bước ba xuất kết quả ra tệp tên là gì. Nhờ đóng gói thành tệp sẵn có trong dự án, khi anh chị chia sẻ thư mục này cho đồng nghiệp, cả phòng ban đều dùng chung được ngay nút bấm tự động đó. Hãy nhớ nguyên tắc cốt lõi: <code>Skill</code> dạy AI cách làm sâu một nghiệp vụ, còn <code>Workflow</code> chỉ huy AI chạy tuần tự từng bước tới đích.",
+      "audio_src": "audio/lesson_11/b2.mp3",
+      "audio_duration": 27.72
+    },
+    {
+      "id": "b3",
+      "label": "3. Minh họa: Quan sát cấu trúc tệp workflow trong IDE",
+      "duration": 13.79,
+      "pose": 3,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Giải phẫu Tệp Workflow",
+      "pedagogy_title": "Cấu trúc Đầu vào -> Các bước xử lý -> Đầu ra trong tệp .agent/workflows/",
+      "pedagogy_note": "Mở tệp start-1-1.md để thấy cách viết từng bước Bước 1, Bước 2, Bước 3 bằng ngôn ngữ tiếng Việt tự nhiên.",
+      "onEnter": "kudoHidePopovers(); switchToSurface('ide'); switchIdeSidebarMode('explorer'); setEditorMode('wysiwyg'); openFileInEditor('start-1-1.md');",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas"
+      ],
+      "pre_click_selector": "[data-file='start-1-1.md']",
+      "pre_click_label": "Nhấp chọn tệp start-1-1.md ở cây thư mục trái",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Mỗi tệp trong .agent/workflows/ là một kịch bản từng bước",
+      "caption": "Khi bấm chọn tệp <code>start-1-1.md</code> ở cây thư mục trái và nhìn vào cột giữa: Một tệp <code>workflow</code> thực chất không có mã lập trình phức tạp nào cả. Nó chỉ là văn bản tiếng Việt chia rõ Bước 1 đọc tệp gì, Bước 2 phân tích sao và Bước 3 lưu kết quả vào đâu.",
+      "audio_src": "audio/lesson_11/b3.mp3",
+      "audio_duration": 13.14
+    },
+    {
+      "id": "b4",
+      "label": "4. Kỹ thuật: Cơ chế hiển thị lệnh mới trong bảng gạch chéo (/)",
+      "duration": 12.81,
+      "pose": 4,
+      "mode": "sim",
+      "pedagogy_type": "theory_type_2",
+      "pedagogy_badge": "💡 Điểm cần lưu ý · Kích hoạt Lệnh Gạch chéo",
+      "pedagogy_title": "Tệp vừa lưu trong .agent/workflows/ lập tức xuất hiện khi gõ dấu /",
+      "pedagogy_note": "Không cần khởi động lại phần mềm: Lưu tệp xong là gõ dấu / gọi chạy được ngay.",
+      "onEnter": "kudoHidePopovers(); switchToSurface('ide'); kudoOpenIdeSlashPopup();",
+      "focus_selectors": [
+        ".context-toolbar",
+        "#ide-popup-menu",
+        "#ide-chat-input"
+      ],
+      "pre_click_selector": "#ide-chat-input",
+      "pre_click_label": "Nhấp vào ô chat và gõ dấu / để mở bảng lệnh Workflows",
+      "cursor_selector": "#ide-popup-menu .popup-item",
+      "cursor_label": "Bảng lệnh gạch chéo tự động cập nhật theo thư mục workflows",
+      "caption": "Ngay khi tệp quy trình được lưu vào thư mục <code>.agent/workflows/</code>, anh chị không cần khởi động lại phần mềm. Chỉ cần gõ dấu gạch chéo <code>/</code> ở ô chat là tên lệnh mới đã sẵn sàng trong bảng gợi ý để bấm chạy.",
+      "audio_src": "audio/lesson_11/b4.mp3",
+      "audio_duration": 12.16
+    },
+    {
+      "id": "b5",
+      "label": "5. Bước 1: Yêu cầu AI tạo workflow /tong-hop-tuan",
+      "duration": 15.05,
+      "pose": 5,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 1/3 · Khởi tạo Workflow mới",
+      "pedagogy_title": "Đóng gói quy trình 3 bước tổng hợp doanh thu và soạn báo cáo sáng thứ Hai",
+      "pedagogy_note": "Bước 1: Nhập yêu cầu kèm @sales_data.csv vào ô chat để AI tự tạo tệp .agent/workflows/tong-hop-tuan.md.",
+      "onEnter": "kudoSimScene({surface:'ide', file:'start-1-1.md', activeTreeFile:'start-1-1.md', popupMode:'mention', clearChat:true, chatInput:'@sales_data.csv Hãy tạo giúp tôi một quy trình tại .agent/workflows/tong-hop-tuan.md gồm 3 bước: (1) Đọc @sales_data.csv, (2) Áp dụng kỹ năng bao-cao-tuan, (3) Xuất tệp bao_cao_thu_hai.md'});",
+      "focus_selectors": [
+        "#ide-popup-menu",
+        "#ide-chat-input",
+        "#ide-send-btn"
+      ],
+      "pre_click_selector": "#ide-popup-menu .popup-item",
+      "pre_click_label": "Chọn tệp/lệnh từ bảng gợi ý tự động",
+      "cursor_selector": "#ide-send-btn",
+      "cursor_label": "Bước 1: Yêu cầu AI tạo tệp workflow tong-hop-tuan.md",
+      "caption": "Chúng ta vào thực hành 3 bước đóng gói quy trình tự động. Ở <strong>Bước 1</strong>, anh chị chọn <code>@sales_data.csv</code> từ bảng gợi ý và yêu cầu trợ lý tạo tệp <code>.agent/workflows/tong-hop-tuan.md</code> gồm 3 bước xử lý doanh thu sáng thứ Hai.",
+      "audio_src": "audio/lesson_11/b5.mp3",
+      "audio_duration": 14.4
+    },
+    {
+      "id": "b6",
+      "label": "6. Bước 2: Mở kiểm tra tệp tong-hop-tuan.md và gõ lệnh /tong-hop-tuan",
+      "duration": 11.85,
+      "pose": 6,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "👆 Thực hành Bước 2/3 · Gọi lệnh /tong-hop-tuan",
+      "pedagogy_title": "Bước 2: Kiểm tra tệp kịch bản ở cột giữa và chọn /tong-hop-tuan trong ô chat",
+      "pedagogy_note": "Tệp tong-hop-tuan.md đã xuất hiện ở cây thư mục trái; giờ bạn chỉ cần gõ /tong-hop-tuan và bấm Gửi.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'tong-hop-tuan.md', popupMode:'slash', breadcrumb:'.agent › workflows › tong-hop-tuan.md', editorTitle:'⚡ .agent/workflows/tong-hop-tuan.md — Quy Trình Tự Động', editorHtml:'<div style=\"padding:16px;\"><h3 style=\"color:#9a3412;margin-top:0;\">WORKFLOW: /tong-hop-tuan</h3><ol><li><strong>Bước 1:</strong> Đọc dữ liệu mới nhất từ <code>@sales_data.csv</code>.</li><li><strong>Bước 2:</strong> Kích hoạt kỹ năng <code>bao-cao-tuan</code> và nội quy văn phòng.</li><li><strong>Bước 3:</strong> Xuất báo cáo hoàn chỉnh ra tệp <code>bao_cao_thu_hai.md</code>.</li></ol></div>', clearChat:true, chatInput:'/tong-hop-tuan'});",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas",
+        "#ide-popup-menu",
+        "#ide-chat-input",
+        "#ide-send-btn"
+      ],
+      "pre_click_selector": "#ide-popup-menu .popup-item",
+      "pre_click_label": "Chọn tệp/lệnh từ bảng gợi ý tự động",
+      "cursor_selector": "#ide-send-btn",
+      "cursor_label": "Bước 2: Chọn /tong-hop-tuan và nhấn Gửi",
+      "caption": "Sang <strong>Bước 2</strong>, sau khi tệp kịch bản <code>tong-hop-tuan.md</code> hiện lên ở cây thư mục trái và cột giữa, anh chị chỉ cần gõ dấu <code>/</code>, chọn lệnh <code>/tong-hop-tuan</code> từ bảng gợi ý tự động và nhấn Gửi.",
+      "audio_src": "audio/lesson_11/b6.mp3",
+      "audio_duration": 11.2
+    },
+    {
+      "id": "b7",
+      "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+      "duration": 18.22,
+      "pose": 1,
+      "mode": "sim",
+      "pedagogy_type": "practice_step",
+      "pedagogy_badge": "✅ Thực hành Bước 3/3 · Kết quả hoàn thành",
+      "pedagogy_title": "Bước 3: Kiểm tra kết quả tệp bao_cao_thu_hai.md được sinh ra tự động sau 1 lệnh",
+      "pedagogy_note": "Chỉ 1 lệnh /tong-hop-tuan đã hoàn thành trọn gói 3 bước và tạo tệp mới trên cây thư mục.",
+      "onEnter": "kudoSimScene({surface:'ide', activeTreeFile:'bao_cao_thu_hai.md', breadcrumb:'antigravity_course_vn › bao_cao_thu_hai.md (Sinh bởi /tong-hop-tuan)', editorTitle:'📄 bao_cao_thu_hai.md — Hoàn tất tự động 3/3 bước', editorHtml:'<div style=\"padding:16px;\"><h2 style=\"color:#15803d;margin-top:0;\">BÁO CÁO GIAO BAN SÁNG THỨ HAI — TASKFLOW INC.</h2><p><strong>Trạng thái quy trình:</strong> Đã chạy tự động Bước 1 (Đọc CSV) &rarr; Bước 2 (Áp dụng Skill) &rarr; Bước 3 (Xuất tệp).</p><p><strong>Điểm nhấn tuần qua:</strong> Khu vực miền Nam tăng trưởng 14%, đề xuất nhân rộng kịch bản chăm sóc khách hàng sang miền Bắc.</p></div>', userMsg:'/tong-hop-tuan', aiMsg:'Đã thực thi trọn gói quy trình <code>/tong-hop-tuan</code> qua 3 bước và lưu kết quả tại <code>bao_cao_thu_hai.md</code>!'});",
+      "focus_selectors": [
+        "#ide-file-tree",
+        "#editor-canvas",
+        "#ide-chat-messages"
+      ],
+      "pre_click_selector": "[data-file='bao_cao_thu_hai.md']",
+      "pre_click_label": "Nhấp chọn tệp bao_cao_thu_hai.md ở cây thư mục trái",
+      "cursor_selector": "#editor-canvas",
+      "cursor_label": "Bước 3: Tệp bao_cao_thu_hai.md hoàn thành sau 1 nút bấm!",
+      "caption": "Ở <strong>Bước 3</strong>, bấm vào tệp <code>bao_cao_thu_hai.md</code> ở cây thư mục trái, anh chị thấy trợ lý đã tự động chạy hết cả ba bước và xuất ra báo cáo hoàn chỉnh. Việc đóng gói các chuỗi thao tác lặp lại thành lệnh gạch chéo trong <code>.agent/workflows/</code> giúp anh chị tiết kiệm hàng giờ mỗi tuần và chuẩn hóa quy trình làm việc cho cả phòng ban.",
+      "audio_src": "audio/lesson_11/b7.mp3",
+      "audio_duration": 17.57
+    }
+  ]
+}

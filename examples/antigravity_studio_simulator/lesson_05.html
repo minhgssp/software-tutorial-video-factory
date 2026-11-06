@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BÀI 5 — Định dạng Văn bản .md, Bảng Dữ liệu .csv & Tiện ích Office Viewer</title>
-<meta name="description" content="Hiểu vì sao Trợ lý AI đọc tệp .md (Markdown) và .csv nhanh và chính xác hơn Word/Excel truyền thống; thực hành cài đặt tiện ích Office Viewer trong Extensions để xem bảng biểu trực quan.">
-<meta property="og:title" content="BÀI 5 — Định dạng Văn bản .md, Bảng Dữ liệu .csv & Tiện ích Office Viewer">
-<meta property="og:description" content="Hiểu vì sao Trợ lý AI đọc tệp .md (Markdown) và .csv nhanh và chính xác hơn Word/Excel truyền thống; thực hành cài đặt tiện ích Office Viewer trong Extensions để xem bảng biểu trực quan.">
+<title>BÀI 5 — Kỹ thuật Soạn thảo Đa Tệp: Chế độ Preview Chuột phải, Chỉnh sửa Bảng .csv & Đọc lướt Hồ sơ Dự án</title>
+<meta name="description" content="Nâng cấp kỹ năng làm việc đa tệp với văn bản .md và bảng dữ liệu .csv: Mở nhanh chế độ Preview bằng menu chuột phải trên thanh Tab, kiểm tra tiện ích Office Viewer và thực hành 3 bước đọc lướt, kiểm tra 400 dòng dữ liệu gốc trên bảng sales_data.csv.">
+<meta property="og:title" content="BÀI 5 — Kỹ thuật Soạn thảo Đa Tệp: Chế độ Preview Chuột phải, Chỉnh sửa Bảng .csv & Đọc lướt Hồ sơ Dự án">
+<meta property="og:description" content="Nâng cấp kỹ năng làm việc đa tệp với văn bản .md và bảng dữ liệu .csv: Mở nhanh chế độ Preview bằng menu chuột phải trên thanh Tab, kiểm tra tiện ích Office Viewer và thực hành 3 bước đọc lướt, kiểm tra 400 dòng dữ liệu gốc trên bảng sales_data.csv.">
 <meta property="og:type" content="article">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LearningResource",
-  "name": "BÀI 5 — Định dạng Văn bản .md, Bảng Dữ liệu .csv & Tiện ích Office Viewer",
-  "description": "Hiểu vì sao Trợ lý AI đọc tệp .md (Markdown) và .csv nhanh và chính xác hơn Word/Excel truyền thống; thực hành cài đặt tiện ích Office Viewer trong Extensions để xem bảng biểu trực quan.",
+  "name": "BÀI 5 — Kỹ thuật Soạn thảo Đa Tệp: Chế độ Preview Chuột phải, Chỉnh sửa Bảng .csv & Đọc lướt Hồ sơ Dự án",
+  "description": "Nâng cấp kỹ năng làm việc đa tệp với văn bản .md và bảng dữ liệu .csv: Mở nhanh chế độ Preview bằng menu chuột phải trên thanh Tab, kiểm tra tiện ích Office Viewer và thực hành 3 bước đọc lướt, kiểm tra 400 dòng dữ liệu gốc trên bảng sales_data.csv.",
   "learningResourceType": "Interactive Simulation & Audio Lecture",
   "inLanguage": "vi",
   "isPartOf": {
@@ -816,127 +816,153 @@
   </div>
 </div>
 
-<!-- CỘT 1: SIDEBAR TRÁI TINH GỌN (CHỌN BÀI, ĐIỀU KHIỂN 2 HÀNG & 47 ĐIỂM NEO THỜI GIAN CHỮ LỚN) -->
-<aside id="kudo-left-sidebar" aria-label="Thanh điều hướng và điều khiển bài giảng">
-  <div class="ksb-brand-bar">
-    <a class="ksb-brand-left" href="index.html" title="Về cổng mục lục khóa học">
-      <div class="ksb-logo-box" id="ksb-logo-box">A</div>
-      <div class="ksb-brand-text">
-        <div class="ksb-brand-name" id="ksb-brand-name">Antigravity Basic</div>
-        <div class="ksb-brand-sub" id="ksb-brand-sub">HoctapTech Academy</div>
+
+<!-- SINGLE LEFT-SIDEBAR ARCHITECTURE: SIDEBAR TRÁI + SÂN KHẤU CHÍNH BÊN PHẢI -->
+<div id="kudo-app-shell">
+  <aside id="kudo-left-sidebar" aria-label="Điều khiển bài giảng và danh mục phần học">
+    <div class="ksb-brand-header">
+      <div class="ksb-brand-row">
+        <div class="ksb-logo-box" id="ksb-logo-box">A</div>
+        <div class="ksb-brand-titles">
+          <div class="ksb-brand-name" id="ksb-brand-name">Antigravity Basic</div>
+          <div class="ksb-brand-sub" id="ksb-brand-sub">Product Academy · Interactive Simulator</div>
+        </div>
       </div>
-    </a>
-    <div class="ksb-top-links">
-      <a class="ksb-mini-link" href="index.html" title="Mục lục khóa học">Mục lục</a>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <a href="index.html" onclick="if(window.self!==window.top){event.preventDefault();window.parent.postMessage({type:'KUDO_SHOW_HOME'},'*');}" style="background:#FFF1E6;color:#C2410C;border:1px solid #FDBA74;border-radius:7px;padding:6px 9px;font-size:11.5px;font-weight:800;text-decoration:none;white-space:nowrap;" title="Quay về Trang chủ Chọn Chương">🏠 6 Chương</a>
+        <select id="ksb-lesson-select" class="ksb-lesson-select" style="flex:1;" aria-label="Chuyển nhanh bài học" onchange="kudoSwitchLessonFromSidebar(this.value)"></select>
+      </div>
     </div>
-  </div>
 
-  <div class="ksb-lesson-box">
-    <select class="ksb-lesson-select" id="ksb-lesson-select" aria-label="Chọn bài giảng" onchange="kudoSwitchLessonFromSidebar(this.value)" title="Chuyển nhanh giữa 24 bài giảng"></select>
-    <div class="ksb-meta-row">
-      <span id="kudo-lesson-code">CHƯƠNG 1 · BÀI 1</span>
+    <div class="ksb-lesson-card">
+      <div class="ksb-badge-row">
+        <span class="kp-badge" id="kp-lesson-code">BÀI 1.1</span>
+        <span class="kp-clock" id="kp-clock">00:00 / 00:00</span>
+      </div>
+      <div class="ksb-lesson-title" id="kp-lesson-title">Tiêu đề bài giảng</div>
+      <div class="ksb-dep-box" id="ksb-dep-box">
+        <div><strong>Tiên quyết:</strong> <span id="ksb-prereq">Không yêu cầu</span></div>
+        <div><strong>Mở đường cho:</strong> <span id="ksb-dep">Bài tiếp theo</span></div>
+      </div>
     </div>
-    <div id="kudo-lesson-title">Tiêu đề bài giảng</div>
-    <div id="ksb-dep-box"></div>
-  </div>
 
-  <!-- CỤM ĐIỀU KHIỂN 2 HÀNG GỌN GÀNG -->
-  <div id="kudo-player-bar">
-    <div class="ksb-ctrl-row-1">
-      <button class="kp-btn primary" id="kp-play-btn" onclick="kudoTogglePlay()" title="Tạm dừng hoặc tiếp tục bài giảng (Phím tắt: Space)">⏸ Tạm dừng</button>
-      <button class="kp-btn" onclick="kudoPrevBeat()" title="Quay lại phần trước (Phím tắt: Mũi tên Trái)">⏮ Trước</button>
-      <button class="kp-btn" onclick="kudoNextBeat()" title="Chuyển sang phần tiếp theo (Phím tắt: Mũi tên Phải)">⏭ Tiếp</button>
+    <div class="ksb-controls-box" role="toolbar" aria-label="Bộ điều khiển trình phát">
+      <div class="ksb-btn-grid">
+        <button class="kp-btn primary" id="kp-play-btn" aria-label="Tạm dừng hoặc Tiếp tục" onclick="kudoTogglePlay()">⏸ Tạm dừng</button>
+        <button class="kp-btn" id="kp-prev-btn" aria-label="Phần trước" onclick="kudoPrevBeat()">⏮ Trước</button>
+        <button class="kp-btn" id="kp-next-btn" aria-label="Phần tiếp theo" onclick="kudoNextBeat()">⏭ Tiếp</button>
+      </div>
+      <div class="ksb-sub-controls">
+        <button class="kp-btn" id="kp-mute-btn" aria-label="Tắt hoặc Bật tiếng" onclick="kudoToggleMute()">🔇 Tắt tiếng</button>
+        <button class="kp-btn" id="kp-speed-btn" aria-label="Tốc độ phát" onclick="kudoCycleSpeed()">1.0x</button>
+        <button class="kp-btn" id="kp-cursor-btn" aria-label="Ẩn hoặc Hiện con trỏ hướng dẫn" onclick="kudoToggleCursorMode()" title="Bật/tắt con trỏ chuột giả lập và nhãn hướng dẫn (Phím tắt: C)">🖱️ Ẩn chuột [C]</button>
+      </div>
     </div>
-    <div class="ksb-ctrl-row-2">
-      <button class="kp-btn" id="kp-mute-btn" onclick="kudoToggleMute()" title="Bật hoặc tắt tiếng thuyết minh (Phím tắt: M)">🔇 Tắt tiếng</button>
-      <button class="kp-btn" id="kp-speed-btn" onclick="kudoCycleSpeed()" title="Đổi tốc độ phát thuyết minh">1.0x</button>
-      <button class="kp-btn" id="kp-cursor-btn" onclick="kudoToggleCursorMode()" title="Ẩn hoặc hiện con trỏ chuột giả lập và nhãn gợi ý (Phím tắt: C)">🖱️ Ẩn chuột [C]</button>
+
+    <div class="ksb-segments-header">
+      <span>Mục lục 6 Chương · 24 Bài</span>
+      <span id="ksb-seg-progress-label">1 / 7</span>
     </div>
-    <div id="kudo-key-hud"></div>
-  </div>
+    <div id="kp-timeline-segs" role="list" aria-label="Cây mục lục khóa học và các phần trong bài"></div>
+  </aside>
 
-  <!-- DANH SÁCH DỌC CÁC ĐIỂM NEO THỜI GIAN TRONG BÀI -->
-  <div class="ksb-segments-header">
-    <span id="kudo-scene-indicator" aria-live="polite">Phần 1/10</span>
-    <span class="kp-time" id="kp-time-label">00:00 / 02:07</span>
-  </div>
-  <div class="kp-timeline" id="kp-timeline-segs" role="list" aria-label="Danh sách các phần trong bài học"></div>
-</aside>
-
-<!-- CỘT 2: KHU VỰC TRÌNH CHIẾU CHÍNH & DẢI PHỤ ĐỀ BÊN PHẢI -->
-<main id="kudo-right-main">
-  <div id="kudo-stage-viewport">
-    <div id="kudo-theory-stage">
-      <div id="kudo-slide-box"></div>
+  <main id="kudo-right-main">
+    <div id="kudo-stage-viewport">
+      <!-- BẢNG SLIDE LÝ THUYẾT & TỔNG KẾT -->
+      <div id="kudo-theory-overlay">
+        <div class="k-slide-box" id="kudo-slide-box"></div>
+      </div>
     </div>
-    <div id="kudo-stage-pedagogy-card" aria-live="polite"></div>
-  </div>
 
-  <div id="kudo-subtitle-strip">
-    <div id="kudo-avatar-rig" class="speaking">
-      <div class="k-avatar-svg-stage"></div>
+    <!-- DẢI PHỤ ĐỀ GIẢNG VIÊN Ở ĐÁY (TÁCH BIỆT HOÀN TOÀN VỚI #kudo-stage-viewport) -->
+    <div id="kudo-subtitle-strip">
+      <div id="kudo-avatar-rig" title="Giảng viên AI điều phối thao tác">
+        <div class="k-avatar-svg-stage"></div>
+        <div class="k-avatar-name">GV. Minh Quân</div>
+      </div>
+      <div id="kudo-subtitle-box" aria-live="polite">Đang khởi tạo kịch bản mô phỏng bài học...</div>
     </div>
-    <div id="kudo-subtitle-box" aria-live="polite" aria-atomic="true"></div>
-  </div>
-</main>
-
-<audio id="kudo-voice-player" preload="auto"></audio>
-
-<!-- SPOTLIGHT FOCUS BOX OVER SIMULATOR -->
-<div id="kudo-spotlight"></div>
-
-<!-- FLOATING QUOTE IN CHAT PILL -->
-<div id="agy2-quote-btn" class="kudo-quote-pill">💬 Quote in Chat &nbsp;<kbd style="background:#334155;color:#FBBF24;padding:1px 6px;border-radius:4px;">Ctrl + L</kbd></div>
-
-<!-- RIGHT-CLICK CONTEXT MENU FOR EXPLORER -->
-<div id="kudo-context-menu">
-  <div class="k-ctx-row"><span>Open to the Side</span><span style="opacity:0.65;font-size:10.5px;">Ctrl+Enter</span></div>
-  <div class="k-ctx-row active" id="kcm-reveal-explorer"><span>Reveal in File Explorer</span><span style="opacity:0.85;font-size:10.5px;">Shift+Alt+R</span></div>
-  <div class="k-ctx-sep"></div>
-  <div class="k-ctx-row"><span>Copy Path</span><span style="opacity:0.65;font-size:10.5px;">Shift+Alt+C</span></div>
-  <div class="k-ctx-row"><span>Copy Relative Path</span></div>
-  <div class="k-ctx-sep"></div>
-  <div class="k-ctx-row"><span>Rename...</span><span style="opacity:0.65;font-size:10.5px;">F2</span></div>
+  </main>
 </div>
 
-<!-- RIGHT-CLICK CONTEXT MENU FOR EDITOR TAB (OPEN PREVIEW) -->
+<!-- AUDIO ENGINE (Nạp động các tệp MP3 48kHz theo từng nhịp) -->
+<audio id="kudo-voice-player" preload="auto" style="display:none;"></audio>
+
+<!-- HỘP TIÊU ĐIỂM CAM ĐẤT (SPOTLIGHT) -->
+<div id="kudo-spotlight">
+  <div id="kudo-spotlight-badge">TIÊU ĐIỂM THAO TÁC</div>
+</div>
+
+<!-- HỘP THOẠI NỔI (KHÓA ẨN THEO PROP-261106-01 RULE 4) -->
+<div id="kudo-stage-pedagogy-card" role="region" aria-label="Hướng dẫn thao tác từng bước" style="display:none !important;">
+  <div class="k-spc-header">
+    <span class="k-spc-step" id="k-spc-step">PHẦN 1</span>
+    <span class="k-spc-badge" id="k-spc-badge">MÔ PHỎNG</span>
+  </div>
+  <div class="k-spc-body" id="k-spc-body"></div>
+  <div class="k-spc-Hint" id="k-spc-hint"></div>
+</div>
+
+<!-- MENU CHUỘT PHẢI GIẢ LẬP CHO TỆP .ZIP -->
+<div id="kudo-context-menu">
+  <div class="k-ctx-row"><span>Open</span><span>Enter</span></div>
+  <div class="k-ctx-row active"><span>📂 <strong>Extract All...</strong> (Giải nén toàn bộ)</span><span>Khuyên dùng</span></div>
+  <div class="k-ctx-row"><span>Open with Windows Explorer</span><span></span></div>
+  <div class="k-ctx-sep"></div>
+  <div class="k-ctx-row"><span>Copy as path</span><span>Ctrl+Shift+C</span></div>
+  <div class="k-ctx-row"><span>Properties</span><span>Alt+Enter</span></div>
+</div>
+
+<!-- MENU CHUỘT PHẢI GIẢ LẬP TRÊN THẺ TAB TỆP .MD -->
 <div id="kudo-tab-context-menu">
   <div class="k-tcm-row"><span>Close</span><span class="k-tcm-kbd">Ctrl+F4</span></div>
-  <div class="k-tcm-row disabled"><span>Close Others</span></div>
-  <div class="k-tcm-row disabled"><span>Close to the Right</span></div>
+  <div class="k-tcm-row disabled"><span>Close Others</span><span class="k-tcm-kbd"></span></div>
+  <div class="k-tcm-row disabled"><span>Close to the Right</span><span class="k-tcm-kbd"></span></div>
   <div class="k-tcm-row"><span>Close Saved</span><span class="k-tcm-kbd">Ctrl+K U</span></div>
   <div class="k-tcm-row"><span>Close All</span><span class="k-tcm-kbd">Ctrl+K W</span></div>
   <div class="k-tcm-sep"></div>
   <div class="k-tcm-row"><span>Copy Path</span><span class="k-tcm-kbd">Shift+Alt+C</span></div>
   <div class="k-tcm-row"><span>Copy Relative Path</span><span class="k-tcm-kbd">Ctrl+K Ctrl+Shift+C</span></div>
   <div class="k-tcm-sep"></div>
-  <div class="k-tcm-row active" id="ktcm-open-preview"><span>Open Preview</span><span class="k-tcm-kbd">Ctrl+Shift+V</span></div>
-  <div class="k-tcm-row"><span>Reopen Editor With...</span></div>
+  <div class="k-tcm-row active" id="ktcm-open-preview"><span><strong>Open Preview</strong></span><span class="k-tcm-kbd">Ctrl+Shift+V</span></div>
+  <div class="k-tcm-row"><span>Reopen Editor With...</span><span class="k-tcm-kbd"></span></div>
   <div class="k-tcm-sep"></div>
   <div class="k-tcm-row"><span>Reveal in File Explorer</span><span class="k-tcm-kbd">Shift+Alt+R</span></div>
-  <div class="k-tcm-row"><span>Reveal in Explorer View</span></div>
+  <div class="k-tcm-row"><span>Reveal in Explorer View</span><span class="k-tcm-kbd"></span></div>
   <div class="k-tcm-sep"></div>
   <div class="k-tcm-row"><span>Keep Open</span><span class="k-tcm-kbd">Ctrl+K Enter</span></div>
   <div class="k-tcm-row"><span>Pin</span><span class="k-tcm-kbd">Ctrl+K Shift+Enter</span></div>
   <div class="k-tcm-sep"></div>
   <div class="k-tcm-row"><span>Split Right</span><span class="k-tcm-kbd">Ctrl+\</span></div>
   <div class="k-tcm-row"><span>Split &amp; Move</span><span class="k-tcm-kbd">›</span></div>
+  <div class="k-tcm-sep"></div>
+  <div class="k-tcm-row"><span>Move into New Window</span><span class="k-tcm-kbd"></span></div>
+  <div class="k-tcm-row"><span>Copy into New Window</span><span class="k-tcm-kbd">Ctrl+K O</span></div>
+  <div class="k-tcm-sep"></div>
+  <div class="k-tcm-row"><span>Find File References</span><span class="k-tcm-kbd"></span></div>
 </div>
 
 <!-- MODEL SELECTOR POPOVER -->
 <div id="kudo-model-popover">
-  <div style="font-size:11px; font-weight:700; color:#64748B; padding:4px 10px;">Model</div>
-  <div class="k-pop-row active" id="kmp-argon">
-    <div><strong>Gemini 4 Argon</strong> <span style="color:#64748B;">Medium</span></div>
-    <div style="display:flex;align-items:center;gap:6px;"><span class="k-pop-pill">New</span><span>✓</span></div>
+  <div class="k-pop-title">Conversation mode</div>
+  <div class="k-pop-mode-row">
+    <div style="font-size:12px;"><strong>Planning</strong> — Agent can plan before executing tasks. Use for deep research, complex tasks, or collaborative work</div>
   </div>
+  <div class="k-pop-mode-row active" style="margin-bottom:8px;">
+    <div style="font-size:12px;"><strong>Fast</strong> — Agent will execute tasks directly. Use for simple tasks that can be completed faster</div>
+  </div>
+  <div class="k-pop-title">Model</div>
   <div class="k-pop-row" id="kmp-flash">
     <div><strong>Gemini 3.8 Flash</strong> <span style="color:#64748B;">Medium</span></div>
-    <div style="display:flex;align-items:center;gap:6px;"><span class="k-pop-pill">Fast ⓘ</span><span>›</span></div>
+    <div style="display:flex;align-items:center;gap:6px;"><span class="k-pop-pill">New</span><span>›</span></div>
+  </div>
+  <div class="k-pop-row active" id="kmp-argon">
+    <div><strong>Gemini 4 Argon</strong> <span style="color:#64748B;">Medium</span></div>
+    <div style="display:flex;align-items:center;gap:6px;"><span class="k-pop-pill">New</span><span>›</span></div>
   </div>
   <div class="k-pop-row" id="kmp-opus">
-    <div><strong>Claude Opus 5.5</strong> <span style="color:#64748B;">Medium</span></div>
-    <div style="display:flex;align-items:center;gap:6px;"><span class="k-pop-pill">New</span><span>›</span></div>
+    <div><strong>Claude Fable 5.1</strong> <span style="color:#64748B;">(Thinking)</span></div>
+    <div style="display:flex;align-items:center;gap:6px;"><span class="k-pop-pill">New</span></div>
   </div>
   <div class="k-pop-row" id="kmp-sonnet">
     <div><strong>Claude Sonnet 5.5</strong> <span style="color:#64748B;">Medium</span></div>
@@ -980,7 +1006,7 @@
   </div>
 </div>
 
-<!-- INDEPENDENT SIMULATED MOUSE CURSOR -->
+<!-- CON TRỎ CHUỘT GIẢ LẬP ĐỘC LẬP -->
 <div id="kudo-cursor">
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
     <path d="M4 2L20 11L12 13L9 21L4 2Z" fill="#CB4B16" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"/>
@@ -988,7 +1014,7 @@
   <div id="kudo-cursor-label"></div>
 </div>
 
-<!-- NẠP 5 LỚP MODULE ĐỘC LẬP: AVATAR, LÕI SIMULATOR, CẤU HÌNH, KỊCH BẢN BÀI HỌC & ĐỘNG CƠ PLAYER -->
+<!-- NẠP 5 LỚP MODULE ĐỘC LẬP -->
 <script src="assets/avatar/lecturer_poses.js"></script>
 <script src="assets/js/simulator_core.js"></script>
 <script src="config/brand_config.js"></script>

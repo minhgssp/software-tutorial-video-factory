@@ -1,0 +1,1310 @@
+[
+  {
+    "chapter_number": 1,
+    "code": "CHƯƠNG 1",
+    "title": "Khởi động Chuẩn & Làm chủ Giao diện",
+    "subtitle": "Chuyển từ hỏi đáp trên web sang làm việc cùng Trợ lý AI trực tiếp trong thư mục máy tính an toàn",
+    "status": "ready",
+    "status_label": "Đã sẵn sàng · 4 Bài · 28 Phần",
+    "lessons_count": 4,
+    "beats_count": 28,
+    "duration_label": "4 bài giảng · 28 phần tương tác",
+    "default_lesson": "lesson_01.html",
+    "lessons": [
+      {
+        "code": "Bài 1",
+        "title": "Tư duy Trợ lý AI trong Thư mục, 2 Giao diện & Cách Mở Dự án Đầu tiên",
+        "meta": "7 phần · Đã sẵn sàng",
+        "filename": "lesson_01.html",
+        "ready": true,
+        "beats": [
+          {
+            "id": "b1",
+            "label": "1. Lý thuyết (Phần 1): Hạn chế khi hỏi đáp rời rạc trên trình duyệt Web",
+            "mode": "theory",
+            "duration": 36
+          },
+          {
+            "id": "b2",
+            "label": "2. Lý thuyết (Phần 2): Trợ lý AI trong thư mục ổ cứng & Bộ đôi 2 giao diện",
+            "mode": "theory",
+            "duration": 32
+          },
+          {
+            "id": "b3",
+            "label": "3. Nhận diện giao diện 1: Cửa sổ điều phối Antigravity 2.0 (Agent Manager)",
+            "mode": "sim",
+            "duration": 25
+          },
+          {
+            "id": "b4",
+            "label": "4. Nhận diện giao diện 2: Bấm Open IDE sang màn hình Chào mừng (Welcome)",
+            "mode": "sim",
+            "duration": 28
+          },
+          {
+            "id": "b5",
+            "label": "5. Thực hành Bước 1/3: Bấm trình đơn File ➔ Chọn dòng Open Folder",
+            "mode": "sim",
+            "duration": 21
+          },
+          {
+            "id": "b6",
+            "label": "6. Thực hành Bước 2/3: Chọn thư mục antigravity_course_vn đã giải nén",
+            "mode": "sim",
+            "duration": 24
+          },
+          {
+            "id": "b7",
+            "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+            "mode": "sim",
+            "duration": 26
+          }
+        ]
+      },
+      {
+        "code": "Bài 2",
+        "title": "Đồng bộ Ổ cứng 1-1, Phòng tránh Lỗi Thao tác & Chọn 5 Mô hình AI",
+        "meta": "7 phần · Đã sẵn sàng",
+        "filename": "lesson_02.html",
+        "ready": true,
+        "beats": [
+          {
+            "id": "b1",
+            "label": "1. Lý thuyết (Phần 1): Nguyên lý đồng bộ 1-1 giữa phần mềm và ổ cứng máy tính",
+            "mode": "theory",
+            "duration": 34
+          },
+          {
+            "id": "b2",
+            "label": "2. Lý thuyết (Phần 2): Phòng tránh kéo nhầm thư mục & Quy tắc chọn 5 mô hình AI",
+            "mode": "theory",
+            "duration": 37
+          },
+          {
+            "id": "b3",
+            "label": "3. Lưu ý trên màn hình: Xử lý cảnh báo khi lỡ tay kéo thả nhầm thư mục",
+            "mode": "sim",
+            "duration": 22
+          },
+          {
+            "id": "b4",
+            "label": "4. Kỹ thuật trên màn hình: Mở bảng chọn và phân biệt 5 mô hình AI ở đáy khung chat",
+            "mode": "sim",
+            "duration": 31
+          },
+          {
+            "id": "b5",
+            "label": "5. Thực hành Bước 1/3: Chuột phải vào INDEX.md chọn Reveal in File Explorer",
+            "mode": "sim",
+            "duration": 20
+          },
+          {
+            "id": "b6",
+            "label": "6. Thực hành Bước 2/3: Chọn mô hình mặc định Gemini 4 Argon Medium tại khung chat",
+            "mode": "sim",
+            "duration": 15
+          },
+          {
+            "id": "b7",
+            "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+            "mode": "sim",
+            "duration": 23
+          }
+        ]
+      },
+      {
+        "code": "Bài 3",
+        "title": "Làm chủ Giao diện 3 Cột, Mở Preview Chuột phải & Xử lý Khi AI Dừng chờ",
+        "meta": "7 phần · Đã sẵn sàng",
+        "filename": "lesson_03.html",
+        "ready": true,
+        "beats": [
+          {
+            "id": "b1",
+            "label": "1. Lý thuyết (Phần 1): Giải phẫu bàn làm việc 3 cột, phím Ctrl+B & Mở Open Preview",
+            "mode": "theory",
+            "duration": 40
+          },
+          {
+            "id": "b2",
+            "label": "2. Lý thuyết (Phần 2): Ba trạng thái khi AI dừng chờ & Thói quen hỏi trực tiếp AI",
+            "mode": "theory",
+            "duration": 38
+          },
+          {
+            "id": "b3",
+            "label": "3. Quan sát trên màn hình: Nhận diện nút Accept, ô gõ Tiếp tục và nút dừng (■)",
+            "mode": "sim",
+            "duration": 25
+          },
+          {
+            "id": "b4",
+            "label": "4. Kỹ thuật trên màn hình: Bật/tắt nhanh cột cây thư mục bằng Ctrl + B",
+            "mode": "sim",
+            "duration": 21
+          },
+          {
+            "id": "b5",
+            "label": "5. Thực hành Bước 1/3: Chuột phải vào thanh Tab tệp chọn Open Preview (Ctrl+Shift+V)",
+            "mode": "sim",
+            "duration": 23
+          },
+          {
+            "id": "b6",
+            "label": "6. Thực hành Bước 2/3: Xem trang Preview đẹp mắt & Hỏi trực tiếp Trợ lý AI",
+            "mode": "sim",
+            "duration": 19
+          },
+          {
+            "id": "b7",
+            "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+            "mode": "sim",
+            "duration": 23
+          }
+        ]
+      },
+      {
+        "code": "Bài 4",
+        "title": "Bật Quyền Tự chủ Turbo & Bài Thực hành Đầu tiên Với /start-1-1",
+        "meta": "7 phần · Đã sẵn sàng",
+        "filename": "lesson_04.html",
+        "ready": true,
+        "beats": [
+          {
+            "id": "b1",
+            "label": "1. Lý thuyết (Phần 1): 4 cấp độ phân quyền thực thi & Khi nào bật chế độ Turbo",
+            "mode": "theory",
+            "duration": 35
+          },
+          {
+            "id": "b2",
+            "label": "2. Lý thuyết (Phần 2): Bối cảnh công ty mẫu TaskFlow & Quy tắc gõ lệnh gạch chéo (/)",
+            "mode": "theory",
+            "duration": 34
+          },
+          {
+            "id": "b3",
+            "label": "3. Minh họa trên màn hình: Bấm nút Settings (⚙️) và mở mục phân quyền This Computer",
+            "mode": "sim",
+            "duration": 22
+          },
+          {
+            "id": "b4",
+            "label": "4. Kỹ thuật trên màn hình: Gõ /start mở bảng gợi ý và tránh bẫy phím cách (Space)",
+            "mode": "sim",
+            "duration": 22
+          },
+          {
+            "id": "b5",
+            "label": "5. Thực hành Bước 1/3: Mở Settings và tích chọn quyền tự chủ Turbo",
+            "mode": "sim",
+            "duration": 16
+          },
+          {
+            "id": "b6",
+            "label": "6. Thực hành Bước 2/3: Chọn lệnh /start-1-1 từ bảng gợi ý và nhấn Gửi",
+            "mode": "sim",
+            "duration": 16
+          },
+          {
+            "id": "b7",
+            "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+            "mode": "sim",
+            "duration": 25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_number": 2,
+    "code": "CHƯƠNG 2",
+    "title": "Định dạng Dữ liệu, Ký hiệu @ & Hồ sơ Cá nhân hóa",
+    "subtitle": "Làm chủ tệp văn bản .md, bảng số liệu .csv, đính kèm @, giọng nói Ctrl+M và hồ sơ cá nhân @troly.md",
+    "status": "ready",
+    "status_label": "Đã sẵn sàng · 4 Bài · 24 Phần",
+    "lessons_count": 4,
+    "beats_count": 24,
+    "duration_label": "4 bài giảng · 24 phần tương tác",
+    "default_lesson": "lesson_05.html",
+    "lessons": [
+      {
+        "code": "Bài 5",
+        "title": "Định dạng Văn bản .md, Bảng Dữ liệu .csv & Tiện ích Office Viewer",
+        "meta": "7 phần · Đã sẵn sàng",
+        "filename": "lesson_05.html",
+        "ready": true,
+        "beats": [
+          {
+            "id": "b1",
+            "label": "1. Lý thuyết (Phần 1): Vì sao ưu tiên định dạng .md và .csv tinh khiết?",
+            "mode": "theory",
+            "duration": 27
+          },
+          {
+            "id": "b2",
+            "label": "2. Lý thuyết (Phần 2): Bảng số liệu .csv, tiện ích Office Viewer & Quy tắc vàng",
+            "mode": "theory",
+            "duration": 28
+          },
+          {
+            "id": "b3",
+            "label": "3. Minh họa: Mở chế độ Preview bằng menu chuột phải trên thanh Tab",
+            "mode": "sim",
+            "duration": 14
+          },
+          {
+            "id": "b4",
+            "label": "4. Kỹ thuật: Kiểm tra tiện ích Office Viewer trong kho Extensions",
+            "mode": "sim",
+            "duration": 13
+          },
+          {
+            "id": "b5",
+            "label": "5. Bước 1: Bấm chọn tệp sales_data.csv trên cây thư mục để mở bảng tính",
+            "mode": "sim",
+            "duration": 15
+          },
+          {
+            "id": "b6",
+            "label": "6. Bước 2: Bấm nút Raw kiểm tra cấu trúc dấu phẩy và tổng 400 dòng",
+            "mode": "sim",
+            "duration": 13
+          },
+          {
+            "id": "b7",
+            "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+            "mode": "sim",
+            "duration": 18
+          }
+        ]
+      },
+      {
+        "code": "Bài 6",
+        "title": "Đính kèm Tệp Bằng @, Giao việc Giọng nói (Ctrl+M) & Trích dẫn (Ctrl+L)",
+        "meta": "7 phần · Đã sẵn sàng",
+        "filename": "lesson_06.html",
+        "ready": true,
+        "beats": [
+          {
+            "id": "b1",
+            "label": "1. Lý thuyết (Phần 1): Sơ đồ 3 kênh truyền đạt ngữ cảnh & Ký hiệu @ đính kèm tệp",
+            "mode": "theory",
+            "duration": 29
+          },
+          {
+            "id": "b2",
+            "label": "2. Lý thuyết (Phần 2): Giao việc giọng nói (Ctrl+M), Trích dẫn dòng (Ctrl+L) & Công thức chuẩn",
+            "mode": "theory",
+            "duration": 25
+          },
+          {
+            "id": "b3",
+            "label": "3. Minh họa: Cơ chế gợi ý tệp tự động khi gõ ký hiệu @",
+            "mode": "sim",
+            "duration": 14
+          },
+          {
+            "id": "b4",
+            "label": "4. Kỹ thuật: Cơ chế thu giọng nói (Ctrl+M) và trích dẫn (Ctrl+L)",
+            "mode": "sim",
+            "duration": 12
+          },
+          {
+            "id": "b5",
+            "label": "5. Bước 1: Đính kèm tệp @COMPANY.md từ bảng gợi ý tự động",
+            "mode": "sim",
+            "duration": 12
+          },
+          {
+            "id": "b6",
+            "label": "6. Bước 2: Bật thu âm giọng nói tiếng Việt (Ctrl+M)",
+            "mode": "sim",
+            "duration": 10
+          },
+          {
+            "id": "b7",
+            "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+            "mode": "sim",
+            "duration": 18
+          }
+        ]
+      },
+      {
+        "code": "Bài 7",
+        "title": "Xây dựng Hồ sơ Cá nhân hóa @troly.md Để AI Nhớ Phong cách Của Bạn",
+        "meta": "7 phần · Đã sẵn sàng",
+        "filename": "lesson_07.html",
+        "ready": true,
+        "beats": [
+          {
+            "id": "b1",
+            "label": "1. Lý thuyết (Phần 1): Ẩn dụ tấm danh thiếp @troly.md & Xác lập vị trí chủ nhân",
+            "mode": "theory",
+            "duration": 29
+          },
+          {
+            "id": "b2",
+            "label": "2. Lý thuyết (Phần 2): Định hình gu thẩm mỹ văn bản, Danh sách từ cấm & Mẹo ứng dụng",
+            "mode": "theory",
+            "duration": 28
+          },
+          {
+            "id": "b3",
+            "label": "3. Minh họa: Quan sát nội dung tệp @troly.md trong IDE",
+            "mode": "sim",
+            "duration": 10
+          },
+          {
+            "id": "b4",
+            "label": "4. Kỹ thuật: Sự khác biệt khi giao việc có đính kèm @troly.md",
+            "mode": "sim",
+            "duration": 12
+          },
+          {
+            "id": "b5",
+            "label": "5. Bước 1: Mở và kiểm tra thông tin trong tệp troly.md",
+            "mode": "sim",
+            "duration": 11
+          },
+          {
+            "id": "b6",
+            "label": "6. Bước 2: Gõ lệnh kết hợp @troly.md và @COMPANY.md",
+            "mode": "sim",
+            "duration": 10
+          },
+          {
+            "id": "b7",
+            "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+            "mode": "sim",
+            "duration": 20
+          }
+        ]
+      },
+      {
+        "code": "Bài 8",
+        "title": "Quản trị Trí nhớ Dự án Dài hạn & Sổ Bàn giao Giữa Các Phiên Chat",
+        "meta": "7 phần · Đã sẵn sàng",
+        "filename": "lesson_08.html",
+        "ready": true,
+        "beats": [
+          {
+            "id": "b1",
+            "label": "1. Lý thuyết (Phần 1): Vòng đời 3 bước bảo toàn trí nhớ & Hiện tượng tràn bộ nhớ ngữ cảnh",
+            "mode": "theory",
+            "duration": 24
+          },
+          {
+            "id": "b2",
+            "label": "2. Lý thuyết (Phần 2): Tệp Sổ bàn giao ban_giao_cong_viec.md & Kỹ thuật nối mạch 5 giây",
+            "mode": "theory",
+            "duration": 25
+          },
+          {
+            "id": "b3",
+            "label": "3. Minh họa: Nhận biết khi nào cần tạo phiên chat mới (+)",
+            "mode": "sim",
+            "duration": 11
+          },
+          {
+            "id": "b4",
+            "label": "4. Kỹ thuật: Cấu trúc chuẩn 3 phần của Sổ bàn giao công việc",
+            "mode": "sim",
+            "duration": 12
+          },
+          {
+            "id": "b5",
+            "label": "5. Bước 1: Ra lệnh cho AI tự ghi Sổ bàn giao cuối ca",
+            "mode": "sim",
+            "duration": 11
+          },
+          {
+            "id": "b6",
+            "label": "6. Bước 2: Mở phiên chat mới và đính kèm @ban_giao_cong_viec.md",
+            "mode": "sim",
+            "duration": 11
+          },
+          {
+            "id": "b7",
+            "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+            "mode": "sim",
+            "duration": 19
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_number": 3,
+    "code": "CHƯƠNG 3",
+    "title": "Thiết lập Bộ não .agent & Chu trình Cộng tác",
+    "subtitle": "Xây dựng nội quy Rules, đóng gói chuyên môn vào Skills, tạo lệnh Workflows và chu trình 3 lệnh vàng",
+    "status": "ready",
+    "status_label": "Đã sẵn sàng · 4 Bài · 24 Phần",
+    "lessons_count": 4,
+    "beats_count": 24,
+    "duration_label": "4 bài giảng · 24 phần tương tác",
+    "default_lesson": "lesson_09.html",
+    "lessons": [
+      {
+        "code": "Bài 9",
+        "title": "Tư duy Quản trị Đầu ra & Kiến trúc Bộ não .agent (Rules, Skills, Workflows)",
+        "meta": "7 phần · Đã sẵn sàng",
+        "filename": "lesson_09.html",
+        "ready": true,
+        "beats": [
+          {
+            "id": "b1",
+            "label": "1. Lý thuyết (Phần 1): Tư duy nghiệm thu tệp sản phẩm thật & Ẩn dụ Căn bếp Nhà hàng",
+            "mode": "theory",
+            "duration": 27
+          },
+          {
+            "id": "b2",
+            "label": "2. Lý thuyết (Phần 2): Giải mã 3 ngăn Rules (Nội quy), Skills (Kỹ năng) và Workflows (Quy trình)",
+            "mode": "theory",
+            "duration": 34
+          },
+          {
+            "id": "b3",
+            "label": "3. Minh họa: Đối chiếu khung chat và tệp sản phẩm đầu ra",
+            "mode": "sim",
+            "duration": 12
+          },
+          {
+            "id": "b4",
+            "label": "4. Kỹ thuật: Khám phá thư mục .agent trên cây Explorer",
+            "mode": "sim",
+            "duration": 11
+          },
+          {
+            "id": "b5",
+            "label": "5. Bước 1: Mở kiểm tra tệp workflow mẫu start-1-1.md",
+            "mode": "sim",
+            "duration": 11
+          },
+          {
+            "id": "b6",
+            "label": "6. Bước 2: Gõ dấu / để đối chiếu tệp với danh sách lệnh",
+            "mode": "sim",
+            "duration": 13
+          },
+          {
+            "id": "b7",
+            "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+            "mode": "sim",
+            "duration": 17
+          }
+        ]
+      },
+      {
+        "code": "Bài 10",
+        "title": "Thiết lập Nội quy Tự động (.agent/rules) & Sổ tay Kỹ năng (.agent/skills)",
+        "meta": "7 phần · Đã sẵn sàng",
+        "filename": "lesson_10.html",
+        "ready": true,
+        "beats": [
+          {
+            "id": "b1",
+            "label": "1. Lý thuyết (Phần 1): Tư duy tách bạch Nội quy dán tường (Rules) và Cẩm nang xếp kệ (Skills)",
+            "mode": "theory",
+            "duration": 26
+          },
+          {
+            "id": "b2",
+            "label": "2. Lý thuyết (Phần 2): Cơ chế Sổ tay Kỹ năng (.agent/skills/) & Quy tắc phân loại 3 giây",
+            "mode": "theory",
+            "duration": 30
+          },
+          {
+            "id": "b3",
+            "label": "3. Minh họa: Giải phẫu một tệp Nội quy trong .agent/rules/",
+            "mode": "sim",
+            "duration": 15
+          },
+          {
+            "id": "b4",
+            "label": "4. Kỹ thuật: Giải phẫu một tệp Kỹ năng trong .agent/skills/",
+            "mode": "sim",
+            "duration": 13
+          },
+          {
+            "id": "b5",
+            "label": "5. Bước 1: Mở tệp @troly.md để chuẩn bị nâng cấp thành Rule",
+            "mode": "sim",
+            "duration": 12
+          },
+          {
+            "id": "b6",
+            "label": "6. Bước 2: Giao lệnh cho AI tự tạo Rule và Skill chuẩn",
+            "mode": "sim",
+            "duration": 16
+          },
+          {
+            "id": "b7",
+            "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+            "mode": "sim",
+            "duration": 19
+          }
+        ]
+      },
+      {
+        "code": "Bài 11",
+        "title": "Đóng gói Quy trình Lặp lại Thành Lệnh Gạch chéo (.agent/workflows)",
+        "meta": "7 phần · Đã sẵn sàng",
+        "filename": "lesson_11.html",
+        "ready": true,
+        "beats": [
+          {
+            "id": "b1",
+            "label": "1. Lý thuyết (Phần 1): Đóng gói chuỗi việc lặp lại thành nút bấm & Cơ chế Tên tệp là Tên lệnh",
+            "mode": "theory",
+            "duration": 31
+          },
+          {
+            "id": "b2",
+            "label": "2. Lý thuyết (Phần 2): Kịch bản 3 bước bằng tiếng Việt, Nhân bản cho đội ngũ & Phân biệt Skill với Workflow",
+            "mode": "theory",
+            "duration": 28
+          },
+          {
+            "id": "b3",
+            "label": "3. Minh họa: Quan sát cấu trúc tệp workflow trong IDE",
+            "mode": "sim",
+            "duration": 14
+          },
+          {
+            "id": "b4",
+            "label": "4. Kỹ thuật: Cơ chế hiển thị lệnh mới trong bảng gạch chéo (/)",
+            "mode": "sim",
+            "duration": 13
+          },
+          {
+            "id": "b5",
+            "label": "5. Bước 1: Yêu cầu AI tạo workflow /tong-hop-tuan",
+            "mode": "sim",
+            "duration": 15
+          },
+          {
+            "id": "b6",
+            "label": "6. Bước 2: Mở kiểm tra tệp tong-hop-tuan.md và gõ lệnh /tong-hop-tuan",
+            "mode": "sim",
+            "duration": 12
+          },
+          {
+            "id": "b7",
+            "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+            "mode": "sim",
+            "duration": 18
+          }
+        ]
+      },
+      {
+        "code": "Bài 12",
+        "title": "Chu trình 3 Lệnh Vàng: /grill-me (Phỏng vấn), /plan (Lập kế hoạch) & /learn (Đúc kết)",
+        "meta": "7 phần · Đã sẵn sàng",
+        "filename": "lesson_12.html",
+        "ready": true,
+        "beats": [
+          {
+            "id": "b1",
+            "label": "1. Lý thuyết (Phần 1): Trị bệnh AI đoán mò bằng chế độ phỏng vấn ngược /grill-me",
+            "mode": "theory",
+            "duration": 27
+          },
+          {
+            "id": "b2",
+            "label": "2. Lý thuyết (Phần 2): Lập bản vẽ chờ duyệt với /plan & Tự nâng cấp bộ não với /learn",
+            "mode": "theory",
+            "duration": 27
+          },
+          {
+            "id": "b3",
+            "label": "3. Minh họa: Cách chọn lệnh /grill-me và /plan trong khung chat",
+            "mode": "sim",
+            "duration": 9
+          },
+          {
+            "id": "b4",
+            "label": "4. Kỹ thuật: Cơ chế lệnh /learn tự động cập nhật .agent/rules/",
+            "mode": "sim",
+            "duration": 12
+          },
+          {
+            "id": "b5",
+            "label": "5. Bước 1: Chạy /grill-me cho đề án Đại lý B2B TaskFlow",
+            "mode": "sim",
+            "duration": 14
+          },
+          {
+            "id": "b6",
+            "label": "6. Bước 2: Mở nghiệm thu bản kế hoạch ke_hoach_mo_rong_b2b_q2.md từ lệnh /plan",
+            "mode": "sim",
+            "duration": 14
+          },
+          {
+            "id": "b7",
+            "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+            "mode": "sim",
+            "duration": 18
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_number": 4,
+    "code": "CHƯƠNG 4",
+    "title": "Xử lý Dữ liệu Lớn, Bảng tính CSV & Phối hợp Đội nhóm",
+    "subtitle": "Bóc tách kho tài liệu lớn có dẫn nguồn, phân tích bảng tính .csv, chạy đa luồng song song và đồng bộ GitHub/Drive",
+    "status": "ready",
+    "status_label": "Đã sẵn sàng · 4 Bài · 24 Phần",
+    "lessons_count": 4,
+    "beats_count": 24,
+    "duration_label": "4 bài giảng · 24 phần tương tác",
+    "default_lesson": "lesson_13.html",
+    "lessons": [
+      {
+        "code": "Bài 13",
+        "title": "Bóc tách Kho Tài liệu Lớn & Tóm tắt Đa tầng Không Tràn Bộ nhớ",
+        "meta": "7 phần · Đã sẵn sàng",
+        "filename": "lesson_13.html",
+        "ready": true,
+        "beats": [
+          {
+            "id": "b1",
+            "label": "1. Lý thuyết (Phần 1): Tránh bẫy tràn bộ nhớ & Chiến lược lập Bản đồ Mục lục (Tầng 1)",
+            "mode": "theory",
+            "duration": 28
+          },
+          {
+            "id": "b2",
+            "label": "2. Lý thuyết (Phần 2): Đọc sâu theo cụm 2-3 tệp (Tầng 2) & Hợp nhất báo cáo có dẫn nguồn (Tầng 3)",
+            "mode": "theory",
+            "duration": 25
+          },
+          {
+            "id": "b3",
+            "label": "3. Minh họa: Quan sát kho hồ sơ nhiều tệp trên cây thư mục",
+            "mode": "sim",
+            "duration": 10
+          },
+          {
+            "id": "b4",
+            "label": "4. Kỹ thuật: Kỹ thuật gắn trích dẫn nguồn [Tên_tệp#Dòng] khi tóm tắt",
+            "mode": "sim",
+            "duration": 13
+          },
+          {
+            "id": "b5",
+            "label": "5. Bước 1: Mở kiểm tra danh mục hồ sơ tại INDEX.md",
+            "mode": "sim",
+            "duration": 9
+          },
+          {
+            "id": "b6",
+            "label": "6. Bước 2: Giao lệnh tóm tắt 2 tầng kèm bắt buộc dẫn nguồn",
+            "mode": "sim",
+            "duration": 10
+          },
+          {
+            "id": "b7",
+            "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+            "mode": "sim",
+            "duration": 16
+          }
+        ]
+      },
+      {
+        "code": "Bài 14",
+        "title": "Phân tích Bảng tính CSV, Làm sạch Dữ liệu & Trích xuất Insight Kinh doanh",
+        "meta": "7 phần · Đã sẵn sàng",
+        "filename": "lesson_14.html",
+        "ready": true,
+        "beats": [
+          {
+            "id": "b1",
+            "label": "1. Lý thuyết (Phần 1): Tư duy biến bảng số liệu thô thành quyết định & Bước 1 Kiểm toán làm sạch dữ liệu",
+            "mode": "theory",
+            "duration": 30
+          },
+          {
+            "id": "b2",
+            "label": "2. Lý thuyết (Phần 2): Nhóm gộp đa chiều có dòng kiểm chứng & Gắn số liệu với hành động thực tế",
+            "mode": "theory",
+            "duration": 31
+          },
+          {
+            "id": "b3",
+            "label": "3. Minh họa: Quan sát bảng dữ liệu gốc sales_data.csv trong IDE",
+            "mode": "sim",
+            "duration": 13
+          },
+          {
+            "id": "b4",
+            "label": "4. Kỹ thuật: Cách viết câu lệnh phân tích số liệu không sai sót",
+            "mode": "sim",
+            "duration": 12
+          },
+          {
+            "id": "b5",
+            "label": "5. Bước 1: Mở kiểm tra bảng sales_data.csv",
+            "mode": "sim",
+            "duration": 9
+          },
+          {
+            "id": "b6",
+            "label": "6. Bước 2: Gửi lệnh phân tích kết hợp @sales_data.csv và @COMPANY.md",
+            "mode": "sim",
+            "duration": 11
+          },
+          {
+            "id": "b7",
+            "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+            "mode": "sim",
+            "duration": 19
+          }
+        ]
+      },
+      {
+        "code": "Bài 15",
+        "title": "Phối hợp Nhiều Luồng Công việc Song song Cho Dự án Lớn",
+        "meta": "7 phần · Đã sẵn sàng",
+        "filename": "lesson_15.html",
+        "ready": true,
+        "beats": [
+          {
+            "id": "b1",
+            "label": "1. Lý thuyết (Phần 1): Tư duy Trưởng phòng chia 3 nhánh AI chạy song song rút ngắn thời gian từ 3 giờ xuống 15 phút",
+            "mode": "theory",
+            "duration": 29
+          },
+          {
+            "id": "b2",
+            "label": "2. Lý thuyết (Phần 2): Ba nguyên tắc điều phối đa luồng — Độc lập tệp đích, Đồng bộ hồ sơ gốc & Hợp nhất cuối cùng",
+            "mode": "theory",
+            "duration": 31
+          },
+          {
+            "id": "b3",
+            "label": "3. Minh họa: Quan sát các luồng tác vụ (Threads) trên Antigravity 2.0",
+            "mode": "sim",
+            "duration": 13
+          },
+          {
+            "id": "b4",
+            "label": "4. Kỹ thuật: Bảng điều phối 3 nhánh chạy song song không đụng độ tệp",
+            "mode": "sim",
+            "duration": 13
+          },
+          {
+            "id": "b5",
+            "label": "5. Bước 1: Kích hoạt luồng công việc song song trên Antigravity 2.0",
+            "mode": "sim",
+            "duration": 11
+          },
+          {
+            "id": "b6",
+            "label": "6. Bước 2: Ra lệnh hợp nhất kết quả từ 3 tệp thành phần",
+            "mode": "sim",
+            "duration": 10
+          },
+          {
+            "id": "b7",
+            "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+            "mode": "sim",
+            "duration": 17
+          }
+        ]
+      },
+      {
+        "code": "Bài 16",
+        "title": "Đồng bộ Tài liệu Nhóm Qua GitHub & Sao lưu Google Drive Tự động",
+        "meta": "7 phần · Đã sẵn sàng",
+        "filename": "lesson_16.html",
+        "ready": true,
+        "beats": [
+          {
+            "id": "b1",
+            "label": "1. Lý thuyết (Phần 1): Xóa bỏ cảnh đặt tên 'Báo cáo Final sửa lần 3' bằng hộp đen lịch sử GitHub",
+            "mode": "theory",
+            "duration": 28
+          },
+          {
+            "id": "b2",
+            "label": "2. Lý thuyết (Phần 2): Quy trình 3 bước đóng dấu GitHub & Đồng bộ Google Drive bằng tiếng Việt tự nhiên",
+            "mode": "theory",
+            "duration": 29
+          },
+          {
+            "id": "b3",
+            "label": "3. Minh họa: Quan sát trạng thái tệp mới chờ đồng bộ trên Quản lý Phiên bản",
+            "mode": "sim",
+            "duration": 12
+          },
+          {
+            "id": "b4",
+            "label": "4. Kỹ thuật: Giao việc đồng bộ bằng tiếng Việt thay vì gõ lệnh Terminal",
+            "mode": "sim",
+            "duration": 13
+          },
+          {
+            "id": "b5",
+            "label": "5. Bước 1: Mở kiểm tra tệp bao_cao_doanh_thu_q1.md trước khi đồng bộ",
+            "mode": "sim",
+            "duration": 10
+          },
+          {
+            "id": "b6",
+            "label": "6. Bước 2: Gõ lệnh yêu cầu AI lưu phiên bản và đẩy lên Drive",
+            "mode": "sim",
+            "duration": 11
+          },
+          {
+            "id": "b7",
+            "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+            "mode": "sim",
+            "duration": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_number": 5,
+    "code": "CHƯƠNG 5",
+    "title": "Sản xuất Nội dung Đa kênh, Hình ảnh, Slide & Báo cáo Web",
+    "subtitle": "Khóa chặt giọng văn thương hiệu brand_voice.md, sản xuất bài viết đa kênh, vẽ Infographic và xuất bản Slide 16:9",
+    "status": "ready",
+    "status_label": "Đã sẵn sàng · 4 Bài · 24 Phần",
+    "lessons_count": 4,
+    "beats_count": 24,
+    "duration_label": "4 bài giảng · 24 phần tương tác",
+    "default_lesson": "lesson_17.html",
+    "lessons": [
+      {
+        "code": "Bài 17",
+        "title": "Khởi tạo Trung tâm Nội dung Đa kênh & Quản lý Giọng văn Thương hiệu",
+        "meta": "7 phần · Đã sẵn sàng",
+        "filename": "lesson_17.html",
+        "ready": true,
+        "beats": [
+          {
+            "id": "b1",
+            "label": "1. Lý thuyết (Phần 1): Vì sao phải khóa chặt Giọng văn Thương hiệu?",
+            "mode": "theory",
+            "duration": 23
+          },
+          {
+            "id": "b2",
+            "label": "2. Lý thuyết (Phần 2): Bản đồ nỗi đau khách hàng & Công thức kết hợp nguồn",
+            "mode": "theory",
+            "duration": 23
+          },
+          {
+            "id": "b3",
+            "label": "3. Minh họa: Quan sát cấu trúc tệp brand_voice.md trong IDE",
+            "mode": "sim",
+            "duration": 12
+          },
+          {
+            "id": "b4",
+            "label": "4. Kỹ thuật: Cách AI rút trích bài viết mẫu để tự lập Brand Voice",
+            "mode": "sim",
+            "duration": 13
+          },
+          {
+            "id": "b5",
+            "label": "5. Bước 1: Mở hồ sơ gốc COMPANY.md để trích xuất thương hiệu",
+            "mode": "sim",
+            "duration": 10
+          },
+          {
+            "id": "b6",
+            "label": "6. Bước 2: Ra lệnh khởi tạo tệp brand_voice.md chuẩn B2B",
+            "mode": "sim",
+            "duration": 10
+          },
+          {
+            "id": "b7",
+            "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+            "mode": "sim",
+            "duration": 16
+          }
+        ]
+      },
+      {
+        "code": "Bài 18",
+        "title": "Tự động hóa Sản xuất Bài viết, Email Chuỗi & Kiểm duyệt Chất lượng",
+        "meta": "7 phần · Đã sẵn sàng",
+        "filename": "lesson_18.html",
+        "ready": true,
+        "beats": [
+          {
+            "id": "b1",
+            "label": "1. Lý thuyết (Phần 1): Dây chuyền chuyển hóa từ 1 tài liệu gốc ra 3 kênh",
+            "mode": "theory",
+            "duration": 23
+          },
+          {
+            "id": "b2",
+            "label": "2. Lý thuyết (Phần 2): Quy trình 2 bước Viết nháp & Tổng biên tập tự chấm điểm",
+            "mode": "theory",
+            "duration": 21
+          },
+          {
+            "id": "b3",
+            "label": "3. Minh họa: Kỹ thuật ra lệnh 'Viết nháp + Tự biên tập' trong 1 bước",
+            "mode": "sim",
+            "duration": 13
+          },
+          {
+            "id": "b4",
+            "label": "4. Kỹ thuật: Cấu trúc chuyển hóa 1 nội dung sang 3 định dạng kênh",
+            "mode": "sim",
+            "duration": 11
+          },
+          {
+            "id": "b5",
+            "label": "5. Bước 1: Mở chọn tệp @brand_voice.md ở cây thư mục trái",
+            "mode": "sim",
+            "duration": 9
+          },
+          {
+            "id": "b6",
+            "label": "6. Bước 2: Gửi lệnh sản xuất 3 kênh kèm bước tự kiểm duyệt",
+            "mode": "sim",
+            "duration": 11
+          },
+          {
+            "id": "b7",
+            "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+            "mode": "sim",
+            "duration": 18
+          }
+        ]
+      },
+      {
+        "code": "Bài 19",
+        "title": "Tạo Hình ảnh Minh họa, Infographic & Ấn phẩm Nhận diện Thương hiệu",
+        "meta": "7 phần · Đã sẵn sàng",
+        "filename": "lesson_19.html",
+        "ready": true,
+        "beats": [
+          {
+            "id": "b1",
+            "label": "1. Lý thuyết (Phần 1): Công thức khóa Phong cách & Bảng màu thương hiệu",
+            "mode": "theory",
+            "duration": 23
+          },
+          {
+            "id": "b2",
+            "label": "2. Lý thuyết (Phần 2): Xuất bản Sơ đồ Infographic SVG & Bộ biểu tượng sắc nét",
+            "mode": "theory",
+            "duration": 23
+          },
+          {
+            "id": "b3",
+            "label": "3. Minh họa: Quan sát tệp kịch bản thiết kế hình ảnh trong IDE",
+            "mode": "sim",
+            "duration": 11
+          },
+          {
+            "id": "b4",
+            "label": "4. Kỹ thuật: Xem trực tiếp Poster Infographic SVG 3 cột ngay trong IDE",
+            "mode": "sim",
+            "duration": 15
+          },
+          {
+            "id": "b5",
+            "label": "5. Bước 1: Mở bài viết chien_dich_noi_dung_q2.md cần minh họa",
+            "mode": "sim",
+            "duration": 11
+          },
+          {
+            "id": "b6",
+            "label": "6. Bước 2: Gửi câu lệnh tạo bộ ảnh và Infographic đồng bộ",
+            "mode": "sim",
+            "duration": 10
+          },
+          {
+            "id": "b7",
+            "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+            "mode": "sim",
+            "duration": 19
+          }
+        ]
+      },
+      {
+        "code": "Bài 20",
+        "title": "Xuất bản Slide Thuyết trình (HTML/PPTX) & Bảng điều khiển Báo cáo Web",
+        "meta": "7 phần · Đã sẵn sàng",
+        "filename": "lesson_20.html",
+        "ready": true,
+        "beats": [
+          {
+            "id": "b1",
+            "label": "1. Lý thuyết (Phần 1): Nguyên tắc Tiêu đề Hành động (Action Title) & Giới hạn dòng",
+            "mode": "theory",
+            "duration": 22
+          },
+          {
+            "id": "b2",
+            "label": "2. Lý thuyết (Phần 2): Dây chuyền xuất bản Slide Web 16:9 & Đồng bộ PowerPoint",
+            "mode": "theory",
+            "duration": 23
+          },
+          {
+            "id": "b3",
+            "label": "3. Minh họa: Khung trình chiếu Slide 16:9 trực quan ngay trong IDE",
+            "mode": "sim",
+            "duration": 18
+          },
+          {
+            "id": "b4",
+            "label": "4. Kỹ thuật: Cách viết câu lệnh ép AI tuân thủ chuẩn dưới 10 dòng/slide",
+            "mode": "sim",
+            "duration": 13
+          },
+          {
+            "id": "b5",
+            "label": "5. Bước 1: Mở chọn tệp đề án gốc de_an_tong_the_q2.md",
+            "mode": "sim",
+            "duration": 12
+          },
+          {
+            "id": "b6",
+            "label": "6. Bước 2: Gửi lệnh xuất bản bộ Slide HTML/PPTX 5 trang",
+            "mode": "sim",
+            "duration": 10
+          },
+          {
+            "id": "b7",
+            "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+            "mode": "sim",
+            "duration": 19
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_number": 6,
+    "code": "CHƯƠNG 6",
+    "title": "4 Tình huống Thực chiến Toàn diện (Case Studies)",
+    "subtitle": "Thực chiến Lập kế hoạch chiến lược 7 bước, Tuyển dụng nhân sự HR, Rà soát rủi ro Hợp đồng và Tổng duyệt dự án",
+    "status": "ready",
+    "status_label": "Đã sẵn sàng · 4 Bài · 24 Phần",
+    "lessons_count": 4,
+    "beats_count": 24,
+    "duration_label": "4 bài giảng · 24 phần tương tác",
+    "default_lesson": "lesson_21.html",
+    "lessons": [
+      {
+        "code": "Bài 21",
+        "title": "Tình huống 1 — Lập Kế hoạch Chiến lược Từ 0 Đến Bản Thảo Hoàn chỉnh",
+        "meta": "7 phần · Đã sẵn sàng",
+        "filename": "lesson_21.html",
+        "ready": true,
+        "beats": [
+          {
+            "id": "b1",
+            "label": "1. Lý thuyết (Phần 1): Phương pháp giải mã dự án mẫu thành Khuôn chiến lược 7 bước",
+            "mode": "theory",
+            "duration": 22
+          },
+          {
+            "id": "b2",
+            "label": "2. Lý thuyết (Phần 2): Kết hợp Khuôn 7 bước với chu trình /grill-me và /plan",
+            "mode": "theory",
+            "duration": 25
+          },
+          {
+            "id": "b3",
+            "label": "3. Minh họa: Quan sát tệp quy trình chiến lược 7 bước trong IDE",
+            "mode": "sim",
+            "duration": 12
+          },
+          {
+            "id": "b4",
+            "label": "4. Kỹ thuật: Cách kết hợp khuôn mẫu có sẵn với lệnh /grill-me",
+            "mode": "sim",
+            "duration": 12
+          },
+          {
+            "id": "b5",
+            "label": "5. Bước 1: Mở tệp khung chiến lược 7 bước",
+            "mode": "sim",
+            "duration": 10
+          },
+          {
+            "id": "b6",
+            "label": "6. Bước 2: Gửi thông số Giày Bã Mía và kích hoạt lệnh /plan",
+            "mode": "sim",
+            "duration": 12
+          },
+          {
+            "id": "b7",
+            "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+            "mode": "sim",
+            "duration": 20
+          }
+        ]
+      },
+      {
+        "code": "Bài 22",
+        "title": "Tình huống 2 — Tự động hóa Tuyển dụng, Chấm CV & Lộ trình Hội nhập (HR)",
+        "meta": "7 phần · Đã sẵn sàng",
+        "filename": "lesson_22.html",
+        "ready": true,
+        "beats": [
+          {
+            "id": "b1",
+            "label": "1. Lý thuyết (Phần 1): Xây dựng Thang điểm 100 (Rubric) để sàng lọc hồ sơ khách quan",
+            "mode": "theory",
+            "duration": 24
+          },
+          {
+            "id": "b2",
+            "label": "2. Lý thuyết (Phần 2): Tạo câu hỏi phỏng vấn xoáy sâu & Lộ trình thử việc 30–60–90 ngày",
+            "mode": "theory",
+            "duration": 25
+          },
+          {
+            "id": "b3",
+            "label": "3. Minh họa: Quan sát tệp Thang điểm tiêu chí tuyển dụng trong IDE",
+            "mode": "sim",
+            "duration": 12
+          },
+          {
+            "id": "b4",
+            "label": "4. Kỹ thuật: Bảng xếp hạng ứng viên kèm câu hỏi phỏng vấn xoáy sâu",
+            "mode": "sim",
+            "duration": 16
+          },
+          {
+            "id": "b5",
+            "label": "5. Bước 1: Kiểm tra tệp tiêu chí jd_truong_nhom_cs.md",
+            "mode": "sim",
+            "duration": 11
+          },
+          {
+            "id": "b6",
+            "label": "6. Bước 2: Gửi lệnh chấm điểm ứng viên và lập lộ trình 30-60-90 ngày",
+            "mode": "sim",
+            "duration": 11
+          },
+          {
+            "id": "b7",
+            "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+            "mode": "sim",
+            "duration": 22
+          }
+        ]
+      },
+      {
+        "code": "Bài 23",
+        "title": "Tình huống 3 — Xây dựng Trợ lý Nghiên cứu Pháp lý, Hợp đồng & Quy chế",
+        "meta": "7 phần · Đã sẵn sàng",
+        "filename": "lesson_23.html",
+        "ready": true,
+        "beats": [
+          {
+            "id": "b1",
+            "label": "1. Lý thuyết (Phần 1): Nguyên tắc đối chiếu Dự thảo hợp đồng với Quy chế chuẩn nội bộ",
+            "mode": "theory",
+            "duration": 24
+          },
+          {
+            "id": "b2",
+            "label": "2. Lý thuyết (Phần 2): Phân loại rủi ro Đỏ - Vàng - Xanh & Soạn sẵn câu chữ sửa đổi",
+            "mode": "theory",
+            "duration": 22
+          },
+          {
+            "id": "b3",
+            "label": "3. Minh họa: Quan sát tệp Quy chế Hợp đồng Chuẩn của công ty",
+            "mode": "sim",
+            "duration": 14
+          },
+          {
+            "id": "b4",
+            "label": "4. Kỹ thuật: Giao diện đối chiếu điều khoản Đỏ / Xanh kèm câu chữ sửa đổi",
+            "mode": "sim",
+            "duration": 17
+          },
+          {
+            "id": "b5",
+            "label": "5. Bước 1: Mở bản dự thảo hợp đồng đối tác gửi",
+            "mode": "sim",
+            "duration": 10
+          },
+          {
+            "id": "b6",
+            "label": "6. Bước 2: Gửi lệnh đối chiếu 1-1 giữa Dự thảo và Quy chế chuẩn",
+            "mode": "sim",
+            "duration": 11
+          },
+          {
+            "id": "b7",
+            "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+            "mode": "sim",
+            "duration": 22
+          }
+        ]
+      },
+      {
+        "code": "Bài 24",
+        "title": "Tình huống 4 — Tổng duyệt Chất lượng Dự án, Bảo mật (.gitignore) & Lộ trình 30 Ngày",
+        "meta": "7 phần · Đã sẵn sàng",
+        "filename": "lesson_24.html",
+        "ready": true,
+        "beats": [
+          {
+            "id": "b1",
+            "label": "1. Lý thuyết (Phần 1): Hai chốt chặn khóa sổ — Đối chiếu chéo số liệu & Bảo mật .gitignore",
+            "mode": "theory",
+            "duration": 28
+          },
+          {
+            "id": "b2",
+            "label": "2. Lý thuyết (Phần 2): Bản đồ Hành động 30 ngày đưa Antigravity IDE vào công việc thật",
+            "mode": "theory",
+            "duration": 24
+          },
+          {
+            "id": "b3",
+            "label": "3. Quan sát: Toàn bộ danh mục tài sản số hóa sau 6 Chương",
+            "mode": "sim",
+            "duration": 15
+          },
+          {
+            "id": "b4",
+            "label": "4. Kỹ thuật: Bảng kiểm toán đối chiếu chéo số liệu và khóa bảo mật .gitignore",
+            "mode": "sim",
+            "duration": 17
+          },
+          {
+            "id": "b5",
+            "label": "5. Bước 1: Mở kiểm tra Biên bản nghiệm thu đối chiếu chéo toàn dự án",
+            "mode": "sim",
+            "duration": 13
+          },
+          {
+            "id": "b6",
+            "label": "6. Bước 2: Yêu cầu AI lập Lộ trình 30 ngày áp dụng cho bản thân",
+            "mode": "sim",
+            "duration": 14
+          },
+          {
+            "id": "b7",
+            "label": "Phần 6: Tổng kết & Ghi nhớ cốt lõi",
+            "mode": "sim",
+            "duration": 18
+          }
+        ]
+      }
+    ]
+  }
+]
