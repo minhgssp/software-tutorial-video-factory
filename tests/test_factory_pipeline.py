@@ -208,3 +208,64 @@ def test_fac_video_foley_visemes_and_line_balancer(tmp_path: Path) -> None:
     visemes = extract_5hz_visemes_from_wav(wav_out, fps=5)
     assert len(visemes) >= 5
     assert set(visemes).issubset({"SIL", "ROUND_O_U", "FRICATIVE_S_I", "WIDE_A_E", "MID_TALK"})
+
+
+
+def test_v31_kudo_doctor_and_sim_request_contract() -> None:
+    """Verify Kudo-inspired doctor check, studio-request-builder.html, and <sim-request> contract validation."""
+    from core_engine.pedagogy_and_request_gate import check_sim_request, run_environment_doctor
+
+    doc = run_environment_doctor(ROOT_DIR)
+    assert doc["passed"] is True
+    assert any(c["name"].startswith("Python >= 3.10") and c["ok"] for c in doc["checks"])
+    assert (ROOT_DIR / "studio-request-builder.html").exists()
+
+    valid_req = """
+    <sim-request v="1" factory=">=3.1.0">
+    software_type: banking-portal
+    use_case: process-confirm
+    aspect: 16:9
+    voice: vieneu
+    accent: #D95D39
+    context_example: Ví dụ thẩm định hồ sơ cấp hạn mức 30 tỷ cho Công ty Sản xuất Minh Phát
+    topic: Quy trình 3 bước lọc hồ sơ vượt hạn mức và bấm phê duyệt tờ trình.
+    </sim-request>
+    """
+    res = check_sim_request(valid_req)
+    assert res["ok"] is True
+    assert res["resolved"]["software_type"] == "banking-portal"
+    assert len(res["resolved"]["gate_pipeline"]) == 4
+
+    bad_req = "<sim-request>software_type: unknown_app\nuse_case: bad_case</sim-request>"
+    bad_res = check_sim_request(bad_req)
+    assert bad_res["ok"] is False
+    assert len(bad_res["errors"]) >= 2
+
+
+def test_v31_newsroom_departments_and_four_anti_pattern_gates() -> None:
+    """Verify 6-department Newsroom skill files (<=200 lines) and mechanical detection of the 4 Chronic Anti-Patterns."""
+    from core_engine.pedagogy_and_request_gate import audit_course_pedagogy, audit_text_for_four_anti_patterns
+
+    skill_root = ROOT_DIR / ".agents" / "skills" / "software-simulation-video-factory"
+    for dept in ("intake", "surface", "storyboard", "review", "archive", "development"):
+        lead_file = skill_root / dept / "lead.md"
+        assert lead_file.exists(), f"Missing department lead: {lead_file}"
+        assert len(lead_file.read_text(encoding="utf-8").splitlines()) <= 200
+
+    # Check mechanical catching of all 4 Anti-Patterns on intentionally bad text
+    bad_sample = (
+        "Chào mừng anh chị đến với bài 5. Ở bài trước chúng ta đã tìm hiểu quy trình. "
+        "Mở ngay ngăn wip/ của Khách hàng A07. "
+        "Ở thẻ bên trái là dữ liệu thô, nhìn sang bên phải là nút bấm phê. "
+        "REDLINE FOCUS: BÔI ĐEN ĐỂ COPY."
+    )
+    v = audit_text_for_four_anti_patterns(bad_sample, "bad_sample", is_opening_beat=True)
+    rules_triggered = {item["rule"] for item in v}
+    assert "TẬT_1_LỘ_PROMPT_NỘI_BỘ" in rules_triggered
+    assert "TẬT_2_NHẢY_CÓC_THIẾU_BỐI_CẢNH" in rules_triggered
+    assert "TẬT_3_TẢ_TỌA_ĐỘ_CƠ_HỌC" in rules_triggered
+    assert "TẬT_4_DẪN_DẮT_LIÊN_BÀI_VÀ_TỪ_DỊCH_MÁY" in rules_triggered
+
+    # Check that our actual 24-lesson courseware passes with 0 violations!
+    ped_res = audit_course_pedagogy(_get_courseware_dir())
+    assert ped_res["passed"] is True, f"Courseware pedagogy failed: {ped_res['violations']}"

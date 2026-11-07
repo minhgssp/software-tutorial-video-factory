@@ -1,25 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Software Simulation & Tutorial Video Factory CLI (`factory_cli.py` v2.0)
+Universal Software Simulation & Interactive Video-Course Factory CLI (`factory_cli.py` v3.1)
 
 Unified command-line interface for AI Agents (`Claude Code`, `Google Antigravity`, `Cursor`, `Codex`)
-to transform Screenshots, Screen Recordings, Code Repositories, or Markdown Curricula into:
-  1. 5-Layer Modular Interactive HTML Courseware (`index.html`, `lesson_spec.js`, `player_engine.js`, `spotlight_cursor.js`)
-  2. Single-File Interactive HTML Software Simulators (`#laser-cursor`, `#custom-select-floating`, `VFS`, `glideLaserTo()`)
-  3. 6-Archetype Declarative 16:9 HTML Lecture Scenes (`window.__act()`)
-  4. Voice-Synced Widescreen 16:9 Tutorial & Product Demo Videos (`/kudo` + `/reelcrew` + `/fac-video`)
-
-Usage Examples:
-  python factory_cli.py status
-  python factory_cli.py compile-course --course-dir examples/antigravity_studio_simulator
-  python factory_cli.py verify-course --course-dir examples/antigravity_studio_simulator
-  python factory_cli.py intake-repo --repo . --out temp/blueprint.json
-  python factory_cli.py intake-media --input examples/ --out temp/media_blueprint.json
-  python factory_cli.py scaffold-sim --blueprint temp/blueprint.json --out temp/simulator.html
-  python factory_cli.py build-pages --spec examples/enterprise_16x9_course/specs/B01_SaiLamThuongGap.json --out-dir temp/pages
-  python factory_cli.py audit-sim --html examples/antigravity_studio_simulator/Antigravity_Simulator_Studio.html --forbid TelecomCorp,FinBank
-  python factory_cli.py audit-spec --spec examples/enterprise_16x9_course/specs/B01_SaiLamThuongGap.json --whitelabel
+combining `/kudo` deterministic request/doctor contracts and `/viet-chuyen-nghiep` 6-Department Newsroom Gates:
+  1. `doctor` — Check Python, Playwright, FFmpeg, VieNeu-TTS (.venv/vieneu), Faster-Whisper, and Kokoro readiness
+  2. `check-request` — Validate a `<sim-request v="1">` contract block and output the locked department pipeline
+  3. `compile-course` & `verify-course` — Compile and verify 4-compartment modular interactive HTML courseware
+  4. `audit-pedagogy` — Mechanically enforce the 4 Chronic Anti-Pattern Gates (No Prompt Leak, Context Before Example, No Spatial Pointer, Self-Contained Atom)
+  5. `intake-repo`, `intake-media`, `scaffold-sim`, `build-pages`, `audit-sim`, `audit-spec`
 """
 
 from __future__ import annotations
@@ -50,33 +40,39 @@ from core_engine import (  # noqa: E402
     generate_simulator_scaffold,
     harvest_code_repository,
 )
+from core_engine.pedagogy_and_request_gate import (  # noqa: E402
+    audit_course_pedagogy,
+    check_sim_request,
+    run_environment_doctor,
+)
 
 
 def cmd_status() -> int:
     sim_dir = ROOT_DIR / "examples" / "antigravity_studio_simulator"
     status = {
-        "factory": "Software Simulation & Tutorial Video Factory v2.0.0 (5-Layer Modular Courseware & 16:9 Video Engine)",
+        "factory": "Universal Software Simulation & Interactive Video-Course Factory v3.1.0",
         "root_dir": str(ROOT_DIR),
+        "request_builder_ui": str(ROOT_DIR / "studio-request-builder.html"),
         "embedded_engines": {
             "course_compiler_5layer": (ROOT_DIR / "core_engine" / "course_compiler.py").exists(),
+            "pedagogy_and_request_gate_v31": (ROOT_DIR / "core_engine" / "pedagogy_and_request_gate.py").exists(),
+            "voice_engine_vieneu_whisper_kokoro": (ROOT_DIR / "core_engine" / "voice_engine" / "vieneu_tts.py").exists(),
+            "rubric_engine": (ROOT_DIR / "core_engine" / "rubric_engine" / "rubric.py").exists(),
             "kudo_screencast_16x9": (ROOT_DIR / "core_engine" / "kcast_engine" / "widescreen_16x9.py").exists(),
-            "kudo_kcast_core": (ROOT_DIR / "core_engine" / "kcast_engine" / "kcast" / "plan.py").exists(),
             "scene_builder_6_archetypes": (ROOT_DIR / "core_engine" / "scene_builder.py").exists(),
             "intake_extractor_repo_and_media": (ROOT_DIR / "core_engine" / "intake_extractor.py").exists(),
             "fac_video_syncgate_and_foley": (ROOT_DIR / "core_engine" / "syncgate_and_foley.py").exists(),
         },
         "documentation": {
+            "installation_and_vieneu_setup": (ROOT_DIR / "docs" / "INSTALLATION_AND_VIENEU_SETUP.md").exists(),
             "spec_v2_5layer": (ROOT_DIR / "docs" / "SPEC_V2_5LAYER_COURSEWARE_ENGINE.md").exists(),
             "codemap_v2": (ROOT_DIR / "docs" / "CODEMAP.md").exists(),
         },
         "examples": {
+            "saas_workflow_process_demo": (ROOT_DIR / "examples" / "saas_workflow_process_demo" / "index.html").exists(),
+            "ui_learning_portal_demo": (ROOT_DIR / "examples" / "ui_learning_portal_demo" / "index.html").exists(),
             "antigravity_5layer_courseware_hub": (sim_dir / "index.html").exists(),
             "antigravity_studio_simulator": (sim_dir / "Antigravity_Simulator_Studio.html").exists(),
-            "enterprise_16x9_course_specs": sorted(
-                p.name for p in (ROOT_DIR / "examples" / "enterprise_16x9_course" / "specs").glob("*.json")
-            )
-            if (ROOT_DIR / "examples" / "enterprise_16x9_course" / "specs").exists()
-            else [],
         },
     }
     print(json.dumps(status, ensure_ascii=False, indent=2))
@@ -85,24 +81,35 @@ def cmd_status() -> int:
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Software Simulation & Tutorial Video Factory CLI v2.0",
+        description="Universal Software Simulation & Interactive Video-Course Factory CLI v3.1",
         formatter_class=argparse.RawTextHelpFormatter,
     )
     sub = parser.add_subparsers(dest="subcommand")
 
     sub.add_parser("status", help="Show factory readiness, docs, and embedded engine status")
+    sub.add_parser("doctor", help="Check system dependencies & optional voice/video engines (Kudo-style doctor)")
+
+    p_req = sub.add_parser("check-request", help="Validate a <sim-request> contract block and output resolved pipeline")
+    p_req.add_argument("--file", default=None, help="Path to file containing <sim-request> block")
+    p_req.add_argument("--text", default=None, help="Raw <sim-request> text string")
+
+    p_ped = sub.add_parser(
+        "audit-pedagogy",
+        help="Audit courseware against the 4 Chronic Anti-Patterns (No Prompt Leak, Context Before Example, No Spatial Pointer, Self-Contained Atom)",
+    )
+    p_ped.add_argument("--course-dir", required=True, help="Path to courseware root directory")
 
     p_comp = sub.add_parser(
         "compile-course",
-        help="Compile 5-layer modular courseware (lessons/lesson_XX/sessions/*.json & slides/*.html -> lesson_spec.js & course_manifest.js)",
+        help="Compile modular courseware (lessons/lesson_XX/sessions/*.json & slides/*.html -> lesson_spec.js & course_manifest.js)",
     )
-    p_comp.add_argument("--course-dir", required=True, help="Path to 5-layer courseware root directory")
+    p_comp.add_argument("--course-dir", required=True, help="Path to courseware root directory")
 
     p_ver = sub.add_parser(
         "verify-course",
-        help="Mechanically audit a 5-layer courseware package (5 layers, slide/audio links, zero audition pollution)",
+        help="Mechanically audit a courseware package (5 layers, slide/audio links, zero audition pollution)",
     )
-    p_ver.add_argument("--course-dir", required=True, help="Path to 5-layer courseware root directory")
+    p_ver.add_argument("--course-dir", required=True, help="Path to courseware root directory")
 
     p_repo = sub.add_parser("intake-repo", help="Scan a code repository and output a VFS simulator blueprint.json")
     p_repo.add_argument("--repo", required=True, help="Path to target code repository")
@@ -120,7 +127,7 @@ def main() -> int:
     p_sim.add_argument("--title", default=None, help="Optional HTML title")
 
     p_pages = sub.add_parser("build-pages", help="Compile a declarative 16:9 JSON video spec into HTML scenes")
-    p_pages.add_argument("--spec", required=True, help="Path to video spec JSON (e.g., B01_SaiLamThuongGap.json)")
+    p_pages.add_argument("--spec", required=True, help="Path to video spec JSON")
     p_pages.add_argument("--out-dir", required=True, help="Directory to write compiled HTML pages")
 
     p_asim = sub.add_parser("audit-sim", help="Audit an HTML simulator (#laser-cursor, zero OS <select>, node --check)")
@@ -134,6 +141,28 @@ def main() -> int:
     args = parser.parse_args()
     if not args.subcommand or args.subcommand == "status":
         return cmd_status()
+
+    if args.subcommand == "doctor":
+        res = run_environment_doctor(ROOT_DIR)
+        print(json.dumps(res, ensure_ascii=False, indent=2))
+        return 0 if res["passed"] else 1
+
+    if args.subcommand == "check-request":
+        raw = ""
+        if args.file:
+            raw = Path(args.file).read_text(encoding="utf-8")
+        elif args.text:
+            raw = args.text
+        else:
+            raw = sys.stdin.read()
+        res = check_sim_request(raw)
+        print(json.dumps(res, ensure_ascii=False, indent=2))
+        return 0 if res["ok"] else 1
+
+    if args.subcommand == "audit-pedagogy":
+        res = audit_course_pedagogy(Path(args.course_dir))
+        print(json.dumps(res, ensure_ascii=False, indent=2))
+        return 0 if res["passed"] else 1
 
     if args.subcommand == "compile-course":
         res = compile_modular_courseware(args.course_dir)

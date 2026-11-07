@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bàn Chọn Yêu Cầu Mô Phỏng Phần Mềm 1-Chạm (Sim-Request Studio)</title>
+  <style>
+    :root {
+      --bg: #FAF8F5;
+      --card: #FFFFFF;
+      --border: #E6DFD5;
+      --text: #2C2520;
+      --muted: #6E655F;
+      --accent: #D95D39;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 28px 20px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    h1 { font-size: 24px; margin-bottom: 6px; }
+    p.sub { color: var(--muted); font-size: 14px; margin-bottom: 22px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      box-shadow: 0 6px 18px rgba(44,37,32,0.04);
+    }
+    label { display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; margin-top: 12px; }
+    label:first-child { margin-top: 0; }
+    select, input, textarea {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1px solid #D5CCC0;
+      border-radius: 8px;
+      font-size: 13.5px;
+      font-family: inherit;
+      background: #FFFDF9;
+    }
+    textarea { min-height: 76px; resize: vertical; }
+    pre {
+      background: #1E293B;
+      color: #F8FAFC;
+      padding: 16px;
+      border-radius: 10px;
+      font-size: 13px;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      margin-top: 10px;
+    }
+    button.btn-copy {
+      margin-top: 14px;
+      width: 100%;
+      background: var(--accent);
+      color: #FFF;
+      border: none;
+      padding: 11px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button.btn-copy:hover { opacity: 0.92; }
+  </style>
+</head>
+<body>
+  <h1>🎬 Bàn Chọn Yêu Cầu Mô Phỏng Phần Mềm 1-Chạm (`<sim-request>`)</h1>
+  <p class="sub">Thiết kế theo chuẩn kiến trúc Hợp đồng Đầu vào của <code>/kudo</code> &amp; Tòa soạn 6 Ban của <code>/viet-chuyen-nghiep</code>. Chọn cấu hình bên trái và sao chép khối lệnh bên phải dán vào AI Agent.</p>
+
+  <div class="grid">
+    <div class="card">
+      <label>1. Họ Phần Mềm Cần Mô Phỏng (`software_type`)</label>
+      <select id="sw-type" onchange="updateOut()">
+        <option value="erp-crm">erp-crm — Hệ thống ERP, CRM &amp; Bảng phê duyệt đơn hàng</option>
+        <option value="banking-portal">banking-portal — Cổng Thẩm định Tín dụng &amp; Nghiệp vụ Ngân hàng</option>
+        <option value="saas-dashboard">saas-dashboard — Bảng điều khiển Phân tích Dữ liệu &amp; BI</option>
+        <option value="multi-step-form">multi-step-form — Biểu mẫu Điện tử Đa bước (E-Form / Wizard)</option>
+        <option value="workspace-ide">workspace-ide — Không gian Làm việc Tài liệu &amp; Trợ lý AI (IDE)</option>
+        <option value="custom-web">custom-web — Giao diện Web / Mobile App Tùy chỉnh</option>
+      </select>
+
+      <label>2. Mục Đích Sử Dụng (`use_case`)</label>
+      <select id="use-case" onchange="updateOut()">
+        <option value="process-confirm">process-confirm — Xác nhận quy trình BA / UAT trước lập trình</option>
+        <option value="training-course">training-course — Khóa học &amp; Đào tạo nhân sự (E-Learning)</option>
+        <option value="system-handover">system-handover — Chuyển giao hệ thống &amp; Cẩm nang SOP</option>
+        <option value="product-demo">product-demo — Demo sản phẩm &amp; Bán hàng (Presales)</option>
+        <option value="mp4-video">mp4-video — Xuất bản Video MP4 thuyết minh tự động</option>
+      </select>
+
+      <label>3. Động Cơ Giọng Đọc (`voice`) &amp; Tỷ Lệ Khung Hình (`aspect`)</label>
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
+        <select id="voice" onchange="updateOut()">
+          <option value="vieneu">vieneu (Tiếng Việt 48kHz Offline)</option>
+          <option value="kokoro">kokoro (Tiếng Anh Offline)</option>
+          <option value="web-speech">web-speech (Trình duyệt)</option>
+        </select>
+        <select id="aspect" onchange="updateOut()">
+          <option value="16:9">16:9 (Ngang chuẩn Web/PC)</option>
+          <option value="9:16">9:16 (Dọc Mobile)</option>
+        </select>
+      </div>
+
+      <label>4. Màu Nhấn Thương Hiệu (`accent`)</label>
+      <input type="text" id="accent" value="#D95D39" oninput="updateOut()" />
+
+      <label>5. Bối Cảnh Ví Dụ Giả Định (`context_example` — Chống Tật 2 Nhảy Cóc)</label>
+      <input type="text" id="context-ex" value="Ví dụ thẩm định hồ sơ cấp hạn mức 30 tỷ cho Công ty Sản xuất Minh Phát" oninput="updateOut()" />
+
+      <label>6. Chủ Đề / Quy Trình Cần Mô Phỏng (`topic`)</label>
+      <textarea id="topic" oninput="updateOut()">Quy trình 3 bước lọc hồ sơ vượt hạn mức, đối chiếu tỷ lệ đảm bảo và bấm phê duyệt tờ trình trên cổng nghiệp vụ.</textarea>
+    </div>
+
+    <div class="card" style="display:flex; flex-direction:column; justify-content:space-between;">
+      <div>
+        <label>Khối Hợp Đồng `<sim-request>` (Tự động kiểm tra bằng `factory_cli.py check-request`)</label>
+        <pre id="req-out"></pre>
+      </div>
+      <button class="btn-copy" id="copy-btn" onclick="copyReq()">📋 Sao chép khối &lt;sim-request&gt; để gửi cho AI Agent</button>
+    </div>
+  </div>
+
+  <script>
+    function updateOut() {
+      const sw = document.getElementById('sw-type').value;
+      const uc = document.getElementById('use-case').value;
+      const vc = document.getElementById('voice').value;
+      const asp = document.getElementById('aspect').value;
+      const acc = document.getElementById('accent').value.trim();
+      const ctx = document.getElementById('context-ex').value.trim();
+      const top = document.getElementById('topic').value.trim();
+      const txt = `<sim-request v="1" factory=">=3.1.0">\nsoftware_type: ${sw}\nuse_case: ${uc}\naspect: ${asp}\nvoice: ${vc}\naccent: ${acc}\ncontext_example: ${ctx}\ntopic: ${top}\n</sim-request>`;
+      document.getElementById('req-out').textContent = txt;
+    }
+    function copyReq() {
+      navigator.clipboard.writeText(document.getElementById('req-out').textContent);
+      const b = document.getElementById('copy-btn');
+      b.textContent = '✓ Đã sao chép! Hãy dán vào khung chat cùng lệnh /software-simulation-video-factory';
+      setTimeout(() => b.textContent = '📋 Sao chép khối <sim-request> để gửi cho AI Agent', 2500);
+    }
+    updateOut();
+  </script>
+</body>
+</html>
