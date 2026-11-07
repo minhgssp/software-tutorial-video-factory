@@ -1,58 +1,60 @@
-# Chuyên Viên Đóng Gói HTML-First & Triển Khai Vercel (`surface/vercel-html-deploy.md`)
+# Chuyên Viên Đóng Gói HTML-First, Khóa Mã Hóa `.env` & Triển Khai Vercel (`surface/vercel-html-deploy.md`)
 
-**Vai trò:** Đảm bảo mọi sản phẩm mô phỏng phần mềm và nhánh `fde-onsite-walkthrough` luôn **ưu tiên số 1 là bản Web HTML tương tác đẩy thẳng lên Vercel**, giúp FDE/PM/Giảng viên gửi link cho khách hàng hoặc học viên mở xem ngay trên trình duyệt mà không cần cài đặt. Chỉ xuất file `.mp4` khi người dùng có yêu cầu rõ ràng.
-
----
-
-## 1. Nguyên Tắc Ưu Tiên Phân Phối (`HTML-First on Vercel, MP4 On-Demand Only`)
-
-1. **Tại sao ưu tiên HTML trên Vercel thay vì xuất MP4 ngay?**
-   - Giống như việc gửi cho khách hàng một căn nhà mẫu mở cửa sẵn qua đường link web thay vì một cuộn băng ghi hình cố định: trên bản HTML Vercel, khách hàng và FDE có thể bấm dừng ở bất kỳ màn hình nào, click trực tiếp vào từng ô quy tắc `[WF-01]`, thử chuyển đổi giữa **Phương án A** và **Phương án B**, tích vào bảng **Checklist xác nhận** và chỉnh sửa văn bản trong tích tắc mà không tốn hàng chục phút render lại video `.mp4`.
-2. **Khi nào mới xuất `.mp4`?**
-   - Chỉ khi người dùng chỉ định rõ `delivery_mode: mp4-export` hoặc yêu cầu xuất file `.mp4` để đăng lên các nền tảng mạng xã hội / LMS chỉ nhận file video.
+**Vai trò:** Đảm bảo mọi sản phẩm mô phỏng phần mềm và nhánh `fde-onsite-walkthrough` khi đẩy lên **Vercel** luôn:
+1. **Ưu tiên số 1 là Web HTML tương tác (`html-vercel-first`)**, chỉ xuất `.mp4` khi người dùng có yêu cầu rõ ràng.
+2. **Bắt buộc khóa bằng mật khẩu từ biến `.env` (`WALKTHROUGH_PASSWORD`) kết hợp mã hóa `AES-256-GCM` không tải sớm (`Zero Pre-Auth DOM Load`)**: Chỉ giải mã và nạp nội dung trang khi người dùng nhập đúng mật khẩu, tuyệt đối không để lộ HTML/số liệu trong `View Source` hay `F12 Network` trước khi đăng nhập.
 
 ---
 
-## 2. Cấu Hình Chuẩn `vercel.json` (Đẩy Lên Vercel Bằng 1 Câu Lệnh)
+## 1. Tại Sao Phải Khóa Mã Hóa `AES-256-GCM` & Chặn Tải Sớm Trên Vercel?
 
-Mọi thư mục đầu ra của dự án (`examples/<project>/` hoặc thư mục khóa học/walkthrough) bắt buộc đính kèm tệp `vercel.json` ở gốc thư mục:
+- Các đường link `.vercel.app` mặc định có thể truy cập công khai. Nếu chỉ che màn hình bằng một lớp phủ CSS (`display: none`) và kiểm tra mật khẩu bằng câu lệnh `if (pass === '...')` thông thường, bất kỳ ai bấm `Ctrl+U` (View Source) đều đọc được toàn bộ nỗi đau hiện trạng, bảng quy tắc và số liệu của khách hàng.
+- **Giải pháp chuẩn của Nhà máy (`core_engine/vercel_crypto_vault.py`):**
+  1. Đặt mật khẩu cố định trong tệp `.env` (biến `WALKTHROUGH_PASSWORD=...`, được `.gitignore` bảo vệ).
+  2. Chạy lệnh `python factory_cli.py encrypt-walkthrough --dir <duong_dan_du_an>` để nén toàn bộ giao diện 5 màn (`walkthrough_source.html`) thành khối mã hóa **`AES-256-GCM`** (dẫn xuất khóa bằng **`PBKDF2-HMAC-SHA256` 100.000 vòng**).
+  3. Tệp `index.html` xuất ra **chỉ chứa màn hình nhập mật khẩu (`#security-vault-gate`)** và chuỗi mã hóa (`__ENCRYPTED_STAGE_PAYLOAD__`). Khi chưa nhập đúng mật khẩu, `document.querySelectorAll('[data-act]').length === 0` (không một thẻ DOM hay dữ liệu nào của dự án được nạp sớm).
 
-```json
-{
-  "version": 2,
-  "name": "software-simulation-walkthrough",
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
-      ]
-    },
-    {
-      "source": "/assets/(.*)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-      ]
-    }
-  ]
-}
+---
+
+## 2. Quy Trình 3 Bước Khóa Bảo Mật `.env` & Đẩy Lên Vercel
+
+### Bước 1: Khai báo mật khẩu trong tệp `.env` của dự án
+Tạo tệp `.env` (từ mẫu `.env.example`) tại thư mục dự án:
+```env
+WALKTHROUGH_PASSWORD=MatKhauBaoMatOnSite2026
 ```
 
-### Quy trình 2 bước triển khai lên Vercel:
-- **Bước 1 (Pha 1 — Gửi link Preview để chốt Simulation với Người dùng):**
-  ```bash
-  npx vercel --yes
-  ```
-- **Bước 2 (Pha 2 — Sau khi đã chốt Simulation và hoàn tất Audio + Hiệu ứng):**
-  ```bash
-  npx vercel --prod --yes
-  ```
+### Bước 2: Mã hóa trang HTML chống tải sớm (`Zero Pre-Auth Load`) & Kiểm định
+```bash
+# Đóng gói walkthrough_source.html -> index.html đã khóa AES-256-GCM + tạo api/unlock.js:
+python factory_cli.py encrypt-walkthrough --dir examples/fde_onsite_client_walkthrough_demo
+
+# Kiểm định tự động (xác nhận không lộ dữ liệu sớm + giải mã kiểm tra đủ 5 màn & Checklist):
+python factory_cli.py audit-fde-walkthrough --dir examples/fde_onsite_client_walkthrough_demo
+```
+
+### Bước 3: Đẩy lên Vercel (Kèm biến môi trường `.env`)
+```bash
+# Đẩy bản Preview (Pha 1 - gửi link + mật khẩu cho người dùng duyệt Simulation):
+npx vercel --yes
+
+# Đẩy bản Production (Pha 2 - sau khi đã chốt Simulation và hoàn tất Audio + Hiệu ứng):
+npx vercel env add WALKTHROUGH_PASSWORD production
+npx vercel --prod --yes
+```
 
 ---
 
-## 3. Tiêu Chuẩn Tự Bao Đóng (`Zero-Backend Static Bundle`)
-- Mọi đường dẫn CSS, JS, SVG, âm thanh (`.mp3` / `.wav`) đều phải dùng **đường dẫn tương đối (`./assets/...`)** để chạy hoàn hảo cả khi mở trực tiếp trên máy (`file://`) lẫn khi host trên miền `*.vercel.app`.
-- Không phụ thuộc vào cơ sở dữ liệu hay máy chủ API ngầm; toàn bộ dữ liệu mẫu ẩn danh và trạng thái tương tác được đóng gói gọn trong JSON/JS tĩnh.
+## 3. Cấu Trúc Thư Mục Chuẩn Khi Đóng Gói Lên Vercel
+
+```text
+<walkthrough_dir>/
+├── .env.example               # Mẫu khai báo WALKTHROUGH_PASSWORD=...
+├── .gitignore                 # Chặn commit tệp .env thật lên Git
+├── vercel.json                # Cấu hình định tuyến & bảo mật Header trên Vercel
+├── simulation_signoff.json    # Dấu niêm phong Cổng 1 (ui_references) & Cổng 2 (simulation_approved)
+├── walkthrough_source.html    # Bản nguồn HTML 5 màn (dùng để chỉnh sửa tại máy cục bộ)
+├── index.html                 # Bản xuất bản đã khóa mã hóa AES-256-GCM (Zero Pre-Auth Load)
+└── api/
+    └── unlock.js              # Vercel Serverless Function đối chiếu process.env.WALKTHROUGH_PASSWORD
+```

@@ -303,11 +303,31 @@ def test_v32_fde_onsite_walkthrough_and_simulation_signoff_gate(tmp_path: Path) 
     assert approved["passed"] is True
     assert approved["allow_audio_and_effects"] is True
 
-    # Audit the flagship FDE On-Site Walkthrough Demo (5 Acts + [WF-01..04] + 3-pillar Checklist + vercel.json)
+    # Audit the flagship FDE On-Site Walkthrough Demo (5 Acts + [WF-01..04] + 3-pillar Checklist + vercel.json + AES-256-GCM Zero-Preload Vault)
+    from core_engine.vercel_crypto_vault import (
+        decrypt_payload_aes256_gcm,
+        encrypt_payload_aes256_gcm,
+    )
+
+    sample_bundle = encrypt_payload_aes256_gcm("Bí mật hiện trạng khách hàng B2B", "MatKhauTest2026", iterations=10000)
+    assert decrypt_payload_aes256_gcm(sample_bundle, "MatKhauTest2026") == "Bí mật hiện trạng khách hàng B2B"
+    try:
+        decrypt_payload_aes256_gcm(sample_bundle, "SaiMatKhau")
+        assert False, "Must raise ValueError on wrong password"
+    except ValueError:
+        pass
+
     fde_demo_dir = ROOT_DIR / "examples" / "fde_onsite_client_walkthrough_demo"
+    raw_locked_html = (fde_demo_dir / "index.html").read_text(encoding="utf-8")
+    assert 'id="security-vault-gate"' in raw_locked_html
+    assert "act-1-as-is" not in raw_locked_html, "Zero pre-auth load: act-1-as-is must NOT appear in raw index.html"
+    assert "[WF-01]" not in raw_locked_html, "Zero pre-auth load: [WF-01] must NOT appear in raw index.html"
+
     fde_audit = audit_fde_onsite_walkthrough(fde_demo_dir)
     assert fde_audit["passed"] is True, f"FDE walkthrough demo failed audit: {fde_audit['errors']}"
     assert fde_audit["vercel_ready"] is True
+    assert fde_audit["encrypted_vault_locked"] is True
+    assert fde_audit["zero_preload_verified"] is True
     assert fde_audit["simulation_approved"] is True
     assert len(fde_audit["wf_markers_found"]) >= 4
 

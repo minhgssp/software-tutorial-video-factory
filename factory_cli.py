@@ -50,17 +50,21 @@ from core_engine.pedagogy_and_request_gate import (  # noqa: E402
     record_or_verify_simulation_signoff,
     run_environment_doctor,
 )
+from core_engine.vercel_crypto_vault import (  # noqa: E402
+    build_encrypted_vercel_walkthrough,
+)
 
 
 def cmd_status() -> int:
     sim_dir = ROOT_DIR / "examples" / "antigravity_studio_simulator"
     status = {
-        "factory": "Universal Software Simulation & Interactive Video-Course Factory v3.2.0",
+        "factory": "Universal Software Simulation & Interactive Video-Course Factory v3.3.0",
         "root_dir": str(ROOT_DIR),
         "request_builder_ui": str(ROOT_DIR / "studio-request-builder.html"),
         "embedded_engines": {
             "course_compiler_5layer": (ROOT_DIR / "core_engine" / "course_compiler.py").exists(),
-            "pedagogy_and_request_gate_v32": (ROOT_DIR / "core_engine" / "pedagogy_and_request_gate.py").exists(),
+            "pedagogy_and_request_gate_v33": (ROOT_DIR / "core_engine" / "pedagogy_and_request_gate.py").exists(),
+            "vercel_crypto_vault_aes256_gcm": (ROOT_DIR / "core_engine" / "vercel_crypto_vault.py").exists(),
             "voice_engine_vieneu_whisper_kokoro": (ROOT_DIR / "core_engine" / "voice_engine" / "vieneu_tts.py").exists(),
             "rubric_engine": (ROOT_DIR / "core_engine" / "rubric_engine" / "rubric.py").exists(),
             "kudo_screencast_16x9": (ROOT_DIR / "core_engine" / "kcast_engine" / "widescreen_16x9.py").exists(),
@@ -111,9 +115,19 @@ def main() -> int:
 
     p_fde = sub.add_parser(
         "audit-fde-walkthrough",
-        help="Audit a 5-Act FDE/PM On-Site Client Walkthrough package (HTML-first + vercel.json + 3-pillar Checklist)",
+        help="Audit a 5-Act FDE/PM On-Site Client Walkthrough package (HTML-first + vercel.json + AES-256-GCM Vault + 3-pillar Checklist)",
     )
     p_fde.add_argument("--dir", required=True, help="Path to FDE walkthrough directory")
+    p_fde.add_argument("--password", default=None, help="Optional password override (otherwise reads .env WALKTHROUGH_PASSWORD)")
+
+    p_enc = sub.add_parser(
+        "encrypt-walkthrough",
+        help="Encrypt an HTML walkthrough with AES-256-GCM + .env WALKTHROUGH_PASSWORD (Zero Pre-Auth Load for Vercel)",
+    )
+    p_enc.add_argument("--dir", required=True, help="Path to walkthrough directory")
+    p_enc.add_argument("--source", default="walkthrough_source.html", help="Source plaintext HTML filename")
+    p_enc.add_argument("--out", default="index.html", help="Output encrypted HTML filename")
+    p_enc.add_argument("--password", default=None, help="Optional password override (otherwise reads .env WALKTHROUGH_PASSWORD)")
 
     p_ped = sub.add_parser(
         "audit-pedagogy",
@@ -195,9 +209,19 @@ def main() -> int:
         return 0 if res["passed"] else 1
 
     if args.subcommand == "audit-fde-walkthrough":
-        res = audit_fde_onsite_walkthrough(Path(args.dir))
+        res = audit_fde_onsite_walkthrough(Path(args.dir), password=args.password)
         print(json.dumps(res, ensure_ascii=False, indent=2))
         return 0 if res["passed"] else 1
+
+    if args.subcommand == "encrypt-walkthrough":
+        res = build_encrypted_vercel_walkthrough(
+            Path(args.dir),
+            source_html_name=args.source,
+            out_html_name=args.out,
+            password=args.password,
+        )
+        print(json.dumps(res, ensure_ascii=False, indent=2))
+        return 0
 
     if args.subcommand == "audit-pedagogy":
         res = audit_course_pedagogy(Path(args.course_dir))

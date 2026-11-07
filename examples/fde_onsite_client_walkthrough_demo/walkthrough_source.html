@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FDE / PM On-Site Client Walkthrough — Hiện Trạng, Điểm Nghẽn, Wireframe &amp; Checklist Chốt Phương Án</title>
+  <style>
+    :root {
+      --bg-cream: #FAF8F5;
+      --card-bg: #FFFFFF;
+      --border-soft: #E5DED4;
+      --text-main: #231F1D;
+      --text-muted: #655D57;
+      --accent-terra: #D95D39;
+      --accent-green: #16794B;
+      --accent-amber: #C97A10;
+      --accent-red: #C9352B;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-cream);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header.topbar {
+      background: #1E242B;
+      color: #F8FAFC;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 2px solid var(--accent-terra);
+    }
+    .brand-group { display: flex; align-items: center; gap: 12px; }
+    .badge-branch {
+      background: var(--accent-terra);
+      color: #FFF;
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.3px;
+    }
+    .gate-pill {
+      background: rgba(22, 121, 75, 0.25);
+      border: 1px solid #34D399;
+      color: #A7F3D0;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    .nav-acts {
+      background: #FFF;
+      border-bottom: 1px solid var(--border-soft);
+      padding: 10px 24px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .act-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+    .act-btn {
+      background: #F4EFE8;
+      border: 1px solid #DCD3C6;
+      color: var(--text-main);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .act-btn.active {
+      background: var(--accent-terra);
+      color: #FFF;
+      border-color: var(--accent-terra);
+    }
+    .play-controls { display: flex; gap: 8px; align-items: center; }
+    .btn-walkthrough {
+      background: #1E242B;
+      color: #FFF;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    main.stage-shell {
+      max-width: 1260px;
+      width: 100%;
+      margin: 20px auto;
+      padding: 0 20px 36px;
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 20px;
+      position: relative;
+    }
+    .viewport-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-soft);
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 10px 28px rgba(35,31,29,0.05);
+      position: relative;
+      min-height: 540px;
+    }
+    .act-panel { display: none; }
+    .act-panel.active { display: block; }
+    h2.act-title { font-size: 20px; margin-bottom: 6px; color: #1E242B; }
+    p.act-lead { color: var(--text-muted); font-size: 14px; margin-bottom: 18px; line-height: 1.55; }
+    .sipoc-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+    .step-card {
+      background: #FBF9F6;
+      border: 1px solid var(--border-soft);
+      border-radius: 10px;
+      padding: 14px;
+    }
+    .step-card h3 { font-size: 14px; margin-bottom: 6px; color: var(--accent-terra); }
+    .step-card p { font-size: 13px; line-height: 1.5; color: var(--text-main); }
+    .metric-strip {
+      display: flex;
+      gap: 14px;
+      background: #FFF5F2;
+      border: 1px solid #F3C6B8;
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .metric-item { flex: 1; }
+    .metric-val { font-size: 20px; font-weight: 800; color: var(--accent-red); }
+    .metric-lbl { font-size: 12.5px; color: var(--text-muted); }
+    table.dmn-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+    table.dmn-table th, table.dmn-table td {
+      border: 1px solid var(--border-soft);
+      padding: 9px 11px;
+      text-align: left;
+    }
+    table.dmn-table th { background: #F4EFE8; font-weight: 700; }
+    .wf-badge {
+      display: inline-block;
+      background: var(--accent-terra);
+      color: #FFF;
+      font-weight: 800;
+      font-size: 11.5px;
+      padding: 2px 7px;
+      border-radius: 5px;
+      margin-right: 6px;
+    }
+    .wireframe-box {
+      border: 1.5px solid #CBD5E1;
+      border-radius: 12px;
+      background: #F8FAFC;
+      padding: 16px;
+    }
+    .wf-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #E2E8F0;
+      margin-bottom: 14px;
+    }
+    .wf-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 14px; }
+    .wf-stat {
+      background: #FFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 12px;
+    }
+    .option-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 14px; }
+    .option-card {
+      border: 2px solid var(--border-soft);
+      border-radius: 12px;
+      padding: 16px;
+      background: #FFFDFB;
+      cursor: pointer;
+    }
+    .option-card.selected {
+      border-color: var(--accent-green);
+      background: #F2FBF6;
+    }
+    .checklist-cols {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .chk-col {
+      background: #FBF9F6;
+      border: 1px solid var(--border-soft);
+      border-radius: 10px;
+      padding: 14px;
+    }
+    .chk-col h3 { font-size: 14.5px; margin-bottom: 10px; color: #1E242B; border-bottom: 2px solid var(--accent-terra); padding-bottom: 6px; }
+    .chk-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 13px;
+      line-height: 1.45;
+      margin-bottom: 9px;
+    }
+    aside.narrator-dock {
+      background: var(--card-bg);
+      border: 1px solid var(--border-soft);
+      border-radius: 14px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 10px 28px rgba(35,31,29,0.05);
+    }
+    .narration-box {
+      background: #FFF8F4;
+      border-left: 4px solid var(--accent-terra);
+      padding: 14px;
+      border-radius: 8px;
+      font-size: 13.8px;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+    .spotlight-ring {
+      outline: 3px solid var(--accent-terra) !important;
+      box-shadow: 0 0 0 6px rgba(217, 93, 57, 0.22) !important;
+      transition: all 0.3s ease;
+    }
+    #laser-cursor {
+      position: fixed;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(217, 93, 57, 0.88);
+      border: 2.5px solid #FFF;
+      box-shadow: 0 4px 14px rgba(217, 93, 57, 0.55);
+      pointer-events: none;
+      z-index: 9999;
+      transition: left 0.55s cubic-bezier(0.22, 1, 0.36, 1), top 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+      left: -40px;
+      top: -40px;
+    }
+  </style>
+</head>
+<body>
+  <div id="laser-cursor" title="Con trỏ dẫn dắt FDE Walkthrough"></div>
+
+  <header class="topbar">
+    <div class="brand-group">
+      <span class="badge-branch">FDE / PM ON-SITE WALKTHROUGH (HTML-FIRST VERCEL)</span>
+      <strong>Hệ Thống Tổng Hợp Báo Cáo Tuần &amp; Đối Chiếu Cảnh Báo Sớm Dự Án</strong>
+    </div>
+    <div>
+      <span class="gate-pill" id="gate-status-pill">✓ Đã nạp Giao diện mẫu &amp; Đã chốt HTML Simulation (Pha 2: Sẵn sàng Audio &amp; Hiệu ứng)</span>
+    </div>
+  </header>
+
+  <nav class="nav-acts">
+    <div class="act-tabs">
+      <button class="act-btn active" onclick="switchAct(0)" id="tab-act-0">1. Hiện trạng Client (As-Is)</button>
+      <button class="act-btn" onclick="switchAct(1)" id="tab-act-1">2. Điểm nghẽn &amp; Quy tắc ngầm</button>
+      <button class="act-btn" onclick="switchAct(2)" id="tab-act-2">3. Walkthrough Giải pháp / Wireframe</button>
+      <button class="act-btn" onclick="switchAct(3)" id="tab-act-3">4. Rủi ro &amp; Phương án A/B</button>
+      <button class="act-btn" onclick="switchAct(4)" id="tab-act-4">5. Checklist Chốt (Nỗi đau · Kỳ vọng · Giải pháp)</button>
+    </div>
+    <div class="play-controls">
+      <button class="btn-walkthrough" onclick="playGuidedBeat()" id="btn-auto-play">▶ Chạy Thuyết Minh &amp; Spotlight Từng Bước</button>
+    </div>
+  </nav>
+
+  <main class="stage-shell" id="kudo-stage-viewport">
+    <section class="viewport-card">
+      <!-- ACT 1: AS-IS STATE -->
+      <div class="act-panel active" id="panel-act-0" data-act="act-1-as-is">
+        <h2 class="act-title">Màn 1 — Hiện trạng vận hành của Client (Hành trình Trước - Trong - Sau)</h2>
+        <p class="act-lead">Ví dụ trong kỳ họp giao ban sáng thứ Hai hằng tuần tại Văn phòng Quản lý Dự án (PMO) đang giám sát 18 dự án phần mềm chạy song song: điều phối viên phải gom dữ liệu từ 5 nguồn rời rạc để kịp lập báo cáo trước 09:30.</p>
+
+        <div class="sipoc-grid">
+          <div class="step-card" id="as-is-before">
+            <h3>1. Trước khi mở công cụ (Chuẩn bị)</h3>
+            <p>Tải thủ công 18 file Excel tiến độ từ thư mục chung, 18 bảng theo dõi lỗi của bộ phận Kiểm thử (QA) và tin nhắn trao đổi của Quản lý khách hàng (AM).</p>
+          </div>
+          <div class="step-card" id="as-is-during">
+            <h3>2. Trong khi thao tác (Tổng hợp)</h3>
+            <p>Mở từng file để copy-paste số liệu vào bảng tổng hợp Master, tự đọc ghi chú văn bản tự do để đoán xem dự án nào đang có nguy cơ trễ hạn.</p>
+          </div>
+          <div class="step-card" id="as-is-after">
+            <h3>3. Sau khi xuất báo cáo (Hệ quả)</h3>
+            <p>Khi vào họp, các trưởng nhóm mất 45 phút tranh luận vì số liệu giữa báo cáo tiến độ và báo cáo lỗi kiểm thử lệch nhau, phát hiện rủi ro muộn.</p>
+          </div>
+        </div>
+
+        <div class="metric-strip" id="as-is-metrics">
+          <div class="metric-item">
+            <div class="metric-val">6,5 giờ / tuần</div>
+            <div class="metric-lbl">Thời gian copy-paste và chuẩn hóa định dạng thủ công</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-val">28% dự án</div>
+            <div class="metric-lbl">Báo tiến độ Xanh nhưng mật độ lỗi Kiểm thử vượt ngưỡng</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-val">5 nguồn rời rạc</div>
+            <div class="metric-lbl">Chưa có khóa định danh mã dự án thống nhất</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACT 2: BOTTLENECK DIAGNOSIS -->
+      <div class="act-panel" id="panel-act-1" data-act="act-2-bottleneck">
+        <h2 class="act-title">Màn 2 — Chỉ rõ Điểm nghẽn cốt lõi &amp; Bảng quy tắc quyết định (`Decision Table`)</h2>
+        <p class="act-lead">Điểm nghẽn thực sự không nằm ở việc thiếu biểu đồ đẹp, mà nằm ở 2 chỗ: (1) Mỗi dự án tự thêm bớt cột trong file Excel khiến không thể gộp tự động, và (2) Quy tắc gắn màu cảnh báo đang nằm ngầm trong kinh nghiệm cá nhân của người tổng hợp.</p>
+
+        <table class="dmn-table" id="bottleneck-dmn-table">
+          <thead>
+            <tr>
+              <th>Mã quy tắc</th>
+              <th>Báo cáo từ Quản lý dự án (PM)</th>
+              <th>Số liệu từ Kiểm thử (QA) &amp; Khách hàng (AM)</th>
+              <th>Hành động gắn nhãn trên Wireframe</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="rule-row-1">
+              <td><strong>RULE-01</strong></td>
+              <td>Tiến độ đạt &ge; 95% kế hoạch</td>
+              <td>Không có lỗi nghiêm trọng tồn đọng quá 3 ngày</td>
+              <td>Gắn nhãn <strong>XANH (An toàn)</strong> — Tự động duyệt vào báo cáo</td>
+            </tr>
+            <tr id="rule-row-2">
+              <td><strong>RULE-02 (Điểm mù)</strong></td>
+              <td>PM vẫn tự đánh giá màu <strong>XANH</strong></td>
+              <td>Mật độ lỗi nghiêm trọng tăng &gt; 15% hoặc thiếu dữ liệu kiểm thử</td>
+              <td>Tự động chuyển sang <strong>VÀNG (Cảnh báo lệch pha)</strong> tại vùng <code>[WF-02]</code></td>
+            </tr>
+            <tr id="rule-row-3">
+              <td><strong>RULE-03</strong></td>
+              <td>Chậm mốc bàn giao &gt; 5 ngày làm việc</td>
+              <td>Khách hàng phản hồi chưa chốt được phạm vi nghiệm thu</td>
+              <td>Gắn nhãn <strong>ĐỎ (Nguy cơ trễ mốc)</strong> &amp; đẩy lên đầu danh sách họp</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ACT 3: NUMBERED WIREFRAME WALKTHROUGH -->
+      <div class="act-panel" id="panel-act-2" data-act="act-3-wireframe">
+        <h2 class="act-title">Màn 3 — Walkthrough Giải pháp / Wireframe gắn mã số quy chiếu (`[WF-01]`..`[WF-04]`)</h2>
+        <p class="act-lead">Nguyên mẫu HTML bên dưới được dựng trực tiếp từ ảnh mẫu của Client. Mọi vùng chức năng đều gắn mã số <code>[WF-01]</code> đến <code>[WF-04]</code> để Client dễ dàng chỉ điểm xác nhận hoặc yêu cầu điều chỉnh.</p>
+
+        <div class="wireframe-box">
+          <div class="wf-toolbar" id="wf-zone-01">
+            <div>
+              <span class="wf-badge">[WF-01]</span>
+              <strong>Cổng Kiểm Tra Khuôn Mẫu Đầu Vào (Schema Gate):</strong> Đã nạp 18/18 tệp tuần 45 — Phát hiện 1 tệp sai tên cột
+            </div>
+            <button class="act-btn" onclick="triggerWfFilter()">Lọc dự án lệch pha (3)</button>
+          </div>
+
+          <div class="wf-cards">
+            <div class="wf-stat" id="wf-zone-02">
+              <span class="wf-badge">[WF-02]</span>
+              <strong>Cảnh Báo Lệch Pha PM vs QA</strong>
+              <p style="font-size:12.5px; margin-top:6px; color:#C97A10; font-weight:700;">3 dự án: PM báo Xanh nhưng QA ghi nhận lỗi nghiêm trọng tăng 22% (Áp dụng RULE-02)</p>
+            </div>
+            <div class="wf-stat" id="wf-zone-03">
+              <span class="wf-badge">[WF-03]</span>
+              <strong>Hàng Đợi Rà Soát Ngoại Lệ</strong>
+              <p style="font-size:12.5px; margin-top:6px;">2 đầu việc giao miệng trong biên bản họp chưa có người nhận trách nhiệm</p>
+            </div>
+            <div class="wf-stat" id="wf-zone-04">
+              <span class="wf-badge">[WF-04]</span>
+              <strong>Xuất Báo Cáo Giao Ban 1 Trang</strong>
+              <p style="font-size:12.5px; margin-top:6px; color:#16794B; font-weight:700;">Tự động khóa số liệu lúc 08:45 sáng thứ Hai (Tiết kiệm 5,5 giờ/tuần)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACT 4: RISKS & OPTIONS A/B -->
+      <div class="act-panel" id="panel-act-3" data-act="act-4-risks-options">
+        <h2 class="act-title">Màn 4 — Rủi ro ngoại lệ biên &amp; Lựa chọn Phương án triển khai (`Option A vs Option B`)</h2>
+        <p class="act-lead">Trước khi bắt tay vào xây dựng, đội ngũ FDE/PM đặt lên bàn 3 rủi ro ngoại lệ khi vận hành thực tế và 2 phương án đầu tư để Client xác nhận hướng đi phù hợp nhất.</p>
+
+        <div class="step-card" id="risk-matrix-box" style="margin-bottom:14px;">
+          <h3>3 Rủi ro ngoại lệ cần lưu ý (Assumption Mapping):</h3>
+          <p>1. <strong>Dự án nộp báo cáo muộn sau 08:30 sáng thứ Hai:</strong> Hệ thống giữ số liệu tuần trước kèm nhãn cảnh báo "Chưa cập nhật" thay vì chặn đứng toàn bộ báo cáo chung.<br/>
+          2. <strong>Mâu thuẫn nhận định giữa PM và QA:</strong> Hệ thống không tự ý xóa nhận định của PM mà hiển thị song song cả hai cột tại vùng <code>[WF-02]</code> để Lãnh đạo phân xử.<br/>
+          3. <strong>Đầu việc phát sinh miệng trong cuộc họp:</strong> Bắt buộc đưa vào vùng tạm <code>[WF-03]</code> chờ điều phối viên gán tên người phụ trách trước khi gửi thông báo.</p>
+        </div>
+
+        <div class="option-grid">
+          <div class="option-card selected" id="opt-card-a" onclick="selectOption('A')">
+            <span class="wf-badge" style="background:#16794B;">KHUYÊN DÙNG — PHƯƠNG ÁN A (TINH GỌN / GIAI ĐOẠN 1)</span>
+            <h3 style="margin:8px 0 6px; font-size:15px;">Chuẩn hóa biểu mẫu đầu vào &amp; Bảng đối chiếu tự động trên Web</h3>
+            <p style="font-size:13px; line-height:1.5;">Giữ nguyên quy trình nộp file quen thuộc của 18 PM nhưng khóa khuôn mẫu cột tại <code>[WF-01]</code>, tự động chạy <code>Decision Table</code> phát hiện lệch pha tại <code>[WF-02]</code> và xuất báo cáo giao ban trong 15 phút. <strong>Chi phí: 5 ngày công — Không làm xáo trộn thói quen đội dự án.</strong></p>
+          </div>
+          <div class="option-card" id="opt-card-b" onclick="selectOption('B')">
+            <span class="wf-badge" style="background:#64748B;">PHƯƠNG ÁN B (TOÀN DIỆN / MỞ RỘNG GIAI ĐOẠN 2)</span>
+            <h3 style="margin:8px 0 6px; font-size:15px;">Tích hợp API đồng bộ hai chiều trực tiếp với Jira, Git &amp; Hệ thống CRM</h3>
+            <p style="font-size:13px; line-height:1.5;">Xây dựng đường ống kết nối trực tiếp vào cơ sở dữ liệu của toàn bộ các hệ thống vệ tinh theo thời gian thực, phân quyền đa tầng và tự động đồng bộ ngược trạng thái. <strong>Chi phí: 18 ngày công — Cần cấp quyền truy cập máy chủ nội bộ.</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACT 5: 3-PILLAR SIGN-OFF CHECKLIST -->
+      <div class="act-panel" id="panel-act-4" data-act="act-5-checklist">
+        <h2 class="act-title">Màn 5 — Danh mục Checklist Tổng kết Xác nhận (`Nỗi đau · Kỳ vọng · Lựa chọn hướng giải pháp`)</h2>
+        <p class="act-lead">Tổng kết toàn bộ buổi làm việc on-site trên một danh mục kiểm tra ngắn gọn gồm 3 trụ cột. Client có thể tích xác nhận trực tiếp và sao chép biên bản chốt phạm vi.</p>
+
+        <div class="checklist-cols" id="checklist-3-pillars">
+          <div class="chk-col">
+            <h3>1. Nỗi đau đã xác nhận</h3>
+            <label class="chk-item"><input type="checkbox" checked /> Tốn 6,5 giờ/tuần gộp tay 18 báo cáo dự án từ 5 nguồn rời rạc.</label>
+            <label class="chk-item"><input type="checkbox" checked /> Mỗi dự án tự sửa cột Excel gây lỗi công thức tổng hợp.</label>
+            <label class="chk-item"><input type="checkbox" checked /> Điểm mù khi PM báo màu Xanh nhưng lỗi Kiểm thử (QA) đang tăng cao.</label>
+          </div>
+
+          <div class="chk-col">
+            <h3>2. Kỳ vọng đầu ra</h3>
+            <label class="chk-item"><input type="checkbox" checked /> Rút ngắn thời gian chuẩn bị báo cáo giao ban từ 6,5 giờ xuống còn 30 phút.</label>
+            <label class="chk-item"><input type="checkbox" checked /> Tự động phát hiện 100% dự án có dấu hiệu lệch pha giữa PM, QA và AM tại vùng <code>[WF-02]</code>.</label>
+            <label class="chk-item"><input type="checkbox" checked /> Không bỏ sót các đầu việc giao miệng sau cuộc họp tại vùng <code>[WF-03]</code>.</label>
+          </div>
+
+          <div class="chk-col">
+            <h3>3. Lựa chọn hướng giải pháp</h3>
+            <label class="chk-item"><input type="checkbox" checked id="chk-opt-a" /> <strong>Chốt Phương án A (Tinh gọn - 5 ngày công):</strong> Triển khai cổng kiểm tra khuôn mẫu <code>[WF-01]</code> và bảng đối chiếu quy tắc <code>[WF-02]</code> ngay trong Giai đoạn 1.</label>
+            <label class="chk-item"><input type="checkbox" id="chk-opt-b" /> Đưa Phương án B (Đồng bộ API hai chiều 18 ngày công) vào lộ trình xem xét ở Giai đoạn 2.</label>
+            <label class="chk-item"><input type="checkbox" checked /> Bàn giao 15 bộ dữ liệu mẫu đã ẩn danh để kiểm thử nghiệm thu.</label>
+          </div>
+        </div>
+
+        <button class="btn-walkthrough" style="margin-top:16px; width:100%; padding:12px; background:var(--accent-green);" onclick="copySignoffSummary()" id="btn-copy-signoff">
+          📋 Sao Chép Biên Bản Checklist Xác Nhận (Nỗi Đau · Kỳ Vọng · Hướng Giải Pháp)
+        </button>
+      </div>
+    </section>
+
+    <aside class="narrator-dock">
+      <div>
+        <div style="font-size:12px; font-weight:700; color:var(--accent-terra); text-transform:uppercase;">
+          Lời dẫn chuyên gia FDE / PM đồng bộ từng màn
+        </div>
+        <div class="narration-box" id="narration-text">
+          Trong kỳ họp giao ban sáng thứ Hai hằng tuần với 18 dự án đang chạy song song, điều phối viên phải gom dữ liệu thủ công từ 5 nguồn rời rạc, tiêu tốn 6,5 giờ công mỗi tuần mà vẫn xảy ra tình trạng số liệu tiến độ lệch pha với báo cáo lỗi kiểm thử.
+        </div>
+      </div>
+
+      <div style="border-top:1px solid var(--border-soft); padding-top:12px; font-size:12.5px; color:var(--text-muted); line-height:1.5;">
+        <strong>Quy chuẩn vận hành v3.2:</strong><br/>
+        • Ưu tiên xuất bản <strong>HTML trên Vercel</strong> (chỉ xuất MP4 khi có yêu cầu).<br/>
+        • Đã khóa <strong>Cổng chốt Simulation với Người dùng</strong> trước khi dựng Audio &amp; Hiệu ứng.
+      </div>
+    </aside>
+  </main>
+
+  <script>
+    const ACT_DATA = [
+      {
+        targetId: 'as-is-metrics',
+        speech: 'Trong kỳ họp giao ban sáng thứ Hai hằng tuần với 18 dự án đang chạy song song, điều phối viên phải gom dữ liệu thủ công từ 5 nguồn rời rạc, tiêu tốn 6,5 giờ công mỗi tuần mà vẫn xảy ra tình trạng số liệu tiến độ lệch pha với báo cáo lỗi kiểm thử.'
+      },
+      {
+        targetId: 'rule-row-2',
+        speech: 'Tại bảng quy tắc quyết định, chúng ta bóc tách rõ điểm nghẽn cốt lõi ở Quy tắc số 2: khi Quản lý dự án vẫn tự đánh giá màu Xanh nhưng mật độ lỗi nghiêm trọng từ bộ phận Kiểm thử tăng vượt ngưỡng 15 phần trăm, hệ thống phải tự động bật cờ cảnh báo Vàng.'
+      },
+      {
+        targetId: 'wf-zone-02',
+        speech: 'Trên nguyên mẫu giao diện đã gắn mã quy chiếu từ WF-01 đến WF-04, khu vực cảnh báo lệch pha WF-02 tự động khoanh vùng 3 dự án có mâu thuẫn số liệu giữa Quản lý dự án và Kiểm thử để hội đồng xử lý ngay trong 5 phút đầu giờ.'
+      },
+      {
+        targetId: 'opt-card-a',
+        speech: 'Về phương án triển khai, chúng tôi khuyến nghị chọn Phương án A trong Giai đoạn 1 với 5 ngày công: giữ nguyên thói quen làm việc hiện tại nhưng khóa chặt khuôn mẫu đầu vào và tự động hóa bảng đối chiếu cảnh báo sớm.'
+      },
+      {
+        targetId: 'checklist-3-pillars',
+        speech: 'Cuối cùng, tại danh mục Checklist tổng kết 3 trụ cột gồm Nỗi đau hiện trạng, Kỳ vọng đầu ra và Lựa chọn hướng giải pháp, quý khách hàng có thể tích xác nhận trực tiếp Phương án A để khóa phạm vi triển khai.'
+      }
+    ];
+
+    let currentAct = 0;
+
+    function moveCursorToElement(el) {
+      const cur = document.getElementById('laser-cursor');
+      if (!el || !cur) return;
+      const r = el.getBoundingClientRect();
+      cur.style.left = Math.round(r.left + Math.min(48, r.width * 0.25)) + 'px';
+      cur.style.top = Math.round(r.top + Math.min(28, r.height * 0.35)) + 'px';
+    }
+
+    function clearSpotlights() {
+      document.querySelectorAll('.spotlight-ring').forEach(node => node.classList.remove('spotlight-ring'));
+    }
+
+    function switchAct(idx) {
+      currentAct = idx;
+      document.querySelectorAll('.act-panel').forEach((p, i) => {
+        p.classList.toggle('active', i === idx);
+      });
+      document.querySelectorAll('.act-btn').forEach((b, i) => {
+        if (b.id && b.id.startsWith('tab-act-')) {
+          b.classList.toggle('active', i === idx);
+        }
+      });
+      clearSpotlights();
+      const beat = ACT_DATA[idx];
+      document.getElementById('narration-text').textContent = beat.speech;
+      const targetEl = document.getElementById(beat.targetId);
+      if (targetEl) {
+        targetEl.classList.add('spotlight-ring');
+        setTimeout(() => moveCursorToElement(targetEl), 80);
+      }
+    }
+
+    function playGuidedBeat() {
+      const nextIdx = (currentAct + 1) % ACT_DATA.length;
+      switchAct(nextIdx);
+    }
+
+    function selectOption(opt) {
+      document.getElementById('opt-card-a').classList.toggle('selected', opt === 'A');
+      document.getElementById('opt-card-b').classList.toggle('selected', opt === 'B');
+      document.getElementById('chk-opt-a').checked = (opt === 'A');
+      document.getElementById('chk-opt-b').checked = (opt === 'B');
+    }
+
+    function triggerWfFilter() {
+      const el = document.getElementById('wf-zone-02');
+      clearSpotlights();
+      el.classList.add('spotlight-ring');
+      moveCursorToElement(el);
+    }
+
+    function copySignoffSummary() {
+      const summary = [
+        '=== BIÊN BẢN CHECKLIST XÁC NHẬN ON-SITE (FDE / PM WALKTHROUGH) ===',
+        '1. NỖI ĐAU ĐÃ XÁC NHẬN: Tốn 6,5 giờ/tuần gộp tay 18 báo cáo; lệch cấu trúc cột Excel; điểm mù khi PM báo Xanh nhưng lỗi QA tăng cao.',
+        '2. KỲ VỌNG ĐẦU RA: Rút thời gian chuẩn bị báo cáo xuống 30 phút; phát hiện 100% dự án lệch pha tại [WF-02]; quản lý việc giao miệng tại [WF-03].',
+        '3. LỰA CHỌN HƯỚNG GIẢI PHÁP: Chốt Phương án A (Tinh gọn - 5 ngày công) triển khai Giai đoạn 1 trên nền tảng Web.'
+      ].join('\n');
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(summary);
+      }
+      const btn = document.getElementById('btn-copy-signoff');
+      btn.textContent = '✓ Đã sao chép Biên bản Checklist (Nỗi đau · Kỳ vọng · Hướng giải pháp)!';
+      setTimeout(() => {
+        btn.textContent = '📋 Sao Chép Biên Bản Checklist Xác Nhận (Nỗi Đau · Kỳ Vọng · Hướng Giải Pháp)';
+      }, 2600);
+    }
+
+    window.addEventListener('load', () => {
+      setTimeout(() => switchAct(0), 150);
+    });
+  </script>
+</body>
+</html>

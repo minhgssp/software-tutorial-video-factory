@@ -96,7 +96,8 @@ python -m playwright install chromium
 python factory_cli.py doctor
 pytest -p no:asyncio -q
 
-# 3. Kiểm tra gói FDE On-Site Walkthrough 5 Màn & Đẩy thẳng lên Vercel:
+# 3. Mã hóa bảo mật bằng mật khẩu .env (AES-256-GCM, không load sớm) & Kiểm tra gói FDE On-Site Walkthrough:
+python factory_cli.py encrypt-walkthrough --dir examples/fde_onsite_client_walkthrough_demo
 python factory_cli.py audit-fde-walkthrough --dir examples/fde_onsite_client_walkthrough_demo
 npx vercel examples/fde_onsite_client_walkthrough_demo --prod
 

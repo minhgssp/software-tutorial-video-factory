@@ -101,12 +101,15 @@
         <option value="mp4-video">mp4-video — Xuất bản Video MP4 thuyết minh tự động</option>
       </select>
 
-      <label>2. Phương Thức Xuất Bản (`delivery_mode` — Ưu tiên HTML đẩy lên Vercel)</label>
-      <select id="delivery-mode" onchange="updateOut()">
-        <option value="html-vercel-first">html-vercel-first — Ưu tiên HTML tương tác + vercel.json đẩy lên Vercel (Chỉ xuất MP4 khi yêu cầu)</option>
-        <option value="html-local">html-local — Cổng HTML tương tác chạy trực tiếp (Offline / LAN)</option>
-        <option value="mp4-export">mp4-export — Xuất bản kèm tệp Video MP4 16:9 / 9:16</option>
-      </select>
+      <label>2. Phương Thức Xuất Bản &amp; Khóa Mã Hóa Bảo Mật Vercel (`delivery_mode` + `password_env`)</label>
+      <div style="display:grid; grid-template-columns: 1.3fr 0.7fr; gap:10px;">
+        <select id="delivery-mode" onchange="updateOut()">
+          <option value="html-vercel-first">html-vercel-first — Ưu tiên HTML + Khóa AES-256-GCM đẩy lên Vercel</option>
+          <option value="html-local">html-local — Cổng HTML tương tác chạy trực tiếp (Offline / LAN)</option>
+          <option value="mp4-export">mp4-export — Xuất bản kèm tệp Video MP4 16:9 / 9:16</option>
+        </select>
+        <input type="text" id="pwd-env" value="WALKTHROUGH_PASSWORD" oninput="updateOut()" title="Tên biến mật khẩu trong file .env" />
+      </div>
 
       <label>3. Họ Phần Mềm Cần Mô Phỏng (`software_type`)</label>
       <select id="sw-type" onchange="updateOut()">
@@ -162,6 +165,7 @@
       const sw = document.getElementById('sw-type').value;
       const uc = document.getElementById('use-case').value;
       const dm = document.getElementById('delivery-mode').value;
+      const pe = document.getElementById('pwd-env').value.trim() || 'WALKTHROUGH_PASSWORD';
       const ui = document.getElementById('ui-refs').value.trim();
       const sa = document.getElementById('sim-approved').value;
       const vc = document.getElementById('voice').value;
@@ -169,7 +173,7 @@
       const acc = document.getElementById('accent').value.trim();
       const ctx = document.getElementById('context-ex').value.trim();
       const top = document.getElementById('topic').value.trim();
-      const txt = `<sim-request v="1" factory=">=3.2.0">\nsoftware_type: ${sw}\nuse_case: ${uc}\ndelivery_mode: ${dm}\nui_references: ${ui}\nsimulation_approved: ${sa}\naspect: ${asp}\nvoice: ${vc}\naccent: ${acc}\ncontext_example: ${ctx}\ntopic: ${top}\n</sim-request>`;
+      const txt = `<sim-request v="1" factory=">=3.3.0">\nsoftware_type: ${sw}\nuse_case: ${uc}\ndelivery_mode: ${dm}\npassword_env: ${pe}\nui_references: ${ui}\nsimulation_approved: ${sa}\naspect: ${asp}\nvoice: ${vc}\naccent: ${acc}\ncontext_example: ${ctx}\ntopic: ${top}\n</sim-request>`;
       document.getElementById('req-out').textContent = txt;
     }
     function copyReq() {

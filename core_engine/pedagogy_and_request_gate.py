@@ -217,11 +217,12 @@ def check_sim_request(raw_text: str) -> Dict[str, Any]:
         return {"ok": False, "errors": errors, "warnings": warnings, "resolved": None}
 
     is_fde_branch = use_case == "fde-onsite-walkthrough"
+    password_env_var = kv.get("password_env", "WALKTHROUGH_PASSWORD").strip() or "WALKTHROUGH_PASSWORD"
     gate_pipeline = [
         "1. ⛔ GATE 1 (Thu thập Đầu vào): Kiểm tra ảnh giao diện mẫu, mô tả màn hình, ảnh demo (`ui_references`) -> intake/ xuất `blueprint.json`",
         "2. ⛔ GATE 2 (Chốt HTML Simulation với Người dùng): surface/ dựng nguyên mẫu HTML (`src_sim_surfaces/` hoặc 5 Màn FDE Walkthrough) -> DỪNG LẠI trình người dùng duyệt giao diện (`simulation_approved: true`)",
         "3. ⛔ GATE 3 (Dựng Audio & Hiệu ứng sau khi đã chốt Simulation): storyboard/ + voice_engine sinh thuyết minh `VieNeu-TTS`/`Kokoro`, căn chỉnh từ và gắn hiệu ứng con trỏ 2 nhịp + Spotlight",
-        "4. ⛔ GATE 4 (Kiểm định & Đẩy lên Vercel): review/ kiểm định 4 Tật kinh niên (`audit-pedagogy`) + xuất bản HTML-First kèm `vercel.json` (chỉ xuất `.mp4` khi được yêu cầu)",
+        f"4. ⛔ GATE 4 (Mã hóa Bảo mật AES-256-GCM & Đẩy lên Vercel): review/ kiểm định 4 Tật kinh niên + chạy `encrypt-walkthrough` khóa mật khẩu từ biến `.env` `{password_env_var}` (chỉ load trang khi nhập đúng mật khẩu, không load sớm) -> Đẩy lên Vercel",
     ]
 
     resolved = {
@@ -232,6 +233,8 @@ def check_sim_request(raw_text: str) -> Dict[str, Any]:
         "delivery_mode": delivery_mode,
         "delivery_mode_label": VALID_DELIVERY_MODES[delivery_mode],
         "export_mp4": delivery_mode == "mp4-export",
+        "vercel_auth_gate": "aes256-gcm-zero-preload",
+        "password_env_var": password_env_var,
         "aspect": aspect,
         "voice": voice,
         "accent": accent,
@@ -417,22 +420,27 @@ def audit_course_pedagogy(course_dir: Path) -> Dict[str, Any]:
     }
 
 
-def audit_fde_onsite_walkthrough(walkthrough_dir: Path) -> Dict[str, Any]:
+def audit_fde_onsite_walkthrough(walkthrough_dir: Path, password: str | None = None) -> Dict[str, Any]:
     """
     Mechanically audit an `fde-onsite-walkthrough` package:
       1. HTML-First + `vercel.json` present for 1-command Vercel deployment.
-      2. `simulation_signoff.json` present and approved (`simulation_approved: true`).
-      3. All 5 FDE/PM On-Site Acts present in `index.html`:
+      2. `.env.example` + AES-256-GCM Zero-Preload Password Vault (`#security-vault-gate` + `ENCRYPTED_STAGE_PAYLOAD`)
+         ensuring NO business content loads before entering the correct `.env` `WALKTHROUGH_PASSWORD`.
+      3. `simulation_signoff.json` present and approved (`simulation_approved: true`).
+      4. All 5 FDE/PM On-Site Acts present in decrypted application payload:
          - `act-1-as-is` (Hiện trạng của Client)
          - `act-2-bottleneck` (Điểm nghẽn cốt lõi)
          - `act-3-wireframe` (Walkthrough Giải pháp / Wireframe đánh số `[WF-01]..`)
          - `act-4-risks-options` (Rủi ro & Phương án A/B cần Client xác nhận)
          - `act-5-checklist` (Danh mục Checklist ngắn gọn: Nỗi đau · Kỳ vọng · Lựa chọn hướng giải pháp)
-      4. Zero violations of the 4 Chronic Anti-Patterns.
+      5. Zero violations of the 4 Chronic Anti-Patterns.
     """
+    from core_engine.vercel_crypto_vault import extract_and_decrypt_walkthrough_html
+
     wdir = Path(walkthrough_dir).resolve()
     html_file = wdir / "index.html"
     vercel_file = wdir / "vercel.json"
+    env_example = wdir / ".env.example"
     errors: List[str] = []
 
     if not html_file.exists():
@@ -447,11 +455,18 @@ def audit_fde_onsite_walkthrough(walkthrough_dir: Path) -> Dict[str, Any]:
         except Exception as exc:
             errors.append(f"`vercel.json` không phải JSON hợp lệ: {exc}")
 
+    if not env_example.exists() or "WALKTHROUGH_PASSWORD" not in env_example.read_text(encoding="utf-8"):
+        errors.append("Thiếu tệp `.env.example` khai báo biến mật khẩu `WALKTHROUGH_PASSWORD`.")
+
     signoff_res = record_or_verify_simulation_signoff(wdir)
     if not signoff_res["passed"]:
         errors.extend(signoff_res["errors"])
 
-    html_txt = html_file.read_text(encoding="utf-8")
+    vault_res = extract_and_decrypt_walkthrough_html(wdir, password=password)
+    if not vault_res["ok"]:
+        errors.extend(vault_res["errors"])
+
+    html_txt = vault_res.get("decrypted_html") or html_file.read_text(encoding="utf-8")
     required_acts = [
         ("act-1-as-is", "Màn 1: Hiện trạng của Client (As-Is State)"),
         ("act-2-bottleneck", "Màn 2: Điểm nghẽn cốt lõi (Bottleneck Diagnosis)"),
@@ -461,7 +476,7 @@ def audit_fde_onsite_walkthrough(walkthrough_dir: Path) -> Dict[str, Any]:
     ]
     for act_id, label in required_acts:
         if act_id not in html_txt:
-            errors.append(f"Thiếu `{act_id}` ({label}) trong index.html.")
+            errors.append(f"Thiếu `{act_id}` ({label}) trong nội dung giải mã của index.html.")
 
     wf_markers = re.findall(r"\[WF-0[1-9]\]", html_txt)
     if len(set(wf_markers)) < 3:
@@ -471,7 +486,7 @@ def audit_fde_onsite_walkthrough(walkthrough_dir: Path) -> Dict[str, Any]:
         if pillar.lower() not in html_txt.lower():
             errors.append(f"Checklist tổng kết ở Màn 5 thiếu trụ cột bắt buộc: '{pillar}'.")
 
-    anti_violations = audit_text_for_four_anti_patterns(html_txt, "index.html", is_opening_beat=False)
+    anti_violations = audit_text_for_four_anti_patterns(html_txt, "index.html (decrypted)", is_opening_beat=False)
     for v in anti_violations:
         errors.append(f"[{v['rule']}] {v['matched']} ({v['fix_hint']})")
 
@@ -479,6 +494,8 @@ def audit_fde_onsite_walkthrough(walkthrough_dir: Path) -> Dict[str, Any]:
         "passed": len(errors) == 0,
         "walkthrough_dir": str(wdir),
         "vercel_ready": vercel_file.exists(),
+        "encrypted_vault_locked": vault_res.get("is_encrypted", False),
+        "zero_preload_verified": vault_res.get("zero_preload_verified", False),
         "simulation_approved": signoff_res["simulation_approved"],
         "wf_markers_found": sorted(set(wf_markers)),
         "errors": errors,
