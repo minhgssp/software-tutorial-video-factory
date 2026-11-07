@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bàn Chọn Yêu Cầu Mô Phỏng Phần Mềm 1-Chạm (Sim-Request Studio)</title>
+  <title>Bàn Chọn Yêu Cầu Mô Phỏng Phần Mềm &amp; FDE Walkthrough 1-Chạm (Sim-Request Studio v3.2)</title>
   <style>
     :root {
       --bg: #FAF8F5;
@@ -19,12 +19,21 @@
       background: var(--bg);
       color: var(--text);
       padding: 28px 20px;
-      max-width: 960px;
+      max-width: 1020px;
       margin: 0 auto;
     }
     h1 { font-size: 24px; margin-bottom: 6px; }
-    p.sub { color: var(--muted); font-size: 14px; margin-bottom: 22px; }
-    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    p.sub { color: var(--muted); font-size: 14px; margin-bottom: 20px; line-height: 1.5; }
+    .gate-banner {
+      background: #FFF6F0;
+      border: 1.5px solid #F0C4AE;
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-bottom: 18px;
+      font-size: 13.5px;
+      line-height: 1.5;
+    }
+    .grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 18px; }
     .card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -43,13 +52,13 @@
       font-family: inherit;
       background: #FFFDF9;
     }
-    textarea { min-height: 76px; resize: vertical; }
+    textarea { min-height: 68px; resize: vertical; }
     pre {
       background: #1E293B;
       color: #F8FAFC;
       padding: 16px;
       border-radius: 10px;
-      font-size: 13px;
+      font-size: 12.8px;
       line-height: 1.55;
       overflow-x: auto;
       white-space: pre-wrap;
@@ -71,23 +80,20 @@
   </style>
 </head>
 <body>
-  <h1>🎬 Bàn Chọn Yêu Cầu Mô Phỏng Phần Mềm 1-Chạm (`<sim-request>`)</h1>
-  <p class="sub">Thiết kế theo chuẩn kiến trúc Hợp đồng Đầu vào của <code>/kudo</code> &amp; Tòa soạn 6 Ban của <code>/viet-chuyen-nghiep</code>. Chọn cấu hình bên trái và sao chép khối lệnh bên phải dán vào AI Agent.</p>
+  <h1>🎬 Bàn Chọn Yêu Cầu Mô Phỏng Phần Mềm &amp; FDE On-Site Walkthrough (`&lt;sim-request&gt; v3.2`)</h1>
+  <p class="sub">Thiết kế theo kiến trúc Hợp đồng Đầu vào của <code>/kudo</code> &amp; Tòa soạn 6 Ban của <code>/viet-chuyen-nghiep</code>. Hỗ trợ nhánh <strong>FDE/PM On-Site Client Walkthrough (HTML-First trên Vercel)</strong> và <strong>Cổng Chặn 2 Pha</strong>.</p>
+
+  <div class="gate-banner">
+    <strong>⛔ QUY TẮC BẮT BUỘC 2 PHA (SIMULATION-FIRST HUMAN GATE):</strong><br/>
+    1. <strong>Cổng 1 (`ui_references`):</strong> Bạn bắt buộc cung cấp ảnh chụp màn hình, ảnh demo, bản vẽ wireframe hoặc mô tả chi tiết các vùng giao diện.<br/>
+    2. <strong>Cổng 2 (`simulation_approved`):</strong> Ở Pha 1 (<code>false</code>), hệ thống chỉ dựng bản <strong>HTML Simulation Prototype</strong> để bạn duyệt giao diện trước. Chỉ khi bạn chốt Simulation (<code>true</code>), hệ thống mới đi tiếp dựng Audio thuyết minh và hiệu ứng con trỏ.
+  </div>
 
   <div class="grid">
     <div class="card">
-      <label>1. Họ Phần Mềm Cần Mô Phỏng (`software_type`)</label>
-      <select id="sw-type" onchange="updateOut()">
-        <option value="erp-crm">erp-crm — Hệ thống ERP, CRM &amp; Bảng phê duyệt đơn hàng</option>
-        <option value="banking-portal">banking-portal — Cổng Thẩm định Tín dụng &amp; Nghiệp vụ Ngân hàng</option>
-        <option value="saas-dashboard">saas-dashboard — Bảng điều khiển Phân tích Dữ liệu &amp; BI</option>
-        <option value="multi-step-form">multi-step-form — Biểu mẫu Điện tử Đa bước (E-Form / Wizard)</option>
-        <option value="workspace-ide">workspace-ide — Không gian Làm việc Tài liệu &amp; Trợ lý AI (IDE)</option>
-        <option value="custom-web">custom-web — Giao diện Web / Mobile App Tùy chỉnh</option>
-      </select>
-
-      <label>2. Mục Đích Sử Dụng (`use_case`)</label>
+      <label>1. Nhánh Sản Phẩm &amp; Mục Đích Sử Dụng (`use_case`)</label>
       <select id="use-case" onchange="updateOut()">
+        <option value="fde-onsite-walkthrough">fde-onsite-walkthrough — FDE/PM On-Site Walkthrough (5 Màn: Hiện trạng → Điểm nghẽn → Wireframe → Rủi ro/Option A-B → Checklist)</option>
         <option value="process-confirm">process-confirm — Xác nhận quy trình BA / UAT trước lập trình</option>
         <option value="training-course">training-course — Khóa học &amp; Đào tạo nhân sự (E-Learning)</option>
         <option value="system-handover">system-handover — Chuyển giao hệ thống &amp; Cẩm nang SOP</option>
@@ -95,32 +101,56 @@
         <option value="mp4-video">mp4-video — Xuất bản Video MP4 thuyết minh tự động</option>
       </select>
 
-      <label>3. Động Cơ Giọng Đọc (`voice`) &amp; Tỷ Lệ Khung Hình (`aspect`)</label>
-      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
+      <label>2. Phương Thức Xuất Bản (`delivery_mode` — Ưu tiên HTML đẩy lên Vercel)</label>
+      <select id="delivery-mode" onchange="updateOut()">
+        <option value="html-vercel-first">html-vercel-first — Ưu tiên HTML tương tác + vercel.json đẩy lên Vercel (Chỉ xuất MP4 khi yêu cầu)</option>
+        <option value="html-local">html-local — Cổng HTML tương tác chạy trực tiếp (Offline / LAN)</option>
+        <option value="mp4-export">mp4-export — Xuất bản kèm tệp Video MP4 16:9 / 9:16</option>
+      </select>
+
+      <label>3. Họ Phần Mềm Cần Mô Phỏng (`software_type`)</label>
+      <select id="sw-type" onchange="updateOut()">
+        <option value="erp-crm">erp-crm — Hệ thống ERP, CRM &amp; Bảng điều phối phê duyệt</option>
+        <option value="banking-portal">banking-portal — Cổng Thẩm định Tín dụng &amp; Nghiệp vụ Ngân hàng</option>
+        <option value="saas-dashboard">saas-dashboard — Bảng điều khiển Phân tích Dữ liệu &amp; BI</option>
+        <option value="multi-step-form">multi-step-form — Biểu mẫu Điện tử Đa bước (E-Form / Wizard)</option>
+        <option value="workspace-ide">workspace-ide — Không gian Làm việc Tài liệu &amp; Trợ lý AI (IDE)</option>
+        <option value="custom-web">custom-web — Giao diện Web / Mobile App Tùy chỉnh</option>
+      </select>
+
+      <label>4. ⛔ Cổng 1: Giao Diện Mẫu, Ảnh Demo &amp; Mô Tả Màn Hình (`ui_references` — Bắt buộc)</label>
+      <textarea id="ui-refs" oninput="updateOut()">input/screens/as_is_excel_tracker.png, input/screens/to_be_wireframe_sketch.png (Màn hình bảng tổng hợp trạng thái dự án 3 màu Xanh-Vàng-Đỏ và hộp thoại đối chiếu quy tắc ngoại lệ)</textarea>
+
+      <label>5. ⛔ Cổng 2: Trạng Thái Chốt Simulation Với Người Dùng (`simulation_approved`)</label>
+      <select id="sim-approved" onchange="updateOut()">
+        <option value="false">false — Pha 1: Dựng bản nháp HTML Simulation từ ảnh/mô tả và DỪNG LẠI chờ tôi chốt trước</option>
+        <option value="true">true — Pha 2: Tôi đã chốt HTML Simulation, hãy đi tiếp dựng Audio thuyết minh &amp; Hiệu ứng</option>
+      </select>
+
+      <label>6. Giọng Đọc (`voice`), Khung Hình (`aspect`) &amp; Màu Nhấn (`accent`)</label>
+      <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:10px;">
         <select id="voice" onchange="updateOut()">
-          <option value="vieneu">vieneu (Tiếng Việt 48kHz Offline)</option>
-          <option value="kokoro">kokoro (Tiếng Anh Offline)</option>
-          <option value="web-speech">web-speech (Trình duyệt)</option>
+          <option value="vieneu">vieneu (48kHz Offline)</option>
+          <option value="kokoro">kokoro (English)</option>
+          <option value="web-speech">web-speech</option>
         </select>
         <select id="aspect" onchange="updateOut()">
-          <option value="16:9">16:9 (Ngang chuẩn Web/PC)</option>
-          <option value="9:16">9:16 (Dọc Mobile)</option>
+          <option value="16:9">16:9 (Web/PC)</option>
+          <option value="9:16">9:16 (Mobile)</option>
         </select>
+        <input type="text" id="accent" value="#D95D39" oninput="updateOut()" />
       </div>
 
-      <label>4. Màu Nhấn Thương Hiệu (`accent`)</label>
-      <input type="text" id="accent" value="#D95D39" oninput="updateOut()" />
+      <label>7. Bối Cảnh Ví Dụ Giả Định (`context_example` — Chống Tật 2 Nhảy Cóc)</label>
+      <input type="text" id="context-ex" value="Ví dụ kỳ họp giao ban tuần tại Ban Quản lý Dự án Phần mềm với 18 dự án đang chạy song song" oninput="updateOut()" />
 
-      <label>5. Bối Cảnh Ví Dụ Giả Định (`context_example` — Chống Tật 2 Nhảy Cóc)</label>
-      <input type="text" id="context-ex" value="Ví dụ thẩm định hồ sơ cấp hạn mức 30 tỷ cho Công ty Sản xuất Minh Phát" oninput="updateOut()" />
-
-      <label>6. Chủ Đề / Quy Trình Cần Mô Phỏng (`topic`)</label>
-      <textarea id="topic" oninput="updateOut()">Quy trình 3 bước lọc hồ sơ vượt hạn mức, đối chiếu tỷ lệ đảm bảo và bấm phê duyệt tờ trình trên cổng nghiệp vụ.</textarea>
+      <label>8. Chủ Đề / Bài Toán Cần Walkthrough (`topic`)</label>
+      <textarea id="topic" oninput="updateOut()">Walkthrough 5 màn giải quyết điểm nghẽn tổng hợp báo cáo tuần từ 5 nguồn rời rạc, chuẩn hóa bảng quy tắc gắn màu cảnh báo sớm và chốt phương án triển khai Giai đoạn 1.</textarea>
     </div>
 
     <div class="card" style="display:flex; flex-direction:column; justify-content:space-between;">
       <div>
-        <label>Khối Hợp Đồng `<sim-request>` (Tự động kiểm tra bằng `factory_cli.py check-request`)</label>
+        <label>Khối Hợp Đồng `&lt;sim-request&gt;` (Kiểm tra bằng `factory_cli.py check-request`)</label>
         <pre id="req-out"></pre>
       </div>
       <button class="btn-copy" id="copy-btn" onclick="copyReq()">📋 Sao chép khối &lt;sim-request&gt; để gửi cho AI Agent</button>
@@ -131,12 +161,15 @@
     function updateOut() {
       const sw = document.getElementById('sw-type').value;
       const uc = document.getElementById('use-case').value;
+      const dm = document.getElementById('delivery-mode').value;
+      const ui = document.getElementById('ui-refs').value.trim();
+      const sa = document.getElementById('sim-approved').value;
       const vc = document.getElementById('voice').value;
       const asp = document.getElementById('aspect').value;
       const acc = document.getElementById('accent').value.trim();
       const ctx = document.getElementById('context-ex').value.trim();
       const top = document.getElementById('topic').value.trim();
-      const txt = `<sim-request v="1" factory=">=3.1.0">\nsoftware_type: ${sw}\nuse_case: ${uc}\naspect: ${asp}\nvoice: ${vc}\naccent: ${acc}\ncontext_example: ${ctx}\ntopic: ${top}\n</sim-request>`;
+      const txt = `<sim-request v="1" factory=">=3.2.0">\nsoftware_type: ${sw}\nuse_case: ${uc}\ndelivery_mode: ${dm}\nui_references: ${ui}\nsimulation_approved: ${sa}\naspect: ${asp}\nvoice: ${vc}\naccent: ${acc}\ncontext_example: ${ctx}\ntopic: ${top}\n</sim-request>`;
       document.getElementById('req-out').textContent = txt;
     }
     function copyReq() {

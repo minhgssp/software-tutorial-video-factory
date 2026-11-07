@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Universal Software Simulation & Interactive Video-Course Factory CLI (`factory_cli.py` v3.1)
+Universal Software Simulation & Interactive Video-Course Factory CLI (`factory_cli.py` v3.2)
 
 Unified command-line interface for AI Agents (`Claude Code`, `Google Antigravity`, `Cursor`, `Codex`)
-combining `/kudo` deterministic request/doctor contracts and `/viet-chuyen-nghiep` 6-Department Newsroom Gates:
-  1. `doctor` — Check Python, Playwright, FFmpeg, VieNeu-TTS (.venv/vieneu), Faster-Whisper, and Kokoro readiness
-  2. `check-request` — Validate a `<sim-request v="1">` contract block and output the locked department pipeline
-  3. `compile-course` & `verify-course` — Compile and verify 4-compartment modular interactive HTML courseware
-  4. `audit-pedagogy` — Mechanically enforce the 4 Chronic Anti-Pattern Gates (No Prompt Leak, Context Before Example, No Spatial Pointer, Self-Contained Atom)
-  5. `intake-repo`, `intake-media`, `scaffold-sim`, `build-pages`, `audit-sim`, `audit-spec`
+combining `/kudo` deterministic request/doctor contracts, Two-Stage Human Simulation Sign-Off Gate,
+FDE/PM On-Site Walkthrough (HTML-First Vercel), and `/viet-chuyen-nghiep` 6-Department Newsroom Gates:
+  1. `doctor` — Check Python, Playwright, Vercel/Node, FFmpeg, VieNeu-TTS (.venv/vieneu), Faster-Whisper, and Kokoro readiness
+  2. `check-request` — Validate `<sim-request v="1">` contract (enforcing mandatory `ui_references` + `simulation_approved` stage gate)
+  3. `approve-sim` — Record or verify user sign-off on the HTML Simulation (`simulation_signoff.json`) BEFORE audio & effects are built
+  4. `audit-fde-walkthrough` — Verify 5-Act FDE/PM On-Site Client Walkthrough package (`index.html` + `vercel.json` + 3-pillar Checklist)
+  5. `compile-course` & `verify-course` — Compile and verify 4-compartment modular interactive HTML courseware
+  6. `audit-pedagogy` — Mechanically enforce the 4 Chronic Anti-Pattern Gates
+  7. `intake-repo`, `intake-media`, `scaffold-sim`, `build-pages`, `audit-sim`, `audit-spec`
 """
 
 from __future__ import annotations
@@ -42,7 +45,9 @@ from core_engine import (  # noqa: E402
 )
 from core_engine.pedagogy_and_request_gate import (  # noqa: E402
     audit_course_pedagogy,
+    audit_fde_onsite_walkthrough,
     check_sim_request,
+    record_or_verify_simulation_signoff,
     run_environment_doctor,
 )
 
@@ -50,12 +55,12 @@ from core_engine.pedagogy_and_request_gate import (  # noqa: E402
 def cmd_status() -> int:
     sim_dir = ROOT_DIR / "examples" / "antigravity_studio_simulator"
     status = {
-        "factory": "Universal Software Simulation & Interactive Video-Course Factory v3.1.0",
+        "factory": "Universal Software Simulation & Interactive Video-Course Factory v3.2.0",
         "root_dir": str(ROOT_DIR),
         "request_builder_ui": str(ROOT_DIR / "studio-request-builder.html"),
         "embedded_engines": {
             "course_compiler_5layer": (ROOT_DIR / "core_engine" / "course_compiler.py").exists(),
-            "pedagogy_and_request_gate_v31": (ROOT_DIR / "core_engine" / "pedagogy_and_request_gate.py").exists(),
+            "pedagogy_and_request_gate_v32": (ROOT_DIR / "core_engine" / "pedagogy_and_request_gate.py").exists(),
             "voice_engine_vieneu_whisper_kokoro": (ROOT_DIR / "core_engine" / "voice_engine" / "vieneu_tts.py").exists(),
             "rubric_engine": (ROOT_DIR / "core_engine" / "rubric_engine" / "rubric.py").exists(),
             "kudo_screencast_16x9": (ROOT_DIR / "core_engine" / "kcast_engine" / "widescreen_16x9.py").exists(),
@@ -69,6 +74,7 @@ def cmd_status() -> int:
             "codemap_v2": (ROOT_DIR / "docs" / "CODEMAP.md").exists(),
         },
         "examples": {
+            "fde_onsite_client_walkthrough_demo": (ROOT_DIR / "examples" / "fde_onsite_client_walkthrough_demo" / "index.html").exists(),
             "saas_workflow_process_demo": (ROOT_DIR / "examples" / "saas_workflow_process_demo" / "index.html").exists(),
             "ui_learning_portal_demo": (ROOT_DIR / "examples" / "ui_learning_portal_demo" / "index.html").exists(),
             "antigravity_5layer_courseware_hub": (sim_dir / "index.html").exists(),
@@ -81,7 +87,7 @@ def cmd_status() -> int:
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Universal Software Simulation & Interactive Video-Course Factory CLI v3.1",
+        description="Universal Software Simulation & Interactive Video-Course Factory CLI v3.2",
         formatter_class=argparse.RawTextHelpFormatter,
     )
     sub = parser.add_subparsers(dest="subcommand")
@@ -92,6 +98,22 @@ def main() -> int:
     p_req = sub.add_parser("check-request", help="Validate a <sim-request> contract block and output resolved pipeline")
     p_req.add_argument("--file", default=None, help="Path to file containing <sim-request> block")
     p_req.add_argument("--text", default=None, help="Raw <sim-request> text string")
+
+    p_app = sub.add_parser(
+        "approve-sim",
+        help="Record or verify user confirmation on HTML Simulation BEFORE running Audio & Effects",
+    )
+    p_app.add_argument("--course-dir", required=True, help="Path to courseware or walkthrough directory")
+    p_app.add_argument("--ui-refs", default=None, help="Comma-separated UI reference screenshots/descriptions")
+    p_app.add_argument("--screens", default=None, help="Comma-separated confirmed screen IDs")
+    p_app.add_argument("--notes", default="", help="User sign-off notes")
+    p_app.add_argument("--verify-only", action="store_true", help="Only verify existing sign-off without modifying")
+
+    p_fde = sub.add_parser(
+        "audit-fde-walkthrough",
+        help="Audit a 5-Act FDE/PM On-Site Client Walkthrough package (HTML-first + vercel.json + 3-pillar Checklist)",
+    )
+    p_fde.add_argument("--dir", required=True, help="Path to FDE walkthrough directory")
 
     p_ped = sub.add_parser(
         "audit-pedagogy",
@@ -158,6 +180,24 @@ def main() -> int:
         res = check_sim_request(raw)
         print(json.dumps(res, ensure_ascii=False, indent=2))
         return 0 if res["ok"] else 1
+
+    if args.subcommand == "approve-sim":
+        ui_refs = [x.strip() for x in args.ui_refs.split(",") if x.strip()] if args.ui_refs else None
+        screens = [x.strip() for x in args.screens.split(",") if x.strip()] if args.screens else None
+        res = record_or_verify_simulation_signoff(
+            Path(args.course_dir),
+            approve=None if args.verify_only else True,
+            ui_references=ui_refs,
+            screens_confirmed=screens,
+            notes=args.notes,
+        )
+        print(json.dumps(res, ensure_ascii=False, indent=2))
+        return 0 if res["passed"] else 1
+
+    if args.subcommand == "audit-fde-walkthrough":
+        res = audit_fde_onsite_walkthrough(Path(args.dir))
+        print(json.dumps(res, ensure_ascii=False, indent=2))
+        return 0 if res["passed"] else 1
 
     if args.subcommand == "audit-pedagogy":
         res = audit_course_pedagogy(Path(args.course_dir))

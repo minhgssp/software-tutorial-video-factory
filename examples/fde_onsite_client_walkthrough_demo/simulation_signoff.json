@@ -1,0 +1,17 @@
+{
+  "schema_version": "3.2.0",
+  "ui_references": [
+    "input/screens/as_is_weekly_excel_consolidation.png",
+    "input/screens/qa_defect_log_mismatch.png",
+    "input/screens/to_be_numbered_wireframe_sketch.png"
+  ],
+  "screens_confirmed": [
+    "act-1-as-is",
+    "act-2-bottleneck",
+    "act-3-wireframe",
+    "act-4-risks-options",
+    "act-5-checklist"
+  ],
+  "simulation_approved": true,
+  "notes": "Khách hàng đã duyệt bố cục 5 màn HTML Simulation và 4 mã số quy chiếu [WF-01]..[WF-04], cho phép bật thuyết minh và hiệu ứng con trỏ Spotlight."
+}

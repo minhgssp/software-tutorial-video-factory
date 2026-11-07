@@ -1,79 +1,82 @@
 ---
 name: software-simulation-video-factory
-version: "3.1.0"
-description: Xưởng Phim Mô Phỏng Phần Mềm Đa Năng & Giáo Án Tương Tác Video-in-HTML / MP4 16:9 (Kiến trúc Tòa Soạn 6 Ban + Cổng Hợp Đồng Kudo). Dùng để dựng nguyên mẫu HTML (HTML Prototype) của BẤT KỲ phần mềm nào (ERP, CRM, Core Banking, SaaS, Web Portal, Mobile App, Desktop IDE) kết hợp Slide diễn giải SVG động, con trỏ thông minh và thuyết minh âm thanh phục vụ: Khóa học đào tạo, Chuyển giao hệ thống, Demo bán hàng, Xác nhận quy trình BA/UAT trước lập trình, và Xuất bản Video 16:9.
+version: "3.2.0"
+description: Xưởng Phim Mô Phỏng Phần Mềm Đa Năng, Nhánh FDE/PM On-Site Client Walkthrough (HTML-First trên Vercel) & Giáo Án Tương Tác Video-in-HTML / MP4 16:9 (Kiến trúc Tòa Soạn 6 Ban + Cổng Hợp Đồng Kudo + Chốt Chặn Simulation 2 Pha). Luôn yêu cầu người dùng cung cấp giao diện/mô tả/ảnh demo và chốt bản HTML Simulation với người dùng trước khi dựng Audio thuyết minh và hiệu ứng con trỏ.
 ---
 
-# Universal Software Simulation & Video-Course Factory (`v3.1` — Tổng Đạo Diễn)
+# Universal Software Simulation & FDE Walkthrough Factory (`v3.2` — Tổng Đạo Diễn)
 
-Nhận đề bài (hoặc khối `<sim-request>`) → Khám môi trường (`doctor`) → Phân tích 6 câu hỏi → Chọn Ban → Thiết kế quy trình `⛔ GATE` → Điều phối thực hiện.
-
-**Nguyên tắc phân quyền 3 tầng (Học từ `/viet-chuyen-nghiep` & `/kudo`):**
-- **Tổng Đạo Diễn (`SKILL.md`):** Kiểm tra hợp đồng đầu vào (`check-request`), giao MỤC TIÊU cho Trưởng ban (`lead.md`), thiết kế chuỗi cổng chặn `⛔ GATE`. KHÔNG tự nạp tất cả file nhân viên cùng lúc.
-- **Trưởng Ban (`lead.md`):** Tự chọn 1–2 chuyên viên (`staff.md`), lập danh sách việc chi tiết, kiểm tra cam kết hoàn thành nội bộ trước khi bàn giao qua cổng `⛔ GATE`.
-- **Kỷ luật Ngữ cảnh (`Progressive Disclosure`):** Mỗi lượt chỉ nạp tối đa `1 lead.md + 1-2 staff.md` (tổng $\le 200$ dòng/lượt) để giữ sự tập trung tuyệt đối.
+Nhận đề bài (hoặc khối `<sim-request>`) → **⛔ Cổng 1: Thu thập Ảnh/Mô tả Giao diện (`ui_references`)** → Dựng bản nháp HTML Simulation → **⛔ Cổng 2: Chốt Simulation với Người dùng (`simulation_approved: true`)** → Mới đi tiếp dựng Audio thuyết minh (`VieNeu-TTS` / `Kokoro`), hiệu ứng con trỏ 2 nhịp & đẩy lên **Vercel** (chỉ xuất `.mp4` khi được yêu cầu).
 
 ---
 
-## Bước 1: Kiểm tra Hợp đồng Đầu vào & Sức khỏe Môi trường (Chuẩn `/kudo`)
+## ⛔ QUY TẮC BẤT BIẾN HAI PHA (SIMULATION-FIRST HUMAN GATE)
 
-1. Nếu người dùng dán khối `<sim-request v="1">...</sim-request>` (tạo từ bàn chọn 1-chạm `studio-request-builder.html`):
+Giống như kiến trúc sư xây nhà: phải yêu cầu chủ nhà đưa bản chụp khu đất và nhu cầu sử dụng trước (**Cổng 1**), sau đó dựng mô hình sa bàn để chủ nhà ngắm và gật đầu chốt vị trí từng căn phòng (**Cổng 2**), rồi mới lắp đặt điện nước và sơn hoàn thiện (**Pha Audio & Hiệu ứng**).
+
+1. **⛔ CỔNG 1 — Luôn Yêu Cầu Giao Diện Mẫu, Ảnh Demo & Mô Tả Đầu Vào (`ui_references`):**
+   - Trước khi viết bất kỳ dòng code nào, kiểm tra xem người dùng đã cung cấp **giao diện mẫu, ảnh chụp màn hình, ảnh demo, bản phác thảo wireframe hoặc mô tả chi tiết các vùng màn hình** chưa.
+   - Nếu chưa có: **BẮT BUỘC DỪNG LẠI** và yêu cầu người dùng cung cấp chất liệu giao diện/mô tả trước. Tuyệt đối không tự ý bịa ra màn hình phần mềm trong chân không.
+2. **⛔ CỔNG 2 — Chốt Bản HTML Simulation Với Người Dùng Trước Khi Dựng Audio & Hiệu Ứng (`simulation_approved`):**
+   - **Pha 1 (`simulation_approved: false`):** Chỉ dựng mặt phẳng nguyên mẫu **HTML Simulation** (`src_sim_surfaces/` hoặc 5 Màn FDE Walkthrough) với dữ liệu mẫu và mã đánh số `[WF-01]..[WF-05]`, sau đó **DỪNG LẠI BẮT BUỘC** để người dùng mở xem trên trình duyệt và xác nhận.
+   - **Pha 2 (`simulation_approved: true`):** Chỉ sau khi người dùng xác nhận chốt Simulation (hoặc chạy `python factory_cli.py approve-sim --course-dir <path>`), hệ thống mới được phép gọi `voice_engine` sinh Audio thuyết minh và lập trình hiệu ứng con trỏ + Spotlight.
+
+---
+
+## Bước 1: Kiểm Tra Hợp Đồng `<sim-request>` & Khám Môi Trường (`doctor`)
+
+1. Kiểm tra khối `<sim-request v="1">` (tạo từ `studio-request-builder.html`):
    ```bash
    python factory_cli.py check-request --file temp/request.txt
    ```
-   - Nếu `ok: false`: Báo lỗi rõ bằng tiếng Việt, không tự đoán mò tham số.
-   - Nếu `ok: true`: Dùng JSON `resolved` làm hợp đồng bất biến cho toàn bộ tiến trình.
-2. Chạy khám môi trường một lần đầu phiên:
+   - Nếu thiếu `ui_references`: Báo lỗi tiếng Việt và yêu cầu người dùng cung cấp ảnh demo / mô tả giao diện.
+   - Nếu `simulation_approved: false`: Khóa tiến trình ở `STAGE_1_SIMULATION_PROTOTYPE_ONLY` (chỉ dựng HTML Simulation và chờ duyệt).
+2. Khám môi trường đầu phiên:
    ```bash
    python factory_cli.py doctor
    ```
 
 ---
 
-## Bước 2: Phân tích Yêu cầu (6 Câu Hỏi Định Tuyến)
+## Bước 2: Phân Tích Yêu Cầu & Chọn Nhánh Sản Phẩm (`use_case`)
 
-| # | Câu hỏi | Quyết định điều phối |
+| Nhánh sản phẩm (`use_case`) | Ưu tiên xuất bản (`delivery_mode`) | Cấu trúc cốt lõi |
 |---|---|---|
-| 1 | Đầu vào có gì? (Ảnh chụp, video quay thô, tài liệu BA/SOP, kho code, hay ý tưởng?) | Cần `intake/`? |
-| 2 | Phần mềm mục tiêu thuộc họ nào? (ERP/CRM, Ngân hàng, Web Portal, SaaS, Mobile, IDE?) | Tra cứu `archive/ui-pattern-catalog.md` |
-| 3 | Mục đích sử dụng? (`training` đào tạo, `handover` chuyển giao, `demo` bán hàng, `process-confirm` xác nhận quy trình BA/UAT, hay `mp4-video`?) | Chọn độ sâu kịch bản & giao diện |
-| 4 | Đã có mặt phẳng HTML Prototype (`src_sim_surfaces/`) chưa? | Cần `surface/` dựng mới hay chỉ sửa `lessons_data/`? |
-| 5 | Kịch bản có dùng ví dụ tình huống cụ thể (hồ sơ, mã đơn, khách hàng) không? | Bắt buộc nạp `storyboard/context-before-example.md` |
-| 6 | Là tạo mới hay cập nhật từ băng ghi âm lớp học / phản hồi nghiệm thu UAT? | Nếu từ phản hồi thực tế → gọi `development/` (có Chốt chặn Giảng viên duyệt) |
+| **`fde-onsite-walkthrough`** *(Mới - Chủ lực cho FDE/PM On-Site)* | **HTML-First đẩy thẳng lên Vercel** (`vercel.json`), chỉ xuất `.mp4` khi được yêu cầu | **5 Màn (5-Act Client Walkthrough):**<br>1. Hiện trạng của Client (`As-Is`)<br>2. Chỉ rõ Điểm nghẽn (`Bottleneck`)<br>3. Walkthrough Giải pháp / Wireframe đánh số `[WF-01..]`<br>4. Rủi ro & Phương án A/B cần Client xác nhận<br>5. Checklist tổng kết: **Nỗi đau · Kỳ vọng · Lựa chọn hướng giải pháp** |
+| **`process-confirm`** | HTML-First trên Vercel / Local | Đối chiếu quy trình `As-Is` vs `To-Be` & xác nhận UAT trước lập trình |
+| **`training-course`** | Cổng HTML tương tác 4 ngăn / Vercel | Khóa học đa chương bài kết hợp Slide SVG động (`theory`) & Thao tác (`sim`) |
+| **`system-handover` / `product-demo`** | HTML-First trên Vercel / Local | Cẩm nang vận hành SOP hoặc Demo bán hàng tự chạy |
+| **`mp4-video`** | Xuất bản kèm tệp `.mp4` 16:9 / 9:16 | Khi người dùng yêu cầu rõ việc xuất file video `.mp4` |
 
 ---
 
-## Bước 3: Lựa Chọn Ban Tham Gia
+## Bước 3: Lựa Chọn Ban Tham Gia (Tòa Soạn 6 Ban — Giữ Mỗi Lượt Nạp $\le 200$ Dòng)
 
-- 🔴 **Chủ trì** — Ban chịu trách nhiệm chính tạo sản phẩm.
-- 🟡 **Phối hợp** — Ban khảo sát đầu vào hoặc cung cấp mẫu giao diện.
-- 🟢 **Kiểm duyệt (`review/`)** — **BẮT BUỘC** ở mọi quy trình trước khi bàn giao.
-
-| Loại Đề Bài | 🔴 Chủ trì | 🟡 Phối hợp | 🟢 Kiểm duyệt |
+| Loại Đề Bài | 🔴 Chủ trì (Pha 1 → ⛔ Chốt Sim → Pha 2) | 🟡 Phối hợp | 🟢 Kiểm duyệt |
 |---|---|---|---|
-| Dựng khóa học / quy trình mô phỏng mới từ đầu | `surface/` → `storyboard/` | `intake/` + `archive/` | `review/` |
-| Đã có HTML Prototype, thêm/sửa bài học lẻ (`--lesson X`) | `storyboard/` | `archive/` | `review/` |
-| Chuyển ảnh chụp / video / repo thành Simulator đơn tệp | `surface/` | `intake/` | `review/` |
-| Xác nhận quy trình nghiệp vụ BA/UAT (`As-Is` vs `To-Be`) | `intake/` → `surface/` → `storyboard/` | `archive/` | `review/` |
-| Bóc băng lớp học / góp ý UAT → nâng cấp bài học | `development/` → `storyboard/` | `archive/` | `review/` |
+| **FDE / PM On-Site Client Walkthrough (`fde-onsite-walkthrough`)** | `intake/` → `surface/` (`vercel-html-deploy.md`) → **⛔ Chốt Sim** → `storyboard/` (`fde-onsite-walkthrough.md`) | `archive/` | `review/` (`audit-fde-walkthrough`) |
+| **Dựng khóa học / mô phỏng phần mềm mới từ đầu** | `intake/` → `surface/` → **⛔ Chốt Sim** → `storyboard/` | `archive/` | `review/` (`audit-pedagogy` + `verify-course`) |
+| **Đã chốt HTML Simulation, chỉ thêm/sửa bài học & Audio** | `storyboard/` | `archive/` | `review/` |
+| **Bóc băng lớp học / góp ý UAT → nâng cấp bài học** | `development/` (⛔ Giảng viên duyệt) → `storyboard/` | `archive/` | `review/` |
 
 ---
 
-## Bước 4: Thiết Kế Quy Trình `⛔ GATE` & Bốn Luật Cấm Kinh Điển
+## Bước 4: Thiết Kế Chuỗi Cổng `⛔ GATE` & Bốn Luật Cấm Kinh Điển
 
-Trước khi bắt đầu, Tổng Đạo Diễn **bắt buộc in rõ sơ đồ chuỗi cổng `⛔ GATE`** ra màn hình làm bằng chứng điều phối:
+Tổng Đạo Diễn **bắt buộc in rõ sơ đồ chuỗi cổng `⛔ GATE`** ra màn hình:
 ```text
-intake/ khảo sát → ⛔ GATE xuất blueprint.json
-→ surface/ dựng HTML Prototype → ⛔ GATE kiểm tra DOM & ID điểm neo
-→ storyboard/ viết kịch bản 2 chế độ (theory SVG + sim 2 pha) → ⛔ GATE biên dịch HTML试 chạy (HTML-First Preview)
-→ review/ kiểm định 4 Tật kinh niên + Playwright BBox → ⛔ GATE [ĐẠT → Xuất bản] [TRƯỢT → Phiếu Từ Chối trả về ban gây lỗi]
+⛔ GATE 1: Yêu cầu người dùng cung cấp Giao diện / Mô tả / Ảnh Demo (ui_references) → intake/ xuất blueprint.json
+→ surface/ dựng HTML Simulation Prototype (kèm vercel.json)
+→ ⛔ GATE 2 (HUMAN GATE): Trình người dùng duyệt và CHỐT HTML Simulation (simulation_approved: true)
+→ storyboard/ + voice_engine dựng Audio thuyết minh & Hiệu ứng con trỏ 2 nhịp + Spotlight
+→ ⛔ GATE 3: review/ kiểm định 4 Tật kinh niên + audit-fde-walkthrough / verify-course → Đẩy lên Vercel (chỉ xuất MP4 khi được yêu cầu)
 ```
 
-### Bốn Căn Bệnh Kinh Niên Bắt Buộc Chặn Đứng (Cưỡng chế bởi `review/` & `factory_cli.py audit-pedagogy`):
-1. **Tật 1 — Lộ Prompt & Ghi Chú Nội Bộ (`Internal Prompt Leak`):** Cấm để lọt câu lệnh hậu trường, nhãn kỹ thuật đạo diễn (`REDLINE FOCUS`, `FOCUS SHOT 1`, `CẢNH 3/11`, `BÔI ĐEN ĐỂ COPY`, `HTML Vector 100%`) lên giao diện người học.
-2. **Tật 2 — Cụt Lủn, Nhảy Cóc Ví Dụ Thiếu Bối Cảnh (`Abrupt Context-Free Example`):** Cấm thả người học vào giữa trận đánh (như nhắc đột ngột *"ngăn wip/ của Khách hàng A07"*, *"hồ sơ B12"*) mà chưa giới thiệu nhân vật/doanh nghiệp đó là ai, đang giải quyết bài toán gì và gặp vướng mắc gì.
-3. **Tật 3 — Tả Tọa Độ Cơ Học (`Mechanical Spatial Narration`):** Cấm đọc vẹt vị trí vật lý (*"bên trái là..."*, *"ở góc bên phải..."*, *"thẻ ở giữa..."*) vì Spotlight và Progressive Reveal đã tự chiếu sáng vị trí đó. Lời giảng phải gọi thẳng **tên nghiệp vụ của vùng giao diện** (*"Tại bảng đối chiếu hạn mức..."*, *"Tại cây thư mục hồ sơ..."*).
-4. **Tật 4 — Dẫn Dắt Liên Bài Kiểu MC Truyền Hình (`TV-MC Cross-Lesson Bridging`):** Cấm mở đầu/kết thúc kiểu *"Chào mừng anh chị đến với Bài X... Ở bài trước chúng ta đã... Hẹn gặp lại ở bài sau..."*. Mỗi bài học phải là một **viên kim cương tri thức tự bao đóng (`Self-Contained Micro-Learning`)** để tra cứu độc lập bất kỳ lúc nào.
+### Bốn Căn Bệnh Kinh Niên Bắt Buộc Chặn Đứng (`factory_cli.py audit-pedagogy`):
+1. **Tật 1 — Lộ Prompt Nội Bộ:** Cấm để lọt nhãn đạo diễn hậu trường (`REDLINE FOCUS`, `FOCUS SHOT 1`, `BÔI ĐEN ĐỂ COPY`) lên màn hình.
+2. **Tật 2 — Nhảy Cóc Ví Dụ Thiếu Bối Cảnh:** Cấm nhắc đột ngột mã hồ sơ/khách hàng (*"ngăn wip/ của Khách hàng A07"*) khi chưa dẫn nhập bối cảnh doanh nghiệp đó là ai, đang làm gì.
+3. **Tật 3 — Tả Tọa Độ Cơ Học:** Cấm đọc vẹt *"bên trái là..."*, *"nhìn sang bên phải..."*; phải gọi thẳng **tên nghiệp vụ của vùng giao diện** vì Spotlight đã tự chiếu sáng vị trí.
+4. **Tật 4 — Dẫn Dắt Liên Bài Kiểu MC Truyền Hình:** Cấm mở đầu/kết thúc kiểu *"Chào mừng đến với Bài X... Ở bài trước... Hẹn gặp lại ở bài sau..."*. Mỗi bài là một viên kim cương tự bao đóng.
 
 ---
 
@@ -81,8 +84,8 @@ intake/ khảo sát → ⛔ GATE xuất blueprint.json
 
 ```text
 intake/       Ban Khảo Sát     → lead.md chọn: screen-and-video-harvest.md, process-and-repo-harvest.md
-surface/      Ban Nguyên Mẫu   → lead.md chọn: html-prototype-builder.md, two-stage-choreography.md
-storyboard/   Ban Biên Kịch    → lead.md chọn: context-before-example.md, svg-theory-and-voiceover.md
+surface/      Ban Nguyên Mẫu   → lead.md chọn: html-prototype-builder.md, two-stage-choreography.md, vercel-html-deploy.md
+storyboard/   Ban Biên Kịch    → lead.md chọn: context-before-example.md, svg-theory-and-voiceover.md, fde-onsite-walkthrough.md
 review/       Ban Kiểm Duyệt   → lead.md chọn: no-prompt-leak.md, context-and-self-contained.md, no-spatial-and-anti-slop.md, spotlight-and-ui-gate.md
 archive/      Ban Tư Liệu      → lead.md quản lý: ui-pattern-catalog.md
 development/  Ban Phát Triển   → lead.md quản lý: live-feedback-funnel.md

@@ -221,9 +221,12 @@ def test_v31_kudo_doctor_and_sim_request_contract() -> None:
     assert (ROOT_DIR / "studio-request-builder.html").exists()
 
     valid_req = """
-    <sim-request v="1" factory=">=3.1.0">
+    <sim-request v="1" factory=">=3.2.0">
     software_type: banking-portal
     use_case: process-confirm
+    delivery_mode: html-vercel-first
+    ui_references: input/screens/credit_portal_step1.png, input/screens/approval_modal.png
+    simulation_approved: false
     aspect: 16:9
     voice: vieneu
     accent: #D95D39
@@ -234,12 +237,79 @@ def test_v31_kudo_doctor_and_sim_request_contract() -> None:
     res = check_sim_request(valid_req)
     assert res["ok"] is True
     assert res["resolved"]["software_type"] == "banking-portal"
+    assert res["resolved"]["execution_stage"] == "STAGE_1_SIMULATION_PROTOTYPE_ONLY"
+    assert res["resolved"]["allow_audio_and_effects"] is False
     assert len(res["resolved"]["gate_pipeline"]) == 4
+
+    # Missing ui_references MUST be rejected by GATE 1
+    no_ui_req = """
+    <sim-request v="1">
+    software_type: banking-portal
+    use_case: process-confirm
+    topic: Quy trình 3 bước lọc hồ sơ vượt hạn mức.
+    </sim-request>
+    """
+    no_ui_res = check_sim_request(no_ui_req)
+    assert no_ui_res["ok"] is False
+    assert any("GATE 1" in e for e in no_ui_res["errors"])
 
     bad_req = "<sim-request>software_type: unknown_app\nuse_case: bad_case</sim-request>"
     bad_res = check_sim_request(bad_req)
     assert bad_res["ok"] is False
     assert len(bad_res["errors"]) >= 2
+
+
+def test_v32_fde_onsite_walkthrough_and_simulation_signoff_gate(tmp_path: Path) -> None:
+    """Verify the new `fde-onsite-walkthrough` branch (HTML-first + Vercel) and Two-Stage Simulation Sign-off Gate."""
+    from core_engine.pedagogy_and_request_gate import (
+        audit_fde_onsite_walkthrough,
+        check_sim_request,
+        record_or_verify_simulation_signoff,
+    )
+
+    fde_req = """
+    <sim-request v="1" factory=">=3.2.0">
+    software_type: erp-crm
+    use_case: fde-onsite-walkthrough
+    delivery_mode: html-vercel-first
+    ui_references: input/screens/as_is_tracker.png, input/screens/wireframe_sketch.png
+    simulation_approved: true
+    aspect: 16:9
+    voice: vieneu
+    accent: #D95D39
+    context_example: Ví dụ kỳ họp giao ban tuần với 18 dự án đang chạy song song
+    topic: Walkthrough 5 màn giải quyết điểm nghẽn tổng hợp báo cáo tuần và chốt Phương án A.
+    </sim-request>
+    """
+    res = check_sim_request(fde_req)
+    assert res["ok"] is True
+    assert res["resolved"]["use_case"] == "fde-onsite-walkthrough"
+    assert res["resolved"]["delivery_mode"] == "html-vercel-first"
+    assert res["resolved"]["export_mp4"] is False
+    assert res["resolved"]["allow_audio_and_effects"] is True
+    assert len(res["resolved"]["fde_5_act_structure"]) == 5
+
+    # Test simulation_signoff.json gate lifecycle in tmp_path
+    unapproved = record_or_verify_simulation_signoff(
+        tmp_path,
+        approve=False,
+        ui_references=["input/demo1.png"],
+        screens_confirmed=["act-1-as-is"],
+    )
+    assert unapproved["passed"] is False
+    assert unapproved["allow_audio_and_effects"] is False
+
+    approved = record_or_verify_simulation_signoff(tmp_path, approve=True, notes="User confirmed HTML simulation")
+    assert approved["passed"] is True
+    assert approved["allow_audio_and_effects"] is True
+
+    # Audit the flagship FDE On-Site Walkthrough Demo (5 Acts + [WF-01..04] + 3-pillar Checklist + vercel.json)
+    fde_demo_dir = ROOT_DIR / "examples" / "fde_onsite_client_walkthrough_demo"
+    fde_audit = audit_fde_onsite_walkthrough(fde_demo_dir)
+    assert fde_audit["passed"] is True, f"FDE walkthrough demo failed audit: {fde_audit['errors']}"
+    assert fde_audit["vercel_ready"] is True
+    assert fde_audit["simulation_approved"] is True
+    assert len(fde_audit["wf_markers_found"]) >= 4
 
 
 def test_v31_newsroom_departments_and_four_anti_pattern_gates() -> None:
